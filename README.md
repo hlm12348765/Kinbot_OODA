@@ -21,10 +21,15 @@
 
 当前架构强调：
 
-- 以 `World Model` 作为认知中枢
+- 以 `World State` 作为认知中枢的统一状态平面
 - 以 `安全 / 合规 / 授权` 作为动作前置门控
 - 以高频安全闭环保证运动安全
 - 以端云协同扩展知识和服务能力
+
+术语约定：
+
+- `World State`：统一的运行时结构化状态
+- `World Model`：如后续引入，专指用于预测或仿真未来环境和任务动态的模型
 
 ## 文档索引
 
@@ -32,6 +37,11 @@
 - `docs/RULES.MD`：系统架构设计原则
 - `docs/ARCHITECTURE.md`：机器人 OODA 总体架构
 - `docs/ARCHITECTURE_RULES_REVIEW.md`：总体架构与架构原则的符合度检查
+- `docs/WORKFLOW.md`：从架构到落地的推进工作流
+- `docs/DECISION_LOG.md`：已确认决策、开放问题与后续问题清单
+- `docs/MODULE_BOUNDARIES.md`：模块分层与模块边界
+- `docs/WORLD_STATE_SCHEMA.md`：世界状态与核心实体结构
+- `docs/TERMINOLOGY.md`：项目术语表
 
 ## 仓库结构
 
@@ -42,8 +52,13 @@
 └── docs
     ├── ARCHITECTURE.md
     ├── ARCHITECTURE_RULES_REVIEW.md
+    ├── DECISION_LOG.md
+    ├── MODULE_BOUNDARIES.md
     ├── REQUIREMENTS.MD
-    └── RULES.MD
+    ├── RULES.MD
+    ├── TERMINOLOGY.md
+    ├── WORKFLOW.md
+    └── WORLD_STATE_SCHEMA.md
 ```
 
 ## 推荐阅读顺序
@@ -51,12 +66,17 @@
 1. `docs/REQUIREMENTS.MD`
 2. `docs/RULES.MD`
 3. `docs/ARCHITECTURE.md`
-4. `docs/ARCHITECTURE_RULES_REVIEW.md`
+4. `docs/WORKFLOW.md`
+5. `docs/DECISION_LOG.md`
+6. `docs/MODULE_BOUNDARIES.md`
+7. `docs/WORLD_STATE_SCHEMA.md`
+8. `docs/TERMINOLOGY.md`
+9. `docs/ARCHITECTURE_RULES_REVIEW.md`
 
 ## 下一步建议
 
 - 模块分层与模块边界
-- 世界模型与核心数据结构
+- 世界状态与核心数据结构
 - 决策状态机
 - 端云职责拆分
 - MVP 技术选型
