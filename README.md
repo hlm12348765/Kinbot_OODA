@@ -26,8 +26,9 @@
 - 阶段性待办和 issue 同步到 Linear，形成持续协作
 - 本地文档和 Linear 协作条目统一用中文维护
 - 当前 Linear 项目为 `Kinbot OODA 架构到量产预备`
-- 涉及 VLN 路线和前瞻技术判断时，与专门的 VLN 技术评估线程交叉协作
+- 涉及 VLN 路线和前瞻技术判断时，与专门的 VLN 技术评估线程通过独立 issue 交叉协作
 - `docs/REQUIREMENTS.MD` 由用户独占维护，其他文档由我持续推进
+- 当信息不足但推进不能停时，先形成“架构师设想包”，再提交审核
 
 当前项目节奏：
 
@@ -51,6 +52,7 @@
 - 以高频安全闭环保证运动安全
 - 以端云协同扩展知识和服务能力
 - 当前问题澄清按“健康管理、陪伴交互、安全保障”三条主线并行推进，避免架构只围绕单一功能收敛
+- 当前执行目标到 `2026-12-31` 量产预备，但规划视图覆盖上市运营与下一代回灌
 
 术语约定：
 
@@ -62,16 +64,19 @@
 - `docs/REQUIREMENTS.MD`：产品需求、边界和工程约束
 - `docs/RULES.MD`：系统架构设计原则
 - `docs/ARCHITECTURE.md`：机器人 OODA 总体架构
-- `docs/VLN_ROLE_AND_PLAN.md`：VLN 在 OODA 中的角色分析、最新技术趋势与规划建议
+- `docs/VLN_ROLE_AND_PLAN.md`：VLN 在 OODA 中的角色分析、最新技术趋势与规划建议，由独立线程维护，当前线程只引用其结论
 - `docs/ARCHITECTURE_RULES_REVIEW.md`：总体架构与架构原则的符合度检查
 - `docs/WORKFLOW.md`：从架构到落地的推进工作流
+- `docs/LIFECYCLE_WORKFLOW.md`：从需求形成到上市运营与下一代回灌的全生命周期工作流与阶段门
 - `docs/DECISION_LOG.md`：已确认决策、开放问题与后续问题清单
 - `docs/MODULE_BOUNDARIES.md`：模块分层与模块边界
 - `docs/WORLD_STATE_SCHEMA.md`：世界状态与核心实体结构
 - `docs/DECISION_STATE_MACHINE.md`：系统决策状态机
 - `docs/SAFETY_COMPLIANCE_AUTHORIZATION_API.md`：安全 / 合规 / 授权接口
+- `docs/HEALTH_EVENT_PIPELINE.md`：健康事件管线、补采逻辑与升级链路
 - `docs/COMPANION_INTERACTION_STRATEGY.md`：陪伴交互策略、人设边界与长期记忆规则
 - `docs/SAFETY_RISK_MATRIX.md`：一代安全风险域、降级策略与空间规则
+- `docs/APP_CLOUD_OPS_MINIMAL_LOOP.md`：家属 App、云服务与后台运营坐席的一代最小闭环
 - `docs/TERMINOLOGY.md`：项目术语表
 
 ## 仓库结构
@@ -85,12 +90,15 @@
     ├── ARCHITECTURE_RULES_REVIEW.md
     ├── DECISION_LOG.md
     ├── DECISION_STATE_MACHINE.md
+    ├── LIFECYCLE_WORKFLOW.md
     ├── MODULE_BOUNDARIES.md
     ├── COMPANION_INTERACTION_STRATEGY.md
+    ├── HEALTH_EVENT_PIPELINE.md
     ├── REQUIREMENTS.MD
     ├── RULES.MD
     ├── SAFETY_COMPLIANCE_AUTHORIZATION_API.md
     ├── SAFETY_RISK_MATRIX.md
+    ├── APP_CLOUD_OPS_MINIMAL_LOOP.md
     ├── TERMINOLOGY.md
     ├── VLN_ROLE_AND_PLAN.md
     ├── WORKFLOW.md
@@ -104,20 +112,23 @@
 3. `docs/ARCHITECTURE.md`
 4. `docs/VLN_ROLE_AND_PLAN.md`
 5. `docs/WORKFLOW.md`
-6. `docs/DECISION_LOG.md`
-7. `docs/MODULE_BOUNDARIES.md`
-8. `docs/WORLD_STATE_SCHEMA.md`
-9. `docs/DECISION_STATE_MACHINE.md`
-10. `docs/SAFETY_COMPLIANCE_AUTHORIZATION_API.md`
-11. `docs/COMPANION_INTERACTION_STRATEGY.md`
-12. `docs/SAFETY_RISK_MATRIX.md`
-13. `docs/TERMINOLOGY.md`
-14. `docs/ARCHITECTURE_RULES_REVIEW.md`
+6. `docs/LIFECYCLE_WORKFLOW.md`
+7. `docs/DECISION_LOG.md`
+8. `docs/MODULE_BOUNDARIES.md`
+9. `docs/WORLD_STATE_SCHEMA.md`
+10. `docs/DECISION_STATE_MACHINE.md`
+11. `docs/SAFETY_COMPLIANCE_AUTHORIZATION_API.md`
+12. `docs/HEALTH_EVENT_PIPELINE.md`
+13. `docs/COMPANION_INTERACTION_STRATEGY.md`
+14. `docs/SAFETY_RISK_MATRIX.md`
+15. `docs/APP_CLOUD_OPS_MINIMAL_LOOP.md`
+16. `docs/TERMINOLOGY.md`
+17. `docs/ARCHITECTURE_RULES_REVIEW.md`
 
 ## 下一步建议
 
-- 健康事件管线与升级链路
 - Demo 到量产架构的能力缺口梳理
-- App、云服务与后台人工坐席的一代最小闭环
+- 全生命周期阶段门与 Linear 协作面细化
+- 陪伴记忆治理与多角色配置边界细化
 - 量产预备判定标准
 - 量产预备技术选型

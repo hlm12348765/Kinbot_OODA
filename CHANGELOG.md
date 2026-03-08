@@ -21,6 +21,9 @@
 - 新增 [docs/SAFETY_COMPLIANCE_AUTHORIZATION_API.md](docs/SAFETY_COMPLIANCE_AUTHORIZATION_API.md)，用于定义高风险动作审批、确认、降级、人工转接和审计的统一接口契约。
 - 新增 [docs/COMPANION_INTERACTION_STRATEGY.md](docs/COMPANION_INTERACTION_STRATEGY.md)，用于定义一代陪伴交互的人设边界、主动发起规则、长期记忆和多角色共享策略。
 - 新增 [docs/SAFETY_RISK_MATRIX.md](docs/SAFETY_RISK_MATRIX.md)，用于定义一代安全风险域、空间规则和降级策略矩阵。
+- 新增 [docs/APP_CLOUD_OPS_MINIMAL_LOOP.md](docs/APP_CLOUD_OPS_MINIMAL_LOOP.md)，用于定义一代家属 App、云服务与后台运营坐席的最小闭环、接口分工和失败回退策略。
+- 新增 [docs/HEALTH_EVENT_PIPELINE.md](docs/HEALTH_EVENT_PIPELINE.md)，用于定义一代健康事件的信号来源、补采逻辑、风险分级、升级链路和降级约束。
+- 新增 [docs/LIFECYCLE_WORKFLOW.md](docs/LIFECYCLE_WORKFLOW.md)，用于定义从需求形成到上市运营与下一代回灌的全生命周期工作流、阶段门和 Linear 映射。
 - 新增 [docs/TERMINOLOGY.md](docs/TERMINOLOGY.md)，用于统一项目术语，避免概念漂移。
 
 ### 调整
@@ -43,6 +46,10 @@
 - 更新 [README.md](README.md)、[docs/WORKFLOW.md](docs/WORKFLOW.md) 和 [docs/DECISION_LOG.md](docs/DECISION_LOG.md)，明确后续问题澄清按“健康管理、陪伴交互、安全保障”三条主线并行推进，并记录与 VLN 技术评估线程的协作要求以及每层实体数控制要求。
 - 更新 [README.md](README.md)、[docs/WORKFLOW.md](docs/WORKFLOW.md) 和 [docs/DECISION_LOG.md](docs/DECISION_LOG.md)，明确 `docs/REQUIREMENTS.MD` 由用户独占维护，Codex 只读取并推进其他文档。
 - 更新 [docs/DECISION_LOG.md](docs/DECISION_LOG.md)，吸收 [docs/VLN_ROLE_AND_PLAN.md](docs/VLN_ROLE_AND_PLAN.md) 的关键结论，将 VLN 边界收敛为“语义导航策略层”，而不是底盘级安全控制层。
+- 更新 [README.md](README.md)、[docs/WORKFLOW.md](docs/WORKFLOW.md) 和 [docs/DECISION_LOG.md](docs/DECISION_LOG.md)，明确 VLN 技术规划由独立 issue 和独立线程维护，当前线程不更新 [docs/VLN_ROLE_AND_PLAN.md](docs/VLN_ROLE_AND_PLAN.md)。
+- 更新架构细化文档，吸收 `Step10` 的澄清结果，包括长期记忆可治理、老人 / 子女配置权限、卫生间和入户门空间边界、陌生人闯入 / 夜间离床 / 门窗未关的自动动作边界，以及故障恢复和硬停底线。
+- 更新 [README.md](README.md)、[docs/WORKFLOW.md](docs/WORKFLOW.md) 和 [docs/DECISION_LOG.md](docs/DECISION_LOG.md)，将当前推进重点从“健康事件管线待产出”推进到“量化阈值、远控边界和 Demo 到量产能力缺口”。
+- 更新 [README.md](README.md)、[docs/WORKFLOW.md](docs/WORKFLOW.md) 和 [docs/DECISION_LOG.md](docs/DECISION_LOG.md)，把工作流扩展到全生命周期视角，并加入“架构师设想包”这一先设想再评审的推进机制。
 
 ## [2026-03-07]
 
