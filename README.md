@@ -83,6 +83,7 @@
 - `docs/APP_CLOUD_OPS_MINIMAL_LOOP.md`：家属 App、云服务与后台运营坐席的一代最小闭环
 - `docs/DEMO_TO_MASS_PRODUCTION_GAPS.md`：当前样机 Demo 到量产预备状态的能力缺口、阻断项和优先级排序
 - `docs/ENGINEERING_NPI_BASELINE.md`：工程化与 NPI 准备基线、`G2` 技术路线门和 Alpha / EVT 前置冻结项
+- `docs/HARDWARE_SOFTWARE_SELECTION_MATRIX.md`：一代软硬件选型矩阵、主线 / 备线 / 观察线划分与 `G2` 前置验证项
 - `docs/TERMINOLOGY.md`：项目术语表
 
 ## 仓库结构
@@ -108,6 +109,7 @@
     ├── APP_CLOUD_OPS_MINIMAL_LOOP.md
     ├── DEMO_TO_MASS_PRODUCTION_GAPS.md
     ├── ENGINEERING_NPI_BASELINE.md
+    ├── HARDWARE_SOFTWARE_SELECTION_MATRIX.md
     ├── TERMINOLOGY.md
     ├── VLN_ROLE_AND_PLAN.md
     ├── WORKFLOW.md
@@ -134,15 +136,15 @@
 16. `docs/APP_CLOUD_OPS_MINIMAL_LOOP.md`
 17. `docs/DEMO_TO_MASS_PRODUCTION_GAPS.md`
 18. `docs/ENGINEERING_NPI_BASELINE.md`
-19. `docs/TERMINOLOGY.md`
-20. `docs/ARCHITECTURE_RULES_REVIEW.md`
+19. `docs/HARDWARE_SOFTWARE_SELECTION_MATRIX.md`
+20. `docs/TERMINOLOGY.md`
+21. `docs/ARCHITECTURE_RULES_REVIEW.md`
 
 ## 下一步建议
 
-- 评审并冻结 Demo 到量产预备能力缺口
-- 工程化与 NPI 准备基线
-- 评审 `D6` 作为阻断项的理由是否充分
+- 软硬件选型矩阵
+- 健康事件量化阈值与故障阈值
+- 量产预备判定标准
 - 多尺度动态 OODA 基线继续向状态机、接口和验证项落地
 - 陪伴记忆治理与多角色配置边界细化
-- 量产预备判定标准
 - 量产预备技术选型

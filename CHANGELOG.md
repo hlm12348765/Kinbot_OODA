@@ -27,6 +27,7 @@
 - 新增 [docs/OODA_MULTI_SCALE_ARCHITECTURE.md](docs/OODA_MULTI_SCALE_ARCHITECTURE.md)，用于提出面向 AGI 与具身智能时代的多尺度动态 OODA 设想。
 - 新增 [docs/DEMO_TO_MASS_PRODUCTION_GAPS.md](docs/DEMO_TO_MASS_PRODUCTION_GAPS.md)，用于定义当前样机 Demo 到量产预备状态的能力缺口、阻断项和默认优先级。
 - 新增 [docs/ENGINEERING_NPI_BASELINE.md](docs/ENGINEERING_NPI_BASELINE.md)，用于定义 `P2` 阶段的工程化与 `NPI` 准备基线、`G2` 技术路线门和 Alpha / EVT 前置冻结项。
+- 新增 [docs/HARDWARE_SOFTWARE_SELECTION_MATRIX.md](docs/HARDWARE_SOFTWARE_SELECTION_MATRIX.md)，用于定义一代软硬件选型矩阵、主线 / 备线 / 观察线和 `G2` 前置验证项。
 - 新增 [docs/TERMINOLOGY.md](docs/TERMINOLOGY.md)，用于统一项目术语，避免概念漂移。
 
 ### 调整
@@ -58,6 +59,7 @@
 - 更新 [docs/OODA_MULTI_SCALE_ARCHITECTURE.md](docs/OODA_MULTI_SCALE_ARCHITECTURE.md)、[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)、[docs/DECISION_STATE_MACHINE.md](docs/DECISION_STATE_MACHINE.md)、[docs/SAFETY_RISK_MATRIX.md](docs/SAFETY_RISK_MATRIX.md)、[docs/COMPANION_INTERACTION_STRATEGY.md](docs/COMPANION_INTERACTION_STRATEGY.md)、[docs/WORKFLOW.md](docs/WORKFLOW.md)、[README.md](README.md) 和 [docs/DECISION_LOG.md](docs/DECISION_LOG.md)，吸收 `KBT-28` 审阅结论，将 `R1` 到 `R4`、`R4` 正式入架构、`Orient` 升级以及 `OODA Scale Scheduler` 一级能力同步为正式基线。
 - 更新 [README.md](README.md)、[docs/LIFECYCLE_WORKFLOW.md](docs/LIFECYCLE_WORKFLOW.md)、[docs/WORKFLOW.md](docs/WORKFLOW.md) 和 [docs/DECISION_LOG.md](docs/DECISION_LOG.md)，并新增 [docs/DEMO_TO_MASS_PRODUCTION_GAPS.md](docs/DEMO_TO_MASS_PRODUCTION_GAPS.md)，将 `KBT-18` 收敛为 7 个能力缺口域、3 类阻断项和一份默认优先级排序。
 - 更新 [docs/DEMO_TO_MASS_PRODUCTION_GAPS.md](docs/DEMO_TO_MASS_PRODUCTION_GAPS.md)、[docs/DECISION_LOG.md](docs/DECISION_LOG.md)、[README.md](README.md)、[docs/WORKFLOW.md](docs/WORKFLOW.md) 和 [docs/LIFECYCLE_WORKFLOW.md](docs/LIFECYCLE_WORKFLOW.md)，吸收 `Step13` 对 `KBT-18` 的审阅意见，补入 `D6` 作为阻断项的理由，并把“储物仓能力保留但机构重构”“整机外观形态重构”写入工程化主线。
+- 更新 [docs/DECISION_LOG.md](docs/DECISION_LOG.md)、[docs/ENGINEERING_NPI_BASELINE.md](docs/ENGINEERING_NPI_BASELINE.md)、[README.md](README.md)、[docs/WORKFLOW.md](docs/WORKFLOW.md) 和 [docs/LIFECYCLE_WORKFLOW.md](docs/LIFECYCLE_WORKFLOW.md)，吸收 `Step14` 对 `KBT-18` 和 `KBT-24` 的审阅结果，正式冻结 `D6` 阻断项和 `KBT-24` 基线，并新增 [docs/HARDWARE_SOFTWARE_SELECTION_MATRIX.md](docs/HARDWARE_SOFTWARE_SELECTION_MATRIX.md) 启动 `KBT-11`。
 
 ## [2026-03-07]
 

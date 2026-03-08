@@ -235,7 +235,7 @@
 8. `docs/LIFECYCLE_WORKFLOW.md`
 9. `docs/DEMO_TO_MASS_PRODUCTION_GAPS.md`
 10. `docs/ENGINEERING_NPI_BASELINE.md`
-11. 技术选型矩阵
+11. `docs/HARDWARE_SOFTWARE_SELECTION_MATRIX.md`
 12. MVP 与量产预备定义及验证计划
 
 ## 6. 需要联网核实的内容
@@ -282,7 +282,8 @@
 
 第六轮：
 
-- 在联网调研基础上做技术选型矩阵
+- 输出软硬件选型矩阵
+- 在联网核实与实测基础上收敛关键器件主路线
 - 冻结量产预备技术路线
 
 ## 8. 每轮沟通的标准输出
