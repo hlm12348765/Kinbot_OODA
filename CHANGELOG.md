@@ -24,6 +24,7 @@
 - 新增 [docs/APP_CLOUD_OPS_MINIMAL_LOOP.md](docs/APP_CLOUD_OPS_MINIMAL_LOOP.md)，用于定义一代家属 App、云服务与后台运营坐席的最小闭环、接口分工和失败回退策略。
 - 新增 [docs/HEALTH_EVENT_PIPELINE.md](docs/HEALTH_EVENT_PIPELINE.md)，用于定义一代健康事件的信号来源、补采逻辑、风险分级、升级链路和降级约束。
 - 新增 [docs/LIFECYCLE_WORKFLOW.md](docs/LIFECYCLE_WORKFLOW.md)，用于定义从需求形成到上市运营与下一代回灌的全生命周期工作流、阶段门和 Linear 映射。
+- 新增 [docs/OODA_MULTI_SCALE_ARCHITECTURE.md](docs/OODA_MULTI_SCALE_ARCHITECTURE.md)，用于提出面向 AGI 与具身智能时代的多尺度动态 OODA 设想。
 - 新增 [docs/TERMINOLOGY.md](docs/TERMINOLOGY.md)，用于统一项目术语，避免概念漂移。
 
 ### 调整
@@ -50,6 +51,9 @@
 - 更新架构细化文档，吸收 `Step10` 的澄清结果，包括长期记忆可治理、老人 / 子女配置权限、卫生间和入户门空间边界、陌生人闯入 / 夜间离床 / 门窗未关的自动动作边界，以及故障恢复和硬停底线。
 - 更新 [README.md](README.md)、[docs/WORKFLOW.md](docs/WORKFLOW.md) 和 [docs/DECISION_LOG.md](docs/DECISION_LOG.md)，将当前推进重点从“健康事件管线待产出”推进到“量化阈值、远控边界和 Demo 到量产能力缺口”。
 - 更新 [README.md](README.md)、[docs/WORKFLOW.md](docs/WORKFLOW.md) 和 [docs/DECISION_LOG.md](docs/DECISION_LOG.md)，把工作流扩展到全生命周期视角，并加入“架构师设想包”这一先设想再评审的推进机制。
+- 更新 [docs/LIFECYCLE_WORKFLOW.md](docs/LIFECYCLE_WORKFLOW.md)、[docs/WORKFLOW.md](docs/WORKFLOW.md) 和 [docs/DECISION_LOG.md](docs/DECISION_LOG.md)，吸收新的 IPD 要求，并将“产品定义与架构冻结”目标收敛到 `2026-03-31`。
+- 更新 [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) 和 [README.md](README.md)，把 OODA 从固定单环升级为“多尺度、可动态调度”的默认方法论。
+- 更新 [docs/OODA_MULTI_SCALE_ARCHITECTURE.md](docs/OODA_MULTI_SCALE_ARCHITECTURE.md)、[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)、[docs/DECISION_STATE_MACHINE.md](docs/DECISION_STATE_MACHINE.md)、[docs/SAFETY_RISK_MATRIX.md](docs/SAFETY_RISK_MATRIX.md)、[docs/COMPANION_INTERACTION_STRATEGY.md](docs/COMPANION_INTERACTION_STRATEGY.md)、[docs/WORKFLOW.md](docs/WORKFLOW.md)、[README.md](README.md) 和 [docs/DECISION_LOG.md](docs/DECISION_LOG.md)，吸收 `KBT-28` 审阅结论，将 `R1` 到 `R4`、`R4` 正式入架构、`Orient` 升级以及 `OODA Scale Scheduler` 一级能力同步为正式基线。
 
 ## [2026-03-07]
 

@@ -29,6 +29,7 @@
 - 涉及 VLN 路线和前瞻技术判断时，与专门的 VLN 技术评估线程通过独立 issue 交叉协作
 - `docs/REQUIREMENTS.MD` 由用户独占维护，其他文档由我持续推进
 - 当信息不足但推进不能停时，先形成“架构师设想包”，再提交审核
+- 全生命周期管理参考 IPD，当前争取在 `2026-03-31` 完成产品定义与架构冻结
 
 当前项目节奏：
 
@@ -53,6 +54,8 @@
 - 以端云协同扩展知识和服务能力
 - 当前问题澄清按“健康管理、陪伴交互、安全保障”三条主线并行推进，避免架构只围绕单一功能收敛
 - 当前执行目标到 `2026-12-31` 量产预备，但规划视图覆盖上市运营与下一代回灌
+- 当前总体方法论继续以 OODA 为主，并已冻结为“多尺度、并发、可中断、可动态调度”的正式基线
+- `R4 关系与服务环` 已进入一代正式架构层，`OODA Scale Scheduler` 已提升为一级架构能力
 
 术语约定：
 
@@ -68,6 +71,7 @@
 - `docs/ARCHITECTURE_RULES_REVIEW.md`：总体架构与架构原则的符合度检查
 - `docs/WORKFLOW.md`：从架构到落地的推进工作流
 - `docs/LIFECYCLE_WORKFLOW.md`：从需求形成到上市运营与下一代回灌的全生命周期工作流与阶段门
+- `docs/OODA_MULTI_SCALE_ARCHITECTURE.md`：面向 AGI 与具身智能时代的多尺度动态 OODA 架构基线
 - `docs/DECISION_LOG.md`：已确认决策、开放问题与后续问题清单
 - `docs/MODULE_BOUNDARIES.md`：模块分层与模块边界
 - `docs/WORLD_STATE_SCHEMA.md`：世界状态与核心实体结构
@@ -92,6 +96,7 @@
     ├── DECISION_STATE_MACHINE.md
     ├── LIFECYCLE_WORKFLOW.md
     ├── MODULE_BOUNDARIES.md
+    ├── OODA_MULTI_SCALE_ARCHITECTURE.md
     ├── COMPANION_INTERACTION_STRATEGY.md
     ├── HEALTH_EVENT_PIPELINE.md
     ├── REQUIREMENTS.MD
@@ -113,22 +118,23 @@
 4. `docs/VLN_ROLE_AND_PLAN.md`
 5. `docs/WORKFLOW.md`
 6. `docs/LIFECYCLE_WORKFLOW.md`
-7. `docs/DECISION_LOG.md`
-8. `docs/MODULE_BOUNDARIES.md`
-9. `docs/WORLD_STATE_SCHEMA.md`
-10. `docs/DECISION_STATE_MACHINE.md`
-11. `docs/SAFETY_COMPLIANCE_AUTHORIZATION_API.md`
-12. `docs/HEALTH_EVENT_PIPELINE.md`
-13. `docs/COMPANION_INTERACTION_STRATEGY.md`
-14. `docs/SAFETY_RISK_MATRIX.md`
-15. `docs/APP_CLOUD_OPS_MINIMAL_LOOP.md`
-16. `docs/TERMINOLOGY.md`
-17. `docs/ARCHITECTURE_RULES_REVIEW.md`
+7. `docs/OODA_MULTI_SCALE_ARCHITECTURE.md`
+8. `docs/DECISION_LOG.md`
+9. `docs/MODULE_BOUNDARIES.md`
+10. `docs/WORLD_STATE_SCHEMA.md`
+11. `docs/DECISION_STATE_MACHINE.md`
+12. `docs/SAFETY_COMPLIANCE_AUTHORIZATION_API.md`
+13. `docs/HEALTH_EVENT_PIPELINE.md`
+14. `docs/COMPANION_INTERACTION_STRATEGY.md`
+15. `docs/SAFETY_RISK_MATRIX.md`
+16. `docs/APP_CLOUD_OPS_MINIMAL_LOOP.md`
+17. `docs/TERMINOLOGY.md`
+18. `docs/ARCHITECTURE_RULES_REVIEW.md`
 
 ## 下一步建议
 
 - Demo 到量产架构的能力缺口梳理
-- 全生命周期阶段门与 Linear 协作面细化
+- 多尺度动态 OODA 基线继续向状态机、接口和验证项落地
 - 陪伴记忆治理与多角色配置边界细化
 - 量产预备判定标准
 - 量产预备技术选型

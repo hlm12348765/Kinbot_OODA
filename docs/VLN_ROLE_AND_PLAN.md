@@ -21,6 +21,9 @@
   - VLA 更以“如何把观测和任务上下文统一映射成动作”为中心问题
   - 自动驾驶式 VLA 的端到端倾向显著强于家庭机器人导航
   - 机器人领域的 VLA 也并未普遍放弃分层控制、SLAM 和局部规划
+- 从产品需求看，Kinbot 要解决的已经不只是狭义 VLN，而是更宽的“移动具身智能”：
+  - 有用户指令时的泛化寻找、到达、寻人、跟随、护送
+  - 无用户指令时在有限家庭空间中的自发移动、让行、低扰动共存和主动 reposition
 - 你们已经有 8B 室内寻物 / 寻人 / 到达能力，又有真实家庭数据和高精度重建条件，最有价值的下一步不是盲目追求更大的通用基础模型，而是把现有能力收敛成稳定的“家庭语义导航系统”。
 
 一句话概括：Kinbot 的 VLN 应该从“直接出连续动作的导航模型”升级为“带记忆、会恢复、懂家庭语义、能协同经典导航”的语义导航策略系统。
@@ -36,15 +39,17 @@
 
 二者的差别可以概括为：
 
-| 维度 | VLN | VLA |
-| --- | --- | --- |
-| 首要问题 | 指令跟随、目标搜索、空间 grounding、恢复 | 统一动作生成、跨任务迁移、规模化学习 |
-| 语言地位 | 通常是核心目标载体 | 可能是条件之一，也可能在推理时弱化甚至省略 |
-| 输出接口 | 离散动作、waypoint、子目标、轨迹块 | 连续动作、动作 token、统一策略输出 |
-| 关注的记忆形式 | 地图、拓扑、目标 belief、3D 表示、情境记忆 | 潜状态、世界模型、长时上下文，也可混合显式记忆 |
-| 典型难点 | sim2real、语言歧义、长程搜索、找不到怎么办 | 数据规模、跨任务泛化、动作平滑性、端到端可训练性 |
-| 评测重心 | 成功率、SPL、路径效率、恢复能力、跨本体部署 | 任务完成率、动作质量、舒适性、干预率、跨任务能力 |
-| 工程默认 | 更容易与地图、planner、安全链共存 | 更容易向 action-first、end-to-end 倾斜 |
+
+| 维度      | VLN                        | VLA                             |
+| ------- | -------------------------- | ------------------------------- |
+| 首要问题    | 指令跟随、目标搜索、空间 grounding、恢复  | 统一动作生成、跨任务迁移、规模化学习              |
+| 语言地位    | 通常是核心目标载体                  | 可能是条件之一，也可能在推理时弱化甚至省略           |
+| 输出接口    | 离散动作、waypoint、子目标、轨迹块      | 连续动作、动作 token、统一策略输出            |
+| 关注的记忆形式 | 地图、拓扑、目标 belief、3D 表示、情境记忆 | 潜状态、世界模型、长时上下文，也可混合显式记忆         |
+| 典型难点    | sim2real、语言歧义、长程搜索、找不到怎么办  | 数据规模、跨任务泛化、动作平滑性、端到端可训练性        |
+| 评测重心    | 成功率、SPL、路径效率、恢复能力、跨本体部署    | 任务完成率、动作质量、舒适性、干预率、跨任务能力        |
+| 工程默认    | 更容易与地图、planner、安全链共存       | 更容易向 action-first、end-to-end 倾斜 |
+
 
 看你举的几个例子，这个差异非常明显：
 
@@ -77,22 +82,54 @@
 
 因此，家庭机器人更像 `具身语义导航问题`，而不是 `路网驾驶策略问题`。
 
+## 1.3 需求重估：Kinbot 真正追求的是“移动具身智能”
+
+按你这轮补充，Kinbot 对 VLN 的期待已经超出了经典论文里的“按一条语言指令到达目标”。
+
+更准确的需求分解应该是：
+
+### A. 有用户指令输入时的语义移动
+
+这部分仍然属于扩展版 VLN：
+
+- 听懂“去找谁 / 去找什么 / 到哪儿去”
+- 在真实家庭里完成搜索、到达、靠近、跟随、护送
+- 在失败、遮挡、漂移、多候选目标下恢复
+
+### B. 无用户指令输入时的自发移动
+
+这部分已经不只是 VLN，而是 `social mobility + proactive mobility`：
+
+- 与人在有限空间里共存
+- 在狭窄通道里判断何时快、何时慢、何时让、何时停
+- 夜间、静默、弱光等低扰动移动
+- 因电量、挡路、任务切换、礼貌让行而主动 reposition
+
+因此，建议在文档口径上做一个区分：
+
+- `VLN` 继续表示“有明确语义目标的导航推理能力”
+- `Embodied Mobility Intelligence` 表示更宽的移动具身智能总能力
+
+也就是说，Kinbot 的产品目标不是“做一个更强的 VLN benchmark agent”，而是“做一个在家庭中持续共存的移动智能体”。
+
 ## 2. 最新技术信号
 
 截至 2026-03-08，最近一轮公开工作对 Kinbot 最有参考价值的信号如下。
 
-| 工作 | 时间 | 核心信号 | 对 Kinbot 的启发 |
-| --- | --- | --- | --- |
-| Uni-NaVid | RSS 2025 | 把 VLN、ObjectNav、EQA、Human-following 统一进一个视频式 VLA；公开页强调约 5 Hz 推理和 non-blocking deployment | 你们“找物 + 找人 + 到达”不应拆成完全孤立模型，应该统一为导航技能族，但执行链必须非阻塞 |
-| TrackVLA | CoRL 2025 | 把目标识别与视觉跟踪统一，支持零样本真实部署 | “找到指定人并持续靠近”应被视为独立核心技能，不应只是普通 VLN 的附属功能 |
-| MM-Nav | 2025 预印本 | 强调 360 度多视角观测和多专家能力蒸馏 | 你们有 360 度感知硬件，应该充分利用多视角输入，而不是退化成单前视角 VLN |
-| OmniVLA | 2025 预印本 | 统一语言、2D pose、目标图像等多种目标形式 | Kinbot 的导航目标不该只有自然语言，还应统一支持“语义目标 + 地图点 + 目标图像 + 人员身份” |
-| NavFoM | ICLR 2026 | 跨 embodiment、跨任务导航基础模型；真实部署里输出 trajectory，再交给本地 planner 执行 | 最新工作依然保留 local planner，这直接支持 Kinbot 继续坚持“VLN 管语义，本地导航管安全与执行” |
-| TrackVLA++ | ICRA 2026 | 在跟踪 VLA 里加入显式空间推理和目标身份记忆 | 家庭场景的“找某个老人 / 跟随某个家属 / 不跟错人”关键不在检测，而在长期身份记忆和遮挡恢复 |
-| VLingNav | 2026 预印本 | 自适应链式推理 + 跨模态持久记忆，用于长程导航 | VLN 的下一阶段重点是“什么时候需要深推理”和“如何记住过去看过的东西”，不是一味增大模型 |
-| AsyncVLA | 2026 预印本 | 把高层语义推理与板载快速控制异步解耦 | 你们当前“反应慢、走得犹豫”的问题，首先是系统时序问题，不只是模型精度问题 |
-| LISN | 2025 预印本 | VLM 慢环调制 costmap 和 controller，低层控制器维持实时安全 | 在养老 / 家庭机器人里，语言和社交约束应调制局部规划，而不是绕过局部规划 |
-| OK-Robot | 2024 | 系统集成为先；真实家庭中大量失败来自语义记忆检索错误 | 家庭机器人成败很大程度取决于“物在哪里”的记忆是否稳定，而不只是模型单次推理能力 |
+
+| 工作         | 时间        | 核心信号                                                                                     | 对 Kinbot 的启发                                                 |
+| ---------- | --------- | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
+| Uni-NaVid  | RSS 2025  | 把 VLN、ObjectNav、EQA、Human-following 统一进一个视频式 VLA；公开页强调约 5 Hz 推理和 non-blocking deployment | 你们“找物 + 找人 + 到达”不应拆成完全孤立模型，应该统一为导航技能族，但执行链必须非阻塞              |
+| TrackVLA   | CoRL 2025 | 把目标识别与视觉跟踪统一，支持零样本真实部署                                                                   | “找到指定人并持续靠近”应被视为独立核心技能，不应只是普通 VLN 的附属功能                      |
+| MM-Nav     | 2025 预印本  | 强调 360 度多视角观测和多专家能力蒸馏                                                                    | 你们有 360 度感知硬件，应该充分利用多视角输入，而不是退化成单前视角 VLN                     |
+| OmniVLA    | 2025 预印本  | 统一语言、2D pose、目标图像等多种目标形式                                                                 | Kinbot 的导航目标不该只有自然语言，还应统一支持“语义目标 + 地图点 + 目标图像 + 人员身份”        |
+| NavFoM     | ICLR 2026 | 跨 embodiment、跨任务导航基础模型；真实部署里输出 trajectory，再交给本地 planner 执行                               | 最新工作依然保留 local planner，这直接支持 Kinbot 继续坚持“VLN 管语义，本地导航管安全与执行” |
+| TrackVLA++ | ICRA 2026 | 在跟踪 VLA 里加入显式空间推理和目标身份记忆                                                                 | 家庭场景的“找某个老人 / 跟随某个家属 / 不跟错人”关键不在检测，而在长期身份记忆和遮挡恢复             |
+| VLingNav   | 2026 预印本  | 自适应链式推理 + 跨模态持久记忆，用于长程导航                                                                 | VLN 的下一阶段重点是“什么时候需要深推理”和“如何记住过去看过的东西”，不是一味增大模型               |
+| AsyncVLA   | 2026 预印本  | 把高层语义推理与板载快速控制异步解耦                                                                       | 你们当前“反应慢、走得犹豫”的问题，首先是系统时序问题，不只是模型精度问题                        |
+| LISN       | 2025 预印本  | VLM 慢环调制 costmap 和 controller，低层控制器维持实时安全                                                | 在养老 / 家庭机器人里，语言和社交约束应调制局部规划，而不是绕过局部规划                        |
+| OK-Robot   | 2024      | 系统集成为先；真实家庭中大量失败来自语义记忆检索错误                                                               | 家庭机器人成败很大程度取决于“物在哪里”的记忆是否稳定，而不只是模型单次推理能力                     |
+
 
 ### 2.1 产业侧 VLA 的最新信号
 
@@ -234,15 +271,15 @@ VLN 在 Kinbot 里最应该放在 Orient 层，核心职责有四个：
 
 - 把“去找张阿姨”“去床头柜拿降压药”“去客厅找遥控器”落成世界状态中的目标实体与约束
 
-2. 语义空间检索
+1. 语义空间检索
 
 - 基于家庭语义地图、历史记忆和当前观测，给出优先搜索区域与候选点
 
-3. 目标置信度维护
+1. 目标置信度维护
 
 - 维护目标 belief state，而不是每帧只做一次瞬时判断
 
-4. 环境漂移判断
+1. 环境漂移判断
 
 - 判断“地图没错但物体移动了”还是“定位没错但房间语义变了”，触发不同恢复流程
 
@@ -286,9 +323,33 @@ VLN 对 Act 的合理输出应是：
 
 不建议在一代产品中让 VLN 直接输出连续底盘动作作为唯一执行信号。
 
+## 3.5 无指令移动不应硬塞进狭义 VLN，而应新增邻接策略层
+
+如果把“有限空间共存时何时快、何时慢、何时让、何时停”全都塞进 `semantic_navigation_policy`，模型目标会迅速膨胀：
+
+- 一部分样本在解决“我要去哪”
+- 一部分样本在解决“我该不该动”
+- 一部分样本在解决“我和人谁先过”
+- 一部分样本在解决“我是否应该先退一步再让行”
+
+这会让训练目标、评测指标和运行时接口都变得混乱。
+
+更合理的做法是，在 VLN 相邻处新增 `social_mobility_policy`：
+
+- 共享 Observe 和 World State
+- 共享身份、房间、障碍、人轨迹和风险信息
+- 但单独负责共存移动、礼让、速度调节、主动 reposition 和静默靠近
+
+它与 VLN 的关系应是：
+
+- `semantic_navigation_policy` 回答“为了完成目标，我应该去哪里”
+- `social_mobility_policy` 回答“在当前共享空间里，我应该怎么动才合适”
+
+这两者共同构成 Kinbot 的 `Embodied Mobility Intelligence`。
+
 ## 4. 建议的能力分层
 
-基于现有样机能力，建议把 Kinbot 的 VLN 相关能力拆成四层，而不是一个统一黑盒。
+基于现有样机能力，建议把 Kinbot 的移动智能相关能力拆成五层，而不是一个统一黑盒。
 
 ### 4.1 语义理解层
 
@@ -350,7 +411,28 @@ VLN 对 Act 的合理输出应是：
 
 这层可以由现有 8B 模型升级而来，但建议输出“子目标 / 轨迹块 / 行为提示”，不要直接与底盘紧耦合。
 
-### 4.4 运动执行层
+### 4.4 社交与自主移动策略层
+
+输入：
+
+- 邻近人员轨迹与意图预测
+- 狭窄区域 / 门口 / 走廊等共享空间拓扑
+- 任务紧急度
+- 电量、回充状态、静默模式
+- 家庭社交上下文
+- 当前 embodiment 约束
+
+输出：
+
+- `yield / pass / slow / stop / reposition / standby`
+- 期望人机距离
+- 右行 / 左让 / 等待等路权判断
+- 速度曲线与舒适性约束
+- 主动退让或先停后过的建议
+
+这层解决的是“无用户明确指令时，机器人如何与人共同占据空间”的问题。它更适合调制 controller 和 costmap，而不是直接输出原始底盘动作。
+
+### 4.5 运动执行层
 
 输入：
 
@@ -370,7 +452,14 @@ VLN 对 Act 的合理输出应是：
 
 为了让架构可实现，建议尽快把 VLN 从“模型能力描述”收敛为稳定接口。
 
-建议新增一个逻辑能力：`semantic_navigation_policy`。
+建议新增两个逻辑能力：
+
+- `semantic_navigation_policy`
+- `social_mobility_policy`
+
+其中，前者解决“去哪里”，后者解决“怎么在共享空间里合适地动”。
+
+### 5.1 `semantic_navigation_policy`
 
 其输入建议为：
 
@@ -397,19 +486,61 @@ VLN 对 Act 的合理输出应是：
 
 建议字段定义如下：
 
-| 字段 | 含义 |
-| --- | --- |
-| `navigation_skill` | `go_to_room / search_object / search_person / approach_person / follow_person / escort / recover` |
-| `semantic_subgoal` | 语义级下一步目标，例如“去客厅沙发边桌附近观察” |
-| `candidate_metric_goals` | 一个或多个候选位姿，由局部导航择优执行 |
-| `target_belief` | 目标位置、身份和置信度的结构化表示 |
-| `behavior_hints` | 跟随距离、右侧让行、夜间低速、静默接近等约束 |
-| `need_active_observation` | 是否需要先转头 / 绕一下 / 退后一步再观察 |
-| `need_user_confirmation` | 多目标歧义或高风险时是否需要补充确认 |
-| `recovery_strategy` | 找不到、被挡住、跟丢、地图漂移时的恢复动作 |
-| `explanation` | 面向交互层和审计的可解释文本 |
+
+| 字段                        | 含义                                                                                                |
+| ------------------------- | ------------------------------------------------------------------------------------------------- |
+| `navigation_skill`        | `go_to_room / search_object / search_person / approach_person / follow_person / escort / recover` |
+| `semantic_subgoal`        | 语义级下一步目标，例如“去客厅沙发边桌附近观察”                                                                          |
+| `candidate_metric_goals`  | 一个或多个候选位姿，由局部导航择优执行                                                                               |
+| `target_belief`           | 目标位置、身份和置信度的结构化表示                                                                                 |
+| `behavior_hints`          | 跟随距离、右侧让行、夜间低速、静默接近等约束                                                                            |
+| `need_active_observation` | 是否需要先转头 / 绕一下 / 退后一步再观察                                                                           |
+| `need_user_confirmation`  | 多目标歧义或高风险时是否需要补充确认                                                                                |
+| `recovery_strategy`       | 找不到、被挡住、跟丢、地图漂移时的恢复动作                                                                             |
+| `explanation`             | 面向交互层和审计的可解释文本                                                                                    |
+
 
 这个接口比“输出前进 0.5 米再左转 15 度”更适合产品级架构。
+
+### 5.2 `social_mobility_policy`
+
+在没有用户明确导航指令，或正在执行共享空间移动时，建议由 `social_mobility_policy` 提供约束。
+
+其输入建议为：
+
+- `human_tracks`
+- `human_intent_prediction`
+- `shared_space_topology`
+- `robot_task_state`
+- `urgency_level`
+- `battery_state`
+- `quiet_mode`
+- `embodiment_profile`
+- `risk_constraints`
+
+其输出建议为：
+
+- `locomotion_mode`
+- `right_of_way_decision`
+- `proxemic_target`
+- `speed_profile`
+- `reposition_goal`
+- `standby_decision`
+- `social_explanation`
+
+建议字段定义如下：
+
+
+| 字段                      | 含义                                                         |
+| ----------------------- | ---------------------------------------------------------- |
+| `locomotion_mode`       | `normal / cautious / yield / wait / pass / retreat / park` |
+| `right_of_way_decision` | 共享空间里的先行、让行、交替通过等判断                                        |
+| `proxemic_target`       | 期望的人机距离、侧向偏置和避让边界                                          |
+| `speed_profile`         | 当前阶段的速度上限、加速度和低扰动约束                                        |
+| `reposition_goal`       | 为了不挡路、回充、观察或礼貌等待而移动到的候选位置                                  |
+| `standby_decision`      | 当前是否应暂停、靠边、原地等待或短距后退                                       |
+| `social_explanation`    | 面向交互层和日志的原因解释，例如“通道狭窄，先礼让用户通过”                             |
+
 
 ## 6. 针对现有基础的研发重点
 
@@ -419,7 +550,7 @@ VLN 对 Act 的合理输出应是：
 2. 经典导航、局部规划、避障、SLAM 已经存在，不需要从零重建执行链。
 3. 有高精度重建设备和真实家庭数据，可建立高价值家庭语义数据闭环。
 
-据此，最值得投入的不是“再训一个更大但边界不清的端到端模型”，而是下面四项。
+据此，最值得投入的不是“再训一个更大但边界不清的端到端模型”，而是下面几项。
 
 ### 6.1 把现有动作式 VLN 改造成“子目标式 VLN”
 
@@ -483,6 +614,156 @@ AsyncVLA 和 Uni-NaVid 的经验都说明：
 - 语义子目标刷新：1 到 3 Hz
 - 复杂恢复 / 显式推理：0.2 到 1 Hz
 
+### 6.5 Sim2Real 需要本体感知，但不建议让高层模型直接吃完整 URDF
+
+结论：需要把“机器人有多大、能怎么动、哪些姿态下视野会变、哪些地方能过不能过”显式引入训练与部署，但不建议把完整 URDF 文本直接作为高层 VLN/VLA 的主要输入。
+
+更合理的是三层使用：
+
+#### 1. 仿真 / RL / 控制层：需要高保真本体模型
+
+这一层最需要准确 URDF 或等效物理模型，用于：
+
+- 底盘尺寸、重心、碰撞体
+- 传感器外参与视野遮挡
+- 机身升降、俯仰、抽屉开启等状态变化
+- 门槛通过、最小转弯半径、制动距离、动态稳定性
+
+如果这一层没有足够精度，模型和 controller 学到的“能不能过”“会不会碰”“能不能及时停”都会偏掉。
+
+#### 2. 导航策略层：需要压缩过的 `embodiment_profile`
+
+高层导航策略真正需要的不是原始 URDF，而是 compact body schema，例如：
+
+- `footprint_polygon`
+- `body_height`
+- `sensor_fov`
+- `blind_zones`
+- `min_turn_radius`
+- `braking_distance`
+- `passable_clearance`
+- `threshold_capability`
+- `camera_mount_mode`
+
+也就是让策略知道“我是什么样的机器人”，而不是让它每次都去解析机械结构文件。
+
+#### 3. 运行时安全层：需要实时本体状态
+
+例如：
+
+- 当前是否升高机身
+- 当前屏幕 / 头部俯仰角
+- 当前抽屉是否外伸
+- 当前负载和制动余量
+
+这些会直接影响通过性和安全边界。
+
+结合外部工作看，这也是更主流的方向：
+
+- NVIDIA `GR00T N1.6` 仍然把高层 VLA 与低层 whole-body control 分开，并把导航通过速度命令接到控制层。
+- `COMPASS` 通过 embodiment-specific adaptation 和 distillation 处理不同机器人形态。
+- `X-VLA` 也采用 embodiment-specific prompts，而不是要求所有本体差异都由一个完全无结构的统一 token 流自己吸收。
+
+对 Kinbot 这种移动平台，一代产品最应该优先建设的不是“完整 URDF 进高层模型”，而是“高保真仿真 + 稳定 embodiment_profile + 运行时 body state”这三件套。
+
+### 6.6 是否需要先做空间增强 VLM，再训练 VLN
+
+结论：需要，但不建议把它理解成“再堆一个更大的通用 VLM 然后端到端吃掉所有导航问题”。
+
+更合适的定义是：先建立一个 `spatially enhanced perception teacher / encoder`，再让 VLN 或移动策略在其上学习。
+
+原因有三点：
+
+1. 你们当前的导航问题，核心不只是识别物体，而是房间、家具、拓扑、遮挡、可通行性和人机关系。
+2. 官方资料显示，`Qwen3-VL` 已经强化了 spatial perception、3D grounding 和 spatial understanding，这说明拿它做教师模型是合理的。
+3. 但房间识别、家具承载先验、家庭拓扑和社交距离并不是互联网通用 VLM 的天然强项，仍然需要你们自己的家庭数据做 domain specialization。
+
+因此推荐路线不是“直接对 `Qwen3-VL-8B` 喂导航动作数据继续硬训”，而是：
+
+1. 先把 `Qwen3-VL-8B` 当成教师模型和标注引擎。
+2. 用真实家庭数据补齐房间、家具、通行性、遮挡、共存移动等结构化标签。
+3. 训练空间增强感知模块，稳定输出：
+  - 房间类别与边界
+  - 房间连通关系
+  - 家具类别与承载关系
+  - 目标候选排序
+  - 人员相对方位与可交互状态
+  - 狭窄区域和共享空间语义
+4. 再让 VLN / social mobility policy 消费这些结构化空间结果。
+
+这样做的本质，是把“看懂空间”与“决定怎么动”拆开优化。
+
+### 6.7 小尺寸专用模型能否在使用情境中超越大尺寸通用模型
+
+结论：完全有可能，而且在闭环机器人系统里，这往往是更现实的目标。
+
+这里的“超越”不应只看离线问答能力，而应看：
+
+- 闭环成功率
+- 首次响应时延
+- 犹豫时间占比
+- 通行舒适性
+- 跟丢率 / 错认率
+- 单位算力下的稳定性
+
+从公开工作看，这条路线是成立的：
+
+- Stanford `MiniVLA` 把 OpenVLA 从 7B 缩到约 1B，并通过 action chunking 和 multi-image support 在 Libero-90 上把成功率从 62% 提到 82%，同时推理更快。
+- `OpenVLA-OFT` 说明训练配方和动作表示优化可以带来 25 到 50 倍速度提升，以及 20% 以上成功率提升。
+- `X-VLA-0.9B` 说明小尺寸模型配合合理的 embodiment 设计，也能在多仿真与真实机器人上达到很强表现。
+- `COMPASS` 则更直接说明：specialist policy + distillation 是有效路线。
+
+对 Kinbot，这意味着：
+
+- 大模型不一定最适合作为执行模型
+- 小模型只要问题定义正确、输入结构化、输出受约束，完全可能在真实闭环里赢过大模型
+
+推荐的双轨方案是：
+
+#### 慢路径：大模型教师
+
+用途：
+
+- 离线标注和数据清洗
+- hard case 复盘
+- 新场景 / 新指令解释
+- 低频复杂恢复
+
+#### 快路径：小模型执行器
+
+用途：
+
+- 房间识别
+- 家具与目标候选排序
+- 人员状态与相对方位判断
+- 语义子目标刷新
+- 共享空间礼让 / 让行 / 低扰动移动
+
+也就是说，真正该追求的不是“一个更大的通用模型包打天下”，而是“一个更合理的教师-学生-外部记忆-局部规划组合”。
+
+### 6.8 技术克制：先把模型做窄、做快、做稳，再逐步统一
+
+按当前需求，很容易把下面这些都想一次性塞进一个模型：
+
+- 指令寻物
+- 指令寻人
+- 跟随和护送
+- 无指令共存移动
+- 社交礼让
+- 主动 reposition
+- 回充与低电量自主移动
+- 夜间低扰动策略
+
+这会导致模型尺寸、数据标注、训练目标和评测体系同时失控。
+
+更稳妥的方式是分三步：
+
+1. 先把 `semantic_navigation_policy` 做稳。
+2. 再把 `social_mobility_policy` 接上。
+3. 最后再考虑更宽的自主移动统一策略。
+
+不要在一代产品阶段试图直接训练一个“既懂找人找物，又懂共存礼让，还懂所有底盘细节”的单一巨模型。
+
 ## 7. 量产预备路线建议
 
 结合项目时间线，建议把 VLN 规划切成四段。
@@ -494,7 +775,8 @@ AsyncVLA 和 Uni-NaVid 的经验都说明：
 目标：
 
 - 明确 VLN 在 OODA 中的角色边界
-- 冻结 `semantic_navigation_policy` 输入输出
+- 冻结 `semantic_navigation_policy` 与 `social_mobility_policy` 输入输出
+- 冻结 `embodiment_profile` 结构
 - 定义真实家庭导航评测集
 
 必须完成的评测任务：
@@ -504,6 +786,9 @@ AsyncVLA 和 Uni-NaVid 的经验都说明：
 - 指定人靠近
 - 指定人跟随
 - 约束导航
+- 狭窄通道会车
+- 人机共存让行
+- 无指令主动 reposition
 - 地图漂移恢复
 - 遮挡恢复
 - 多相似目标 disambiguation
@@ -518,6 +803,9 @@ AsyncVLA 和 Uni-NaVid 的经验都说明：
 - 跟丢率
 - 错跟率 / 错认率
 - 安全干预次数
+- 不必要停车率
+- 窄通道一次通过率
+- 近人场景舒适性 / 侵扰率
 
 ### P1：记忆增强与子目标化
 
@@ -527,12 +815,14 @@ AsyncVLA 和 Uni-NaVid 的经验都说明：
 
 - 把现有 8B 模型从动作输出改造为子目标输出
 - 建立家庭语义记忆模块
+- 建立 `embodiment_profile` 与 body-state 管线
 - 打通寻物 / 寻人的统一技能接口
 
 建议优先做：
 
 - 目标 belief state
 - 房间 / 家具 / 人员候选排序
+- 房间识别与共享空间语义
 - 主动观察动作
 - 搜索恢复流程
 
@@ -544,12 +834,14 @@ AsyncVLA 和 Uni-NaVid 的经验都说明：
 
 - 把语义推理与局部执行彻底异步化
 - 强化指定人跟随、拥挤场景靠近、夜间低扰动接近
+- 建立 `social_mobility_policy`
 - 将语言约束转成速度 / 让行 / keepout 提示
 
 建议专项：
 
 - 人跟随专线
 - 社交导航约束
+- 共享空间博弈策略
 - 语义约束到 costmap / controller 调制
 - 低时延边缘适配器或小模型蒸馏
 
@@ -624,19 +916,37 @@ Kinbot 可以借鉴智驾 VLA 的地方有：
 
 因为 Kinbot 的核心任务不是“沿路高效驾驶”，而是“在开放家庭环境里，按语义、身份、授权和社交约束稳定到达并继续交互”。
 
+### 8.5 不建议把“移动具身智能”一次性定义成单一巨模型
+
+这会同时带来四类风险：
+
+- 模型尺寸失控
+- 数据定义失控
+- 评测目标失控
+- 端侧时延失控
+
+更稳妥的路线是：
+
+- 大模型承担教师、标注、低频恢复
+- 小模型承担高频执行
+- 外部记忆承担长期空间与家庭先验
+- 经典导航承担局部可达性和安全闭环
+
 ## 9. 对架构师的直接建议
 
-如果要把这件事推进成正式架构项，建议架构师优先确认以下四条：
+如果要把这件事推进成正式架构项，建议架构师优先确认以下六条：
 
 1. 是否正式确认 `VLN = 语义导航策略层`，而不是底层运动控制器。
 2. 是否新增 `semantic_navigation_policy` 和 `semantic_spatial_memory` 两个逻辑能力。
 3. 是否把“指定人搜索 / 跟随 / 靠近”升级为与寻物同级的一条正式产品能力线。
 4. 是否明确“借鉴 VLA 的训练与模型方法，但不照搬智驾式 `video -> action` 闭环”。
+5. 是否新增 `social_mobility_policy`，专门覆盖无指令共存移动与主动 reposition。
+6. 是否采用“仿真层高保真 URDF + 策略层 compact embodiment_profile + 教师大模型 / 执行小模型双轨”的工程路线。
 
-如果这四条确认，后续 VLN 规划就会非常清晰：
+如果这六条确认，后续 VLN 规划就会非常清晰：
 
 - 上层做任务语义和记忆
-- 中层做子目标与恢复
+- 中层做子目标、共存移动与恢复
 - 下层做局部规划和安全执行
 
 ## 10. 外部参考
@@ -645,33 +955,39 @@ Kinbot 可以借鉴智驾 VLA 的地方有：
 
 VLN / 导航侧：
 
-- Uni-NaVid 项目页：<https://pku-epic.github.io/Uni-NaVid/>
-- TrackVLA 项目页：<https://pku-epic.github.io/TrackVLA-Web/>
-- TrackVLA++ 项目页：<https://pku-epic.github.io/TrackVLA-plus-plus-Web/>
-- NavFoM 项目页：<https://pku-epic.github.io/NavFoM-Web/>
-- VLingNav 项目页：<https://wsakobe.github.io/VLingNav-web/>
-- OmniVLA 项目页：<https://omnivla-nav.github.io/>
-- AsyncVLA 项目页：<https://asyncvla.github.io/>
-- MM-Nav 项目页：<https://pku-epic.github.io/MM-Nav-Web/>
-- LISN 项目页：<https://social-nav.github.io/LISN-project/>
-- OK-Robot 项目页：<https://ok-robot.github.io/>
-- VLN-PE 项目页：<https://crystalsixone.github.io/vln_pe.github.io/>
-- VLN-PE ICCV 2025 论文页：<https://openaccess.thecvf.com/content/ICCV2025/html/Wang_Rethinking_the_Embodied_Gap_in_Vision-and-Language_Navigation_A_Holistic_Study_ICCV_2025_paper.html>
-- VLN-VER 官方代码页：<https://github.com/DefaultRui/VLN-VER>
+- Uni-NaVid 项目页：[https://pku-epic.github.io/Uni-NaVid/](https://pku-epic.github.io/Uni-NaVid/)
+- TrackVLA 项目页：[https://pku-epic.github.io/TrackVLA-Web/](https://pku-epic.github.io/TrackVLA-Web/)
+- TrackVLA++ 项目页：[https://pku-epic.github.io/TrackVLA-plus-plus-Web/](https://pku-epic.github.io/TrackVLA-plus-plus-Web/)
+- NavFoM 项目页：[https://pku-epic.github.io/NavFoM-Web/](https://pku-epic.github.io/NavFoM-Web/)
+- VLingNav 项目页：[https://wsakobe.github.io/VLingNav-web/](https://wsakobe.github.io/VLingNav-web/)
+- OmniVLA 项目页：[https://omnivla-nav.github.io/](https://omnivla-nav.github.io/)
+- AsyncVLA 项目页：[https://asyncvla.github.io/](https://asyncvla.github.io/)
+- MM-Nav 项目页：[https://pku-epic.github.io/MM-Nav-Web/](https://pku-epic.github.io/MM-Nav-Web/)
+- LISN 项目页：[https://social-nav.github.io/LISN-project/](https://social-nav.github.io/LISN-project/)
+- OK-Robot 项目页：[https://ok-robot.github.io/](https://ok-robot.github.io/)
+- VLN-PE 项目页：[https://crystalsixone.github.io/vln_pe.github.io/](https://crystalsixone.github.io/vln_pe.github.io/)
+- VLN-PE ICCV 2025 论文页：[https://openaccess.thecvf.com/content/ICCV2025/html/Wang_Rethinking_the_Embodied_Gap_in_Vision-and-Language_Navigation_A_Holistic_Study_ICCV_2025_paper.html](https://openaccess.thecvf.com/content/ICCV2025/html/Wang_Rethinking_the_Embodied_Gap_in_Vision-and-Language_Navigation_A_Holistic_Study_ICCV_2025_paper.html)
+- VLN-VER 官方代码页：[https://github.com/DefaultRui/VLN-VER](https://github.com/DefaultRui/VLN-VER)
 
-产业 VLA / 智驾 / 通用具身侧：
+VLM / VLA / 通用具身侧：
 
-- XPENG 第二代 VLA 官方发布：<https://www.xiaopeng.com/news/company_news/5539.html>
-- Tesla AI & Robotics 官方页：<https://www.tesla.com/AI>
-- Tesla FSD 官方页：<https://www.tesla.com/fsd>
-- Tesla FSD Support 页：<https://www.tesla.com/support/fsd>
-- NVIDIA GR00T N1 官方发布：<https://nvidianews.nvidia.com/news/nvidia-isaac-gr00t-n1-open-humanoid-robot-foundation-model-simulation-frameworks>
-- NVIDIA GR00T N1.6 技术博客：<https://developer.nvidia.com/blog/building-generalist-humanoid-capabilities-with-nvidia-isaac-gr00t-n1-6-using-a-sim-to-real-workflow/>
-- NVIDIA Isaac GR00T 官方页：<https://developer.nvidia.com/project-gr00t>
-- Spirit AI 官方介绍：<https://www.spirit-ai.com/en/about>
-- Spirit AI 新闻页：<https://www.spirit-ai.com/en/news>
+- Qwen3-VL 官方仓库：[https://github.com/QwenLM/Qwen3-VL](https://github.com/QwenLM/Qwen3-VL)
+- MiniVLA 官方博客：[https://ai.stanford.edu/blog/minivla/](https://ai.stanford.edu/blog/minivla/)
+- OpenVLA-OFT 项目页：[https://openvla-oft.github.io/](https://openvla-oft.github.io/)
+- X-VLA 项目页：[https://thu-air-dream.github.io/X-VLA/](https://thu-air-dream.github.io/X-VLA/)
+- XPENG 第二代 VLA 官方发布：[https://www.xiaopeng.com/news/company_news/5539.html](https://www.xiaopeng.com/news/company_news/5539.html)
+- Tesla AI & Robotics 官方页：[https://www.tesla.com/AI](https://www.tesla.com/AI)
+- Tesla FSD 官方页：[https://www.tesla.com/fsd](https://www.tesla.com/fsd)
+- Tesla FSD Support 页：[https://www.tesla.com/support/fsd](https://www.tesla.com/support/fsd)
+- NVIDIA GR00T N1 官方发布：[https://nvidianews.nvidia.com/news/nvidia-isaac-gr00t-n1-open-humanoid-robot-foundation-model-simulation-frameworks](https://nvidianews.nvidia.com/news/nvidia-isaac-gr00t-n1-open-humanoid-robot-foundation-model-simulation-frameworks)
+- NVIDIA GR00T N1.6 技术博客：[https://developer.nvidia.com/blog/building-generalist-humanoid-capabilities-with-nvidia-isaac-gr00t-n1-6-using-a-sim-to-real-workflow/](https://developer.nvidia.com/blog/building-generalist-humanoid-capabilities-with-nvidia-isaac-gr00t-n1-6-using-a-sim-to-real-workflow/)
+- NVIDIA Isaac GR00T 官方页：[https://developer.nvidia.com/project-gr00t](https://developer.nvidia.com/project-gr00t)
+- Figure Helix 02 官方发布：[https://www.figure.ai/news/helix-02](https://www.figure.ai/news/helix-02)
+- Spirit AI 官方介绍：[https://www.spirit-ai.com/en/about](https://www.spirit-ai.com/en/about)
+- Spirit AI 新闻页：[https://www.spirit-ai.com/en/news](https://www.spirit-ai.com/en/news)
 
 补充说明：
 
 - 截至 2026-03-08，我没有检索到 NVIDIA 官方公开名为 `GR00T N2` 的材料；目前可核实的是 2025-03-18 的 `GR00T N1` 和 2026-01-08 的 `GR00T N1.6`。
 - `VLNVerse` 的 2025-12-22 预印本公开摘要与本文判断方向一致，即更强调 versatile、embodied、realistic simulation 与 unified evaluation；但我本次未找到稳定的官方项目页，因此没有把它作为本文的核心依据。
+
