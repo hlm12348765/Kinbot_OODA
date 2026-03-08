@@ -35,7 +35,7 @@
 
 ## 3. 一级模块划分
 
-建议将系统分成 10 个一级模块：
+建议将系统分成 9 个一级模块：
 
 1. `platform_runtime`
 2. `mobility_navigation`
@@ -44,11 +44,14 @@
 5. `world_state_memory`
 6. `decision_orchestration`
 7. `safety_compliance_authorization`
-8. `cloud_service_gateway`
-9. `app_family_care`
-10. `observability_data_governance`
+8. `companion_service_system`
+9. `observability_data_governance`
 
-其中 `safety_compliance_authorization` 和 `observability_data_governance` 是横切模块，但实现上仍建议独立建模块而不是散落在各系统里。
+说明：
+
+- 为满足“任意一层尽量控制在 `5～9` 个实体”的约束，原来的 `cloud_service_gateway` 与 `app_family_care` 在一级模块层合并为 `companion_service_system`。
+- 这不意味着 App、云服务和后台运营坐席在实现或团队分工上必须合并，只表示它们在一级模块图中属于同一伴生系统域。
+- `safety_compliance_authorization` 和 `observability_data_governance` 仍是横切模块，但实现上建议独立建模块而不是散落在各系统里。
 
 ## 4. 一级模块职责与边界
 
@@ -197,48 +200,31 @@
 - 输入：动作提议、风险等级、角色身份、授权配置、策略规则
 - 输出：批准、拒绝、降级建议、需确认动作、审计记录
 
-### 4.8 `cloud_service_gateway`
-
-职责：
-
-- 联网问答
-- 问诊转接、第三方医疗服务连接
-- 购药、配送、天气、通知等外部服务代理
-- 云侧模型增强和知识增强
-- 配置中心、模型版本和云侧策略下发
-
-边界：
-
-- 云侧不能直接控制底盘和执行器
-- 云侧不能拿到默认原始敏感数据
-- 医疗、购药和档案能力必须建立显式授权和审计
-
-输入输出：
-
-- 输入：脱敏请求、联网任务、外部服务调用请求
-- 输出：结构化服务结果、失败原因、云侧配置
-
-### 4.9 `app_family_care`
+### 4.8 `companion_service_system`
 
 职责：
 
 - 家属 App、远程看护和消息通知
-- 用户授权配置
-- 异常事件查看和确认
-- 用药计划管理
-- 远程服务接入入口
+- 用户授权配置、异常事件查看和远程确认
+- 联网问答、问诊转接、第三方医疗服务连接
+- 购药、配送、天气、通知等外部服务代理
+- 云侧模型增强、知识增强、配置中心和版本策略
+- 后台人工服务会话、转接和审计协同
 
 边界：
 
-- App 不应直接绕过端侧门控下达危险动作
-- 家属远程控制必须遵守授权与审计策略
+- 伴生系统不能直接控制底盘和执行器
+- App、云和坐席都不能绕过端侧门控直接下达危险动作
+- 伴生系统默认不能持有原始敏感数据
+- 医疗、购药、档案和远控能力必须建立显式授权和审计
+- 伴生系统对本体的约束应停留在接口、职责和交付面，不应反向锁死本体器件和结构实现
 
 输入输出：
 
-- 输入：机器人状态、告警、授权请求、服务结果
-- 输出：用户设置、授权变更、远程确认、计划任务
+- 输入：机器人状态、告警、授权请求、联网任务、外部服务调用请求
+- 输出：用户设置、授权变更、远程确认、计划任务、结构化服务结果、失败原因、云侧配置
 
-### 4.10 `observability_data_governance`
+### 4.9 `observability_data_governance`
 
 职责：
 
@@ -262,7 +248,7 @@
 以下边界建议作为架构硬约束：
 
 1. 任何会导致机器人移动、上报、外部下单、医疗联动的动作，都必须先经过 `safety_compliance_authorization`。
-2. `cloud_service_gateway` 不能直接向 `mobility_navigation` 下命令，只能返回结构化建议或服务结果。
+2. `companion_service_system` 不能直接向 `mobility_navigation` 下命令，只能返回结构化建议、服务结果或远程确认结果。
 3. `multimodal_interaction` 不能自己决定高风险打断和异常上报，只能执行已批准策略。
 4. `human_health_sensing` 只能产生候选健康事件，最终是否上报、是否联动医疗必须由决策和门控链处理。
 5. `world_state_memory` 是统一状态源，但不替代实时安全链；实时避障和急停仍归 `mobility_navigation` 和安全链。
@@ -302,7 +288,7 @@
 3. `world_state_memory` 汇总为统一状态快照。
 4. `decision_orchestration` 基于状态快照形成动作提议。
 5. `safety_compliance_authorization` 对动作提议做审批。
-6. 审批通过后，由 `mobility_navigation`、`multimodal_interaction`、`cloud_service_gateway`、`app_family_care` 分别执行对应动作。
+6. 审批通过后，由 `mobility_navigation`、`multimodal_interaction`、`companion_service_system` 分别执行对应动作。
 7. `observability_data_governance` 记录全链路事件。
 
 ## 8. 建议的团队切分

@@ -75,7 +75,7 @@
 
 ## 4. 一级实体
 
-建议一代产品至少建模以下 10 类一级实体：
+建议一代产品至少建模以下 9 类一级实体：
 
 1. `Person`
 2. `RoleBinding`
@@ -86,7 +86,11 @@
 7. `MedicationAsset`
 8. `Task`
 9. `RiskEvent`
-10. `ServiceLink`
+
+说明：
+
+- 为遵守“任意一层尽量控制在 `5～9` 个实体”的约束，原先单列的 `ServiceLink` 不再作为一级实体独立存在，而是并入 `Household.care_network` 中作为受治理的嵌套结构。
+- 这不意味着外部联动对象不重要，只表示在一代 `World State` 的一级实体层不再单独占一个顶层槽位。
 
 ## 5. 一级实体定义
 
@@ -144,7 +148,7 @@
 | --- | --- | --- |
 | `household_id` | string | 家庭唯一 ID |
 | `members` | string[] | 人员 ID 列表 |
-| `care_network` | object | 家属、社区、物业、医生平台等联动信息 |
+| `care_network` | object[] | 家属、社区、物业、医生平台等联动对象列表，内含服务类型、触发策略、授权范围、责任边界和备用链路 |
 | `home_mode` | enum | 白天、夜间、离家、休息、异常中 |
 | `emergency_policy` | object | 高风险事件默认联动链路 |
 | `privacy_policy` | object | 数据共享和上报规则 |
@@ -270,24 +274,6 @@
 | `reporting_policy_snapshot` | object | 生成时对应的上报策略 |
 | `linked_task_id` | string | 关联任务 |
 
-### 5.10 `ServiceLink`
-
-表示家庭外部联动对象。
-
-关键字段：
-
-| 字段 | 类型 | 说明 |
-| --- | --- | --- |
-| `service_link_id` | string | 唯一 ID |
-| `service_type` | enum | 家属、社区、物业、医生平台、互联网医院、药店、配送 |
-| `provider_name` | string | 服务方名称 |
-| `contact_policy` | object | 触发条件与时间窗 |
-| `auth_policy` | object | 授权要求 |
-| `data_scope` | object | 可共享的数据范围 |
-| `responsibility_scope` | object | 平台负责交付、机器人负责信息传递与审计等责任边界 |
-| `qualification_status` | enum | 待审核、已准入、受限、停用 |
-| `fallback_link_id` | string | 失败后备用链路 |
-
 ## 6. 关键关系
 
 建议至少显式维护以下关系：
@@ -296,13 +282,13 @@
 2. `Person` -> `HealthProfile`
 3. `HealthProfile` -> `MedicationAsset`
 4. `Household` -> `Person`
-5. `Household` -> `ServiceLink`
+5. `Household.care_network` -> 外部联动对象
 6. `Person` -> `Place`
 7. `Object` -> `Place`
 8. `Person` -> `Object`
 9. `Task` -> `Person`
 10. `Task` -> `RiskEvent`
-11. `RiskEvent` -> `ServiceLink`
+11. `RiskEvent` -> `Household.care_network`
 
 ## 7. 运行时快照
 

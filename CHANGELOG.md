@@ -60,6 +60,7 @@
 - 更新 [README.md](README.md)、[docs/LIFECYCLE_WORKFLOW.md](docs/LIFECYCLE_WORKFLOW.md)、[docs/WORKFLOW.md](docs/WORKFLOW.md) 和 [docs/DECISION_LOG.md](docs/DECISION_LOG.md)，并新增 [docs/DEMO_TO_MASS_PRODUCTION_GAPS.md](docs/DEMO_TO_MASS_PRODUCTION_GAPS.md)，将 `KBT-18` 收敛为 7 个能力缺口域、3 类阻断项和一份默认优先级排序。
 - 更新 [docs/DEMO_TO_MASS_PRODUCTION_GAPS.md](docs/DEMO_TO_MASS_PRODUCTION_GAPS.md)、[docs/DECISION_LOG.md](docs/DECISION_LOG.md)、[README.md](README.md)、[docs/WORKFLOW.md](docs/WORKFLOW.md) 和 [docs/LIFECYCLE_WORKFLOW.md](docs/LIFECYCLE_WORKFLOW.md)，吸收 `Step13` 对 `KBT-18` 的审阅意见，补入 `D6` 作为阻断项的理由，并把“储物仓能力保留但机构重构”“整机外观形态重构”写入工程化主线。
 - 更新 [docs/DECISION_LOG.md](docs/DECISION_LOG.md)、[docs/ENGINEERING_NPI_BASELINE.md](docs/ENGINEERING_NPI_BASELINE.md)、[README.md](README.md)、[docs/WORKFLOW.md](docs/WORKFLOW.md) 和 [docs/LIFECYCLE_WORKFLOW.md](docs/LIFECYCLE_WORKFLOW.md)，吸收 `Step14` 对 `KBT-18` 和 `KBT-24` 的审阅结果，正式冻结 `D6` 阻断项和 `KBT-24` 基线，并新增 [docs/HARDWARE_SOFTWARE_SELECTION_MATRIX.md](docs/HARDWARE_SOFTWARE_SELECTION_MATRIX.md) 启动 `KBT-11`。
+- 更新 [docs/MODULE_BOUNDARIES.md](docs/MODULE_BOUNDARIES.md)、[docs/WORLD_STATE_SCHEMA.md](docs/WORLD_STATE_SCHEMA.md)、[docs/HARDWARE_SOFTWARE_SELECTION_MATRIX.md](docs/HARDWARE_SOFTWARE_SELECTION_MATRIX.md)、[docs/WORKFLOW.md](docs/WORKFLOW.md)、[docs/LIFECYCLE_WORKFLOW.md](docs/LIFECYCLE_WORKFLOW.md)、[docs/DECISION_LOG.md](docs/DECISION_LOG.md) 和 [README.md](README.md)，吸收 `Step15` 与 `Step16` 的审阅结果：将一级模块从 `10` 压缩到 `9`、把世界状态一级实体压回 `9`、把 `KBT-11` 改为中国芯主线，并加入“前置评审清账”机制。
 
 ## [2026-03-07]
 
