@@ -1,4 +1,4 @@
-# Kinbot_OODA World State Schema
+# Kinbot_OODA 世界状态结构
 
 ## 1. 文档目的
 
@@ -222,6 +222,7 @@
 | `form` | enum | 片剂、胶囊、液体等 |
 | `dosage_rule` | object | 剂量和频次 |
 | `storage_place_id` | string | 存放位置 |
+| `compartment_policy` | object | 仓门电动开关、防夹手、开关记录等策略 |
 | `remaining_count` | number | 剩余数量 |
 | `expiry_date` | string | 有效期 |
 | `prescription_ref` | string | 处方引用 |
@@ -231,6 +232,7 @@
 备注：
 
 - 如果机器人本体设有储物仓，储物仓中的药品也应被表示为 `MedicationAsset`。
+- 一期储物仓必须具备防夹手、电动开关和开关状态记录能力；储物记录和交接确认能力应优先规划。
 
 ### 5.8 `Task`
 
@@ -282,6 +284,8 @@
 | `contact_policy` | object | 触发条件与时间窗 |
 | `auth_policy` | object | 授权要求 |
 | `data_scope` | object | 可共享的数据范围 |
+| `responsibility_scope` | object | 平台负责交付、机器人负责信息传递与审计等责任边界 |
+| `qualification_status` | enum | 待审核、已准入、受限、停用 |
 | `fallback_link_id` | string | 失败后备用链路 |
 
 ## 6. 关键关系
@@ -319,7 +323,9 @@
 | `battery_state` | 电量与回充需求 |
 | `medication_urgency` | 是否存在紧急用药或即将到点服药 |
 | `vital_signal_sources` | 当前生命体征信号来源，如穿戴设备、血压计、人工输入 |
+| `wearable_freshness_state` | 穿戴数据的新鲜度及采集模式，如广播、SDK、问诊式补采 |
 | `escalation_targets` | 当前可联动对象 |
+| `manual_service_state` | 当前是否已发起后台人工服务、是否接通、是否超时 |
 
 ## 8. 推荐的事件类型
 
@@ -342,6 +348,15 @@
 - `caregiver_mode_enabled`
 - `service_link_available`
 - `service_link_failed`
+- `manual_service_requested`
+- `manual_service_connected`
+- `manual_service_transferred`
+- `manual_service_timeout`
+- `manual_review_requested`
+- `wearable_measurement_requested`
+- `compartment_opened`
+- `compartment_closed`
+- `compartment_blocked`
 - `robot_near_elder`
 - `robot_delivery_completed`
 
@@ -437,16 +452,16 @@
 
 在进入接口契约前，以下问题仍需继续明确：
 
-1. 生命体征设备的一期范围
-2. 紧急用药管理的自主动作边界
-3. 老人与子女同权时的冲突仲裁
-4. 保姆模式的具体协作动作
-5. 120 联动接口是否在一期预留
+1. 小米、华为等品牌设备的一期具体兼容范围
+2. 后台人工服务的角色分工、SLA 和接入链路
+3. UWB 雷达在室内粗定位、活动状态判断和生命体征监测上的成熟度
+4. 储物仓交接、防误取和审计状态需要表达多细
+5. 第三方平台责任边界如何映射到状态和审计模型
 
 ## 13. 下一步建议
 
-基于本文件，建议下一份文档直接写：
+基于本文件和已产出的决策状态机，建议下一份文档继续写：
 
-1. `Decision State Machine`
-2. `Safety / Compliance / Authorization API`
-3. `Health Event Pipeline`
+1. 安全 / 合规 / 授权接口
+2. 健康事件管线
+3. 量产预备验证计划

@@ -453,7 +453,7 @@ Sensors
 为了支持后续进化，应该优先把稳定部分定义为接口，而不是把具体算法实现固化进系统边界。建议优先稳定以下接口：
 
 - `Sensor Adapter Interface`：统一封装相机、麦克风、IMU、轮速计、触觉等输入
-- `World State Schema`：统一表达空间、人、物、任务、风险和权限
+- 世界状态结构：统一表达空间、人、物、任务、风险和权限
 - `Task / Action Contract`：统一表达目标、约束、前置条件、执行结果和失败原因
 - `Safety / Authorization API`：统一表达动作审批、拒绝原因和降级建议
 - `Cloud Capability API`：统一表达哪些能力可联网调用，哪些必须端侧执行

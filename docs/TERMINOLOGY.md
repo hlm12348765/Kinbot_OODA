@@ -46,7 +46,7 @@
 说明：
 
 - 如果后续项目引入这类能力，可在 `Orient` 层作为可选预测模块加入
-- `World Model` 不是当前 `World State Schema` 的同义词
+- `World Model` 不是当前“世界状态结构”的同义词
 
 ### `World Event`
 
