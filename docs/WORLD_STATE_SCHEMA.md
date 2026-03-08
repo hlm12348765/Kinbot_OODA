@@ -92,6 +92,41 @@
 - 为遵守“任意一层尽量控制在 `5～9` 个实体”的约束，原先单列的 `ServiceLink` 不再作为一级实体独立存在，而是并入 `Household.care_network` 中作为受治理的嵌套结构。
 - 这不意味着外部联动对象不重要，只表示在一代 `World State` 的一级实体层不再单独占一个顶层槽位。
 
+### 4.1 一级实体关系图
+
+```mermaid
+flowchart LR
+    subgraph 持久状态
+        HH[Household]
+        PER[Person]
+        RB[RoleBinding]
+        PL[Place]
+        OBJ[Object]
+        HP[HealthProfile]
+        MED[MedicationAsset]
+    end
+
+    subgraph 运行与事件
+        TASK[Task]
+        RISK[RiskEvent]
+    end
+
+    HH -->|members| PER
+    HH -->|care_network| RISK
+    PER -->|role / permission| RB
+    PER -->|health_profile| HP
+    PER -->|default or current place| PL
+    OBJ -->|located_in| PL
+    HP -->|medication_plan| MED
+    TASK -->|owner| PER
+    TASK -->|linked_risk| RISK
+    RISK -->|subject| PER
+```
+
+说明：
+
+- 这张图强调的是一代 `World State` 的一级实体骨架，具体字段和二级结构以下文定义为准。
+
 ## 5. 一级实体定义
 
 ### 5.1 `Person`

@@ -47,6 +47,44 @@
 8. `companion_service_system`
 9. `observability_data_governance`
 
+### 3.1 一级模块图
+
+```mermaid
+flowchart TB
+    PR[platform_runtime]
+    HHS[human_health_sensing]
+    MOB[mobility_navigation]
+    MMI[multimodal_interaction]
+    WS[world_state_memory]
+    DO[decision_orchestration]
+    SCA[safety_compliance_authorization]
+    CSS[companion_service_system]
+    ODG[observability_data_governance]
+
+    PR --> HHS
+    PR --> MOB
+    PR --> MMI
+    HHS --> WS
+    MOB --> WS
+    MMI --> WS
+    WS --> DO
+    DO --> SCA
+    SCA --> MOB
+    SCA --> MMI
+    SCA --> CSS
+    CSS --> WS
+    HHS -.审计与治理.-> ODG
+    MOB -.审计与治理.-> ODG
+    MMI -.审计与治理.-> ODG
+    WS -.审计与治理.-> ODG
+    DO -.审计与治理.-> ODG
+    CSS -.审计与治理.-> ODG
+```
+
+说明：
+
+- 这张图表达的是一级模块之间的稳定协作面，不是完整运行时时序。
+
 说明：
 
 - 为满足“任意一层尽量控制在 `5～9` 个实体”的约束，原来的 `cloud_service_gateway` 与 `app_family_care` 在一级模块层合并为 `companion_service_system`。
