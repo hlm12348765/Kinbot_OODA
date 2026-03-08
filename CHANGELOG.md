@@ -64,6 +64,7 @@
 - 更新 [docs/MODULE_BOUNDARIES.md](docs/MODULE_BOUNDARIES.md)、[docs/WORLD_STATE_SCHEMA.md](docs/WORLD_STATE_SCHEMA.md)、[docs/DEMO_TO_MASS_PRODUCTION_GAPS.md](docs/DEMO_TO_MASS_PRODUCTION_GAPS.md)、[docs/ENGINEERING_NPI_BASELINE.md](docs/ENGINEERING_NPI_BASELINE.md)、[docs/WORKFLOW.md](docs/WORKFLOW.md)、[docs/DECISION_LOG.md](docs/DECISION_LOG.md) 和 [README.md](README.md)，吸收 `KBT-6` 评审通过和“重视图示表达”的新要求，为已通过且存在明确结构分解的文档补充直观架构图，并把 `KBT-7` 提升为当前优先评审入口。
 - 更新 [docs/DECISION_STATE_MACHINE.md](docs/DECISION_STATE_MACHINE.md)、[docs/DECISION_LOG.md](docs/DECISION_LOG.md) 和 [README.md](README.md)，吸收 `Step17` 对 `KBT-7` 的审阅意见，明确一代顶层采用“分层状态机管理模式 + 行为树管理叶子执行”的控制结构提案，并显式补入高风险异常与关键安全故障的一级枚举。
 - 更新 [docs/DECISION_STATE_MACHINE.md](docs/DECISION_STATE_MACHINE.md)、[docs/SAFETY_COMPLIANCE_AUTHORIZATION_API.md](docs/SAFETY_COMPLIANCE_AUTHORIZATION_API.md)、[docs/DECISION_LOG.md](docs/DECISION_LOG.md) 和 [README.md](README.md)，吸收 `Step18` 对 `KBT-7` 的补充审阅意见，正式关闭 `KBT-7`，并把 `KBT-8` 当前评审焦点收敛到故障保护返回结果、`A1-A7 / F1-F7` 审批上下文映射和原因码骨架。
+- 更新 [docs/SAFETY_COMPLIANCE_AUTHORIZATION_API.md](docs/SAFETY_COMPLIANCE_AUTHORIZATION_API.md)、[docs/HARDWARE_SOFTWARE_SELECTION_MATRIX.md](docs/HARDWARE_SOFTWARE_SELECTION_MATRIX.md)、[docs/DECISION_LOG.md](docs/DECISION_LOG.md) 和 [README.md](README.md)，吸收 `Step19` 对 `KBT-8` 的审阅意见，正式关闭 `KBT-8`，并将当前主线切回 `KBT-11` 软硬件选型矩阵，同时为选型矩阵补充主线 / 备线 / 观察线图示。
 
 ## [2026-03-07]
 
