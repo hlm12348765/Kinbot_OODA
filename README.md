@@ -27,6 +27,7 @@
 - 本地文档和 Linear 协作条目统一用中文维护
 - 当前 Linear 项目为 `Kinbot OODA 架构到量产预备`
 - 涉及 VLN 路线和前瞻技术判断时，与专门的 VLN 技术评估线程交叉协作
+- `docs/REQUIREMENTS.MD` 由用户独占维护，其他文档由我持续推进
 
 当前项目节奏：
 
@@ -69,6 +70,8 @@
 - `docs/WORLD_STATE_SCHEMA.md`：世界状态与核心实体结构
 - `docs/DECISION_STATE_MACHINE.md`：系统决策状态机
 - `docs/SAFETY_COMPLIANCE_AUTHORIZATION_API.md`：安全 / 合规 / 授权接口
+- `docs/COMPANION_INTERACTION_STRATEGY.md`：陪伴交互策略、人设边界与长期记忆规则
+- `docs/SAFETY_RISK_MATRIX.md`：一代安全风险域、降级策略与空间规则
 - `docs/TERMINOLOGY.md`：项目术语表
 
 ## 仓库结构
@@ -83,9 +86,11 @@
     ├── DECISION_LOG.md
     ├── DECISION_STATE_MACHINE.md
     ├── MODULE_BOUNDARIES.md
+    ├── COMPANION_INTERACTION_STRATEGY.md
     ├── REQUIREMENTS.MD
     ├── RULES.MD
     ├── SAFETY_COMPLIANCE_AUTHORIZATION_API.md
+    ├── SAFETY_RISK_MATRIX.md
     ├── TERMINOLOGY.md
     ├── VLN_ROLE_AND_PLAN.md
     ├── WORKFLOW.md
@@ -104,14 +109,15 @@
 8. `docs/WORLD_STATE_SCHEMA.md`
 9. `docs/DECISION_STATE_MACHINE.md`
 10. `docs/SAFETY_COMPLIANCE_AUTHORIZATION_API.md`
-11. `docs/TERMINOLOGY.md`
-12. `docs/ARCHITECTURE_RULES_REVIEW.md`
+11. `docs/COMPANION_INTERACTION_STRATEGY.md`
+12. `docs/SAFETY_RISK_MATRIX.md`
+13. `docs/TERMINOLOGY.md`
+14. `docs/ARCHITECTURE_RULES_REVIEW.md`
 
 ## 下一步建议
 
 - 健康事件管线与升级链路
-- 陪伴交互策略、人设边界与长期记忆规则
-- 安全事件矩阵、降级策略与家庭空间风险规则
-- 量产预备判定标准
 - Demo 到量产架构的能力缺口梳理
+- App、云服务与后台人工坐席的一代最小闭环
+- 量产预备判定标准
 - 量产预备技术选型
