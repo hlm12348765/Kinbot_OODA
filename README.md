@@ -85,6 +85,7 @@
 - `docs/DEMO_TO_MASS_PRODUCTION_GAPS.md`：当前样机 Demo 到量产预备状态的能力缺口、阻断项和优先级排序
 - `docs/ENGINEERING_NPI_BASELINE.md`：工程化与 NPI 准备基线、`G2` 技术路线门和 Alpha / EVT 前置冻结项
 - `docs/HARDWARE_SOFTWARE_SELECTION_MATRIX.md`：一代软硬件选型矩阵、主线 / 备线 / 观察线划分与 `G2` 前置验证项
+- `docs/COST_STRUCTURE_AND_TECH_DOWNPATH.md`：整机 BOM 滚动成本基线、降本主战场、控涨项与关键技术路径
 - `docs/TERMINOLOGY.md`：项目术语表
 
 ## 仓库结构
@@ -111,6 +112,7 @@
     ├── DEMO_TO_MASS_PRODUCTION_GAPS.md
     ├── ENGINEERING_NPI_BASELINE.md
     ├── HARDWARE_SOFTWARE_SELECTION_MATRIX.md
+    ├── COST_STRUCTURE_AND_TECH_DOWNPATH.md
     ├── TERMINOLOGY.md
     ├── VLN_ROLE_AND_PLAN.md
     ├── WORKFLOW.md
@@ -138,13 +140,14 @@
 17. `docs/DEMO_TO_MASS_PRODUCTION_GAPS.md`
 18. `docs/ENGINEERING_NPI_BASELINE.md`
 19. `docs/HARDWARE_SOFTWARE_SELECTION_MATRIX.md`
-20. `docs/TERMINOLOGY.md`
-21. `docs/ARCHITECTURE_RULES_REVIEW.md`
+20. `docs/COST_STRUCTURE_AND_TECH_DOWNPATH.md`
+21. `docs/TERMINOLOGY.md`
+22. `docs/ARCHITECTURE_RULES_REVIEW.md`
 
 ## 下一步建议
 
-- 优先评审并冻结 `KBT-11` 软硬件选型矩阵
-- `KBT-11` 当前优先评审“中国大算力端侧芯片专项主线”“端侧 4B / 7B / 8B + FP8 主线评估”“量产主线视觉组合”和“6000 到 8000 元整机 BOM 成本分配”
+- 优先推进 `KBT-29` 整机 BOM 成本结构与技术降本路线的独立收敛
+- 当前优先收敛 `C1 / C3 / C5` 的滚动修正，以及 `C2 / C6 / C7` 的降本主战场策略
 - 健康事件量化阈值与故障阈值
 - 量产预备判定标准
 - 多尺度动态 OODA 基线继续向状态机、接口和验证项落地

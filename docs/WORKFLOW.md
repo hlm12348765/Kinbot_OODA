@@ -256,7 +256,8 @@
 9. `docs/DEMO_TO_MASS_PRODUCTION_GAPS.md`
 10. `docs/ENGINEERING_NPI_BASELINE.md`
 11. `docs/HARDWARE_SOFTWARE_SELECTION_MATRIX.md`
-12. MVP 与量产预备定义及验证计划
+12. `docs/COST_STRUCTURE_AND_TECH_DOWNPATH.md`
+13. MVP 与量产预备定义及验证计划
 
 ## 6. 需要联网核实的内容
 

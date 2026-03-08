@@ -154,6 +154,7 @@ IPD 约束下，当前最重要的一条新要求是：
 - `docs/DEMO_TO_MASS_PRODUCTION_GAPS.md`
 - `docs/ENGINEERING_NPI_BASELINE.md`
 - `docs/HARDWARE_SOFTWARE_SELECTION_MATRIX.md`
+- `docs/COST_STRUCTURE_AND_TECH_DOWNPATH.md`
 - 软硬件选型矩阵
 - Demo 到量产差距分析
 - 初版 BOM、算力预算、热设计预算

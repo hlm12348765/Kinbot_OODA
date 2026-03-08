@@ -66,6 +66,7 @@
 - 更新 [docs/DECISION_STATE_MACHINE.md](docs/DECISION_STATE_MACHINE.md)、[docs/SAFETY_COMPLIANCE_AUTHORIZATION_API.md](docs/SAFETY_COMPLIANCE_AUTHORIZATION_API.md)、[docs/DECISION_LOG.md](docs/DECISION_LOG.md) 和 [README.md](README.md)，吸收 `Step18` 对 `KBT-7` 的补充审阅意见，正式关闭 `KBT-7`，并把 `KBT-8` 当前评审焦点收敛到故障保护返回结果、`A1-A7 / F1-F7` 审批上下文映射和原因码骨架。
 - 更新 [docs/SAFETY_COMPLIANCE_AUTHORIZATION_API.md](docs/SAFETY_COMPLIANCE_AUTHORIZATION_API.md)、[docs/HARDWARE_SOFTWARE_SELECTION_MATRIX.md](docs/HARDWARE_SOFTWARE_SELECTION_MATRIX.md)、[docs/DECISION_LOG.md](docs/DECISION_LOG.md) 和 [README.md](README.md)，吸收 `Step19` 对 `KBT-8` 的审阅意见，正式关闭 `KBT-8`，并将当前主线切回 `KBT-11` 软硬件选型矩阵，同时为选型矩阵补充主线 / 备线 / 观察线图示。
 - 更新 [docs/HARDWARE_SOFTWARE_SELECTION_MATRIX.md](docs/HARDWARE_SOFTWARE_SELECTION_MATRIX.md)、[docs/DECISION_LOG.md](docs/DECISION_LOG.md) 和 [README.md](README.md)，吸收 `Step20` 对 `KBT-11` 的审阅意见，把端侧算力主线改成“中国大算力端侧芯片专项评估”，将 `RK` 相关路线下调为工程 / 成本 / 简化备线，并补入 `6000 到 8000 元` 整机 `BOM` 的 7 个成本桶约束。
+- 新增 [docs/COST_STRUCTURE_AND_TECH_DOWNPATH.md](docs/COST_STRUCTURE_AND_TECH_DOWNPATH.md)，并更新 [docs/HARDWARE_SOFTWARE_SELECTION_MATRIX.md](docs/HARDWARE_SOFTWARE_SELECTION_MATRIX.md)、[docs/DECISION_LOG.md](docs/DECISION_LOG.md)、[docs/WORKFLOW.md](docs/WORKFLOW.md)、[docs/LIFECYCLE_WORKFLOW.md](docs/LIFECYCLE_WORKFLOW.md) 和 [README.md](README.md)，吸收 `Step21` 对 `KBT-11` 的第二轮审阅意见，把整机 BOM 进一步细化为滚动成本基线、降本主战场、控涨项和关键技术路径。
 
 ## [2026-03-07]
 
