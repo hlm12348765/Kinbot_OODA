@@ -25,6 +25,8 @@
 - 新增 [docs/HEALTH_EVENT_PIPELINE.md](docs/HEALTH_EVENT_PIPELINE.md)，用于定义一代健康事件的信号来源、补采逻辑、风险分级、升级链路和降级约束。
 - 新增 [docs/LIFECYCLE_WORKFLOW.md](docs/LIFECYCLE_WORKFLOW.md)，用于定义从需求形成到上市运营与下一代回灌的全生命周期工作流、阶段门和 Linear 映射。
 - 新增 [docs/OODA_MULTI_SCALE_ARCHITECTURE.md](docs/OODA_MULTI_SCALE_ARCHITECTURE.md)，用于提出面向 AGI 与具身智能时代的多尺度动态 OODA 设想。
+- 新增 [docs/DEMO_TO_MASS_PRODUCTION_GAPS.md](docs/DEMO_TO_MASS_PRODUCTION_GAPS.md)，用于定义当前样机 Demo 到量产预备状态的能力缺口、阻断项和默认优先级。
+- 新增 [docs/ENGINEERING_NPI_BASELINE.md](docs/ENGINEERING_NPI_BASELINE.md)，用于定义 `P2` 阶段的工程化与 `NPI` 准备基线、`G2` 技术路线门和 Alpha / EVT 前置冻结项。
 - 新增 [docs/TERMINOLOGY.md](docs/TERMINOLOGY.md)，用于统一项目术语，避免概念漂移。
 
 ### 调整
@@ -54,6 +56,8 @@
 - 更新 [docs/LIFECYCLE_WORKFLOW.md](docs/LIFECYCLE_WORKFLOW.md)、[docs/WORKFLOW.md](docs/WORKFLOW.md) 和 [docs/DECISION_LOG.md](docs/DECISION_LOG.md)，吸收新的 IPD 要求，并将“产品定义与架构冻结”目标收敛到 `2026-03-31`。
 - 更新 [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) 和 [README.md](README.md)，把 OODA 从固定单环升级为“多尺度、可动态调度”的默认方法论。
 - 更新 [docs/OODA_MULTI_SCALE_ARCHITECTURE.md](docs/OODA_MULTI_SCALE_ARCHITECTURE.md)、[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)、[docs/DECISION_STATE_MACHINE.md](docs/DECISION_STATE_MACHINE.md)、[docs/SAFETY_RISK_MATRIX.md](docs/SAFETY_RISK_MATRIX.md)、[docs/COMPANION_INTERACTION_STRATEGY.md](docs/COMPANION_INTERACTION_STRATEGY.md)、[docs/WORKFLOW.md](docs/WORKFLOW.md)、[README.md](README.md) 和 [docs/DECISION_LOG.md](docs/DECISION_LOG.md)，吸收 `KBT-28` 审阅结论，将 `R1` 到 `R4`、`R4` 正式入架构、`Orient` 升级以及 `OODA Scale Scheduler` 一级能力同步为正式基线。
+- 更新 [README.md](README.md)、[docs/LIFECYCLE_WORKFLOW.md](docs/LIFECYCLE_WORKFLOW.md)、[docs/WORKFLOW.md](docs/WORKFLOW.md) 和 [docs/DECISION_LOG.md](docs/DECISION_LOG.md)，并新增 [docs/DEMO_TO_MASS_PRODUCTION_GAPS.md](docs/DEMO_TO_MASS_PRODUCTION_GAPS.md)，将 `KBT-18` 收敛为 7 个能力缺口域、3 类阻断项和一份默认优先级排序。
+- 更新 [docs/DEMO_TO_MASS_PRODUCTION_GAPS.md](docs/DEMO_TO_MASS_PRODUCTION_GAPS.md)、[docs/DECISION_LOG.md](docs/DECISION_LOG.md)、[README.md](README.md)、[docs/WORKFLOW.md](docs/WORKFLOW.md) 和 [docs/LIFECYCLE_WORKFLOW.md](docs/LIFECYCLE_WORKFLOW.md)，吸收 `Step13` 对 `KBT-18` 的审阅意见，补入 `D6` 作为阻断项的理由，并把“储物仓能力保留但机构重构”“整机外观形态重构”写入工程化主线。
 
 ## [2026-03-07]
 

@@ -233,8 +233,10 @@
 6. 功能澄清包：`docs/HEALTH_EVENT_PIPELINE.md`、`docs/COMPANION_INTERACTION_STRATEGY.md`、`docs/SAFETY_RISK_MATRIX.md`
 7. 端云职责拆分与伴生系统最小闭环
 8. `docs/LIFECYCLE_WORKFLOW.md`
-9. 技术选型矩阵
-10. MVP 与量产预备定义及验证计划
+9. `docs/DEMO_TO_MASS_PRODUCTION_GAPS.md`
+10. `docs/ENGINEERING_NPI_BASELINE.md`
+11. 技术选型矩阵
+12. MVP 与量产预备定义及验证计划
 
 ## 6. 需要联网核实的内容
 
@@ -273,7 +275,9 @@
 
 第五轮：
 
-- 补齐健康事件量化阈值、远控边界和 Demo 到量产能力缺口
+- 评审并冻结 `D6` 作为阻断项的理由
+- 输出工程化与 `NPI` 准备基线
+- 补齐健康事件量化阈值和远控边界
 - 形成量产预备前的验证与补短板清单
 
 第六轮：

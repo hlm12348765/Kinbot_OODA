@@ -81,6 +81,8 @@
 - `docs/COMPANION_INTERACTION_STRATEGY.md`：陪伴交互策略、人设边界与长期记忆规则
 - `docs/SAFETY_RISK_MATRIX.md`：一代安全风险域、降级策略与空间规则
 - `docs/APP_CLOUD_OPS_MINIMAL_LOOP.md`：家属 App、云服务与后台运营坐席的一代最小闭环
+- `docs/DEMO_TO_MASS_PRODUCTION_GAPS.md`：当前样机 Demo 到量产预备状态的能力缺口、阻断项和优先级排序
+- `docs/ENGINEERING_NPI_BASELINE.md`：工程化与 NPI 准备基线、`G2` 技术路线门和 Alpha / EVT 前置冻结项
 - `docs/TERMINOLOGY.md`：项目术语表
 
 ## 仓库结构
@@ -104,6 +106,8 @@
     ├── SAFETY_COMPLIANCE_AUTHORIZATION_API.md
     ├── SAFETY_RISK_MATRIX.md
     ├── APP_CLOUD_OPS_MINIMAL_LOOP.md
+    ├── DEMO_TO_MASS_PRODUCTION_GAPS.md
+    ├── ENGINEERING_NPI_BASELINE.md
     ├── TERMINOLOGY.md
     ├── VLN_ROLE_AND_PLAN.md
     ├── WORKFLOW.md
@@ -128,12 +132,16 @@
 14. `docs/COMPANION_INTERACTION_STRATEGY.md`
 15. `docs/SAFETY_RISK_MATRIX.md`
 16. `docs/APP_CLOUD_OPS_MINIMAL_LOOP.md`
-17. `docs/TERMINOLOGY.md`
-18. `docs/ARCHITECTURE_RULES_REVIEW.md`
+17. `docs/DEMO_TO_MASS_PRODUCTION_GAPS.md`
+18. `docs/ENGINEERING_NPI_BASELINE.md`
+19. `docs/TERMINOLOGY.md`
+20. `docs/ARCHITECTURE_RULES_REVIEW.md`
 
 ## 下一步建议
 
-- Demo 到量产架构的能力缺口梳理
+- 评审并冻结 Demo 到量产预备能力缺口
+- 工程化与 NPI 准备基线
+- 评审 `D6` 作为阻断项的理由是否充分
 - 多尺度动态 OODA 基线继续向状态机、接口和验证项落地
 - 陪伴记忆治理与多角色配置边界细化
 - 量产预备判定标准
