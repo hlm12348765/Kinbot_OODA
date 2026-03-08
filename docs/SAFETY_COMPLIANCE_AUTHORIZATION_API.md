@@ -26,6 +26,8 @@
 - 机器人直接入网拨号只做架构预留
 - 第三方平台必须严格审核；机器人负责准确传递信息和保留审计链，交付由平台负责
 - 储物仓必须具备防夹手、电动开关和开关状态记录能力
+- `KBT-7` 已正式冻结为“分层状态机管理顶层模式，行为树管理叶子执行”
+- `KBT-7` 已显式冻结 7 类高风险异常与 7 类关键安全故障
 
 ## 3. 接口目标
 
@@ -51,6 +53,52 @@
 4. 接口必须支持多角色冲突仲裁。
 5. 接口必须显式表达第三方责任边界。
 6. 接口必须在离线时保留本地最小可用能力。
+
+### 4.1 接口与状态机的关系
+
+当前一代架构里，这个审批接口位于 `decision_orchestration` 与执行模块之间，并直接消费 `KBT-7` 已冻结的状态机输出。
+
+约束关系先固定如下：
+
+1. `A1` 到 `A7` 高风险异常是审批上下文的一部分，会影响审批强度、确认对象和是否转人工。
+2. `F1` 到 `F7` 关键安全故障不是普通审批条件，而是硬中断条件；一旦命中，接口需要直接返回“进入故障保护”结果。
+3. 业务状态机决定“当前准备做什么”，审批接口决定“当前允不允许做、要不要降级、要不要确认、要不要转人工”。
+
+### 4.2 审批流图
+
+```mermaid
+flowchart TB
+    AP[ActionProposal]
+    PC[PolicyContext]
+    SM[状态机上下文]
+    AN[A1-A7 高风险异常]
+    FL[F1-F7 关键安全故障]
+    GATE[evaluate_action]
+
+    DEC1[approved]
+    DEC2[rejected]
+    DEC3[downgraded]
+    DEC4[confirmation_required]
+    DEC5[manual_service_required]
+    DEC6[fault_protection_required]
+
+    AP --> GATE
+    PC --> GATE
+    SM --> GATE
+    AN --> GATE
+    FL --> GATE
+
+    GATE --> DEC1
+    GATE --> DEC2
+    GATE --> DEC3
+    GATE --> DEC4
+    GATE --> DEC5
+    GATE --> DEC6
+```
+
+说明：
+
+- 这张图强调的是审批接口在运行时所处的位置，不是网络接口拓扑图。
 
 ## 5. 适用范围
 
@@ -171,6 +219,9 @@
 | `authorization_state` | object | 当前授权 |
 | `role_bindings` | object[] | 当前角色绑定 |
 | `risk_events` | object[] | 当前风险事件 |
+| `state_machine_context` | object | 当前顶层状态、业务主状态与约束子状态 |
+| `active_anomaly_classes` | string[] | 当前命中的 `A1` 到 `A7` 异常类 |
+| `active_fault_classes` | string[] | 当前命中的 `F1` 到 `F7` 关键安全故障类 |
 | `network_state` | object | 网络状态 |
 | `home_mode` | enum | 白天、夜间、异常中等 |
 | `medication_context` | object | 药品、仓门、禁忌和时效 |
@@ -189,9 +240,10 @@
 | --- | --- | --- |
 | `decision_id` | string | 唯一 ID |
 | `proposal_id` | string | 对应动作 |
-| `result` | enum | `approved` / `rejected` / `downgraded` / `confirmation_required` / `manual_service_required` |
+| `result` | enum | `approved` / `rejected` / `downgraded` / `confirmation_required` / `manual_service_required` / `fault_protection_required` |
 | `reason_codes` | string[] | 原因码 |
 | `constraints` | object | 限速、限时、可共享字段等约束 |
+| `state_transition_hint` | object | 建议进入的顶层或业务状态 |
 | `confirmation_targets` | object[] | 需要谁确认 |
 | `manual_transfer_target` | string | 需要转给谁 |
 | `audit_ref` | string | 审计引用 |
@@ -230,12 +282,13 @@
 审批流程建议顺序：
 
 1. 校验动作类型是否合法
-2. 校验角色与授权
-3. 校验当前风险状态与夜间 / 离线限制
-4. 校验第三方平台准入状态
-5. 校验是否触发冲突仲裁
-6. 生成批准、拒绝、降级、待确认或转人工结果
-7. 写入审计记录
+2. 校验当前是否存在 `F1` 到 `F7` 关键安全故障
+3. 校验角色与授权
+4. 校验当前风险状态、`A1` 到 `A7` 异常类以及夜间 / 离线限制
+5. 校验第三方平台准入状态
+6. 校验是否触发冲突仲裁
+7. 生成批准、拒绝、降级、待确认、转人工或进入故障保护结果
+8. 写入审计记录
 
 ## 11. 决策结果语义
 
@@ -293,6 +346,17 @@
 - 高风险异常需要人工复核
 - 第三方问诊或平台服务需要人工转接
 - 系统无法确认当前责任边界
+
+### 11.6 `fault_protection_required`
+
+含义：
+
+- 当前已命中关键安全故障，机器人不得继续执行当前动作，且应推动顶层状态进入 `故障保护`
+
+典型场景：
+
+- `F1` 到 `F7` 任一关键安全故障处于激活状态
+- 当前动作会放大已有安全故障带来的风险
 
 ## 12. 特殊策略
 
@@ -358,7 +422,7 @@
 
 ## 13. 原因码建议
 
-建议固定一组可审计原因码：
+建议固定一组可审计原因码，并按 5 组管理：
 
 - `AUTH_SCOPE_MISSING`
 - `ROLE_CONFLICT_CONFIRMATION_REQUIRED`
@@ -370,6 +434,13 @@
 - `COMPARTMENT_SAFETY_LOCKED`
 - `MANUAL_SERVICE_REQUIRED`
 - `THIRD_PARTY_RESPONSIBILITY_ONLY`
+- `ANOMALY_A1_ACTIVE` 到 `ANOMALY_A7_ACTIVE`
+- `FAULT_F1_ACTIVE` 到 `FAULT_F7_ACTIVE`
+
+说明：
+
+- `ANOMALY_*` 原因码用于表达高风险异常上下文已生效。
+- `FAULT_*` 原因码用于表达关键安全故障已生效，并通常伴随 `fault_protection_required` 返回。
 
 ## 14. 示例
 
@@ -485,6 +556,23 @@
   ],
   "manual_transfer_target": "ops_seat",
   "audit_ref": "audit_004"
+}
+```
+
+### 14.5 关键安全故障触发故障保护
+
+```json
+{
+  "decision_id": "d_005",
+  "proposal_id": "p_005",
+  "result": "fault_protection_required",
+  "reason_codes": [
+    "FAULT_F1_ACTIVE"
+  ],
+  "state_transition_hint": {
+    "top_state": "故障保护"
+  },
+  "audit_ref": "audit_005"
 }
 ```
 
