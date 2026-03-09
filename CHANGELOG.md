@@ -75,6 +75,8 @@
 - 更新 [docs/POWER_BUDGET_AND_EFFICIENCY_STRATEGY.md](docs/POWER_BUDGET_AND_EFFICIENCY_STRATEGY.md)、[docs/COST_STRUCTURE_AND_TECH_DOWNPATH.md](docs/COST_STRUCTURE_AND_TECH_DOWNPATH.md) 和 [docs/DECISION_LOG.md](docs/DECISION_LOG.md)，吸收 `Step25` 对 `KBT-30` 的审阅意见，调整四类工况的代表性时间占比，并将高端产品感知检查表收敛为“聪明感 / 舒适感 / 精致感 / 轻盈感 / 可信感 / 支持感”。
 - 新增 [docs/MASS_PRODUCTION_READINESS_CRITERIA.md](docs/MASS_PRODUCTION_READINESS_CRITERIA.md)，并更新 [README.md](README.md) 和 [docs/DECISION_LOG.md](docs/DECISION_LOG.md)，启动 `KBT-16` 的第一版量产预备判定标准提案。
 - 更新 [docs/WORKFLOW.md](docs/WORKFLOW.md)、[docs/DECISION_LOG.md](docs/DECISION_LOG.md) 和 [README.md](README.md)，澄清“后置里程碑约束型文档提前起草”不等于真正越过前置里程碑，并把当前主优先级回调到 `KBT-13 / KBT-10 / KBT-15 / KBT-14` 这组尚未清账的前置项。
+- 新增 [docs/HUMAN_SERVICE_AND_TELEMEDICINE_BOUNDARIES.md](docs/HUMAN_SERVICE_AND_TELEMEDICINE_BOUNDARIES.md)，并更新 [docs/WORKFLOW.md](docs/WORKFLOW.md)、[docs/DECISION_LOG.md](docs/DECISION_LOG.md) 和 [README.md](README.md)，启动 `KBT-13` 的正式提案，把一代人工服务、在线问诊、第三方履约与公共应急之间的角色边界、接入链路、媒体策略和审计要求收敛为可评审基线。
+- 更新 [README.md](README.md)、[docs/WORKFLOW.md](docs/WORKFLOW.md) 和 [docs/DECISION_LOG.md](docs/DECISION_LOG.md)，吸收“`VLN` 线程已完成，可加入版本控制”的新口径，允许当前线程把 [docs/VLN_ROLE_AND_PLAN.md](docs/VLN_ROLE_AND_PLAN.md) 作为正式技术输入继续纳入版本历史。
 
 ## [2026-03-07]
 
