@@ -31,7 +31,7 @@
 - 当信息不足但推进不能停时，先形成“架构师设想包”，再提交审核
 - 全生命周期管理参考 IPD，当前争取在 `2026-03-31` 完成产品定义与架构冻结
 - 对存在明确结构分解的架构文档，优先配套直观图示
-- 每一阶段都要检查系统各实体元素的组合，判断整机与服务是否仍然呈现“聪明、温暖、精致”的高端产品感，并能支撑约 `30000 元` 价格带
+- 每一阶段都要检查系统各实体元素的组合，判断整机与服务是否仍然呈现“聪明、温暖、精致”的高端产品感，并能支撑 `20000 到 30000 元` 售价区间
 
 当前项目节奏：
 
@@ -87,6 +87,7 @@
 - `docs/ENGINEERING_NPI_BASELINE.md`：工程化与 NPI 准备基线、`G2` 技术路线门和 Alpha / EVT 前置冻结项
 - `docs/HARDWARE_SOFTWARE_SELECTION_MATRIX.md`：一代软硬件选型矩阵、主线 / 备线 / 观察线划分与 `G2` 前置验证项
 - `docs/COST_STRUCTURE_AND_TECH_DOWNPATH.md`：整机 BOM 滚动成本基线、降本主战场、控涨项与关键技术路径
+- `docs/POWER_BUDGET_AND_EFFICIENCY_STRATEGY.md`：整机功耗预算、`C5` 四类工况基线、能效控制策略与阶段门检查项
 - `docs/TERMINOLOGY.md`：项目术语表
 
 ## 仓库结构
@@ -114,6 +115,7 @@
     ├── ENGINEERING_NPI_BASELINE.md
     ├── HARDWARE_SOFTWARE_SELECTION_MATRIX.md
     ├── COST_STRUCTURE_AND_TECH_DOWNPATH.md
+    ├── POWER_BUDGET_AND_EFFICIENCY_STRATEGY.md
     ├── TERMINOLOGY.md
     ├── VLN_ROLE_AND_PLAN.md
     ├── WORKFLOW.md
@@ -142,14 +144,16 @@
 18. `docs/ENGINEERING_NPI_BASELINE.md`
 19. `docs/HARDWARE_SOFTWARE_SELECTION_MATRIX.md`
 20. `docs/COST_STRUCTURE_AND_TECH_DOWNPATH.md`
-21. `docs/TERMINOLOGY.md`
-22. `docs/ARCHITECTURE_RULES_REVIEW.md`
+21. `docs/POWER_BUDGET_AND_EFFICIENCY_STRATEGY.md`
+22. `docs/TERMINOLOGY.md`
+23. `docs/ARCHITECTURE_RULES_REVIEW.md`
 
 ## 下一步建议
 
 - 优先推进 `KBT-30` 整机功耗预算与能效控制策略
-- 当前优先收敛 `C5` 的工作基线，以及 `C4` 低传感路线对 `C1 / C2 / C5` 的成本与功耗转移约束
-- 把“高端产品感知检查表”纳入后续阶段门，避免只看 `BOM`
+- 当前优先收敛 `W1 静默待机 / W2 静止陪伴交互 / W3 连续运动 / W4 连续运动中的陪伴交互` 四类工况下的 `C5` 工作基线
+- 当前优先收敛 `C4` 低传感路线对 `C1 / C2 / C5` 的成本与功耗转移约束
+- 把“高端产品感知检查表”和 `20000 到 30000 元` 售价监控区间一起纳入后续阶段门
 - 健康事件量化阈值与故障阈值
 - 量产预备判定标准
 - 多尺度动态 OODA 基线继续向状态机、接口和验证项落地
