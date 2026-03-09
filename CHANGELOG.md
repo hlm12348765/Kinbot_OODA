@@ -77,6 +77,8 @@
 - 更新 [docs/WORKFLOW.md](docs/WORKFLOW.md)、[docs/DECISION_LOG.md](docs/DECISION_LOG.md) 和 [README.md](README.md)，澄清“后置里程碑约束型文档提前起草”不等于真正越过前置里程碑，并把当前主优先级回调到 `KBT-13 / KBT-10 / KBT-15 / KBT-14` 这组尚未清账的前置项。
 - 新增 [docs/HUMAN_SERVICE_AND_TELEMEDICINE_BOUNDARIES.md](docs/HUMAN_SERVICE_AND_TELEMEDICINE_BOUNDARIES.md)，并更新 [docs/WORKFLOW.md](docs/WORKFLOW.md)、[docs/DECISION_LOG.md](docs/DECISION_LOG.md) 和 [README.md](README.md)，启动 `KBT-13` 的正式提案，把一代人工服务、在线问诊、第三方履约与公共应急之间的角色边界、接入链路、媒体策略和审计要求收敛为可评审基线。
 - 更新 [README.md](README.md)、[docs/WORKFLOW.md](docs/WORKFLOW.md) 和 [docs/DECISION_LOG.md](docs/DECISION_LOG.md)，吸收“`VLN` 线程已完成，可加入版本控制”的新口径，允许当前线程把 [docs/VLN_ROLE_AND_PLAN.md](docs/VLN_ROLE_AND_PLAN.md) 作为正式技术输入继续纳入版本历史。
+- 更新 [docs/HUMAN_SERVICE_AND_TELEMEDICINE_BOUNDARIES.md](docs/HUMAN_SERVICE_AND_TELEMEDICINE_BOUNDARIES.md) 和 [docs/DECISION_LOG.md](docs/DECISION_LOG.md)，吸收 `Step26` 对 `KBT-13` 的审阅意见，把客服运营坐席的服务经济性约束写成显式风险，并澄清“医疗专业主体接单结果”是结构化受理状态，而不是首轮专业回复。
+- 新增 [docs/MEDICATION_STORAGE_AND_INDOOR_DELIVERY_REQUIREMENTS.md](docs/MEDICATION_STORAGE_AND_INDOOR_DELIVERY_REQUIREMENTS.md)，并更新 [README.md](README.md) 和 [docs/DECISION_LOG.md](docs/DECISION_LOG.md)，启动 `KBT-10` 的正式提案，把储药与室内递送要求收敛为 `R1` 到 `R7` 七个能力包、一条端到端主链和一组工程护栏。
 
 ## [2026-03-07]
 
