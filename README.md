@@ -93,6 +93,7 @@
 - `docs/COST_STRUCTURE_AND_TECH_DOWNPATH.md`：整机 BOM 滚动成本基线、降本主战场、控涨项与关键技术路径
 - `docs/POWER_BUDGET_AND_EFFICIENCY_STRATEGY.md`：整机功耗预算、`C5` 四类工况基线、能效控制策略与阶段门检查项
 - `docs/MASS_PRODUCTION_READINESS_CRITERIA.md`：`2026-12-31` 量产预备判定标准、`G5` 判定域与通过条件
+- `docs/MVP_VALIDATION_PLAN.md`：量产预备与 `2027-01 MVP` 验证窗口之间的能力范围、试点框架与放行规则
 - `docs/TERMINOLOGY.md`：项目术语表
 
 ## 仓库结构
@@ -126,6 +127,7 @@
     ├── COST_STRUCTURE_AND_TECH_DOWNPATH.md
     ├── POWER_BUDGET_AND_EFFICIENCY_STRATEGY.md
     ├── MASS_PRODUCTION_READINESS_CRITERIA.md
+    ├── MVP_VALIDATION_PLAN.md
     ├── TERMINOLOGY.md
     ├── VLN_ROLE_AND_PLAN.md
     ├── WORKFLOW.md
@@ -160,8 +162,9 @@
 24. `docs/COST_STRUCTURE_AND_TECH_DOWNPATH.md`
 25. `docs/POWER_BUDGET_AND_EFFICIENCY_STRATEGY.md`
 26. `docs/MASS_PRODUCTION_READINESS_CRITERIA.md`
-27. `docs/TERMINOLOGY.md`
-28. `docs/ARCHITECTURE_RULES_REVIEW.md`
+27. `docs/MVP_VALIDATION_PLAN.md`
+28. `docs/TERMINOLOGY.md`
+29. `docs/ARCHITECTURE_RULES_REVIEW.md`
 
 ## 下一步建议
 
@@ -170,7 +173,8 @@
 - `KBT-10` 已完成本轮收口
 - `KBT-15` 已完成本轮收口
 - `KBT-14` 已完成本轮收口
-- 当前正在评审 `KBT-16` 量产预备判定标准
+- `KBT-16` 已完成本轮收口
+- 当前正在评审 `KBT-12` 量产预备与 `MVP` 验证计划
 - 健康事件量化阈值与故障阈值
 - 多尺度动态 OODA 基线继续向状态机、接口和验证项落地
 - 陪伴记忆治理与多角色配置边界细化

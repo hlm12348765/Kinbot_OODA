@@ -85,6 +85,8 @@
 - 新增 [docs/UWB_MATURITY_AND_INTEGRATION_VALUE.md](docs/UWB_MATURITY_AND_INTEGRATION_VALUE.md)，并更新 [docs/DECISION_LOG.md](docs/DECISION_LOG.md) 和 [README.md](README.md)，启动 `KBT-14` 的正式提案，把 `UWB` 的一代角色、成熟度判断、样品验证门和接入价值边界收敛为可评审基线。
 - 更新 [docs/VLN_ROLE_AND_PLAN.md](docs/VLN_ROLE_AND_PLAN.md)，补充纯视觉路线在 OODA 下的技术判断、多相机共享视觉底座、`4` 相机和 `5` 相机推荐布局，以及其与 `semantic_navigation_policy / social_mobility_policy / classical local planner` 分层协同的关系。
 - 更新 [docs/UWB_MATURITY_AND_INTEGRATION_VALUE.md](docs/UWB_MATURITY_AND_INTEGRATION_VALUE.md)、[docs/DECISION_LOG.md](docs/DECISION_LOG.md) 和 [README.md](README.md)，吸收 `Step28` 对 `KBT-14` 的审阅意见，正式关闭 `KBT-14`，并恢复 `KBT-16` 为当前主评审项。
+- 更新 [docs/MASS_PRODUCTION_READINESS_CRITERIA.md](docs/MASS_PRODUCTION_READINESS_CRITERIA.md)、[docs/DECISION_LOG.md](docs/DECISION_LOG.md) 和 [README.md](README.md)，吸收 `Step30` 对 `KBT-16` 的审阅意见，正式关闭 `KBT-16`，并把 `功耗` 与 `BOM / 售价` 同级的理由写实为“直接影响续航、发热、噪声、充电与长期体验”。
+- 新增 [docs/MVP_VALIDATION_PLAN.md](docs/MVP_VALIDATION_PLAN.md)，并更新 [docs/DECISION_LOG.md](docs/DECISION_LOG.md) 和 [README.md](README.md)，启动 `KBT-12` 的正式提案，把一代 `MVP` 范围划分、`100 台 / 100 户 / 1 个月` 试点框架与 `P / W / B` 放行规则收敛为可评审基线。
 
 ## [2026-03-07]
 
