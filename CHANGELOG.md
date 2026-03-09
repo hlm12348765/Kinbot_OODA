@@ -74,6 +74,7 @@
 - 更新 [docs/WORKFLOW.md](docs/WORKFLOW.md) 和 [docs/DECISION_LOG.md](docs/DECISION_LOG.md)，把“暂停时必须给出明确审阅需求”固化为正式协作规则，避免后续出现模糊的停顿提示。
 - 更新 [docs/POWER_BUDGET_AND_EFFICIENCY_STRATEGY.md](docs/POWER_BUDGET_AND_EFFICIENCY_STRATEGY.md)、[docs/COST_STRUCTURE_AND_TECH_DOWNPATH.md](docs/COST_STRUCTURE_AND_TECH_DOWNPATH.md) 和 [docs/DECISION_LOG.md](docs/DECISION_LOG.md)，吸收 `Step25` 对 `KBT-30` 的审阅意见，调整四类工况的代表性时间占比，并将高端产品感知检查表收敛为“聪明感 / 舒适感 / 精致感 / 轻盈感 / 可信感 / 支持感”。
 - 新增 [docs/MASS_PRODUCTION_READINESS_CRITERIA.md](docs/MASS_PRODUCTION_READINESS_CRITERIA.md)，并更新 [README.md](README.md) 和 [docs/DECISION_LOG.md](docs/DECISION_LOG.md)，启动 `KBT-16` 的第一版量产预备判定标准提案。
+- 更新 [docs/WORKFLOW.md](docs/WORKFLOW.md)、[docs/DECISION_LOG.md](docs/DECISION_LOG.md) 和 [README.md](README.md)，澄清“后置里程碑约束型文档提前起草”不等于真正越过前置里程碑，并把当前主优先级回调到 `KBT-13 / KBT-10 / KBT-15 / KBT-14` 这组尚未清账的前置项。
 
 ## [2026-03-07]
 
