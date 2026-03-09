@@ -85,6 +85,7 @@
 - `docs/SAFETY_RISK_MATRIX.md`：一代安全风险域、降级策略与空间规则
 - `docs/APP_CLOUD_OPS_MINIMAL_LOOP.md`：家属 App、云服务与后台运营坐席的一代最小闭环
 - `docs/MEDICATION_STORAGE_AND_INDOOR_DELIVERY_REQUIREMENTS.md`：储药与室内递送的能力包、主链边界、角色权限与工程护栏
+- `docs/WEARABLE_COMPATIBILITY_AND_DATA_FIELDS.md`：一期穿戴设备兼容范围、接入模式、新鲜度约束与首版数据字段
 - `docs/DEMO_TO_MASS_PRODUCTION_GAPS.md`：当前样机 Demo 到量产预备状态的能力缺口、阻断项和优先级排序
 - `docs/ENGINEERING_NPI_BASELINE.md`：工程化与 NPI 准备基线、`G2` 技术路线门和 Alpha / EVT 前置冻结项
 - `docs/HARDWARE_SOFTWARE_SELECTION_MATRIX.md`：一代软硬件选型矩阵、主线 / 备线 / 观察线划分与 `G2` 前置验证项
@@ -111,6 +112,7 @@
     ├── HEALTH_EVENT_PIPELINE.md
     ├── HUMAN_SERVICE_AND_TELEMEDICINE_BOUNDARIES.md
     ├── MEDICATION_STORAGE_AND_INDOOR_DELIVERY_REQUIREMENTS.md
+    ├── WEARABLE_COMPATIBILITY_AND_DATA_FIELDS.md
     ├── REQUIREMENTS.MD
     ├── RULES.MD
     ├── SAFETY_COMPLIANCE_AUTHORIZATION_API.md
@@ -148,21 +150,23 @@
 16. `docs/APP_CLOUD_OPS_MINIMAL_LOOP.md`
 17. `docs/HUMAN_SERVICE_AND_TELEMEDICINE_BOUNDARIES.md`
 18. `docs/MEDICATION_STORAGE_AND_INDOOR_DELIVERY_REQUIREMENTS.md`
-19. `docs/DEMO_TO_MASS_PRODUCTION_GAPS.md`
-20. `docs/ENGINEERING_NPI_BASELINE.md`
-21. `docs/HARDWARE_SOFTWARE_SELECTION_MATRIX.md`
-22. `docs/COST_STRUCTURE_AND_TECH_DOWNPATH.md`
-23. `docs/POWER_BUDGET_AND_EFFICIENCY_STRATEGY.md`
-24. `docs/MASS_PRODUCTION_READINESS_CRITERIA.md`
-25. `docs/TERMINOLOGY.md`
-26. `docs/ARCHITECTURE_RULES_REVIEW.md`
+19. `docs/WEARABLE_COMPATIBILITY_AND_DATA_FIELDS.md`
+20. `docs/DEMO_TO_MASS_PRODUCTION_GAPS.md`
+21. `docs/ENGINEERING_NPI_BASELINE.md`
+22. `docs/HARDWARE_SOFTWARE_SELECTION_MATRIX.md`
+23. `docs/COST_STRUCTURE_AND_TECH_DOWNPATH.md`
+24. `docs/POWER_BUDGET_AND_EFFICIENCY_STRATEGY.md`
+25. `docs/MASS_PRODUCTION_READINESS_CRITERIA.md`
+26. `docs/TERMINOLOGY.md`
+27. `docs/ARCHITECTURE_RULES_REVIEW.md`
 
 ## 下一步建议
 
 - 当前主优先级已回调到尚未清账的前置里程碑
 - `KBT-13` 已完成本轮收口
-- 当前正在评审 `KBT-10` 储药与室内递送要求
-- 再清 `KBT-15` 一期穿戴设备兼容范围与数据字段、`KBT-14` UWB 技术成熟度与接入价值
+- `KBT-10` 已完成本轮收口
+- 当前正在评审 `KBT-15` 一期穿戴设备兼容范围与数据字段
+- 再清 `KBT-14` UWB 技术成熟度与接入价值
 - `KBT-16` 量产预备判定标准保留为已起草提案，待前置里程碑清账后恢复主审
 - 健康事件量化阈值与故障阈值
 - 多尺度动态 OODA 基线继续向状态机、接口和验证项落地
