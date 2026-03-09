@@ -1132,9 +1132,268 @@ OODA 如果直接照搬到端到端模型内部，会有三个明显问题：
 - `Orient` 和 `Decide` 可以部分被端到端策略压缩
 - `VLN / VLA` 应被视为 OODA 中的策略引擎，而不是 OODA 本身
 
+## 10.6 纯视觉路线不是边缘方案，但它通常不是“无几何”
+
+如果把“纯视觉”定义为“不使用主动 ToF、结构光或激光，只使用被动 RGB 单目 / 双目”，那么近两年的 VLN 或相近导航路线里，这已经不是边缘尝试，而是一个明确存在的分支。
+
+从公开工作看，大体有三类做法：
+
+- `RGB-only policy`：`GNM / ViNT / NoMaD`、`OmniVLA`、`AutoFly` 这类工作，直接在 RGB 观测上学习目标条件导航策略，重点是泛化、跨场景与动作生成。
+- `RGB-only topometric / memory`：`TANGO` 这类工作不依赖 3D 先验地图或主动深度，而是用 RGB-only object-level topometric graph 结合局部可通行性控制完成长距离导航。
+- `Passive-vision geometry`：`WildGS-SLAM` 这类工作说明单目 RGB 几何与动态场景 SLAM 正在快速进步；而 `Isaac ROS Visual SLAM` 与 `Isaac Perceptor` 这类工业路线则更强调被动双目和多相机 RGB 几何。
+
+这说明一个很重要的判断：
+
+- 纯视觉路线在高层策略上是成立的
+- 但主流工程做法并不是“完全放弃几何”
+- 更常见的形式是“语义策略由 RGB 驱动，近场几何由被动双目或单目深度先验补足”
+
+对 Kinbot 来说，这个判断很关键。因为你们当前并不是要证明“只靠一张 RGB 图像也能动起来”，而是要在家庭场景里把：
+
+- 指令泛化搜索与到达
+- 无指令的共存移动
+- 其他感知与交互任务共享同一组相机
+
+同时做成一个可部署系统。这个问题天然更偏工程闭环，而不是单一 benchmark。
+
+## 10.7 在 OODA 与 Kinbot 功能需求下，3～5 个被动 RGB 相机是否足够
+
+如果把问题拆回 OODA，会更清楚。
+
+| OODA 环节 | 对 Kinbot 的真实需求 | 3～5 个被动 RGB 是否可支撑 | 判断 |
+| --- | --- | --- | --- |
+| Observe | 房间、门口、家具、目标物、人、姿态、交互线索、盲区 | 可以，但必须是多相机、时间同步、外参稳定的共享感知输入 | `可以` |
+| Orient | 位姿估计、房间识别、拓扑定位、目标候选排序、共享空间风险理解 | 可以，但要依赖 `VSLAM + place recognition + room/furniture memory + uncertainty` | `可以` |
+| Decide | 语义子目标、搜索策略、礼让、速度调节、是否暂停 / 让行 / 重观察 | 可以，且这部分本来更依赖语义与社会线索，而不是主动深度 | `可以` |
+| Act | 近场避障、窄通道通过、动态人宠避让、最终速度与刹停 | 有条件可以；若完全依赖多单目而没有双目几何或高质量深度先验，产品风险偏高 | `有条件` |
+
+因此，结论不是“纯视觉不行”，而是：
+
+- 对 `Observe -> Orient -> Decide`，3～5 个被动 RGB 完全有现实可行性。
+- 对 `Act`，纯视觉的难点不是高层语义，而是近场几何鲁棒性、动态障碍不确定性和最终安全冗余。
+- 如果一代产品要追求的是“家庭可部署”，那就不应把“全部单目 + 纯端到端动作输出”当成主方案。
+
+进一步细分：
+
+### A. `3` 个单目 RGB
+
+更像研究样机或强约束 MVP 配置。
+
+问题在于：
+
+- 前向几何冗余不足
+- 侧向或后向盲区大
+- 同一批相机还要兼顾交互、人物、目标搜索和导航，资源竞争会很强
+
+如果只有 `3` 个单目，也不是完全不能做，但要接受以下前提：
+
+- 速度上限保守
+- 转弯前更频繁地停下重观察
+- 对低光、反光、玻璃、细杆和宠物突然切入更敏感
+
+### B. `4` 个相机，其中前向 `1` 组双目 + 侧向 `2` 个单目
+
+这是我认为最稳妥的最小产品配置。
+
+原因是：
+
+- 前向双目为 `Act` 提供稳定的被动几何基础
+- 左右单目补足门框、侧向行人、交互朝向和房间切换线索
+- 这套配置仍然保持了“纯视觉”，但不把所有近场几何都压在单目深度估计上
+
+如果只能做一个主推荐方案，我会优先推荐这个。
+
+### C. `5` 个相机，其中前向 `1` 组双目 + 另外 `3` 个单目
+
+这是更均衡的产品配置。
+
+新增的第 `5` 个相机，建议按产品优先级二选一：
+
+- 如果更看重人机共存与盲区安全，放在后向或后侧
+- 如果更看重交互、房间理解和远处目标发现，放在前上方广角
+
+这类配置的优势不是“让 VLN 更像论文”，而是让同一套视觉输入同时支撑：
+
+- 导航
+- 人物 / 物体 / 房间感知
+- 交互朝向与说话人关联
+- 盲区感知与让行判断
+
+### D. `5` 个单目 RGB，不做双目
+
+理论上可行，研究上也有支撑，但我不建议把它作为 Kinbot 一代主交付路线。
+
+它的主要问题不是“完全做不出来”，而是：
+
+- 几何质量更依赖运动视差和学习深度先验
+- 转身、起步、擦边通过时的不确定性会更高
+- 你会被迫把很多安全策略做得非常保守
+
+所以，如果允许把 `2` 个单目变成 `1` 组双目，这个自由度应该优先用于前向近场几何，而不是继续追求“全单目概念纯度”。
+
+## 10.8 推荐的纯视觉技术路线
+
+在现有 OODA 设计下，更合理的路线不是“为 VLN 单独配一套相机”，而是构建 `shared multi-camera visual stack`，再让多个策略共享同一份 World State。
+
+### A. 传感器布局建议
+
+推荐优先级如下：
+
+1. `首选`：前向 `1` 组双目 + 左右 `2` 个单目，共 `4` 个相机。
+2. `次选`：前向 `1` 组双目 + 左右 `2` 个单目 + 后向或前上方 `1` 个单目，共 `5` 个相机。
+3. `备选`：`5` 个单目 RGB，但必须接受更保守的速度、更多停顿重观察和更强的不确定性门控。
+
+布局原则应是：
+
+- 前向负责近场几何、门框、窄通道和主要行进方向
+- 侧向负责共享空间、人机交互、会车 / 让行和房间切换
+- 后向或上向负责盲区补齐、回退安全或远距语义观察
+
+### B. 同一套相机数据应先汇聚成共享视觉状态，而不是直接喂给 VLN 黑盒
+
+建议在 `Observe` 层显式拆出四条共享支路：
+
+#### 1. `visual_geometry_stack`
+
+负责：
+
+- 前向双目深度或多视几何
+- `VSLAM / VO`
+- 局部 freespace / occupancy / traversability
+- 动态障碍物短时轨迹
+
+这条支路主要服务：
+
+- 局部规划
+- 速度约束
+- 窄通道通过
+- 停车 / 礼让 / 避障
+
+#### 2. `semantic_scene_stack`
+
+负责：
+
+- 房间识别
+- 门口 / 走廊 / 家具类别
+- 物体检测与开放词汇候选
+- 人员检测、再识别、朝向、可交互状态
+- 说话人和目标人物关联
+
+这条支路主要服务：
+
+- `semantic_navigation_policy`
+- `social_mobility_policy`
+- 交互与任务理解
+
+#### 3. `spatial_memory_stack`
+
+负责把多相机观察写成持续的家庭世界状态：
+
+- room graph
+- room-furniture-object relation
+- target belief map
+- person last-seen / likely-to-be
+- shared-space hot zones
+
+如果没有这层，VLN 只能反复做“当前帧反应”，无法稳定完成家庭中的搜索、恢复和再次定位。
+
+#### 4. `uncertainty_stack`
+
+纯视觉路线必须把不确定性显式化，至少要持续评估：
+
+- 低光 / 背光
+- 模糊 / 过曝
+- 玻璃 / 镜面 / 强反光
+- 细杆、桌腿、电线等细小障碍
+- 快速切入的人和宠物
+- 深度先验与双目几何不一致
+
+这条支路的价值，不是提高论文指标，而是给系统一个合理的“慢下来、停下来、换角度再看一次”的依据。
+
+### C. 策略层建议继续分成两类，而不是合并成一个大导航模型
+
+在这套共享视觉状态之上：
+
+- `semantic_navigation_policy` 负责“为了完成任务，我该去哪里、先看哪里、下一个语义子目标是什么”
+- `social_mobility_policy` 负责“在当前有人共存的空间里，我该怎么动才合适”
+
+两者都不直接持有底盘最终控制权。
+
+`Act` 层仍然建议保持：
+
+- 经典局部规划
+- 限速 / 急停 / 通过性门控
+- 近场避障和轨迹平滑
+
+这样做的好处是，端到端模型趋势可以体现在 `Orient / Decide` 内部，而不是把执行安全边界一并吞掉。
+
+### D. 训练路线建议采用“共享视觉底座 + 教师大模型 + 小模型执行”
+
+你们现在已经有：
+
+- `Qwen3-VL-8B`
+- 家庭数据采集能力
+- 经典导航和 SLAM 基础设施
+
+在纯视觉路线下，这三个积累是足够构建一个很强起点的。
+
+更合适的路线是：
+
+1. 先把多相机数据做成同步、标定稳定、可回放的数据底座。
+2. 用前向双目和 SLAM 产出稳定几何监督，再反向蒸馏给侧向 / 后向单目的深度与可通行性估计。
+3. 用 `Qwen3-VL-8B` 做稀疏教师，标注房间、家具、目标候选、人物状态、遮挡关系与搜索理由。
+4. 训练小尺寸专用模型分别承担：
+   - room / doorway / furniture understanding
+   - object / person candidate ranking
+   - target belief update
+   - social mobility scoring
+5. 最后再由 `semantic_navigation_policy` 与 `social_mobility_policy` 组合这些结构化结果。
+
+这条路线的关键，不是让一个大模型直接吃下所有原始视频流，而是让大模型负责“解释”和“蒸馏”，让小模型负责“闭环执行”。
+
+### E. Sim2Real 的重点应放在“相机布局 + 本体边界 + 动态共存”
+
+如果最终采用纯视觉多相机方案，仿真里最该对齐的，不只是场景纹理，还包括：
+
+- 相机安装位姿
+- FOV 与畸变
+- 双目基线
+- 机身宽度与转弯包络
+- 家庭常见反光面、玻璃门、桌椅腿、地毯边界
+- 人和宠物的随机切入
+
+也就是说，Sim2Real 在这里不只是“训练数据扩容”，而是要把 `Observe -> Act` 之间最容易出问题的视觉边界提前暴露出来。
+
+## 10.9 对 Kinbot 的最终建议
+
+基于当前技术趋势和 Kinbot 的需求边界，我的判断是：
+
+- `纯视觉 VLN / mobility intelligence` 是可行方向，不是硬凑概念。
+- 但“纯视觉”应理解为“不使用主动深度”，而不是“拒绝被动双目几何”和“让端到端模型独占控制链”。
+- 在 OODA 下，`3～5` 个被动 RGB 相机足以支撑 `Observe -> Orient -> Decide`，并在保留经典局部规划的前提下支撑大部分 `Act` 需求。
+
+如果把结论再压缩成工程建议，就是三条：
+
+1. 不建议把 `3` 个单目 RGB 作为一代产品主方案。
+2. 建议把 `4` 相机方案定义为默认基线：前向 `1` 组双目 + 左右 `2` 个单目。
+3. 如果预算与算力允许，把 `5` 相机方案作为增强版：在上述基础上再加一个后向或前上方单目。
+
+最后要特别克制的一点是：
+
+- 不要因为“缺少主动深度”就把所有希望寄托在一个更大的 VLN / VLA 模型上。
+
+真正该增强的，是：
+
+- 多相机共享感知底座
+- 房间 / 家具 / 人 / 目标的结构化世界状态
+- 不确定性门控
+- `semantic_navigation_policy + social_mobility_policy + classical local planner` 的分层协同
+
+如果这四件事做稳，Kinbot 的纯视觉路线是能成立的；如果这四件事没做稳，只是把更多相机和更大模型堆进去，系统仍然会在真实家庭里暴露出脆弱性。
+
 ## 11. 外部参考
 
-以下链接用于支撑本文判断，访问时间均为 2026-03-08：
+以下链接用于支撑本文判断，访问时间以 2026-03-08 至 2026-03-09 为主：
 
 VLN / 导航侧：
 
@@ -1151,6 +1410,14 @@ VLN / 导航侧：
 - VLN-PE 项目页：[https://crystalsixone.github.io/vln_pe.github.io/](https://crystalsixone.github.io/vln_pe.github.io/)
 - VLN-PE ICCV 2025 论文页：[https://openaccess.thecvf.com/content/ICCV2025/html/Wang_Rethinking_the_Embodied_Gap_in_Vision-and-Language_Navigation_A_Holistic_Study_ICCV_2025_paper.html](https://openaccess.thecvf.com/content/ICCV2025/html/Wang_Rethinking_the_Embodied_Gap_in_Vision-and-Language_Navigation_A_Holistic_Study_ICCV_2025_paper.html)
 - VLN-VER 官方代码页：[https://github.com/DefaultRui/VLN-VER](https://github.com/DefaultRui/VLN-VER)
+- General Navigation Models 项目页：[https://general-navigation-models.github.io/](https://general-navigation-models.github.io/)
+- ViNT 项目页：[https://general-navigation-models.github.io/vint/](https://general-navigation-models.github.io/vint/)
+- NoMaD 项目页：[https://general-navigation-models.github.io/nomad/](https://general-navigation-models.github.io/nomad/)
+- TANGO 项目页：[https://podgorki.github.io/TANGO/](https://podgorki.github.io/TANGO/)
+- AutoFly 项目页：[https://xiaolousun.github.io/AutoFly](https://xiaolousun.github.io/AutoFly)
+- Vision-Only Robot Navigation in a Neural Radiance World 项目页：[https://mikh3x4.github.io/nerf-navigation/](https://mikh3x4.github.io/nerf-navigation/)
+- WildGS-SLAM 项目页：[https://wildgs-slam.github.io/](https://wildgs-slam.github.io/)
+- VLM-Social-Nav 项目页：[https://jingliangc.github.io/social_navigation/social_vlm/](https://jingliangc.github.io/social_navigation/social_vlm/)
 
 VLM / VLA / 通用具身侧：
 
@@ -1165,6 +1432,9 @@ VLM / VLA / 通用具身侧：
 - NVIDIA GR00T N1 官方发布：[https://nvidianews.nvidia.com/news/nvidia-isaac-gr00t-n1-open-humanoid-robot-foundation-model-simulation-frameworks](https://nvidianews.nvidia.com/news/nvidia-isaac-gr00t-n1-open-humanoid-robot-foundation-model-simulation-frameworks)
 - NVIDIA GR00T N1.6 技术博客：[https://developer.nvidia.com/blog/building-generalist-humanoid-capabilities-with-nvidia-isaac-gr00t-n1-6-using-a-sim-to-real-workflow/](https://developer.nvidia.com/blog/building-generalist-humanoid-capabilities-with-nvidia-isaac-gr00t-n1-6-using-a-sim-to-real-workflow/)
 - NVIDIA Isaac GR00T 官方页：[https://developer.nvidia.com/project-gr00t](https://developer.nvidia.com/project-gr00t)
+- Isaac ROS Visual SLAM 官方文档：[https://nvidia-isaac-ros.github.io/repositories_and_packages/isaac_ros_visual_slam/index.html](https://nvidia-isaac-ros.github.io/repositories_and_packages/isaac_ros_visual_slam/index.html)
+- NVIDIA Isaac Perceptor Reference Architecture：[https://nvidia-isaac-ros.github.io/v/release-3.2/reference_workflows/isaac_perceptor/reference_architecture.html](https://nvidia-isaac-ros.github.io/v/release-3.2/reference_workflows/isaac_perceptor/reference_architecture.html)
+- NVIDIA Nova Orin Developer Kit 文档：[https://nvidia-isaac-ros.github.io/v/release-3.1/robots/nova_developer_kit/index.html](https://nvidia-isaac-ros.github.io/v/release-3.1/robots/nova_developer_kit/index.html)
 - Figure Helix 02 官方发布：[https://www.figure.ai/news/helix-02](https://www.figure.ai/news/helix-02)
 - Spirit AI 官方介绍：[https://www.spirit-ai.com/en/about](https://www.spirit-ai.com/en/about)
 - Spirit AI 新闻页：[https://www.spirit-ai.com/en/news](https://www.spirit-ai.com/en/news)

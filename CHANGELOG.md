@@ -81,6 +81,9 @@
 - 新增 [docs/MEDICATION_STORAGE_AND_INDOOR_DELIVERY_REQUIREMENTS.md](docs/MEDICATION_STORAGE_AND_INDOOR_DELIVERY_REQUIREMENTS.md)，并更新 [README.md](README.md) 和 [docs/DECISION_LOG.md](docs/DECISION_LOG.md)，启动 `KBT-10` 的正式提案，把储药与室内递送要求收敛为 `R1` 到 `R7` 七个能力包、一条端到端主链和一组工程护栏。
 - 更新 [docs/MEDICATION_STORAGE_AND_INDOOR_DELIVERY_REQUIREMENTS.md](docs/MEDICATION_STORAGE_AND_INDOOR_DELIVERY_REQUIREMENTS.md)、[docs/DECISION_LOG.md](docs/DECISION_LOG.md) 和 [README.md](README.md)，吸收 `Step27` 对 `KBT-10` 的审阅意见，正式关闭 `KBT-10`，并把“仓门卡滞审计”改写为“仓门异常事件记录与回溯”。
 - 新增 [docs/WEARABLE_COMPATIBILITY_AND_DATA_FIELDS.md](docs/WEARABLE_COMPATIBILITY_AND_DATA_FIELDS.md)，并更新 [docs/DECISION_LOG.md](docs/DECISION_LOG.md) 和 [README.md](README.md)，启动 `KBT-15` 的正式提案，把一期穿戴设备兼容范围、接入模式、新鲜度约束和首版数据字段收敛为可评审基线。
+- 更新 [docs/WEARABLE_COMPATIBILITY_AND_DATA_FIELDS.md](docs/WEARABLE_COMPATIBILITY_AND_DATA_FIELDS.md)、[docs/DECISION_LOG.md](docs/DECISION_LOG.md) 和 [README.md](README.md)，吸收 `Step27` 对 `KBT-15` 的审阅意见，正式关闭 `KBT-15`，并把 `UWB` 继续固定在观察线地位。
+- 新增 [docs/UWB_MATURITY_AND_INTEGRATION_VALUE.md](docs/UWB_MATURITY_AND_INTEGRATION_VALUE.md)，并更新 [docs/DECISION_LOG.md](docs/DECISION_LOG.md) 和 [README.md](README.md)，启动 `KBT-14` 的正式提案，把 `UWB` 的一代角色、成熟度判断、样品验证门和接入价值边界收敛为可评审基线。
+- 更新 [docs/VLN_ROLE_AND_PLAN.md](docs/VLN_ROLE_AND_PLAN.md)，补充纯视觉路线在 OODA 下的技术判断、多相机共享视觉底座、`4` 相机和 `5` 相机推荐布局，以及其与 `semantic_navigation_policy / social_mobility_policy / classical local planner` 分层协同的关系。
 
 ## [2026-03-07]
 
