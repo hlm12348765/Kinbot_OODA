@@ -63,6 +63,22 @@
 
 ## 3. 工作流阶段
 
+### 3.0 当前主线补充：`PDCP` 系统架构评审与总体方案下发
+
+基于最新要求，当前主线进一步明确为：
+
+1. 当前阶段不是量产导入准备阶段，而是“产品需求基本完成后的系统架构设计与技术研判阶段”
+2. 当前最重要的交付物是可用于 `IPD / PDCP` 节点的完整系统架构设计
+3. 在 `PDCP` 系统架构评审通过后，再进入总体方案下发和模块级架构 / 方案设计
+
+因此，当前轮次的主优先级收敛为：
+
+1. `PDCP` 系统架构评审包
+2. 总体方案与模块方案下发基线
+3. 模块级架构与总体方案评审顺序
+
+而 `KBT-25 / KBT-26 / KBT-27` 这类后段生命周期文档，只保留为远期约束输入，不再作为当前主评审线。
+
 ### 阶段 0：目标和边界冻结
 
 目标：
@@ -114,6 +130,21 @@
 - 安全 / 合规 / 授权接口文档
 - 关键接口契约文档
 - 审计与隐私治理边界
+
+### 阶段 2.5：`PDCP` 架构评审与总体方案冻结
+
+目标：
+
+- 把现有架构产物收敛成一份可用于 `PDCP` 节点的完整系统架构评审包
+- 把系统架构转成可下发给各模块的总体方案基线
+- 明确模块级架构与方案设计的输入、顺序和产物要求
+
+输出物：
+
+- `docs/PDCP_SYSTEM_ARCHITECTURE_REVIEW_PACKAGE.md`
+- `docs/OVERALL_SOLUTION_AND_MODULE_DESIGN_BASELINE.md`
+- `PDCP` 评审结论
+- 模块方案下发清单
 
 ### 阶段 3：技术路线评估
 
@@ -258,13 +289,16 @@
 4. 决策状态机
 5. 安全 / 合规 / 授权接口
 6. 功能澄清包：`docs/HEALTH_EVENT_PIPELINE.md`、`docs/COMPANION_INTERACTION_STRATEGY.md`、`docs/SAFETY_RISK_MATRIX.md`
-7. 端云职责拆分与伴生系统最小闭环
-8. `docs/LIFECYCLE_WORKFLOW.md`
-9. `docs/DEMO_TO_MASS_PRODUCTION_GAPS.md`
-10. `docs/ENGINEERING_NPI_BASELINE.md`
-11. `docs/HARDWARE_SOFTWARE_SELECTION_MATRIX.md`
-12. `docs/COST_STRUCTURE_AND_TECH_DOWNPATH.md`
-13. MVP 与量产预备定义及验证计划
+7. `docs/PDCP_SYSTEM_ARCHITECTURE_REVIEW_PACKAGE.md`
+8. `docs/OVERALL_SOLUTION_AND_MODULE_DESIGN_BASELINE.md`
+9. 模块级架构与接口草案
+10. 端云职责拆分与伴生系统最小闭环
+11. `docs/LIFECYCLE_WORKFLOW.md`
+12. `docs/DEMO_TO_MASS_PRODUCTION_GAPS.md`
+13. `docs/ENGINEERING_NPI_BASELINE.md`
+14. `docs/HARDWARE_SOFTWARE_SELECTION_MATRIX.md`
+15. `docs/COST_STRUCTURE_AND_TECH_DOWNPATH.md`
+16. MVP 与量产预备定义及验证计划
 
 ## 6. 需要联网核实的内容
 
