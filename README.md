@@ -88,6 +88,7 @@
 - `docs/HARDWARE_SOFTWARE_SELECTION_MATRIX.md`：一代软硬件选型矩阵、主线 / 备线 / 观察线划分与 `G2` 前置验证项
 - `docs/COST_STRUCTURE_AND_TECH_DOWNPATH.md`：整机 BOM 滚动成本基线、降本主战场、控涨项与关键技术路径
 - `docs/POWER_BUDGET_AND_EFFICIENCY_STRATEGY.md`：整机功耗预算、`C5` 四类工况基线、能效控制策略与阶段门检查项
+- `docs/MASS_PRODUCTION_READINESS_CRITERIA.md`：`2026-12-31` 量产预备判定标准、`G5` 判定域与通过条件
 - `docs/TERMINOLOGY.md`：项目术语表
 
 ## 仓库结构
@@ -116,6 +117,7 @@
     ├── HARDWARE_SOFTWARE_SELECTION_MATRIX.md
     ├── COST_STRUCTURE_AND_TECH_DOWNPATH.md
     ├── POWER_BUDGET_AND_EFFICIENCY_STRATEGY.md
+    ├── MASS_PRODUCTION_READINESS_CRITERIA.md
     ├── TERMINOLOGY.md
     ├── VLN_ROLE_AND_PLAN.md
     ├── WORKFLOW.md
@@ -145,17 +147,17 @@
 19. `docs/HARDWARE_SOFTWARE_SELECTION_MATRIX.md`
 20. `docs/COST_STRUCTURE_AND_TECH_DOWNPATH.md`
 21. `docs/POWER_BUDGET_AND_EFFICIENCY_STRATEGY.md`
-22. `docs/TERMINOLOGY.md`
-23. `docs/ARCHITECTURE_RULES_REVIEW.md`
+22. `docs/MASS_PRODUCTION_READINESS_CRITERIA.md`
+23. `docs/TERMINOLOGY.md`
+24. `docs/ARCHITECTURE_RULES_REVIEW.md`
 
 ## 下一步建议
 
-- 优先推进 `KBT-30` 整机功耗预算与能效控制策略
-- 当前优先收敛 `W1 静默待机 / W2 静止陪伴交互 / W3 连续运动 / W4 连续运动中的陪伴交互` 四类工况下的 `C5` 工作基线
-- 当前优先收敛 `C4` 低传感路线对 `C1 / C2 / C5` 的成本与功耗转移约束
-- 把“高端产品感知检查表”和 `20000 到 30000 元` 售价监控区间一起纳入后续阶段门
+- 优先审阅 `KBT-16` 量产预备判定标准
+- 当前优先冻结 `G5` 的 `7` 个判定域与 `7` 条通过条件
+- 当前优先把 `BOM / 售价 / 功耗` 三线约束正式纳入量产预备门
+- 当前优先把“小批量试点可执行 + 随时可以开发布会”固化成量产预备硬定义
 - 健康事件量化阈值与故障阈值
-- 量产预备判定标准
 - 多尺度动态 OODA 基线继续向状态机、接口和验证项落地
 - 陪伴记忆治理与多角色配置边界细化
 - 量产预备技术选型
