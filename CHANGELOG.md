@@ -71,6 +71,7 @@
 - 更新 [docs/DECISION_LOG.md](docs/DECISION_LOG.md) 和 [README.md](README.md)，并在 Linear 中新增 `KBT-30`，把整机功耗预算、能效控制和 `C5` 工作基线冻结从 `KBT-29` 中拆出为独立后续议题。
 - 更新 [docs/COST_STRUCTURE_AND_TECH_DOWNPATH.md](docs/COST_STRUCTURE_AND_TECH_DOWNPATH.md)、[docs/DECISION_LOG.md](docs/DECISION_LOG.md)、[README.md](README.md)、[docs/WORKFLOW.md](docs/WORKFLOW.md) 和 [docs/LIFECYCLE_WORKFLOW.md](docs/LIFECYCLE_WORKFLOW.md)，吸收 `Step23` 对 `KBT-29` 的第二轮审阅意见，正式关闭 `KBT-29`，并把“聪明、温暖、精致且能支撑 `20000 到 30000 元` 售价区间”的高端产品感检查提升为跨阶段护栏。
 - 新增 [docs/POWER_BUDGET_AND_EFFICIENCY_STRATEGY.md](docs/POWER_BUDGET_AND_EFFICIENCY_STRATEGY.md)，并更新 [docs/COST_STRUCTURE_AND_TECH_DOWNPATH.md](docs/COST_STRUCTURE_AND_TECH_DOWNPATH.md)、[docs/DECISION_LOG.md](docs/DECISION_LOG.md)、[README.md](README.md)、[docs/WORKFLOW.md](docs/WORKFLOW.md) 和 [docs/LIFECYCLE_WORKFLOW.md](docs/LIFECYCLE_WORKFLOW.md)，吸收 `Step24` 对 `KBT-30` 的审阅意见，把整机售价监控区间收敛为 `20000 到 30000 元`，把 `C5` 工作基线收敛为四类工况，并把历史滞留的评审 issue 纳入一次工作流清账。
+- 更新 [docs/WORKFLOW.md](docs/WORKFLOW.md) 和 [docs/DECISION_LOG.md](docs/DECISION_LOG.md)，把“暂停时必须给出明确审阅需求”固化为正式协作规则，避免后续出现模糊的停顿提示。
 
 ## [2026-03-07]
 
