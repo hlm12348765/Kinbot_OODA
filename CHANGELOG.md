@@ -87,6 +87,8 @@
 - 更新 [docs/UWB_MATURITY_AND_INTEGRATION_VALUE.md](docs/UWB_MATURITY_AND_INTEGRATION_VALUE.md)、[docs/DECISION_LOG.md](docs/DECISION_LOG.md) 和 [README.md](README.md)，吸收 `Step28` 对 `KBT-14` 的审阅意见，正式关闭 `KBT-14`，并恢复 `KBT-16` 为当前主评审项。
 - 更新 [docs/MASS_PRODUCTION_READINESS_CRITERIA.md](docs/MASS_PRODUCTION_READINESS_CRITERIA.md)、[docs/DECISION_LOG.md](docs/DECISION_LOG.md) 和 [README.md](README.md)，吸收 `Step30` 对 `KBT-16` 的审阅意见，正式关闭 `KBT-16`，并把 `功耗` 与 `BOM / 售价` 同级的理由写实为“直接影响续航、发热、噪声、充电与长期体验”。
 - 新增 [docs/MVP_VALIDATION_PLAN.md](docs/MVP_VALIDATION_PLAN.md)，并更新 [docs/DECISION_LOG.md](docs/DECISION_LOG.md) 和 [README.md](README.md)，启动 `KBT-12` 的正式提案，把一代 `MVP` 范围划分、`100 台 / 100 户 / 1 个月` 试点框架与 `P / W / B` 放行规则收敛为可评审基线。
+- 更新 [docs/MVP_VALIDATION_PLAN.md](docs/MVP_VALIDATION_PLAN.md)、[docs/HEALTH_EVENT_PIPELINE.md](docs/HEALTH_EVENT_PIPELINE.md)、[docs/DECISION_LOG.md](docs/DECISION_LOG.md) 和 [README.md](README.md)，吸收 `Step31` 对 `KBT-12` 的审阅意见，正式关闭 `KBT-12`，并把睡眠监测提升为 `必须有`、找物能力提升为 `应该有`。
+- 新增 [docs/PRODUCTION_INTRO_LAUNCH_AND_DELIVERY_CLOSURE.md](docs/PRODUCTION_INTRO_LAUNCH_AND_DELIVERY_CLOSURE.md)，并更新 [docs/DECISION_LOG.md](docs/DECISION_LOG.md) 和 [README.md](README.md)，启动 `KBT-25` 的正式提案，把量产导入、发布准备与交付闭环收敛为 `7` 个闭环域、`3` 种状态定义和一组默认阻断项。
 
 ## [2026-03-07]
 

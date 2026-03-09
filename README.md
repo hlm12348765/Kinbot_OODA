@@ -94,6 +94,7 @@
 - `docs/POWER_BUDGET_AND_EFFICIENCY_STRATEGY.md`：整机功耗预算、`C5` 四类工况基线、能效控制策略与阶段门检查项
 - `docs/MASS_PRODUCTION_READINESS_CRITERIA.md`：`2026-12-31` 量产预备判定标准、`G5` 判定域与通过条件
 - `docs/MVP_VALIDATION_PLAN.md`：量产预备与 `2027-01 MVP` 验证窗口之间的能力范围、试点框架与放行规则
+- `docs/PRODUCTION_INTRO_LAUNCH_AND_DELIVERY_CLOSURE.md`：量产导入、发布准备与交付闭环的状态定义、工作包、阻断项与责任面
 - `docs/TERMINOLOGY.md`：项目术语表
 
 ## 仓库结构
@@ -128,6 +129,7 @@
     ├── POWER_BUDGET_AND_EFFICIENCY_STRATEGY.md
     ├── MASS_PRODUCTION_READINESS_CRITERIA.md
     ├── MVP_VALIDATION_PLAN.md
+    ├── PRODUCTION_INTRO_LAUNCH_AND_DELIVERY_CLOSURE.md
     ├── TERMINOLOGY.md
     ├── VLN_ROLE_AND_PLAN.md
     ├── WORKFLOW.md
@@ -163,19 +165,22 @@
 25. `docs/POWER_BUDGET_AND_EFFICIENCY_STRATEGY.md`
 26. `docs/MASS_PRODUCTION_READINESS_CRITERIA.md`
 27. `docs/MVP_VALIDATION_PLAN.md`
-28. `docs/TERMINOLOGY.md`
-29. `docs/ARCHITECTURE_RULES_REVIEW.md`
+28. `docs/PRODUCTION_INTRO_LAUNCH_AND_DELIVERY_CLOSURE.md`
+29. `docs/TERMINOLOGY.md`
+30. `docs/ARCHITECTURE_RULES_REVIEW.md`
 
 ## 下一步建议
 
-- 当前主优先级已回调到尚未清账的前置里程碑
+- 当前主优先级已按生命周期顺序切到 `KBT-25` 的 `P5` 逆向约束评审
 - `KBT-13` 已完成本轮收口
 - `KBT-10` 已完成本轮收口
 - `KBT-15` 已完成本轮收口
 - `KBT-14` 已完成本轮收口
 - `KBT-16` 已完成本轮收口
-- 当前正在评审 `KBT-12` 量产预备与 `MVP` 验证计划
+- `KBT-12` 已完成本轮收口
+- 当前正在评审 `KBT-25` 量产导入、发布准备与交付闭环
 - 健康事件量化阈值与故障阈值
+- 睡眠监测与找物能力的执行阈值
 - 多尺度动态 OODA 基线继续向状态机、接口和验证项落地
 - 陪伴记忆治理与多角色配置边界细化
 - 量产预备技术选型
