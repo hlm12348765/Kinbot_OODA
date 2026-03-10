@@ -11,7 +11,7 @@
 ### 新增
 
 - 新增 [README.md](README.md)，补充项目定位、当前阶段、仓库结构和文档索引，方便快速理解仓库内容。
-- 新增 [docs/视觉语言导航角色分析与技术规划.md](docs/视觉语言导航角色分析与技术规划.md)，用于分析 VLN 在 Kinbot OODA 架构中的角色、梳理 2025 到 2026 年最新 VLN/VLA 技术趋势，并给出面向量产预备的技术规划建议。
+- 新增 [docs/VLN角色分析与技术规划.md](docs/VLN角色分析与技术规划.md)，用于分析 VLN 在 Kinbot OODA 架构中的角色、梳理 2025 到 2026 年最新 VLN/VLA 技术趋势，并给出面向量产预备的技术规划建议。
 - 新增 [docs/架构原则符合度检查.md](docs/架构原则符合度检查.md)，用于检查当前 OODA 总体架构与 [docs/系统架构原则.md](docs/系统架构原则.md) 中架构原则的一致性。
 - 新增 [docs/推进工作流.md](docs/推进工作流.md)，用于定义从总体架构推进到软硬件落地的工作流和阶段产物。
 - 新增 [docs/决策记录.md](docs/决策记录.md)，用于记录已确认事实、架构决策、开放问题和后续澄清问题。
@@ -29,6 +29,10 @@
 - 新增 [docs/工程化与NPI准备基线.md](docs/工程化与NPI准备基线.md)，用于定义 `P2` 阶段的工程化与 `NPI` 准备基线、`G2` 技术路线门和 Alpha / EVT 前置冻结项。
 - 新增 [docs/软硬件选型矩阵.md](docs/软硬件选型矩阵.md)，用于定义一代软硬件选型矩阵、主线 / 备线 / 观察线和 `G2` 前置验证项。
 - 新增 [docs/术语表.md](docs/术语表.md)，用于统一项目术语，避免概念漂移。
+
+### 变更
+
+- 更新 [docs/软硬件选型矩阵.md](docs/软硬件选型矩阵.md)、[docs/总体方案与模块方案下发基线.md](docs/总体方案与模块方案下发基线.md)、[docs/推进工作流.md](docs/推进工作流.md)、[docs/决策记录.md](docs/决策记录.md)、[docs/成本结构与技术降本路径.md](docs/成本结构与技术降本路径.md) 和 [README.md](README.md)，补齐一次 `KBT-11` 的后修订工作流：将一代端侧算力主线收窄为 `地瓜 S100 Pro（128 TOPS 版本）`，明确排除 `Atlas 200I A2` 与 `BM1688 / MLU220-M.2 / 同等级小算力芯片`，并把端侧算力需求升级为由 `TTFT / TPS / 热稳态持续 TPS` 定义，同时把 `VLN` 专家线程的量化任务正式下发到 `S1 / S4 / S7`。
 
 ### 调整
 
@@ -49,8 +53,8 @@
 - 更新 [README.md](README.md)、[docs/世界状态结构.md](docs/世界状态结构.md) 和 [docs/决策记录.md](docs/决策记录.md)，同步“项目从 2026-01-01 起算、前两个月用于需求和 Demo 验证”的时间线以及既有样机基础。
 - 更新 [README.md](README.md)、[docs/推进工作流.md](docs/推进工作流.md) 和 [docs/决策记录.md](docs/决策记录.md)，明确后续问题澄清按“健康管理、陪伴交互、安全保障”三条主线并行推进，并记录与 VLN 技术评估线程的协作要求以及每层实体数控制要求。
 - 更新 [README.md](README.md)、[docs/推进工作流.md](docs/推进工作流.md) 和 [docs/决策记录.md](docs/决策记录.md)，明确 `docs/REQUIREMENTS.MD` 由用户独占维护，Codex 只读取并推进其他文档。
-- 更新 [docs/决策记录.md](docs/决策记录.md)，吸收 [docs/视觉语言导航角色分析与技术规划.md](docs/视觉语言导航角色分析与技术规划.md) 的关键结论，将 VLN 边界收敛为“语义导航策略层”，而不是底盘级安全控制层。
-- 更新 [README.md](README.md)、[docs/推进工作流.md](docs/推进工作流.md) 和 [docs/决策记录.md](docs/决策记录.md)，明确 VLN 技术规划由独立 issue 和独立线程维护，当前线程不更新 [docs/视觉语言导航角色分析与技术规划.md](docs/视觉语言导航角色分析与技术规划.md)。
+- 更新 [docs/决策记录.md](docs/决策记录.md)，吸收 [docs/VLN角色分析与技术规划.md](docs/VLN角色分析与技术规划.md) 的关键结论，将 VLN 边界收敛为“语义导航策略层”，而不是底盘级安全控制层。
+- 更新 [README.md](README.md)、[docs/推进工作流.md](docs/推进工作流.md) 和 [docs/决策记录.md](docs/决策记录.md)，明确 VLN 技术规划由独立 issue 和独立线程维护，当前线程不更新 [docs/VLN角色分析与技术规划.md](docs/VLN角色分析与技术规划.md)。
 - 更新架构细化文档，吸收 `Step10` 的澄清结果，包括长期记忆可治理、老人 / 子女配置权限、卫生间和入户门空间边界、陌生人闯入 / 夜间离床 / 门窗未关的自动动作边界，以及故障恢复和硬停底线。
 - 更新 [README.md](README.md)、[docs/推进工作流.md](docs/推进工作流.md) 和 [docs/决策记录.md](docs/决策记录.md)，将当前推进重点从“健康事件管线待产出”推进到“量化阈值、远控边界和 Demo 到量产能力缺口”。
 - 更新 [README.md](README.md)、[docs/推进工作流.md](docs/推进工作流.md) 和 [docs/决策记录.md](docs/决策记录.md)，把工作流扩展到全生命周期视角，并加入“架构师设想包”这一先设想再评审的推进机制。
@@ -76,15 +80,15 @@
 - 新增 [docs/量产预备判定标准.md](docs/量产预备判定标准.md)，并更新 [README.md](README.md) 和 [docs/决策记录.md](docs/决策记录.md)，启动 `KBT-16` 的第一版量产预备判定标准提案。
 - 更新 [docs/推进工作流.md](docs/推进工作流.md)、[docs/决策记录.md](docs/决策记录.md) 和 [README.md](README.md)，澄清“后置里程碑约束型文档提前起草”不等于真正越过前置里程碑，并把当前主优先级回调到 `KBT-13 / KBT-10 / KBT-15 / KBT-14` 这组尚未清账的前置项。
 - 新增 [docs/后台人工服务与在线问诊协同边界.md](docs/后台人工服务与在线问诊协同边界.md)，并更新 [docs/推进工作流.md](docs/推进工作流.md)、[docs/决策记录.md](docs/决策记录.md) 和 [README.md](README.md)，启动 `KBT-13` 的正式提案，把一代人工服务、在线问诊、第三方履约与公共应急之间的角色边界、接入链路、媒体策略和审计要求收敛为可评审基线。
-- 更新 [README.md](README.md)、[docs/推进工作流.md](docs/推进工作流.md) 和 [docs/决策记录.md](docs/决策记录.md)，吸收“`VLN` 线程已完成，可加入版本控制”的新口径，允许当前线程把 [docs/视觉语言导航角色分析与技术规划.md](docs/视觉语言导航角色分析与技术规划.md) 作为正式技术输入继续纳入版本历史。
+- 更新 [README.md](README.md)、[docs/推进工作流.md](docs/推进工作流.md) 和 [docs/决策记录.md](docs/决策记录.md)，吸收“`VLN` 线程已完成，可加入版本控制”的新口径，允许当前线程把 [docs/VLN角色分析与技术规划.md](docs/VLN角色分析与技术规划.md) 作为正式技术输入继续纳入版本历史。
 - 更新 [docs/后台人工服务与在线问诊协同边界.md](docs/后台人工服务与在线问诊协同边界.md) 和 [docs/决策记录.md](docs/决策记录.md)，吸收 `Step26` 对 `KBT-13` 的审阅意见，把客服运营坐席的服务经济性约束写成显式风险，并澄清“医疗专业主体接单结果”是结构化受理状态，而不是首轮专业回复。
 - 新增 [docs/储药与室内递送要求.md](docs/储药与室内递送要求.md)，并更新 [README.md](README.md) 和 [docs/决策记录.md](docs/决策记录.md)，启动 `KBT-10` 的正式提案，把储药与室内递送要求收敛为 `R1` 到 `R7` 七个能力包、一条端到端主链和一组工程护栏。
 - 更新 [docs/储药与室内递送要求.md](docs/储药与室内递送要求.md)、[docs/决策记录.md](docs/决策记录.md) 和 [README.md](README.md)，吸收 `Step27` 对 `KBT-10` 的审阅意见，正式关闭 `KBT-10`，并把“仓门卡滞审计”改写为“仓门异常事件记录与回溯”。
 - 新增 [docs/一期穿戴设备兼容范围与数据字段.md](docs/一期穿戴设备兼容范围与数据字段.md)，并更新 [docs/决策记录.md](docs/决策记录.md) 和 [README.md](README.md)，启动 `KBT-15` 的正式提案，把一期穿戴设备兼容范围、接入模式、新鲜度约束和首版数据字段收敛为可评审基线。
 - 更新 [docs/一期穿戴设备兼容范围与数据字段.md](docs/一期穿戴设备兼容范围与数据字段.md)、[docs/决策记录.md](docs/决策记录.md) 和 [README.md](README.md)，吸收 `Step27` 对 `KBT-15` 的审阅意见，正式关闭 `KBT-15`，并把 `UWB` 继续固定在观察线地位。
-- 新增 [docs/超宽带（UWB）一期技术成熟度与接入价值评估.md](docs/超宽带（UWB）一期技术成熟度与接入价值评估.md)，并更新 [docs/决策记录.md](docs/决策记录.md) 和 [README.md](README.md)，启动 `KBT-14` 的正式提案，把 `UWB` 的一代角色、成熟度判断、样品验证门和接入价值边界收敛为可评审基线。
-- 更新 [docs/视觉语言导航角色分析与技术规划.md](docs/视觉语言导航角色分析与技术规划.md)，补充纯视觉路线在 OODA 下的技术判断、多相机共享视觉底座、`4` 相机和 `5` 相机推荐布局，以及其与 `semantic_navigation_policy / social_mobility_policy / classical local planner` 分层协同的关系。
-- 更新 [docs/超宽带（UWB）一期技术成熟度与接入价值评估.md](docs/超宽带（UWB）一期技术成熟度与接入价值评估.md)、[docs/决策记录.md](docs/决策记录.md) 和 [README.md](README.md)，吸收 `Step28` 对 `KBT-14` 的审阅意见，正式关闭 `KBT-14`，并恢复 `KBT-16` 为当前主评审项。
+- 新增 [docs/UWB一期技术成熟度与接入价值评估.md](docs/UWB一期技术成熟度与接入价值评估.md)，并更新 [docs/决策记录.md](docs/决策记录.md) 和 [README.md](README.md)，启动 `KBT-14` 的正式提案，把 `UWB` 的一代角色、成熟度判断、样品验证门和接入价值边界收敛为可评审基线。
+- 更新 [docs/VLN角色分析与技术规划.md](docs/VLN角色分析与技术规划.md)，补充纯视觉路线在 OODA 下的技术判断、多相机共享视觉底座、`4` 相机和 `5` 相机推荐布局，以及其与 `semantic_navigation_policy / social_mobility_policy / classical local planner` 分层协同的关系。
+- 更新 [docs/UWB一期技术成熟度与接入价值评估.md](docs/UWB一期技术成熟度与接入价值评估.md)、[docs/决策记录.md](docs/决策记录.md) 和 [README.md](README.md)，吸收 `Step28` 对 `KBT-14` 的审阅意见，正式关闭 `KBT-14`，并恢复 `KBT-16` 为当前主评审项。
 - 更新 [docs/量产预备判定标准.md](docs/量产预备判定标准.md)、[docs/决策记录.md](docs/决策记录.md) 和 [README.md](README.md)，吸收 `Step30` 对 `KBT-16` 的审阅意见，正式关闭 `KBT-16`，并把 `功耗` 与 `BOM / 售价` 同级的理由写实为“直接影响续航、发热、噪声、充电与长期体验”。
 - 新增 [docs/量产预备与MVP验证计划.md](docs/量产预备与MVP验证计划.md)，并更新 [docs/决策记录.md](docs/决策记录.md) 和 [README.md](README.md)，启动 `KBT-12` 的正式提案，把一代 `MVP` 范围划分、`100 台 / 100 户 / 1 个月` 试点框架与 `P / W / B` 放行规则收敛为可评审基线。
 - 更新 [docs/量产预备与MVP验证计划.md](docs/量产预备与MVP验证计划.md)、[docs/健康事件管线与升级链路.md](docs/健康事件管线与升级链路.md)、[docs/决策记录.md](docs/决策记录.md) 和 [README.md](README.md)，吸收 `Step31` 对 `KBT-12` 的审阅意见，正式关闭 `KBT-12`，并把睡眠监测提升为 `必须有`、找物能力提升为 `应该有`。
