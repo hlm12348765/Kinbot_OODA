@@ -1,4 +1,4 @@
-# Kinbot_OODA 多尺度动态 OODA 架构基线
+# 多尺度动态OODA架构基线
 
 ## 1. 文档目的
 
@@ -147,10 +147,10 @@
 
 这套基线并不推翻现有 OODA 架构，而是把现有文档中的内容重新组织为更清晰的多尺度框架：
 
-1. [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) 中的高 / 中 / 低速闭环，升级为更明确的 `R1` 到 `R4` 子环，并显式纳入 `OODA Scale Scheduler`。
-2. [docs/DECISION_STATE_MACHINE.md](docs/DECISION_STATE_MACHINE.md) 提供业务状态边界。
-3. [docs/SAFETY_COMPLIANCE_AUTHORIZATION_API.md](docs/SAFETY_COMPLIANCE_AUTHORIZATION_API.md) 提供动作门控边界。
-4. [docs/WORLD_STATE_SCHEMA.md](docs/WORLD_STATE_SCHEMA.md) 提供跨尺度共享的结构化状态平面。
+1. [docs/总体架构.md](docs/总体架构.md) 中的高 / 中 / 低速闭环，升级为更明确的 `R1` 到 `R4` 子环，并显式纳入 `OODA Scale Scheduler`。
+2. [docs/决策状态机.md](docs/决策状态机.md) 提供业务状态边界。
+3. [docs/安全合规授权接口.md](docs/安全合规授权接口.md) 提供动作门控边界。
+4. [docs/世界状态结构.md](docs/世界状态结构.md) 提供跨尺度共享的结构化状态平面。
 
 ## 10. 审阅结论
 
@@ -171,4 +171,3 @@
 3. `Orient` 的职责必须包含对感知结果的认知和评价，以及尺度选择。
 4. `OODA Scale Scheduler` 需要以一级能力身份出现，而不是隐含在普通策略模块中。
 5. 状态机、安全矩阵、陪伴交互和后续接口设计，都要显式说明各自主要落在哪些 OODA 子环上。
-

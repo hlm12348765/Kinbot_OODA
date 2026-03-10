@@ -1,4 +1,4 @@
-# Kinbot_OODA 量产预备与 MVP 验证计划
+# 量产预备与MVP验证计划
 
 ## 1. 文档目的
 
@@ -189,11 +189,11 @@ flowchart TB
 
 `KBT-12` 与现有基线的关系建议冻结为：
 
-1. 与 [docs/MASS_PRODUCTION_READINESS_CRITERIA.md](docs/MASS_PRODUCTION_READINESS_CRITERIA.md) 的关系：`KBT-16` 给出上层阶段门，本文给出验证执行框架。
-2. 与 [docs/HEALTH_EVENT_PIPELINE.md](docs/HEALTH_EVENT_PIPELINE.md) 的关系：本文负责验证健康主链是否真实跑通。
-3. 与 [docs/COMPANION_INTERACTION_STRATEGY.md](docs/COMPANION_INTERACTION_STRATEGY.md) 的关系：本文负责验证陪伴交互是否真的成立。
-4. 与 [docs/SAFETY_RISK_MATRIX.md](docs/SAFETY_RISK_MATRIX.md) 的关系：本文负责验证优先风险域和降级策略是否有效。
-5. 与 [docs/APP_CLOUD_OPS_MINIMAL_LOOP.md](docs/APP_CLOUD_OPS_MINIMAL_LOOP.md) 的关系：本文负责验证伴生系统闭环是否具备试点条件。
+1. 与 [docs/量产预备判定标准.md](docs/量产预备判定标准.md) 的关系：`KBT-16` 给出上层阶段门，本文给出验证执行框架。
+2. 与 [docs/健康事件管线与升级链路.md](docs/健康事件管线与升级链路.md) 的关系：本文负责验证健康主链是否真实跑通。
+3. 与 [docs/陪伴交互策略.md](docs/陪伴交互策略.md) 的关系：本文负责验证陪伴交互是否真的成立。
+4. 与 [docs/安全风险矩阵.md](docs/安全风险矩阵.md) 的关系：本文负责验证优先风险域和降级策略是否有效。
+5. 与 [docs/家属应用、云服务与后台运营坐席一代最小闭环.md](docs/家属应用、云服务与后台运营坐席一代最小闭环.md) 的关系：本文负责验证伴生系统闭环是否具备试点条件。
 
 ## 10. 本轮收口结论与后续问题
 

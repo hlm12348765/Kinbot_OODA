@@ -421,7 +421,7 @@
 
 # Step 32：对KBT-31的第二轮审阅意见
 
-1. 认真查看docs/ARCHITECT_REVIEW_AND_PLAN.md中的架构优化建议，这是Claude模型对你的架构的审阅意见。
+1. 认真查看docs/架构师综合评审与计划.md中的架构优化建议，这是Claude模型对你的架构的审阅意见。
 
 # Step 33：对KBT-31的第三轮审阅意见
 

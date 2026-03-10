@@ -1,4 +1,4 @@
-# Kinbot_OODA PDCP 系统架构评审包
+# PDCP系统架构评审包
 
 ## 1. 文档目的
 

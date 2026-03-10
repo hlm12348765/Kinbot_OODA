@@ -1,4 +1,4 @@
-# Kinbot_OODA UWB 一期技术成熟度与接入价值评估
+# 超宽带（UWB）一期技术成熟度与接入价值评估
 
 ## 1. 文档目的
 
@@ -171,10 +171,10 @@ flowchart LR
 
 `KBT-14` 与现有基线的关系建议冻结为：
 
-1. 与 [docs/WEARABLE_COMPATIBILITY_AND_DATA_FIELDS.md](docs/WEARABLE_COMPATIBILITY_AND_DATA_FIELDS.md) 的关系：本文负责回答 `UWB` 是否有资格脱离观察线。
-2. 与 [docs/HARDWARE_SOFTWARE_SELECTION_MATRIX.md](docs/HARDWARE_SOFTWARE_SELECTION_MATRIX.md) 的关系：本文决定 `UWB` 是否进入一代感知增强候选清单。
-3. 与 [docs/COST_STRUCTURE_AND_TECH_DOWNPATH.md](docs/COST_STRUCTURE_AND_TECH_DOWNPATH.md) 和 [docs/POWER_BUDGET_AND_EFFICIENCY_STRATEGY.md](docs/POWER_BUDGET_AND_EFFICIENCY_STRATEGY.md) 的关系：本文负责约束 `UWB` 是否会引入额外 `C1 / C5` 压力。
-4. 与 [docs/VLN_ROLE_AND_PLAN.md](docs/VLN_ROLE_AND_PLAN.md) 的关系：`UWB` 不替代当前纯视觉主线，只能作为可选增强输入。
+1. 与 [docs/一期穿戴设备兼容范围与数据字段.md](docs/一期穿戴设备兼容范围与数据字段.md) 的关系：本文负责回答 `UWB` 是否有资格脱离观察线。
+2. 与 [docs/软硬件选型矩阵.md](docs/软硬件选型矩阵.md) 的关系：本文决定 `UWB` 是否进入一代感知增强候选清单。
+3. 与 [docs/成本结构与技术降本路径.md](docs/成本结构与技术降本路径.md) 和 [docs/整机功耗预算与能效控制策略.md](docs/整机功耗预算与能效控制策略.md) 的关系：本文负责约束 `UWB` 是否会引入额外 `C1 / C5` 压力。
+4. 与 [docs/视觉语言导航角色分析与技术规划.md](docs/视觉语言导航角色分析与技术规划.md) 的关系：`UWB` 不替代当前纯视觉主线，只能作为可选增强输入。
 
 ## 11. 本轮收口结论与后续问题
 
