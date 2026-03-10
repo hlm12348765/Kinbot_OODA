@@ -92,6 +92,7 @@
 - 新增 [docs/PDCP_SYSTEM_ARCHITECTURE_REVIEW_PACKAGE.md](docs/PDCP_SYSTEM_ARCHITECTURE_REVIEW_PACKAGE.md) 和 [docs/OVERALL_SOLUTION_AND_MODULE_DESIGN_BASELINE.md](docs/OVERALL_SOLUTION_AND_MODULE_DESIGN_BASELINE.md)，把当前主线纠正回 `P1 / PDCP` 阶段，形成完整系统架构评审包与模块方案下发基线。
 - 更新 [docs/WORKFLOW.md](docs/WORKFLOW.md)、[docs/LIFECYCLE_WORKFLOW.md](docs/LIFECYCLE_WORKFLOW.md)、[docs/DECISION_LOG.md](docs/DECISION_LOG.md) 和 [README.md](README.md)，吸收“当前仍处于系统架构设计与技术研判阶段”的新要求，并将 `KBT-25` 退回远期约束输入，不再作为当前主评审线。
 - 更新 [docs/PDCP_SYSTEM_ARCHITECTURE_REVIEW_PACKAGE.md](docs/PDCP_SYSTEM_ARCHITECTURE_REVIEW_PACKAGE.md)、[docs/WORKFLOW.md](docs/WORKFLOW.md)、[docs/LIFECYCLE_WORKFLOW.md](docs/LIFECYCLE_WORKFLOW.md)、[docs/DECISION_LOG.md](docs/DECISION_LOG.md) 和 [README.md](README.md)，吸收 `Step32` 对 `KBT-31` 的审阅意见，把 `PDCP` 总体架构升级为“本体实体架构视图 + 运行时功能架构视图”的双视角基线，并补入 `Body Capability Contract` 作为一级接口面的一部分，同时将 `KBT-32` 明确顺延到 `KBT-31` 关闭之后。
+- 新增 [docs/ARCHITECT_REVIEW_AND_PLAN.md](docs/ARCHITECT_REVIEW_AND_PLAN.md)，并更新 [docs/PDCP_SYSTEM_ARCHITECTURE_REVIEW_PACKAGE.md](docs/PDCP_SYSTEM_ARCHITECTURE_REVIEW_PACKAGE.md)、[docs/WORKFLOW.md](docs/WORKFLOW.md)、[docs/DECISION_LOG.md](docs/DECISION_LOG.md) 和 [README.md](README.md)，吸收 Claude 协作线程的外部架构评审输入，把“双视角一致性检查机制”“一级接口稳定性策略”和 `D1 / D6 / D7` 三项阻断输入纳入 `KBT-31` 第二轮评审基线。
 
 ## [2026-03-07]
 

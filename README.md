@@ -22,6 +22,7 @@
 当前协作方式：
 
 - 每轮开始前先检查 `docs/REQUIREMENTS.MD` 顶部“对 Codex 的要求”是否有更新
+- 若根目录 `CLAUDE.MD` 或 `docs/ARCHITECT_REVIEW_AND_PLAN.md` 有新增内容，也作为外部架构评审输入纳入本轮处理
 - 关键需求、澄清和决策沉淀在仓库文档
 - 阶段性待办和 issue 同步到 Linear，形成持续协作
 - 本地文档和 Linear 协作条目统一用中文维护
@@ -77,6 +78,7 @@
 - `docs/WORKFLOW.md`：从架构到落地的推进工作流
 - `docs/LIFECYCLE_WORKFLOW.md`：从需求形成到上市运营与下一代回灌的全生命周期工作流与阶段门
 - `docs/OODA_MULTI_SCALE_ARCHITECTURE.md`：面向 AGI 与具身智能时代的多尺度动态 OODA 架构基线
+- `docs/ARCHITECT_REVIEW_AND_PLAN.md`：Claude 协作线程给出的外部架构评审意见与关键路径建议
 - `docs/DECISION_LOG.md`：已确认决策、开放问题与后续问题清单
 - `docs/MODULE_BOUNDARIES.md`：模块分层与模块边界
 - `docs/WORLD_STATE_SCHEMA.md`：世界状态与核心实体结构
@@ -109,6 +111,7 @@
 ├── CHANGELOG.md
 └── docs
     ├── ARCHITECTURE.md
+    ├── ARCHITECT_REVIEW_AND_PLAN.md
     ├── ARCHITECTURE_RULES_REVIEW.md
     ├── DECISION_LOG.md
     ├── DECISION_STATE_MACHINE.md
