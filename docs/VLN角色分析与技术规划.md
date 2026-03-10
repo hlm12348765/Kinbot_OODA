@@ -1,4 +1,4 @@
-# 视觉语言导航角色分析与技术规划
+# VLN角色分析与技术规划
 
 本文时间点：2026-03-08。
 
@@ -1040,12 +1040,14 @@ OODA 如果直接照搬到端到端模型内部，会有三个明显问题：
 
 这一层仍然是 Kinbot 的主架构语言。
 
-| OODA | 在 Kinbot 系统中的含义 |
-| --- | --- |
-| Observe | 传感器、多模态感知、SLAM、人体/房间/障碍识别、body state、事件流 |
-| Orient | World State、空间记忆、身份/权限、embodiment_profile、场景风险、任务上下文 |
-| Decide | `semantic_navigation_policy`、`social_mobility_policy`、行为仲裁、安全前置门控 |
-| Act | 局部规划、controller、底盘执行、急停/限速、执行反馈与恢复 |
+
+| OODA    | 在 Kinbot 系统中的含义                                                   |
+| ------- | ----------------------------------------------------------------- |
+| Observe | 传感器、多模态感知、SLAM、人体/房间/障碍识别、body state、事件流                          |
+| Orient  | World State、空间记忆、身份/权限、embodiment_profile、场景风险、任务上下文              |
+| Decide  | `semantic_navigation_policy`、`social_mobility_policy`、行为仲裁、安全前置门控 |
+| Act     | 局部规划、controller、底盘执行、急停/限速、执行反馈与恢复                                |
+
 
 这一层的目标不是追求“神经网络纯度”，而是保证：
 
@@ -1168,12 +1170,14 @@ OODA 如果直接照搬到端到端模型内部，会有三个明显问题：
 
 如果把问题拆回 OODA，会更清楚。
 
-| OODA 环节 | 对 Kinbot 的真实需求 | 3～5 个被动 RGB 是否可支撑 | 判断 |
-| --- | --- | --- | --- |
-| Observe | 房间、门口、家具、目标物、人、姿态、交互线索、盲区 | 可以，但必须是多相机、时间同步、外参稳定的共享感知输入 | `可以` |
-| Orient | 位姿估计、房间识别、拓扑定位、目标候选排序、共享空间风险理解 | 可以，但要依赖 `VSLAM + place recognition + room/furniture memory + uncertainty` | `可以` |
-| Decide | 语义子目标、搜索策略、礼让、速度调节、是否暂停 / 让行 / 重观察 | 可以，且这部分本来更依赖语义与社会线索，而不是主动深度 | `可以` |
-| Act | 近场避障、窄通道通过、动态人宠避让、最终速度与刹停 | 有条件可以；若完全依赖多单目而没有双目几何或高质量深度先验，产品风险偏高 | `有条件` |
+
+| OODA 环节 | 对 Kinbot 的真实需求                     | 3～5 个被动 RGB 是否可支撑                                                         | 判断    |
+| ------- | ---------------------------------- | ------------------------------------------------------------------------- | ----- |
+| Observe | 房间、门口、家具、目标物、人、姿态、交互线索、盲区          | 可以，但必须是多相机、时间同步、外参稳定的共享感知输入                                               | `可以`  |
+| Orient  | 位姿估计、房间识别、拓扑定位、目标候选排序、共享空间风险理解     | 可以，但要依赖 `VSLAM + place recognition + room/furniture memory + uncertainty` | `可以`  |
+| Decide  | 语义子目标、搜索策略、礼让、速度调节、是否暂停 / 让行 / 重观察 | 可以，且这部分本来更依赖语义与社会线索，而不是主动深度                                               | `可以`  |
+| Act     | 近场避障、窄通道通过、动态人宠避让、最终速度与刹停          | 有条件可以；若完全依赖多单目而没有双目几何或高质量深度先验，产品风险偏高                                      | `有条件` |
+
 
 因此，结论不是“纯视觉不行”，而是：
 
@@ -1367,10 +1371,10 @@ OODA 如果直接照搬到端到端模型内部，会有三个明显问题：
 2. 用前向双目和 SLAM 产出稳定几何监督，再反向蒸馏给侧向 / 后向单目的深度与可通行性估计。
 3. 用 `Qwen3-VL-8B` 做稀疏教师，标注房间、家具、目标候选、人物状态、遮挡关系与搜索理由。
 4. 训练小尺寸专用模型分别承担：
-   - room / doorway / furniture understanding
-   - object / person candidate ranking
-   - target belief update
-   - social mobility scoring
+  - room / doorway / furniture understanding
+  - object / person candidate ranking
+  - target belief update
+  - social mobility scoring
 5. 最后再由 `semantic_navigation_policy` 与 `social_mobility_policy` 组合这些结构化结果。
 
 这条路线的关键，不是让一个大模型直接吃下所有原始视频流，而是让大模型负责“解释”和“蒸馏”，让小模型负责“闭环执行”。
@@ -1509,3 +1513,4 @@ VLM / VLA / 通用具身侧：
 
 - 截至 2026-03-08，我没有检索到 NVIDIA 官方公开名为 `GR00T N2` 的材料；目前可核实的是 2025-03-18 的 `GR00T N1` 和 2026-01-08 的 `GR00T N1.6`。
 - `VLNVerse` 的 2025-12-22 预印本公开摘要与本文判断方向一致，即更强调 versatile、embodied、realistic simulation 与 unified evaluation；但我本次未找到稳定的官方项目页，因此没有把它作为本文的核心依据。
+
