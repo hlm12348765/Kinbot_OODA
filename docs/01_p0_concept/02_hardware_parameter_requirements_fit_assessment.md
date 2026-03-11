@@ -1,12 +1,20 @@
 # 硬件参数需求分析与架构符合度评估
 
+---
+
+文档版本：v1.0
+创建日期：2026-03-11
+作者：Codex-架构师
+
+---
+
 ## 1. 文档目的
 
 本文档分析早期版本的硬件参数需求（Kinbot-prd-v0.2-hardware-parameters.csv），评估其与新架构理念的符合度，识别过于保守或激进的参数，并提出优化建议。
 
 评审日期：2026-03-11
 参考架构：三层七域架构、关系中心架构
-参考需求：docs/00_governance/00_requirements.md Step 1-11
+参考需求：input/00_user_requirements_input.md Step 1-11
 
 ## 2. 整体评估
 
@@ -272,7 +280,7 @@
 - 情感灯光：RGB 灯带，支持 10+ 种情感模式
 - 声音情感：支持 5+ 种语调（温柔、关切、紧急、俏皮、正式）
 
-## 6. 与 docs/00_governance/00_requirements.md 的对照检查
+## 6. 与 input/00_user_requirements_input.md 的对照检查
 
 ### 6.1 符合 Step 1-11 需求的参数
 

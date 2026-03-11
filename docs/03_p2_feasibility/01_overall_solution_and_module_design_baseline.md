@@ -1,5 +1,13 @@
 # 总体方案与模块方案下发基线
 
+---
+
+文档版本：v1.0
+创建日期：2026-03-10
+作者：Codex-架构师
+
+---
+
 ## 1. 文档目的
 
 本文档承接 [docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md](../02_p1_architecture/02_pdcp_system_architecture_review_package.md)。

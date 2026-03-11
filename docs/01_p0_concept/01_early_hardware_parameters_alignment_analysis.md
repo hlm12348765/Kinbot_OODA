@@ -1,5 +1,13 @@
 # 早期硬件参数需求与新架构一致性分析
 
+---
+
+文档版本：v1.0
+创建日期：2026-03-11
+作者：Codex-架构师
+
+---
+
 ## 1. 文档目的
 
 本文用于分析 [input/01_kinbot_prd_v0_2_hardware_parameters.csv](../../input/01_kinbot_prd_v0_2_hardware_parameters.csv) 这份早期版本参数需求，与当前主线架构基线是否一致，并判断：

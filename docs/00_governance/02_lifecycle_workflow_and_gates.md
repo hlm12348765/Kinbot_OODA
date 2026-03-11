@@ -1,5 +1,13 @@
 # 全生命周期工作流与阶段门
 
+---
+
+文档版本：v1.0
+创建日期：2026-03-08
+作者：Codex-架构师
+
+---
+
 ## 1. 文档目的
 
 本文档用于把 Kinbot 第一代产品从“需求形成”一直规划到“上市运营和下一代回灌”的全生命周期工作方式。
@@ -106,7 +114,7 @@ IPD 约束下，当前最重要的一条新要求是：
 
 核心产物：
 
-- `docs/00_governance/00_requirements.md`
+- `input/00_user_requirements_input.md`
 - `docs/02_p1_architecture/01_overall_architecture.md`
 - 第一批 `docs/00_governance/03_decision_log.md`
 
