@@ -1,14 +1,19 @@
 # Deep Research
 
-收纳对论文、芯片、技术路线与前沿方向的结构化研究产物，作为长期前瞻协作区。
+收纳论文、芯片、技术路线和前沿方向的结构化研究产物。
 
-## 当前内容
+## 目录角色
 
-- `01_vln_role_analysis_and_technical_plan.md`
-- `02_uwb_phase1_maturity_and_integration_value.md`
+作为长期前瞻协作区，为主线架构提供研究输入，而不直接替代系统边界。
+
+## 文档索引
+
+- `01_vln_role_analysis_and_technical_plan.md`：VLN角色分析与技术规划。核心主题：VLN 在 Kinbot 中的角色分析、路线判断和技术规划。
+- `02_uwb_phase1_maturity_and_integration_value.md`：UWB一期技术成熟度与接入价值评估。核心主题：UWB 一期成熟度、样品验证门和接入价值评估。
 
 ## 维护规则
 
 1. 文档内容继续使用中文撰写。
 2. 文件名使用英文小写、数字前缀和生命周期目录组织。
-3. 目录级变更需要同步更新本目录的 `CHANGELOG.md`。
+3. 目录级变更统一只在根目录 `CHANGELOG.md` 中记录，不再维护子目录 `CHANGELOG.md`。
+4. 当目录内新增文档时，需同步回写本 `README.md` 的文档索引。

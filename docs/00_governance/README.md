@@ -1,19 +1,24 @@
 # 治理与协作
 
-收纳工作流、生命周期、决策记录、术语与架构原则等治理文档。
+收纳需求事实源、工作流、生命周期、决策记录、术语、架构原则与 Claude 协作规则，是全仓库的治理中枢。
 
-## 当前内容
+## 目录角色
 
-- `00_requirements.md`
-- `01_workflow.md`
-- `02_lifecycle_workflow_and_gates.md`
-- `03_decision_log.md`
-- `04_glossary.md`
-- `05_system_architecture_principles.md`
-- `06_claude.md`
+用于统一协作规则、评审顺序、术语口径和关键决策来源。
+
+## 文档索引
+
+- `00_requirements.md`：对 Codex 的要求。核心主题：产品需求、边界、阶段性澄清与对 Codex 的要求。
+- `01_workflow.md`：推进工作流。核心主题：当前主线推进工作流、跨线程规范和评审顺序。
+- `02_lifecycle_workflow_and_gates.md`：全生命周期工作流与阶段门。核心主题：全生命周期阶段门、里程碑和 IPD 对应关系。
+- `03_decision_log.md`：决策记录。核心主题：事实、判断、决策、开放问题和审阅结论沉淀。
+- `04_glossary.md`：术语表。核心主题：术语定义与命名边界。
+- `05_system_architecture_principles.md`：系统架构原则。核心主题：系统架构原则、分解约束和设计准则。
+- `06_claude.md`：Claude 协作说明。核心主题：Claude 协作输入、评审约束和当前架构基线摘要。
 
 ## 维护规则
 
 1. 文档内容继续使用中文撰写。
 2. 文件名使用英文小写、数字前缀和生命周期目录组织。
-3. 目录级变更需要同步更新本目录的 `CHANGELOG.md`。
+3. 目录级变更统一只在根目录 `CHANGELOG.md` 中记录，不再维护子目录 `CHANGELOG.md`。
+4. 当目录内新增文档时，需同步回写本 `README.md` 的文档索引。

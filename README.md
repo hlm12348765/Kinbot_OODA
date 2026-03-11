@@ -112,7 +112,6 @@
 ├── docs
     ├── 00_governance
     │   ├── README.md
-    │   ├── CHANGELOG.md
     │   ├── 00_requirements.md
     │   ├── 01_workflow.md
     │   ├── 02_lifecycle_workflow_and_gates.md
@@ -122,42 +121,32 @@
     │   └── 06_claude.md
     ├── 01_p0_concept
     │   ├── README.md
-    │   ├── CHANGELOG.md
     │   ├── 01_early_hardware_parameters_alignment_analysis.md
     │   └── 02_hardware_parameter_requirements_fit_assessment.md
     ├── 02_p1_architecture
     │   ├── README.md
-    │   ├── CHANGELOG.md
     │   └── ...
     ├── 03_p2_feasibility
     │   ├── README.md
-    │   ├── CHANGELOG.md
     │   └── ...
     ├── 04_p3_alpha_evt
-    │   ├── README.md
-    │   └── CHANGELOG.md
+    │   └── README.md
     ├── 05_p4_beta_dvt
     │   ├── README.md
-    │   ├── CHANGELOG.md
     │   └── 01_mvp_validation_plan.md
     ├── 06_p5_launch_readiness
     │   ├── README.md
-    │   ├── CHANGELOG.md
     │   └── ...
     ├── 07_p6_operations
-    │   ├── README.md
-    │   └── CHANGELOG.md
+    │   └── README.md
     ├── 08_reviews
     │   ├── README.md
-    │   ├── CHANGELOG.md
     │   └── ...
     └── 09_research
         ├── README.md
-        ├── CHANGELOG.md
         └── ...
 ├── input
 │   ├── README.md
-│   ├── CHANGELOG.md
 │   └── 01_kinbot_prd_v0_2_hardware_parameters.csv
 ├── output
 └── tmp

@@ -1,14 +1,19 @@
 # P5 量产导入与发布准备
 
-收纳量产预备、发布准备与交付闭环相关文档。
+收纳量产预备、发布准备和交付闭环的判定与规划文档。
 
-## 当前内容
+## 目录角色
 
-- `01_mass_production_readiness_criteria.md`
-- `02_production_introduction_launch_and_delivery_closure.md`
+作为远期约束输入，反压前置架构和工程化设计。
+
+## 文档索引
+
+- `01_mass_production_readiness_criteria.md`：量产预备判定标准。核心主题：量产预备判定域、通过条件和阶段门定义。
+- `02_production_introduction_launch_and_delivery_closure.md`：量产导入、发布准备与交付闭环。核心主题：量产导入、发布准备与交付闭环设计。
 
 ## 维护规则
 
 1. 文档内容继续使用中文撰写。
 2. 文件名使用英文小写、数字前缀和生命周期目录组织。
-3. 目录级变更需要同步更新本目录的 `CHANGELOG.md`。
+3. 目录级变更统一只在根目录 `CHANGELOG.md` 中记录，不再维护子目录 `CHANGELOG.md`。
+4. 当目录内新增文档时，需同步回写本 `README.md` 的文档索引。

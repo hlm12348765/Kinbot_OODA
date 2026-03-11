@@ -1,14 +1,19 @@
 # P0 需求与概念验证
 
-收纳需求形成阶段的早期输入分析、概念验证回顾和需求对齐文档。
+收纳早期需求、历史参数表分析和概念验证阶段的回顾性文档。
 
-## 当前内容
+## 目录角色
 
-- `01_early_hardware_parameters_alignment_analysis.md`
-- `02_hardware_parameter_requirements_fit_assessment.md`
+用于回看早期输入与当前架构基线的偏差、继承关系和淘汰项。
+
+## 文档索引
+
+- `01_early_hardware_parameters_alignment_analysis.md`：早期硬件参数需求与新架构一致性分析。核心主题：早期硬件参数需求与新架构理念的一致性、保守项和激进项分析。
+- `02_hardware_parameter_requirements_fit_assessment.md`：硬件参数需求分析与架构符合度评估。核心主题：硬件参数需求与当前系统架构和产品目标的符合度评估。
 
 ## 维护规则
 
 1. 文档内容继续使用中文撰写。
 2. 文件名使用英文小写、数字前缀和生命周期目录组织。
-3. 目录级变更需要同步更新本目录的 `CHANGELOG.md`。
+3. 目录级变更统一只在根目录 `CHANGELOG.md` 中记录，不再维护子目录 `CHANGELOG.md`。
+4. 当目录内新增文档时，需同步回写本 `README.md` 的文档索引。

@@ -34,6 +34,7 @@
 
 ### 变更
 
+- 删除各子目录 `CHANGELOG.md`，统一只在根目录维护一份 `CHANGELOG.md`，并将各子目录 `README.md` 扩展为目录级索引，逐篇说明文档标题与核心主题。
 - 将 `docs/` 下既有中文文件名文档统一迁移为英文小写、数字前缀命名，并按 `P0` 到 `P6`、评审、研究三个维度拆分到子目录中。
 - 将根目录 `REQUIREMENTS.MD` 与 `CLAUDE.md` 迁移到 `docs/00_governance/00_requirements.md` 和 `docs/00_governance/06_claude.md`，并将根目录非隐藏文件收敛为 `README.md` 与 `CHANGELOG.md`。
 - 回写根 `README.md`、`CHANGELOG.md`、`docs/00_governance/06_claude.md` 及全仓交叉引用，使其统一指向新的生命周期目录结构。
