@@ -4,35 +4,35 @@
 
 - **审查时间**：2026-03-10
 - **审查范围**：全仓库文档的信息一致性、路径准确性、措辞严谨度
-- **审查方法**：对比 README.md、CLAUDE.md 与实际文档结构，检查关键术语和引用的一致性
+- **审查方法**：对比 README.md、docs/00_governance/06_claude.md 与实际文档结构，检查关键术语和引用的一致性
 
 ## 一、严重问题（P0 - 立即修复）
 
-### 1.1 REQUIREMENTS.MD 路径错误
+### 1.1 docs/00_governance/00_requirements.md 路径错误
 
 **问题描述**：
-- README.md 和 CLAUDE.md 中多处引用 `REQUIREMENTS.MD`
-- 实际文件位于根目录：`REQUIREMENTS.MD`（不在 docs 目录）
+- README.md 和 docs/00_governance/06_claude.md 中多处引用 `docs/00_governance/00_requirements.md`
+- 实际文件位于根目录：`docs/00_governance/00_requirements.md`（不在 docs 目录）
 
 **影响范围**：
-- 协作规则第一条："每轮开始前先检查 `REQUIREMENTS.MD` 顶部'对Codex 的要求'是否有更新"
+- 协作规则第一条："每轮开始前先检查 `docs/00_governance/00_requirements.md` 顶部'对Codex 的要求'是否有更新"
 - 所有文档索引中的引用
 - 架构师综合评审与计划.md 中的引用
 
 **需要修改的位置**：
-1. `CLAUDE.md` 第 13、18、79 行
+1. `docs/00_governance/06_claude.md` 第 13、18、79 行
 2. `README.md` 第 24、72 行
 3. `docs/08_reviews/01_architect_review_and_plan.md` 第 5、468 行
 
 **修复方案**：
-- 方案 A：将所有引用改为 `REQUIREMENTS.MD`（推荐）
-- 方案 B：将 `REQUIREMENTS.MD` 移动到 `docs/` 目录
+- 方案 A：将所有引用改为 `docs/00_governance/00_requirements.md`（推荐）
+- 方案 B：将 `docs/00_governance/00_requirements.md` 移动到 `docs/` 目录
 
 ### 1.2 VLN 文档文件名不一致
 
 **问题描述**：
 - README.md 第 75 行：`docs/视觉语言导航角色分析与技术规划.md`
-- CLAUDE.md 第 82 行：`docs/视觉语言导航角色分析与技术规划.md`
+- docs/00_governance/06_claude.md 第 82 行：`docs/视觉语言导航角色分析与技术规划.md`
 - 实际文件名：`docs/09_research/01_vln_role_analysis_and_technical_plan.md`
 
 **影响**：文档索引指向错误，无法找到实际文件
@@ -51,13 +51,13 @@
 
 ## 二、重要问题（P1 - 本轮修复）
 
-### 2.1 CLAUDE.md 缺少文档索引
+### 2.1 docs/00_governance/06_claude.md 缺少文档索引
 
-以下文档存在于 docs 目录，但未在 CLAUDE.md 中列出：
+以下文档存在于 docs 目录，但未在 docs/00_governance/06_claude.md 中列出：
 
 1. **`docs/09_research/01_vln_role_analysis_and_technical_plan.md`**
    - 应归类到：核心文档（推荐阅读顺序）第 4 项
-   - 当前 CLAUDE.md 中写的是错误的文件名
+   - 当前 docs/00_governance/06_claude.md 中写的是错误的文件名
 
 2. **`docs/02_p1_architecture/13_medication_storage_and_indoor_delivery_requirements.md`**
    - 应归类到：功能域文档
@@ -93,30 +93,30 @@
 
 ## 三、信息一致性问题（P1）
 
-### 3.1 README.md 与 CLAUDE.md 的协作规则不一致
+### 3.1 README.md 与 docs/00_governance/06_claude.md 的协作规则不一致
 
 **README.md 第 25 行**：
-> 若根目录 `CLAUDE.MD` 或 `docs/08_reviews/01_architect_review_and_plan.md` 有新增内容，也作为外部架构评审输入纳入本轮处理
+> 若 `docs/00_governance/06_claude.md` 或 `docs/08_reviews/01_architect_review_and_plan.md` 有新增内容，也作为外部架构评审输入纳入本轮处理
 
-**CLAUDE.md**：未提及此协作规则
+**docs/00_governance/06_claude.md**：未提及此协作规则
 
 **影响**：协作规则不完整，可能导致遗漏外部架构评审输入
 
-**修复方案**：在 CLAUDE.md 的"协作规则 > 每轮开始前必做"部分补充此规则
+**修复方案**：在 docs/00_governance/06_claude.md 的"协作规则 > 每轮开始前必做"部分补充此规则
 
 ### 3.2 当前工作重点的描述差异
 
 **README.md 第 188 行**：
 > 当前正在补充评审 `KBT-31` `PDCP` 系统架构评审包，重点是"机器人本体实体架构 + 本体能力接口面"
 
-**CLAUDE.md 第 148 行**：
+**docs/00_governance/06_claude.md 第 148 行**：
 > KBT-31 已完成收口，PDCP 系统架构评审包已形成正式基线
 
 **问题**：两处描述的 KBT-31 状态不一致（一个说"正在补充评审"，一个说"已完成收口"）
 
 **修复方案**：
 - 如果 KBT-31 确实已完成，应更新 README.md
-- 如果仍在进行中，应更新 CLAUDE.md
+- 如果仍在进行中，应更新 docs/00_governance/06_claude.md
 
 ### 3.3 文档标题的中英文混用规范
 
@@ -135,7 +135,7 @@
 ### 4.1 术语使用的一致性
 
 **World State vs 世界状态**：
-- CLAUDE.md 中混用英文和中文
+- docs/00_governance/06_claude.md 中混用英文和中文
 - 建议：在正式文档标题和关键位置使用中文"世界状态"，括号注明英文 World State
 
 **OODA 环的表述**：
@@ -168,28 +168,28 @@
 
 ### 5.1 立即修复（P0 - 今日完成）
 
-#### 修复 1：统一 REQUIREMENTS.MD 路径引用
+#### 修复 1：统一 docs/00_governance/00_requirements.md 路径引用
 
-**文件**：`README.md`、`CLAUDE.md`、`docs/08_reviews/01_architect_review_and_plan.md`
+**文件**：`README.md`、`docs/00_governance/06_claude.md`、`docs/08_reviews/01_architect_review_and_plan.md`
 
 **修改内容**：
-- 将所有 `REQUIREMENTS.MD` 改为 `REQUIREMENTS.MD`
+- 将所有 `docs/00_governance/00_requirements.md` 改为 `docs/00_governance/00_requirements.md`
 
 **影响范围**：
 - README.md：第 24、72 行
-- CLAUDE.md：第 13、18、79 行
+- docs/00_governance/06_claude.md：第 13、18、79 行
 - docs/08_reviews/01_architect_review_and_plan.md：第 5、468 行
 
 #### 修复 2：统一 VLN 文档文件名引用
 
-**文件**：`README.md`、`CLAUDE.md`
+**文件**：`README.md`、`docs/00_governance/06_claude.md`
 
 **修改内容**：
 - 将 `docs/视觉语言导航角色分析与技术规划.md` 改为 `docs/09_research/01_vln_role_analysis_and_technical_plan.md`
 
 **影响范围**：
 - README.md：第 75 行
-- CLAUDE.md：第 82 行
+- docs/00_governance/06_claude.md：第 82 行
 
 #### 修复 3：统一 UWB 文档文件名引用
 
@@ -203,9 +203,9 @@
 
 ### 5.2 本轮修复（P1 - 本周完成）
 
-#### 修复 4：补充 CLAUDE.md 缺失的文档索引
+#### 修复 4：补充 docs/00_governance/06_claude.md 缺失的文档索引
 
-**文件**：`CLAUDE.md`
+**文件**：`docs/00_governance/06_claude.md`
 
 **需要补充的文档**：
 1. `docs/02_p1_architecture/13_medication_storage_and_indoor_delivery_requirements.md` - 归入"功能域文档"
@@ -226,19 +226,19 @@
 
 #### 修复 6：统一 KBT-31 状态描述
 
-**文件**：`README.md` 或 `CLAUDE.md`
+**文件**：`README.md` 或 `docs/00_governance/06_claude.md`
 
 **行动**：
 - 确认 KBT-31 的实际状态
-- 统一 README.md 和 CLAUDE.md 中的描述
+- 统一 README.md 和 docs/00_governance/06_claude.md 中的描述
 
-#### 修复 7：补充 CLAUDE.md 的协作规则
+#### 修复 7：补充 docs/00_governance/06_claude.md 的协作规则
 
-**文件**：`CLAUDE.md`
+**文件**：`docs/00_governance/06_claude.md`
 
 **补充内容**：
 在"协作规则 > 每轮开始前必做"部分补充：
-> 3. 若根目录 `CLAUDE.md` 或 `docs/08_reviews/01_architect_review_and_plan.md` 有新增内容，也作为外部架构评审输入纳入本轮处理
+> 3. 若 `docs/00_governance/06_claude.md` 或 `docs/08_reviews/01_architect_review_and_plan.md` 有新增内容，也作为外部架构评审输入纳入本轮处理
 
 ### 5.3 后续优化（P2 - 持续改进）
 
@@ -247,7 +247,7 @@
 **内容**：
 - 明确中英文混用规则
 - 明确缩写使用规范
-- 在 CLAUDE.md 或单独的规范文档中记录
+- 在 docs/00_governance/06_claude.md 或单独的规范文档中记录
 
 #### 优化 2：建立术语一致性规范
 
@@ -259,7 +259,7 @@
 #### 优化 3：建立文档索引维护流程
 
 **内容**：
-- 新增文档时同步更新 README.md 和 CLAUDE.md
+- 新增文档时同步更新 README.md 和 docs/00_governance/06_claude.md
 - 删除文档时同步更新索引
 - 重命名文档时同步更新所有引用
 
@@ -267,22 +267,22 @@
 
 ### 6.1 路径和文件名一致性检查
 
-- [ ] REQUIREMENTS.MD 路径引用已统一（README.md、CLAUDE.md、架构师综合评审与计划.md）
-- [ ] VLN 文档文件名引用已统一（README.md、CLAUDE.md）
+- [ ] docs/00_governance/00_requirements.md 路径引用已统一（README.md、docs/00_governance/06_claude.md、架构师综合评审与计划.md）
+- [ ] VLN 文档文件名引用已统一（README.md、docs/00_governance/06_claude.md）
 - [ ] UWB 文档文件名引用已统一（README.md）
 - [ ] 所有文档索引指向的文件都实际存在
 - [ ] 所有实际存在的文档都在索引中列出
 
 ### 6.2 信息一致性检查
 
-- [ ] README.md 和 CLAUDE.md 的协作规则已统一
+- [ ] README.md 和 docs/00_governance/06_claude.md 的协作规则已统一
 - [ ] KBT-31 状态描述已统一
 - [ ] 当前工作重点描述已统一
 - [ ] 关键术语使用已统一（World State、OODA 环等）
 
 ### 6.3 文档完整性检查
 
-- [ ] CLAUDE.md 已补充所有缺失的文档索引
+- [ ] docs/00_governance/06_claude.md 已补充所有缺失的文档索引
 - [ ] 空文件已处理（OVERALL_SOLUTION_AND_MODULE_DESIGN_BASELINE.md）
 - [ ] 所有文档标题符合命名规范
 
@@ -307,23 +307,23 @@
 
 ### 7.2 关键发现
 
-1. **路径引用错误是最严重的问题**：REQUIREMENTS.MD 的路径错误会直接影响协作流程
-2. **文档索引不完整**：CLAUDE.md 缺少 6 个文档的索引，影响新协作者了解项目全貌
-3. **信息一致性需要加强**：README.md 和 CLAUDE.md 之间存在描述不一致的情况
+1. **路径引用错误是最严重的问题**：docs/00_governance/00_requirements.md 的路径错误会直接影响协作流程
+2. **文档索引不完整**：docs/00_governance/06_claude.md 缺少 6 个文档的索引，影响新协作者了解项目全貌
+3. **信息一致性需要加强**：README.md 和 docs/00_governance/06_claude.md 之间存在描述不一致的情况
 4. **需要建立文档维护规范**：避免未来再次出现类似问题
 
 ### 7.3 修复优先级建议
 
 **今日必须完成（P0）**：
-1. 修复 REQUIREMENTS.MD 路径引用（3 处）
+1. 修复 docs/00_governance/00_requirements.md 路径引用（3 处）
 2. 修复 VLN 文档文件名引用（2 处）
 3. 修复 UWB 文档文件名引用（1 处）
 
 **本周完成（P1）**：
-4. 补充 CLAUDE.md 缺失的文档索引（6 个文档）
+4. 补充 docs/00_governance/06_claude.md 缺失的文档索引（6 个文档）
 5. 处理空文件 OVERALL_SOLUTION_AND_MODULE_DESIGN_BASELINE.md
 6. 统一 KBT-31 状态描述
-7. 补充 CLAUDE.md 的协作规则
+7. 补充 docs/00_governance/06_claude.md 的协作规则
 
 **持续改进（P2）**：
 8. 建立文档命名规范
@@ -349,4 +349,3 @@
 ---
 
 **备注**：本审查报告基于 2026-03-10 的仓库状态，后续文档变更需要持续跟踪和更新。
-

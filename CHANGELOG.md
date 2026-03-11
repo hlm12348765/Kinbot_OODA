@@ -35,7 +35,8 @@
 ### 变更
 
 - 将 `docs/` 下既有中文文件名文档统一迁移为英文小写、数字前缀命名，并按 `P0` 到 `P6`、评审、研究三个维度拆分到子目录中。
-- 回写根 `README.md`、`CHANGELOG.md`、`CLAUDE.md` 及全仓交叉引用，使其统一指向新的生命周期目录结构。
+- 将根目录 `REQUIREMENTS.MD` 与 `CLAUDE.md` 迁移到 `docs/00_governance/00_requirements.md` 和 `docs/00_governance/06_claude.md`，并将根目录非隐藏文件收敛为 `README.md` 与 `CHANGELOG.md`。
+- 回写根 `README.md`、`CHANGELOG.md`、`docs/00_governance/06_claude.md` 及全仓交叉引用，使其统一指向新的生命周期目录结构。
 - 更新 [docs/03_p2_feasibility/04_hardware_software_selection_matrix.md](docs/03_p2_feasibility/04_hardware_software_selection_matrix.md)、[docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md](docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md)、[docs/00_governance/01_workflow.md](docs/00_governance/01_workflow.md)、[docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md)、[docs/03_p2_feasibility/05_cost_structure_and_technology_downpath.md](docs/03_p2_feasibility/05_cost_structure_and_technology_downpath.md) 和 [README.md](README.md)，补齐一次 `KBT-11` 的后修订工作流：将一代端侧算力主线收窄为 `地瓜 S100 Pro（128 TOPS 版本）`，明确排除 `Atlas 200I A2` 与 `BM1688 / MLU220-M.2 / 同等级小算力芯片`，并把端侧算力需求升级为由 `TTFT / TPS / 热稳态持续 TPS` 定义，同时把 `VLN` 专家线程的量化任务正式下发到 `S1 / S4 / S7`。
 
 ### 调整
@@ -44,7 +45,7 @@
 - 更新 [docs/02_p1_architecture/01_overall_architecture.md](docs/02_p1_architecture/01_overall_architecture.md)，补充“稳定接口面建议”，明确后续系统演进时应优先保持稳定的关键边界。
 - 更新 [README.md](README.md)，同步新增文档索引，并将当前认知中枢术语从宽泛的“World Model”收敛为更准确的“World State”。
 - 更新 [README.md](README.md)，补充 VLN 专项分析文档索引和推荐阅读顺序。
-- 更新架构细化文档，吸收 [REQUIREMENTS.MD](REQUIREMENTS.MD) 中 `Step 2` 至 `Step4` 的澄清结果，包括健康优先级、穿戴优先路线、紧急用药边界、多角色权限和硬件获取策略。
+- 更新架构细化文档，吸收 [docs/00_governance/00_requirements.md](docs/00_governance/00_requirements.md) 中 `Step 2` 至 `Step4` 的澄清结果，包括健康优先级、穿戴优先路线、紧急用药边界、多角色权限和硬件获取策略。
 - 更新架构细化文档，继续吸收 `Step5` 的澄清结果，包括穿戴设备套餐策略、平台接入路线、储物仓与递送能力、120 接口挂载方式和 OCR 复核策略。
 - 更新架构细化文档，吸收“对 Codex 的要求”和 `Step6` 的澄清结果，包括量产预备目标、团队规模、中文化协作要求、后台人工服务、UWB 候选路线、储物仓机构边界和人工复核执行方式。
 - 更新架构细化文档，继续吸收 `Step7` 的澄清结果，包括项目起始时间、既有样机基础、穿戴实时数据限制、客服运营坐席作为人工服务首线、UWB 候选价值排序、第三方责任边界、储物仓能力分级和量产预备定义。
@@ -56,7 +57,7 @@
 - 更新 [README.md](README.md) 和 [docs/00_governance/01_workflow.md](docs/00_governance/01_workflow.md)，将项目节奏从单点 MVP 推进调整为“2026-12-31 量产预备 + 2027 年 1 月验证窗口”。
 - 更新 [README.md](README.md)、[docs/02_p1_architecture/05_world_state_schema.md](docs/02_p1_architecture/05_world_state_schema.md) 和 [docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md)，同步“项目从 2026-01-01 起算、前两个月用于需求和 Demo 验证”的时间线以及既有样机基础。
 - 更新 [README.md](README.md)、[docs/00_governance/01_workflow.md](docs/00_governance/01_workflow.md) 和 [docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md)，明确后续问题澄清按“健康管理、陪伴交互、安全保障”三条主线并行推进，并记录与 VLN 技术评估线程的协作要求以及每层实体数控制要求。
-- 更新 [README.md](README.md)、[docs/00_governance/01_workflow.md](docs/00_governance/01_workflow.md) 和 [docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md)，明确 `REQUIREMENTS.MD` 由用户独占维护，Codex 只读取并推进其他文档。
+- 更新 [README.md](README.md)、[docs/00_governance/01_workflow.md](docs/00_governance/01_workflow.md) 和 [docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md)，明确 `docs/00_governance/00_requirements.md` 由用户独占维护，Codex 只读取并推进其他文档。
 - 更新 [docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md)，吸收 [docs/09_research/01_vln_role_analysis_and_technical_plan.md](docs/09_research/01_vln_role_analysis_and_technical_plan.md) 的关键结论，将 VLN 边界收敛为“语义导航策略层”，而不是底盘级安全控制层。
 - 更新 [README.md](README.md)、[docs/00_governance/01_workflow.md](docs/00_governance/01_workflow.md) 和 [docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md)，明确 VLN 技术规划由独立 issue 和独立线程维护，当前线程不更新 [docs/09_research/01_vln_role_analysis_and_technical_plan.md](docs/09_research/01_vln_role_analysis_and_technical_plan.md)。
 - 更新架构细化文档，吸收 `Step10` 的澄清结果，包括长期记忆可治理、老人 / 子女配置权限、卫生间和入户门空间边界、陌生人闯入 / 夜间离床 / 门窗未关的自动动作边界，以及故障恢复和硬停底线。
@@ -97,7 +98,7 @@
 - 新增 [docs/05_p4_beta_dvt/01_mvp_validation_plan.md](docs/05_p4_beta_dvt/01_mvp_validation_plan.md)，并更新 [docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md) 和 [README.md](README.md)，启动 `KBT-12` 的正式提案，把一代 `MVP` 范围划分、`100 台 / 100 户 / 1 个月` 试点框架与 `P / W / B` 放行规则收敛为可评审基线。
 - 更新 [docs/05_p4_beta_dvt/01_mvp_validation_plan.md](docs/05_p4_beta_dvt/01_mvp_validation_plan.md)、[docs/02_p1_architecture/10_health_event_pipeline_and_escalation.md](docs/02_p1_architecture/10_health_event_pipeline_and_escalation.md)、[docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md) 和 [README.md](README.md)，吸收 `Step31` 对 `KBT-12` 的审阅意见，正式关闭 `KBT-12`，并把睡眠监测提升为 `必须有`、找物能力提升为 `应该有`。
 - 新增 [docs/06_p5_launch_readiness/02_production_introduction_launch_and_delivery_closure.md](docs/06_p5_launch_readiness/02_production_introduction_launch_and_delivery_closure.md)，并更新 [docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md) 和 [README.md](README.md)，启动 `KBT-25` 的正式提案，把量产导入、发布准备与交付闭环收敛为 `7` 个闭环域、`3` 种状态定义和一组默认阻断项。
-- 更新 [docs/02_p1_architecture/01_overall_architecture.md](docs/02_p1_architecture/01_overall_architecture.md)、[README.md](README.md)、[CLAUDE.md](CLAUDE.md) 和工作流类文档，回归早期总览文档与当前 `PDCP` 基线的一致性，并将 `docs/` 目录文档文件名统一为中文名称。
+- 更新 [docs/02_p1_architecture/01_overall_architecture.md](docs/02_p1_architecture/01_overall_architecture.md)、[README.md](README.md)、[docs/00_governance/06_claude.md](docs/00_governance/06_claude.md) 和工作流类文档，回归早期总览文档与当前 `PDCP` 基线的一致性，并将 `docs/` 目录文档文件名统一为中文名称。
 - 新增 [docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md](docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md) 和 [docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md](docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md)，把当前主线纠正回 `P1 / PDCP` 阶段，形成完整系统架构评审包与模块方案下发基线。
 - 更新 [docs/00_governance/01_workflow.md](docs/00_governance/01_workflow.md)、[docs/00_governance/02_lifecycle_workflow_and_gates.md](docs/00_governance/02_lifecycle_workflow_and_gates.md)、[docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md) 和 [README.md](README.md)，吸收“当前仍处于系统架构设计与技术研判阶段”的新要求，并将 `KBT-25` 退回远期约束输入，不再作为当前主评审线。
 - 更新 [docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md](docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md)、[docs/00_governance/01_workflow.md](docs/00_governance/01_workflow.md)、[docs/00_governance/02_lifecycle_workflow_and_gates.md](docs/00_governance/02_lifecycle_workflow_and_gates.md)、[docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md) 和 [README.md](README.md)，吸收 `Step32` 对 `KBT-31` 的审阅意见，把 `PDCP` 总体架构升级为“本体实体架构视图 + 运行时功能架构视图”的双视角基线，并补入 `Body Capability Contract` 作为一级接口面的一部分，同时将 `KBT-32` 明确顺延到 `KBT-31` 关闭之后。

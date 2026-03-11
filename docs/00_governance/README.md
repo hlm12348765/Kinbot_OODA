@@ -4,11 +4,13 @@
 
 ## 当前内容
 
+- `00_requirements.md`
 - `01_workflow.md`
 - `02_lifecycle_workflow_and_gates.md`
 - `03_decision_log.md`
 - `04_glossary.md`
 - `05_system_architecture_principles.md`
+- `06_claude.md`
 
 ## 维护规则
 

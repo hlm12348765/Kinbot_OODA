@@ -10,13 +10,13 @@
 
 ### 每轮开始前必做
 
-1. **检查 `REQUIREMENTS.MD` 顶部"对 Codex 的要求"** 是否有更新
-2. **检查 `CLAUDE.md` 或 `docs/08_reviews/01_architect_review_and_plan.md`** 是否有新增内容，作为外部架构评审输入纳入本轮处理
+1. **检查 `docs/00_governance/00_requirements.md` 顶部"对 Codex 的要求"** 是否有更新
+2. **检查 `docs/00_governance/06_claude.md` 或 `docs/08_reviews/01_architect_review_and_plan.md`** 是否有新增内容，作为外部架构评审输入纳入本轮处理
 3. 所有文档和 Linear 协作条目统一用**中文**维护
 
 ### 文档维护权限
 
-- `REQUIREMENTS.MD` 由用户独占维护，**不得修改**
+- `docs/00_governance/00_requirements.md` 由用户独占维护，**不得修改**
 - 其他文档由 Claude 持续推进和维护
 
 ### 信息不足时的处理
@@ -77,7 +77,7 @@
 
 ### 核心文档（推荐阅读顺序）
 
-1. `REQUIREMENTS.MD` - 产品需求、边界和工程约束（用户独占维护）
+1. `docs/00_governance/00_requirements.md` - 产品需求、边界和工程约束（用户独占维护）
 2. `docs/00_governance/05_system_architecture_principles.md` - 系统架构设计原则
 3. `docs/02_p1_architecture/01_overall_architecture.md` - 机器人 OODA 总体架构
 4. `docs/09_research/01_vln_role_analysis_and_technical_plan.md` - VLN 在 OODA 中的角色分析与规划

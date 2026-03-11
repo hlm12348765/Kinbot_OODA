@@ -106,7 +106,7 @@ IPD 约束下，当前最重要的一条新要求是：
 
 核心产物：
 
-- `REQUIREMENTS.MD`
+- `docs/00_governance/00_requirements.md`
 - `docs/02_p1_architecture/01_overall_architecture.md`
 - 第一批 `docs/00_governance/03_decision_log.md`
 

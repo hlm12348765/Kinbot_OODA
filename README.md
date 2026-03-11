@@ -21,14 +21,14 @@
 
 当前协作方式：
 
-- 每轮开始前先检查 `REQUIREMENTS.MD` 顶部”对 Codex 的要求”是否有更新
-- 若根目录 `CLAUDE.MD` 或 `docs/08_reviews/01_architect_review_and_plan.md` 有新增内容，也作为外部架构评审输入纳入本轮处理
+- 每轮开始前先检查 `docs/00_governance/00_requirements.md` 顶部”对 Codex 的要求”是否有更新
+- 若 [docs/00_governance/06_claude.md](docs/00_governance/06_claude.md) 或 [docs/08_reviews/01_architect_review_and_plan.md](docs/08_reviews/01_architect_review_and_plan.md) 有新增内容，也作为外部架构评审输入纳入本轮处理
 - 关键需求、澄清和决策沉淀在仓库文档
 - 阶段性待办和 issue 同步到 Linear，形成持续协作
 - 本地文档和 Linear 协作条目统一用中文维护
 - 当前 Linear 项目为 `Kinbot OODA 架构到量产预备`
 - 涉及 VLN 路线和前瞻技术判断时，与专门的 VLN 技术评估线程通过独立 issue 交叉协作，其专项文档现已纳入主线版本控制
-- `REQUIREMENTS.MD` 由用户独占维护，其他文档由我持续推进
+- `docs/00_governance/00_requirements.md` 由用户独占维护，其他文档由我持续推进
 - 当信息不足但推进不能停时，先形成“架构师设想包”，再提交审核
 - 全生命周期管理参考 IPD，当前争取在 `2026-03-31` 完成产品定义与架构冻结
 - 对存在明确结构分解的架构文档，优先配套直观图示
@@ -69,7 +69,7 @@
 
 ## 文档索引
 
-- `REQUIREMENTS.MD`：产品需求、边界和工程约束
+- `docs/00_governance/00_requirements.md`：产品需求、边界和工程约束
 - `docs/00_governance/05_system_architecture_principles.md`：系统架构设计原则
 - `docs/02_p1_architecture/01_overall_architecture.md`：机器人 OODA 总体架构
 - `docs/09_research/01_vln_role_analysis_and_technical_plan.md`：VLN 在 OODA 中的角色分析、最新技术趋势与规划建议，现已纳入主线版本控制并作为正式技术输入
@@ -109,21 +109,17 @@
 .
 ├── README.md
 ├── CHANGELOG.md
-├── CLAUDE.md
-├── REQUIREMENTS.MD
-├── input
-│   ├── README.md
-│   ├── CHANGELOG.md
-│   └── 01_kinbot_prd_v0_2_hardware_parameters.csv
-└── docs
+├── docs
     ├── 00_governance
     │   ├── README.md
     │   ├── CHANGELOG.md
+    │   ├── 00_requirements.md
     │   ├── 01_workflow.md
     │   ├── 02_lifecycle_workflow_and_gates.md
     │   ├── 03_decision_log.md
     │   ├── 04_glossary.md
-    │   └── 05_system_architecture_principles.md
+    │   ├── 05_system_architecture_principles.md
+    │   └── 06_claude.md
     ├── 01_p0_concept
     │   ├── README.md
     │   ├── CHANGELOG.md
@@ -159,11 +155,17 @@
         ├── README.md
         ├── CHANGELOG.md
         └── ...
+├── input
+│   ├── README.md
+│   ├── CHANGELOG.md
+│   └── 01_kinbot_prd_v0_2_hardware_parameters.csv
+├── output
+└── tmp
 ```
 
 ## 推荐阅读顺序
 
-1. `REQUIREMENTS.MD`
+1. `docs/00_governance/00_requirements.md`
 2. `docs/00_governance/05_system_architecture_principles.md`
 3. `docs/02_p1_architecture/01_overall_architecture.md`
 4. `docs/09_research/01_vln_role_analysis_and_technical_plan.md`

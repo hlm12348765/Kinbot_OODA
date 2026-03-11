@@ -6,7 +6,7 @@
 
 评审日期：2026-03-11
 参考架构：三层七域架构、关系中心架构
-参考需求：REQUIREMENTS.MD Step 1-11
+参考需求：docs/00_governance/00_requirements.md Step 1-11
 
 ## 2. 整体评估
 
@@ -272,7 +272,7 @@
 - 情感灯光：RGB 灯带，支持 10+ 种情感模式
 - 声音情感：支持 5+ 种语调（温柔、关切、紧急、俏皮、正式）
 
-## 6. 与 REQUIREMENTS.MD 的对照检查
+## 6. 与 docs/00_governance/00_requirements.md 的对照检查
 
 ### 6.1 符合 Step 1-11 需求的参数
 

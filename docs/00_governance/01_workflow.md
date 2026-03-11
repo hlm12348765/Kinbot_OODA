@@ -23,7 +23,7 @@
 
 我作为架构师，按以下节奏与你协作：
 
-1. 每轮开始前，我先检查 `REQUIREMENTS.MD` 顶部“对 Codex 的要求”是否有变化。
+1. 每轮开始前，我先检查 `docs/00_governance/00_requirements.md` 顶部“对 Codex 的要求”是否有变化。
 2. 我会基于现有信息形成候选方案、问题清单和建议。
 3. 只向你提一批高价值问题，避免一次性发散过多问题。
 4. 你的回答会被沉淀到 `docs/00_governance/03_decision_log.md`。
@@ -32,7 +32,7 @@
 7. 每一轮本地文档中的待办和 issue，会同步到 Linear 项目中，保持 repo 文档和协作系统一致。
 8. 本地 Markdown 文档和 Linear 项目、里程碑、issue、文档统一用中文维护。
 9. 涉及 VLN 路线、导航推理和相关前瞻技术判断时，我会通过独立 Linear issue 与另一个负责 VLN 技术评估的 Codex 线程交叉校验；当前 `VLN` 专项线程的产物已纳入版本控制，后续由当前线程继续作为正式技术输入引用，并在需要时维护 `docs/09_research/01_vln_role_analysis_and_technical_plan.md`。
-10. `REQUIREMENTS.MD` 作为用户维护的需求事实源，只由用户修改；我只读取该文件并据此推进其他文档。
+10. `docs/00_governance/00_requirements.md` 作为用户维护的需求事实源，只由用户修改；我只读取该文件并据此推进其他文档。
 11. 当关键信息未澄清但推进不能停时，我会先形成“架构师设想包”，以 `provisional` 方式写入本地文档并同步到 Linear，等待你审核。
 12. 当前总体方法论继续以 OODA 为主，并且已经冻结为“多尺度、并发、可中断、可动态调度”的正式基线；后续文档需要显式体现 `R1` 到 `R4` 子环、`R4` 的一代正式地位，以及 `OODA Scale Scheduler` 这一一级能力。
 13. 当前置评审 issue 未关闭时，我必须先强提醒你；后续 issue 可以并行起草，但不能在前置 issue 未关闭时被当成最终冻结结果。
@@ -50,7 +50,7 @@
 2. 其他线程如修改已关闭 issue 对应文档，必须同步回写 `docs/00_governance/03_decision_log.md`、`README.md`、`CHANGELOG.md` 和对应 Linear issue / 评论。
 3. 其他线程如新增下游约束或派生任务，必须明确由哪个当前主线 issue 承接、由哪个协作 issue 承接，并在 Linear 中建立关联。
 4. 其他线程如引入会影响模块下发的技术判断，必须同步回写 `docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md` 或同级承接文档，不能只停留在专项文档。
-5. 其他线程不得修改 `REQUIREMENTS.MD`，不得绕过用户审阅节点直接宣布冻结结论。
+5. 其他线程不得修改 `docs/00_governance/00_requirements.md`，不得绕过用户审阅节点直接宣布冻结结论。
 6. 其他线程提交前必须执行一次文档一致性检查，至少检查文件名引用、索引、旧路线残留、Linear 状态和本地评审入口是否一致。
 
 ## 2.2 前置评审清账规则
@@ -93,7 +93,7 @@
 1. `KBT-31` 已作为 `PDCP` 系统架构评审包完成当前轮次收口
 2. 当前主评审项恢复为 `KBT-32` 总体方案与模块方案下发基线
 3. `KBT-33` 作为 `KBT-31` 子 issue 保留，用于承接双视角一致性与接口稳定性策略的治理细化
-4. 若根目录 `CLAUDE.MD` 或 [docs/08_reviews/01_architect_review_and_plan.md](../08_reviews/01_architect_review_and_plan.md) 有新内容，需作为外部架构评审输入纳入本轮分析
+4. 若 [docs/00_governance/06_claude.md](06_claude.md) 或 [docs/08_reviews/01_architect_review_and_plan.md](../08_reviews/01_architect_review_and_plan.md) 有新内容，需作为外部架构评审输入纳入本轮分析
 
 而 `KBT-25 / KBT-26 / KBT-27` 这类后段生命周期文档，只保留为远期约束输入，不再作为当前主评审线。
 

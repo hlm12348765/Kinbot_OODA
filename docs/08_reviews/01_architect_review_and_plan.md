@@ -2,7 +2,7 @@
 
 ## 1. 评审目的
 
-作为架构师，基于 `REQUIREMENTS.MD` 和 `docs/00_governance/05_system_architecture_principles.md`，对整个项目进行全面架构审阅，识别关键问题和风险，给出架构设计方案和后续工作计划。
+作为架构师，基于 `docs/00_governance/00_requirements.md` 和 `docs/00_governance/05_system_architecture_principles.md`，对整个项目进行全面架构审阅，识别关键问题和风险，给出架构设计方案和后续工作计划。
 
 评审时间：2026-03-10
 评审范围：产品定义与架构冻结（PDCP）阶段
@@ -64,11 +64,11 @@
 
 1. **模块数量处于上限**：9 个一级模块接近 5-9 个约束的上限，可能增加协调复杂度
 2. **本体实体域与运行时模块的映射治理**：映射关系已建立，但缺乏持续治理机制
-3. **架构文档的可视化程度**：REQUIREMENTS.MD Step 9 强调"重视架构图，文档中多用直观的图示"，当前部分文档图示不足
+3. **架构文档的可视化程度**：docs/00_governance/00_requirements.md Step 9 强调"重视架构图，文档中多用直观的图示"，当前部分文档图示不足
 
 ### 3.2 三大阻断性风险（D1/D6/D7）
 
-根据 REQUIREMENTS.MD 和 工程化与NPI准备基线.md 的分析：
+根据 docs/00_governance/00_requirements.md 和 工程化与NPI准备基线.md 的分析：
 
 **D1：端侧算力平台未收敛**
 - 状态：Step 20-21 明确要求"中国大算力端侧芯片专项评估"，RK 双路线已下调为备线
@@ -173,7 +173,7 @@
 
 ### 4.3 架构可视化增强
 
-**问题：** REQUIREMENTS.MD Step 9 强调"重视架构图，文档中多用直观的图示"，当前部分文档图示不足。
+**问题：** docs/00_governance/00_requirements.md Step 9 强调"重视架构图，文档中多用直观的图示"，当前部分文档图示不足。
 
 **建议：** 补充以下关键架构视图：
 
@@ -465,7 +465,7 @@ gantt
 
 本评审基于以下文档：
 
-- `REQUIREMENTS.MD`：需求基准和 32 个 Step 的审阅历史
+- `docs/00_governance/00_requirements.md`：需求基准和 32 个 Step 的审阅历史
 - `docs/00_governance/05_system_architecture_principles.md`：53 条系统架构原则
 - `docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md`：PDCP 架构评审包
 - `docs/02_p1_architecture/01_overall_architecture.md`：总体架构文档
