@@ -22,13 +22,13 @@
 当前协作方式：
 
 - 每轮开始前先检查 `REQUIREMENTS.MD` 顶部”对 Codex 的要求”是否有更新
-- 若根目录 `CLAUDE.MD` 或 `docs/架构师综合评审与计划.md` 有新增内容，也作为外部架构评审输入纳入本轮处理
+- 若根目录 `CLAUDE.MD` 或 `docs/08_reviews/01_architect_review_and_plan.md` 有新增内容，也作为外部架构评审输入纳入本轮处理
 - 关键需求、澄清和决策沉淀在仓库文档
 - 阶段性待办和 issue 同步到 Linear，形成持续协作
 - 本地文档和 Linear 协作条目统一用中文维护
 - 当前 Linear 项目为 `Kinbot OODA 架构到量产预备`
 - 涉及 VLN 路线和前瞻技术判断时，与专门的 VLN 技术评估线程通过独立 issue 交叉协作，其专项文档现已纳入主线版本控制
-- `docs/REQUIREMENTS.MD` 由用户独占维护，其他文档由我持续推进
+- `REQUIREMENTS.MD` 由用户独占维护，其他文档由我持续推进
 - 当信息不足但推进不能停时，先形成“架构师设想包”，再提交审核
 - 全生命周期管理参考 IPD，当前争取在 `2026-03-31` 完成产品定义与架构冻结
 - 对存在明确结构分解的架构文档，优先配套直观图示
@@ -70,38 +70,38 @@
 ## 文档索引
 
 - `REQUIREMENTS.MD`：产品需求、边界和工程约束
-- `docs/系统架构原则.md`：系统架构设计原则
-- `docs/总体架构.md`：机器人 OODA 总体架构
-- `docs/VLN角色分析与技术规划.md`：VLN 在 OODA 中的角色分析、最新技术趋势与规划建议，现已纳入主线版本控制并作为正式技术输入
-- `docs/后台人工服务与在线问诊协同边界.md`：后台人工服务、在线问诊、第三方履约与公共应急之间的角色边界、接入链路与审计要求
-- `docs/架构原则符合度检查.md`：总体架构与架构原则的符合度检查
-- `docs/推进工作流.md`：从架构到落地的推进工作流
-- `docs/全生命周期工作流与阶段门.md`：从需求形成到上市运营与下一代回灌的全生命周期工作流与阶段门
-- `docs/多尺度动态OODA架构基线.md`：面向 AGI 与具身智能时代的多尺度动态 OODA 架构基线
-- `docs/架构师综合评审与计划.md`：Claude 协作线程给出的外部架构评审意见与关键路径建议
-- `docs/决策记录.md`：已确认决策、开放问题与后续问题清单
-- `docs/模块分层与模块边界.md`：模块分层与模块边界
-- `docs/世界状态结构.md`：世界状态与核心实体结构
-- `docs/决策状态机.md`：系统决策状态机
-- `docs/安全合规授权接口.md`：安全 / 合规 / 授权接口
-- `docs/健康事件管线与升级链路.md`：健康事件管线、补采逻辑与升级链路
-- `docs/陪伴交互策略.md`：陪伴交互策略、人设边界与长期记忆规则
-- `docs/安全风险矩阵.md`：一代安全风险域、降级策略与空间规则
-- `docs/家属应用、云服务与后台运营坐席一代最小闭环.md`：家属 App、云服务与后台运营坐席的一代最小闭环
-- `docs/PDCP系统架构评审包.md`：面向 `IPD / PDCP` 节点的完整系统架构评审包
-- `docs/总体方案与模块方案下发基线.md`：`PDCP` 通过后用于各模块展开架构与总体方案设计的下发基线
-- `docs/储药与室内递送要求.md`：储药与室内递送的能力包、主链边界、角色权限与工程护栏
-- `docs/一期穿戴设备兼容范围与数据字段.md`：一期穿戴设备兼容范围、接入模式、新鲜度约束与首版数据字段
-- `docs/UWB一期技术成熟度与接入价值评估.md`：`UWB` 一期技术成熟度、样品验证门与接入价值边界
-- `docs/样机到量产预备能力缺口.md`：当前样机 Demo 到量产预备状态的能力缺口、阻断项和优先级排序
-- `docs/工程化与NPI准备基线.md`：工程化与 NPI 准备基线、`G2` 技术路线门和 Alpha / EVT 前置冻结项
-- `docs/软硬件选型矩阵.md`：一代软硬件选型矩阵、`TTFT / TPS` 驱动的端侧算力需求定义、主线 / 备线 / 观察线划分与 `G2` 前置验证项
-- `docs/成本结构与技术降本路径.md`：整机 BOM 滚动成本基线、降本主战场、控涨项与关键技术路径
-- `docs/整机功耗预算与能效控制策略.md`：整机功耗预算、`C5` 四类工况基线、能效控制策略与阶段门检查项
-- `docs/量产预备判定标准.md`：`2026-12-31` 量产预备判定标准、`G5` 判定域与通过条件
-- `docs/量产预备与MVP验证计划.md`：量产预备与 `2027-01 MVP` 验证窗口之间的能力范围、试点框架与放行规则
-- `docs/量产导入、发布准备与交付闭环.md`：量产导入、发布准备与交付闭环的状态定义、工作包、阻断项与责任面
-- `docs/术语表.md`：项目术语表
+- `docs/00_governance/05_system_architecture_principles.md`：系统架构设计原则
+- `docs/02_p1_architecture/01_overall_architecture.md`：机器人 OODA 总体架构
+- `docs/09_research/01_vln_role_analysis_and_technical_plan.md`：VLN 在 OODA 中的角色分析、最新技术趋势与规划建议，现已纳入主线版本控制并作为正式技术输入
+- `docs/02_p1_architecture/12_human_service_and_telemedicine_boundaries.md`：后台人工服务、在线问诊、第三方履约与公共应急之间的角色边界、接入链路与审计要求
+- `docs/08_reviews/02_architecture_principles_alignment_check.md`：总体架构与架构原则的符合度检查
+- `docs/00_governance/01_workflow.md`：从架构到落地的推进工作流
+- `docs/00_governance/02_lifecycle_workflow_and_gates.md`：从需求形成到上市运营与下一代回灌的全生命周期工作流与阶段门
+- `docs/02_p1_architecture/03_multi_scale_dynamic_ooda_architecture_baseline.md`：面向 AGI 与具身智能时代的多尺度动态 OODA 架构基线
+- `docs/08_reviews/01_architect_review_and_plan.md`：Claude 协作线程给出的外部架构评审意见与关键路径建议
+- `docs/00_governance/03_decision_log.md`：已确认决策、开放问题与后续问题清单
+- `docs/02_p1_architecture/04_module_layers_and_boundaries.md`：模块分层与模块边界
+- `docs/02_p1_architecture/05_world_state_schema.md`：世界状态与核心实体结构
+- `docs/02_p1_architecture/06_decision_state_machine.md`：系统决策状态机
+- `docs/02_p1_architecture/07_safety_compliance_authorization_api.md`：安全 / 合规 / 授权接口
+- `docs/02_p1_architecture/10_health_event_pipeline_and_escalation.md`：健康事件管线、补采逻辑与升级链路
+- `docs/02_p1_architecture/08_companion_interaction_strategy.md`：陪伴交互策略、人设边界与长期记忆规则
+- `docs/02_p1_architecture/09_safety_risk_matrix.md`：一代安全风险域、降级策略与空间规则
+- `docs/02_p1_architecture/11_app_cloud_ops_minimal_loop.md`：家属 App、云服务与后台运营坐席的一代最小闭环
+- `docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md`：面向 `IPD / PDCP` 节点的完整系统架构评审包
+- `docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md`：`PDCP` 通过后用于各模块展开架构与总体方案设计的下发基线
+- `docs/02_p1_architecture/13_medication_storage_and_indoor_delivery_requirements.md`：储药与室内递送的能力包、主链边界、角色权限与工程护栏
+- `docs/03_p2_feasibility/07_phase1_wearable_compatibility_and_data_fields.md`：一期穿戴设备兼容范围、接入模式、新鲜度约束与首版数据字段
+- `docs/09_research/02_uwb_phase1_maturity_and_integration_value.md`：`UWB` 一期技术成熟度、样品验证门与接入价值边界
+- `docs/03_p2_feasibility/02_demo_to_mass_production_gaps.md`：当前样机 Demo 到量产预备状态的能力缺口、阻断项和优先级排序
+- `docs/03_p2_feasibility/03_engineering_npi_baseline.md`：工程化与 NPI 准备基线、`G2` 技术路线门和 Alpha / EVT 前置冻结项
+- `docs/03_p2_feasibility/04_hardware_software_selection_matrix.md`：一代软硬件选型矩阵、`TTFT / TPS` 驱动的端侧算力需求定义、主线 / 备线 / 观察线划分与 `G2` 前置验证项
+- `docs/03_p2_feasibility/05_cost_structure_and_technology_downpath.md`：整机 BOM 滚动成本基线、降本主战场、控涨项与关键技术路径
+- `docs/03_p2_feasibility/06_power_budget_and_efficiency_strategy.md`：整机功耗预算、`C5` 四类工况基线、能效控制策略与阶段门检查项
+- `docs/06_p5_launch_readiness/01_mass_production_readiness_criteria.md`：`2026-12-31` 量产预备判定标准、`G5` 判定域与通过条件
+- `docs/05_p4_beta_dvt/01_mvp_validation_plan.md`：量产预备与 `2027-01 MVP` 验证窗口之间的能力范围、试点框架与放行规则
+- `docs/06_p5_launch_readiness/02_production_introduction_launch_and_delivery_closure.md`：量产导入、发布准备与交付闭环的状态定义、工作包、阻断项与责任面
+- `docs/00_governance/04_glossary.md`：项目术语表
 
 ## 仓库结构
 
@@ -109,76 +109,92 @@
 .
 ├── README.md
 ├── CHANGELOG.md
+├── CLAUDE.md
+├── REQUIREMENTS.MD
+├── input
+│   ├── README.md
+│   ├── CHANGELOG.md
+│   └── 01_kinbot_prd_v0_2_hardware_parameters.csv
 └── docs
-    ├── 总体架构.md
-    ├── 架构师综合评审与计划.md
-    ├── 架构原则符合度检查.md
-    ├── 决策记录.md
-    ├── 决策状态机.md
-    ├── 全生命周期工作流与阶段门.md
-    ├── 模块分层与模块边界.md
-    ├── 多尺度动态OODA架构基线.md
-    ├── 陪伴交互策略.md
-    ├── 健康事件管线与升级链路.md
-    ├── 后台人工服务与在线问诊协同边界.md
-    ├── 储药与室内递送要求.md
-    ├── 一期穿戴设备兼容范围与数据字段.md
-    ├── UWB一期技术成熟度与接入价值评估.md
-    ├── REQUIREMENTS.MD
-    ├── 系统架构原则.md
-    ├── 安全合规授权接口.md
-    ├── 安全风险矩阵.md
-    ├── 家属应用、云服务与后台运营坐席一代最小闭环.md
-    ├── PDCP系统架构评审包.md
-    ├── 总体方案与模块方案下发基线.md
-    ├── 样机到量产预备能力缺口.md
-    ├── 工程化与NPI准备基线.md
-    ├── 软硬件选型矩阵.md
-    ├── 成本结构与技术降本路径.md
-    ├── 整机功耗预算与能效控制策略.md
-    ├── 量产预备判定标准.md
-    ├── 量产预备与MVP验证计划.md
-    ├── 量产导入、发布准备与交付闭环.md
-    ├── 术语表.md
-    ├── VLN角色分析与技术规划.md
-    ├── 推进工作流.md
-    └── 世界状态结构.md
+    ├── 00_governance
+    │   ├── README.md
+    │   ├── CHANGELOG.md
+    │   ├── 01_workflow.md
+    │   ├── 02_lifecycle_workflow_and_gates.md
+    │   ├── 03_decision_log.md
+    │   ├── 04_glossary.md
+    │   └── 05_system_architecture_principles.md
+    ├── 01_p0_concept
+    │   ├── README.md
+    │   ├── CHANGELOG.md
+    │   ├── 01_early_hardware_parameters_alignment_analysis.md
+    │   └── 02_hardware_parameter_requirements_fit_assessment.md
+    ├── 02_p1_architecture
+    │   ├── README.md
+    │   ├── CHANGELOG.md
+    │   └── ...
+    ├── 03_p2_feasibility
+    │   ├── README.md
+    │   ├── CHANGELOG.md
+    │   └── ...
+    ├── 04_p3_alpha_evt
+    │   ├── README.md
+    │   └── CHANGELOG.md
+    ├── 05_p4_beta_dvt
+    │   ├── README.md
+    │   ├── CHANGELOG.md
+    │   └── 01_mvp_validation_plan.md
+    ├── 06_p5_launch_readiness
+    │   ├── README.md
+    │   ├── CHANGELOG.md
+    │   └── ...
+    ├── 07_p6_operations
+    │   ├── README.md
+    │   └── CHANGELOG.md
+    ├── 08_reviews
+    │   ├── README.md
+    │   ├── CHANGELOG.md
+    │   └── ...
+    └── 09_research
+        ├── README.md
+        ├── CHANGELOG.md
+        └── ...
 ```
 
 ## 推荐阅读顺序
 
-1. `docs/REQUIREMENTS.MD`
-2. `docs/系统架构原则.md`
-3. `docs/总体架构.md`
-4. `docs/VLN角色分析与技术规划.md`
-5. `docs/推进工作流.md`
-6. `docs/全生命周期工作流与阶段门.md`
-7. `docs/多尺度动态OODA架构基线.md`
-8. `docs/决策记录.md`
-9. `docs/模块分层与模块边界.md`
-10. `docs/世界状态结构.md`
-11. `docs/决策状态机.md`
-12. `docs/安全合规授权接口.md`
-13. `docs/健康事件管线与升级链路.md`
-14. `docs/陪伴交互策略.md`
-15. `docs/安全风险矩阵.md`
-16. `docs/家属应用、云服务与后台运营坐席一代最小闭环.md`
-17. `docs/PDCP系统架构评审包.md`
-18. `docs/总体方案与模块方案下发基线.md`
-19. `docs/后台人工服务与在线问诊协同边界.md`
-20. `docs/储药与室内递送要求.md`
-21. `docs/一期穿戴设备兼容范围与数据字段.md`
-22. `docs/UWB一期技术成熟度与接入价值评估.md`
-23. `docs/样机到量产预备能力缺口.md`
-24. `docs/工程化与NPI准备基线.md`
-25. `docs/软硬件选型矩阵.md`
-26. `docs/成本结构与技术降本路径.md`
-27. `docs/整机功耗预算与能效控制策略.md`
-28. `docs/量产预备判定标准.md`
-29. `docs/量产预备与MVP验证计划.md`
-30. `docs/量产导入、发布准备与交付闭环.md`
-31. `docs/术语表.md`
-32. `docs/架构原则符合度检查.md`
+1. `REQUIREMENTS.MD`
+2. `docs/00_governance/05_system_architecture_principles.md`
+3. `docs/02_p1_architecture/01_overall_architecture.md`
+4. `docs/09_research/01_vln_role_analysis_and_technical_plan.md`
+5. `docs/00_governance/01_workflow.md`
+6. `docs/00_governance/02_lifecycle_workflow_and_gates.md`
+7. `docs/02_p1_architecture/03_multi_scale_dynamic_ooda_architecture_baseline.md`
+8. `docs/00_governance/03_decision_log.md`
+9. `docs/02_p1_architecture/04_module_layers_and_boundaries.md`
+10. `docs/02_p1_architecture/05_world_state_schema.md`
+11. `docs/02_p1_architecture/06_decision_state_machine.md`
+12. `docs/02_p1_architecture/07_safety_compliance_authorization_api.md`
+13. `docs/02_p1_architecture/10_health_event_pipeline_and_escalation.md`
+14. `docs/02_p1_architecture/08_companion_interaction_strategy.md`
+15. `docs/02_p1_architecture/09_safety_risk_matrix.md`
+16. `docs/02_p1_architecture/11_app_cloud_ops_minimal_loop.md`
+17. `docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md`
+18. `docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md`
+19. `docs/02_p1_architecture/12_human_service_and_telemedicine_boundaries.md`
+20. `docs/02_p1_architecture/13_medication_storage_and_indoor_delivery_requirements.md`
+21. `docs/03_p2_feasibility/07_phase1_wearable_compatibility_and_data_fields.md`
+22. `docs/09_research/02_uwb_phase1_maturity_and_integration_value.md`
+23. `docs/03_p2_feasibility/02_demo_to_mass_production_gaps.md`
+24. `docs/03_p2_feasibility/03_engineering_npi_baseline.md`
+25. `docs/03_p2_feasibility/04_hardware_software_selection_matrix.md`
+26. `docs/03_p2_feasibility/05_cost_structure_and_technology_downpath.md`
+27. `docs/03_p2_feasibility/06_power_budget_and_efficiency_strategy.md`
+28. `docs/06_p5_launch_readiness/01_mass_production_readiness_criteria.md`
+29. `docs/05_p4_beta_dvt/01_mvp_validation_plan.md`
+30. `docs/06_p5_launch_readiness/02_production_introduction_launch_and_delivery_closure.md`
+31. `docs/00_governance/04_glossary.md`
+32. `docs/08_reviews/02_architecture_principles_alignment_check.md`
 
 ## 下一步建议
 

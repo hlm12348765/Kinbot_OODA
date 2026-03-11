@@ -11,7 +11,7 @@
 ### 每轮开始前必做
 
 1. **检查 `REQUIREMENTS.MD` 顶部"对 Codex 的要求"** 是否有更新
-2. **检查 `CLAUDE.md` 或 `docs/架构师综合评审与计划.md`** 是否有新增内容，作为外部架构评审输入纳入本轮处理
+2. **检查 `CLAUDE.md` 或 `docs/08_reviews/01_architect_review_and_plan.md`** 是否有新增内容，作为外部架构评审输入纳入本轮处理
 3. 所有文档和 Linear 协作条目统一用**中文**维护
 
 ### 文档维护权限
@@ -78,54 +78,54 @@
 ### 核心文档（推荐阅读顺序）
 
 1. `REQUIREMENTS.MD` - 产品需求、边界和工程约束（用户独占维护）
-2. `docs/系统架构原则.md` - 系统架构设计原则
-3. `docs/总体架构.md` - 机器人 OODA 总体架构
-4. `docs/VLN角色分析与技术规划.md` - VLN 在 OODA 中的角色分析与规划
-5. `docs/推进工作流.md` - 从架构到落地的推进工作流
-6. `docs/全生命周期工作流与阶段门.md` - 全生命周期工作流与阶段门
-7. `docs/多尺度动态OODA架构基线.md` - 多尺度动态 OODA 架构基线
+2. `docs/00_governance/05_system_architecture_principles.md` - 系统架构设计原则
+3. `docs/02_p1_architecture/01_overall_architecture.md` - 机器人 OODA 总体架构
+4. `docs/09_research/01_vln_role_analysis_and_technical_plan.md` - VLN 在 OODA 中的角色分析与规划
+5. `docs/00_governance/01_workflow.md` - 从架构到落地的推进工作流
+6. `docs/00_governance/02_lifecycle_workflow_and_gates.md` - 全生命周期工作流与阶段门
+7. `docs/02_p1_architecture/03_multi_scale_dynamic_ooda_architecture_baseline.md` - 多尺度动态 OODA 架构基线
 
 ### 架构设计文档
 
-- `docs/模块分层与模块边界.md` - 模块分层与模块边界
-- `docs/世界状态结构.md` - 世界状态与核心实体结构
-- `docs/决策状态机.md` - 系统决策状态机
-- `docs/安全合规授权接口.md` - 安全/合规/授权接口
+- `docs/02_p1_architecture/04_module_layers_and_boundaries.md` - 模块分层与模块边界
+- `docs/02_p1_architecture/05_world_state_schema.md` - 世界状态与核心实体结构
+- `docs/02_p1_architecture/06_decision_state_machine.md` - 系统决策状态机
+- `docs/02_p1_architecture/07_safety_compliance_authorization_api.md` - 安全/合规/授权接口
 
 ### 功能域文档
 
-- `docs/健康事件管线与升级链路.md` - 健康事件管线、补采逻辑与升级链路
-- `docs/陪伴交互策略.md` - 陪伴交互策略、人设边界与长期记忆规则
-- `docs/安全风险矩阵.md` - 一代安全风险域、降级策略与空间规则
-- `docs/家属应用、云服务与后台运营坐席一代最小闭环.md` - 家属 App、云服务与后台运营坐席的一代最小闭环
-- `docs/储药与室内递送要求.md` - 储药与室内递送的能力包、主链边界、角色权限与工程护栏
-- `docs/后台人工服务与在线问诊协同边界.md` - 后台人工服务、在线问诊、第三方履约与公共应急之间的角色边界、接入链路与审计要求
+- `docs/02_p1_architecture/10_health_event_pipeline_and_escalation.md` - 健康事件管线、补采逻辑与升级链路
+- `docs/02_p1_architecture/08_companion_interaction_strategy.md` - 陪伴交互策略、人设边界与长期记忆规则
+- `docs/02_p1_architecture/09_safety_risk_matrix.md` - 一代安全风险域、降级策略与空间规则
+- `docs/02_p1_architecture/11_app_cloud_ops_minimal_loop.md` - 家属 App、云服务与后台运营坐席的一代最小闭环
+- `docs/02_p1_architecture/13_medication_storage_and_indoor_delivery_requirements.md` - 储药与室内递送的能力包、主链边界、角色权限与工程护栏
+- `docs/02_p1_architecture/12_human_service_and_telemedicine_boundaries.md` - 后台人工服务、在线问诊、第三方履约与公共应急之间的角色边界、接入链路与审计要求
 
 ### 评审与基线文档
 
-- `docs/PDCP系统架构评审包.md` - 面向 IPD/PDCP 节点的完整系统架构评审包
-- `docs/总体方案与模块方案下发基线.md` - PDCP 通过后用于各模块展开架构与总体方案设计的下发基线
-- `docs/架构原则符合度检查.md` - 总体架构与架构原则的符合度检查
-- `docs/架构师综合评审与计划.md` - 外部架构评审意见与关键路径建议
+- `docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md` - 面向 IPD/PDCP 节点的完整系统架构评审包
+- `docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md` - PDCP 通过后用于各模块展开架构与总体方案设计的下发基线
+- `docs/08_reviews/02_architecture_principles_alignment_check.md` - 总体架构与架构原则的符合度检查
+- `docs/08_reviews/01_architect_review_and_plan.md` - 外部架构评审意见与关键路径建议
 
 ### 工程化文档
 
-- `docs/样机到量产预备能力缺口.md` - 当前样机 Demo 到量产预备状态的能力缺口
-- `docs/工程化与NPI准备基线.md` - 工程化与 NPI 准备基线
-- `docs/软硬件选型矩阵.md` - 一代软硬件选型矩阵
-- `docs/成本结构与技术降本路径.md` - 整机 BOM 滚动成本基线与降本主战场
-- `docs/整机功耗预算与能效控制策略.md` - 整机功耗预算与能效控制策略
-- `docs/量产预备判定标准.md` - 2026-12-31 量产预备判定标准
-- `docs/量产预备与MVP验证计划.md` - 量产预备与 2027-01 MVP 验证窗口
-- `docs/量产导入、发布准备与交付闭环.md` - 量产导入、发布准备与交付闭环
-- `docs/一期穿戴设备兼容范围与数据字段.md` - 一期穿戴设备兼容范围、接入模式、新鲜度约束与首版数据字段
-- `docs/UWB一期技术成熟度与接入价值评估.md` - UWB 一期技术成熟度、样品验证门与接入价值边界
+- `docs/03_p2_feasibility/02_demo_to_mass_production_gaps.md` - 当前样机 Demo 到量产预备状态的能力缺口
+- `docs/03_p2_feasibility/03_engineering_npi_baseline.md` - 工程化与 NPI 准备基线
+- `docs/03_p2_feasibility/04_hardware_software_selection_matrix.md` - 一代软硬件选型矩阵
+- `docs/03_p2_feasibility/05_cost_structure_and_technology_downpath.md` - 整机 BOM 滚动成本基线与降本主战场
+- `docs/03_p2_feasibility/06_power_budget_and_efficiency_strategy.md` - 整机功耗预算与能效控制策略
+- `docs/06_p5_launch_readiness/01_mass_production_readiness_criteria.md` - 2026-12-31 量产预备判定标准
+- `docs/05_p4_beta_dvt/01_mvp_validation_plan.md` - 量产预备与 2027-01 MVP 验证窗口
+- `docs/06_p5_launch_readiness/02_production_introduction_launch_and_delivery_closure.md` - 量产导入、发布准备与交付闭环
+- `docs/03_p2_feasibility/07_phase1_wearable_compatibility_and_data_fields.md` - 一期穿戴设备兼容范围、接入模式、新鲜度约束与首版数据字段
+- `docs/09_research/02_uwb_phase1_maturity_and_integration_value.md` - UWB 一期技术成熟度、样品验证门与接入价值边界
 
 ### 其他文档
 
-- `docs/决策记录.md` - 已确认决策、开放问题与后续问题清单
-- `docs/术语表.md` - 项目术语表
-- `docs/第二轮文档一致性审查报告.md` - 文档一致性与严谨度审查报告
+- `docs/00_governance/03_decision_log.md` - 已确认决策、开放问题与后续问题清单
+- `docs/00_governance/04_glossary.md` - 项目术语表
+- `docs/08_reviews/04_second_round_document_consistency_audit.md` - 文档一致性与严谨度审查报告
 - `CHANGELOG.md` - 变更日志
 
 ## 文档编写规范
