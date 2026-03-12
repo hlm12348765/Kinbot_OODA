@@ -78,38 +78,41 @@
 ## 文档索引
 
 - `input/00_user_requirements_input.md`：用户需求输入。核心主题：产品需求、边界、阶段性澄清与对 Codex 的要求。
-- `docs/00_governance/05_system_architecture_principles.md`：系统架构原则。核心主题：系统架构原则、分解约束和设计准则。
-- `docs/02_p1_architecture/01_overall_architecture.md`：总体架构。核心主题：系统总体架构、主循环和产品系统边界。
-- `docs/09_research/01_vln_role_analysis_and_technical_plan.md`：VLN角色分析与技术规划。核心主题：VLN 在 Kinbot 中的角色分析、路线判断和技术规划。
-- `docs/02_p1_architecture/12_human_service_and_telemedicine_boundaries.md`：后台人工服务与在线问诊协同边界。核心主题：人工服务、在线问诊与第三方履约边界。
-- `docs/08_reviews/02_architecture_principles_alignment_check.md`：架构原则符合度检查。核心主题：总体架构与架构原则的符合度检查。
 - `docs/00_governance/01_workflow.md`：推进工作流。核心主题：当前主线推进工作流、跨线程规范和评审顺序。
 - `docs/00_governance/02_lifecycle_workflow_and_gates.md`：全生命周期工作流与阶段门。核心主题：全生命周期阶段门、里程碑和 IPD 对应关系。
-- `docs/02_p1_architecture/03_multi_scale_dynamic_ooda_architecture_baseline.md`：多尺度动态OODA架构基线。核心主题：多尺度动态 OODA 架构基线与调度规则。
-- `docs/08_reviews/01_architect_review_and_plan.md`：架构师综合评审与计划。核心主题：Claude 架构评审意见与关键路径建议。
 - `docs/00_governance/03_decision_log.md`：决策记录。核心主题：事实、判断、决策、开放问题和审阅结论沉淀。
+- `docs/00_governance/04_glossary.md`：术语表。核心主题：术语定义与命名边界。
+- `docs/00_governance/05_system_architecture_principles.md`：系统架构原则。核心主题：系统架构原则、分解约束和设计准则。
+- `docs/00_governance/06_claude.md`：Claude协作说明。核心主题：Claude 外部评审协作方式与输入约定。
+- `docs/01_p0_concept/01_early_hardware_parameters_alignment_analysis.md`：早期硬件参数需求与新架构一致性分析。核心主题：早期硬件参数与当前架构方向的一致性、保守项与激进项分析。
+- `docs/01_p0_concept/02_hardware_parameter_requirements_fit_assessment.md`：硬件参数需求匹配性评估。核心主题：早期硬件参数需求的适配性、问题点与修正方向。
+- `docs/02_p1_architecture/01_overall_architecture.md`：总体架构。核心主题：系统总体架构、主循环和产品系统边界。
+- `docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md`：PDCP系统架构评审包。核心主题：面向 PDCP 节点的系统架构评审包。
+- `docs/02_p1_architecture/03_multi_scale_dynamic_ooda_architecture_baseline.md`：多尺度动态OODA架构基线。核心主题：多尺度动态 OODA 架构基线与调度规则。
 - `docs/02_p1_architecture/04_module_layers_and_boundaries.md`：模块分层与模块边界。核心主题：一级模块分层、职责边界和端云划分。
 - `docs/02_p1_architecture/05_world_state_schema.md`：世界状态结构。核心主题：World State 实体结构、状态面和关系组织。
 - `docs/02_p1_architecture/06_decision_state_machine.md`：决策状态机。核心主题：顶层模式、业务状态、异常与故障状态机。
 - `docs/02_p1_architecture/07_safety_compliance_authorization_api.md`：安全合规授权接口。核心主题：安全、合规、授权和审批接口面。
-- `docs/02_p1_architecture/10_health_event_pipeline_and_escalation.md`：健康事件管线与升级链路。核心主题：健康事件、补采、分级和升级链路。
 - `docs/02_p1_architecture/08_companion_interaction_strategy.md`：陪伴交互策略。核心主题：陪伴交互策略、人设边界与长期记忆治理。
 - `docs/02_p1_architecture/09_safety_risk_matrix.md`：安全风险矩阵。核心主题：安全风险域、空间规则、降级与停机矩阵。
+- `docs/02_p1_architecture/10_health_event_pipeline_and_escalation.md`：健康事件管线与升级链路。核心主题：健康事件、补采、分级和升级链路。
 - `docs/02_p1_architecture/11_app_cloud_ops_minimal_loop.md`：家属应用、云服务与后台运营坐席一代最小闭环。核心主题：家属 App、云服务与后台运营坐席的最小闭环。
-- `docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md`：PDCP系统架构评审包。核心主题：面向 PDCP 节点的系统架构评审包。
-- `docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md`：总体方案与模块方案下发基线。核心主题：总体方案工作包与模块方案下发基线。
+- `docs/02_p1_architecture/12_human_service_and_telemedicine_boundaries.md`：后台人工服务与在线问诊协同边界。核心主题：人工服务、在线问诊与第三方履约边界。
 - `docs/02_p1_architecture/13_medication_storage_and_indoor_delivery_requirements.md`：储药与室内递送要求。核心主题：储药与室内递送能力包和工程护栏。
-- `docs/03_p2_feasibility/07_phase1_wearable_compatibility_and_data_fields.md`：一期穿戴设备兼容范围与数据字段。核心主题：一期穿戴兼容范围、接入模式和字段定义。
-- `docs/09_research/02_uwb_phase1_maturity_and_integration_value.md`：UWB一期技术成熟度与接入价值评估。核心主题：UWB 一期成熟度、样品验证门和接入价值评估。
+- `docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md`：总体方案与模块方案下发基线。核心主题：总体方案工作包与模块方案下发基线。
 - `docs/03_p2_feasibility/02_demo_to_mass_production_gaps.md`：样机到量产预备能力缺口。核心主题：样机到量产预备的能力缺口与阻断项。
 - `docs/03_p2_feasibility/03_engineering_npi_baseline.md`：工程化与NPI准备基线。核心主题：工程化、NPI 和 Alpha/EVT 前置冻结项。
 - `docs/03_p2_feasibility/04_hardware_software_selection_matrix.md`：软硬件选型矩阵。核心主题：软硬件选型矩阵、算力需求与主备观察线。
 - `docs/03_p2_feasibility/05_cost_structure_and_technology_downpath.md`：成本结构与技术降本路径。核心主题：成本结构、降本路径与高端产品感检查。
 - `docs/03_p2_feasibility/06_power_budget_and_efficiency_strategy.md`：整机功耗预算与能效控制策略。核心主题：功耗预算、能效控制与工作区间基线。
-- `docs/06_p5_launch_readiness/01_mass_production_readiness_criteria.md`：量产预备判定标准。核心主题：量产预备判定域、通过条件和阶段门定义。
+- `docs/03_p2_feasibility/07_phase1_wearable_compatibility_and_data_fields.md`：一期穿戴设备兼容范围与数据字段。核心主题：一期穿戴兼容范围、接入模式和字段定义。
 - `docs/05_p4_beta_dvt/01_mvp_validation_plan.md`：量产预备与MVP验证计划。核心主题：MVP 范围、验证域、试点框架与放行规则。
+- `docs/06_p5_launch_readiness/01_mass_production_readiness_criteria.md`：量产预备判定标准。核心主题：量产预备判定域、通过条件和阶段门定义。
 - `docs/06_p5_launch_readiness/02_production_introduction_launch_and_delivery_closure.md`：量产导入、发布准备与交付闭环。核心主题：量产导入、发布准备与交付闭环设计。
-- `docs/00_governance/04_glossary.md`：术语表。核心主题：术语定义与命名边界。
+- `docs/08_reviews/01_architect_review_and_plan.md`：架构师综合评审与计划。核心主题：Claude 架构评审意见与关键路径建议。
+- `docs/08_reviews/02_architecture_principles_alignment_check.md`：架构原则符合度检查。核心主题：总体架构与架构原则的符合度检查。
+- `docs/09_research/01_vln_role_analysis_and_technical_plan.md`：VLN角色分析与技术规划。核心主题：VLN 在 Kinbot 中的角色分析、路线判断和技术规划。
+- `docs/09_research/02_uwb_phase1_maturity_and_integration_value.md`：UWB一期技术成熟度与接入价值评估。核心主题：UWB 一期成熟度、样品验证门和接入价值评估。
 
 ## 仓库结构
 
