@@ -14,7 +14,7 @@
 
 评审日期：2026-03-11
 参考架构：三层七域架构、关系中心架构
-参考需求：input/00_user_requirements_input.md Step 1-11
+参考需求：input/00_requirements/00_user_requirements_input.md Step 1-11
 
 ## 2. 整体评估
 
@@ -322,7 +322,7 @@
 - 情感灯光：RGB 灯带，支持 10+ 种情感模式
 - 声音情感：支持 5+ 种语调（温柔、关切、紧急、俏皮、正式）
 
-## 6. 与 input/00_user_requirements_input.md 的对照检查
+## 6. 与 input/00_requirements/00_user_requirements_input.md 的对照检查
 
 ### 6.1 符合 Step 1-11 需求的参数
 
@@ -536,4 +536,3 @@
 1. 聚焦"独居老人照护"的核心场景，砍掉低频功能
 2. 投入到"关系质量"相关的参数（续航、显示、情感表达）
 3. 在成本约束下做好取舍，不追求"全能"而追求"够用且好用"
-

@@ -28,6 +28,9 @@
 ### 变更
 
 - 在 [README.md](README.md) 中补充 `docs/10_team_planning` 目录索引、仓库结构和推荐阅读顺序。
+- 将 `input/` 目录重组接入主线索引，明确区分 `input/00_requirements/` 与 `input/01_candidate_resume/` 两类输入。
+- 更新根目录 README、治理文档、研究文档与团队规划文档中的输入路径，统一切换到新的 `input/00_requirements/` 结构。
+- 为 [input/00_requirements/README.md](input/00_requirements/README.md) 和 [input/01_candidate_resume/README.md](input/01_candidate_resume/README.md) 新增目录级说明，明确需求输入和候选人简历输入的协作边界。
 
 ## [2026-03-11]
 

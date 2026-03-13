@@ -12,8 +12,8 @@
 
 本文用于分析早期硬件参数需求的两个版本：
 
-- [input/01_kinbot_prd_v0_2_hardware_parameters.csv](../../input/01_kinbot_prd_v0_2_hardware_parameters.csv)
-- [input/02_kinbot_prd_v0_3_hardware_parameters.csv](../../input/02_kinbot_prd_v0_3_hardware_parameters.csv)
+- [input/00_requirements/01_kinbot_prd_v0_2_hardware_parameters.csv](../../input/00_requirements/01_kinbot_prd_v0_2_hardware_parameters.csv)
+- [input/00_requirements/02_kinbot_prd_v0_3_hardware_parameters.csv](../../input/00_requirements/02_kinbot_prd_v0_3_hardware_parameters.csv)
 
 并判断它们与当前主线架构基线是否一致，以及 `v0.3` 相比 `v0.2` 的更新是否让参数定义更贴近当前架构理念：
 

@@ -198,7 +198,7 @@ flowchart LR
 本轮同步收敛出的额外边界：
 
 - `KBT-15` 当前先冻结穿戴主线，不等待 `UWB` 结果回填。
-- 用户近期将拿到 `UWB` 外设样品；样品测试结果将作为后续 `KBT-14` 和 `input/00_user_requirements_input.md` 的增量输入。
+- 用户近期将拿到 `UWB` 外设样品；样品测试结果将作为后续 `KBT-14` 和 `input/00_requirements/00_user_requirements_input.md` 的增量输入。
 - 一期穿戴主线仍然是“手表 / 手环 + 家用测量外设 + 问诊补采”的组合，而不是等待单一 `UWB` 路线成熟。
 
 当前仍保留的后续问题：

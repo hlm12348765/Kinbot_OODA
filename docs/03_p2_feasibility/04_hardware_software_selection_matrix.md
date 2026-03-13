@@ -278,7 +278,7 @@ flowchart TB
 - 上述资料只用于判断路线是否继续有效，不等于当前就完成了最终器件定型。
 - 最终定型仍需要在 `G2` 前补齐价格、交期、板级获取、热设计、`BOM` 和实测验证。
 - 当前主线后续还需要继续联网核实官方资料、板卡可得性和交付成熟度。
-- 本轮文档路径与标题口径统一采用 `input/00_user_requirements_input.md`、`docs/09_research/01_vln_role_analysis_and_technical_plan.md`、`docs/09_research/02_uwb_phase1_maturity_and_integration_value.md`。
+- 本轮文档路径与标题口径统一采用 `input/00_requirements/00_user_requirements_input.md`、`docs/09_research/01_vln_role_analysis_and_technical_plan.md`、`docs/09_research/02_uwb_phase1_maturity_and_integration_value.md`。
 - 与文档一致性相关的审阅和修复意见，以 `docs/08_reviews/04_second_round_document_consistency_audit.md` 和 `docs/08_reviews/03_fix_completion_report.md` 为准。
 
 ## 10. 当前评审结论入口

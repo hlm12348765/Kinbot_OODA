@@ -29,14 +29,14 @@
 
 当前协作方式：
 
-- 每轮开始前先检查 `input/00_user_requirements_input.md` 顶部”对 Codex 的要求”是否有更新
+- 每轮开始前先检查 `input/00_requirements/00_user_requirements_input.md` 顶部”对 Codex 的要求”是否有更新
 - 若 [docs/00_governance/06_claude.md](docs/00_governance/06_claude.md) 或 [docs/08_reviews/01_architect_review_and_plan.md](docs/08_reviews/01_architect_review_and_plan.md) 有新增内容，也作为外部架构评审输入纳入本轮处理
 - 关键需求、澄清和决策沉淀在仓库文档
 - 阶段性待办和 issue 同步到 Linear，形成持续协作
 - 本地文档和 Linear 协作条目统一用中文维护
 - 当前 Linear 项目为 `Kinbot OODA 架构到量产预备`
 - 涉及 VLN 路线和前瞻技术判断时，与专门的 VLN 技术评估线程通过独立 issue 交叉协作，其专项文档现已纳入主线版本控制
-- `input/00_user_requirements_input.md` 由用户独占维护，其他文档由我持续推进
+- `input/00_requirements/00_user_requirements_input.md` 由用户独占维护，其他文档由我持续推进
 - 当信息不足但推进不能停时，先形成“架构师设想包”，再提交审核
 - 全生命周期管理参考 IPD，当前争取在 `2026-03-31` 完成产品定义与架构冻结
 - 对存在明确结构分解的架构文档，优先配套直观图示
@@ -77,7 +77,8 @@
 
 ## 文档索引
 
-- `input/00_user_requirements_input.md`：用户需求输入。核心主题：产品需求、边界、阶段性澄清与对 Codex 的要求。
+- `input/00_requirements/00_user_requirements_input.md`：用户需求输入。核心主题：产品需求、边界、阶段性澄清与对 Codex 的要求。
+- `input/01_candidate_resume/README.md`：候选人简历输入。核心主题：候选人简历资料、评估使用边界与团队规划基线的衔接方式。
 - `docs/00_governance/01_workflow.md`：推进工作流。核心主题：当前主线推进工作流、跨线程规范和评审顺序。
 - `docs/00_governance/02_lifecycle_workflow_and_gates.md`：全生命周期工作流与阶段门。核心主题：全生命周期阶段门、里程碑和 IPD 对应关系。
 - `docs/00_governance/03_decision_log.md`：决策记录。核心主题：事实、判断、决策、开放问题和审阅结论沉淀。
@@ -161,16 +162,21 @@
 │       └── 01_development_team_proposal.md
 ├── input
 │   ├── README.md
-│   ├── 00_user_requirements_input.md
-│   ├── 01_kinbot_prd_v0_2_hardware_parameters.csv
-│   └── 02_kinbot_prd_v0_3_hardware_parameters.csv
+│   ├── 00_requirements
+│   │   ├── README.md
+│   │   ├── 00_user_requirements_input.md
+│   │   ├── 01_kinbot_prd_v0_2_hardware_parameters.csv
+│   │   └── 02_kinbot_prd_v0_3_hardware_parameters.csv
+│   └── 01_candidate_resume
+│       ├── README.md
+│       └── huangjie_profile.md
 ├── output
 └── tmp
 ```
 
 ## 推荐阅读顺序
 
-1. `input/00_user_requirements_input.md`
+1. `input/00_requirements/00_user_requirements_input.md`
 2. `docs/00_governance/05_system_architecture_principles.md`
 3. `docs/02_p1_architecture/01_overall_architecture.md`
 4. `docs/09_research/01_vln_role_analysis_and_technical_plan.md`
