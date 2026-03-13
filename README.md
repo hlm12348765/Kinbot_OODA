@@ -113,6 +113,7 @@
 - `docs/08_reviews/02_architecture_principles_alignment_check.md`：架构原则符合度检查。核心主题：总体架构与架构原则的符合度检查。
 - `docs/09_research/01_vln_role_analysis_and_technical_plan.md`：VLN角色分析与技术规划。核心主题：VLN 在 Kinbot 中的角色分析、路线判断和技术规划。
 - `docs/09_research/02_uwb_phase1_maturity_and_integration_value.md`：UWB一期技术成熟度与接入价值评估。核心主题：UWB 一期成熟度、样品验证门和接入价值评估。
+- `docs/10_team_planning/01_development_team_proposal.md`：开发团队提案。核心主题：基于当前架构与总体方案，反推出量产预备前所需的团队结构、人数规模和阶段扩编建议。
 
 ## 仓库结构
 
@@ -152,13 +153,17 @@
 │   ├── 08_reviews
 │   │   ├── README.md
 │   │   └── ...
-│   └── 09_research
+│   ├── 09_research
+│   │   ├── README.md
+│   │   └── ...
+│   └── 10_team_planning
 │       ├── README.md
-│       └── ...
+│       └── 01_development_team_proposal.md
 ├── input
 │   ├── README.md
 │   ├── 00_user_requirements_input.md
-│   └── 01_kinbot_prd_v0_2_hardware_parameters.csv
+│   ├── 01_kinbot_prd_v0_2_hardware_parameters.csv
+│   └── 02_kinbot_prd_v0_3_hardware_parameters.csv
 ├── output
 └── tmp
 ```
@@ -197,6 +202,7 @@
 30. `docs/06_p5_launch_readiness/02_production_introduction_launch_and_delivery_closure.md`
 31. `docs/00_governance/04_glossary.md`
 32. `docs/08_reviews/02_architecture_principles_alignment_check.md`
+33. `docs/10_team_planning/01_development_team_proposal.md`
 
 ## 下一步建议
 

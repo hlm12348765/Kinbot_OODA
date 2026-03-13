@@ -18,6 +18,17 @@
 
 - 暂无。
 
+## [2026-03-13]
+
+### 新增
+
+- 新增 [docs/10_team_planning/README.md](docs/10_team_planning/README.md)，用于收纳团队规划与组织设计提案。
+- 新增 [docs/10_team_planning/01_development_team_proposal.md](docs/10_team_planning/01_development_team_proposal.md)，用于定义 Kinbot 从 `PDCP` 到量产预备所需的开发团队结构、人数规模和阶段扩编建议。
+
+### 变更
+
+- 在 [README.md](README.md) 中补充 `docs/10_team_planning` 目录索引、仓库结构和推荐阅读顺序。
+
 ## [2026-03-11]
 
 ### 新增
