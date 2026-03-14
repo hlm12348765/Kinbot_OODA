@@ -1,14 +1,8 @@
-# Claude 协作说明
+# CLAUDE.md
 
----
 
-文档版本：v1.0
-创建日期：2026-03-10
-作者：Codex-架构师
 
----
-
-本文档用于说明 Claude Code 在本仓库中的协作方式和当前架构基线。
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## 项目概述
 
@@ -44,6 +38,7 @@
 ### 双视角基线
 
 系统架构在 PDCP 节点采用"**双视角基线**"：
+
 - 产品实体架构视图（机器人本体作为软硬一体产品实体显式纳入）
 - 运行时功能架构视图
 
@@ -175,3 +170,4 @@
 - 所有讨论中的核心功能已经在真实自研机器人样机上做过粗放 Demo
 - 具备较强的消费电子产研经验，覆盖平板类和 IoT 类产品
 - 具备 VLM、VLN 能力，与行业 SOTA 差距约不到一年
+
