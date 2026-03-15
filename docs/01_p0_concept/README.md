@@ -18,6 +18,7 @@
 
 - `01_early_hardware_parameters_alignment_analysis.md`：早期硬件参数需求与新架构一致性分析。核心主题：早期硬件参数需求与新架构理念的一致性、保守项和激进项分析。
 - `02_hardware_parameter_requirements_fit_assessment.md`：硬件参数需求分析与架构符合度评估。核心主题：硬件参数需求与当前系统架构和产品目标的符合度评估。
+- `03_kinbot_product_system_technology_business_evaluation.md`：Kinbot产品、体系、技术与商业理念四轴评估提案。核心主题：当前 Kinbot 的理念组合判断、商业成功概率推断与后续产品规划建议。
 
 ## 维护规则
 

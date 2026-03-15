@@ -18,6 +18,17 @@
 
 - 暂无。
 
+## [2026-03-15]
+
+### 新增
+
+- 新增 [docs/01_p0_concept/03_kinbot_product_system_technology_business_evaluation.md](docs/01_p0_concept/03_kinbot_product_system_technology_business_evaluation.md)，用于以四轴框架评估当前 Kinbot 的产品、体系、技术与商业理念组合，并给出商业成功概率推断和后续产品规划建议。
+
+### 变更
+
+- 在 [docs/01_p0_concept/README.md](docs/01_p0_concept/README.md) 中补充四轴评估提案文档索引。
+- 在 [README.md](README.md) 中补充四轴评估提案文档索引，并将其加入推荐阅读顺序。
+
 ## [2026-03-13]
 
 ### 新增
