@@ -23,6 +23,7 @@
 ### 新增
 
 - 新增 [docs/03_p2_feasibility/08_post_freeze_coding_work_plan.md](docs/03_p2_feasibility/08_post_freeze_coding_work_plan.md)，用于定义架构冻结后的编码工作总体路线图，涵盖代码仓库结构、技术栈选型、5 阶段编码路线图（Phase 0-4）、模块依赖拓扑、集成策略、CI/CD 基础设施、技术风险缓解、团队映射和端到端验证策略。
+- 创建独立代码仓库 `Kinbot_Code`（本地骨架），包含 Monorepo 目录结构、7 个 Protobuf IDL 文件（contracts/）、CMake 构建系统、GitHub Actions CI 工作流、14 个模块 README。Protobuf 定义直接映射自已冻结的架构基线（World State 9 类实体、Safety API 11 类动作 + 6 种审批结果、Health Event 7 级管线、22 种 WorldEvent）。
 
 ### 变更
 
