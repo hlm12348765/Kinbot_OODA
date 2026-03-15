@@ -50,6 +50,7 @@
 Kinbot 一代不是单一本体，而是一个完整产品系统：
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'background':'#FFFFFF','primaryColor':'#F8FAFC','primaryTextColor':'#0F172A','primaryBorderColor':'#CBD5E1','lineColor':'#94A3B8','secondaryColor':'#EEF2FF','tertiaryColor':'#ECFDF5','fontFamily':'PingFang SC, Microsoft YaHei, Inter, sans-serif'},'flowchart':{'curve':'linear','nodeSpacing':36,'rankSpacing':48,'diagramPadding':8,'htmlLabels':true}}}%%
 flowchart LR
     U[老人本人 / 子女 / 保姆 / 访客]
 
@@ -76,6 +77,12 @@ flowchart LR
     C --> O
     C --> M
     C --> P
+    
+    classDef core fill:#EEF2FF,stroke:#6366F1,color:#0F172A,stroke-width:1.4px;
+    classDef mgmt fill:#F8FAFC,stroke:#64748B,color:#0F172A,stroke-width:1.2px;
+    classDef eng fill:#ECFDF5,stroke:#10B981,color:#0F172A,stroke-width:1.2px;
+    classDef result fill:#FFF7ED,stroke:#F59E0B,color:#0F172A,stroke-width:1.3px;
+    linkStyle default stroke:#94A3B8,stroke-width:1.4px;
 ```
 
 当前产品系统边界收敛为：
