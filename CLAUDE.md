@@ -122,6 +122,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `docs/05_p4_beta_dvt/01_mvp_validation_plan.md` - 量产预备与 2027-01 MVP 验证窗口
 - `docs/06_p5_launch_readiness/02_production_introduction_launch_and_delivery_closure.md` - 量产导入、发布准备与交付闭环
 - `docs/03_p2_feasibility/07_phase1_wearable_compatibility_and_data_fields.md` - 一期穿戴设备兼容范围、接入模式、新鲜度约束与首版数据字段
+- `docs/03_p2_feasibility/08_post_freeze_coding_work_plan.md` - 架构冻结后编码工作规划（代码仓库、技术栈、分阶段路线图、集成策略）
 - `docs/09_research/02_uwb_phase1_maturity_and_integration_value.md` - UWB 一期技术成熟度、样品验证门与接入价值边界
 
 ### 其他文档

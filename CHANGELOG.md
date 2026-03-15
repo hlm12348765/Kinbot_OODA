@@ -18,6 +18,16 @@
 
 - 暂无。
 
+## [2026-03-15]
+
+### 新增
+
+- 新增 [docs/03_p2_feasibility/08_post_freeze_coding_work_plan.md](docs/03_p2_feasibility/08_post_freeze_coding_work_plan.md)，用于定义架构冻结后的编码工作总体路线图，涵盖代码仓库结构、技术栈选型、5 阶段编码路线图（Phase 0-4）、模块依赖拓扑、集成策略、CI/CD 基础设施、技术风险缓解、团队映射和端到端验证策略。
+
+### 变更
+
+- 更新 `docs/03_p2_feasibility/README.md` 文档索引，补充编码工作规划条目。
+
 ## [2026-03-13]
 
 ### 新增

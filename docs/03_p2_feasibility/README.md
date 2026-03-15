@@ -23,6 +23,7 @@
 - `05_cost_structure_and_technology_downpath.md`：成本结构与技术降本路径。核心主题：成本结构、降本路径与高端产品感检查。
 - `06_power_budget_and_efficiency_strategy.md`：整机功耗预算与能效控制策略。核心主题：功耗预算、能效控制与工作区间基线。
 - `07_phase1_wearable_compatibility_and_data_fields.md`：一期穿戴设备兼容范围与数据字段。核心主题：一期穿戴兼容范围、接入模式和字段定义。
+- `08_post_freeze_coding_work_plan.md`：架构冻结后编码工作规划。核心主题：代码仓库结构、技术栈、分阶段编码路线图、模块依赖、集成策略与验证。
 
 ## 维护规则
 
