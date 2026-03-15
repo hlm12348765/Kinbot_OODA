@@ -108,6 +108,7 @@
 - `docs/03_p2_feasibility/05_cost_structure_and_technology_downpath.md`：成本结构与技术降本路径。核心主题：成本结构、降本路径与高端产品感检查。
 - `docs/03_p2_feasibility/06_power_budget_and_efficiency_strategy.md`：整机功耗预算与能效控制策略。核心主题：功耗预算、能效控制与工作区间基线。
 - `docs/03_p2_feasibility/07_phase1_wearable_compatibility_and_data_fields.md`：一期穿戴设备兼容范围与数据字段。核心主题：一期穿戴兼容范围、接入模式和字段定义。
+- `docs/03_p2_feasibility/08_Kinbot_nighttime_closed_loop_plan.md`：家庭机器人夜间稳态定位与任务闭环方案。核心主题：纯视觉路线下夜间不开灯场景的定位稳态、任务闭环、隐私策略与服务闭环设计。
 - `docs/05_p4_beta_dvt/01_mvp_validation_plan.md`：量产预备与MVP验证计划。核心主题：MVP 范围、验证域、试点框架与放行规则。
 - `docs/06_p5_launch_readiness/01_mass_production_readiness_criteria.md`：量产预备判定标准。核心主题：量产预备判定域、通过条件和阶段门定义。
 - `docs/06_p5_launch_readiness/02_production_introduction_launch_and_delivery_closure.md`：量产导入、发布准备与交付闭环。核心主题：量产导入、发布准备与交付闭环设计。
@@ -205,12 +206,13 @@
 26. `docs/03_p2_feasibility/04_hardware_software_selection_matrix.md`
 27. `docs/03_p2_feasibility/05_cost_structure_and_technology_downpath.md`
 28. `docs/03_p2_feasibility/06_power_budget_and_efficiency_strategy.md`
-29. `docs/06_p5_launch_readiness/01_mass_production_readiness_criteria.md`
-30. `docs/05_p4_beta_dvt/01_mvp_validation_plan.md`
-31. `docs/06_p5_launch_readiness/02_production_introduction_launch_and_delivery_closure.md`
-32. `docs/00_governance/04_glossary.md`
-33. `docs/08_reviews/02_architecture_principles_alignment_check.md`
-34. `docs/10_team_planning/01_development_team_proposal.md`
+29. `docs/03_p2_feasibility/08_Kinbot_nighttime_closed_loop_plan.md`
+30. `docs/06_p5_launch_readiness/01_mass_production_readiness_criteria.md`
+31. `docs/05_p4_beta_dvt/01_mvp_validation_plan.md`
+32. `docs/06_p5_launch_readiness/02_production_introduction_launch_and_delivery_closure.md`
+33. `docs/00_governance/04_glossary.md`
+34. `docs/08_reviews/02_architecture_principles_alignment_check.md`
+35. `docs/10_team_planning/01_development_team_proposal.md`
 
 ## 下一步建议
 
