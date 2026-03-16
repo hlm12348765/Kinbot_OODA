@@ -24,6 +24,7 @@
 - `06_two_alternative_architecture_proposals_comparison.md`：两种替代架构提案对比分析。核心主题：两种替代架构提案的优劣对比。
 - `07_architecture_restatement_and_alternative_proposal.md`：架构重审与替代提案。核心主题：Claude 架构重申与替代提案原文。
 - `08_relation_centered_architecture_proposal.md`：关系中心架构提案。核心主题：Claude 关系中心架构提案原文。
+- `09_pdcp_requirement_constraints_and_blockers_proposal.md`：PDCP评审约束与阻断提案。核心主题：需求侧约束总表、推进阻断问题与老板沟通提案。
 
 ## 维护规则
 
