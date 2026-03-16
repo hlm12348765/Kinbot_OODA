@@ -16,7 +16,7 @@
 
 ## [未发布]
 
-- 暂无。
+- 在 [docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md](docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md) 中补充澄清：当前 `PDCP` 已形成方案基线需作为整机 `BOM` 基线输入，并新增 `PDCP` 通过后的 `BOM` 回传与一致性复核要求。
 
 ## [2026-03-15]
 
