@@ -23,6 +23,7 @@
 - `05_cost_structure_and_technology_downpath.md`：成本结构与技术降本路径。核心主题：成本结构、降本路径与高端产品感检查。
 - `06_power_budget_and_efficiency_strategy.md`：整机功耗预算与能效控制策略。核心主题：功耗预算、能效控制与工作区间基线。
 - `07_phase1_wearable_compatibility_and_data_fields.md`：一期穿戴设备兼容范围与数据字段。核心主题：一期穿戴兼容范围、接入模式和字段定义。
+- `08_Kinbot_nighttime_closed_loop_plan.md`：家庭机器人夜间稳态定位与任务闭环方案。核心主题：纯视觉路线下夜间不开灯场景的定位稳态、任务闭环、隐私策略与服务闭环设计。
 
 ## 维护规则
 

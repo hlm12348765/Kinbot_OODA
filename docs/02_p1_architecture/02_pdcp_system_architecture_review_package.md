@@ -44,12 +44,14 @@
 
 - 本次评审节点是 `P1 产品定义与架构冻结` 的一部分。
 - `P5` 相关文档只作为远期约束输入存在，不代表当前项目已经进入量产导入阶段。
+- 虽然本次不做“最终 `BOM` 冻结”，但本次已形成的系统架构与方案基线，必须作为后续“整机 `BOM` 基线”建立与滚动管理的正式输入。
 
 ## 3. 目标产品系统定义
 
 Kinbot 一代不是单一本体，而是一个完整产品系统：
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'background':'#FFFFFF','primaryColor':'#F8FAFC','primaryTextColor':'#0F172A','primaryBorderColor':'#CBD5E1','lineColor':'#94A3B8','secondaryColor':'#EEF2FF','tertiaryColor':'#ECFDF5','fontFamily':'PingFang SC, Microsoft YaHei, Inter, sans-serif'},'flowchart':{'curve':'linear','nodeSpacing':36,'rankSpacing':48,'diagramPadding':8,'htmlLabels':true}}}%%
 flowchart LR
     U[老人本人 / 子女 / 保姆 / 访客]
 
@@ -76,6 +78,12 @@ flowchart LR
     C --> O
     C --> M
     C --> P
+    
+    classDef core fill:#EEF2FF,stroke:#6366F1,color:#0F172A,stroke-width:1.4px;
+    classDef mgmt fill:#F8FAFC,stroke:#64748B,color:#0F172A,stroke-width:1.2px;
+    classDef eng fill:#ECFDF5,stroke:#10B981,color:#0F172A,stroke-width:1.2px;
+    classDef result fill:#FFF7ED,stroke:#F59E0B,color:#0F172A,stroke-width:1.3px;
+    linkStyle default stroke:#94A3B8,stroke-width:1.4px;
 ```
 
 当前产品系统边界收敛为：
@@ -525,6 +533,12 @@ flowchart LR
 5. 关键技术路线与备选项
 6. 风险清单与验证方案
 7. 对上游 / 下游模块的依赖与约束
+
+此外，需要补充一条跨模块共识：
+
+1. 当前 `PDCP` 已形成的“产品实体域基线 + 运行时模块基线 + 关键接口基线 + 头部主备路线基线”，应直接作为整机 `BOM` 基线的输入约束。
+2. 各模块后续输出器件清单时，不得脱离上述基线单独“重开一套器件世界观”。
+3. 若模块方案引发 `BOM` 结构性变化（重量、热、供电、关键成本段），必须回传到架构层做双视角一致性复核，再进入 `KBT-32` 汇总。
 
 ## 13. 本轮评审结论入口
 
