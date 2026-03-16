@@ -28,6 +28,8 @@
 - 在 [docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md) 中同步记录这轮对 Claude 提案和 `PDCP` 需求侧约束提案的正式吸收结论。
 - 在 [docs/02_p1_architecture/01_overall_architecture.md](docs/02_p1_architecture/01_overall_architecture.md) 与 [docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md](docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md) 中补入一代纯视觉传感器架构提案，正式冻结“双目 + 单目 `3 到 5` 个相机 + 自研深度估计 + 多目几何融合”为量产主线，并将深度相机 / 激光雷达限制为 `EVT` 前验证加速线。
 - 在 [docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md) 中补记纯视觉主线进入架构基线，以及其对 `C1 / C5`、自动标定、低照鲁棒性和夜间闭环验证的压力转移。
+- 在 [docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md](docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md) 中把需求侧硬约束、纯视觉主线、关系质量评价和分层免疫式安全真正下发到 `S1-S7`，并补齐各工作包的新增交付任务。
+- 将 [docs/08_reviews/09_pdcp_requirement_constraints_and_blockers_proposal.md](docs/08_reviews/09_pdcp_requirement_constraints_and_blockers_proposal.md) 的当前修订版本纳入分支维护。
 
 ## [2026-03-15]
 
