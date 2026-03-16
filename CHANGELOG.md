@@ -16,7 +16,13 @@
 
 ## [未发布]
 
-- 暂无。
+### 新增
+
+- 新增 [docs/08_reviews/09_pdcp_requirement_constraints_and_blockers_proposal.md](docs/08_reviews/09_pdcp_requirement_constraints_and_blockers_proposal.md)，用于汇总PDCP评审准备中的需求侧约束、阻断问题与老板沟通提案。
+
+### 变更
+
+- 在 [docs/08_reviews/README.md](docs/08_reviews/README.md) 中补充上述评审提案文档索引。
 
 ## [2026-03-15]
 
