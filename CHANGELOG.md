@@ -23,6 +23,9 @@
 ### 变更
 
 - 在 [docs/08_reviews/README.md](docs/08_reviews/README.md) 中补充上述评审提案文档索引。
+- 在 [docs/02_p1_architecture/01_overall_architecture.md](docs/02_p1_architecture/01_overall_architecture.md) 中补入“三线吸收法”、算力调度器一级化、世界状态按时间尺度分层演进、分层免疫式安全和关系质量评价框架。
+- 在 [docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md](docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md) 中补入需求侧硬约束总表，并将上述吸收项升级为 `PDCP` 后续总体方案阶段的显式输入。
+- 在 [docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md) 中同步记录这轮对 Claude 提案和 `PDCP` 需求侧约束提案的正式吸收结论。
 
 ## [2026-03-15]
 

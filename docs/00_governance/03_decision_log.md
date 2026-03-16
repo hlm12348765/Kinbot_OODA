@@ -231,6 +231,13 @@
 | A-075 | 每一阶段都要检查系统各实体元素的组合，判断整机与服务是否仍然呈现“聪明、温暖、精致”的高端产品感，并能支撑 `20000 到 30000 元` 售价区间 | confirmed | `input/00_requirements/00_user_requirements_input.md` 对 Codex 的要求第 10 条与 `Step24` |
 | A-076 | 当 Codex 暂停并等待用户输入时，必须提出明确的审阅需求，至少指出要审阅的 issue、文档或具体提案位置，不能只给模糊的推进提示 | confirmed | 用户本轮明确要求 |
 | A-077 | 后置里程碑中的约束型文档允许提前起草，但它们只用于逆向约束前置设计，不代表项目已经越过前置里程碑；当前主优先级必须回到尚未关闭的前置里程碑 | confirmed | 用户本轮对 Milestone 顺序的质疑 |
+| A-078 | 当前主线正式采纳“三线吸收法”：继续以现有系统级架构保持稳定边界，同时吸收《架构重审与替代提案》的技术结构优化输入，以及《关系中心架构提案》的关系质量评价与产品原则输入 | confirmed | `docs/08_reviews/05_two_claude_proposals_review_and_next_steps.md` |
+| A-079 | 算力调度器需要从方法论能力进一步落入总体架构与 `PDCP` 主评审视图，并与 `TTFT / TPS / 热稳态持续 TPS` 一起成为后续总体方案与模块设计的显式输入 | confirmed | `docs/08_reviews/05_two_claude_proposals_review_and_next_steps.md` |
+| A-080 | `World State` 在 `PDCP` 节点继续保持统一状态平面，但后续总体方案应按执行态与安全态、任务上下文态、长期关系与服务态三类继续分层演进 | confirmed | `docs/08_reviews/05_two_claude_proposals_review_and_next_steps.md` |
+| A-081 | 安全能力在后续总体方案中应按分层免疫体系组织，至少区分本体防护与故障保护、运动安全与环境安全、业务授权与合规安全、服务协同与审计安全四层 | confirmed | `docs/08_reviews/05_two_claude_proposals_review_and_next_steps.md` |
+| A-082 | “关系质量”应被纳入总体方案、模块方案和体验验收的正式评价框架，但不冻结为新的超级核心引擎，也不让所有能力绕经单一关系核心 | confirmed | `docs/08_reviews/05_two_claude_proposals_review_and_next_steps.md`, `docs/08_reviews/08_relation_centered_architecture_proposal.md` |
+| A-083 | `PDCP` 会前必须显式对齐需求侧硬约束，不再默认这些约束只散落在用户需求文档中；至少要在主线架构文档里显式表达产品与业务、系统边界、治理、数据与部署、工程与项目管理五类硬约束 | confirmed | `docs/08_reviews/09_pdcp_requirement_constraints_and_blockers_proposal.md` |
+| A-084 | `D1 / D6 / D7` 继续作为 `PDCP` 后续总体方案与模块设计的一级阻断输入；此外，成本-性能-产品感统一决策、双视角一致性落地、接口冻结范围清单与夜间低照实证能力，已升级为当前关键路径关注项 | confirmed | `docs/08_reviews/09_pdcp_requirement_constraints_and_blockers_proposal.md` |
 
 ## 4. 尚未关闭的关键问题
 
@@ -425,6 +432,8 @@
 | 2026-03-10 | D-159 | `VLN` 量化责任下发 | `VLN` 专家线程需承接 `P1 / P2 / P3` 任务模板、结构化动作输出、`N_out`、目标 `TTFT / TPS` 与“模型规模 × 输入规模 × 是否可上线”判定表，并将结果回写到 `S1 / S4 / S7` | confirmed |
 | 2026-03-10 | D-160 | `KBT-32` 输入补强 | 总体方案与模块方案下发基线现显式吸收 `TTFT / TPS` 驱动的端侧算力定义，并要求 `S1 / S4 / S7` 共同承接相关验收口径与任务模板 | confirmed |
 | 2026-03-10 | D-161 | 跨线程 Codex 协作规范 | 其他线程如修改已关闭 issue 对应文档，必须同步回写 `docs/00_governance/03_decision_log.md`、`README.md`、`CHANGELOG.md`、对应 Linear issue / 评论和下游承接文档，避免“单文件已改、工作流未闭环” | confirmed |
+| 2026-03-17 | D-162 | Claude 提案吸收策略正式入主线 | 依据《两位 Claude 提案对比审阅与下一步计划》，主线架构正式采纳“三线吸收法”：保留当前系统级稳定边界，同时把技术结构优化与关系质量评价框架吸收到总体架构和 `PDCP` 评审包中 | confirmed |
+| 2026-03-17 | D-163 | `PDCP` 主文档补入需求侧硬约束 | 依据《PDCP评审准备：需求侧约束总表、阻断问题沟通提案》，当前主线架构文档和 `PDCP` 评审包已显式补入需求侧硬约束总表，并把 `D1 / D6 / D7` 与关键路径关注项一并前置到会前评审语境中 | confirmed |
 
 ## 7. 后续记录规则
 
