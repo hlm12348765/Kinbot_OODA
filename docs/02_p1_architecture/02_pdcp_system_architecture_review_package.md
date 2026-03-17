@@ -71,7 +71,6 @@
 Kinbot 一代不是单一本体，而是一个完整产品系统：
 
 ```mermaid
-%%{init: {'theme':'base','themeVariables':{'background':'#FFFFFF','primaryColor':'#F8FAFC','primaryTextColor':'#0F172A','primaryBorderColor':'#CBD5E1','lineColor':'#94A3B8','secondaryColor':'#EEF2FF','tertiaryColor':'#ECFDF5','fontFamily':'PingFang SC, Microsoft YaHei, Inter, sans-serif'},'flowchart':{'curve':'linear','nodeSpacing':36,'rankSpacing':48,'diagramPadding':8,'htmlLabels':true}}}%%
 flowchart LR
     U[老人本人 / 子女 / 保姆 / 访客]
 
@@ -98,12 +97,6 @@ flowchart LR
     C --> O
     C --> M
     C --> P
-    
-    classDef core fill:#EEF2FF,stroke:#6366F1,color:#0F172A,stroke-width:1.4px;
-    classDef mgmt fill:#F8FAFC,stroke:#64748B,color:#0F172A,stroke-width:1.2px;
-    classDef eng fill:#ECFDF5,stroke:#10B981,color:#0F172A,stroke-width:1.2px;
-    classDef result fill:#FFF7ED,stroke:#F59E0B,color:#0F172A,stroke-width:1.3px;
-    linkStyle default stroke:#94A3B8,stroke-width:1.4px;
 ```
 
 当前产品系统边界收敛为：
@@ -243,10 +236,10 @@ flowchart TB
 
 围绕头部如何集成感知、算力和执行机构，当前建议在 `PDCP` 节点形成如下正式提案：
 
-| 路线 | 当前定位 | 提案内容 | 架构影响 |
-| --- | --- | --- | --- |
-| 路线 `A`：灵活头部优先 | 当前正式主线 | 相机与主要交互器件集中在头部；高带宽算力板原则上与头部视觉器件同舱或上颈就近布置；头部电机与传动优先下放到躯干，通过颈部中轴传递；`MCU` 控制板优先落在躯干 | 头部更轻、更安静、更接近仿生目标；躯干承担更多热、供电和机电复杂度 |
-| 路线 `B`：机电一体头部 | 备线 / `EVT` 验证线 | 电机和传动也集成在头部，颈部更多承担固定和线束通道功能 | 头部作为独立机电模块更完整，但会显著抬高头部重量、热、噪声、维护与重心风险 |
+| 路线            | 当前定位           | 提案内容                                                                             | 架构影响                                |
+| ------------- | -------------- | -------------------------------------------------------------------------------- | ----------------------------------- |
+| 路线 `A`：灵活头部优先 | 当前主线候选         | 相机与主要交互器件集中在头部；高带宽算力板原则上与头部视觉器件同舱或上颈就近布置；头部电机与传动优先下放到躯干，通过颈部中轴传递；`MCU` 控制板优先落在躯干 | 头部更轻、更安静、更接近仿生目标；躯干承担更多热、供电和机电复杂度   |
+| 路线 `B`：机电一体头部 | 备线 / `EVT` 验证线 | 电机和传动也集成在头部，颈部更多承担固定和线束通道功能；这样躯干的复杂度更低                                           | 头部作为独立机电模块更完整，但会抬高头部重量、热、噪声、维护与重心风险 |
 
 当前建议：
 
@@ -254,7 +247,7 @@ flowchart TB
 2. 路线 `B` 可以在 `EVT` 前作为结构验证备线存在，但不建议成为当前默认量产主线
 3. 无论采用哪条路线，头部都必须被当作一级产品亮点来设计，而不是普通屏幕壳体
 
-### 5.1.3 头部仿生研究不是工业设计附属项，而是架构输入
+### 5.1.3 头部仿生研究作为架构输入
 
 既然当前产品理念相对保守，技术差异化就必须更多地体现在头部。
 
@@ -310,14 +303,14 @@ flowchart TB
 1. 一代量产主线不以深度相机或激光雷达作为正式依赖。
 2. 主线视觉组合收敛为“双目 + 单目”的 `RGB` 方案，总数量控制在 `3 到 5` 个。
 3. 深度与空间理解能力优先通过自研深度估计、多目几何融合、`IMU / 轮速计` 约束和低光增强补齐。
-4. 深度相机与激光雷达只允许作为 `EVT` 前的验证加速线存在，`EVT` 后默认退出一代量产主线。
+4. 深度相机与激光雷达只允许作为 `EVT` 前的对比基线存在，`EVT` 后默认退出一代量产主线。
 
 ```mermaid
 flowchart LR
     subgraph HEAD[头部优先纯视觉主线]
         H1[双目几何主感知对]
         H2[前向 / 交互单目]
-        H3[侧后向 / 补盲单目]
+        H3[侧后向 / 感知单目]
     end
 
     subgraph BODY[本体闭环约束]
