@@ -2,9 +2,13 @@
 
 ---
 
-文档版本：v1.1
+文档版本：v1.2
 创建日期：2026-03-08
 作者：Codex-架构师
+
+文档变更记录：
+- v1.2 | 2026-03-17 | Codex-架构师 | 补充文档内简版变更记录，并同步记录 Step36 带来的主线架构收敛更新。
+- v1.1 | 2026-03-08 | Codex-架构师 | 文档创建并开始按日期归档全仓关键变更。
 
 ---
 
@@ -26,10 +30,14 @@
 - 在 [docs/02_p1_architecture/01_overall_architecture.md](docs/02_p1_architecture/01_overall_architecture.md) 中补入“三线吸收法”、算力调度器一级化、世界状态按时间尺度分层演进、分层免疫式安全和关系质量评价框架。
 - 在 [docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md](docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md) 中补入需求侧硬约束总表，并将上述吸收项升级为 `PDCP` 后续总体方案阶段的显式输入。
 - 在 [docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md) 中同步记录这轮对 Claude 提案和 `PDCP` 需求侧约束提案的正式吸收结论。
-- 在 [docs/02_p1_architecture/01_overall_architecture.md](docs/02_p1_architecture/01_overall_architecture.md) 与 [docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md](docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md) 中补入一代纯视觉传感器架构提案，正式冻结“双目 + 单目 `3 到 5` 个相机 + 自研深度估计 + 多目几何融合”为量产主线，并将深度相机 / 激光雷达限制为 `EVT` 前验证加速线。
+- 在 [docs/02_p1_architecture/01_overall_architecture.md](docs/02_p1_architecture/01_overall_architecture.md) 与 [docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md](docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md) 中补入一代纯视觉传感器架构提案，正式冻结“双目 + 单目 `3 到 5` 个相机 + 自研深度估计 + 多目几何融合”为量产主线，并将深度相机 / 激光雷达改写为研发对比基线与真值参考链路。
 - 在 [docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md) 中补记纯视觉主线进入架构基线，以及其对 `C1 / C5`、自动标定、低照鲁棒性和夜间闭环验证的压力转移。
 - 在 [docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md](docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md) 中把需求侧硬约束、纯视觉主线、关系质量评价和分层免疫式安全真正下发到 `S1-S7`，并补齐各工作包的新增交付任务。
 - 将 [docs/08_reviews/09_pdcp_requirement_constraints_and_blockers_proposal.md](docs/08_reviews/09_pdcp_requirement_constraints_and_blockers_proposal.md) 的当前修订版本纳入分支维护。
+- 根据 `Step36` 更新 [docs/02_p1_architecture/01_overall_architecture.md](docs/02_p1_architecture/01_overall_architecture.md)、[docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md](docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md) 和 [docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md](docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md)，将一代收敛策略调整为“核心闭环强、服务闭环轻、技术突破集中”，并正式引入三级能力模式。
+- 更新 [docs/03_p2_feasibility/04_hardware_software_selection_matrix.md](docs/03_p2_feasibility/04_hardware_software_selection_matrix.md) 与 [docs/03_p2_feasibility/05_cost_structure_and_technology_downpath.md](docs/03_p2_feasibility/05_cost_structure_and_technology_downpath.md)，将整机 `BOM` 目标下修为 `5000 到 6000 元`，并明确纯视觉不过线时优先调整产品节奏而非回退主动传感主线。
+- 更新 [docs/02_p1_architecture/11_app_cloud_ops_minimal_loop.md](docs/02_p1_architecture/11_app_cloud_ops_minimal_loop.md) 与 [docs/02_p1_architecture/12_human_service_and_telemedicine_boundaries.md](docs/02_p1_architecture/12_human_service_and_telemedicine_boundaries.md)，将伴生系统和人工服务收敛为“最小可交付 + 可收缩覆盖”的服务架构。
+- 为本轮涉及的主线文档补充头部简版变更记录，统一版本号、更新日期、更新人与主要更新内容。
 
 ## [2026-03-15]
 

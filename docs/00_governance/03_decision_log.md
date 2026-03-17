@@ -2,9 +2,14 @@
 
 ---
 
-文档版本：v1.0
+文档版本：v1.2
 创建日期：2026-03-08
 作者：Codex-架构师
+
+文档变更记录：
+- v1.2 | 2026-03-17 | Codex-架构师 | 继续吸收 Step36，补齐纯视觉对比基线、三级能力模式、服务轻量化与成本收紧相关正式判断。
+- v1.1 | 2026-03-17 | Codex-架构师 | 吸收 Step36，更新 BOM、团队规模、价值排序，并记录纯视觉不过线时延迟节奏与受控回流预留。
+- v1.0 | 2026-03-08 | Codex-架构师 | 文档创建。
 
 ---
 
@@ -38,7 +43,7 @@
 | F-009 | 数据边界 | 原始视觉、语音、生物特征本地处理、匿名化、加密存储 | confirmed | `input/00_requirements/00_user_requirements_input.md` |
 | F-010 | 端云原则 | 直接处理视觉、语音和运动安全的能力必须在端侧 | confirmed | `input/00_requirements/00_user_requirements_input.md` |
 | F-011 | 离线原则 | 断网时运动和安全能力不应受影响 | confirmed | `input/00_requirements/00_user_requirements_input.md` |
-| F-012 | 工程目标 | 续航 > 4 小时，尺寸建议不超过 50 x 50 x 120 cm，预算 6000 到 8000 元，MVP 时间点 2027 年 1 月 | confirmed | `input/00_requirements/00_user_requirements_input.md` |
+| F-012 | 工程目标 | 续航 > 4 小时，尺寸建议不超过 50 x 50 x 120 cm，预算 5000 到 6000 元，MVP 时间点 2027 年 1 月 | confirmed | `input/00_requirements/00_user_requirements_input.md` |
 | F-013 | 首发目标用户 | 首发聚焦独居老人或子女不在身边的老两口，后续代际再扩展到普通家庭 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 2 |
 | F-014 | 首发市场 | 中国大陆 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 2 |
 | F-015 | 健康管理方向 | 目标包含生命体征接入、跌倒/异常检测、结合历史医疗档案的问诊与医疗联动、用药管理和买药 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 2 |
@@ -47,7 +52,7 @@
 | F-018 | 打断策略 | 可在遵守社会公认礼仪的前提下有限度地主动打断，并允许谨慎探索“俏皮”人设 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 2 |
 | F-019 | 异常上报边界 | 用户授权后允许自动上报异常 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 2 |
 | F-020 | 资源约束 | 未来几个月团队规模可达 60 人以上，允许部分硬件 ODM，自研强项在消费电子、AI、大模型、多模态交互，未来一年资金量级 8000 万到 1 亿元人民币 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 2 |
-| F-021 | 首版主价值排序 | 健康管理 > 陪伴交互 > 老人看护 > 家庭安全巡护 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 3 |
+| F-021 | 首版主价值排序 | 健康管理 > 陪伴交互 > 家庭安全巡护 > 老人看护 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 36 |
 | F-022 | 医疗档案来源 | 语音交互输入、手机 App 上传、纸质报告识别 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 3 |
 | F-023 | 医疗联动深度 | 首版包含交互式问诊、家属提醒、在线问诊转接、互联网医院开方购药、日常用药管理、紧急用药管理 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 3 |
 | F-024 | 购药能力 | 进入 MVP | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 3 |
@@ -75,7 +80,7 @@
 | F-046 | 协作同步方式 | `docs/00_governance/01_workflow.md` 中的阶段性待办和 issue 已同步到 Linear 项目 `Kinbot OODA 架构到量产预备` | confirmed | 本轮协作同步 |
 | F-047 | 文档与协作语言要求 | 本地 Markdown 文档和关联到 Linear 的项目、里程碑、issue、文档统一用中文撰写 | confirmed | `input/00_requirements/00_user_requirements_input.md` 对 Codex 的要求 |
 | F-048 | 项目总目标时间点 | 本机器人系统目标在 2026 年 12 月 31 日达到量产预备状态 | confirmed | `input/00_requirements/00_user_requirements_input.md` 对 Codex 的要求 |
-| F-049 | 当前与目标团队规模 | 当前团队约 25 到 30 人；在该周期内研发团队预计扩展到 100 人以上 | confirmed | `input/00_requirements/00_user_requirements_input.md` 对 Codex 的要求 |
+| F-049 | 当前与目标团队规模 | 当前团队约 25 到 30 人；在该周期内研发团队预计扩展到 60 到 80 人 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 36 |
 | F-050 | 架构弹性要求 | 当前架构按量产目标设计，但必须保留灵活性以应对具身智能行业和技术路线的快速变化 | confirmed | `input/00_requirements/00_user_requirements_input.md` 对 Codex 的要求 |
 | F-051 | 一期穿戴品牌优先级 | 一期优先兼容的小型穿戴品牌暂定为小米、华为 | provisional | `input/00_requirements/00_user_requirements_input.md` Step 6 |
 | F-052 | 后台人工服务需求 | 需要后台人工服务体系，可参考医院在线问诊模式 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 6 |
@@ -149,6 +154,8 @@
 | F-120 | `KBT-31` 审阅意见 | 用户在 `Step32` 中接受完整产品系统边界、四条一级业务闭环、部署边界和 `PDCP` 作为系统边界冻结门的定位，但指出当前总体架构基线过于偏向软件 / 算法视角，要求把机器人本体作为软硬一体产品实体显式纳入系统架构，并在此基础上重新审视一级接口面是否足以支撑模块并行设计 | confirmed | `Step32` |
 | F-121 | Claude 协作评审输入 | 用户在“对 Codex 的要求”第 `12` 条中要求认真与 Claude Code 协作，并在第二轮 `KBT-31` 审阅中明确指定 [docs/08_reviews/01_architect_review_and_plan.md](../08_reviews/01_architect_review_and_plan.md) 作为外部架构评审输入 | confirmed | `docs/00_governance/06_claude.md`、`Step32` |
 | F-122 | `KBT-31` 第三轮审阅结论 | 用户在 `Step33` 中接受完整产品系统边界、四条一级业务闭环、端侧 / 云侧 / 伴生系统部署边界，以及“双视角一致性检查机制 + Body Capability Contract + 接口稳定性策略”共同构成当前一级接口与治理基线，并接受 `PDCP` 通过后不再回退重定义系统边界 | confirmed | `Step33` |
+| F-123 | 纯视觉对比基线原则 | 深度相机 / 激光雷达只做研发对比基线与真值参考链路，不作为产品级 fallback | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 36 |
+| F-124 | 纯视觉不过线的节奏原则 | 若纯视觉路线不过线，优先延迟产品节奏，而不是回退主动传感主线 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 36 |
 
 ## 3. 当前架构性判断
 
@@ -218,9 +225,11 @@
 | A-062 | `Orient` 在 Kinbot 中不应只承担情境理解，还应承担对 `Observe` 结果的认知评价、尺度选择、时域压缩和子环切换 | confirmed | `KBT-28` 审阅结论 |
 | A-063 | `R4 关系与服务环` 是一代正式架构层，而不是仅作为运营层补充 | confirmed | `KBT-28` 审阅结论 |
 | A-064 | `OODA Scale Scheduler` 需要以一级架构能力身份出现，并成为运行时主导子环切换入口 | confirmed | `KBT-28` 审阅结论 |
-| A-065 | `KBT-18` 不应按零散功能列缺口，而应按“整机平台、R1、R2、R3、R4、伴生系统、工程化”7 个能力域来评估 | confirmed | `Step13` 对 `KBT-18` 的审阅意见 |
-| A-066 | 当前样机到量产预备的最大差距不是单点算法能力，而是产品闭环、伴生系统闭环和工程化体系 | provisional | 本轮缺口分析 |
-| A-067 | 当前三类阻断项默认收敛为：伴生系统与人工运营闭环、整机平台与成本收敛、工程化与 NPI 基线 | confirmed | `Step14` |
+| A-065 | 在更低 BOM 和更小团队约束下，一代应按“核心闭环强、服务闭环轻、技术突破集中”收敛，而不是默认所有闭环同等重做 | confirmed | `Step36`、当前架构提案 |
+| A-066 | 纯视觉路线在当前项目中不仅是选型结论，还是产品差异化与技术突破点，因此不应预设主动传感 fallback | confirmed | `Step36` |
+| A-067 | `KBT-18` 不应按零散功能列缺口，而应按“整机平台、R1、R2、R3、R4、伴生系统、工程化”7 个能力域来评估 | confirmed | `Step13` 对 `KBT-18` 的审阅意见 |
+| A-068 | 当前样机到量产预备的最大差距不是单点算法能力，而是产品闭环、伴生系统闭环和工程化体系 | provisional | 本轮缺口分析 |
+| A-069 | 当前三类阻断项默认收敛为：伴生系统与人工运营闭环、整机平台与成本收敛、工程化与 NPI 基线 | confirmed | `Step14` |
 | A-068 | 储物仓能力应保留，但现有传动机构过大过重，需要作为工程化重构项单列推进 | confirmed | `Step13` 对 `KBT-18` 的审阅意见 |
 | A-069 | 整机外观形态重构已是既定工程动作，应进入 `E2` 整机平台基线，而不是留作后续工业设计附属项 | confirmed | `Step13` 对 `KBT-18` 的审阅意见 |
 | A-070 | `E4 伴生系统与服务运营基线` 的优先级体现在先冻结接口、职责和交付面，不意味着伴生系统可以反向锁死本体硬件路线 | confirmed | `Step14` |
@@ -435,9 +444,13 @@
 | 2026-03-17 | D-162 | Claude 提案吸收策略正式入主线 | 依据《两位 Claude 提案对比审阅与下一步计划》，主线架构正式采纳“三线吸收法”：保留当前系统级稳定边界，同时把技术结构优化与关系质量评价框架吸收到总体架构和 `PDCP` 评审包中 | confirmed |
 | 2026-03-17 | D-163 | `PDCP` 主文档补入需求侧硬约束 | 依据《PDCP评审准备：需求侧约束总表、阻断问题沟通提案》，当前主线架构文档和 `PDCP` 评审包已显式补入需求侧硬约束总表，并把 `D1 / D6 / D7` 与关键路径关注项一并前置到会前评审语境中 | confirmed |
 | 2026-03-17 | D-164 | 一代纯视觉传感器方案正式进入架构基线 | 依据量产主线收敛结果，一代传感器方案现作为正式架构提案进入总体架构与 `PDCP` 文档：量产主线采用“双目 + 单目 `3 到 5` 个相机 + 自研深度估计 + 多目几何融合”，不把深度相机与激光雷达作为量产依赖 | confirmed |
-| 2026-03-17 | D-165 | 纯视觉主线的阶段边界与风险转移 | 深度相机与激光雷达只允许作为 `EVT` 前验证加速线；纯视觉主线带来的主要压力转移到 `C1` 端侧算力、`C5` 功耗与热设计、自动标定、低照鲁棒性和夜间闭环验证 | confirmed |
+| 2026-03-17 | D-165 | 纯视觉主线的阶段边界与风险转移 | 深度相机与激光雷达只允许作为研发对比基线与真值参考链路；纯视觉主线带来的主要压力转移到 `C1` 端侧算力、`C5` 功耗与热设计、自动标定、低照鲁棒性和夜间闭环验证 | confirmed |
 | 2026-03-17 | D-166 | `KBT-32` 吸收需求侧硬约束与纯视觉主线 | 总体方案与模块方案下发基线现正式继承需求侧硬约束总表、纯视觉传感器主线、算力调度器一级化、世界状态后续分层演进、分层免疫式安全与关系质量评价框架，不再只继承早期双视角和接口冻结结果 | confirmed |
 | 2026-03-17 | D-167 | `S1-S7` 新增共同交付要求 | `S1-S7` 当前必须显式回应纯视觉路线的低照验证、自动标定、图像质量监测、夜间闭环和关系质量评价；其中 `S1 / S4 / S5 / S7` 为纯视觉主线核心承接方，`S3 / S5 / S6 / S7` 为关系质量与高端产品感核心承接方 | confirmed |
+| 2026-03-17 | D-168 | Step36 成本与组织约束修订 | 当前一代整机 `BOM` 目标已从 `6000 到 8000 元` 下修为 `5000 到 6000 元`；团队规模目标由 `100+` 回调到 `60 到 80`，因此总体架构需从“高配完整系统”收敛为“核心闭环优先的轻高端系统” | confirmed |
+| 2026-03-17 | D-169 | 一代主价值排序修订 | 当前主价值排序更新为“健康管理 > 陪伴交互 > 家庭安全巡护 > 老人看护”；一代主链由“健康 + 陪伴”主导，安全与看护更多表现为辅链与组合结果 | confirmed |
+| 2026-03-17 | D-170 | 纯视觉主线不设产品 fallback | 深度相机与激光雷达在当前主线中只做研发对比基线与真值参考链路，不作为产品级 fallback；如果纯视觉不过线，优先调整产品节奏，而不是回退主动传感主线 | confirmed |
+| 2026-03-17 | D-171 | 受控回流预留 | 默认仍坚持原始敏感数据端侧处理，但架构层允许预留“授权 + 脱敏 + 加密 + 时效受限 + 用途受限”的受控回流接口，不把其写成当前默认主基线 | confirmed |
 
 ## 7. 后续记录规则
 
