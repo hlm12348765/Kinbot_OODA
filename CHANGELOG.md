@@ -2,11 +2,12 @@
 
 ---
 
-文档版本：v1.2
+文档版本：v1.3
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.3 | 2026-03-17 | Codex-架构师 | 按实际提交日期新增 2026-03-16 与 2026-03-17 章节，并清空“未发布”占位内容。
 - v1.2 | 2026-03-17 | Codex-架构师 | 补充文档内简版变更记录，并同步记录 Step36 带来的主线架构收敛更新。
 - v1.1 | 2026-03-08 | Codex-架构师 | 文档创建并开始按日期归档全仓关键变更。
 
@@ -20,13 +21,12 @@
 
 ## [未发布]
 
-### 新增
+暂无。
 
-- 新增 [docs/08_reviews/09_pdcp_requirement_constraints_and_blockers_proposal.md](docs/08_reviews/09_pdcp_requirement_constraints_and_blockers_proposal.md)，用于汇总PDCP评审准备中的需求侧约束、阻断问题与老板沟通提案。
+## [2026-03-17]
 
 ### 变更
 
-- 在 [docs/08_reviews/README.md](docs/08_reviews/README.md) 中补充上述评审提案文档索引。
 - 在 [docs/02_p1_architecture/01_overall_architecture.md](docs/02_p1_architecture/01_overall_architecture.md) 中补入“三线吸收法”、算力调度器一级化、世界状态按时间尺度分层演进、分层免疫式安全和关系质量评价框架。
 - 在 [docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md](docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md) 中补入需求侧硬约束总表，并将上述吸收项升级为 `PDCP` 后续总体方案阶段的显式输入。
 - 在 [docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md) 中同步记录这轮对 Claude 提案和 `PDCP` 需求侧约束提案的正式吸收结论。
@@ -39,6 +39,16 @@
 - 更新 [docs/02_p1_architecture/11_app_cloud_ops_minimal_loop.md](docs/02_p1_architecture/11_app_cloud_ops_minimal_loop.md) 与 [docs/02_p1_architecture/12_human_service_and_telemedicine_boundaries.md](docs/02_p1_architecture/12_human_service_and_telemedicine_boundaries.md)，将伴生系统和人工服务收敛为“最小可交付 + 可收缩覆盖”的服务架构。
 - 为本轮涉及的主线文档补充头部简版变更记录，统一版本号、更新日期、更新人与主要更新内容。
 - 在 [docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md](docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md) 中补充澄清：当前 `PDCP` 已形成方案基线需作为整机 `BOM` 基线输入，并新增 `PDCP` 通过后的 `BOM` 回传与一致性复核要求。
+
+## [2026-03-16]
+
+### 新增
+
+- 新增 [docs/08_reviews/09_pdcp_requirement_constraints_and_blockers_proposal.md](docs/08_reviews/09_pdcp_requirement_constraints_and_blockers_proposal.md)，用于汇总 PDCP 评审准备中的需求侧约束、阻断问题与老板沟通提案。
+
+### 变更
+
+- 在 [docs/08_reviews/README.md](docs/08_reviews/README.md) 中补充上述评审提案文档索引。
 
 ## [2026-03-15]
 
