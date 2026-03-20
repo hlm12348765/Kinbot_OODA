@@ -123,6 +123,7 @@
 - 更新 [docs/02_p1_architecture/11_app_cloud_ops_minimal_loop.md](docs/02_p1_architecture/11_app_cloud_ops_minimal_loop.md) 与 [docs/02_p1_architecture/12_human_service_and_telemedicine_boundaries.md](docs/02_p1_architecture/12_human_service_and_telemedicine_boundaries.md)，将伴生系统和人工服务收敛为“最小可交付 + 可收缩覆盖”的服务架构。
 - 为本轮涉及的主线文档补充头部简版变更记录，统一版本号、更新日期、更新人与主要更新内容。
 - 在 [docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md](docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md) 中补充澄清：当前 `PDCP` 已形成方案基线需作为整机 `BOM` 基线输入，并新增 `PDCP` 通过后的 `BOM` 回传与一致性复核要求。
+- 删除 [docs/10_team_planning/02_candidate_role_assessment.md](docs/10_team_planning/02_candidate_role_assessment.md)，保留团队规划目录只承载主基线提案，不再在当前主线维护候选人角色评估文档。
 
 ## [2026-03-16]
 
