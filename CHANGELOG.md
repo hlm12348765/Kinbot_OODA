@@ -2,11 +2,12 @@
 
 ---
 
-文档版本：v1.3
+文档版本：v1.4
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.4 | 2026-03-20 | Codex-架构师 | 新增 2026-03-20 章节，记录硬件专家线程的最新内存价格反馈及其对主线架构的吸收。
 - v1.3 | 2026-03-17 | Codex-架构师 | 按实际提交日期新增 2026-03-16 与 2026-03-17 章节，并清空“未发布”占位内容。
 - v1.2 | 2026-03-17 | Codex-架构师 | 补充文档内简版变更记录，并同步记录 Step36 带来的主线架构收敛更新。
 - v1.1 | 2026-03-08 | Codex-架构师 | 文档创建并开始按日期归档全仓关键变更。
@@ -22,6 +23,15 @@
 ## [未发布]
 
 暂无。
+
+## [2026-03-20]
+
+### 变更
+
+- 更新 [docs/03_p2_feasibility/04_hardware_software_selection_matrix.md](docs/03_p2_feasibility/04_hardware_software_selection_matrix.md) 与 [docs/03_p2_feasibility/05_cost_structure_and_technology_downpath.md](docs/03_p2_feasibility/05_cost_structure_and_technology_downpath.md)，吸收硬件专家线程基于最新内存与存储价格的评估反馈，补入 `C1` 子桶拆分以及 `8GB / 12GB / 16GB+` 内存路线判断。
+- 更新 [docs/02_p1_architecture/01_overall_architecture.md](docs/02_p1_architecture/01_overall_architecture.md) 与 [docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md](docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md)，将一代默认量产内存线、边界验证线与未来 `Pro SKU` 分层正式纳入架构基线。
+- 更新 [docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md](docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md)，把默认量产内存线与前瞻验证线继续下发到 `S1-S7`。
+- 更新 [docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md)，补记内存价格工作口径、`C1` 主矛盾变化以及默认量产内存线冻结结论。
 
 ## [2026-03-17]
 

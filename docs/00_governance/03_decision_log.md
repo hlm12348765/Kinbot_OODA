@@ -2,11 +2,12 @@
 
 ---
 
-文档版本：v1.2
+文档版本：v1.3
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.3 | 2026-03-20 | Codex-架构师 | 吸收硬件专家线程的最新内存价格反馈，补记 `C1` 子桶拆分、默认量产内存线与前瞻验证线的架构收敛结论。
 - v1.2 | 2026-03-17 | Codex-架构师 | 继续吸收 Step36，补齐纯视觉对比基线、三级能力模式、服务轻量化与成本收紧相关正式判断。
 - v1.1 | 2026-03-17 | Codex-架构师 | 吸收 Step36，更新 BOM、团队规模、价值排序，并记录纯视觉不过线时延迟节奏与受控回流预留。
 - v1.0 | 2026-03-08 | Codex-架构师 | 文档创建。
@@ -156,6 +157,7 @@
 | F-122 | `KBT-31` 第三轮审阅结论 | 用户在 `Step33` 中接受完整产品系统边界、四条一级业务闭环、端侧 / 云侧 / 伴生系统部署边界，以及“双视角一致性检查机制 + Body Capability Contract + 接口稳定性策略”共同构成当前一级接口与治理基线，并接受 `PDCP` 通过后不再回退重定义系统边界 | confirmed | `Step33` |
 | F-123 | 纯视觉对比基线原则 | 深度相机 / 激光雷达只做研发对比基线与真值参考链路，不作为产品级 fallback | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 36 |
 | F-124 | 纯视觉不过线的节奏原则 | 若纯视觉路线不过线，优先延迟产品节奏，而不是回退主动传感主线 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 36 |
+| F-125 | 当前内存与存储价格工作口径 | 当前工作口径按 `1 USD ≈ 6.9 CNY`、`LPDDR5 ≈ 15 USD / GB`、`eMMC ≈ 15 USD / 32GB` 粗算，用于评估 `C1` 子桶压力 | confirmed | `docs/03_p2_feasibility/04_hardware_software_selection_matrix.md` |
 
 ## 3. 当前架构性判断
 
@@ -247,6 +249,8 @@
 | A-082 | “关系质量”应被纳入总体方案、模块方案和体验验收的正式评价框架，但不冻结为新的超级核心引擎，也不让所有能力绕经单一关系核心 | confirmed | `docs/08_reviews/05_two_claude_proposals_review_and_next_steps.md`, `docs/08_reviews/08_relation_centered_architecture_proposal.md` |
 | A-083 | `PDCP` 会前必须显式对齐需求侧硬约束，不再默认这些约束只散落在用户需求文档中；至少要在主线架构文档里显式表达产品与业务、系统边界、治理、数据与部署、工程与项目管理五类硬约束 | confirmed | `docs/08_reviews/09_pdcp_requirement_constraints_and_blockers_proposal.md` |
 | A-084 | `D1 / D6 / D7` 继续作为 `PDCP` 后续总体方案与模块设计的一级阻断输入；此外，成本-性能-产品感统一决策、双视角一致性落地、接口冻结范围清单与夜间低照实证能力，已升级为当前关键路径关注项 | confirmed | `docs/08_reviews/09_pdcp_requirement_constraints_and_blockers_proposal.md` |
+| A-085 | 当前 `C1` 的主矛盾已从“选哪颗芯片”进一步转为“`RAM / Flash` 能否在 `5000 到 6000 元` 整机 `BOM` 约束下支撑默认量产线” | confirmed | `docs/03_p2_feasibility/04_hardware_software_selection_matrix.md`, `docs/03_p2_feasibility/05_cost_structure_and_technology_downpath.md` |
+| A-086 | 一代量产默认线应先按 `8GB RAM + 64GB Flash` 组织；`12GB + 64GB` 只作边界验证线，`16GB + 64GB` 及以上只作前瞻验证线或未来 `Pro SKU` 候选 | confirmed | 硬件专家线程最新评估反馈 |
 
 ## 4. 尚未关闭的关键问题
 
@@ -451,6 +455,9 @@
 | 2026-03-17 | D-169 | 一代主价值排序修订 | 当前主价值排序更新为“健康管理 > 陪伴交互 > 家庭安全巡护 > 老人看护”；一代主链由“健康 + 陪伴”主导，安全与看护更多表现为辅链与组合结果 | confirmed |
 | 2026-03-17 | D-170 | 纯视觉主线不设产品 fallback | 深度相机与激光雷达在当前主线中只做研发对比基线与真值参考链路，不作为产品级 fallback；如果纯视觉不过线，优先调整产品节奏，而不是回退主动传感主线 | confirmed |
 | 2026-03-17 | D-171 | 受控回流预留 | 默认仍坚持原始敏感数据端侧处理，但架构层允许预留“授权 + 脱敏 + 加密 + 时效受限 + 用途受限”的受控回流接口，不把其写成当前默认主基线 | confirmed |
+| 2026-03-20 | D-172 | `C1` 子桶与内存路线收敛 | 当前 `C1` 必须拆成 `SoC / RAM / Flash / 高速外围` 四个子桶单独管理；其中 `RAM` 已成为一代默认量产线的首要成本驱动项 | confirmed |
+| 2026-03-20 | D-173 | 一代默认量产内存线冻结 | 当前主线把 `8GB RAM + 64GB Flash` 作为一代默认量产线，把 `12GB + 64GB` 定义为边界验证线，把 `16GB + 64GB` 及以上定义为前瞻验证线或未来 `Pro SKU` 候选 | confirmed |
+| 2026-03-20 | D-174 | 架构与方案下发吸收内存约束 | 总体架构、`PDCP` 评审包与 `S1-S7` 下发基线现正式吸收“默认量产线 vs 前瞻验证线”分层，不再默认让更重端侧模型路线直接进入一期量产标准配置 | confirmed |
 
 ## 7. 后续记录规则
 
