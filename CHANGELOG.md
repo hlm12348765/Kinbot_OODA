@@ -32,6 +32,7 @@
 - 更新 [docs/02_p1_architecture/01_overall_architecture.md](docs/02_p1_architecture/01_overall_architecture.md) 与 [docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md](docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md)，将一代默认量产内存线、边界验证线与未来 `Pro SKU` 分层正式纳入架构基线。
 - 更新 [docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md](docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md)，把默认量产内存线与前瞻验证线继续下发到 `S1-S7`。
 - 更新 [docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md)，补记内存价格工作口径、`C1` 主矛盾变化以及默认量产内存线冻结结论。
+- 删除 [docs/10_team_planning/02_candidate_role_assessment.md](docs/10_team_planning/02_candidate_role_assessment.md)，保留团队规划目录只承载主基线提案，不再在当前主线维护候选人角色评估文档。
 
 ## [2026-03-17]
 
