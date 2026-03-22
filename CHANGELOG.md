@@ -2,11 +2,12 @@
 
 ---
 
-文档版本：v1.13
+文档版本：v1.14
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.14 | 2026-03-22 | Codex-架构师 | 在 2026-03-22 章节追加 Step40 对应的架构演进分析修订，强化“同代际优化”与“代际跃迁”的区分，并将“下一代机器人 = 下一代人机共存家庭生活”的代际定义纳入评审输入。
 - v1.13 | 2026-03-22 | Codex-架构师 | 在 2026-03-22 章节追加术语表扩充维护，补记 `OODA`、`ConOps`、`OpsCon`、`家庭元场景`、`PDCP`、`L1/L2/L3`、`VLM/VLN`、`TTFT/TPS` 等仓库高频术语的统一定义。
 - v1.12 | 2026-03-22 | Codex-架构师 | 在 2026-03-22 章节追加 Kinbot `ConOps / OpsCon` 基线更新，补记总体架构与 `PDCP` 架构评审包中的系统工程图示增强。
 - v1.11 | 2026-03-22 | Codex-架构师 | 在 2026-03-22 章节追加 Step39 对应的 Kinbot 架构演进分析文档、评审目录索引更新和根索引补全记录。
@@ -55,6 +56,7 @@
 - 更新 [docs/08_reviews/README.md](docs/08_reviews/README.md) 与 [README.md](README.md)，同步新增评审文档索引，并补全根索引中原本缺失的 `08_reviews` 目录条目。
 - 更新 [docs/02_p1_architecture/01_overall_architecture.md](docs/02_p1_architecture/01_overall_architecture.md) 与 [docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md](docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md)，补入面向家庭元场景的 `ConOps / OpsCon` 基线，新增任务线程图、运行节点图和运行模式图，以系统工程视角补强 `PDCP` 阶段的架构表达。
 - 更新 [docs/00_governance/04_glossary.md](docs/00_governance/04_glossary.md)，补充 `OODA`、`R1-R4`、`OODA Scale Scheduler`、`ConOps`、`OpsCon`、`家庭元场景`、`PDCP`、`Body Capability Contract`、`L1 / L2 / L3`、真值参考链、`VLM / VLN`、`TTFT / TPS`、`MVP / EVT / NPI` 等仓库高频术语定义。
+- 更新 [docs/08_reviews/10_kinbot_architecture_evolution_analysis.md](docs/08_reviews/10_kinbot_architecture_evolution_analysis.md)，吸收 Step40，显式区分一代期内的“同代际优化”和二代方向上的“代际跃迁”，并将“定义下一代机器人就是定义下一代人机共存家庭生活”的代际口径纳入架构演进分析。
 
 ## [2026-03-21]
 
