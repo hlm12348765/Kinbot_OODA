@@ -2,11 +2,12 @@
 
 ---
 
-文档版本：v1.9
+文档版本：v1.10
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.10 | 2026-03-22 | Codex-架构师 | 在 2026-03-22 章节追加最新需求输入纳入版本维护，以及删除 `input/01_candidate_resume/huangjie_profile.md` 并清理仓库索引的记录。
 - v1.9 | 2026-03-22 | Codex-架构师 | 在 2026-03-22 章节追加用户手动修正的 Demo 本体实体架构视图版本维护，补记长焦相机模块归属和三芯片连接关系调整。
 - v1.8 | 2026-03-22 | Codex-架构师 | 在 2026-03-22 章节追加用户对 Demo 体系理念 / 技术理念区分的修正，以及本体实体架构图中算力与控制域拆分为三芯片子模块的图示调整。
 - v1.7 | 2026-03-22 | Codex-架构师 | 在 2026-03-22 章节追加 Step38 相关的 Demo 架构澄清吸收与主线文档回写记录。
@@ -45,6 +46,8 @@
 - 更新 [docs/01_p0_concept/04_demo_validation_system_architecture_reconstruction_and_product_inheritance_assessment.md](docs/01_p0_concept/04_demo_validation_system_architecture_reconstruction_and_product_inheritance_assessment.md)，吸收用户手动调整的本体实体架构视图，修正长焦相机在实体域中的归属，并细化头部、躯干、底盘、电源热域与三芯片子模块之间的连接关系。
 - 更新 [docs/02_p1_architecture/01_overall_architecture.md](docs/02_p1_architecture/01_overall_architecture.md)、[docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md](docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md) 与 [docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md](docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md)，将验证 Demo 的高位主观测经验、三芯片职责分层、头部声学反向约束与验证平台器件淘汰边界回写到主线架构和 `S1-S7` 下发基线。
 - 更新 [docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md)，补记验证 Demo 的正式事实和主线吸收结论。
+- 将 [input/00_requirements/00_user_requirements_input.md](input/00_requirements/00_user_requirements_input.md) 的最新用户修改纳入本轮版本维护。
+- 删除 [input/01_candidate_resume/huangjie_profile.md](input/01_candidate_resume/huangjie_profile.md)，并同步更新 [input/01_candidate_resume/README.md](input/01_candidate_resume/README.md) 与 [README.md](README.md) 中的目录索引。
 
 ## [2026-03-21]
 

@@ -2,11 +2,12 @@
 
 ---
 
-文档版本：v1.1
+文档版本：v1.2
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.2 | 2026-03-22 | Codex-架构师 | 同步仓库结构变更，纳入最新用户需求输入版本维护，并清理已删除的候选人简历文件索引。
 - v1.1 | 2026-03-22 | Codex-架构师 | 补充验证 Demo 系统架构还原文档索引，并同步最近新增的研究文档索引与推荐阅读顺序。
 - v1.0 | 2026-03-08 | Codex-架构师 | 文档创建。
 
@@ -179,8 +180,7 @@
 │   │   ├── 02_kinbot_prd_v0_3_hardware_parameters.csv
 │   │   └── 03_kinbot_parameters_id_e.csv
 │   └── 01_candidate_resume
-│       ├── README.md
-│       └── huangjie_profile.md
+│       └── README.md
 ├── output
 └── tmp
 ```
