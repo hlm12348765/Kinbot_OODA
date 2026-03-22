@@ -2,11 +2,12 @@
 
 ---
 
-文档版本：v1.1
+文档版本：v1.2
 创建日期：2026-03-22
 作者：Codex-架构师
 
 文档变更记录：
+- v1.2 | 2026-03-23 | Codex-架构师 | 将“代际”定义抽离为独立的《机器人代际划分框架》，并在本文中改为引用该框架，统一同代际优化、代际跃迁、物理服务跃迁与人机共存样式变革的判断口径。
 - v1.1 | 2026-03-22 | Codex-架构师 | 吸收 Step40，对“同代际优化”与“代际跃迁”做显式区分，并引入参考军事作战理念的代际定义，强调下一代机器人对应下一代人机共存家庭生活方式。
 - v1.0 | 2026-03-22 | Codex-架构师 | 基于 Step39，按“验证 Demo → 当前主线 → 一代演进 → 二代与终局方向”四阶段分析 Kinbot 架构演进，并结合 2026 年具身智能前沿进展给出阶段提案。
 
@@ -41,6 +42,8 @@
    参考 [docs/08_reviews/06_two_alternative_architecture_proposals_comparison.md](./06_two_alternative_architecture_proposals_comparison.md) 与 [docs/08_reviews/05_two_claude_proposals_review_and_next_steps.md](./05_two_claude_proposals_review_and_next_steps.md)
 4. 阶段 4：第一代产品之后的终局方向与二代设想  
    参考 [docs/08_reviews/01_architect_review_and_plan.md](./01_architect_review_and_plan.md) 与 [docs/08_reviews/08_relation_centered_architecture_proposal.md](./08_relation_centered_architecture_proposal.md)
+5. 代际划分与跃迁判断  
+   统一参考 [docs/08_reviews/11_robot_generation_classification_framework.md](./11_robot_generation_classification_framework.md)
 
 ### 2.2 家庭元场景
 
@@ -58,18 +61,15 @@
 3. 对低照、断网、低成本条件的稳健闭环能力；
 4. 对长期服务和持续学习的演进能力。
 
-### 2.3 代际的定义
+### 2.3 代际定义与本文口径
 
-本文对“代际”的定义，不采用“器件升级一轮就是下一代”的口径，而更接近军事作战理念中的“代际变革”：
+本文对“同代际优化”“代际跃迁”“信息服务到物理服务的跃迁”以及 `Predict / Learn` 跨环能力的判断，统一引用 [机器人代际划分框架](./11_robot_generation_classification_framework.md)。
 
-1. 同代际优化，指在同一套作战样式或同一套家庭共存样式下，把能力、成本、效率、可靠性做得更强。
-2. 代际跃迁，指机器人与人、家庭空间、服务系统之间的基本协作样式发生变化。
-3. 因此，定义下一代家庭机器人，不只是定义更强的硬件和模型，而是在定义“下一代人机共存的家庭生活”。
+在本文中：
 
-对应到 Kinbot：
-
-1. 阶段 2 到阶段 3，属于一代产品期内的同代际优化。
-2. 阶段 4，才开始触及真正的代际跃迁。
+1. 阶段 2 到阶段 3，属于一代产品期内的同代际优化；
+2. 阶段 4，才开始触及真正的代际跃迁；
+3. Kinbot 一代已经不再是纯信息服务机器人，而是在向“初级物理服务代”迈进。
 
 ## 3. 总结论
 

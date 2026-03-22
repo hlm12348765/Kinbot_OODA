@@ -2,13 +2,14 @@
 
 ---
 
-文档版本：v1.1
+文档版本：v1.2
 创建日期：2026-03-11
 作者：Codex-架构师
 
 ---
 
 文档变更记录：
+- v1.2 | 2026-03-23 | Codex-架构师 | 新增《机器人代际划分框架》索引，并将其与《Kinbot架构演进分析与阶段提案》建立引用关系。
 - v1.1 | 2026-03-22 | Codex-架构师 | 新增《Kinbot架构演进分析与阶段提案》索引，并补入目录级版本维护记录。
 - v1.0 | 2026-03-11 | Codex-架构师 | 文档创建。
 
@@ -32,6 +33,7 @@
 - `08_relation_centered_architecture_proposal.md`：关系中心架构提案。核心主题：Claude 关系中心架构提案原文。
 - `09_pdcp_requirement_constraints_and_blockers_proposal.md`：PDCP评审约束与阻断提案。核心主题：需求侧约束总表、推进阻断问题与老板沟通提案。
 - `10_kinbot_architecture_evolution_analysis.md`：Kinbot架构演进分析与阶段提案。核心主题：从验证 Demo、当前 PDCP 主线、一代期内演进到二代与终局方向的四阶段架构分析。
+- `11_robot_generation_classification_framework.md`：机器人代际划分框架。核心主题：界定驱动机器人代际发展的因素、同代际优化与代际跃迁边界，以及信息服务到物理服务的关键分界。
 
 ## 维护规则
 

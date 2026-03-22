@@ -2,11 +2,12 @@
 
 ---
 
-文档版本：v1.14
+文档版本：v1.15
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.15 | 2026-03-23 | Codex-架构师 | 新增 2026-03-23 章节，记录机器人代际划分框架入仓、架构演进分析引用重构、术语表扩充、README 回归维护以及最新需求输入纳入版本维护。
 - v1.14 | 2026-03-22 | Codex-架构师 | 在 2026-03-22 章节追加 Step40 对应的架构演进分析修订，强化“同代际优化”与“代际跃迁”的区分，并将“下一代机器人 = 下一代人机共存家庭生活”的代际定义纳入评审输入。
 - v1.13 | 2026-03-22 | Codex-架构师 | 在 2026-03-22 章节追加术语表扩充维护，补记 `OODA`、`ConOps`、`OpsCon`、`家庭元场景`、`PDCP`、`L1/L2/L3`、`VLM/VLN`、`TTFT/TPS` 等仓库高频术语的统一定义。
 - v1.12 | 2026-03-22 | Codex-架构师 | 在 2026-03-22 章节追加 Kinbot `ConOps / OpsCon` 基线更新，补记总体架构与 `PDCP` 架构评审包中的系统工程图示增强。
@@ -33,6 +34,19 @@
 ## [未发布]
 
 暂无。
+
+## [2026-03-23]
+
+### 新增
+
+- 新增 [docs/08_reviews/11_robot_generation_classification_framework.md](docs/08_reviews/11_robot_generation_classification_framework.md)，用于独立定义机器人代际发展的驱动因素、`OODA` 主环与 `Predict / Learn` 跨环能力关系，以及同代际优化、代际跃迁、信息服务与物理服务之间的边界。
+
+### 变更
+
+- 更新 [docs/08_reviews/10_kinbot_architecture_evolution_analysis.md](docs/08_reviews/10_kinbot_architecture_evolution_analysis.md)，将代际定义与判断口径统一引用《机器人代际划分框架》，并明确 `Kinbot` 一代已不再属于纯信息服务机器人，而是在向初级物理服务代迈进。
+- 更新 [docs/00_governance/04_glossary.md](docs/00_governance/04_glossary.md)，补充 `Predict`、`Learn`、`同代际优化`、`代际跃迁`、`信息服务` 与 `物理服务` 等术语定义。
+- 更新 [docs/08_reviews/README.md](docs/08_reviews/README.md) 与 [README.md](README.md)，补充《机器人代际划分框架》索引，并同步修正仓库总览中 `OODA` 主环 / 跨环能力口径与团队规模目标。
+- 将 [input/00_requirements/00_user_requirements_input.md](input/00_requirements/00_user_requirements_input.md) 的最新用户修改纳入本轮版本维护。
 
 ## [2026-03-22]
 

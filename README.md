@@ -2,11 +2,12 @@
 
 ---
 
-文档版本：v1.3
+文档版本：v1.4
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.4 | 2026-03-23 | Codex-架构师 | 新增《机器人代际划分框架》索引，校正当前团队规模目标，并将 `OODA` 与 `Predict / Learn` 的关系表述更新为“主环 + 跨环能力”口径。
 - v1.3 | 2026-03-22 | Codex-架构师 | 新增 Step39 对应的《Kinbot架构演进分析与阶段提案》文档索引，并补全评审目录在根索引中的缺失条目。
 - v1.2 | 2026-03-22 | Codex-架构师 | 同步仓库结构变更，纳入最新用户需求输入版本维护，并清理已删除的候选人简历文件索引。
 - v1.1 | 2026-03-22 | Codex-架构师 | 补充验证 Demo 系统架构还原文档索引，并同步最近新增的研究文档索引与推荐阅读顺序。
@@ -14,7 +15,7 @@
 
 ---
 
-面向家庭室内场景的智能移动交互机器人系统设计项目。项目以 `OODA`（Observe、Orient、Decide、Act）为主循环，目标是在家庭环境中实现安全、自主、可演进的移动与交互能力。
+面向家庭室内场景的智能移动交互机器人系统设计项目。项目以 `OODA`（Observe、Orient、Decide、Act）为主循环，并将 `Predict / Learn` 作为跨环能力，目标是在家庭环境中实现安全、自主、可演进的移动与交互能力。
 
 ## 项目目标
 
@@ -54,7 +55,7 @@
 - 2026 年 1 到 2 月主要完成需求收集与 Demo 概念验证
 - 目标是在 2026 年 12 月 31 日达到量产预备状态
 - 2027 年 1 月作为 MVP 验证与验收窗口
-- 当前团队约 25 到 30 人，周期内预计扩展到 100 人以上
+- 当前团队约 25 到 30 人，周期内预计扩展到 60 到 80 人
 
 当前已有基础：
 
@@ -129,6 +130,7 @@
 - `docs/08_reviews/08_relation_centered_architecture_proposal.md`：关系中心架构提案。核心主题：Claude 关系中心架构提案原文。
 - `docs/08_reviews/09_pdcp_requirement_constraints_and_blockers_proposal.md`：PDCP评审约束与阻断提案。核心主题：需求侧约束总表、推进阻断问题与老板沟通提案。
 - `docs/08_reviews/10_kinbot_architecture_evolution_analysis.md`：Kinbot架构演进分析与阶段提案。核心主题：从验证 Demo、当前 PDCP 主线、一代期内演进到二代与终局方向的四阶段架构分析。
+- `docs/08_reviews/11_robot_generation_classification_framework.md`：机器人代际划分框架。核心主题：界定驱动机器人代际发展的因素、同代际优化与代际跃迁边界，以及信息服务到物理服务的关键分界。
 - `docs/09_research/01_vln_role_analysis_and_technical_plan.md`：VLN角色分析与技术规划。核心主题：VLN 在 Kinbot 中的角色分析、路线判断和技术规划。
 - `docs/09_research/02_uwb_phase1_maturity_and_integration_value.md`：UWB一期技术成熟度与接入价值评估。核心主题：UWB 一期成熟度、样品验证门和接入价值评估。
 - `docs/09_research/04_spacemit_k3_chip_assessment_for_embodied_ai.md`：进迭时空 K3 芯片信息整合与具身智能适配评估。核心主题：K3 芯片事实整合、端侧大模型推理能力、具身智能机器人应用优劣势与 Kinbot 适配判断。
@@ -231,8 +233,9 @@
 33. `docs/05_p4_beta_dvt/01_mvp_validation_plan.md`
 34. `docs/06_p5_launch_readiness/02_production_introduction_launch_and_delivery_closure.md`
 35. `docs/00_governance/04_glossary.md`
-36. `docs/08_reviews/02_architecture_principles_alignment_check.md`
-37. `docs/10_team_planning/01_development_team_proposal.md`
+36. `docs/08_reviews/11_robot_generation_classification_framework.md`
+37. `docs/08_reviews/02_architecture_principles_alignment_check.md`
+38. `docs/10_team_planning/01_development_team_proposal.md`
 
 ## 下一步建议
 
