@@ -2,11 +2,12 @@
 
 ---
 
-文档版本：v1.3
+文档版本：v1.4
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.4 | 2026-03-22 | Codex-架构师 | 吸收 Step38，补记验证 Demo 的三芯片职责分层、8 个独立视觉模组、双麦阵成因、重量修正与主线吸收边界。
 - v1.3 | 2026-03-20 | Codex-架构师 | 吸收硬件专家线程的最新内存价格反馈，补记 `C1` 子桶拆分、默认量产内存线与前瞻验证线的架构收敛结论。
 - v1.2 | 2026-03-17 | Codex-架构师 | 继续吸收 Step36，补齐纯视觉对比基线、三级能力模式、服务轻量化与成本收紧相关正式判断。
 - v1.1 | 2026-03-17 | Codex-架构师 | 吸收 Step36，更新 BOM、团队规模、价值排序，并记录纯视觉不过线时延迟节奏与受控回流预留。
@@ -138,6 +139,11 @@
 | F-103 | 自主设想权限 | 当问题尚未澄清但推进不能停时，允许 Codex 先提出自己的设想，再提交用户审核 | confirmed | 用户本轮说明 |
 | F-104 | 人工服务经济性约束 | 用户接受保留客服运营坐席作为一代首线人工服务提案，但明确指出该能力的实际覆盖形态仍会受公司经营投入产出比影响 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 26 |
 | F-105 | `KBT-13` 时效定义修正 | 用户要求澄清“医疗专业主体 `10 分钟` 内给出接单结果”的定义；其含义应是服务已受理，而不是已经给出首轮专业回复 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 26 |
+| F-106 | 验证 Demo 三芯片职责分层 | `RK3576` 负责交互主控，`S100Pro` 负责整机视觉接入、导航控制与算法运行，`AT32F457VET7` 负责整机电机 / 传动控制（除底盘）及 `IMU`、超声波等传感器接入 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 38 |
+| F-107 | 验证 Demo 视觉模组事实 | 验证 Demo 采用 `8` 个独立视觉模组：`4` 个高位双目环视模组和 `4` 个低位超广角模组；高位双目约 `75cm`，作为 `VLN` 主观测输入；低位超广角约 `18cm`，原计划用于地面观测与 `SLAM` 匹配，但实际未有效用上；长焦相机同样未有效用上 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 38 |
+| F-108 | 验证 Demo 双麦阵成因 | `6` 麦阵位于头顶，但圆形大屏上沿对其形成遮挡和反射，因此又在颈部增加 `8` 麦阵进行修补 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 38 |
+| F-109 | 验证 Demo 重量修正 | 验证 Demo 整机重量修正为 `50kg`，此前 `70kg` 为输入错误 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 38 |
+| F-110 | 验证 Demo 电池与热配置 | `466.2Wh + 被动散热` 为验证 Demo 真实实装配置 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 38 |
 | F-106 | IPD 参考要求 | 全生命周期管理需要参考 IPD（集成产品开发）流程 | confirmed | `input/00_requirements/00_user_requirements_input.md` 对 Codex 的要求 |
 | F-107 | 架构冻结时间要求 | 产品定义与架构冻结争取在 2026-03-31 达成 | confirmed | `input/00_requirements/00_user_requirements_input.md` 对 Codex 的要求 |
 | F-108 | OODA 革新要求 | 需要理解并革新 OODA 在 AGI 与具身智能时代的用法，并考虑单轮 OODA 跨越的时间尺度、空间尺度及其动态调整能力 | confirmed | `input/00_requirements/00_user_requirements_input.md` 对 Codex 的要求 |
@@ -458,6 +464,11 @@
 | 2026-03-20 | D-172 | `C1` 子桶与内存路线收敛 | 当前 `C1` 必须拆成 `SoC / RAM / Flash / 高速外围` 四个子桶单独管理；其中 `RAM` 已成为一代默认量产线的首要成本驱动项 | confirmed |
 | 2026-03-20 | D-173 | 一代默认量产内存线冻结 | 当前主线把 `8GB RAM + 64GB Flash` 作为一代默认量产线，把 `12GB + 64GB` 定义为边界验证线，把 `16GB + 64GB` 及以上定义为前瞻验证线或未来 `Pro SKU` 候选 | confirmed |
 | 2026-03-20 | D-174 | 架构与方案下发吸收内存约束 | 总体架构、`PDCP` 评审包与 `S1-S7` 下发基线现正式吸收“默认量产线 vs 前瞻验证线”分层，不再默认让更重端侧模型路线直接进入一期量产标准配置 | confirmed |
+| 2026-03-22 | D-175 | 验证 Demo 平台定位收敛 | 验证 Demo 正式收敛为“高冗余验证平台”，其价值在于本体能力验证、主动传感研发对比基线和纯视觉真值参考链，而不是一代量产架构前身 | confirmed |
+| 2026-03-22 | D-176 | 高位主观测经验进入主线 | 验证 Demo 已证明高位双目主观测对 `VLN` 与环境理解有明确价值，因此一代主线继续坚持“头部 / 上半身优先承载核心视觉器件”的空间架构方向 | confirmed |
+| 2026-03-22 | D-177 | 低位 / 长焦观测不直接继承 | 验证 Demo 中低位 `4` 超广角与长焦相机未真正进入主闭环，因此产品主线不继承其器件配置，只继承“地面补盲需求”和“中远距识别需求”这两类待重新论证的能力需求 | confirmed |
+| 2026-03-22 | D-178 | 头部声学反向约束进入主线 | 验证 Demo 的双麦阵并存来自圆形大屏对头顶麦阵的遮挡与反射，这被正式视为头部视觉 / 屏幕 / 声学 / 结构未协同收敛的反向样本，一代产品不得继续采用“先定造型、再叠加麦阵修补”的方式 | confirmed |
+| 2026-03-22 | D-179 | Demo 经验下发到 `PDCP` 与 `S1-S7` | 当前主线已要求 `PDCP` 和总体方案下发基线同步吸收验证 Demo 的三芯片职责分层、高位主观测经验、主动传感真值链定位，以及验证平台器件淘汰边界 | confirmed |
 
 ## 7. 后续记录规则
 

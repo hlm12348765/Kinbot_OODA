@@ -2,11 +2,12 @@
 
 ---
 
-文档版本：v1.6
+文档版本：v1.7
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.7 | 2026-03-22 | Codex-架构师 | 在 2026-03-22 章节追加 Step38 相关的 Demo 架构澄清吸收与主线文档回写记录。
 - v1.6 | 2026-03-22 | Codex-架构师 | 新增 2026-03-22 章节，记录验证 Demo 架构还原文档、`K3` 研究文档入仓及相关索引更新。
 - v1.5 | 2026-03-21 | Codex-架构师 | 新增仓库级 `AGENTS.md`，用于固定代理协作规则、事实源优先级与版本维护纪律。
 - v1.4 | 2026-03-20 | Codex-架构师 | 新增 2026-03-20 章节，记录硬件专家线程的最新内存价格反馈及其对主线架构的吸收。
@@ -37,6 +38,9 @@
 
 - 更新 [docs/01_p0_concept/README.md](docs/01_p0_concept/README.md) 与 [README.md](README.md)，补充验证 Demo 架构还原文档索引，并同步最近新增的 `K3` 研究文档索引与推荐阅读顺序。
 - 更新 [input/00_requirements/README.md](input/00_requirements/README.md)，补充验证 Demo 参数输入文件索引。
+- 更新 [docs/01_p0_concept/04_demo_validation_system_architecture_reconstruction_and_product_inheritance_assessment.md](docs/01_p0_concept/04_demo_validation_system_architecture_reconstruction_and_product_inheritance_assessment.md)，吸收 `Step38` 对三芯片职责、8 个独立视觉模组、双麦阵成因、真实电池与散热配置及整机重量修正的澄清。
+- 更新 [docs/02_p1_architecture/01_overall_architecture.md](docs/02_p1_architecture/01_overall_architecture.md)、[docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md](docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md) 与 [docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md](docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md)，将验证 Demo 的高位主观测经验、三芯片职责分层、头部声学反向约束与验证平台器件淘汰边界回写到主线架构和 `S1-S7` 下发基线。
+- 更新 [docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md)，补记验证 Demo 的正式事实和主线吸收结论。
 
 ## [2026-03-21]
 
