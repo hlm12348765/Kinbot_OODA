@@ -486,3 +486,11 @@
 4. `466.2Wh + 被动散热` 是真实实装配置，还是阶段性目标参数。
 	1. 真实实装配置。
 5. 需澄清，整机重量是50kg，此前输入参数有误，已在input/00_requirements/03_kinbot_parameters_id_e.csv中同步修改。
+# Step 39：架构演进分析
+1. 分为3～4个阶段去看架构的演进
+	1. 阶段1：docs/01_p0_concept/04_demo_validation_system_architecture_reconstruction_and_product_inheritance_assessment
+	2. 阶段2：docs/02_p1_architecture/01_overall_architecture和docs/02_p1_architecture/02_pdcp_system_architecture_review_package
+	3. 阶段3：分析docs/08_reviews/06_two_alternative_architecture_proposals_comparison和docs/08_reviews/05_two_claude_proposals_review_and_next_steps，给出阶段2的评审包在Kinbot第一代产品期间应当做的演进
+	4. 阶段4：进一步分析docs/08_reviews/01_architect_review_and_plan和docs/08_reviews/08_relation_centered_architecture_proposal，指出Kinbot在第一代产品之后，进一步向家庭机器人终局架构演进的方向，以及可能在第二代产品中运用的架构设想。
+2. 以上分析形成一个完整的文档，放在08_reviews目录下。
+3. 演进分析需要紧扣Kinbot面对的场景之上的家庭元场景，要有对AI和具身智能在2026年最前沿进展的关联和分析。

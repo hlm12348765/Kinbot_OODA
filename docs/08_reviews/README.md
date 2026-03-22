@@ -2,9 +2,15 @@
 
 ---
 
-文档版本：v1.0
+文档版本：v1.1
 创建日期：2026-03-11
 作者：Codex-架构师
+
+---
+
+文档变更记录：
+- v1.1 | 2026-03-22 | Codex-架构师 | 新增《Kinbot架构演进分析与阶段提案》索引，并补入目录级版本维护记录。
+- v1.0 | 2026-03-11 | Codex-架构师 | 文档创建。
 
 ---
 
@@ -25,6 +31,7 @@
 - `07_architecture_restatement_and_alternative_proposal.md`：架构重审与替代提案。核心主题：Claude 架构重申与替代提案原文。
 - `08_relation_centered_architecture_proposal.md`：关系中心架构提案。核心主题：Claude 关系中心架构提案原文。
 - `09_pdcp_requirement_constraints_and_blockers_proposal.md`：PDCP评审约束与阻断提案。核心主题：需求侧约束总表、推进阻断问题与老板沟通提案。
+- `10_kinbot_architecture_evolution_analysis.md`：Kinbot架构演进分析与阶段提案。核心主题：从验证 Demo、当前 PDCP 主线、一代期内演进到二代与终局方向的四阶段架构分析。
 
 ## 维护规则
 

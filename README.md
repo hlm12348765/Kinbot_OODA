@@ -2,11 +2,12 @@
 
 ---
 
-文档版本：v1.2
+文档版本：v1.3
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.3 | 2026-03-22 | Codex-架构师 | 新增 Step39 对应的《Kinbot架构演进分析与阶段提案》文档索引，并补全评审目录在根索引中的缺失条目。
 - v1.2 | 2026-03-22 | Codex-架构师 | 同步仓库结构变更，纳入最新用户需求输入版本维护，并清理已删除的候选人简历文件索引。
 - v1.1 | 2026-03-22 | Codex-架构师 | 补充验证 Demo 系统架构还原文档索引，并同步最近新增的研究文档索引与推荐阅读顺序。
 - v1.0 | 2026-03-08 | Codex-架构师 | 文档创建。
@@ -120,6 +121,14 @@
 - `docs/06_p5_launch_readiness/02_production_introduction_launch_and_delivery_closure.md`：量产导入、发布准备与交付闭环。核心主题：量产导入、发布准备与交付闭环设计。
 - `docs/08_reviews/01_architect_review_and_plan.md`：架构师综合评审与计划。核心主题：Claude 架构评审意见与关键路径建议。
 - `docs/08_reviews/02_architecture_principles_alignment_check.md`：架构原则符合度检查。核心主题：总体架构与架构原则的符合度检查。
+- `docs/08_reviews/03_fix_completion_report.md`：文档一致性修复完成报告。核心主题：历史修复动作和回归完成情况记录。
+- `docs/08_reviews/04_second_round_document_consistency_audit.md`：第二轮文档一致性与严谨度审查报告。核心主题：第二轮文档一致性审计与问题清单。
+- `docs/08_reviews/05_two_claude_proposals_review_and_next_steps.md`：两位 Claude 提案对比审阅与下一步计划。核心主题：两位 Claude 提案对比审阅与吸收计划。
+- `docs/08_reviews/06_two_alternative_architecture_proposals_comparison.md`：两种替代架构提案对比分析。核心主题：两种替代架构提案的优劣对比。
+- `docs/08_reviews/07_architecture_restatement_and_alternative_proposal.md`：架构重审与替代提案。核心主题：Claude 架构重申与替代提案原文。
+- `docs/08_reviews/08_relation_centered_architecture_proposal.md`：关系中心架构提案。核心主题：Claude 关系中心架构提案原文。
+- `docs/08_reviews/09_pdcp_requirement_constraints_and_blockers_proposal.md`：PDCP评审约束与阻断提案。核心主题：需求侧约束总表、推进阻断问题与老板沟通提案。
+- `docs/08_reviews/10_kinbot_architecture_evolution_analysis.md`：Kinbot架构演进分析与阶段提案。核心主题：从验证 Demo、当前 PDCP 主线、一代期内演进到二代与终局方向的四阶段架构分析。
 - `docs/09_research/01_vln_role_analysis_and_technical_plan.md`：VLN角色分析与技术规划。核心主题：VLN 在 Kinbot 中的角色分析、路线判断和技术规划。
 - `docs/09_research/02_uwb_phase1_maturity_and_integration_value.md`：UWB一期技术成熟度与接入价值评估。核心主题：UWB 一期成熟度、样品验证门和接入价值评估。
 - `docs/09_research/04_spacemit_k3_chip_assessment_for_embodied_ai.md`：进迭时空 K3 芯片信息整合与具身智能适配评估。核心主题：K3 芯片事实整合、端侧大模型推理能力、具身智能机器人应用优劣势与 Kinbot 适配判断。
