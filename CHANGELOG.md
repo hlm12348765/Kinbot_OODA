@@ -2,11 +2,13 @@
 
 ---
 
-文档版本：v1.7
+文档版本：v1.9
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.9 | 2026-03-22 | Codex-架构师 | 在 2026-03-22 章节追加用户手动修正的 Demo 本体实体架构视图版本维护，补记长焦相机模块归属和三芯片连接关系调整。
+- v1.8 | 2026-03-22 | Codex-架构师 | 在 2026-03-22 章节追加用户对 Demo 体系理念 / 技术理念区分的修正，以及本体实体架构图中算力与控制域拆分为三芯片子模块的图示调整。
 - v1.7 | 2026-03-22 | Codex-架构师 | 在 2026-03-22 章节追加 Step38 相关的 Demo 架构澄清吸收与主线文档回写记录。
 - v1.6 | 2026-03-22 | Codex-架构师 | 新增 2026-03-22 章节，记录验证 Demo 架构还原文档、`K3` 研究文档入仓及相关索引更新。
 - v1.5 | 2026-03-21 | Codex-架构师 | 新增仓库级 `AGENTS.md`，用于固定代理协作规则、事实源优先级与版本维护纪律。
@@ -39,6 +41,8 @@
 - 更新 [docs/01_p0_concept/README.md](docs/01_p0_concept/README.md) 与 [README.md](README.md)，补充验证 Demo 架构还原文档索引，并同步最近新增的 `K3` 研究文档索引与推荐阅读顺序。
 - 更新 [input/00_requirements/README.md](input/00_requirements/README.md)，补充验证 Demo 参数输入文件索引。
 - 更新 [docs/01_p0_concept/04_demo_validation_system_architecture_reconstruction_and_product_inheritance_assessment.md](docs/01_p0_concept/04_demo_validation_system_architecture_reconstruction_and_product_inheritance_assessment.md)，吸收 `Step38` 对三芯片职责、8 个独立视觉模组、双麦阵成因、真实电池与散热配置及整机重量修正的澄清。
+- 更新 [docs/01_p0_concept/04_demo_validation_system_architecture_reconstruction_and_product_inheritance_assessment.md](docs/01_p0_concept/04_demo_validation_system_architecture_reconstruction_and_product_inheritance_assessment.md)，按用户审阅意见修正验证 Demo 的“体系理念激进、技术方案不算激进”评价口径，并重画本体实体架构图，将算力与控制域拆分为 `RK3576 / S100Pro / AT32F457VET7` 三个子模块及其归属连接。
+- 更新 [docs/01_p0_concept/04_demo_validation_system_architecture_reconstruction_and_product_inheritance_assessment.md](docs/01_p0_concept/04_demo_validation_system_architecture_reconstruction_and_product_inheritance_assessment.md)，吸收用户手动调整的本体实体架构视图，修正长焦相机在实体域中的归属，并细化头部、躯干、底盘、电源热域与三芯片子模块之间的连接关系。
 - 更新 [docs/02_p1_architecture/01_overall_architecture.md](docs/02_p1_architecture/01_overall_architecture.md)、[docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md](docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md) 与 [docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md](docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md)，将验证 Demo 的高位主观测经验、三芯片职责分层、头部声学反向约束与验证平台器件淘汰边界回写到主线架构和 `S1-S7` 下发基线。
 - 更新 [docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md)，补记验证 Demo 的正式事实和主线吸收结论。
 
