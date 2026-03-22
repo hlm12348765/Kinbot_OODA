@@ -2,11 +2,12 @@
 
 ---
 
-文档版本：v1.11
+文档版本：v1.12
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.12 | 2026-03-22 | Codex-架构师 | 在 2026-03-22 章节追加 Kinbot `ConOps / OpsCon` 基线更新，补记总体架构与 `PDCP` 架构评审包中的系统工程图示增强。
 - v1.11 | 2026-03-22 | Codex-架构师 | 在 2026-03-22 章节追加 Step39 对应的 Kinbot 架构演进分析文档、评审目录索引更新和根索引补全记录。
 - v1.10 | 2026-03-22 | Codex-架构师 | 在 2026-03-22 章节追加最新需求输入纳入版本维护，以及删除 `input/01_candidate_resume/huangjie_profile.md` 并清理仓库索引的记录。
 - v1.9 | 2026-03-22 | Codex-架构师 | 在 2026-03-22 章节追加用户手动修正的 Demo 本体实体架构视图版本维护，补记长焦相机模块归属和三芯片连接关系调整。
@@ -51,6 +52,7 @@
 - 删除 [input/01_candidate_resume/huangjie_profile.md](input/01_candidate_resume/huangjie_profile.md)，并同步更新 [input/01_candidate_resume/README.md](input/01_candidate_resume/README.md) 与 [README.md](README.md) 中的目录索引。
 - 新增 [docs/08_reviews/10_kinbot_architecture_evolution_analysis.md](docs/08_reviews/10_kinbot_architecture_evolution_analysis.md)，按 `Step39` 从验证 Demo、当前 `PDCP` 主线、一代期内演进到二代与终局方向，对 Kinbot 架构做四阶段演进分析，并补入与 2026 年具身智能前沿进展的关联判断。
 - 更新 [docs/08_reviews/README.md](docs/08_reviews/README.md) 与 [README.md](README.md)，同步新增评审文档索引，并补全根索引中原本缺失的 `08_reviews` 目录条目。
+- 更新 [docs/02_p1_architecture/01_overall_architecture.md](docs/02_p1_architecture/01_overall_architecture.md) 与 [docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md](docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md)，补入面向家庭元场景的 `ConOps / OpsCon` 基线，新增任务线程图、运行节点图和运行模式图，以系统工程视角补强 `PDCP` 阶段的架构表达。
 
 ## [2026-03-21]
 
