@@ -2,11 +2,12 @@
 
 ---
 
-文档版本：v1.5
+文档版本：v1.6
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.6 | 2026-03-22 | Codex-架构师 | 新增 2026-03-22 章节，记录验证 Demo 架构还原文档、`K3` 研究文档入仓及相关索引更新。
 - v1.5 | 2026-03-21 | Codex-架构师 | 新增仓库级 `AGENTS.md`，用于固定代理协作规则、事实源优先级与版本维护纪律。
 - v1.4 | 2026-03-20 | Codex-架构师 | 新增 2026-03-20 章节，记录硬件专家线程的最新内存价格反馈及其对主线架构的吸收。
 - v1.3 | 2026-03-17 | Codex-架构师 | 按实际提交日期新增 2026-03-16 与 2026-03-17 章节，并清空“未发布”占位内容。
@@ -25,11 +26,28 @@
 
 暂无。
 
+## [2026-03-22]
+
+### 新增
+
+- 新增 [docs/01_p0_concept/04_demo_validation_system_architecture_reconstruction_and_product_inheritance_assessment.md](docs/01_p0_concept/04_demo_validation_system_architecture_reconstruction_and_product_inheritance_assessment.md)，用于从验证平台参数表还原 Demo 系统架构，并评估其对 Kinbot 产品架构的继承与淘汰关系。
+- 新增 [input/00_requirements/03_kinbot_parameters_id_e.csv](input/00_requirements/03_kinbot_parameters_id_e.csv)，用于记录验证 Demo 的整机、传感器、交互、底盘与电气参数配置。
+
+### 变更
+
+- 更新 [docs/01_p0_concept/README.md](docs/01_p0_concept/README.md) 与 [README.md](README.md)，补充验证 Demo 架构还原文档索引，并同步最近新增的 `K3` 研究文档索引与推荐阅读顺序。
+- 更新 [input/00_requirements/README.md](input/00_requirements/README.md)，补充验证 Demo 参数输入文件索引。
+
 ## [2026-03-21]
 
 ### 新增
 
 - 新增 [AGENTS.md](AGENTS.md)，用于固定仓库级代理协作规则、事实源优先级、编辑边界、架构推进纪律、Linear 协作规则与 Git 维护要求。
+- 新增 [docs/09_research/04_spacemit_k3_chip_assessment_for_embodied_ai.md](docs/09_research/04_spacemit_k3_chip_assessment_for_embodied_ai.md)，用于整合进迭时空 `K3` 芯片的已确认事实、模型支持口径、具身智能机器人适配性与端侧大模型推理优劣势判断。
+
+### 变更
+
+- 更新 [docs/09_research/README.md](docs/09_research/README.md) 与 [README.md](README.md)，补充 `K3` 研究文档索引与推荐阅读路径。
 
 ## [2026-03-20]
 

@@ -2,9 +2,13 @@
 
 ---
 
-文档版本：v1.0
+文档版本：v1.1
 创建日期：2026-03-13
 作者：Codex-架构师
+
+文档变更记录：
+- v1.1 | 2026-03-22 | Codex-架构师 | 补充验证 Demo 参数输入文件索引。
+- v1.0 | 2026-03-13 | Codex-架构师 | 文档创建。
 
 ---
 
@@ -19,6 +23,7 @@
 - `00_user_requirements_input.md`：用户需求输入。核心主题：产品需求、边界、阶段性澄清与对 Codex 的要求。
 - `01_kinbot_prd_v0_2_hardware_parameters.csv`：Kinbot PRD v0.2 硬件参数。核心主题：早期版本 Kinbot 硬件参数需求表。
 - `02_kinbot_prd_v0_3_hardware_parameters.csv`：Kinbot PRD v0.3 硬件参数。核心主题：更新后的硬件参数草案与技术探索空间。
+- `03_kinbot_parameters_id_e.csv`：验证平台 ID 方案 E 系统参数。核心主题：验证 Demo 的整机、传感器、交互、底盘与电气参数配置。
 
 ## 维护规则
 

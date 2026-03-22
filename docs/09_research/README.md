@@ -2,9 +2,13 @@
 
 ---
 
-文档版本：v1.0
+文档版本：v1.1
 创建日期：2026-03-11
 作者：Codex-架构师
+
+文档变更记录：
+- v1.1 | 2026-03-22 | Codex-架构师 | 补充进迭时空 K3 芯片研究文档索引。
+- v1.0 | 2026-03-11 | Codex-架构师 | 文档创建。
 
 ---
 
@@ -18,6 +22,7 @@
 
 - `01_vln_role_analysis_and_technical_plan.md`：VLN角色分析与技术规划。核心主题：VLN 在 Kinbot 中的角色分析、路线判断和技术规划。
 - `02_uwb_phase1_maturity_and_integration_value.md`：UWB一期技术成熟度与接入价值评估。核心主题：UWB 一期成熟度、样品验证门和接入价值评估。
+- `04_spacemit_k3_chip_assessment_for_embodied_ai.md`：进迭时空 K3 芯片信息整合与具身智能适配评估。核心主题：K3 芯片事实整合、端侧大模型推理能力、具身智能机器人应用优劣势与 Kinbot 适配判断。
 
 ## 维护规则
 
