@@ -2,11 +2,14 @@
 
 ---
 
-文档版本：v1.2
+文档版本：v1.5
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.5 | 2026-03-21 | Codex-架构师 | 新增仓库级 `AGENTS.md`，用于固定代理协作规则、事实源优先级与版本维护纪律。
+- v1.4 | 2026-03-20 | Codex-架构师 | 新增 2026-03-20 章节，记录硬件专家线程的最新内存价格反馈及其对主线架构的吸收。
+- v1.3 | 2026-03-17 | Codex-架构师 | 按实际提交日期新增 2026-03-16 与 2026-03-17 章节，并清空“未发布”占位内容。
 - v1.2 | 2026-03-17 | Codex-架构师 | 补充文档内简版变更记录，并同步记录 Step36 带来的主线架构收敛更新。
 - v1.1 | 2026-03-08 | Codex-架构师 | 文档创建并开始按日期归档全仓关键变更。
 
@@ -20,13 +23,28 @@
 
 ## [未发布]
 
+暂无。
+
+## [2026-03-21]
+
 ### 新增
 
-- 新增 [docs/08_reviews/09_pdcp_requirement_constraints_and_blockers_proposal.md](docs/08_reviews/09_pdcp_requirement_constraints_and_blockers_proposal.md)，用于汇总PDCP评审准备中的需求侧约束、阻断问题与老板沟通提案。
+- 新增 [AGENTS.md](AGENTS.md)，用于固定仓库级代理协作规则、事实源优先级、编辑边界、架构推进纪律、Linear 协作规则与 Git 维护要求。
+
+## [2026-03-20]
 
 ### 变更
 
-- 在 [docs/08_reviews/README.md](docs/08_reviews/README.md) 中补充上述评审提案文档索引。
+- 更新 [docs/03_p2_feasibility/04_hardware_software_selection_matrix.md](docs/03_p2_feasibility/04_hardware_software_selection_matrix.md) 与 [docs/03_p2_feasibility/05_cost_structure_and_technology_downpath.md](docs/03_p2_feasibility/05_cost_structure_and_technology_downpath.md)，吸收硬件专家线程基于最新内存与存储价格的评估反馈，补入 `C1` 子桶拆分以及 `8GB / 12GB / 16GB+` 内存路线判断。
+- 更新 [docs/02_p1_architecture/01_overall_architecture.md](docs/02_p1_architecture/01_overall_architecture.md) 与 [docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md](docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md)，将一代默认量产内存线、边界验证线与未来 `Pro SKU` 分层正式纳入架构基线。
+- 更新 [docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md](docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md)，把默认量产内存线与前瞻验证线继续下发到 `S1-S7`。
+- 更新 [docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md)，补记内存价格工作口径、`C1` 主矛盾变化以及默认量产内存线冻结结论。
+- 删除 [docs/10_team_planning/02_candidate_role_assessment.md](docs/10_team_planning/02_candidate_role_assessment.md)，保留团队规划目录只承载主基线提案，不再在当前主线维护候选人角色评估文档。
+
+## [2026-03-17]
+
+### 变更
+
 - 在 [docs/02_p1_architecture/01_overall_architecture.md](docs/02_p1_architecture/01_overall_architecture.md) 中补入“三线吸收法”、算力调度器一级化、世界状态按时间尺度分层演进、分层免疫式安全和关系质量评价框架。
 - 在 [docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md](docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md) 中补入需求侧硬约束总表，并将上述吸收项升级为 `PDCP` 后续总体方案阶段的显式输入。
 - 在 [docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md) 中同步记录这轮对 Claude 提案和 `PDCP` 需求侧约束提案的正式吸收结论。
@@ -40,6 +58,16 @@
 - 为本轮涉及的主线文档补充头部简版变更记录，统一版本号、更新日期、更新人与主要更新内容。
 - 在 [docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md](docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md) 中补充澄清：当前 `PDCP` 已形成方案基线需作为整机 `BOM` 基线输入，并新增 `PDCP` 通过后的 `BOM` 回传与一致性复核要求。
 - 删除 [docs/10_team_planning/02_candidate_role_assessment.md](docs/10_team_planning/02_candidate_role_assessment.md)，保留团队规划目录只承载主基线提案，不再在当前主线维护候选人角色评估文档。
+
+## [2026-03-16]
+
+### 新增
+
+- 新增 [docs/08_reviews/09_pdcp_requirement_constraints_and_blockers_proposal.md](docs/08_reviews/09_pdcp_requirement_constraints_and_blockers_proposal.md)，用于汇总 PDCP 评审准备中的需求侧约束、阻断问题与老板沟通提案。
+
+### 变更
+
+- 在 [docs/08_reviews/README.md](docs/08_reviews/README.md) 中补充上述评审提案文档索引。
 
 ## [2026-03-15]
 
