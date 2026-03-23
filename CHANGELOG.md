@@ -2,11 +2,12 @@
 
 ---
 
-文档版本：v1.16
+文档版本：v1.17
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.17 | 2026-03-23 | Codex-架构师 | 在 2026-03-23 章节追加《开发团队提案》的 AI-native Team 升级维护，并同步根索引和团队规划目录索引。
 - v1.16 | 2026-03-23 | Codex-架构师 | 在 2026-03-23 章节追加一代硬件架构收敛决策的主线吸收，补记两芯片硬件基线、`1` 双目 + `2` 单目纯视觉组合、头部多自由度、单麦阵和稳健底盘基线进入总体架构、`PDCP` 与方案下发基线。
 - v1.15 | 2026-03-23 | Codex-架构师 | 新增 2026-03-23 章节，记录机器人代际划分框架入仓、架构演进分析引用重构、术语表扩充、README 回归维护以及最新需求输入纳入版本维护。
 - v1.14 | 2026-03-22 | Codex-架构师 | 在 2026-03-22 章节追加 Step40 对应的架构演进分析修订，强化“同代际优化”与“代际跃迁”的区分，并将“下一代机器人 = 下一代人机共存家庭生活”的代际定义纳入评审输入。
@@ -52,6 +53,8 @@
 - 更新 [docs/02_p1_architecture/01_overall_architecture.md](docs/02_p1_architecture/01_overall_architecture.md) 与 [docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md](docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md)，将一代硬件关键基线收敛为“主控 `SoC` + 实时控制 `MCU`”、`1` 组双目 + `2` 个单目、单麦阵头部优先、头部多自由度和稳健底盘基线，并新增基于系统架构原则的正反面影响分析。
 - 更新 [docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md](docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md)，将上述硬件收敛决策继续下发到 `S1-S7`。
 - 更新 [docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md)，补记一代两芯片硬件基线、视觉主线进一步收窄、头部主动观察、单麦阵和底盘设计基线等正式决策。
+- 更新 [docs/10_team_planning/01_development_team_proposal.md](docs/10_team_planning/01_development_team_proposal.md)，将团队提案升级为 `AI-native Team` 提案，明确“持续产出产品定义、技术突破和商业闭环”是当前组织建设的生死线，并将团队编制口径收敛到 `60-80` 人的人类团队加 AI 协作层模式。
+- 更新 [docs/10_team_planning/README.md](docs/10_team_planning/README.md) 与 [README.md](README.md)，同步团队规划目录与根索引中的文档主题描述。
 
 ## [2026-03-22]
 

@@ -2,11 +2,12 @@
 
 ---
 
-文档版本：v1.4
+文档版本：v1.5
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.5 | 2026-03-23 | Codex-架构师 | 同步团队规划目录的 AI-native Team 升级口径，更新《开发团队提案》的索引描述。
 - v1.4 | 2026-03-23 | Codex-架构师 | 新增《机器人代际划分框架》索引，校正当前团队规模目标，并将 `OODA` 与 `Predict / Learn` 的关系表述更新为“主环 + 跨环能力”口径。
 - v1.3 | 2026-03-22 | Codex-架构师 | 新增 Step39 对应的《Kinbot架构演进分析与阶段提案》文档索引，并补全评审目录在根索引中的缺失条目。
 - v1.2 | 2026-03-22 | Codex-架构师 | 同步仓库结构变更，纳入最新用户需求输入版本维护，并清理已删除的候选人简历文件索引。
@@ -134,7 +135,7 @@
 - `docs/09_research/01_vln_role_analysis_and_technical_plan.md`：VLN角色分析与技术规划。核心主题：VLN 在 Kinbot 中的角色分析、路线判断和技术规划。
 - `docs/09_research/02_uwb_phase1_maturity_and_integration_value.md`：UWB一期技术成熟度与接入价值评估。核心主题：UWB 一期成熟度、样品验证门和接入价值评估。
 - `docs/09_research/04_spacemit_k3_chip_assessment_for_embodied_ai.md`：进迭时空 K3 芯片信息整合与具身智能适配评估。核心主题：K3 芯片事实整合、端侧大模型推理能力、具身智能机器人应用优劣势与 Kinbot 适配判断。
-- `docs/10_team_planning/01_development_team_proposal.md`：开发团队提案。核心主题：基于当前架构与总体方案，反推出量产预备前所需的团队结构、人数规模和阶段扩编建议。
+- `docs/10_team_planning/01_development_team_proposal.md`：开发团队提案。核心主题：基于当前架构与总体方案，定义量产预备前所需的 AI-native Team、人与 AI 协作机制、团队结构、人数规模和阶段扩编建议。
 
 ## 仓库结构
 
