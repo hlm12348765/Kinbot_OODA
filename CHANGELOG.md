@@ -2,11 +2,12 @@
 
 ---
 
-文档版本：v1.17
+文档版本：v1.18
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.18 | 2026-03-23 | Codex-架构师 | 在 2026-03-23 章节追加 Step41 对应的 Agent 增强平面主线吸收、方案下发、术语扩充、决策记录补记与需求输入版本维护。
 - v1.17 | 2026-03-23 | Codex-架构师 | 在 2026-03-23 章节追加《开发团队提案》的 AI-native Team 升级维护，并同步根索引和团队规划目录索引。
 - v1.16 | 2026-03-23 | Codex-架构师 | 在 2026-03-23 章节追加一代硬件架构收敛决策的主线吸收，补记两芯片硬件基线、`1` 双目 + `2` 单目纯视觉组合、头部多自由度、单麦阵和稳健底盘基线进入总体架构、`PDCP` 与方案下发基线。
 - v1.15 | 2026-03-23 | Codex-架构师 | 新增 2026-03-23 章节，记录机器人代际划分框架入仓、架构演进分析引用重构、术语表扩充、README 回归维护以及最新需求输入纳入版本维护。
@@ -55,6 +56,11 @@
 - 更新 [docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md)，补记一代两芯片硬件基线、视觉主线进一步收窄、头部主动观察、单麦阵和底盘设计基线等正式决策。
 - 更新 [docs/10_team_planning/01_development_team_proposal.md](docs/10_team_planning/01_development_team_proposal.md)，将团队提案升级为 `AI-native Team` 提案，明确“持续产出产品定义、技术突破和商业闭环”是当前组织建设的生死线，并将团队编制口径收敛到 `60-80` 人的人类团队加 AI 协作层模式。
 - 更新 [docs/10_team_planning/README.md](docs/10_team_planning/README.md) 与 [README.md](README.md)，同步团队规划目录与根索引中的文档主题描述。
+- 更新 [docs/02_p1_architecture/01_overall_architecture.md](docs/02_p1_architecture/01_overall_architecture.md) 与 [docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md](docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md)，将 Step41 正式收敛为“一代 Agent 增强平面”，明确长期记忆、技能化能力组织、连接器抽象与受控任务编排进入一代主线，但不新增一级模块，也不把“自主创造新技能”写成一代正式承诺。
+- 更新 [docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md](docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md)，将一代 Agent 增强平面继续下发到 `S1-S7`，要求 `S3 / S4 / S5 / S6 / S7` 显式回答长期记忆、技能化、连接器与受控任务编排的落地边界。
+- 更新 [docs/08_reviews/10_kinbot_architecture_evolution_analysis.md](docs/08_reviews/10_kinbot_architecture_evolution_analysis.md)，将 Agent 增强平面纳入一代期内的同代际优化路径，并明确“自主创造新技能”更适合保留在研究线与后续代际跃迁方向中。
+- 更新 [docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md) 与 [docs/00_governance/04_glossary.md](docs/00_governance/04_glossary.md)，补记 Agent 增强平面相关正式事实、架构判断和统一术语。
+- 将 [input/00_requirements/00_user_requirements_input.md](input/00_requirements/00_user_requirements_input.md) 的 Step41 最新用户修改纳入本轮版本维护。
 
 ## [2026-03-22]
 

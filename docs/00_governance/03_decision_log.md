@@ -2,11 +2,12 @@
 
 ---
 
-文档版本：v1.5
+文档版本：v1.6
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.6 | 2026-03-23 | Codex-架构师 | 吸收 Step41，补记“一代 Agent 增强平面”相关正式事实与架构判断，明确长期记忆、技能化、连接器与受控任务编排进入主线，自主创造新技能继续停留在研究线。
 - v1.5 | 2026-03-23 | Codex-架构师 | 吸收最新架构收敛决策，补记两芯片硬件基线、`1` 双目 + `2` 单目视觉主线、头部多自由度、单麦阵与稳健底盘基线，以及相关架构判断。
 - v1.4 | 2026-03-22 | Codex-架构师 | 吸收 Step38，补记验证 Demo 的三芯片职责分层、8 个独立视觉模组、双麦阵成因、重量修正与主线吸收边界。
 - v1.3 | 2026-03-20 | Codex-架构师 | 吸收硬件专家线程的最新内存价格反馈，补记 `C1` 子桶拆分、默认量产内存线与前瞻验证线的架构收敛结论。
@@ -171,6 +172,9 @@
 | F-129 | 一代头部架构方向 | 相机优先放在头部，头部自由度明确增加，用头部运动提高视野覆盖率并增强拟人感 | confirmed | 用户本轮说明 |
 | F-130 | 一代声学收敛方向 | 麦克风阵列收敛为 `1` 个并优先放在头部；扬声器优先放在头部或接近头部的躯干位置 | confirmed | 用户本轮说明 |
 | F-131 | 一代本体自由度与底盘方向 | 不追求躯干复杂自由度；底盘可评估全向方案，但当前设计基线继续保留“两轮差速 + 全向轮” | confirmed | 用户本轮说明 |
+| F-132 | 一代 Agent 能力抽象方式 | 接受把 `OpenClaw / Claude Code / Codex` 这类 AI 生产力工具抽象为 Kinbot 的 Agent 增强平面，而不是直接写成产品一级模块 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 41 |
+| F-133 | 一代 Agent 正式范围 | 一代正式纳入长期记忆、技能化能力组织、连接器抽象与受控任务编排 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 41 |
+| F-134 | 自主创造新技能边界 | “自主创造新技能”继续停留在研究线，不作为一代正式承诺 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 41 |
 
 ## 3. 当前架构性判断
 
@@ -269,6 +273,9 @@
 | A-084 | `D1 / D6 / D7` 继续作为 `PDCP` 后续总体方案与模块设计的一级阻断输入；此外，成本-性能-产品感统一决策、双视角一致性落地、接口冻结范围清单与夜间低照实证能力，已升级为当前关键路径关注项 | confirmed | `docs/08_reviews/09_pdcp_requirement_constraints_and_blockers_proposal.md` |
 | A-085 | 当前 `C1` 的主矛盾已从“选哪颗芯片”进一步转为“`RAM / Flash` 能否在 `5000 到 6000 元` 整机 `BOM` 约束下支撑默认量产线” | confirmed | `docs/03_p2_feasibility/04_hardware_software_selection_matrix.md`, `docs/03_p2_feasibility/05_cost_structure_and_technology_downpath.md` |
 | A-086 | 一代量产默认线应先按 `8GB RAM + 64GB Flash` 组织；`12GB + 64GB` 只作边界验证线，`16GB + 64GB` 及以上只作前瞻验证线或未来 `Pro SKU` 候选 | confirmed | 硬件专家线程最新评估反馈 |
+| A-087 | 为避免架构层级继续膨胀，一代应把长期记忆、技能化、连接器与受控任务编排压缩为跨模块 Agent 增强平面，而不是新增一级模块 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 41, `docs/02_p1_architecture/01_overall_architecture.md` |
+| A-088 | 一代应把技能化理解为能力组织与受控组合，而不是开放式自主代理；固定技能与组合技能进入主线，候选新技能保留在研究线 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 41 |
+| A-089 | 连接器抽象需要成为手机、App、云服务、智能家居和第三方平台接入的统一边界，否则服务扩展会继续退化为点对点耦合 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 41, `docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md` |
 
 ## 4. 尚未关闭的关键问题
 
