@@ -1,6 +1,6 @@
 # VLN vs VLA 技术对比表格准确性审查
 
-**审查对象**：`docs/VLN_ROLE_AND_PLAN.md` 第 43-51 行对比表格
+**审查对象**：`docs/09_research/01_vln_role_analysis_and_technical_plan.md` 第 43-51 行对比表格
 **审查时间**：2026-03-13
 **优先级**：P0
 **对比对象**：智驾领域 VLA vs 家庭机器人 VLN（领域大趋势对比）

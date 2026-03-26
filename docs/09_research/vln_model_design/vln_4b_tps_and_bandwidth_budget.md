@@ -22,21 +22,23 @@
 
 ## 2. 术语与计算口径
 
-### 2.1 TPS 的三种口径
+### 2.1 术语定义与项目标准对齐
 
-为避免歧义，本文档将 TPS 分成三类：
+**重要说明**：为避免与项目标准TPS定义冲突，本文档采用以下术语：
 
-- 输入 token 吞吐：每秒送入模型的 token 数。
-- 输出 token 吞吐：每秒由模型生成的 token 数。
-- 总 token 吞吐：输入 token 吞吐与输出 token 吞吐之和。
+- **输入token负载**：每秒送入模型的token数（单次输入token × 运行频率）
+- **TPS（Tokens Per Second）**：模型解码阶段输出token速度，符合项目标准定义（见`docs/03_p2_feasibility/04_hardware_software_selection_matrix.md`）
+- **总token负载**：输入token负载与输出token负载之和，用于评估总体吞吐压力
 
 对应公式：
 
 ```text
-输入 TPS = 单次输入 token × 运行频率
-输出 TPS = 单次输出 token × 运行频率
-总 TPS = 输入 TPS + 输出 TPS
+输入token负载 = 单次输入token × 运行频率
+输出token负载 = 单次输出token × 运行频率
+总token负载 = 输入token负载 + 输出token负载
 ```
+
+**与项目标准的关系**：任务延迟 = TTFT + N_out / TPS + T_fixed，其中视觉编码、world state更新等计入T_fixed。
 
 ### 2.2 稳态与峰值
 
@@ -51,9 +53,9 @@
 
 在未锁定具体芯片前，建议按以下口径约束：
 
-- 稳态总 TPS 目标：优先控制在 `60-90 token/s`。
-- 稳态总 TPS 上限：尽量不超过 `100 token/s`。
-- 峰值总 TPS：允许短时到 `120-180 token/s`，但不能持续。
+- 稳态总token负载目标：优先控制在 `60-90 token/s`
+- 稳态总token负载上限：尽量不超过 `100 token/s`
+- 峰值总token负载：允许短时到 `120-180 token/s`，但不能持续
 
 如果后续板级实测证明可以稳定支撑更高吞吐，再向上调整频率；在没有证据前，不应反过来先把频率设计得过高。
 

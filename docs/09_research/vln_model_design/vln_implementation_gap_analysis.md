@@ -1,8 +1,8 @@
 # VLN 架构目标与现有实现对照核查
 
 **核查时间**：2026-03-13
-**核查对象**：`docs/VLN_ROLE_AND_PLAN.md` 第 4 节（能力分层）和第 5 节（接口设计）
-**参考实现**：`/mnt/yczhou11/vln_qwen3_vl`
+**核查对象**：`docs/09_research/01_vln_role_analysis_and_technical_plan.md` 第 4 节（能力分层）和第 5 节（接口设计）
+**参考实现**：项目内VLN原型实现
 
 ---
 
