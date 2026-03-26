@@ -2,11 +2,12 @@
 
 ---
 
-文档版本：v1.26
+文档版本：v1.27
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.27 | 2026-03-26 | Codex-架构师 | 回退主线状态机文档中的提前收敛修改，仅在《Kinbot状态切换需求评审与状态机重构建议》中继续收敛方案 C，并修正原始方案图示与交互内部行为树设计。
 - v1.26 | 2026-03-26 | Codex-架构师 | 刷新状态机主线与评审文档：将“家庭安全巡护”提升为业务主状态、将“保姆协同”下沉为横切模式，并把《Kinbot状态切换需求评审与状态机重构建议》重组为“原始方案 + A/B/C + 推荐方案”的简化结构。
 - v1.25 | 2026-03-26 | Codex-架构师 | 调整《Kinbot状态切换需求评审与状态机重构建议》的候选方案命名口径到产品经理当前状态名，并补充方案 A 的覆盖属性轴与方案 B 的同步机制说明。
 - v1.24 | 2026-03-26 | Codex-架构师 | 在《Kinbot状态切换需求评审与状态机重构建议》中追加两套状态建模方案，对比“主状态 + 子状态 / 属性”与“正交并行状态机”，并补入 `待机状态 / 停桩后台处理状态 / 休眠状态` 的新分层讨论。
@@ -65,9 +66,10 @@
 - 更新 [docs/08_reviews/14_state_switching_requirement_review_and_state_machine_proposal.md](docs/08_reviews/14_state_switching_requirement_review_and_state_machine_proposal.md)，补入两套状态分层方案与对比建议，并显式讨论 `待机状态 / 停桩后台处理状态 / 休眠状态` 的新边界。
 - 更新 [docs/08_reviews/14_state_switching_requirement_review_and_state_machine_proposal.md](docs/08_reviews/14_state_switching_requirement_review_and_state_machine_proposal.md)，把候选方案中的状态命名统一到产品经理当前口径，补全方案 A 的覆盖属性轴，并新增方案 B 的多轴同步机制说明。
 - 更新 [docs/08_reviews/14_state_switching_requirement_review_and_state_machine_proposal.md](docs/08_reviews/14_state_switching_requirement_review_and_state_machine_proposal.md)，将文档结构重新整理为“原始方案 + 方案 A / B / C + 最终推荐”，并在最终对比中显式纳入原始方案。
-- 更新 [docs/02_p1_architecture/06_decision_state_machine.md](docs/02_p1_architecture/06_decision_state_machine.md)，将“家庭安全巡护”提升为业务主状态，将“保姆协同”下沉为角色 / 权限 / 任务来源模式，并补入 `TaskContextStack`、`StateTransitionIntent` 与 `CompositeStateSnapshot` 三个状态机协同构件。
 - 更新 [docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md)，补记集团概念评审、首发切口、制胜理论与分阶段投入机制相关正式事实与架构判断。
-- 更新 [docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md)，补记状态机业务主状态修订、方案 C 正式收敛和任务上下文栈进入主线的正式决策。
+- 更新 [docs/08_reviews/14_state_switching_requirement_review_and_state_machine_proposal.md](docs/08_reviews/14_state_switching_requirement_review_and_state_machine_proposal.md)，将方案 C 的命名口径统一回原始方案 / 方案 A / B 的状态名体系，并新增交互内部行为树设计。
+- 更新 [docs/08_reviews/14_state_switching_requirement_review_and_state_machine_proposal.md](docs/08_reviews/14_state_switching_requirement_review_and_state_machine_proposal.md)，修正原始方案图示与 [input/00_requirements/05_kinbot_state_switching_requirement.md](input/00_requirements/05_kinbot_state_switching_requirement.md) 的不一致处。
+- 回退 [docs/02_p1_architecture/06_decision_state_machine.md](docs/02_p1_architecture/06_decision_state_machine.md) 中上一轮提前落入主线的状态机收敛修改，当前方案 C 继续停留在评审文档阶段。
 
 ## [2026-03-23]
 
