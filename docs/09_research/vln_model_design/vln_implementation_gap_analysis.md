@@ -36,12 +36,11 @@
 ### 现有实现核查
 
 #### ✅ 用户指令解析
-- **位置**：`go_to_person.py:38`, `go_to_object.py:34`
 - **实现**：通过 `user_prompt` 字段接收用户指令
-- **代码示例**：
+- **代码示例**（原型实现参考）：
   ```python
-  self.user_prompt = message_data.user_prompt  # go_to_person
-  self.user_prompt = message_data.params['obj_name']  # go_to_object
+  self.user_prompt = message_data.user_prompt  # 找人场景
+  self.user_prompt = message_data.params['obj_name']  # 找物场景
   ```
 
 #### ❌ 指代消解
@@ -53,11 +52,7 @@
 - **缺失**：没有身份验证或权限检查机制
 
 #### ⚠️ 目标类型识别
-- **位置**：通过不同的 Session 类隐式实现
-- **实现**：
-  - `GoToPersonSession` → 找人
-  - `GoToObjectSession` → 找物
-  - `FollowPersonSession` → 跟随人
+- **实现**：通过不同的 Session 类隐式实现（找人/找物/跟随人等场景）
 - **问题**：目标类型通过类名隐式表达，没有显式的 `goal_type` 枚举
 
 #### ❌ 约束和成功条件
