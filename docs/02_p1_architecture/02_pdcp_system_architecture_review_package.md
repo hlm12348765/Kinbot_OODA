@@ -482,14 +482,14 @@ flowchart TB
 
 ### 5.2 本体实体域与运行时模块映射
 
-| 本体实体域 | 主要承载模块 | 主要架构约束 |
-| --- | --- | --- |
-| 计算与控制核心 | `platform_runtime`、`world_state_memory`、`decision_orchestration`、`observability_data_governance` | 算力、存储、实时性、功耗、热设计 |
-| 移动底盘与运动执行 | `mobility_navigation`、`safety_compliance_authorization` | 稳定性、通过性、噪声、续航、安全停机 |
-| 环境与人体感知组件 | `human_health_sensing`、`mobility_navigation` | 视场、低光能力、时序同步、感知盲区 |
-| 交互表达组件 | `multimodal_interaction` | 拾音、播音、可视性、情感表达、夜间舒适度 |
-| 电池电源、热与本体安全 | `platform_runtime`、`safety_compliance_authorization`、`observability_data_governance` | 续航、充电、发热、故障保护、功耗调度 |
-| 储物仓、结构与外观 | `multimodal_interaction`、`decision_orchestration`、`safety_compliance_authorization` | 重量、重心、仓门安全、可维护性、精致感 |
+| 本体实体域       | 主要承载模块                                                                                           | 主要架构约束               |
+| ----------- | ------------------------------------------------------------------------------------------------ | -------------------- |
+| 计算与控制核心     | `platform_runtime`、`world_state_memory`、`decision_orchestration`、`observability_data_governance` | 算力、存储、实时性、功耗、热设计     |
+| 移动底盘与运动执行   | `mobility_navigation`、`safety_compliance_authorization`                                          | 稳定性、通过性、噪声、续航、安全停机   |
+| 环境与人体感知组件   | `human_health_sensing`、`mobility_navigation`                                                     | 视场、低光能力、时序同步、感知盲区    |
+| 交互表达组件      | `multimodal_interaction`                                                                         | 拾音、播音、可视性、情感表达、夜间舒适度 |
+| 电池电源、热与本体安全 | `platform_runtime`、`safety_compliance_authorization`、`observability_data_governance`             | 续航、充电、发热、故障保护、功耗调度   |
+| 储物仓、结构与外观   | `multimodal_interaction`、`decision_orchestration`、`safety_compliance_authorization`              | 重量、重心、仓门安全、可维护性、精致感  |
 
 结论：
 

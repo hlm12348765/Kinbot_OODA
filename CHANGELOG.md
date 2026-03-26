@@ -2,11 +2,17 @@
 
 ---
 
-文档版本：v1.20
+文档版本：v1.26
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.26 | 2026-03-26 | Codex-架构师 | 刷新状态机主线与评审文档：将“家庭安全巡护”提升为业务主状态、将“保姆协同”下沉为横切模式，并把《Kinbot状态切换需求评审与状态机重构建议》重组为“原始方案 + A/B/C + 推荐方案”的简化结构。
+- v1.25 | 2026-03-26 | Codex-架构师 | 调整《Kinbot状态切换需求评审与状态机重构建议》的候选方案命名口径到产品经理当前状态名，并补充方案 A 的覆盖属性轴与方案 B 的同步机制说明。
+- v1.24 | 2026-03-26 | Codex-架构师 | 在《Kinbot状态切换需求评审与状态机重构建议》中追加两套状态建模方案，对比“主状态 + 子状态 / 属性”与“正交并行状态机”，并补入 `待机状态 / 停桩后台处理状态 / 休眠状态` 的新分层讨论。
+- v1.23 | 2026-03-26 | Codex-架构师 | 在《Kinbot状态切换需求评审与状态机重构建议》中追加按产品经理原始输入直译的状态机图，用于可视化现有状态表而不改写原始需求。
+- v1.22 | 2026-03-26 | Codex-架构师 | 新增《Kinbot状态切换需求评审与状态机重构建议》，并同步回写评审目录索引与根索引。
+- v1.21 | 2026-03-26 | Codex-战略承接人 | 新增《未来家庭机器人愿景与宪章（EMT战略承接稿）》，并同步回写运行规范提纲、索引与决策记录，承接 Step42 的集团概念评审输入。
 - v1.20 | 2026-03-26 | Codex-架构师 | 在 2026-03-26 章节追加运行规范文档定位纠偏，将《Kinbot运行规范与主线架构对齐提纲》升级为承接“未来愿景 / 家族原则 / 一代规范”三层拆分的过渡文档。
 - v1.19 | 2026-03-26 | Codex-架构师 | 新增《Kinbot运行规范与主线架构对齐提纲》，并同步评审目录索引与根索引。
 - v1.18 | 2026-03-23 | Codex-架构师 | 在 2026-03-23 章节追加 Step41 对应的 Agent 增强平面主线吸收、方案下发、术语扩充、决策记录补记与需求输入版本维护。
@@ -45,11 +51,23 @@
 ### 新增
 
 - 新增 [docs/08_reviews/12_operational_spec_alignment_outline.md](docs/08_reviews/12_operational_spec_alignment_outline.md)，用于承接 [input/00_requirements/04_kinbot_operational_specification.md](input/00_requirements/04_kinbot_operational_specification.md) 的 PR 式评审结果，并按“保留 / 改写 / 下沉到工程规格”拆分后续修订动作。
+- 新增 [docs/08_reviews/13_future_home_robot_vision_charter_for_emt.md](docs/08_reviews/13_future_home_robot_vision_charter_for_emt.md)，用于承接 `Step 42` 的集团概念评审输入，定义未来家庭机器人的愿景、`Kinbot V1` 首发切口、集团制胜逻辑与分阶段投入请求。
+- 新增 [docs/08_reviews/14_state_switching_requirement_review_and_state_machine_proposal.md](docs/08_reviews/14_state_switching_requirement_review_and_state_machine_proposal.md)，用于评审 [input/00_requirements/05_kinbot_state_switching_requirement.md](input/00_requirements/05_kinbot_state_switching_requirement.md) 的状态拆分、跳转逻辑与状态机表达方式，并给出重构建议与推荐图示。
 
 ### 变更
 
 - 更新 [docs/08_reviews/README.md](docs/08_reviews/README.md) 与 [README.md](README.md)，补充《Kinbot运行规范与主线架构对齐提纲》的目录索引和主题说明。
 - 更新 [docs/08_reviews/12_operational_spec_alignment_outline.md](docs/08_reviews/12_operational_spec_alignment_outline.md)，补充“高不成低不就”的文档定位失配分析，并在现有提纲中先拆出“未来愿景 / 家族原则 / 一代运行规范”三层目标，作为后续重构运行规范的过渡框架。
+- 更新 [docs/08_reviews/12_operational_spec_alignment_outline.md](docs/08_reviews/12_operational_spec_alignment_outline.md)，明确其拆出的“未来家庭机器人愿景 / 宪章”层已由新的 `EMT` 战略承接文档独立承接。
+- 更新 [docs/08_reviews/README.md](docs/08_reviews/README.md) 与 [README.md](README.md)，补充《未来家庭机器人愿景与宪章（EMT战略承接稿）》的目录索引。
+- 更新 [docs/08_reviews/README.md](docs/08_reviews/README.md) 与 [README.md](README.md)，补充《Kinbot状态切换需求评审与状态机重构建议》的目录索引。
+- 更新 [docs/08_reviews/14_state_switching_requirement_review_and_state_machine_proposal.md](docs/08_reviews/14_state_switching_requirement_review_and_state_machine_proposal.md)，补入按产品经理当前输入直译的原始状态机图，并与重构建议图分开展示。
+- 更新 [docs/08_reviews/14_state_switching_requirement_review_and_state_machine_proposal.md](docs/08_reviews/14_state_switching_requirement_review_and_state_machine_proposal.md)，补入两套状态分层方案与对比建议，并显式讨论 `待机状态 / 停桩后台处理状态 / 休眠状态` 的新边界。
+- 更新 [docs/08_reviews/14_state_switching_requirement_review_and_state_machine_proposal.md](docs/08_reviews/14_state_switching_requirement_review_and_state_machine_proposal.md)，把候选方案中的状态命名统一到产品经理当前口径，补全方案 A 的覆盖属性轴，并新增方案 B 的多轴同步机制说明。
+- 更新 [docs/08_reviews/14_state_switching_requirement_review_and_state_machine_proposal.md](docs/08_reviews/14_state_switching_requirement_review_and_state_machine_proposal.md)，将文档结构重新整理为“原始方案 + 方案 A / B / C + 最终推荐”，并在最终对比中显式纳入原始方案。
+- 更新 [docs/02_p1_architecture/06_decision_state_machine.md](docs/02_p1_architecture/06_decision_state_machine.md)，将“家庭安全巡护”提升为业务主状态，将“保姆协同”下沉为角色 / 权限 / 任务来源模式，并补入 `TaskContextStack`、`StateTransitionIntent` 与 `CompositeStateSnapshot` 三个状态机协同构件。
+- 更新 [docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md)，补记集团概念评审、首发切口、制胜理论与分阶段投入机制相关正式事实与架构判断。
+- 更新 [docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md)，补记状态机业务主状态修订、方案 C 正式收敛和任务上下文栈进入主线的正式决策。
 
 ## [2026-03-23]
 

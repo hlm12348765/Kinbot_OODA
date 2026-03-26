@@ -2,11 +2,13 @@
 
 ---
 
-文档版本：v1.6
+文档版本：v1.8
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.8 | 2026-03-26 | Codex-架构师 | 补记状态机主状态修订、方案 C 正式收敛和任务上下文栈等协同构件进入主线的正式决策。
+- v1.7 | 2026-03-26 | Codex-战略承接人 | 吸收 Step42，补记集团概念评审、首发战略切口、制胜理论与分阶段投入机制相关正式事实与架构判断。
 - v1.6 | 2026-03-23 | Codex-架构师 | 吸收 Step41，补记“一代 Agent 增强平面”相关正式事实与架构判断，明确长期记忆、技能化、连接器与受控任务编排进入主线，自主创造新技能继续停留在研究线。
 - v1.5 | 2026-03-23 | Codex-架构师 | 吸收最新架构收敛决策，补记两芯片硬件基线、`1` 双目 + `2` 单目视觉主线、头部多自由度、单麦阵与稳健底盘基线，以及相关架构判断。
 - v1.4 | 2026-03-22 | Codex-架构师 | 吸收 Step38，补记验证 Demo 的三芯片职责分层、8 个独立视觉模组、双麦阵成因、重量修正与主线吸收边界。
@@ -175,6 +177,11 @@
 | F-132 | 一代 Agent 能力抽象方式 | 接受把 `OpenClaw / Claude Code / Codex` 这类 AI 生产力工具抽象为 Kinbot 的 Agent 增强平面，而不是直接写成产品一级模块 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 41 |
 | F-133 | 一代 Agent 正式范围 | 一代正式纳入长期记忆、技能化能力组织、连接器抽象与受控任务编排 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 41 |
 | F-134 | 自主创造新技能边界 | “自主创造新技能”继续停留在研究线，不作为一代正式承诺 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 41 |
+| F-135 | 集团概念评审时点 | 集团董事长已将机器人方向定义为集团长期跃迁的重要方向，当前即将进入集团正式概念评审 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 42 |
+| F-136 | 家庭机器人首发目标家庭 | `Kinbot` 首发目标家庭进一步收敛为独居老人或子女不在身边的老两口家庭 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 42 |
+| F-137 | 家庭机器人首发核心问题 | `Kinbot V1` 首发核心问题进一步收敛为老人慢病管理与用药协同 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 42 |
+| F-138 | EMT 必须审批项 | 本次概念评审必须拿到的结论是首发核心功能与场景切口，以及 `10` 个月 / `9000` 万 / `55` 人总盘子的分阶段投入机制 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 42 |
+| F-139 | EMT 最好一并确认项 | 本次概念评审最好一并确认该方向作为战略级投入下的首款产品定位，以及进入市场的方式与节奏 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 42 |
 
 ## 3. 当前架构性判断
 
@@ -276,6 +283,10 @@
 | A-087 | 为避免架构层级继续膨胀，一代应把长期记忆、技能化、连接器与受控任务编排压缩为跨模块 Agent 增强平面，而不是新增一级模块 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 41, `docs/02_p1_architecture/01_overall_architecture.md` |
 | A-088 | 一代应把技能化理解为能力组织与受控组合，而不是开放式自主代理；固定技能与组合技能进入主线，候选新技能保留在研究线 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 41 |
 | A-089 | 连接器抽象需要成为手机、App、云服务、智能家居和第三方平台接入的统一边界，否则服务扩展会继续退化为点对点耦合 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 41, `docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md` |
+| A-090 | 面向集团 `EMT` 的未来家庭机器人方向，应优先被定义为“家庭中的具身照护协调节点”，而不是泛家庭机器人或自主医疗终端 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 42, `docs/08_reviews/13_future_home_robot_vision_charter_for_emt.md` |
+| A-091 | `Kinbot V1` 的核心价值不应是替代医生决定吃什么药，而应是在家庭内连续完成“提醒、到人、递药引导、确认、问询升级、补药 / 挂号”的具身协同闭环 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 42, `docs/08_reviews/13_future_home_robot_vision_charter_for_emt.md` |
+| A-092 | 集团在家庭机器人方向的 `right to win`，来自医疗理解、`AI` 交互、机器人载体与规模交付四种能力的组合，而不是任一单点能力最强 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 42, `docs/08_reviews/13_future_home_robot_vision_charter_for_emt.md` |
+| A-093 | 本次概念评审的资源审批不应采用一次性 `all-in` 方式，而应在确认 `10` 个月 / `9000` 万 / `55` 人总盘子的前提下，按阶段门分批释放 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 42, `docs/08_reviews/13_future_home_robot_vision_charter_for_emt.md` |
 
 ## 4. 尚未关闭的关键问题
 
@@ -493,6 +504,9 @@
 | 2026-03-23 | D-182 | 一代头部主动观察基线 | 当前主线明确把“头部多自由度 + 头部相机集中布置”定义为一代主动观察与拟人表达核心，以头部运动提升视野覆盖率并降低固定视角器件数量 | confirmed |
 | 2026-03-23 | D-183 | 一代声学与结构收敛基线 | 当前主线把单麦阵头部优先和扬声器头部 / 上躯干优先定义为一代声学基线，不再接受双麦阵修补式架构 | confirmed |
 | 2026-03-23 | D-184 | 一代本体自由度与底盘基线 | 当前主线明确不追求躯干复杂自由度；底盘可评估全向路线，但产品设计基线继续保留“两轮差速 + 全向轮” | confirmed |
+| 2026-03-26 | D-185 | 业务主状态修订 | 当前主线状态机正式将“家庭安全巡护”提升为业务主状态，并从业务主状态枚举中移除“保姆协同” | confirmed |
+| 2026-03-26 | D-186 | `KBT-7` 状态机重构方向 | `PDCP` 阶段状态机重构正式采用“方案 C”：`OODA` 驱动的分层状态机 + 受限正交域 + 任务上下文栈 | confirmed |
+| 2026-03-26 | D-187 | 状态机协同构件冻结 | 当前主线正式引入 `TaskContextStack`、`StateTransitionIntent` 与 `CompositeStateSnapshot`，用于承接任务中断恢复、原子状态切换与统一审计快照 | confirmed |
 
 ## 7. 后续记录规则
 
