@@ -2,11 +2,12 @@
 
 ---
 
-文档版本：v1.27
+文档版本：v1.28
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.28 | 2026-03-26 | Codex-架构师 | 继续收敛状态机评审文档，按原始“状态切换总表”严格归一化原始方案跳转图，并识别 `交互状态` 为把公共交互能力误写成特定状态的超级状态。
 - v1.27 | 2026-03-26 | Codex-架构师 | 回退主线状态机文档中的提前收敛修改，仅在《Kinbot状态切换需求评审与状态机重构建议》中继续收敛方案 C，并修正原始方案图示与交互内部行为树设计。
 - v1.26 | 2026-03-26 | Codex-架构师 | 刷新状态机主线与评审文档：将“家庭安全巡护”提升为业务主状态、将“保姆协同”下沉为横切模式，并把《Kinbot状态切换需求评审与状态机重构建议》重组为“原始方案 + A/B/C + 推荐方案”的简化结构。
 - v1.25 | 2026-03-26 | Codex-架构师 | 调整《Kinbot状态切换需求评审与状态机重构建议》的候选方案命名口径到产品经理当前状态名，并补充方案 A 的覆盖属性轴与方案 B 的同步机制说明。
@@ -69,6 +70,7 @@
 - 更新 [docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md)，补记集团概念评审、首发切口、制胜理论与分阶段投入机制相关正式事实与架构判断。
 - 更新 [docs/08_reviews/14_state_switching_requirement_review_and_state_machine_proposal.md](docs/08_reviews/14_state_switching_requirement_review_and_state_machine_proposal.md)，将方案 C 的命名口径统一回原始方案 / 方案 A / B 的状态名体系，并新增交互内部行为树设计。
 - 更新 [docs/08_reviews/14_state_switching_requirement_review_and_state_machine_proposal.md](docs/08_reviews/14_state_switching_requirement_review_and_state_machine_proposal.md)，修正原始方案图示与 [input/00_requirements/05_kinbot_state_switching_requirement.md](input/00_requirements/05_kinbot_state_switching_requirement.md) 的不一致处。
+- 更新 [docs/08_reviews/14_state_switching_requirement_review_and_state_machine_proposal.md](docs/08_reviews/14_state_switching_requirement_review_and_state_machine_proposal.md)，严格按原始“状态切换总表”将状态关系归一化为全局控制边、业务维护主图、低电影响图和升级链图，并明确识别 `交互状态` 是原始方案中的超级状态。
 - 回退 [docs/02_p1_architecture/06_decision_state_machine.md](docs/02_p1_architecture/06_decision_state_machine.md) 中上一轮提前落入主线的状态机收敛修改，当前方案 C 继续停留在评审文档阶段。
 
 ## [2026-03-23]
