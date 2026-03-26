@@ -2,11 +2,12 @@
 
 ---
 
-文档版本：v1.18
+文档版本：v1.19
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.19 | 2026-03-26 | Codex-架构师 | 新增《Kinbot运行规范与主线架构对齐提纲》，并同步评审目录索引与根索引。
 - v1.18 | 2026-03-23 | Codex-架构师 | 在 2026-03-23 章节追加 Step41 对应的 Agent 增强平面主线吸收、方案下发、术语扩充、决策记录补记与需求输入版本维护。
 - v1.17 | 2026-03-23 | Codex-架构师 | 在 2026-03-23 章节追加《开发团队提案》的 AI-native Team 升级维护，并同步根索引和团队规划目录索引。
 - v1.16 | 2026-03-23 | Codex-架构师 | 在 2026-03-23 章节追加一代硬件架构收敛决策的主线吸收，补记两芯片硬件基线、`1` 双目 + `2` 单目纯视觉组合、头部多自由度、单麦阵和稳健底盘基线进入总体架构、`PDCP` 与方案下发基线。
@@ -37,6 +38,16 @@
 ## [未发布]
 
 暂无。
+
+## [2026-03-26]
+
+### 新增
+
+- 新增 [docs/08_reviews/12_operational_spec_alignment_outline.md](docs/08_reviews/12_operational_spec_alignment_outline.md)，用于承接 [input/00_requirements/04_kinbot_operational_specification.md](input/00_requirements/04_kinbot_operational_specification.md) 的 PR 式评审结果，并按“保留 / 改写 / 下沉到工程规格”拆分后续修订动作。
+
+### 变更
+
+- 更新 [docs/08_reviews/README.md](docs/08_reviews/README.md) 与 [README.md](README.md)，补充《Kinbot运行规范与主线架构对齐提纲》的目录索引和主题说明。
 
 ## [2026-03-23]
 

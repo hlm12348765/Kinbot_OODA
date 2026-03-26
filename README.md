@@ -2,11 +2,12 @@
 
 ---
 
-文档版本：v1.5
+文档版本：v1.6
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.6 | 2026-03-26 | Codex-架构师 | 新增《Kinbot运行规范与主线架构对齐提纲》索引，并同步评审目录说明。
 - v1.5 | 2026-03-23 | Codex-架构师 | 同步团队规划目录的 AI-native Team 升级口径，更新《开发团队提案》的索引描述。
 - v1.4 | 2026-03-23 | Codex-架构师 | 新增《机器人代际划分框架》索引，校正当前团队规模目标，并将 `OODA` 与 `Predict / Learn` 的关系表述更新为“主环 + 跨环能力”口径。
 - v1.3 | 2026-03-22 | Codex-架构师 | 新增 Step39 对应的《Kinbot架构演进分析与阶段提案》文档索引，并补全评审目录在根索引中的缺失条目。
@@ -132,6 +133,7 @@
 - `docs/08_reviews/09_pdcp_requirement_constraints_and_blockers_proposal.md`：PDCP评审约束与阻断提案。核心主题：需求侧约束总表、推进阻断问题与老板沟通提案。
 - `docs/08_reviews/10_kinbot_architecture_evolution_analysis.md`：Kinbot架构演进分析与阶段提案。核心主题：从验证 Demo、当前 PDCP 主线、一代期内演进到二代与终局方向的四阶段架构分析。
 - `docs/08_reviews/11_robot_generation_classification_framework.md`：机器人代际划分框架。核心主题：界定驱动机器人代际发展的因素、同代际优化与代际跃迁边界，以及信息服务到物理服务的关键分界。
+- `docs/08_reviews/12_operational_spec_alignment_outline.md`：Kinbot运行规范与主线架构对齐提纲。核心主题：针对运行规范 PR 评审结果，拆分保留、改写与下沉到工程规格的对齐动作。
 - `docs/09_research/01_vln_role_analysis_and_technical_plan.md`：VLN角色分析与技术规划。核心主题：VLN 在 Kinbot 中的角色分析、路线判断和技术规划。
 - `docs/09_research/02_uwb_phase1_maturity_and_integration_value.md`：UWB一期技术成熟度与接入价值评估。核心主题：UWB 一期成熟度、样品验证门和接入价值评估。
 - `docs/09_research/04_spacemit_k3_chip_assessment_for_embodied_ai.md`：进迭时空 K3 芯片信息整合与具身智能适配评估。核心主题：K3 芯片事实整合、端侧大模型推理能力、具身智能机器人应用优劣势与 Kinbot 适配判断。
