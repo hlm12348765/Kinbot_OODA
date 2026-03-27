@@ -2,11 +2,13 @@
 
 ---
 
-文档版本：v1.9
+文档版本：v1.11
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.11 | 2026-03-27 | Codex-战略承接人 | 再次更新《未来家庭机器人愿景与宪章（EMT战略承接稿）》的根索引描述，补充其已纳入首单成交机制、平台扩张梯子与阶段资源释放表。
+- v1.10 | 2026-03-27 | Codex-战略承接人 | 更新《未来家庭机器人愿景与宪章（EMT战略承接稿）》索引描述，补充其已强化平台基石定位、首单路径与阶段门审批逻辑。
 - v1.9 | 2026-03-26 | Codex-架构师 | 更新《Kinbot状态切换需求评审与状态机重构建议》的根索引描述，明确其已纳入原始方案对比与推荐方案收敛。
 - v1.8 | 2026-03-26 | Codex-架构师 | 新增《Kinbot状态切换需求评审与状态机重构建议》索引，补入对状态切换需求单层状态表问题的评审与重构建议入口。
 - v1.7 | 2026-03-26 | Codex-战略承接人 | 新增《未来家庭机器人愿景与宪章（EMT战略承接稿）》索引，并明确其承接集团概念评审所需的战略定位、首发切口与投入机制。
@@ -137,7 +139,7 @@
 - `docs/08_reviews/10_kinbot_architecture_evolution_analysis.md`：Kinbot架构演进分析与阶段提案。核心主题：从验证 Demo、当前 PDCP 主线、一代期内演进到二代与终局方向的四阶段架构分析。
 - `docs/08_reviews/11_robot_generation_classification_framework.md`：机器人代际划分框架。核心主题：界定驱动机器人代际发展的因素、同代际优化与代际跃迁边界，以及信息服务到物理服务的关键分界。
 - `docs/08_reviews/12_operational_spec_alignment_outline.md`：Kinbot运行规范与主线架构对齐提纲。核心主题：针对运行规范 PR 评审结果，拆分保留、改写与下沉到工程规格的对齐动作。
-- `docs/08_reviews/13_future_home_robot_vision_charter_for_emt.md`：未来家庭机器人愿景与宪章（EMT战略承接稿）。核心主题：承接集团 `EMT` 概念评审，定义未来家庭机器人的愿景、`Kinbot V1` 首发切口、集团制胜逻辑与分阶段投入请求。
+- `docs/08_reviews/13_future_home_robot_vision_charter_for_emt.md`：未来家庭机器人愿景与宪章（EMT战略承接稿）。核心主题：承接集团 `EMT` 概念评审，定义未来家庭机器人的愿景、`Kinbot V1` 首发切口、平台基石定位与扩张梯子、首单成交机制以及分阶段 stop/go 投入逻辑。
 - `docs/08_reviews/14_state_switching_requirement_review_and_state_machine_proposal.md`：Kinbot状态切换需求评审与状态机重构建议。核心主题：保留原始状态切换方案作为候选项，对比方案 `A / B / C`，并给出与主线一致的推荐状态机收敛方案。
 - `docs/09_research/01_vln_role_analysis_and_technical_plan.md`：VLN角色分析与技术规划。核心主题：VLN 在 Kinbot 中的角色分析、路线判断和技术规划。
 - `docs/09_research/02_uwb_phase1_maturity_and_integration_value.md`：UWB一期技术成熟度与接入价值评估。核心主题：UWB 一期成熟度、样品验证门和接入价值评估。
