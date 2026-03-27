@@ -89,12 +89,13 @@
 ### 现有实现核查
 
 #### ⚠️ SLAM 地图/位姿
-- **位置**：`go_to_object.py:86`, `go_to_person.py`
-- **实现**：通过 `data_source.get_object_position()` 获取 ASM 地图
-- **代码示例**：
+- **实现**：原型实现中通过数据源接口获取 ASM 地图和当前位姿
+- **代码模式**：
   ```python
-  map_image, object_real_position, object_description = await self.data_source.get_object_position(self.user_prompt)
-  current_pose = await self.data_source.get_pose_data()
+  # 获取目标位置和地图
+  map_image, object_position, description = await data_source.get_object_position(prompt)
+  # 获取当前位姿
+  current_pose = await data_source.get_pose_data()
   ```
 - **问题**：只获取当前位姿，没有历史轨迹记忆
 
@@ -107,11 +108,11 @@
 - **缺失**：没有家具识别、家具承载关系
 
 #### ⚠️ 人/物观测历史
-- **位置**：`person_manager.py`, `go_to_person.py:83-88`
-- **实现**：有基础的人员管理
-- **代码示例**：
+- **实现**：原型实现中有基础的人员管理功能
+- **代码模式**：
   ```python
-  person_to_go: Person = self.person_manager.get_person(self.person_id)
+  # 通过人员管理器获取目标人员
+  person_to_go = person_manager.get_person(person_id)
   ```
 - **问题**：只有人员 ID 管理，没有观测历史、活动先验
 
@@ -466,7 +467,7 @@ class NavigationOutput:
 
 ### 符合架构的部分
 
-✅ **技能分类**：通过不同 Session 类实现（GoToPersonSession, GoToObjectSession, FollowPersonSession）
+✅ **技能分类**：原型实现中通过不同的任务会话类实现（找人、找物、跟随人等场景）
 ✅ **历史管理**：维护 RGB、深度图、地图历史
 ✅ **底盘执行**：有独立的 action_exec 层
 
