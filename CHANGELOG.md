@@ -2,11 +2,12 @@
 
 ---
 
-文档版本：v1.28
+文档版本：v1.29
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.29 | 2026-03-27 | Codex-架构师 | 继续收敛状态机评审文档，将交互重写为“待机状态 + 被动唤醒 / 主动发起交互 + 对话状态”的分层表达，并明确任务内交互不脱离原业务态。
 - v1.28 | 2026-03-26 | Codex-架构师 | 继续收敛状态机评审文档，按原始“状态切换总表”严格归一化原始方案跳转图，并识别 `交互状态` 为把公共交互能力误写成特定状态的超级状态。
 - v1.27 | 2026-03-26 | Codex-架构师 | 回退主线状态机文档中的提前收敛修改，仅在《Kinbot状态切换需求评审与状态机重构建议》中继续收敛方案 C，并修正原始方案图示与交互内部行为树设计。
 - v1.26 | 2026-03-26 | Codex-架构师 | 刷新状态机主线与评审文档：将“家庭安全巡护”提升为业务主状态、将“保姆协同”下沉为横切模式，并把《Kinbot状态切换需求评审与状态机重构建议》重组为“原始方案 + A/B/C + 推荐方案”的简化结构。
@@ -71,6 +72,7 @@
 - 更新 [docs/08_reviews/14_state_switching_requirement_review_and_state_machine_proposal.md](docs/08_reviews/14_state_switching_requirement_review_and_state_machine_proposal.md)，将方案 C 的命名口径统一回原始方案 / 方案 A / B 的状态名体系，并新增交互内部行为树设计。
 - 更新 [docs/08_reviews/14_state_switching_requirement_review_and_state_machine_proposal.md](docs/08_reviews/14_state_switching_requirement_review_and_state_machine_proposal.md)，修正原始方案图示与 [input/00_requirements/05_kinbot_state_switching_requirement.md](input/00_requirements/05_kinbot_state_switching_requirement.md) 的不一致处。
 - 更新 [docs/08_reviews/14_state_switching_requirement_review_and_state_machine_proposal.md](docs/08_reviews/14_state_switching_requirement_review_and_state_machine_proposal.md)，严格按原始“状态切换总表”将状态关系归一化为全局控制边、业务维护主图、低电影响图和升级链图，并明确识别 `交互状态` 是原始方案中的超级状态。
+- 更新 [docs/08_reviews/14_state_switching_requirement_review_and_state_machine_proposal.md](docs/08_reviews/14_state_switching_requirement_review_and_state_machine_proposal.md)，进一步将交互收敛为“默认 `待机状态` + `被动唤醒 / 主动发起交互` 入口模式 + `对话状态`”，并明确任务内交互仍留在原业务态内部。
 - 回退 [docs/02_p1_architecture/06_decision_state_machine.md](docs/02_p1_architecture/06_decision_state_machine.md) 中上一轮提前落入主线的状态机收敛修改，当前方案 C 继续停留在评审文档阶段。
 
 ## [2026-03-23]
