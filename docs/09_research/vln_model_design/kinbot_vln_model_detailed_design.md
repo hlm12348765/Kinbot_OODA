@@ -963,10 +963,12 @@ memory_db = {
 
 #### PDCP Student Contract（产品部署）
 
-- **输入配置**：必须对齐量产基线（1组双目+2个单目，共3-5相机）
+- **硬件基线**：量产配置为 1组双目+2个单目（共3-5相机）
+- **单次推理输入**：从量产相机集合中动态选择 2 个视角进入模型（主视角+辅助视角各1张关键帧）
+- **其余相机用途**：服务于 tracking / detection / world state update / event trigger，不等于每次都进入 VLM
 - **参考**：`docs/03_p2_feasibility/04_hardware_software_selection_matrix.md`
 - **目标**：在端侧约束下通过蒸馏保留核心能力
-- **token 预算**：严格控制，每次推理只取关键帧
+- **token 预算**：严格控制，避免同时输入多张历史帧或完整地图
 - **平台**：S100 Pro 主线 / RK 备线
 
 #### 蒸馏对齐策略
