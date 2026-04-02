@@ -2,11 +2,13 @@
 
 ---
 
-文档版本：v1.9
+文档版本：v1.11
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.11 | 2026-04-01 | Codex-架构师 | 补记团队招聘优化表新增“应用后端架构师”和“高级结构工程师”两类岗位的正式组织判断。
+- v1.10 | 2026-04-01 | Codex-架构师 | 吸收 Step 43 关于团队构建的更新，补记本体 `SE`、具身智能前瞻算法、`OpenClaw / Agent` 软件主链与招聘节奏分层原则。
 - v1.9 | 2026-03-26 | Codex-架构师 | 回退上一轮提前写入主线的状态机正式决策，当前方案 C 继续停留在评审文档阶段，待方案收口后再进入主线冻结。
 - v1.8 | 2026-03-26 | Codex-架构师 | 补记状态机主状态修订、方案 C 正式收敛和任务上下文栈等协同构件进入主线的正式决策。
 - v1.7 | 2026-03-26 | Codex-战略承接人 | 吸收 Step42，补记集团概念评审、首发战略切口、制胜理论与分阶段投入机制相关正式事实与架构判断。
@@ -183,6 +185,12 @@
 | F-137 | 家庭机器人首发核心问题 | `Kinbot V1` 首发核心问题进一步收敛为老人慢病管理与用药协同 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 42 |
 | F-138 | EMT 必须审批项 | 本次概念评审必须拿到的结论是首发核心功能与场景切口，以及 `10` 个月 / `9000` 万 / `55` 人总盘子的分阶段投入机制 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 42 |
 | F-139 | EMT 最好一并确认项 | 本次概念评审最好一并确认该方向作为战略级投入下的首款产品定位，以及进入市场的方式与节奏 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 42 |
+| F-140 | 本体团队建设优先级 | 本体团队亟需经验丰富、系统思维强、尽可能横跨硬件与结构并对本体成果负责的 `SE` | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 43 |
+| F-141 | 算法团队建设优先级 | 算法团队亟需具原创能力、思维活跃、对具身智能充满热情的人才，以模型和数据方法弥补几何与规则路线的薄弱并创造弯道超车机会 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 43 |
+| F-142 | 软件团队建设优先级 | 软件团队亟需构建机器人的 `OpenClaw`，并利用 `AI Agent` 最前沿技术重构系统与应用开发模式 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 43 |
+| F-143 | 招聘节奏原则 | 招聘优先级 `1 / 2 / 3 / 4` 需要显式拉开；对没想清楚或偏传统保留方法的岗位，可降低优先级或推迟预期入职时间，并随新方法进展复审 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 43 |
+| F-144 | 应用后端架构岗位补充 | 当前团队招聘需求需补充 `应用后端架构师`，用于承接家庭机器人应用侧后端架构、AI 能力与业务系统融合，以及可观测与持续交付体系建设 | confirmed | 用户本轮指令 |
+| F-145 | 高级结构岗位补充 | 当前团队招聘需求需补充 `高级结构工程师`，用于承接机器人本体结构、传动、布局、工艺与试产闭环，补强本体高端产品感与工程落地能力 | confirmed | 用户本轮指令 |
 
 ## 3. 当前架构性判断
 
@@ -218,6 +226,11 @@
 | A-028 | 伴生系统应作为围绕机器人协同的外部系统处理，不应稀释“机器人本体是目标系统”的架构主线 | confirmed | `input/00_requirements/00_user_requirements_input.md` 对 Codex 的要求 |
 | A-029 | 一期健康链路不能把“持续实时手表心率”当作硬依赖，必须接受较低实时性并支持问诊式或补采式数据获取 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 7 |
 | A-030 | 后台人工服务的第一入口应按客服运营坐席设计，接口层要重点支持接入、转接、超时和责任切换，而不是直接假设医生在线常驻 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 7 |
+| A-094 | 当前团队构建的最高优先级应从“泛 owner 平铺”进一步收敛为“本体 `SE` + 具身智能前瞻路线 + `OpenClaw / Agent` 软件主链 + 系统集成测试”四条组织主轴 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 43，`docs/10_team_planning/01_development_team_proposal.md` |
+| A-095 | 经典算法路线应从“默认主攻”调整为与具身智能路线并行竞争、配合补位的角色，其招聘节奏应服从前瞻路线进展 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 43，`docs/10_team_planning/01_development_team_proposal.md` |
+| A-096 | 机器人软件团队应按 `Agent-native` 方式重构系统与应用开发模式，而不是沿用传统 `App / 后台 / 端侧应用` 各自为战的扩编逻辑 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 41，Step 43 |
+| A-097 | `应用后端架构师` 应定位为 `S6` 应用后端与 AI 融合架构位，重点负责把大模型、多模态和语音能力编织进业务主链，并与已单列在招的云服务 / 运营平台架构负责人形成“平台底座 + 应用后端”双层分工 | confirmed | 用户本轮指令，`docs/10_team_planning/02_recruitment_requirements_optimized.csv` |
+| A-098 | `高级结构工程师` 不应被定义为单纯出图支持岗位，而应作为本体完整竞争力的关键承接位，负责把传动、空间、工艺、装配和试产收敛成可量产、可感知的整机结构质量 | confirmed | 用户本轮指令，`docs/10_team_planning/02_recruitment_requirements_optimized.csv` |
 | A-031 | 第三方平台的责任边界必须在接口和审计模型里显式表达，否则后续合规和售后责任会失真 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 7 |
 | A-032 | 储物仓的一代能力优先级应先满足防夹手、开关控制和状态记录，再规划交接确认，最后再考虑防误取和防错拿 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 7 |
 | A-033 | “量产预备”在本项目里不应被理解为纯文档完成，而应理解为产品定型并具备小批量试点与发布准备状态 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 7 |

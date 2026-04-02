@@ -2,11 +2,17 @@
 
 ---
 
-文档版本：v1.33
+文档版本：v1.39
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.39 | 2026-04-02 | Codex-架构师 | 纳入团队招聘原始输入与优化表，补记 `AGENTS.md` 协作规范增强，并完成本轮全仓库版本维护收口。
+- v1.38 | 2026-04-01 | Codex-架构师 | 在团队招聘优化表中新增“应用后端架构师”和“高级结构工程师”两类岗位，并同步回写相关组织判断到决策记录。
+- v1.37 | 2026-04-01 | Codex-架构师 | 将团队招聘优化表的新增分析列进一步升级为“方向选择论证”，明确按产品竞争力、架构理念、技术路线与市场 / 财务成功四个角度解释岗位方向选择。
+- v1.36 | 2026-04-01 | Codex-架构师 | 在团队招聘优化表中补充“岗位如何增强产品竞争力并支撑市场 / 财务成功”的解释维度，并同步刷新相关索引描述。
+- v1.35 | 2026-04-01 | Codex-战略承接人 | 收敛《未来家庭机器人愿景与宪章（EMT战略承接稿）》中“慢病管理与用药协同”首发主张与“关键时刻用药救援 + 问询升级”真实付费动机之间的张力，统一为“日常高频入口 + 关键时刻价值峰值”的同一闭环表述。
+- v1.34 | 2026-04-01 | Codex-架构师 | 吸收 Step 43 的团队构建更新，重排团队规划与招聘节奏口径，并补齐相关目录索引。
 - v1.33 | 2026-03-27 | Codex-战略承接人 | 将《未来家庭机器人愿景与宪章（EMT战略承接稿）》中的破冰成交表述统一收敛为“产品线负责人亲自破冰”，使口径更贴近实际组织分工。
 - v1.32 | 2026-03-27 | Codex-战略承接人 | 根据最新上会口径继续更新《未来家庭机器人愿景与宪章（EMT战略承接稿）》，补入“组织型买方为主 + 产品线负责人亲自破冰部分首单”的启动路径，并把阶段 `2/3` 编制上限改成弹性释放口径。
 - v1.31 | 2026-03-27 | Codex-战略承接人 | 按 `office-hours` 与最新 CEO 评审意见继续强化《未来家庭机器人愿景与宪章（EMT战略承接稿）》，补入首单成交机制、平台扩张梯子与阶段资源释放表，并同步刷新评审目录与根索引描述。
@@ -52,6 +58,34 @@
 ## [未发布]
 
 暂无。
+
+## [2026-04-02]
+
+### 新增
+
+- 纳入 `input/00_requirements/06_recruitment_requirements_for_kinbot_team.csv` 作为团队招聘原始输入。
+- 纳入 `docs/10_team_planning/02_recruitment_requirements_optimized.csv` 作为按当前组织基线重构后的招聘优化表。
+
+### 变更
+
+- 更新 `AGENTS.md` 到 `v1.7`，补充本地待办与 Linear 持续同步要求，并明确后置里程碑逆向约束型文档的使用边界。
+- 同步维护团队规划、需求输入目录索引、根索引和决策记录，收口 Step 43 相关团队构建与招聘优化变更。
+- 规范《Kinbot产品、体系、技术与商业理念四轴评估提案》中的表格格式，并补齐文档头部版本维护。
+
+## [2026-04-01]
+
+### 变更
+
+- 更新 [docs/10_team_planning/01_development_team_proposal.md](docs/10_team_planning/01_development_team_proposal.md)，吸收 `Step 43` 关于团队构建的更新，明确本体 `SE`、具身智能前瞻算法与 `OpenClaw / Agent` 软件三条组织主轴，并重排招聘优先级与到岗节奏原则。
+- 更新 [docs/10_team_planning/02_recruitment_requirements_optimized.csv](docs/10_team_planning/02_recruitment_requirements_optimized.csv)，按新的团队构建口径拉开岗位优先级 `1 / 2 / 3 / 4` 与期望到岗月份，并把经典路线岗位改为随前瞻路线进展滚动复审。
+- 更新 [docs/10_team_planning/02_recruitment_requirements_optimized.csv](docs/10_team_planning/02_recruitment_requirements_optimized.csv)，新增“该岗位如何增强产品竞争力并支撑市场 / 财务成功”一列，把每个岗位与产品成功、市场成功、财务成功的关系显式写清。
+- 更新 [docs/10_team_planning/02_recruitment_requirements_optimized.csv](docs/10_team_planning/02_recruitment_requirements_optimized.csv)，将上述新增分析列升级为“为什么这个岗位押这个方向”的方向选择论证，明确从产品竞争力、架构理念、技术路线与市场 / 财务成功四个角度展开。
+- 更新 [docs/10_team_planning/02_recruitment_requirements_optimized.csv](docs/10_team_planning/02_recruitment_requirements_optimized.csv)，新增 `应用后端架构师` 与 `高级结构工程师` 两类岗位，并按现有模板补齐 JD、吸引点、方向选择论证与团队配置口径。
+- 更新 [docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md)，补记 `Step 43` 带来的正式事实与组织判断。
+- 更新 [docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md)，补记新增 `应用后端架构师` 和 `高级结构工程师` 的正式组织判断，明确其与现有平台架构、本体 `SE` 路线的边界关系。
+- 更新 [docs/10_team_planning/README.md](docs/10_team_planning/README.md)、[input/00_requirements/README.md](input/00_requirements/README.md) 与 [README.md](README.md)，补充团队招聘输入与招聘优化表的目录索引，并同步刷新团队规划主题描述。
+- 更新 [docs/08_reviews/13_future_home_robot_vision_charter_for_emt.md](docs/08_reviews/13_future_home_robot_vision_charter_for_emt.md)，收敛“慢病管理与用药协同”首发主张与“关键时刻不掉链子的用药救援与问询升级”真实付费动机之间的张力，统一为“日常高频入口 + 关键时刻价值峰值”的同一首发闭环表述。
+- 更新 [docs/10_team_planning/README.md](docs/10_team_planning/README.md) 与 [README.md](README.md)，同步刷新招聘优化表索引描述，明确其已补入岗位对产品竞争力、市场成功和财务成功的贡献解释。
 
 ## [2026-03-27]
 

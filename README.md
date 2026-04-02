@@ -2,11 +2,14 @@
 
 ---
 
-文档版本：v1.11
+文档版本：v1.14
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.14 | 2026-04-01 | Codex-架构师 | 将团队招聘优化表索引描述升级为“方向选择论证”口径，明确其已覆盖产品竞争力、架构理念、技术路线与市场 / 财务成功。
+- v1.13 | 2026-04-01 | Codex-架构师 | 更新团队招聘优化表索引描述，补入“岗位如何增强产品竞争力并支撑市场 / 财务成功”的解释维度。
+- v1.12 | 2026-04-01 | Codex-架构师 | 补充团队招聘需求输入与优化表索引，并同步《开发团队提案》已吸收 Step 43 团队构建更新的主题描述。
 - v1.11 | 2026-03-27 | Codex-战略承接人 | 再次更新《未来家庭机器人愿景与宪章（EMT战略承接稿）》的根索引描述，补充其已纳入首单成交机制、平台扩张梯子与阶段资源释放表。
 - v1.10 | 2026-03-27 | Codex-战略承接人 | 更新《未来家庭机器人愿景与宪章（EMT战略承接稿）》索引描述，补充其已强化平台基石定位、首单路径与阶段门审批逻辑。
 - v1.9 | 2026-03-26 | Codex-架构师 | 更新《Kinbot状态切换需求评审与状态机重构建议》的根索引描述，明确其已纳入原始方案对比与推荐方案收敛。
@@ -92,6 +95,7 @@
 ## 文档索引
 
 - `input/00_requirements/00_user_requirements_input.md`：用户需求输入。核心主题：产品需求、边界、阶段性澄清与对 Codex 的要求。
+- `input/00_requirements/06_recruitment_requirements_for_kinbot_team.csv`：Kinbot 团队招聘需求输入。核心主题：各岗位原始招聘需求、优先级与招聘执行字段输入。
 - `input/01_candidate_resume/README.md`：候选人简历输入。核心主题：候选人简历资料、评估使用边界与团队规划基线的衔接方式。
 - `docs/00_governance/01_workflow.md`：推进工作流。核心主题：当前主线推进工作流、跨线程规范和评审顺序。
 - `docs/00_governance/02_lifecycle_workflow_and_gates.md`：全生命周期工作流与阶段门。核心主题：全生命周期阶段门、里程碑和 IPD 对应关系。
@@ -144,7 +148,8 @@
 - `docs/09_research/01_vln_role_analysis_and_technical_plan.md`：VLN角色分析与技术规划。核心主题：VLN 在 Kinbot 中的角色分析、路线判断和技术规划。
 - `docs/09_research/02_uwb_phase1_maturity_and_integration_value.md`：UWB一期技术成熟度与接入价值评估。核心主题：UWB 一期成熟度、样品验证门和接入价值评估。
 - `docs/09_research/04_spacemit_k3_chip_assessment_for_embodied_ai.md`：进迭时空 K3 芯片信息整合与具身智能适配评估。核心主题：K3 芯片事实整合、端侧大模型推理能力、具身智能机器人应用优劣势与 Kinbot 适配判断。
-- `docs/10_team_planning/01_development_team_proposal.md`：开发团队提案。核心主题：基于当前架构与总体方案，定义量产预备前所需的 AI-native Team、人与 AI 协作机制、团队结构、人数规模和阶段扩编建议。
+- `docs/10_team_planning/01_development_team_proposal.md`：开发团队提案。核心主题：基于当前架构与总体方案，定义量产预备前所需的 AI-native Team、人与 AI 协作机制、团队结构、人数规模、阶段扩编建议，以及 Step 43 吸收后的组织押注顺序与招聘节奏原则。
+- `docs/10_team_planning/02_recruitment_requirements_optimized.csv`：招聘需求优化表。核心主题：按团队规划基线统一岗位 `JD`、招聘优先级、期望到岗月份、优化建议，以及“为什么这个岗位押这个方向”这一层的方向选择论证，覆盖产品竞争力、架构理念、技术路线与市场 / 财务成功。
 
 ## 仓库结构
 
@@ -191,7 +196,8 @@
 │   │   └── ...
 │   └── 10_team_planning
 │       ├── README.md
-│       └── 01_development_team_proposal.md
+│       ├── 01_development_team_proposal.md
+│       └── 02_recruitment_requirements_optimized.csv
 ├── input
 │   ├── README.md
 │   ├── 00_requirements
@@ -199,7 +205,8 @@
 │   │   ├── 00_user_requirements_input.md
 │   │   ├── 01_kinbot_prd_v0_2_hardware_parameters.csv
 │   │   ├── 02_kinbot_prd_v0_3_hardware_parameters.csv
-│   │   └── 03_kinbot_parameters_id_e.csv
+│   │   ├── 03_kinbot_parameters_id_e.csv
+│   │   └── 06_recruitment_requirements_for_kinbot_team.csv
 │   └── 01_candidate_resume
 │       └── README.md
 ├── output
@@ -246,6 +253,7 @@
 36. `docs/08_reviews/11_robot_generation_classification_framework.md`
 37. `docs/08_reviews/02_architecture_principles_alignment_check.md`
 38. `docs/10_team_planning/01_development_team_proposal.md`
+39. `docs/10_team_planning/02_recruitment_requirements_optimized.csv`
 
 ## 下一步建议
 
