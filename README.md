@@ -2,11 +2,12 @@
 
 ---
 
-文档版本：v1.14
+文档版本：v1.15
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.15 | 2026-04-03 | Codex-战略承接人 | 新增《Step 42 提问树、战略幻觉排除与风险收敛图》索引，沉淀 `Step 42` 的 `28` 个战略问题、问题树与降风险框架。
 - v1.14 | 2026-04-01 | Codex-架构师 | 将团队招聘优化表索引描述升级为“方向选择论证”口径，明确其已覆盖产品竞争力、架构理念、技术路线与市场 / 财务成功。
 - v1.13 | 2026-04-01 | Codex-架构师 | 更新团队招聘优化表索引描述，补入“岗位如何增强产品竞争力并支撑市场 / 财务成功”的解释维度。
 - v1.12 | 2026-04-01 | Codex-架构师 | 补充团队招聘需求输入与优化表索引，并同步《开发团队提案》已吸收 Step 43 团队构建更新的主题描述。
@@ -145,7 +146,8 @@
 - `docs/08_reviews/12_operational_spec_alignment_outline.md`：Kinbot运行规范与主线架构对齐提纲。核心主题：针对运行规范 PR 评审结果，拆分保留、改写与下沉到工程规格的对齐动作。
 - `docs/08_reviews/13_future_home_robot_vision_charter_for_emt.md`：未来家庭机器人愿景与宪章（EMT战略承接稿）。核心主题：承接集团 `EMT` 概念评审，定义未来家庭机器人的愿景、`Kinbot V1` 首发切口、平台基石定位与扩张梯子、首单成交机制以及分阶段 stop/go 投入逻辑。
 - `docs/08_reviews/14_state_switching_requirement_review_and_state_machine_proposal.md`：Kinbot状态切换需求评审与状态机重构建议。核心主题：保留原始状态切换方案作为候选项，对比方案 `A / B / C`，并给出与主线一致的推荐状态机收敛方案。
-- `docs/09_research/01_vln_role_analysis_and_technical_plan.md`：VLN角色分析与技术规划。核心主题：VLN 在 Kinbot 中的角色分析、路线判断和技术规划。
+- `docs/08_reviews/15_step42_question_tree_and_risk_map.md`：Step 42 提问树、战略幻觉排除与风险收敛图。核心主题：将 `Step 42` 的 `28` 个战略问题压缩为提问树、商业逻辑、战略幻觉排除图、强弱热力图和下一步降风险动作。
+- `docs/09_research/01_vln_role_analysis_and_technical_plan.md`：`VLN -> NFM` 角色分析与技术规划。核心主题：Kinbot 导航智能从 `VLN` 能力增强升级到 `NFM` 演进路线，覆盖角色分析、世界状态、长期记忆、Teacher / Student 路线与技术规划。
 - `docs/09_research/02_uwb_phase1_maturity_and_integration_value.md`：UWB一期技术成熟度与接入价值评估。核心主题：UWB 一期成熟度、样品验证门和接入价值评估。
 - `docs/09_research/04_spacemit_k3_chip_assessment_for_embodied_ai.md`：进迭时空 K3 芯片信息整合与具身智能适配评估。核心主题：K3 芯片事实整合、端侧大模型推理能力、具身智能机器人应用优劣势与 Kinbot 适配判断。
 - `docs/10_team_planning/01_development_team_proposal.md`：开发团队提案。核心主题：基于当前架构与总体方案，定义量产预备前所需的 AI-native Team、人与 AI 协作机制、团队结构、人数规模、阶段扩编建议，以及 Step 43 吸收后的组织押注顺序与招聘节奏原则。

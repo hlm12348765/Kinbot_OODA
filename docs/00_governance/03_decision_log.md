@@ -2,11 +2,12 @@
 
 ---
 
-文档版本：v1.11
+文档版本：v1.12
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.12 | 2026-04-03 | Codex-架构师 | 吸收 Step46，补记 `VLN -> NFM` 演进、`semantic_global_frame / local_metric_frame` 双帧、基础空间长期记忆前置与 `SLAM` 退到局部执行支撑层等正式判断。
 - v1.11 | 2026-04-01 | Codex-架构师 | 补记团队招聘优化表新增“应用后端架构师”和“高级结构工程师”两类岗位的正式组织判断。
 - v1.10 | 2026-04-01 | Codex-架构师 | 吸收 Step 43 关于团队构建的更新，补记本体 `SE`、具身智能前瞻算法、`OpenClaw / Agent` 软件主链与招聘节奏分层原则。
 - v1.9 | 2026-03-26 | Codex-架构师 | 回退上一轮提前写入主线的状态机正式决策，当前方案 C 继续停留在评审文档阶段，待方案收口后再进入主线冻结。
@@ -191,6 +192,8 @@
 | F-143 | 招聘节奏原则 | 招聘优先级 `1 / 2 / 3 / 4` 需要显式拉开；对没想清楚或偏传统保留方法的岗位，可降低优先级或推迟预期入职时间，并随新方法进展复审 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 43 |
 | F-144 | 应用后端架构岗位补充 | 当前团队招聘需求需补充 `应用后端架构师`，用于承接家庭机器人应用侧后端架构、AI 能力与业务系统融合，以及可观测与持续交付体系建设 | confirmed | 用户本轮指令 |
 | F-145 | 高级结构岗位补充 | 当前团队招聘需求需补充 `高级结构工程师`，用于承接机器人本体结构、传动、布局、工艺与试产闭环，补强本体高端产品感与工程落地能力 | confirmed | 用户本轮指令 |
+| F-146 | 导航前瞻路线升级 | 模型应从 `VLN` 向 `NFM`（导航基础模型）演进，不再分散地解决问题，并应减小 `SLAM + 路径规划` 这类经典算法在高层认知中的占比，非必要不保留 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 46 |
+| F-147 | `NFM` 重点能力 | 当前前瞻技术主线必须重视 `NFM` 中的空间智能与长期记忆建设 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 46 |
 
 ## 3. 当前架构性判断
 
@@ -301,6 +304,9 @@
 | A-091 | `Kinbot V1` 的核心价值不应是替代医生决定吃什么药，而应是在家庭内连续完成“提醒、到人、递药引导、确认、问询升级、补药 / 挂号”的具身协同闭环 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 42, `docs/08_reviews/13_future_home_robot_vision_charter_for_emt.md` |
 | A-092 | 集团在家庭机器人方向的 `right to win`，来自医疗理解、`AI` 交互、机器人载体与规模交付四种能力的组合，而不是任一单点能力最强 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 42, `docs/08_reviews/13_future_home_robot_vision_charter_for_emt.md` |
 | A-093 | 本次概念评审的资源审批不应采用一次性 `all-in` 方式，而应在确认 `10` 个月 / `9000` 万 / `55` 人总盘子的前提下，按阶段门分批释放 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 42, `docs/08_reviews/13_future_home_robot_vision_charter_for_emt.md` |
+| A-094 | 当前导航智能主线应从“`VLN` 能力增强”升级为“`VLN -> NFM` 演进”；`VLN` 在一代中被定义为 `NFM` 的指令驱动语义导航能力切片，而不是最终问题定义 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 46, `docs/09_research/01_vln_role_analysis_and_technical_plan.md` |
+| A-095 | 一代 `NFM` 主要落在 `Orient / Decide`，统一承接空间理解、粗粒度全局定位、搜索恢复与长时空间记忆；`SLAM / 路径规划` 继续保留在 `local_metric_frame`、局部执行与安全支撑层 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 46, `docs/02_p1_architecture/01_overall_architecture.md` |
+| A-096 | 长期记忆需要正式分层：基础空间长期记忆（`semantic_global_frame / topometric memory / target belief / drift alert`）应前置进入 `P0/P1`，个性化 / 行为长期记忆后置到 `P2` | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 46, `docs/09_research/vln_model_design/kinbot_vln_model_detailed_design.md` |
 
 ## 4. 尚未关闭的关键问题
 
@@ -518,6 +524,9 @@
 | 2026-03-23 | D-182 | 一代头部主动观察基线 | 当前主线明确把“头部多自由度 + 头部相机集中布置”定义为一代主动观察与拟人表达核心，以头部运动提升视野覆盖率并降低固定视角器件数量 | confirmed |
 | 2026-03-23 | D-183 | 一代声学与结构收敛基线 | 当前主线把单麦阵头部优先和扬声器头部 / 上躯干优先定义为一代声学基线，不再接受双麦阵修补式架构 | confirmed |
 | 2026-03-23 | D-184 | 一代本体自由度与底盘基线 | 当前主线明确不追求躯干复杂自由度；底盘可评估全向路线，但产品设计基线继续保留“两轮差速 + 全向轮” | confirmed |
+| 2026-04-03 | D-185 | Step46 前瞻路线吸收 | 当前导航智能主线正式从“`VLN` 能力增强”升级为“`VLN -> NFM` 演进”；`VLN` 被降维定义为 `NFM` 中的指令驱动语义导航切片 | confirmed |
+| 2026-04-03 | D-186 | 空间双帧正式进入主线 | `World State` 与 `NFM` 路线正式吸收 `semantic_global_frame + local_metric_frame` 双帧协同；`SLAM / VSLAM` 主要服务局部执行、局部安全和短时重定位，不再作为长期记忆与全局认知的默认真值源 | confirmed |
+| 2026-04-03 | D-187 | 长期记忆分层重写 | 基础空间长期记忆（`room graph / target belief / topometric memory / drift alert`）前置到 `P0/P1`；个性化 / 行为长期记忆后置到 `P2` | confirmed |
 
 ## 7. 后续记录规则
 

@@ -1,10 +1,14 @@
-# VLN角色分析与技术规划
+# `VLN -> NFM` 角色分析与技术规划
 
 ---
 
-文档版本：v1.0
+文档版本：v1.1
 创建日期：2026-03-08
 作者：Codex-VLN技术专家
+
+文档变更记录：
+- v1.1 | 2026-04-03 | Codex-VLN技术专家 | 吸收 Step46，将技术主线从“VLN 能力增强”升级为“VLN -> NFM 演进”，明确 `semantic_global_frame / local_metric_frame` 双帧、基础空间长期记忆前置与 `SLAM` 退到局部执行支撑层。
+- v1.0 | 2026-03-08 | Codex-VLN技术专家 | 文档创建。
 
 ---
 
@@ -12,8 +16,8 @@
 
 本文用于回答两个问题：
 
-1. VLN / VLA 导航能力在 Kinbot 的 OODA 架构中应该承担什么角色。
-2. 基于 2025 到 2026 年公开工作的最新趋势，Kinbot 应该如何规划下一阶段 VLN 技术路线。
+1. `VLN / VLA / NFM` 导航能力在 Kinbot 的 OODA 架构中应该承担什么角色。
+2. 基于 2025 到 2026 年公开工作的最新趋势，以及 Step46 的前瞻倾向输入，Kinbot 应该如何把当前 `VLN` 路线升级为 `VLN -> NFM` 演进路线。
 
 本文是分析与规划建议，不直接替代正式架构决策。正式边界仍以 [docs/02_p1_architecture/01_overall_architecture.md](../02_p1_architecture/01_overall_architecture.md) 和 [docs/02_p1_architecture/04_module_layers_and_boundaries.md](../02_p1_architecture/04_module_layers_and_boundaries.md) 为准。
 
@@ -21,9 +25,22 @@
 
 结论先行：
 
-- 对 Kinbot 一代产品，VLN 最合适的职责不是替代 `SLAM + 局部规划 + 避障`，而是担任 `Orient -> Decide` 之间的语义导航策略层。
+- Step46 吸收后，Kinbot 当前研究主线应从“`VLN` 能力增强”升级为“`VLN -> NFM` 演进”；`VLN` 不再是最终问题定义，而是 `NFM` 中“指令驱动语义导航”的一个能力切片。
+- `NFM` 在 Kinbot 中需要统一承接：
+  - 指令驱动导航
+  - 无指令自主移动
+  - 空间理解
+  - 粗粒度全局定位
+  - 搜索恢复
+  - 长时空间记忆
+- 对 Kinbot 一代产品，`NFM` 最合适的职责不是替代 `SLAM + 局部规划 + 避障`，而是担任 `Orient -> Decide` 之间的语义导航与空间智能主脑。
 - VLN 应负责“理解用户要去哪里、找什么、找谁、先搜哪里、找不到如何恢复、跟随时如何保持目标”，不应直接接管底盘级安全控制。
-- `Act` 层仍应由 `mobility_navigation` 负责路径跟踪、局部规划、避障、限速和急停；VLN 输出的是语义子目标、搜索策略、跟随约束和重规划建议。
+- `spatial_memory_stack` 不应再只是辅助记忆，而应升级为在线主世界状态底座，采用 `shared BEV / local occupancy + topometric memory` 的混合表达。
+- 这要求正式引入双帧体系：
+  - `semantic_global_frame`：房间、门口、家具、人物、热点区域和目标关系构成的拓扑 / 语义全局帧
+  - `local_metric_frame`：局部几何、可通行性、动态障碍和短时控制上下文
+- `SLAM` 的角色应重写为 `local_metric_frame` 的主要提供者，而不是默认的全局真值源；它继续服务局部执行、安全链和短时重定位，但不再垄断长期记忆与全局认知。
+- `Act` 层仍应由 `mobility_navigation` 负责路径跟踪、局部规划、避障、限速和急停；`NFM` 输出的是语义子目标、语义锚点、搜索策略、跟随约束和重规划建议。
 - VLN 和 VLA 在模型形态上正在收敛，但研究思路并不相同：
   - VLN 仍然以“语言如何落地为空间目标、路径与恢复策略”为中心问题
   - VLA 更以“如何把观测和任务上下文统一映射成动作”为中心问题
@@ -34,7 +51,7 @@
   - 无用户指令时在有限家庭空间中的自发移动、让行、低扰动共存和主动 reposition
 - 你们已经有 8B 室内寻物 / 寻人 / 到达能力，又有真实家庭数据和高精度重建条件，最有价值的下一步不是盲目追求更大的通用基础模型，而是把现有能力收敛成稳定的“家庭语义导航系统”。
 
-一句话概括：Kinbot 的 VLN 应该从“直接出连续动作的导航模型”升级为“带记忆、会恢复、懂家庭语义、能协同经典导航”的语义导航策略系统。
+一句话概括：Kinbot 的 `VLN` 应该从“直接出连续动作的导航模型”升级为 `NFM` 中的语义导航切片，而 Kinbot 的导航智能整体应升级为“带统一世界状态、会粗粒度定位、会恢复、懂家庭语义、能协同经典导航”的 `NFM` 系统。
 
 ## 1.1 VLN 与 VLA 的研究思路是否明显不同
 
@@ -355,7 +372,7 @@ VLN 对 Act 的合理输出应是：
 
 这两者共同构成 Kinbot 的 `Embodied Mobility Intelligence`。
 
-## 4. 建议的能力分层
+## 4. 建议的 `NFM` 能力分层
 
 基于现有样机能力，建议把 Kinbot 的移动智能相关能力拆成五层，而不是一个统一黑盒。
 
@@ -385,7 +402,10 @@ VLN 对 Act 的合理输出应是：
 
 输入：
 
-- SLAM 地图 / 位姿
+- `world_state_snapshot`
+- `semantic_global_frame`
+- `map_match_hypothesis`
+- `local_metric_frame`
 - 房间语义
 - 家具语义
 - 人 / 物观测历史
@@ -396,10 +416,14 @@ VLN 对 Act 的合理输出应是：
 - 目标候选区域排序
 - 家具承载先验
 - 人员活动先验
+- 粗粒度全局定位结果
+- 语义锚点更新
+- 观测到地图的匹配假设
 - 地图漂移提示
+- 地图变化提示
 - 不确定性评分
 
-这是最值得利用你们真实家庭数据资产的地方。
+这是最值得利用你们真实家庭数据资产的地方。Step46 吸收后，这一层不再只是“辅助记忆层”，而应成为 `NFM` 在线主世界状态的核心底座。
 
 ### 4.3 语义导航策略层
 
@@ -458,7 +482,7 @@ VLN 对 Act 的合理输出应是：
 
 ## 5. 面向 Kinbot 的推荐接口
 
-为了让架构可实现，建议尽快把 VLN 从“模型能力描述”收敛为稳定接口。
+为了让架构可实现，建议尽快把 `NFM` 中的导航智能从“模型能力描述”收敛为稳定接口。
 
 建议新增两个逻辑能力：
 
@@ -474,8 +498,9 @@ VLN 对 Act 的合理输出应是：
 - `instruction`
 - `goal_type`
 - `world_state_snapshot`
-- `slam_pose`
-- `local_navigation_status`
+- `semantic_global_anchor`
+- `map_match_hypothesis`
+- `local_execution_context`
 - `recent_observations`
 - `target_candidates`
 - `risk_constraints`
@@ -490,6 +515,10 @@ VLN 对 Act 的合理输出应是：
 - `need_active_observation`
 - `need_user_confirmation`
 - `recovery_strategy`
+- `global_relocalization_request`
+- `memory_writeback`
+- `anchor_update`
+- `map_drift_alert`
 - `explanation`
 
 建议字段定义如下：
@@ -505,10 +534,14 @@ VLN 对 Act 的合理输出应是：
 | `need_active_observation` | 是否需要先转头 / 绕一下 / 退后一步再观察                                                                           |
 | `need_user_confirmation`  | 多目标歧义或高风险时是否需要补充确认                                                                                |
 | `recovery_strategy`       | 找不到、被挡住、跟丢、地图漂移时的恢复动作                                                                             |
+| `global_relocalization_request` | 是否需要发起粗粒度全局重定位或重新锚定                                                                          |
+| `memory_writeback`        | 本轮观察需要写回哪些房间 / 家具 / 目标 / 人员状态                                                                     |
+| `anchor_update`           | 本轮是否更新语义锚点、候选区域分值或拓扑关系                                                                          |
+| `map_drift_alert`         | 是否检测到地图漂移、环境变化或语义全局帧与局部执行帧不一致                                                                |
 | `explanation`             | 面向交互层和审计的可解释文本                                                                                    |
 
 
-这个接口比“输出前进 0.5 米再左转 15 度”更适合产品级架构。
+这个接口比“输出前进 0.5 米再左转 15 度”更适合产品级架构，也更符合 Step46 对“削弱 `SLAM` 在高层认知中的中心地位”的要求。
 
 ### 5.2 `social_mobility_policy`
 
@@ -1324,12 +1357,23 @@ OODA 如果直接照搬到端到端模型内部，会有三个明显问题：
 - person last-seen / likely-to-be
 - shared-space hot zones
 
-如果没有这层，VLN 只能反复做“当前帧反应”，无法稳定完成家庭中的搜索、恢复和再次定位。
+如果没有这层，`VLN` 只能反复做“当前帧反应”，无法稳定完成家庭中的搜索、恢复和再次定位。Step46 吸收后，这层应被正式提升为 `NFM` 在线主世界状态底座，而不再只是辅助记忆。
 
 这里建议采用 `hybrid representation`，而不是一开始就押注单一表示：
 
 - 近场用 `BEV / local occupancy` 表达可通行性、动态障碍和局部代价
 - 中远场用 `topometric / scene graph memory` 表达房间、家具、人物与目标关系
+
+进一步建议把这套混合表示显式拆成两类运行时坐标：
+
+- `semantic_global_frame`
+  - 用于房间、门口、家具、人物、热点区域和目标的拓扑 / 语义全局表达
+  - 用于跨会话一致性、粗粒度全局定位、搜索恢复与长期空间记忆
+- `local_metric_frame`
+  - 用于局部可通行性、动态障碍、轨迹约束和短时执行
+  - 可继续由 `SLAM / 视觉里程计 / 局部几何估计` 主导
+
+两者之间通过 `map_match_hypothesis / anchor_alignment / drift_alert` 持续对齐，而不是默认由一个全局几何位姿硬性统治。
 
 这样比“所有信息都投到一个统一 BEV 再解决一切”更稳妥，也更贴合家庭机器人既要导航、又要交互和搜索恢复的需求。
 
@@ -1363,7 +1407,7 @@ OODA 如果直接照搬到端到端模型内部，会有三个明显问题：
 
 这样做的好处是，端到端模型趋势可以体现在 `Orient / Decide` 内部，而不是把执行安全边界一并吞掉。
 
-### D. 训练路线建议采用“共享视觉底座 + 教师大模型 + 小模型执行”
+### D. 训练路线建议采用“共享视觉底座 + 教师 NFM 大模型 + 小模型执行”
 
 你们现在已经有：
 
@@ -1377,21 +1421,23 @@ OODA 如果直接照搬到端到端模型内部，会有三个明显问题：
 
 1. 先把多相机数据做成同步、标定稳定、可回放的数据底座。
 2. 用前向双目和 SLAM 产出稳定几何监督，再反向蒸馏给侧向 / 后向单目的深度与可通行性估计。
-3. 用 `Qwen3-VL-8B` 做稀疏教师，标注房间、家具、目标候选、人物状态、遮挡关系与搜索理由。
+3. 用 `Qwen3-VL-8B` 做稀疏教师，标注房间、家具、目标候选、人物状态、遮挡关系、语义锚点与搜索理由。
 4. 训练小尺寸专用模型分别承担：
   - room / doorway / furniture understanding
   - object / person candidate ranking
+  - observation-to-map matching
   - target belief update
+  - coarse global localization
   - social mobility scoring
 5. 最后再由 `semantic_navigation_policy` 与 `social_mobility_policy` 组合这些结构化结果。
 
 这条路线的关键，不是让一个大模型直接吃下所有原始视频流，而是让大模型负责“解释”和“蒸馏”，让小模型负责“闭环执行”。
 
-### E. 工程推进建议采用“三阶段纯视觉路线”
+### E. 工程推进建议采用“三阶段 `VLN -> NFM` 路线”
 
 结合外部反馈，我认为三阶段思路是有价值的，但需要重新定性：
 
-#### 阶段 1：`Deep V-SLAM + VLM baseline`
+#### 阶段 1：`NFM foundation baseline`
 
 这是应当优先落地的产品化主线。
 
@@ -1399,9 +1445,11 @@ OODA 如果直接照搬到端到端模型内部，会有三个明显问题：
 
 - 保留经典局部规划与执行安全链
 - 用前向双目和单目深度先验替换主动深度输入
+- 先把 `semantic_global_frame`、房间 / 家具 / 门口关系、`target belief` 和 observation-to-map matching 建起来
 - 让 VLM 负责稀疏语义解释、房间 / 家具 / 人 / 目标候选理解
+- 让 `SLAM` 只负责 `local_metric_frame` 与局部执行支撑
 
-这一步的目标不是“证明纯视觉最先进”，而是先得到可部署、可评测、可回放的闭环系统。
+这一步的目标不是“证明纯视觉最先进”，而是先得到可部署、可评测、可回放，并且已经具备 `NFM` 基础世界状态能力的闭环系统。
 
 #### 阶段 2：`shared BEV/world-state unification`
 
@@ -1412,10 +1460,11 @@ OODA 如果直接照搬到端到端模型内部，会有三个明显问题：
 - 把多相机特征统一写入 `BEV / local occupancy + topometric memory`
 - 引入主动观察与语义复核
 - 把 `uncertainty_stack` 和 `social_mobility_policy` 接入统一世界状态
+- 把 `semantic_global_frame` 与 `local_metric_frame` 的对齐、漂移检测、地图变化检测正式接入运行时闭环
 
 这一步的价值，在于把导航、交互、搜索恢复和共存移动真正建立在同一个 World State 上，而不是几个松散模块拼接。
 
-#### 阶段 3：`pure-vision end-to-end VLA exploration`
+#### 阶段 3：`pure-vision end-to-end NFM / VLA exploration`
 
 这一步只建议作为前沿探索支线，而不是一代量产主路线。
 
@@ -1521,4 +1570,3 @@ VLM / VLA / 通用具身侧：
 
 - 截至 2026-03-08，我没有检索到 NVIDIA 官方公开名为 `GR00T N2` 的材料；目前可核实的是 2025-03-18 的 `GR00T N1` 和 2026-01-08 的 `GR00T N1.6`。
 - `VLNVerse` 的 2025-12-22 预印本公开摘要与本文判断方向一致，即更强调 versatile、embodied、realistic simulation 与 unified evaluation；但我本次未找到稳定的官方项目页，因此没有把它作为本文的核心依据。
-

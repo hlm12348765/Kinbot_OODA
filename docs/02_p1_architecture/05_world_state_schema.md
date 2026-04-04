@@ -2,9 +2,13 @@
 
 ---
 
-文档版本：v1.0
+文档版本：v1.1
 创建日期：2026-03-08
 作者：Codex-架构师
+
+文档变更记录：
+- v1.1 | 2026-04-03 | Codex-架构师 | 吸收 Step46，补入 `semantic_global_frame / local_metric_frame` 双帧原则、`topometric memory`、`anchor_alignment` 与 `environment_change_state`，使世界状态可承接 `NFM` 的空间智能与长期记忆主线。
+- v1.0 | 2026-03-08 | Codex-架构师 | 文档创建。
 
 ---
 
@@ -18,6 +22,8 @@
 
 - `World State`：当前用于运行时决策和执行的统一结构化状态
 - `World Model`：如后续引入，专指用于预测、模拟或想象未来环境与任务动态的模型
+- `semantic_global_frame`：用于房间、门口、家具、人物和热点区域关系的拓扑 / 语义全局帧
+- `local_metric_frame`：用于局部几何、可通行性、动态障碍和短时执行的局部度量帧
 
 ## 2. 设计目标
 
@@ -80,6 +86,22 @@
 - `source` 用于标记来源于相机、麦克风、App、用户手填、纸质报告识别还是云服务
 - `confidence` 用于感知置信度和推断置信度
 - `privacy_level` 用于治理和出端策略
+
+### 3.4 空间双帧原则
+
+为支撑 `Step46` 中“空间智能 + 长期记忆 + 粗粒度全局定位”的要求，`World State` 需要同时维护两类空间表达：
+
+1. `semantic_global_frame`
+说明：用于表达房间、门口、家具、人物、目标和热点区域的拓扑 / 语义关系，是长期空间记忆和粗粒度全局定位的主表达。
+
+2. `local_metric_frame`
+说明：用于表达局部几何、可通行性、动态障碍和短时执行上下文，是局部规划、避障和短时重定位的主表达。
+
+两者之间至少要显式维护以下对齐状态：
+
+- `map_match_hypothesis`
+- `anchor_alignment`
+- `environment_change_state`
 
 ## 4. 一级实体
 
@@ -207,7 +229,8 @@ flowchart LR
 | `place_id` | string | 位置唯一 ID |
 | `category` | enum | 房间、走廊、门槛、充电点、药仓位、风险区 |
 | `topology_parent` | string | 所属父区域 |
-| `pose` | object | 坐标或拓扑位置 |
+| `pose` | object | 在 `semantic_global_frame` 中的锚点坐标或拓扑位置 |
+| `semantic_anchor_id` | string | 对应的语义锚点 ID |
 | `navigability` | enum | 可达、受限、危险 |
 | `care_relevance` | enum | 普通、重点，比如床边、药柜、卫生间 |
 | `night_policy` | object | 夜间活动规则 |
@@ -342,6 +365,10 @@ flowchart LR
 | 字段 | 说明 |
 | --- | --- |
 | `timestamp` | 快照时间 |
+| `semantic_global_anchor` | 当前粗粒度语义锚点 |
+| `map_match_hypothesis` | 当前观测与语义地图的匹配假设 |
+| `local_execution_context` | 当前 `local_metric_frame`、局部风险和执行状态摘要 |
+| `environment_change_state` | 当前是否存在环境变化、地图漂移或锚点失效 |
 | `active_persons` | 当前识别到的人 |
 | `primary_elder_state` | 重点老人当前状态 |
 | `current_place_state` | 当前位置和邻接风险 |
@@ -435,6 +462,22 @@ flowchart LR
 ```json
 {
   "snapshot_state": {
+    "semantic_global_anchor": {
+      "place_id": "living_room_01",
+      "confidence": 0.86
+    },
+    "map_match_hypothesis": {
+      "matched_regions": ["living_room_01", "corridor_01"],
+      "status": "stable"
+    },
+    "local_execution_context": {
+      "frame": "local_metric_frame",
+      "nearby_risk": "low"
+    },
+    "environment_change_state": {
+      "status": "normal",
+      "drift_alert": false
+    },
     "active_persons": [
       {
         "person_id": "person_elder_001",
@@ -457,6 +500,10 @@ flowchart LR
     }
   },
   "persistent_state": {
+    "semantic_global_frame": {
+      "topology_version": "home_v3",
+      "anchors": ["living_room_01", "bathroom_01", "bedside_table_01"]
+    },
     "health_profiles": [
       {
         "health_profile_id": "hp_001",

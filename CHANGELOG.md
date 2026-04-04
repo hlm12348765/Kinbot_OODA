@@ -2,11 +2,15 @@
 
 ---
 
-文档版本：v1.39
+文档版本：v1.43
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.43 | 2026-04-03 | Codex-架构师 | 吸收 Step46，统一将 `VLN` 技术规划升级为 `VLN -> NFM` 演进路线，并同步回写总体架构、世界状态、决策记录与预算 / 差距分析文档。
+- v1.42 | 2026-04-03 | Codex-战略承接人 | 在《Step 42 提问树、战略幻觉排除与风险收敛图》中补入 `Q1-Q28` 的原始问题与回答摘录及 `Step 42-13` 前置事实，提升文档自解释性。
+- v1.41 | 2026-04-03 | Codex-战略承接人 | 修复《Step 42 提问树、战略幻觉排除与风险收敛图》中提问树 Mermaid 节点标签的预览兼容性问题，避免 `1.` 样式被误解析为列表。
+- v1.40 | 2026-04-03 | Codex-战略承接人 | 新增《Step 42 提问树、战略幻觉排除与风险收敛图》，并同步回写评审目录与根索引，用于沉淀 `Step 42` 的战略提问框架与风险判断逻辑。
 - v1.39 | 2026-04-02 | Codex-架构师 | 纳入团队招聘原始输入与优化表，补记 `AGENTS.md` 协作规范增强，并完成本轮全仓库版本维护收口。
 - v1.38 | 2026-04-01 | Codex-架构师 | 在团队招聘优化表中新增“应用后端架构师”和“高级结构工程师”两类岗位，并同步回写相关组织判断到决策记录。
 - v1.37 | 2026-04-01 | Codex-架构师 | 将团队招聘优化表的新增分析列进一步升级为“方向选择论证”，明确按产品竞争力、架构理念、技术路线与市场 / 财务成功四个角度解释岗位方向选择。
@@ -58,6 +62,20 @@
 ## [未发布]
 
 暂无。
+
+## [2026-04-03]
+
+### 新增
+
+- 新增 [docs/08_reviews/15_step42_question_tree_and_risk_map.md](docs/08_reviews/15_step42_question_tree_and_risk_map.md)，用于把 `Step 42` 的 `28` 个连续战略追问重组为提问树、商业逻辑、战略幻觉排除图、强弱热力图与降风险动作清单。
+
+### 变更
+
+- 更新 [docs/08_reviews/README.md](docs/08_reviews/README.md) 与 [README.md](README.md)，补充《Step 42 提问树、战略幻觉排除与风险收敛图》的目录索引与主题说明。
+- 更新 [docs/08_reviews/15_step42_question_tree_and_risk_map.md](docs/08_reviews/15_step42_question_tree_and_risk_map.md)，将提问树 Mermaid 节点标签从 `1.` 样式改为非列表写法，修复预览器将其误判为 Markdown 列表的问题。
+- 更新 [docs/08_reviews/15_step42_question_tree_and_risk_map.md](docs/08_reviews/15_step42_question_tree_and_risk_map.md)，补入 `Q1-Q28` 的原始问题与回答摘录，以及 `Step 42-13` 的非问题型前置事实，避免读者只看到抽象提炼而看不到原始上下文。
+- 更新 [docs/09_research/01_vln_role_analysis_and_technical_plan.md](docs/09_research/01_vln_role_analysis_and_technical_plan.md)、[docs/09_research/vln_model_design/kinbot_vln_model_detailed_design.md](docs/09_research/vln_model_design/kinbot_vln_model_detailed_design.md)、[docs/09_research/vln_model_design/vln_implementation_gap_analysis.md](docs/09_research/vln_model_design/vln_implementation_gap_analysis.md) 与 [docs/09_research/vln_model_design/vln_4b_tps_and_bandwidth_budget.md](docs/09_research/vln_model_design/vln_4b_tps_and_bandwidth_budget.md)，将技术主线从“`VLN` 能力增强”升级为“`VLN -> NFM` 演进”，并统一 `semantic_global_frame / local_metric_frame`、基础空间长期记忆前置与端侧预算口径。
+- 更新 [docs/02_p1_architecture/01_overall_architecture.md](docs/02_p1_architecture/01_overall_architecture.md)、[docs/02_p1_architecture/05_world_state_schema.md](docs/02_p1_architecture/05_world_state_schema.md) 与 [docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md)，正式吸收 Step46 对 `NFM`、空间双帧、`SLAM` 角色收缩和长期记忆分层的主线约束。
 
 ## [2026-04-02]
 
