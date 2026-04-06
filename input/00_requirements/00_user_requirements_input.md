@@ -662,3 +662,9 @@
 	1. 已发生 vs 待执行。CareEvent 触发 Task，但永远不是 Task。
 	2. 当前 CareEvent 定义里有个 recommended_action 字段（继承自原 RiskEvent）。这个字段如果膨胀，就会变成"半个 Task"。
 	3. 约束规则：recommended_action 只允许写动作类型枚举（如 remind / approach / escalate_family / create_task），不允许写执行细节（如具体话术、导航目标、超时策略）。执行细节必须落在 Task 里。
+9. 对issue KBT-51的审阅意见
+	1. 接受将 `Phase 3` 判定为“实质完成，允许收口”。
+	2. 接受七实体目标模型作为当前正式目标方向。
+	3. 接受旧 `9` 实体到目标模型的映射方式。
+	4. 接受 `CareEvent / Task` 的边界规则。
+	5. 接受把完整字段与迁移细节继续留给下一阶段，而不在本轮伪装成已冻结。
