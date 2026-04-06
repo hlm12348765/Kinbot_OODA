@@ -2,11 +2,12 @@
 
 ---
 
-文档版本：v1.24
+文档版本：v1.25
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.25 | 2026-04-06 | Codex-架构师 | 吸收 `Step 47` 对 `KBT-49` 的正式接受，关闭 `Phase 2` 收口确认并把 `Phase 3` 推进到路线 A 的结构级候选方案评审。
 - v1.24 | 2026-04-06 | Codex-架构师 | 建立 `Phase 2` 实际收口确认 issue，并启动 `Phase 3` 的状态模型 / 数据模型决策框架与索引回写。
 - v1.23 | 2026-04-06 | Codex-架构师 | 清理入口文档中的旧 `OODA` 总法残留，统一不再把旧调度器与关系环写成当前顶层主线概念。
 - v1.22 | 2026-04-06 | Codex-架构师 | 继续同步 `Phase 2` 到 `PDCP` 评审包与 `P2` 下发基线，补记其已继承家庭共居智能体总图、多执行范式与离散业务状态面口径。
@@ -58,8 +59,8 @@
 
 - 主线革新已进入 `Phase 2`，原则层、顶层锚点、总图与运行时基线已完成第一轮重组
 - `Phase 2` 已继续下推到陪伴、安全、健康、伴生系统、人工服务与递送边界文档
-- `Phase 2` 的实际收口确认 issue 已在 Linear 建立为 `KBT-49`
-- `Phase 3` 已启动，当前进入“状态模型 / 数据模型决策准备”，不提前冻结 `World State 9 -> 7`
+- `Phase 2` 的实际收口确认 issue `KBT-49` 已获 `Step 47` 接受并关闭
+- `Phase 3` 已继续推进到路线 A 的结构级候选方案评审，当前仍不提前冻结 `World State 9 -> 7`
 - 当前仍保留现有 `PDCP` 双视角基线
 - `World State 9 -> 7`、`CareRelationship / CareEvent` 等结构级动作仍属于后续单独评审项
 
@@ -171,6 +172,7 @@
 - `docs/08_reviews/17_from_multi_scale_dynamic_ooda_to_family_co_living_agent.md`：从多尺度动态 OODA 到家庭共居智能体。核心主题：整理从旧 `OODA` 主线向“家庭共居智能体 + 多执行范式 + World State 七实体重组”迁移的分波次文档改造计划。
 - `docs/08_reviews/18_family_co_living_architecture_diff_and_convergence_plan.md`：Kinbot家庭共居智能体革新路线差异梳理与收敛建议。核心主题：对比 `16 / 17 / 05_system_architecture_principles` 的设计意图与契合度，并给出正式可执行的收敛路线与执行边界。
 - `docs/08_reviews/19_world_state_restructuring_decision_frame.md`：Kinbot状态模型与 World State 收敛决策框架。核心主题：作为革新路线 `Phase 3` 的正式评审入口，对比“`9` 骨架 + 关系 / 事件扩展层”与“直接 `9 -> 7`”两条候选路线。
+- `docs/08_reviews/20_relationship_and_event_extension_layer_candidate.md`：Kinbot关系与事件扩展层候选方案。核心主题：把 `Phase 3` 当前推荐的路线 A 具体化为最小结构方案，用于继续评审是否应先走扩展层。
 - `docs/09_research/01_vln_role_analysis_and_technical_plan.md`：`VLN -> NFM` 角色分析与技术规划。核心主题：Kinbot 导航智能从 `VLN` 能力增强升级到 `NFM` 演进路线，覆盖角色分析、世界状态、长期记忆、Teacher / Student 路线与技术规划。
 - `docs/09_research/02_uwb_phase1_maturity_and_integration_value.md`：UWB一期技术成熟度与接入价值评估。核心主题：UWB 一期成熟度、样品验证门和接入价值评估。
 - `docs/09_research/04_spacemit_k3_chip_assessment_for_embodied_ai.md`：进迭时空 K3 芯片信息整合与具身智能适配评估。核心主题：K3 芯片事实整合、端侧大模型推理能力、具身智能机器人应用优劣势与 Kinbot 适配判断。
