@@ -2,9 +2,13 @@
 
 ---
 
-文档版本：v1.0
+文档版本：v1.1
 创建日期：2026-03-08
 作者：Codex-架构师
+
+文档变更记录：
+- v1.1 | 2026-04-06 | Codex-架构师 | 按家庭共居智能体革新路线对齐本文，明确审批接口是跨执行范式的系统级硬边界；连续流式、事件驱动和人工接力均不得绕过该接口。
+- v1.0 | 2026-03-08 | Codex-架构师 | 文档创建。
 
 ---
 
@@ -18,6 +22,10 @@
 2. 门控时要读哪些上下文
 3. 门控后会返回哪些标准结果
 4. 哪些结果会触发确认、降级、人工转接或审计
+
+在当前 `Phase 2` 口径下，还要再补一条：
+
+5. 不论动作来自离散决策、事件触发、连续策略还是人工接力，都不能绕过这道系统级硬边界
 
 ## 2. 当前设计前提
 
@@ -61,6 +69,7 @@
 4. 接口必须支持多角色冲突仲裁。
 5. 接口必须显式表达第三方责任边界。
 6. 接口必须在离线时保留本地最小可用能力。
+7. 接口是跨执行范式的硬边界，不因 `Orient + Decide` 融合、局部端到端化或事件驱动而失效。
 
 ### 4.1 接口与状态机的关系
 
@@ -71,6 +80,15 @@
 1. `A1` 到 `A7` 高风险异常是审批上下文的一部分，会影响审批强度、确认对象和是否转人工。
 2. `F1` 到 `F7` 关键安全故障不是普通审批条件，而是硬中断条件；一旦命中，接口需要直接返回“进入故障保护”结果。
 3. 业务状态机决定“当前准备做什么”，审批接口决定“当前允不允许做、要不要降级、要不要确认、要不要转人工”。
+
+### 4.2 接口与多执行范式的关系
+
+当前 `Phase 2` 下，这个接口的正式定位是：
+
+1. 在离散决策范式中，它是 `decision_orchestration -> 执行模块` 之间的强制前置门。
+2. 在事件驱动范式中，它是“事件触发后的动作编排”进入执行前的统一审查门。
+3. 在连续流式范式中，局部端到端策略可以缩短认知和决策路径，但不能绕过该接口定义的安全、合规和授权边界。
+4. 在长周期演化范式中，它不直接决定长期学习内容，但会决定长期策略是否可转化为即时可执行动作。
 
 ### 4.2 审批流图
 
@@ -120,6 +138,10 @@ flowchart TB
 6. 外部下单，如买药、配送、外卖
 7. 高风险主动打断与主动靠近
 8. 敏感数据外发
+
+补充说明：
+
+- 这些动作无论来自业务状态机、事件引擎、连续策略适配层还是人工坐席，都必须进入同一审批接口。
 
 以下动作通常不需要单独走高风险审批，但仍需受本地策略限制：
 
@@ -206,6 +228,7 @@ flowchart TB
 | --- | --- | --- |
 | `proposal_id` | string | 唯一 ID |
 | `action_type` | enum | 动作类型 |
+| `origin_paradigm` | enum | `discrete` / `continuous` / `event_driven` / `long_cycle` |
 | `initiator_role` | enum | 谁发起 |
 | `target_person_id` | string | 作用对象 |
 | `executor` | enum | 机器人、App、云服务、第三方平台 |
@@ -591,6 +614,7 @@ flowchart TB
 1. [世界状态结构](/Users/archimboldi/Documents/myproject/AI%20project/Codex%20Project/Kinbot_OODA/docs/02_p1_architecture/05_world_state_schema.md)
 2. [决策状态机](/Users/archimboldi/Documents/myproject/AI%20project/Codex%20Project/Kinbot_OODA/docs/02_p1_architecture/06_decision_state_machine.md)
 3. [模块分层与模块边界](/Users/archimboldi/Documents/myproject/AI%20project/Codex%20Project/Kinbot_OODA/docs/02_p1_architecture/04_module_layers_and_boundaries.md)
+4. [多尺度执行范式基线](/Users/archimboldi/Documents/myproject/AI%20project/Codex%20Project/Kinbot_OODA/docs/02_p1_architecture/03_multi_scale_dynamic_ooda_architecture_baseline.md)
 
 ## 16. 下一步建议
 

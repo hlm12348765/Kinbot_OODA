@@ -619,3 +619,18 @@
 # Step 46：前瞻倾向
 1. 模型从VLN向NFM（导航基础模型）演进，不再分散地解决问题。减小SLAM+路径规划这类经典算法的占比，非必要不保留。
 2. 重视NFM中空间智能与长期记忆的建设。
+# Step 47：架构革新
+1. 同意docs/00_governance/05_system_architecture_principles的提案。
+2. 关于Phase2的输入：
+	1. docs/00_governance/05_system_architecture_principles：母命题和 7 条原则可继续作为上游硬约束。
+	2. docs/02_p1_architecture/14_family_co_living_agent_paradigm.md：“三轴总图 + OODA 新定位”成立。
+	3. docs/02_p1_architecture/01_overall_architecture：双视角总图中，实体架构视图要将头部独立出来。
+	4. docs/02_p1_architecture/03_multi_scale_dynamic_ooda_architecture_baseline：同意“多尺度执行范式基线”。
+3. 9 个一级模块作为 WHAT 轴合理。
+4. 状态机已经降回“离散决策业务面”，而不是继续承担总运行时。
+5. docs/02_p1_architecture/01_overall_architecture里头部独立出来的表达是否通过？
+	1. 计算单元放入头部，控制单元放入底盘
+6. 对issue KBT-49的审阅意见：
+	1. 接受将 `Phase 2` 判定为“实质完成，允许收口”。
+	2. 接受当前对外正式口径已经统一为“家庭共居智能体 + 多执行范式”，旧 `OODA` 总法不再作为现行顶层主线。
+	3. 接受 `Phase 3` 的起点是单独评审 `World State 9 -> 7` 与“关系 / 事件扩展层”两条候选路线，而不是直接冻结数据模型重组。

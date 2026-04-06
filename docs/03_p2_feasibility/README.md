@@ -2,9 +2,14 @@
 
 ---
 
-文档版本：v1.0
+文档版本：v1.2
 创建日期：2026-03-11
 作者：Codex-架构师
+
+文档变更记录：
+- v1.2 | 2026-04-06 | Codex-架构师 | 补记缺口分析、工程化基线、选型和降本文档也已开始对齐 `Phase 2` 的多执行范式口径。
+- v1.1 | 2026-04-06 | Codex-架构师 | 补记 `P2` 目录已开始承接 `Phase 2` 的新口径，下发基线继承家庭共居智能体总图与多执行范式运行时表达。
+- v1.0 | 2026-03-11 | Codex-架构师 | 文档创建。
 
 ---
 
@@ -16,7 +21,7 @@
 
 ## 文档索引
 
-- `01_overall_solution_and_module_design_baseline.md`：总体方案与模块方案下发基线。核心主题：总体方案工作包与模块方案下发基线。
+- `01_overall_solution_and_module_design_baseline.md`：总体方案与模块方案下发基线。核心主题：承接 `PDCP` 双视角总图、家庭共居智能体总架构和多执行范式运行时口径，形成 `S1-S7` 工作包下发基线。
 - `02_demo_to_mass_production_gaps.md`：样机到量产预备能力缺口。核心主题：样机到量产预备的能力缺口与阻断项。
 - `03_engineering_npi_baseline.md`：工程化与NPI准备基线。核心主题：工程化、NPI 和 Alpha/EVT 前置冻结项。
 - `04_hardware_software_selection_matrix.md`：软硬件选型矩阵。核心主题：软硬件选型矩阵、算力需求与主备观察线。

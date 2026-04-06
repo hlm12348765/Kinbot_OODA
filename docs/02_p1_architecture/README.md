@@ -2,9 +2,18 @@
 
 ---
 
-文档版本：v1.0
+文档版本：v1.4
 创建日期：2026-03-11
 作者：Codex-架构师
+
+---
+
+文档变更记录：
+- v1.4 | 2026-04-06 | Codex-架构师 | 补记 `PDCP` 评审包已对齐 `Phase 2`：总架构上抬为家庭共居智能体，运行时改为多执行范式，`OODA` 退到离散决策范式。
+- v1.3 | 2026-04-06 | Codex-架构师 | 补记 `Phase 2` 已继续下推到陪伴、安全、健康、伴生系统、人工服务与递送边界文档，统一其对多执行范式和审批硬边界的口径。
+- v1.2 | 2026-04-06 | Codex-架构师 | 补记 `Phase 2` 的主线重组，更新《总体架构》与《03》索引描述，使其与家庭共居智能体总图和多执行范式口径保持一致。
+- v1.1 | 2026-04-06 | Codex-架构师 | 新增《家庭共居智能体架构范式》索引，并将《03》索引描述更新为“多执行范式基线”口径。
+- v1.0 | 2026-03-11 | Codex-架构师 | 文档创建。
 
 ---
 
@@ -16,19 +25,20 @@
 
 ## 文档索引
 
-- `01_overall_architecture.md`：总体架构。核心主题：系统总体架构、主循环和产品系统边界。
-- `02_pdcp_system_architecture_review_package.md`：PDCP系统架构评审包。核心主题：面向 PDCP 节点的系统架构评审包。
-- `03_multi_scale_dynamic_ooda_architecture_baseline.md`：多尺度动态OODA架构基线。核心主题：多尺度动态 OODA 架构基线与调度规则。
+- `01_overall_architecture.md`：总体架构。核心主题：家庭共居智能体总图、`PDCP` 双视角基线、多执行范式运行时入口与产品系统边界。
+- `02_pdcp_system_architecture_review_package.md`：PDCP系统架构评审包。核心主题：面向 `PDCP` 节点的系统架构评审包，当前已对齐家庭共居智能体总图、多执行范式运行时与双视角实体承载口径。
+- `03_multi_scale_dynamic_ooda_architecture_baseline.md`：多尺度动态OODA架构基线。核心主题：当前文件名保留不变，但内容口径已正式改写为“多尺度执行范式基线”，用于承接离散决策、连续流式、事件驱动与长周期演化的运行时表达。
 - `04_module_layers_and_boundaries.md`：模块分层与模块边界。核心主题：一级模块分层、职责边界和端云划分。
 - `05_world_state_schema.md`：世界状态结构。核心主题：World State 实体结构、状态面和关系组织。
 - `06_decision_state_machine.md`：决策状态机。核心主题：顶层模式、业务状态、异常与故障状态机。
 - `07_safety_compliance_authorization_api.md`：安全合规授权接口。核心主题：安全、合规、授权和审批接口面。
-- `08_companion_interaction_strategy.md`：陪伴交互策略。核心主题：陪伴交互策略、人设边界与长期记忆治理。
-- `09_safety_risk_matrix.md`：安全风险矩阵。核心主题：安全风险域、空间规则、降级与停机矩阵。
-- `10_health_event_pipeline_and_escalation.md`：健康事件管线与升级链路。核心主题：健康事件、补采、分级和升级链路。
-- `11_app_cloud_ops_minimal_loop.md`：家属应用、云服务与后台运营坐席一代最小闭环。核心主题：家属 App、云服务与后台运营坐席的最小闭环。
-- `12_human_service_and_telemedicine_boundaries.md`：后台人工服务与在线问诊协同边界。核心主题：人工服务、在线问诊与第三方履约边界。
-- `13_medication_storage_and_indoor_delivery_requirements.md`：储药与室内递送要求。核心主题：储药与室内递送能力包和工程护栏。
+- `08_companion_interaction_strategy.md`：陪伴交互策略。核心主题：陪伴交互策略、人设边界、长期记忆治理，以及与多执行范式的协同关系。
+- `09_safety_risk_matrix.md`：安全风险矩阵。核心主题：安全风险域、空间规则、降级与停机矩阵，以及风险到多执行范式与安全硬边界的映射。
+- `10_health_event_pipeline_and_escalation.md`：健康事件管线与升级链路。核心主题：健康事件、补采、分级、升级链路与跨执行范式业务管线边界。
+- `11_app_cloud_ops_minimal_loop.md`：家属应用、云服务与后台运营坐席一代最小闭环。核心主题：家属 App、云服务与后台运营坐席的最小闭环，以及分布式家庭中的远程在场与责任接力。
+- `12_human_service_and_telemedicine_boundaries.md`：后台人工服务与在线问诊协同边界。核心主题：人工服务、在线问诊与第三方履约边界，以及与共享状态平面、审批硬边界的对齐。
+- `13_medication_storage_and_indoor_delivery_requirements.md`：储药与室内递送要求。核心主题：储药与室内递送能力包、工程护栏与离散业务执行边界。
+- `14_family_co_living_agent_paradigm.md`：家庭共居智能体架构范式。核心主题：作为 `Phase 2` 顶层锚点文档，定义新总图、三轴框架、`OODA` 新定位、多执行范式与当前未冻结事项。
 
 ## 维护规则
 

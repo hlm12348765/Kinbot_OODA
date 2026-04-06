@@ -2,9 +2,13 @@
 
 ---
 
-文档版本：v1.0
+文档版本：v1.1
 创建日期：2026-03-09
 作者：Codex-架构师
+
+文档变更记录：
+- v1.1 | 2026-04-06 | Codex-架构师 | 按 `Phase 2` 口径补入递送链与离散决策业务面、事件触发和跨范式审批边界的关系，避免把本文件继续写成总运行时描述。
+- v1.0 | 2026-03-09 | Codex-架构师 | 文档创建。
 
 ---
 
@@ -36,6 +40,7 @@
 - 卫生间默认保守处理，第一代机器人不越出入户门
 - 低电量、定位异常、关键传感器失效时允许积极恢复；当机器人无法识别任何障碍物时必须停止运动
 - `KBT-13` 已冻结人工服务、在线问诊与第三方履约的角色边界，递送链不能绕过该边界
+- 当前总架构已升级为“家庭共居智能体 + 多执行范式”，因此递送链应理解为由计划或事件触发、在离散决策业务面执行、受跨范式审批边界约束的业务链
 
 ## 3. 为什么 `KBT-10` 需要在当前里程碑冻结
 
@@ -43,7 +48,7 @@
 
 1. 结构设计无法判断仓体尺寸、开合方向和可达性要求
 2. 授权系统无法区分“普通储物”和“敏感药品递送”
-3. 导航、状态机和审批接口无法稳定定义“到人后如何交接”
+3. 导航执行链、离散决策业务状态面和审批接口无法稳定定义“到人后如何交接”
 4. 家属、保姆、坐席与机器人之间的责任边界会漂移
 5. 故障保护无法判断仓门卡滞、误取、错拿时该如何降级
 6. 高端产品感会被现有样机那种“大而重的抽屉机构”继续拖累
@@ -111,6 +116,7 @@ sequenceDiagram
 2. 开仓与递送必须在 `safety_compliance_authorization` 批准后才能进入执行。
 3. 一代“递送”不是机械臂送到手，而是机器人移动到可交互位置后，通过开仓、提示和确认完成交付。
 4. 交付后必须形成结构化记录，并按需要通知家属或转人工服务。
+5. 计划任务、事件触发和远程确认都可以成为递送链入口，但一旦进入本体动作执行，主执行面统一落在离散决策业务面。
 
 ## 6. 七个能力包的冻结要求
 
@@ -217,7 +223,7 @@ sequenceDiagram
 
 1. 与 [docs/02_p1_architecture/10_health_event_pipeline_and_escalation.md](10_health_event_pipeline_and_escalation.md) 的关系：本文把其中“计划检查 / 递送执行 / 服药确认 / 结果归档”展开成独立产品链。
 2. 与 [docs/02_p1_architecture/07_safety_compliance_authorization_api.md](07_safety_compliance_authorization_api.md) 的关系：开仓、递送、共享结果和通知都必须过统一审批门。
-3. 与 [docs/02_p1_architecture/06_decision_state_machine.md](06_decision_state_machine.md) 的关系：本文主要冻结 `主动接近`、`用药服务` 和 `保姆协同` 里的执行边界。
+3. 与 [docs/02_p1_architecture/06_decision_state_machine.md](06_decision_state_machine.md) 的关系：本文主要冻结离散决策业务面中 `主动接近`、`用药服务` 和 `保姆协同` 的执行边界，不把递送链本身提升为总运行时表达。
 4. 与 [docs/02_p1_architecture/05_world_state_schema.md](05_world_state_schema.md) 的关系：`MedicationAsset`、`Task`、`compartment_policy` 等状态字段要承接本文的装载、交接与审计边界。
 5. 与 [docs/02_p1_architecture/12_human_service_and_telemedicine_boundaries.md](12_human_service_and_telemedicine_boundaries.md) 的关系：当递送链中断、身份不确定或需要外部协同时，必须按既定人工服务与第三方责任边界转接。
 

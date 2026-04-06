@@ -2,11 +2,20 @@
 
 ---
 
-文档版本：v1.15
+文档版本：v1.24
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.24 | 2026-04-06 | Codex-架构师 | 建立 `Phase 2` 实际收口确认 issue，并启动 `Phase 3` 的状态模型 / 数据模型决策框架与索引回写。
+- v1.23 | 2026-04-06 | Codex-架构师 | 清理入口文档中的旧 `OODA` 总法残留，统一不再把旧调度器与关系环写成当前顶层主线概念。
+- v1.22 | 2026-04-06 | Codex-架构师 | 继续同步 `Phase 2` 到 `PDCP` 评审包与 `P2` 下发基线，补记其已继承家庭共居智能体总图、多执行范式与离散业务状态面口径。
+- v1.21 | 2026-04-06 | Codex-架构师 | 继续同步 `Phase 2` 到下游架构文档，补记头部 / 底盘承载分配与 `08-13` 文档对多执行范式、分布式家庭责任接力和审批硬边界的对齐口径。
+- v1.20 | 2026-04-06 | Codex-架构师 | 推进 `codex/kinbot_co_living_agent` 分支的革新路线 `Phase 2`，补入家庭共居智能体总图与多尺度执行范式口径，并同步回写根索引与推荐阅读顺序。
+- v1.19 | 2026-04-06 | Codex-架构师 | 在 `codex/kinbot_co_living_agent` 分支启动革新路线 `Phase 1`，重写《系统架构原则》口径，并补入 `docs/superpowers/` 工作文档目录索引与根说明的过渡口径。
+- v1.18 | 2026-04-06 | Codex-架构师 | 新增《Kinbot家庭共居智能体革新路线差异梳理与收敛建议》索引，用于沉淀 `16 / 17 / 05` 三份文档之间的差异分析、原则契合度与正式收敛路线。
+- v1.17 | 2026-04-06 | Codex-架构师 | 新增《从多尺度动态 OODA 到家庭共居智能体》索引，并同步修复该评审文档的 Markdown 格式异常。
+- v1.16 | 2026-04-06 | Codex-架构师 | 新增《Kinbot家庭共居智能体架构革新讨论纪要》索引，用于沉淀接任后的宏观架构革新讨论、`OODA` 降阶判断与新的架构母命题输入。
 - v1.15 | 2026-04-03 | Codex-战略承接人 | 新增《Step 42 提问树、战略幻觉排除与风险收敛图》索引，沉淀 `Step 42` 的 `28` 个战略问题、问题树与降风险框架。
 - v1.14 | 2026-04-01 | Codex-架构师 | 将团队招聘优化表索引描述升级为“方向选择论证”口径，明确其已覆盖产品竞争力、架构理念、技术路线与市场 / 财务成功。
 - v1.13 | 2026-04-01 | Codex-架构师 | 更新团队招聘优化表索引描述，补入“岗位如何增强产品竞争力并支撑市场 / 财务成功”的解释维度。
@@ -26,7 +35,7 @@
 
 ---
 
-面向家庭室内场景的智能移动交互机器人系统设计项目。项目以 `OODA`（Observe、Orient、Decide、Act）为主循环，并将 `Predict / Learn` 作为跨环能力，目标是在家庭环境中实现安全、自主、可演进的移动与交互能力。
+面向家庭室内场景的智能移动交互机器人系统设计项目。当前在 `codex/kinbot_co_living_agent` 分支中，主线已完成从“以 `OODA`（Observe、Orient、Decide、Act）为总架构中心”的旧表述，向“家庭共居智能体 + 多执行范式”的第一轮重组；`OODA` 继续保留为运行时层的重要离散决策框架。
 
 ## 项目目标
 
@@ -44,6 +53,15 @@
 ## 当前状态
 
 当前仓库处于架构设计阶段。虽然已有粗放样机 Demo 用于验证概念设想，但当前仓库的主要产出仍然是需求、原则和总体架构文档，尚未进入面向量产的系统实现阶段。
+
+当前分支状态：
+
+- 主线革新已进入 `Phase 2`，原则层、顶层锚点、总图与运行时基线已完成第一轮重组
+- `Phase 2` 已继续下推到陪伴、安全、健康、伴生系统、人工服务与递送边界文档
+- `Phase 2` 的实际收口确认 issue 已在 Linear 建立为 `KBT-49`
+- `Phase 3` 已启动，当前进入“状态模型 / 数据模型决策准备”，不提前冻结 `World State 9 -> 7`
+- 当前仍保留现有 `PDCP` 双视角基线
+- `World State 9 -> 7`、`CareRelationship / CareEvent` 等结构级动作仍属于后续单独评审项
 
 当前协作方式：
 
@@ -85,8 +103,8 @@
 - 以端云协同扩展知识和服务能力
 - 当前问题澄清按“健康管理、陪伴交互、安全保障”三条主线并行推进，避免架构只围绕单一功能收敛
 - 当前执行目标到 `2026-12-31` 量产预备，但规划视图覆盖上市运营与下一代回灌
-- 当前总体方法论继续以 OODA 为主，并已冻结为“多尺度、并发、可中断、可动态调度”的正式基线
-- `R4 关系与服务环` 已进入一代正式架构层，`OODA Scale Scheduler` 已提升为一级架构能力
+- 当前运行时总口径已经切到“多执行范式”；旧 `OODA` 经验只在离散决策范式内继续继承
+- 离散决策主链由执行范式协调机制承接；长期关系、习惯与服务优化已转入长周期演化与关系治理表达
 
 术语约定：
 
@@ -102,26 +120,28 @@
 - `docs/00_governance/02_lifecycle_workflow_and_gates.md`：全生命周期工作流与阶段门。核心主题：全生命周期阶段门、里程碑和 IPD 对应关系。
 - `docs/00_governance/03_decision_log.md`：决策记录。核心主题：事实、判断、决策、开放问题和审阅结论沉淀。
 - `docs/00_governance/04_glossary.md`：术语表。核心主题：术语定义与命名边界。
-- `docs/00_governance/05_system_architecture_principles.md`：系统架构原则。核心主题：系统架构原则、分解约束和设计准则。
+- `docs/00_governance/05_system_architecture_principles.md`：系统架构原则。核心主题：Kinbot 架构母命题、`7` 条顶层原则、原则到架构决策的映射规则，以及可继承的通用系统工程原则附录。
+- `docs/superpowers/README.md`：Superpowers 工作文档。核心主题：当前线程的计划 / 规格工作文档索引，不直接替代主线架构或评审基线。
 - `CLAUDE.md`：Claude协作说明。核心主题：Claude 模型工作说明与外部评审协作约定。
 - `docs/01_p0_concept/01_early_hardware_parameters_alignment_analysis.md`：早期硬件参数需求与新架构一致性分析。核心主题：早期硬件参数与当前架构方向的一致性、保守项与激进项分析。
 - `docs/01_p0_concept/02_hardware_parameter_requirements_fit_assessment.md`：硬件参数需求匹配性评估。核心主题：早期硬件参数需求的适配性、问题点与修正方向。
 - `docs/01_p0_concept/03_kinbot_product_system_technology_business_evaluation.md`：Kinbot产品、体系、技术与商业理念四轴评估提案。核心主题：当前 Kinbot 的理念组合判断、商业成功概率推断与后续产品规划建议。
 - `docs/01_p0_concept/04_demo_validation_system_architecture_reconstruction_and_product_inheritance_assessment.md`：验证 Demo 系统架构还原与产品继承评估。核心主题：从验证平台参数反推 Demo 系统架构，并分析其对 Kinbot 产品架构的可继承项与必须抛弃项。
-- `docs/02_p1_architecture/01_overall_architecture.md`：总体架构。核心主题：系统总体架构、主循环和产品系统边界。
-- `docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md`：PDCP系统架构评审包。核心主题：面向 PDCP 节点的系统架构评审包。
-- `docs/02_p1_architecture/03_multi_scale_dynamic_ooda_architecture_baseline.md`：多尺度动态OODA架构基线。核心主题：多尺度动态 OODA 架构基线与调度规则。
+- `docs/02_p1_architecture/01_overall_architecture.md`：总体架构。核心主题：家庭共居智能体总图、`PDCP` 双视角基线、多执行范式运行时入口与产品系统边界。
+- `docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md`：PDCP系统架构评审包。核心主题：面向 `PDCP` 节点的系统架构评审包，当前已对齐家庭共居智能体总图、多执行范式运行时与双视角实体承载口径。
+- `docs/02_p1_architecture/03_multi_scale_dynamic_ooda_architecture_baseline.md`：多尺度动态OODA架构基线。核心主题：当前文件名保留不变，但正文已改写为“多尺度执行范式基线”，用于定义离散决策、连续流式、事件驱动与长周期演化的运行时表达。
 - `docs/02_p1_architecture/04_module_layers_and_boundaries.md`：模块分层与模块边界。核心主题：一级模块分层、职责边界和端云划分。
 - `docs/02_p1_architecture/05_world_state_schema.md`：世界状态结构。核心主题：World State 实体结构、状态面和关系组织。
 - `docs/02_p1_architecture/06_decision_state_machine.md`：决策状态机。核心主题：顶层模式、业务状态、异常与故障状态机。
 - `docs/02_p1_architecture/07_safety_compliance_authorization_api.md`：安全合规授权接口。核心主题：安全、合规、授权和审批接口面。
-- `docs/02_p1_architecture/08_companion_interaction_strategy.md`：陪伴交互策略。核心主题：陪伴交互策略、人设边界与长期记忆治理。
-- `docs/02_p1_architecture/09_safety_risk_matrix.md`：安全风险矩阵。核心主题：安全风险域、空间规则、降级与停机矩阵。
-- `docs/02_p1_architecture/10_health_event_pipeline_and_escalation.md`：健康事件管线与升级链路。核心主题：健康事件、补采、分级和升级链路。
-- `docs/02_p1_architecture/11_app_cloud_ops_minimal_loop.md`：家属应用、云服务与后台运营坐席一代最小闭环。核心主题：家属 App、云服务与后台运营坐席的最小闭环。
-- `docs/02_p1_architecture/12_human_service_and_telemedicine_boundaries.md`：后台人工服务与在线问诊协同边界。核心主题：人工服务、在线问诊与第三方履约边界。
-- `docs/02_p1_architecture/13_medication_storage_and_indoor_delivery_requirements.md`：储药与室内递送要求。核心主题：储药与室内递送能力包和工程护栏。
-- `docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md`：总体方案与模块方案下发基线。核心主题：总体方案工作包与模块方案下发基线。
+- `docs/02_p1_architecture/08_companion_interaction_strategy.md`：陪伴交互策略。核心主题：陪伴交互策略、人设边界、长期记忆治理，以及与多执行范式的协同关系。
+- `docs/02_p1_architecture/09_safety_risk_matrix.md`：安全风险矩阵。核心主题：安全风险域、空间规则、降级与停机矩阵，以及风险到多执行范式与安全硬边界的映射。
+- `docs/02_p1_architecture/10_health_event_pipeline_and_escalation.md`：健康事件管线与升级链路。核心主题：健康事件、补采、分级、升级链路与跨执行范式业务管线边界。
+- `docs/02_p1_architecture/11_app_cloud_ops_minimal_loop.md`：家属应用、云服务与后台运营坐席一代最小闭环。核心主题：家属 App、云服务与后台运营坐席的最小闭环，以及分布式家庭中的远程在场与责任接力。
+- `docs/02_p1_architecture/12_human_service_and_telemedicine_boundaries.md`：后台人工服务与在线问诊协同边界。核心主题：人工服务、在线问诊与第三方履约边界，以及与共享状态平面、审批硬边界的对齐。
+- `docs/02_p1_architecture/13_medication_storage_and_indoor_delivery_requirements.md`：储药与室内递送要求。核心主题：储药与室内递送能力包、工程护栏与离散业务执行边界。
+- `docs/02_p1_architecture/14_family_co_living_agent_paradigm.md`：家庭共居智能体架构范式。核心主题：作为 `Phase 2` 顶层锚点文档，定义新总图、三轴框架、`OODA` 新定位、多执行范式与当前未冻结事项。
+- `docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md`：总体方案与模块方案下发基线。核心主题：承接 `PDCP` 双视角总图、家庭共居智能体总架构和多执行范式运行时口径，形成 `S1-S7` 工作包下发基线。
 - `docs/03_p2_feasibility/02_demo_to_mass_production_gaps.md`：样机到量产预备能力缺口。核心主题：样机到量产预备的能力缺口与阻断项。
 - `docs/03_p2_feasibility/03_engineering_npi_baseline.md`：工程化与NPI准备基线。核心主题：工程化、NPI 和 Alpha/EVT 前置冻结项。
 - `docs/03_p2_feasibility/04_hardware_software_selection_matrix.md`：软硬件选型矩阵。核心主题：软硬件选型矩阵、算力需求与主备观察线。
@@ -147,6 +167,10 @@
 - `docs/08_reviews/13_future_home_robot_vision_charter_for_emt.md`：未来家庭机器人愿景与宪章（EMT战略承接稿）。核心主题：承接集团 `EMT` 概念评审，定义未来家庭机器人的愿景、`Kinbot V1` 首发切口、平台基石定位与扩张梯子、首单成交机制以及分阶段 stop/go 投入逻辑。
 - `docs/08_reviews/14_state_switching_requirement_review_and_state_machine_proposal.md`：Kinbot状态切换需求评审与状态机重构建议。核心主题：保留原始状态切换方案作为候选项，对比方案 `A / B / C`，并给出与主线一致的推荐状态机收敛方案。
 - `docs/08_reviews/15_step42_question_tree_and_risk_map.md`：Step 42 提问树、战略幻觉排除与风险收敛图。核心主题：将 `Step 42` 的 `28` 个战略问题压缩为提问树、商业逻辑、战略幻觉排除图、强弱热力图和下一步降风险动作。
+- `docs/08_reviews/16_family_co_living_intelligence_architecture_innovation_notes.md`：Kinbot家庭共居智能体架构革新讨论纪要。核心主题：沉淀当前线程接任后的宏观架构革新讨论过程、`OODA` 降阶判断、现代 / 后现代 / 中国现实语境下的哲学映射，以及新的架构母命题与顶层原则。
+- `docs/08_reviews/17_from_multi_scale_dynamic_ooda_to_family_co_living_agent.md`：从多尺度动态 OODA 到家庭共居智能体。核心主题：整理从旧 `OODA` 主线向“家庭共居智能体 + 多执行范式 + World State 七实体重组”迁移的分波次文档改造计划。
+- `docs/08_reviews/18_family_co_living_architecture_diff_and_convergence_plan.md`：Kinbot家庭共居智能体革新路线差异梳理与收敛建议。核心主题：对比 `16 / 17 / 05_system_architecture_principles` 的设计意图与契合度，并给出正式可执行的收敛路线与执行边界。
+- `docs/08_reviews/19_world_state_restructuring_decision_frame.md`：Kinbot状态模型与 World State 收敛决策框架。核心主题：作为革新路线 `Phase 3` 的正式评审入口，对比“`9` 骨架 + 关系 / 事件扩展层”与“直接 `9 -> 7`”两条候选路线。
 - `docs/09_research/01_vln_role_analysis_and_technical_plan.md`：`VLN -> NFM` 角色分析与技术规划。核心主题：Kinbot 导航智能从 `VLN` 能力增强升级到 `NFM` 演进路线，覆盖角色分析、世界状态、长期记忆、Teacher / Student 路线与技术规划。
 - `docs/09_research/02_uwb_phase1_maturity_and_integration_value.md`：UWB一期技术成熟度与接入价值评估。核心主题：UWB 一期成熟度、样品验证门和接入价值评估。
 - `docs/09_research/04_spacemit_k3_chip_assessment_for_embodied_ai.md`：进迭时空 K3 芯片信息整合与具身智能适配评估。核心主题：K3 芯片事实整合、端侧大模型推理能力、具身智能机器人应用优劣势与 Kinbot 适配判断。
@@ -168,6 +192,11 @@
 │   │   ├── 03_decision_log.md
 │   │   ├── 04_glossary.md
 │   │   └── 05_system_architecture_principles.md
+│   ├── superpowers
+│   │   ├── README.md
+│   │   └── plans
+│   │       ├── 2026-04-06-family-co-living-principles-phase1.md
+│   │       └── 2026-04-06-family-co-living-phase2-overall-runtime.md
 │   ├── 01_p0_concept
 │   │   ├── README.md
 │   │   ├── 01_early_hardware_parameters_alignment_analysis.md
@@ -219,27 +248,28 @@
 
 1. `input/00_requirements/00_user_requirements_input.md`
 2. `docs/00_governance/05_system_architecture_principles.md`
-3. `docs/01_p0_concept/03_kinbot_product_system_technology_business_evaluation.md`
-4. `docs/01_p0_concept/04_demo_validation_system_architecture_reconstruction_and_product_inheritance_assessment.md`
-5. `docs/02_p1_architecture/01_overall_architecture.md`
-6. `docs/09_research/01_vln_role_analysis_and_technical_plan.md`
-7. `docs/00_governance/01_workflow.md`
-8. `docs/00_governance/02_lifecycle_workflow_and_gates.md`
-9. `docs/02_p1_architecture/03_multi_scale_dynamic_ooda_architecture_baseline.md`
-10. `docs/00_governance/03_decision_log.md`
-11. `docs/02_p1_architecture/04_module_layers_and_boundaries.md`
-12. `docs/02_p1_architecture/05_world_state_schema.md`
-13. `docs/02_p1_architecture/06_decision_state_machine.md`
-14. `docs/02_p1_architecture/07_safety_compliance_authorization_api.md`
-15. `docs/02_p1_architecture/10_health_event_pipeline_and_escalation.md`
-16. `docs/02_p1_architecture/08_companion_interaction_strategy.md`
-17. `docs/02_p1_architecture/09_safety_risk_matrix.md`
-18. `docs/02_p1_architecture/11_app_cloud_ops_minimal_loop.md`
-19. `docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md`
-20. `docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md`
-21. `docs/02_p1_architecture/12_human_service_and_telemedicine_boundaries.md`
-22. `docs/02_p1_architecture/13_medication_storage_and_indoor_delivery_requirements.md`
-23. `docs/03_p2_feasibility/07_phase1_wearable_compatibility_and_data_fields.md`
+3. `docs/02_p1_architecture/14_family_co_living_agent_paradigm.md`
+4. `docs/01_p0_concept/03_kinbot_product_system_technology_business_evaluation.md`
+5. `docs/01_p0_concept/04_demo_validation_system_architecture_reconstruction_and_product_inheritance_assessment.md`
+6. `docs/02_p1_architecture/01_overall_architecture.md`
+7. `docs/02_p1_architecture/03_multi_scale_dynamic_ooda_architecture_baseline.md`
+8. `docs/09_research/01_vln_role_analysis_and_technical_plan.md`
+9. `docs/00_governance/01_workflow.md`
+10. `docs/00_governance/02_lifecycle_workflow_and_gates.md`
+11. `docs/00_governance/03_decision_log.md`
+12. `docs/02_p1_architecture/04_module_layers_and_boundaries.md`
+13. `docs/02_p1_architecture/05_world_state_schema.md`
+14. `docs/02_p1_architecture/06_decision_state_machine.md`
+15. `docs/02_p1_architecture/07_safety_compliance_authorization_api.md`
+16. `docs/02_p1_architecture/10_health_event_pipeline_and_escalation.md`
+17. `docs/02_p1_architecture/08_companion_interaction_strategy.md`
+18. `docs/02_p1_architecture/09_safety_risk_matrix.md`
+19. `docs/02_p1_architecture/11_app_cloud_ops_minimal_loop.md`
+20. `docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md`
+21. `docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md`
+22. `docs/02_p1_architecture/12_human_service_and_telemedicine_boundaries.md`
+23. `docs/02_p1_architecture/13_medication_storage_and_indoor_delivery_requirements.md`
+24. `docs/03_p2_feasibility/07_phase1_wearable_compatibility_and_data_fields.md`
 24. `docs/09_research/02_uwb_phase1_maturity_and_integration_value.md`
 25. `docs/09_research/04_spacemit_k3_chip_assessment_for_embodied_ai.md`
 26. `docs/03_p2_feasibility/02_demo_to_mass_production_gaps.md`

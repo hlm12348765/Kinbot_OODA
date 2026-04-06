@@ -2,11 +2,25 @@
 
 ---
 
-文档版本：v1.43
+文档版本：v1.57
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.57 | 2026-04-06 | Codex-架构师 | 在 Linear 建立 `Phase 2` 实际收口确认 issue，并新增 `Phase 3` 状态模型 / 数据模型决策框架与工作计划文档。
+- v1.56 | 2026-04-06 | Codex-架构师 | 清理根入口、治理文档与状态机中的旧 `OODA` 总法残留，统一不再把旧调度器与关系环写成当前顶层主线。
+- v1.55 | 2026-04-06 | Codex-架构师 | 继续把 `Phase 2` 下推到 `P2` 缺口分析、工程化基线、选型与降本文档，统一工程线对多执行范式和执行范式协调的术语口径。
+- v1.54 | 2026-04-06 | Codex-架构师 | 继续推进 `Phase 2` 到 `PDCP` 评审包与 `P2` 下发基线，并补充“非重大确认不暂停”的协作规则回写。
+- v1.53 | 2026-04-06 | Codex-架构师 | 继续下推 `Phase 2` 到陪伴、安全、健康、伴生系统、人工服务与递送边界文档，并吸收 `Step 47` 最新输入，明确头部主计算与底盘实时控制的空间承载分配。
+- v1.52 | 2026-04-06 | Codex-架构师 | 继续下推 `Phase 2` 到状态平面与审批边界层，更新《世界状态结构》和《安全合规授权接口》，并同步补记治理日志。
+- v1.51 | 2026-04-06 | Codex-架构师 | 继续下推 `Phase 2` 到模块边界与状态机层，明确 `04` 对齐 `WHAT` 轴，`06` 收敛为离散决策业务面，并同步补记治理日志。
+- v1.50 | 2026-04-06 | Codex-架构师 | 按 `Step 47` 继续推进 `Phase 2`，将《总体架构》的产品实体架构视图改成“头部独立”的表达，并同步补记复杂度控制口径。
+- v1.49 | 2026-04-06 | Codex-架构师 | 吸收 `Step 47` 的最新 Phase 2 审阅输入，并在 `AGENTS.md` 中新增“每轮架构推进必须追问当前架构是否过于复杂”的复杂度自检规则。
+- v1.48 | 2026-04-06 | Codex-架构师 | 在 `codex/kinbot_co_living_agent` 分支推进革新路线 `Phase 2`，新增《家庭共居智能体架构范式》，重写《总体架构》与《03》口径，并同步补入 `AGENTS.md` 的“已批准即继续推进”规则及各级索引。
+- v1.47 | 2026-04-06 | Codex-架构师 | 在 `codex/kinbot_co_living_agent` 分支启动革新路线 `Phase 1`，重写《系统架构原则》为 Kinbot 专属原则层，并同步回写治理目录、`docs/superpowers/` 工作文档索引与根索引。
+- v1.46 | 2026-04-06 | Codex-架构师 | 新增《Kinbot家庭共居智能体革新路线差异梳理与收敛建议》，并同步回写评审目录、根索引与决策记录，明确 `16 / 17 / 05` 的关系与正式收敛闸门。
+- v1.45 | 2026-04-06 | Codex-架构师 | 修复《从多尺度动态 OODA 到家庭共居智能体》的 Markdown 格式异常，并同步补齐评审目录与根索引。
+- v1.44 | 2026-04-06 | Codex-架构师 | 新增《Kinbot家庭共居智能体架构革新讨论纪要》，并同步回写评审目录、根索引与决策记录，沉淀当前线程接任后的宏观架构革新讨论。
 - v1.43 | 2026-04-03 | Codex-架构师 | 吸收 Step46，统一将 `VLN` 技术规划升级为 `VLN -> NFM` 演进路线，并同步回写总体架构、世界状态、决策记录与预算 / 差距分析文档。
 - v1.42 | 2026-04-03 | Codex-战略承接人 | 在《Step 42 提问树、战略幻觉排除与风险收敛图》中补入 `Q1-Q28` 的原始问题与回答摘录及 `Step 42-13` 前置事实，提升文档自解释性。
 - v1.41 | 2026-04-03 | Codex-战略承接人 | 修复《Step 42 提问树、战略幻觉排除与风险收敛图》中提问树 Mermaid 节点标签的预览兼容性问题，避免 `1.` 样式被误解析为列表。
@@ -62,6 +76,41 @@
 ## [未发布]
 
 暂无。
+
+## [2026-04-06]
+
+### 新增
+
+- 新增 [docs/08_reviews/16_family_co_living_intelligence_architecture_innovation_notes.md](docs/08_reviews/16_family_co_living_intelligence_architecture_innovation_notes.md)，用于沉淀当前线程接任后的宏观架构革新讨论过程、`OODA` 降阶判断、现代 / 后现代 / 中国现实语境下的哲学映射，以及新的架构母命题与顶层原则。
+- 新增 [docs/08_reviews/17_from_multi_scale_dynamic_ooda_to_family_co_living_agent.md](docs/08_reviews/17_from_multi_scale_dynamic_ooda_to_family_co_living_agent.md)，用于沉淀从旧 `OODA` 主线迁移到“家庭共居智能体 + 多执行范式 + World State 七实体重组”的分波次文档改造计划。
+- 新增 [docs/08_reviews/18_family_co_living_architecture_diff_and_convergence_plan.md](docs/08_reviews/18_family_co_living_architecture_diff_and_convergence_plan.md)，用于梳理 `16 / 17 / 05_system_architecture_principles` 的设计意图差异、原则契合度与正式可执行收敛路线。
+- 新增 [docs/superpowers/README.md](docs/superpowers/README.md) 与 [docs/superpowers/plans/2026-04-06-family-co-living-principles-phase1.md](docs/superpowers/plans/2026-04-06-family-co-living-principles-phase1.md)，用于记录本分支 `Phase 1` 的实施计划与工作文档入口。
+- 新增 [docs/02_p1_architecture/14_family_co_living_agent_paradigm.md](docs/02_p1_architecture/14_family_co_living_agent_paradigm.md) 与 [docs/superpowers/plans/2026-04-06-family-co-living-phase2-overall-runtime.md](docs/superpowers/plans/2026-04-06-family-co-living-phase2-overall-runtime.md)，用于承接革新路线 `Phase 2` 的顶层锚点和实施计划。
+- 新增 [docs/08_reviews/19_world_state_restructuring_decision_frame.md](docs/08_reviews/19_world_state_restructuring_decision_frame.md) 与 [docs/superpowers/plans/2026-04-06-family-co-living-phase3-state-model.md](docs/superpowers/plans/2026-04-06-family-co-living-phase3-state-model.md)，用于承接革新路线 `Phase 3` 的状态模型 / 数据模型决策框架与实施计划。
+
+### 变更
+
+- 更新 [docs/00_governance/05_system_architecture_principles.md](docs/00_governance/05_system_architecture_principles.md)，将其从通用系统工程原则集重写为 Kinbot 专属原则层，正式引入架构母命题、`7` 条顶层原则、映射规则与影响边界。
+- 更新 [docs/00_governance/README.md](docs/00_governance/README.md)、[README.md](README.md) 与 [docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md)，同步回写革新路线 `Phase 1` 已启动、`OODA` 总架构中心地位下调以及新版原则层的索引与执行边界。
+- 更新 [docs/08_reviews/README.md](docs/08_reviews/README.md) 与 [README.md](README.md)，补充《Kinbot家庭共居智能体架构革新讨论纪要》的目录索引与主题说明。
+- 更新 [docs/08_reviews/17_from_multi_scale_dynamic_ooda_to_family_co_living_agent.md](docs/08_reviews/17_from_multi_scale_dynamic_ooda_to_family_co_living_agent.md)，修复从 Claude 复制入仓时导致的整篇行级反引号包裹问题，统一为可维护的正式 Markdown 结构。
+- 更新 [docs/08_reviews/README.md](docs/08_reviews/README.md) 与 [README.md](README.md)，补充《从多尺度动态 OODA 到家庭共居智能体》的目录索引与主题说明。
+- 更新 [docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md)，补记当前线程接任后的宏观架构革新方向，明确系统级范式重写、`OODA` 降阶、`Orient + Decide` 融合趋势与“家庭共居智能体”北极星。
+- 更新 [docs/08_reviews/README.md](docs/08_reviews/README.md)、[README.md](README.md) 与 [docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md)，补入《Kinbot家庭共居智能体革新路线差异梳理与收敛建议》索引与“正式执行前先过收敛闸门”的阶段性判断。
+- 更新 [AGENTS.md](AGENTS.md)，显式补入“用户已明确批准后默认继续推进，直到下一个必须审批的阶段门”为止的协作规则。
+- 更新 [docs/02_p1_architecture/01_overall_architecture.md](docs/02_p1_architecture/01_overall_architecture.md) 与 [docs/02_p1_architecture/03_multi_scale_dynamic_ooda_architecture_baseline.md](docs/02_p1_architecture/03_multi_scale_dynamic_ooda_architecture_baseline.md)，将主线表达重组为“家庭共居智能体总图 + 多尺度执行范式基线”，明确 `OODA` 退到离散决策范式。
+- 更新 [docs/02_p1_architecture/README.md](docs/02_p1_architecture/README.md)、[docs/superpowers/README.md](docs/superpowers/README.md)、[README.md](README.md) 与 [docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md)，同步回写 `Phase 2` 的索引、推荐阅读路径和 `Step 47` 确认事实。
+- 更新 [AGENTS.md](AGENTS.md)，新增“每一轮架构推进都必须显式追问一次‘现在的架构是不是太复杂了？’”的复杂度自检规则。
+- 更新 [docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md)，补记 `Step 47` 的最新 Phase 2 审阅输入：`05 / 14 / 03` 已获确认，`01` 仍需把头部从实体架构视图中独立出来。
+- 更新 [docs/02_p1_architecture/01_overall_architecture.md](docs/02_p1_architecture/01_overall_architecture.md)，将产品实体架构视图改写为“`6` 个本体实体域 + 头部 / 躯干 / 底盘空间承载子视图”，明确头部在总体架构中独立为一级空间实体，同时不新增一级实体域。
+- 更新 [docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md)，补记该要求已落地，并明确本轮用“空间承载显式化”而不是“继续加层”来控制复杂度。
+- 更新 [docs/02_p1_architecture/04_module_layers_and_boundaries.md](docs/02_p1_architecture/04_module_layers_and_boundaries.md)，明确 `9` 个一级模块属于家庭共居智能体三轴总图中的 `WHAT` 轴，不再隐含等同于 `OODA` 分环或总运行时本身。
+- 更新 [docs/02_p1_architecture/06_decision_state_machine.md](docs/02_p1_architecture/06_decision_state_machine.md)，明确状态机只描述多执行范式中的离散决策业务面，并将原 `OODA Scale Scheduler` 重新解释为离散主线中的执行范式协调器。
+- 更新 [docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md)，补记 `04 / 06` 的 `Phase 2` 下游对齐结论。
+- 更新 [docs/02_p1_architecture/05_world_state_schema.md](docs/02_p1_architecture/05_world_state_schema.md)，明确 `World State` 是多执行范式共享的状态平面，并显式保留 `World State 9 -> 7` 与 `CareRelationship / CareEvent` 为后续 `provisional` 评审项。
+- 更新 [docs/02_p1_architecture/07_safety_compliance_authorization_api.md](docs/02_p1_architecture/07_safety_compliance_authorization_api.md)，明确审批接口是跨执行范式的系统级硬边界，连续流式、事件驱动和人工接力均不得绕过。
+- 更新 [docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md)，补记 `05 / 07` 的 `Phase 2` 对齐结论。
+- 更新 [README.md](README.md)、[docs/08_reviews/README.md](docs/08_reviews/README.md)、[docs/superpowers/README.md](docs/superpowers/README.md)、[docs/02_p1_architecture/05_world_state_schema.md](docs/02_p1_architecture/05_world_state_schema.md) 与 [docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md)，补入 `KBT-49`、`Phase 3` 启动状态以及新的状态模型 / 数据模型决策入口。
 
 ## [2026-04-03]
 
