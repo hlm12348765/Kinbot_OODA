@@ -2,11 +2,14 @@
 
 ---
 
-文档版本：v1.58
+文档版本：v1.61
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.61 | 2026-04-06 | Codex-架构师 | 关闭 `KBT-50`、新建 `KBT-51`，并将 `Phase 3` 标记为进入阶段收口确认状态。
+- v1.60 | 2026-04-06 | Codex-架构师 | 将 `05_world_state_schema.md` 升级为七实体目标模型主文档，并新增 `Phase 3` 收口包，准备进入阶段收口确认。
+- v1.59 | 2026-04-06 | Codex-架构师 | 吸收 `Step 47` 第 `7/8` 条更新，新增七实体目标模型文档，并将路线 A 降为对照路线。
 - v1.58 | 2026-04-06 | Codex-架构师 | 吸收 `Step 47` 对 `Phase 2` 收口的正式接受，关闭 `KBT-49`，新建 `KBT-50`，并新增路线 A 的结构级候选方案文档。
 - v1.57 | 2026-04-06 | Codex-架构师 | 在 Linear 建立 `Phase 2` 实际收口确认 issue，并新增 `Phase 3` 状态模型 / 数据模型决策框架与工作计划文档。
 - v1.56 | 2026-04-06 | Codex-架构师 | 清理根入口、治理文档与状态机中的旧 `OODA` 总法残留，统一不再把旧调度器与关系环写成当前顶层主线。
@@ -89,6 +92,8 @@
 - 新增 [docs/02_p1_architecture/14_family_co_living_agent_paradigm.md](docs/02_p1_architecture/14_family_co_living_agent_paradigm.md) 与 [docs/superpowers/plans/2026-04-06-family-co-living-phase2-overall-runtime.md](docs/superpowers/plans/2026-04-06-family-co-living-phase2-overall-runtime.md)，用于承接革新路线 `Phase 2` 的顶层锚点和实施计划。
 - 新增 [docs/08_reviews/19_world_state_restructuring_decision_frame.md](docs/08_reviews/19_world_state_restructuring_decision_frame.md) 与 [docs/superpowers/plans/2026-04-06-family-co-living-phase3-state-model.md](docs/superpowers/plans/2026-04-06-family-co-living-phase3-state-model.md)，用于承接革新路线 `Phase 3` 的状态模型 / 数据模型决策框架与实施计划。
 - 新增 [docs/08_reviews/20_relationship_and_event_extension_layer_candidate.md](docs/08_reviews/20_relationship_and_event_extension_layer_candidate.md)，用于把 `Phase 3` 当前推荐的路线 A 具体化为关系 / 事件扩展层的最小结构候选方案。
+- 新增 [docs/08_reviews/21_seven_entity_world_state_target_model.md](docs/08_reviews/21_seven_entity_world_state_target_model.md)，用于承接 `Phase 3` 当前正式目标方向下的七实体 `World State` 模型评审。
+- 新增 [docs/08_reviews/22_phase3_state_model_closure_package.md](docs/08_reviews/22_phase3_state_model_closure_package.md)，用于作为 `Phase 3` 单一收口审阅入口。
 
 ### 变更
 
@@ -114,6 +119,9 @@
 - 更新 [docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md)，补记 `05 / 07` 的 `Phase 2` 对齐结论。
 - 更新 [README.md](README.md)、[docs/08_reviews/README.md](docs/08_reviews/README.md)、[docs/superpowers/README.md](docs/superpowers/README.md)、[docs/02_p1_architecture/05_world_state_schema.md](docs/02_p1_architecture/05_world_state_schema.md) 与 [docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md)，补入 `KBT-49`、`Phase 3` 启动状态以及新的状态模型 / 数据模型决策入口。
 - 更新 [README.md](README.md)、[docs/08_reviews/README.md](docs/08_reviews/README.md)、[docs/08_reviews/19_world_state_restructuring_decision_frame.md](docs/08_reviews/19_world_state_restructuring_decision_frame.md) 与 [docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md)，吸收 `Step 47` 对 `KBT-49` 的正式接受，并把 `Phase 3` 继续推进到路线 A 的结构级候选方案评审。
+- 更新 [README.md](README.md)、[docs/08_reviews/README.md](docs/08_reviews/19_world_state_restructuring_decision_frame.md)、[docs/08_reviews/20_relationship_and_event_extension_layer_candidate.md](docs/08_reviews/20_relationship_and_event_extension_layer_candidate.md)、[docs/02_p1_architecture/05_world_state_schema.md](docs/02_p1_architecture/05_world_state_schema.md) 与 [docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md)，吸收 `Step 47` 第 `7/8` 条更新，将 `Phase 3` 主方向调整为七实体目标模型，并冻结 `CareEvent / Task` 的边界规则。
+- 更新 [docs/02_p1_architecture/05_world_state_schema.md](docs/02_p1_architecture/05_world_state_schema.md)、[docs/02_p1_architecture/README.md](docs/02_p1_architecture/README.md)、[README.md](README.md)、[docs/08_reviews/README.md](docs/08_reviews/README.md)、[docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md) 与 [docs/superpowers/plans/2026-04-06-family-co-living-phase3-state-model.md](docs/superpowers/plans/2026-04-06-family-co-living-phase3-state-model.md)，将 `Phase 3` 推进到七实体主文档、`V1` 最小激活子集、迁移顺序与阶段收口包。
+- 更新 [README.md](README.md)、[docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md) 与 Linear issue 状态，将 `KBT-50` 关闭并建立 `KBT-51` 作为 `Phase 3` 收口确认入口。
 
 ## [2026-04-03]
 

@@ -2,11 +2,13 @@
 
 ---
 
-文档版本：v1.3
+文档版本：v2.0
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v2.0 | 2026-04-06 | Codex-架构师 | 按 `Step 47` 第 `7/8` 条将本文从 `9` 实体比较基线升级为 `7` 实体目标模型主文档，补入 `V1` 最小激活子集与 `CareEvent / Task` 边界规则。
+- v1.4 | 2026-04-06 | Codex-架构师 | 吸收 `Step 47` 第 `7/8` 条更新，明确当前 `9` 类骨架仅保留为比较基线，`Phase 3` 正式目标转向七实体模型，并补入 `CareEvent / Task` 边界约束。
 - v1.3 | 2026-04-06 | Codex-架构师 | 补入 `Phase 3` 决策承接说明，明确当前 `9` 类骨架继续作为稳定基线，`9 -> 7` 需通过独立评审框架再决定。
 - v1.2 | 2026-04-06 | Codex-架构师 | 按家庭共居智能体革新路线对齐本文，明确 `World State` 是多执行范式共享的状态平面，并显式保留 `9 -> 7` 与 `CareRelationship / CareEvent` 为后续 `provisional` 评审项。
 - v1.1 | 2026-04-03 | Codex-架构师 | 吸收 Step46，补入 `semantic_global_frame / local_metric_frame` 双帧原则、`topometric memory`、`anchor_alignment` 与 `environment_change_state`，使世界状态可承接 `NFM` 的空间智能与长期记忆主线。
@@ -20,11 +22,11 @@
 
 这里的 `World State` 不是单纯地图，也不是记忆库，而是机器人在某一时刻进行感知理解、任务决策、健康联动和权限判断时所依赖的统一状态平面。
 
-在当前 `Phase 2` 口径下，它还需要承担一个更明确的角色：
+在当前 `Phase 3` 口径下，它还需要承担一个更明确的角色：
 
 - 它是 `world_state_memory` 模块内部最核心的共享状态契约；
 - 它服务离散决策、事件驱动和长周期演化等多种执行范式；
-- 它当前仍沿用现有主表骨架，不提前冻结 `World State 9 -> 7` 或 `CareRelationship / CareEvent` 的重组。
+- 它当前已不再把 `9` 类骨架当作目标模型，而以七实体模型作为正式主方向。
 
 术语说明：
 
@@ -42,9 +44,9 @@
 3. 老人看护流程闭环
 4. 家庭安全事件可审计
 
-同时，它还需要满足当前 `Phase 2` 的一个额外目标：
+同时，它还需要满足当前 `Phase 3` 的一个额外目标：
 
-5. 为多执行范式提供共享状态平面，而不把某一条执行范式写死在数据模型里
+5. 为多执行范式提供共享状态平面，同时把目标模型收敛到与原则层一致的七实体表达
 
 因此它必须同时表达：
 
@@ -117,44 +119,42 @@
 
 ### 3.5 当前 `Phase 2` 的冻结边界
 
-当前这份文档只做 `World State` 的稳定骨架，不做下一轮实体重组。
+`Phase 2` 已经结束，相关冻结边界仍作为历史背景保留：
 
-因此先固定以下边界：
-
-1. 当前继续保留 `9` 类一级实体骨架。
-2. `World State 9 -> 7` 仍属于后续单独评审项。
-3. `CareRelationship / CareEvent` 是否替代现有一级实体，当前仍保持 `provisional`。
-4. 事件驱动和长周期演化可以使用当前主表，但不要求本轮就把它们各自实体化为新的一级槽位。
+1. 当时继续保留 `9` 类一级实体骨架；
+2. 当时未提前冻结 `World State 9 -> 7`；
+3. 当时将 `CareRelationship / CareEvent` 保留为后续评审项。
 
 ### 3.6 当前 `Phase 3` 的决策承接
 
-当前已进入 `Phase 3`，但本轮的正式动作仍是“决策准备”，不是“主表重写”。
+当前 `Phase 3` 的正式动作已经从“路线比较”推进到“目标模型收敛”。
 
 因此进一步明确：
 
-1. 本文当前继续作为 `World State` 的正式稳定骨架。
-2. `World State 9 -> 7` 与“关系 / 事件扩展层”的对比评审，统一承接到 `docs/08_reviews/19_world_state_restructuring_decision_frame.md`。
-3. 在该评审完成前，任何下游文档都不得把 `9 -> 7` 写成已冻结事实。
+1. 本文已升级为 `World State` 的七实体目标模型主文档。
+2. 路线 A 的扩展层方案保留在 `docs/08_reviews/20_relationship_and_event_extension_layer_candidate.md`，仅作为对照路线与风险说明。
+3. `docs/08_reviews/21_seven_entity_world_state_target_model.md` 继续作为本轮评审包，用于补充一级边界、`V1` 最小激活子集与迁移顺序。
+4. `CareEvent` 正式替代 `RiskEvent`；`recommended_action` 只允许保留动作类型枚举，不得写执行细节；执行细节必须落在 `Task` 中。
 
 ## 4. 一级实体
 
-建议一代产品至少建模以下 9 类一级实体：
+当前目标模型收敛为以下 `7` 类一级实体：
 
 1. `Person`
-2. `RoleBinding`
+2. `CareRelationship`
 3. `Household`
 4. `Place`
 5. `Object`
-6. `HealthProfile`
-7. `MedicationAsset`
-8. `Task`
-9. `RiskEvent`
+6. `Task`
+7. `CareEvent`
 
 说明：
 
-- 为遵守“任意一层尽量控制在 `5～9` 个实体”的约束，原先单列的 `ServiceLink` 不再作为一级实体独立存在，而是并入 `Household.care_network` 中作为受治理的嵌套结构。
-- 这不意味着外部联动对象不重要，只表示在一代 `World State` 的一级实体层不再单独占一个顶层槽位。
-- 这一版的 `9` 类一级实体是当前主线骨架，不等于已经否定后续 `9 -> 7` 的候选收敛。
+1. `HealthProfile` 并入 `Person.health_state`。
+2. `MedicationAsset` 并入 `Object` 的药物子类型。
+3. `RoleBinding` 升级为 `CareRelationship`。
+4. `RiskEvent` 升级为 `CareEvent`。
+5. `Household.care_network` 继续保留为 `Household` 内的受治理嵌套结构，不单独占一个顶层槽位。
 
 ### 4.1 一级实体关系图
 
@@ -163,33 +163,29 @@ flowchart LR
     subgraph 持久状态
         HH[Household]
         PER[Person]
-        RB[RoleBinding]
+        REL[CareRelationship]
         PL[Place]
         OBJ[Object]
-        HP[HealthProfile]
-        MED[MedicationAsset]
     end
 
     subgraph 运行与事件
         TASK[Task]
-        RISK[RiskEvent]
+        CE[CareEvent]
     end
 
     HH -->|members| PER
-    HH -->|care_network| RISK
-    PER -->|role / permission| RB
-    PER -->|health_profile| HP
+    HH -->|care_network| REL
+    HH -->|care_network| CE
+    PER -->|relations| REL
     PER -->|default or current place| PL
     OBJ -->|located_in| PL
-    HP -->|medication_plan| MED
     TASK -->|owner| PER
-    TASK -->|linked_risk| RISK
-    RISK -->|subject| PER
+    TASK -->|linked_event| CE
+    CE -->|subject| PER
+    REL -->|counterparty| PER
 ```
 
-说明：
-
-- 这张图强调的是一代 `World State` 的一级实体骨架，具体字段和二级结构以下文定义为准。
+这张图表达的是当前目标模型，不再是旧 `9` 实体骨架的比较视图。
 
 ## 5. 一级实体定义
 
@@ -208,34 +204,37 @@ flowchart LR
 | `biometric_binding` | object | 人脸、声纹等绑定信息引用 |
 | `mobility_level` | enum | 正常、受限、需辅助 |
 | `interaction_preferences` | object | 音量、称呼、打断容忍度、语言风格 |
-| `health_profile_id` | string | 关联健康画像 |
+| `health_state` | object | 长期健康状态、慢病、过敏、禁忌、设备绑定、医嘱摘要 |
 | `default_location` | string | 常驻位置或常用房间 |
 | `care_priority` | enum | 普通、重点关注、紧急关注 |
 
-备注：
+说明：
 
-- 老人本人和子女都属于 `Person`，权限差异不放在这里，而放在 `RoleBinding`。
+- `HealthProfile` 已降为 `Person` 的受治理子结构，不再单独作为一级实体存在。
 
-### 5.2 `RoleBinding`
+### 5.2 `CareRelationship`
 
-表示某个主体在当前家庭中的角色和权限。
+表示人和人、人和平台、人和人工服务之间的照护关系、信任层级和权力传递。
 
 关键字段：
 
 | 字段 | 类型 | 说明 |
 | --- | --- | --- |
-| `binding_id` | string | 唯一 ID |
-| `person_id` | string | 关联 `Person` |
-| `role` | enum | `elder` / `child` / `caregiver` / `visitor` |
+| `relationship_id` | string | 唯一 ID |
+| `subject_person_id` | string | 关系主语，一般是被照护主体 |
+| `counterparty_ref` | object | 对侧对象，可指向人、平台、坐席或第三方服务 |
+| `relationship_role` | enum | `elder_child` / `elder_caregiver` / `elder_service` / `visitor` 等 |
 | `auth_scope` | object | 可执行动作范围 |
 | `delegated_by` | string | 授权来源 |
 | `effective_time_window` | object | 生效时间 |
 | `requires_confirmation` | object | 哪些动作需二次确认 |
-| `priority_rank` | integer | 权限仲裁顺序 |
+| `priority_rank` | integer | 仲裁顺序 |
+| `relationship_phase` | enum | `initial` / `stable` / `fragile` 等阶段标签 |
+| `trust_level` | enum | 关系信任等级，`V1` 默认使用枚举而非连续分值 |
 
-备注：
+说明：
 
-- 保姆模式本质上是 `caregiver` 角色加特定任务权限模板。
+- 旧 `RoleBinding` 只保留为迁移阶段或实现层投影视图，不再是目标模型中的一级实体。
 
 ### 5.3 `Household`
 
@@ -251,6 +250,7 @@ flowchart LR
 | `home_mode` | enum | 白天、夜间、离家、休息、异常中 |
 | `emergency_policy` | object | 高风险事件默认联动链路 |
 | `privacy_policy` | object | 数据共享和上报规则 |
+| `service_contracts` | object[] | 与人工服务、平台履约和第三方协同相关的治理配置 |
 
 ### 5.4 `Place`
 
@@ -269,10 +269,6 @@ flowchart LR
 | `care_relevance` | enum | 普通、重点，比如床边、药柜、卫生间 |
 | `night_policy` | object | 夜间活动规则 |
 
-备注：
-
-- 对养老场景，`床边`、`卫生间`、`药物存放区`、`充电点`、`门口` 是高优先级语义位置。
-
 ### 5.5 `Object`
 
 表示可识别的重要物件。
@@ -287,58 +283,13 @@ flowchart LR
 | `ownership` | string | 归属人 |
 | `state` | object | 开启、关闭、缺失、移动中等 |
 | `care_tags` | string[] | 与健康、用药、风险相关标签 |
+| `subtype_payload` | object | 物件类型专属字段；药物对象在此承载剂量、有效期、仓位、电动仓门策略等 |
 
-### 5.6 `HealthProfile`
+说明：
 
-表示老人或被照护人的长期健康画像。
+- `MedicationAsset` 已并入 `Object`，以药物子类型表达。
 
-关键字段：
-
-| 字段 | 类型 | 说明 |
-| --- | --- | --- |
-| `health_profile_id` | string | 唯一 ID |
-| `person_id` | string | 关联对象 |
-| `baseline_metrics` | object | 基线生命体征 |
-| `chronic_conditions` | string[] | 慢病标签 |
-| `allergies` | string[] | 过敏信息 |
-| `contraindications` | string[] | 用药禁忌 |
-| `doctor_advice_refs` | string[] | 医嘱引用 |
-| `emergency_plan` | object | 紧急时默认处理建议 |
-| `medication_plan_ids` | string[] | 关联药物计划 |
-| `device_binding_refs` | string[] | 绑定的穿戴设备和家用测量设备 |
-
-备注：
-
-- 这一实体不直接保存原始病历文件，可保存引用和结构化摘要。
-- 一期优先绑定穿戴设备，同时保留家用测量设备的软件接入接口。
-
-### 5.7 `MedicationAsset`
-
-表示药物、药盒、药仓位和药物计划。
-
-关键字段：
-
-| 字段 | 类型 | 说明 |
-| --- | --- | --- |
-| `medication_id` | string | 唯一 ID |
-| `owner_person_id` | string | 归属老人 |
-| `name` | string | 药品名称 |
-| `form` | enum | 片剂、胶囊、液体等 |
-| `dosage_rule` | object | 剂量和频次 |
-| `storage_place_id` | string | 存放位置 |
-| `compartment_policy` | object | 仓门电动开关、防夹手、开关记录等策略 |
-| `remaining_count` | number | 剩余数量 |
-| `expiry_date` | string | 有效期 |
-| `prescription_ref` | string | 处方引用 |
-| `delivery_status` | enum | 未下单、配送中、已送达 |
-| `emergency_use_policy` | object | 紧急用药前提和限制 |
-
-备注：
-
-- 如果机器人本体设有储物仓，储物仓中的药品也应被表示为 `MedicationAsset`。
-- 一期储物仓必须具备防夹手、电动开关和开关状态记录能力；储物记录和交接确认能力应优先规划。
-
-### 5.8 `Task`
+### 5.6 `Task`
 
 表示系统正在执行或待执行的任务。
 
@@ -356,39 +307,48 @@ flowchart LR
 | `preconditions` | object | 前置条件 |
 | `approval_status` | enum | 待审、已批准、已拒绝 |
 | `execution_trace_ref` | string | 过程记录引用 |
+| `linked_care_event_id` | string | 关联照护事件 |
 
-### 5.9 `RiskEvent`
+### 5.7 `CareEvent`
 
-表示运行时风险和异常事件。
+表示已发生、被感知到或被模型判断发生的照护事件。
 
 关键字段：
 
 | 字段 | 类型 | 说明 |
 | --- | --- | --- |
-| `risk_event_id` | string | 唯一 ID |
-| `risk_type` | enum | 跌倒、昏迷疑似、碰撞、隐私、越权、药物冲突、网络失联 |
+| `care_event_id` | string | 唯一 ID |
+| `event_class` | enum | `risk` / `service_handoff` / `medication` / `companion` / `safety` |
+| `event_type` | enum | 跌倒疑似、异常心率、到点服药、人工接通、主动问候等具体事件类型 |
 | `subject_person_id` | string | 关联人 |
 | `severity` | enum | 低、中、高、紧急 |
 | `status` | enum | 候选、确认、处理中、已关闭 |
-| `recommended_action` | object | 推荐动作 |
+| `recommended_action` | enum[] | 只允许保留动作类型枚举，如 `remind / approach / escalate_family / create_task` |
+| `relationship_ref` | string | 关联照护关系 |
 | `reporting_policy_snapshot` | object | 生成时对应的上报策略 |
 | `linked_task_id` | string | 关联任务 |
+| `evidence_refs` | object[] | 生命体征、视觉、语音、人工记录等证据引用 |
+
+约束：
+
+1. `CareEvent` 回答“已发生 / 被判断已发生”。
+2. `Task` 回答“待执行 / 正在执行”。
+3. `recommended_action` 不得写入执行细节，任何话术、导航目标、超时、重试与流程步骤必须落在 `Task`。
 
 ## 6. 关键关系
 
 建议至少显式维护以下关系：
 
-1. `Person` -> `RoleBinding`
-2. `Person` -> `HealthProfile`
-3. `HealthProfile` -> `MedicationAsset`
-4. `Household` -> `Person`
-5. `Household.care_network` -> 外部联动对象
-6. `Person` -> `Place`
-7. `Object` -> `Place`
-8. `Person` -> `Object`
-9. `Task` -> `Person`
-10. `Task` -> `RiskEvent`
-11. `RiskEvent` -> `Household.care_network`
+1. `Person` -> `CareRelationship`
+2. `Household` -> `Person`
+3. `Household.care_network` -> 外部联动对象
+4. `Person` -> `Place`
+5. `Object` -> `Place`
+6. `Person` -> `Object`
+7. `Task` -> `Person`
+8. `Task` -> `CareEvent`
+9. `CareEvent` -> `CareRelationship`
+10. `CareEvent` -> `Household.care_network`
 
 ## 7. 运行时快照
 
@@ -404,11 +364,11 @@ flowchart LR
 | `local_execution_context` | 当前 `local_metric_frame`、局部风险和执行状态摘要 |
 | `environment_change_state` | 当前是否存在环境变化、地图漂移或锚点失效 |
 | `active_persons` | 当前识别到的人 |
-| `primary_elder_state` | 重点老人当前状态 |
+| `primary_care_state` | 重点被照护对象当前状态 |
 | `current_place_state` | 当前位置和邻接风险 |
-| `health_alerts` | 当前健康候选事件 |
+| `care_events` | 当前关键照护事件 |
 | `active_tasks` | 当前任务队列 |
-| `authorization_state` | 当前授权状态 |
+| `active_relationships` | 当前生效照护关系摘要 |
 | `network_state` | 在线、弱网、离线 |
 | `battery_state` | 电量与回充需求 |
 | `medication_urgency` | 是否存在紧急用药或即将到点服药 |
@@ -426,6 +386,8 @@ flowchart LR
 - `person_detected`
 - `person_identified`
 - `person_lost`
+- `relationship_created`
+- `relationship_changed`
 - `voice_command_received`
 - `fall_suspected`
 - `abnormal_vital_received`
@@ -444,6 +406,8 @@ flowchart LR
 - `manual_service_timeout`
 - `manual_review_requested`
 - `wearable_measurement_requested`
+- `companion_initiated`
+- `companion_positive_response`
 - `compartment_opened`
 - `compartment_closed`
 - `compartment_blocked`
@@ -462,11 +426,11 @@ flowchart LR
 判断层：
 
 - “疑似跌倒，置信度 0.82”
-- “存在高风险异常，建议触发家属提醒”
+- “存在高风险照护事件，建议触发家属提醒”
 
 审批层：
 
-- “已满足授权条件，可向家属发起提醒”
+- “已满足关系授权条件，可向家属发起提醒”
 - “未满足 120 自动联动条件，保留人工确认”
 
 ## 10. 数据治理要求
@@ -491,7 +455,26 @@ flowchart LR
 - 云侧联动只拿结构化最小必要信息
 - 每次外发都要保留 `consent_ref` 和审计链
 
-## 11. 最小 JSON 结构示意
+## 11. `V1` 最小激活子集
+
+当前 `V1` 的目标不是把七实体的全部潜力一次性激活，而是：
+
+1. 先按正确的七实体模型组织数据；
+2. 只激活一代当前闭环真正需要的子集。
+
+当前建议的一代最小激活子集如下：
+
+| 实体 | `V1` 最小激活方式 |
+| --- | --- |
+| `Person` | 身份、位置、偏好、健康状态摘要 |
+| `CareRelationship` | 基础关系角色、授权边界、升级优先级、`phase=initial` |
+| `Household` | 家庭成员、`care_network`、应急联动策略 |
+| `Place` | 房间、床边、卫生间、门口、充电点、药物存放区 |
+| `Object` | 药物、穿戴、生命体征设备、关键危险物 |
+| `Task` | 陪伴、提醒、找人、送药、上报、转人工、回充 |
+| `CareEvent` | 至少覆盖 `event_class=risk`、`event_class=service_handoff`、`event_class=medication` |
+
+## 12. 最小 JSON 结构示意
 
 ```json
 {
@@ -520,60 +503,63 @@ flowchart LR
         "care_priority": "high"
       }
     ],
-    "health_alerts": [
+    "care_events": [
       {
-        "risk_event_id": "risk_001",
-        "risk_type": "fall",
+        "care_event_id": "care_event_001",
+        "event_class": "risk",
+        "event_type": "fall",
         "severity": "high",
         "status": "confirmed"
       }
     ],
-    "authorization_state": {
-      "auto_report_enabled": true,
-      "caregiver_mode": false
-    }
+    "active_relationships": [
+      {
+        "relationship_id": "rel_001",
+        "relationship_role": "elder_child",
+        "trust_level": "authorized"
+      }
+    ]
   },
   "persistent_state": {
     "semantic_global_frame": {
       "topology_version": "home_v3",
       "anchors": ["living_room_01", "bathroom_01", "bedside_table_01"]
     },
-    "health_profiles": [
+    "persons": [
       {
-        "health_profile_id": "hp_001",
         "person_id": "person_elder_001",
-        "chronic_conditions": ["hypertension"],
-        "contraindications": ["drug_x"]
+        "health_state": {
+          "chronic_conditions": ["hypertension"],
+          "contraindications": ["drug_x"]
+        }
       }
     ],
-    "medication_assets": [
+    "objects": [
       {
-        "medication_id": "med_001",
-        "name": "nitroglycerin",
-        "storage_place_id": "robot_bin_01",
-        "remaining_count": 6
+        "object_id": "obj_med_001",
+        "category": "medication",
+        "subtype_payload": {
+          "name": "nitroglycerin",
+          "storage_place_id": "robot_bin_01",
+          "remaining_count": 6
+        }
       }
     ]
   }
 }
 ```
 
-## 12. 当前仍需确认的设计点
+## 13. 当前仍未冻结的内容
 
-在进入接口契约前，以下问题仍需继续明确：
+1. 七实体各自的完整字段表
+2. `CareRelationship` 是否需要连续型关系质量维度，还是只保留分段等级
+3. `CareEvent` 的最终事件族全集
+4. proto 和下游接口的具体迁移顺序
 
-1. 小米、华为等品牌设备的一期具体兼容范围
-2. 后台人工服务的角色分工、SLA 和接入链路
-3. UWB 雷达在室内粗定位、活动状态判断和生命体征监测上的成熟度
-4. 储物仓交接、防误取和审计状态需要表达多细
-5. 第三方平台责任边界如何映射到状态和审计模型
-6. `World State 9 -> 7` 是否进入主线
-7. `CareRelationship / CareEvent` 是否在下一轮替代现有主表结构
+## 14. 下一步建议
 
-## 13. 下一步建议
+基于本文件，下一步应进入：
 
-基于本文件和已产出的决策状态机，建议下一份文档继续写：
-
-1. 安全 / 合规 / 授权接口
-2. 健康事件管线
-3. 量产预备验证计划
+1. `Phase 4`：把新的状态模型映射回下游方案与评审包
+2. 明确 `KBT-32 / KBT-33` 下游接口和治理承接
+3. 为 `Kinbot_Code` 仓库准备迁移顺序与 breaking change 管理策略

@@ -634,3 +634,31 @@
 	1. 接受将 `Phase 2` 判定为“实质完成，允许收口”。
 	2. 接受当前对外正式口径已经统一为“家庭共居智能体 + 多执行范式”，旧 `OODA` 总法不再作为现行顶层主线。
 	3. 接受 `Phase 3` 的起点是单独评审 `World State 9 -> 7` 与“关系 / 事件扩展层”两条候选路线，而不是直接冻结数据模型重组。
+7. Claude关于Phase3的路线A和路线B的抉择意见：
+	1. Route A 是用治理上的"谨慎"来掩盖架构上的"不一致"。Route B 才是与已冻结的原则层和运行时层一致的选择。
+	2. Route A
+		1. Route A 的逻辑是"先加扩展层验证，再决定是否合并"。听起来稳健，但实际效果是：
+		2. 9 个"正式"实体 + 2 个"扩展"实体 = 11 个概念。你们自己的规则是 7±2，9 已经是上界，11 直接违反。
+		3. 扩展层的归属不清。CareRelationship 到底归 `world_state_memory` 还是一个新的"关系层"？它和 RoleBinding 的权限字段谁为主？每次决策要读两个实体还是一个？这些问题在扩展层方案里没有答案，只是被推迟了。
+		4. "先验证再合并"验证的是什么？Person 吸收 HealthProfile 这种 1:1 关系的消除，不需要验证——它是结构简化，不是功能假设。你们不会"验证后发现 HealthProfile 还是应该独立"。
+		5. Route A 本质上是在新范式里保留旧范式的数据模型。你已经把 OODA 从总架构降阶了，把 7 条原则冻结了，但数据层还在用旧模型 + 补丁。这不是渐进演进，是上下不一致。
+	3. Route B
+		1. Person ← HealthProfile，是否存在"同一个人有多个健康画像"的场景？不存在（1:1 关系）。是否存在"健康画像独立于人而有意义"的场景？不存在。因此合并是结构的必然。
+		2. Object ← MedicationAsset，药物在物理世界就是一种物件。它有特殊属性（剂量、有效期），但椅子也有特殊属性（可承重、可移动）。区别在于类型，不在于本体论层级。因此合并是分类学的必然。
+		3. CareRelationship 替代 RoleBinding，"elder / child / caregiver / visitor"本身就是关系角色。`auth_scope` 是关系中的信任层级。`delegated_by` 是关系中的权力传递。RoleBinding 从来就是 CareRelationship 的一个投影。因此替代是语义升级。
+		4. CareEvent 替代 RiskEvent，原则 P3 说"关系是长期结果"。如果系统只记录风险事件而不记录"奶奶今天第一次主动叫机器人名字"，你怎么评估关系演化？RiskEvent 是 CareEvent 的一个子类。替代是原则要求。
+	4. 没有一次合并是"值得先用扩展层试试"的——它们要么是消除冗余（前两个），要么是原则层的直接要求（后两个）。
+	5. Route A 的真实风险比 Route B 更大
+		1. 18 号文档说 Route B 的风险是"过早重组数据模型"。但反过来想：
+			1. Route A 的风险是架构分裂：上面（原则层、总架构、运行时层）已经是"家庭共居智能体"，下面（数据模型）还是"OODA 时代的 9 实体 + 两个补丁"。两套心智模型共存，每个新加入的团队成员都要问"为什么 RoleBinding 和 CareRelationship 同时存在"。
+			2. Route A 的风险是迁移成本翻倍：如果最终还是要合并（几乎确定），那你要做两次变更——先加扩展层，再合并。每次变更都要更新文档、更新 proto、更新代码引用。
+			3. Route A 给 Kinbot_Code 仓库留下的是一个过渡态 proto schema：proto 一旦发布就有兼容性约束。发布一个"9 实体 + 2 扩展"的 proto，后面再改成 7 实体，等于强制所有下游做一次 breaking change。不如一步到位。
+		2. 18 号文档有一个合理顾虑：V1 收缩版还没定义，在不确定 V1 裁哪些功能的情况下改数据模型有风险。但应对方式不应该是用 Route A 拖延，而是：
+			1. 7 实体本身比 9 实体更简单，V1 裁减只会更容易（要裁的概念更少）
+			2. CareRelationship 在 V1 可以只实现 `phase=initial`，质量 6 维度全部用枚举等级而非连续浮点
+			3. CareEvent 在 V1 可以只实现 `event_class=risk`（等价于原 RiskEvent），其他类别留空
+			4. 这不是"降级 Route B"，而是"Route B + V1 最小实现"。数据模型是完整的 7 实体，但 V1 的运行时只激活其中的子集。模型要对，实现可以渐进。
+8. Claude对于CareEvent和Task的边界判据：
+	1. 已发生 vs 待执行。CareEvent 触发 Task，但永远不是 Task。
+	2. 当前 CareEvent 定义里有个 recommended_action 字段（继承自原 RiskEvent）。这个字段如果膨胀，就会变成"半个 Task"。
+	3. 约束规则：recommended_action 只允许写动作类型枚举（如 remind / approach / escalate_family / create_task），不允许写执行细节（如具体话术、导航目标、超时策略）。执行细节必须落在 Task 里。

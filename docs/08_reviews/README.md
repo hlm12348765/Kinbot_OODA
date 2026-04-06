@@ -2,13 +2,15 @@
 
 ---
 
-文档版本：v1.14
+文档版本：v1.16
 创建日期：2026-03-11
 作者：Codex-架构师
 
 ---
 
 文档变更记录：
+- v1.16 | 2026-04-06 | Codex-架构师 | 新增《Kinbot Phase 3 状态模型与数据模型决策收口包》索引，用于作为阶段收口确认的单一审阅入口。
+- v1.15 | 2026-04-06 | Codex-架构师 | 新增《Kinbot七实体 World State 目标模型》索引，并明确《20》降为路线 A 的对照文档。
 - v1.14 | 2026-04-06 | Codex-架构师 | 新增《Kinbot关系与事件扩展层候选方案》索引，用于把 `Phase 3` 的路线 A 从抽象比较推进到结构级评审。
 - v1.13 | 2026-04-06 | Codex-架构师 | 新增《Kinbot状态模型与 World State 收敛决策框架》索引，用于承接革新路线 `Phase 3` 的状态模型与数据模型决策准备。
 - v1.12 | 2026-04-06 | Codex-架构师 | 新增《Kinbot家庭共居智能体革新路线差异梳理与收敛建议》索引，用于对比 `16 / 17 / 05` 三份文档的设计意图、原则契合度与正式收敛路线。
@@ -54,7 +56,9 @@
 - `17_from_multi_scale_dynamic_ooda_to_family_co_living_agent.md`：从多尺度动态 OODA 到家庭共居智能体。核心主题：整理从旧 `OODA` 主线向“家庭共居智能体 + 多执行范式 + World State 七实体重组”迁移的分波次文档改造计划。
 - `18_family_co_living_architecture_diff_and_convergence_plan.md`：Kinbot家庭共居智能体革新路线差异梳理与收敛建议。核心主题：对比 `16 / 17 / 05_system_architecture_principles` 的设计意图与契合度，并给出正式可执行的收敛路线与执行边界。
 - `19_world_state_restructuring_decision_frame.md`：Kinbot状态模型与 World State 收敛决策框架。核心主题：作为革新路线 `Phase 3` 的正式评审入口，对比“`9` 骨架 + 关系 / 事件扩展层”与“直接 `9 -> 7`”两条候选路线，并收敛用户需要确认的最小问题集。
-- `20_relationship_and_event_extension_layer_candidate.md`：Kinbot关系与事件扩展层候选方案。核心主题：把 `Phase 3` 当前推荐的路线 A 具体化为最小结构方案，定义 `CareRelationshipView` 与 `CareEventEnvelope` 如何挂接现有 `9` 类一级实体。
+- `20_relationship_and_event_extension_layer_candidate.md`：Kinbot关系与事件扩展层候选方案。核心主题：保留路线 A 的结构级对照方案，用于说明其扩展层并存与结构膨胀风险。
+- `21_seven_entity_world_state_target_model.md`：Kinbot七实体 World State 目标模型。核心主题：作为 `Phase 3` 当前正式目标方向，定义 `Person / CareRelationship / Household / Place / Object / Task / CareEvent` 七实体模型及其 `V1` 最小激活方式。
+- `22_phase3_state_model_closure_package.md`：Kinbot Phase 3 状态模型与数据模型决策收口包。核心主题：汇总 `Phase 3` 的正式判断、冻结项、未冻结项与用户收口确认要点。
 
 ## 维护规则
 

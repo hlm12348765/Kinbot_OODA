@@ -2,11 +2,14 @@
 
 ---
 
-文档版本：v1.26
+文档版本：v1.29
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.29 | 2026-04-06 | Codex-架构师 | 补记 `KBT-50` 已完成、`KBT-51` 已建立，并明确 `Phase 3` 已形成可收口阶段产物。
+- v1.28 | 2026-04-06 | Codex-架构师 | 补记 `05_world_state_schema.md` 已升级为七实体目标模型主文档，并形成 `Phase 3` 收口包，准备进入阶段收口确认。
+- v1.27 | 2026-04-06 | Codex-架构师 | 吸收 `Step 47` 第 `7/8` 条更新，补记路线 B 升为 `Phase 3` 的正式目标方向，并冻结 `CareEvent / Task` 的边界规则。
 - v1.26 | 2026-04-06 | Codex-架构师 | 补记 `Step 47` 已接受 `KBT-49` 并关闭 `Phase 2`，同时建立 `KBT-50` 与路线 A 的结构级候选方案，继续推进 `Phase 3`。
 - v1.25 | 2026-04-06 | Codex-架构师 | 补记 `KBT-49` 作为 `Phase 2` 实际收口确认 issue 建立，并明确 `Phase 3` 已按“状态模型 / 数据模型决策准备”方式启动。
 - v1.24 | 2026-04-06 | Codex-架构师 | 清理治理入口中的旧 `OODA` 总法残留，并补记其已被“家庭共居智能体 + 多执行范式”现行口径覆盖。
@@ -570,6 +573,12 @@
 | 2026-04-06 | D-214 | `Step 47` 已正式接受 `Phase 2` 收口 | 用户已在 `input/00_requirements/00_user_requirements_input.md` 的 `Step 47` 中明确接受 `KBT-49` 的三项审阅点，因此 `Phase 2` 当前可视为正式收口完成 | confirmed |
 | 2026-04-06 | D-215 | `KBT-49` 已关闭且 `KBT-50` 已建立 | `KBT-49` 当前已在 Linear 中关闭；同时已新建 `KBT-50`《评审 World State 扩展层路线与 9 -> 7 重组边界》，用于承接 `Phase 3` 的下一轮结构级评审 | confirmed |
 | 2026-04-06 | D-216 | 路线 A 已进入结构级候选方案评审 | 当前已新增 `docs/08_reviews/20_relationship_and_event_extension_layer_candidate.md`，把“保留 `9` 类骨架 + 关系 / 事件扩展层”从抽象路线进一步具体化为 `CareRelationshipView + CareEventEnvelope` 的最小结构候选 | provisional |
+| 2026-04-06 | D-217 | `Step 47` 提升路线 B 为主方向 | 用户在 `Step 47` 第 `7` 条中明确引入 Claude 对 `Phase 3` 的路线判断：路线 A 不再作为主方向，路线 B 升为与原则层、总架构和运行时层保持一致的目标模型方向 | confirmed |
+| 2026-04-06 | D-218 | 七实体目标模型方向成立 | 当前 `Phase 3` 的目标模型方向收敛为 `Person / CareRelationship / Household / Place / Object / Task / CareEvent` 七实体；其中 `HealthProfile` 并入 `Person`、`MedicationAsset` 并入 `Object`、`RoleBinding` 升级为 `CareRelationship`、`RiskEvent` 升级为 `CareEvent` | provisional |
+| 2026-04-06 | D-219 | `CareEvent / Task` 边界规则冻结 | `CareEvent` 回答“已发生 / 被判断已发生”，`Task` 回答“待执行 / 正在执行”；`CareEvent.recommended_action` 只允许保留动作类型枚举，不得承载执行细节 | confirmed |
+| 2026-04-06 | D-220 | `05_world_state_schema.md` 已升级为主文档 | `05_world_state_schema.md` 当前已从 `9` 实体比较基线升级为 `7` 实体目标模型主文档，并补入 `V1` 最小激活子集与迁移顺序建议 | confirmed |
+| 2026-04-06 | D-221 | `Phase 3` 已形成阶段收口包 | 当前已新增 `docs/08_reviews/22_phase3_state_model_closure_package.md`，用于汇总 `Phase 3` 的正式判断、冻结项、未冻结项与用户收口确认要点；当前可进入阶段收口确认 | confirmed |
+| 2026-04-06 | D-222 | `KBT-50` 已完成并进入阶段收口确认 | `KBT-50` 当前已关闭；同时已新建 `KBT-51`《确认 Phase 3 状态模型与数据模型决策收口》，作为用户审阅 `Phase 3` 收口的正式入口 | confirmed |
 
 ## 7. 后续记录规则
 
