@@ -2,11 +2,13 @@
 
 ---
 
-文档版本：v1.64
+文档版本：v1.66
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.66 | 2026-04-08 | Codex-架构师 | 澄清 `23` 号文档 §9.3：`V1` 的“远程在场感”仍以 `App / 云 / 坐席` 最小闭环为验证基础，机群能力接入点仅保留为平台化增强方向。
+- v1.65 | 2026-04-07 | Claude-架构师 | `Phase 4.5` 增量补强：14 号 §10.1 追加 `FleetView` 候选字段子表、22 号追加 §5.2 家庭节律观测视图、23 号追加 §9 机群能力接入点清单；统一在 `KBT-54` 收口路径下承接，不修改任何已冻结基线。
 - v1.64 | 2026-04-07 | Codex-架构师 | 完成 `Phase 4.5` 文档层补强并创建 `KBT-53 / KBT-54`，准备进入 `Phase 5`。
 - v1.63 | 2026-04-07 | Codex-架构师 | 启动 `Phase 4.5` 战略野心补强包，新增统一审阅文档并把战略验证泳道接入 `Phase 5` 文档。
 - v1.62 | 2026-04-06 | Codex-架构师 | 完成 `Phase 4` 下游同步，关闭 `KBT-51`、新建 `KBT-52`，并新增 `Phase 4` 收口包。
@@ -92,6 +94,10 @@
 - 更新 [docs/08_reviews/README.md](docs/08_reviews/README.md) 与 [README.md](README.md)，补入《KBT-52 战略野心差距评审》的目录索引与主题说明。
 - 更新 [docs/02_p1_architecture/14_family_co_living_agent_paradigm.md](docs/02_p1_architecture/14_family_co_living_agent_paradigm.md)、[docs/08_reviews/21_seven_entity_world_state_target_model.md](docs/08_reviews/21_seven_entity_world_state_target_model.md)、[docs/08_reviews/22_phase3_state_model_closure_package.md](docs/08_reviews/22_phase3_state_model_closure_package.md) 与 [docs/00_governance/05_system_architecture_principles.md](docs/00_governance/05_system_architecture_principles.md)，以附录 / 候选小节方式补入 `Phase 4.5` 战略接口预留。
 - 更新 [docs/05_p4_beta_dvt/01_mvp_validation_plan.md](docs/05_p4_beta_dvt/01_mvp_validation_plan.md) 与 [docs/06_p5_launch_readiness/01_mass_production_readiness_criteria.md](docs/06_p5_launch_readiness/01_mass_production_readiness_criteria.md)，把远程在场感、关系演化和惊奇时刻接入 `Phase 5` 的战略验证泳道。
+- 更新 [docs/02_p1_architecture/14_family_co_living_agent_paradigm.md](docs/02_p1_architecture/14_family_co_living_agent_paradigm.md) §10.1，在 `FleetView` 占位之下追加候选字段子表（`fleet_state / shared_memory / cross_household_pattern`），仅作占位、不引入字段冻结。
+- 更新 [docs/08_reviews/22_phase3_state_model_closure_package.md](docs/08_reviews/22_phase3_state_model_closure_package.md)，新增 §5.2 家庭节律观测视图（候选），与 §5.1 `Self` 视图位平行但观察对象不同，挂接在 `Household` 之上、不修改其已冻结字段、不进入 V1。
+- 更新 [docs/08_reviews/23_phase4_downstream_sync_closure_package.md](docs/08_reviews/23_phase4_downstream_sync_closure_package.md)，在 §8 之后追加 §9 机群能力接入点清单，列出 `World State / CareEvent / Task / CareRelationship` 四个接入点的机群侧扩展候选与是否进入 V1（**全部为否**），不修改 §1–§8 任何已冻结结论。
+- 更新 [docs/08_reviews/25_phase45_strategic_ambition_reinforcement_package.md](docs/08_reviews/25_phase45_strategic_ambition_reinforcement_package.md) §4.5，登记上述三项 `Phase 4.5` 增量补强动作，统一在 `KBT-54` 收口路径下承接，不引入新 KBT 编号。
 
 ## [2026-04-06]
 
