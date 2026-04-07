@@ -80,7 +80,13 @@
 
 ## [未发布]
 
-暂无。
+### 新增
+
+- 新增 [docs/08_reviews/24_kbt52_strategic_ambition_gap_review.md](docs/08_reviews/24_kbt52_strategic_ambition_gap_review.md)，作为 `Phase 4` 收口后、`Phase 5` 启动前的独立战略野心差距评审，从董事长视角识别"单实例 vs 平台 / 观察 vs 生成 / 操作准确 vs 叙事错位"三条根因，并提出 `Phase 4.5` 文档级补强包与 `Phase 5` 战略验证三问，供 Codex-架构师在 `KBT-52` 审阅环节吸收。
+
+### 变更
+
+- 更新 [docs/08_reviews/README.md](docs/08_reviews/README.md) 与 [README.md](README.md)，补入《KBT-52 战略野心差距评审》的目录索引与主题说明。
 
 ## [2026-04-06]
 
