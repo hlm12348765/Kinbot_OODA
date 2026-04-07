@@ -2,13 +2,15 @@
 
 ---
 
-文档版本：v1.18
+文档版本：v1.20
 创建日期：2026-03-11
 作者：Codex-架构师
 
 ---
 
 文档变更记录：
+- v1.20 | 2026-04-07 | Codex-架构师 | 新增 `KBT-53 / KBT-54` 对应的 `Phase 4.5` 收口信息，并确认当前可从战略补强进入 `Phase 5` 收口确认前状态。
+- v1.19 | 2026-04-07 | Codex-架构师 | 新增《Kinbot Phase 4.5 战略野心补强包》索引，用于作为 `Phase 4.5` 的单一审阅入口。
 - v1.18 | 2026-04-07 | Claude-架构师 | 新增《KBT-52 战略野心差距评审》索引，作为 `Phase 4` 收口后、`Phase 5` 启动前的独立战略意见入口。
 - v1.17 | 2026-04-06 | Codex-架构师 | 新增《Kinbot Phase 4 下游方案与评审包同步收口包》索引，用于作为 `Phase 4` 阶段收口确认的单一审阅入口。
 - v1.16 | 2026-04-06 | Codex-架构师 | 新增《Kinbot Phase 3 状态模型与数据模型决策收口包》索引，用于作为阶段收口确认的单一审阅入口。
@@ -63,6 +65,7 @@
 - `22_phase3_state_model_closure_package.md`：Kinbot Phase 3 状态模型与数据模型决策收口包。核心主题：汇总 `Phase 3` 的正式判断、冻结项、未冻结项与用户收口确认要点。
 - `23_phase4_downstream_sync_closure_package.md`：Kinbot Phase 4 下游方案与评审包同步收口包。核心主题：汇总七实体目标模型同步回下游主线后的正式判断、未冻结项与用户收口确认要点。
 - `24_kbt52_strategic_ambition_gap_review.md`：KBT-52 战略野心差距评审。核心主题：从董事长视角对 `Phase 1–Phase 4` 的战略野心进行独立复核，识别"单实例 vs 平台 / 观察 vs 生成 / 操作准确 vs 叙事错位"三条根因，并提出 `Phase 4.5` 文档级补强包与 `Phase 5` 战略验证三问。
+- `25_phase45_strategic_ambition_reinforcement_package.md`：Kinbot Phase 4.5 战略野心补强包。核心主题：在不改动 `Phase 1-4` 已冻结结论的前提下，为平台位、生成位与惊奇位补上战略接口预留，并把三条战略验证对象接入 `Phase 5`。
 
 ## 维护规则
 
