@@ -2,6 +2,8 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
+**已归档说明：** 本计划已被主线架构与治理文档吸收，仅保留历史追溯价值。
+
 **Goal:** 将 `docs/00_governance/05_system_architecture_principles.md` 从通用系统工程原则集重写为 Kinbot 专属原则层，并同步维护与本轮革新收敛相关的版本记录。
 
 **Architecture:** 先以 `docs/08_reviews/18_family_co_living_architecture_diff_and_convergence_plan.md` 为执行边界，提炼可正式冻结的母命题与顶层原则，再重写 `05_system_architecture_principles.md` 主体内容，并把现有通用系统工程原则下沉为附录或对照检查表。最后同步更新索引、决策记录与更新日志，确保本轮变更仍明确停留在 `Phase 1`，不提前冻结 `World State 9 -> 7` 等仍属 `provisional` 的判断。
@@ -114,3 +116,4 @@ Expected: 变更集中在 `Phase 1` 原则层重写与版本维护，不包含 `
 
 Run: `git status --short`
 Expected: 只新增本轮计划文档和相关原则层维护变更，未把 `tmp/`、`.superpowers/` 等本地辅助目录混入正式提交范围。
+

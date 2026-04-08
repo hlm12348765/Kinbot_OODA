@@ -2,6 +2,8 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
+**已归档说明：** 本计划已被主线架构与治理文档吸收，仅保留历史追溯价值。
+
 **Goal:** 吸收 `Step 47` 第 `7/8` 条更新，把 `Phase 3` 从“路线比较”推进到“七实体目标模型主文档 + `V1` 最小激活子集 + 阶段收口确认”。
 
 **Architecture:** 以 `docs/08_reviews/18_family_co_living_architecture_diff_and_convergence_plan.md` 作为边界母文档，以 `Step 47` 第 `7/8` 条作为最新用户冻结输入。路线 B 已升为正式主方向，因此本阶段的重点不再是 A/B 对比，而是把七实体目标模型、`CareEvent / Task` 边界、`V1` 最小激活子集和迁移顺序写成可审的阶段产物。
@@ -52,3 +54,4 @@
 - [x] **Step 1: 补记路线 B 已作为 Phase 3 正式主方向进入主文档**
 - [x] **Step 2: 补记 Phase 3 已形成可收口阶段产物**
 - [x] **Step 3: 创建新的 Phase 3 收口确认 issue**
+

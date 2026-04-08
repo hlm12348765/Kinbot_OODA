@@ -2,6 +2,8 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
+**已归档说明：** 本计划已被主线架构与治理文档吸收，仅保留历史追溯价值。
+
 **Goal:** 在不提前冻结 `World State 9 -> 7` 的前提下，完成 `Phase 2` 的三项核心动作：新建家庭共居智能体顶层锚点文档，重写总体架构口径，重写多尺度动态 `OODA` 基线为多执行范式基线表达。
 
 **Architecture:** 以 `05_system_architecture_principles.md` 作为已确认的原则层，以 `18_family_co_living_architecture_diff_and_convergence_plan.md` 作为执行边界，先建立 `14_family_co_living_agent_paradigm.md` 作为顶层桥接文档，再同步重构 `01_overall_architecture.md` 与 `03_multi_scale_dynamic_ooda_architecture_baseline.md`。本阶段只重写总图与运行时语法，不进入数据模型主表重组。
@@ -55,3 +57,4 @@
 - [ ] **Step 2: 补记 `Step 47` 对原则层提案的确认，以及 `Phase 2` 已启动的事实**
 - [ ] **Step 3: 确认本轮未越过数据模型冻结边界**
 - [ ] **Step 4: 核对目录索引、根索引和变更日志保持一致**
+

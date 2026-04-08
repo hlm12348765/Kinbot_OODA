@@ -2,6 +2,8 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
+**已归档说明：** 本计划已被主线架构与治理文档吸收，仅保留历史追溯价值。
+
 **Goal:** 在不新增重大决策门的前提下，将 `Phase 3` 已形成的七实体目标模型、`CareEvent / Task` 边界和 `V1` 最小激活子集同步回 `PDCP` 评审包、模块方案下发基线、原则符合度检查与治理入口，并建立 `Phase 4` 收口确认 issue。
 
 **Architecture:** 以 `docs/02_p1_architecture/05_world_state_schema.md` 为主文档，以 `docs/08_reviews/22_phase3_state_model_closure_package.md` 为阶段输入，不再重新争论路线 A / B。当前阶段属于执行性同步阶段，目标是让下游主线文档和 Linear 承接关系全部跟上七实体目标模型。
@@ -54,3 +56,4 @@
 - [x] **Step 1: 更新 `KBT-33` 以承接七实体模型下的接口治理范围**
 - [x] **Step 2: 若 `KBT-51` 已不再需要，关闭它**
 - [x] **Step 3: 创建新的 `Phase 4` 收口确认 issue**
+
