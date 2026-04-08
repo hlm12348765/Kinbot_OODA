@@ -2,11 +2,12 @@
 
 ---
 
-文档版本：v1.72
+文档版本：v1.73
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.73 | 2026-04-08 | Codex-架构师 | 将 CTO 面试框架升级为“每位候选人默认准备 10 道候选题”的标准，并补充王世轩、陈明华等候选人的扩展题包。
 - v1.72 | 2026-04-08 | Codex-架构师 | 将 `docs/10_team_planning/91_candidate_screening_and_interview_advice.md` 从本地忽略文件切换为正常版本维护文档，并同步更新根索引、团队规划目录索引与忽略规则。
 - v1.71 | 2026-04-08 | Codex-架构师 | 将候选人招聘需求基准和 CTO 面试方案迁入 `docs/10_team_planning/`，把候选人筛选建议文档改为本地忽略文件，并回收 `input/01_candidate_resume/` 为仅保留简历输入与 `README` 的目录。
 - v1.70 | 2026-04-08 | Codex-架构师 | 将候选人招聘需求基准切换到 `input/01_candidate_resume/00_kinbot_team_recruitment_requirements.csv`，新增 CTO 统一技术面试方案和首批候选人筛选建议文档，并同步更新候选人目录索引与忽略规则。
@@ -100,6 +101,8 @@
 
 ### 变更
 
+- 更新 [docs/10_team_planning/90_cto_unified_interview_framework.md](docs/10_team_planning/90_cto_unified_interview_framework.md)，新增“每位候选人默认准备 `10` 道 CTO 面试候选题”的标准，明确题包覆盖技术、系统工程、架构、行业、产品、协作与 owner 维度。
+- 更新 [docs/10_team_planning/91_candidate_screening_and_interview_advice.md](docs/10_team_planning/91_candidate_screening_and_interview_advice.md)，将王世轩、陈明华的面试题扩展到每人 `10` 道，并同步将冯正东题包扩展到 `10` 道以统一格式。
 - 移除 `docs/10_team_planning/02_recruitment_requirements_optimized.csv`，并以 [docs/10_team_planning/02_kinbot_team_recruitment_requirements.csv](docs/10_team_planning/02_kinbot_team_recruitment_requirements.csv) 作为当前正式招聘需求基准。
 - 更新 [.gitignore](.gitignore)，移除 `docs/10_team_planning/91_candidate_screening_and_interview_advice.md` 的忽略规则，使其恢复为正常版本维护文档。
 - 更新 [input/01_candidate_resume/.gitignore](input/01_candidate_resume/.gitignore)，恢复本目录仅维护 `README.md` 的规则，继续忽略候选人简历 PDF 与其他本地输入文件。
