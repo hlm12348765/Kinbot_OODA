@@ -133,7 +133,7 @@
 
 - `input/00_requirements/00_user_requirements_input.md`：用户需求输入。核心主题：产品需求、边界、阶段性澄清与对 Codex 的要求。
 - `input/00_requirements/06_recruitment_requirements_for_kinbot_team.csv`：Kinbot 团队招聘需求输入。核心主题：各岗位原始招聘需求、优先级与招聘执行字段输入。
-- `input/01_candidate_resume/README.md`：候选人简历输入。核心主题：候选人简历资料、评估使用边界与团队规划基线的衔接方式。
+- `input/01_candidate_resume/README.md`：候选人简历输入。核心主题：候选人简历 PDF 输入、命名规则与团队规划基线的衔接方式。
 - `docs/00_governance/01_workflow.md`：推进工作流。核心主题：当前主线推进工作流、跨线程规范和评审顺序。
 - `docs/00_governance/02_lifecycle_workflow_and_gates.md`：全生命周期工作流与阶段门。核心主题：全生命周期阶段门、里程碑和 IPD 对应关系。
 - `docs/00_governance/03_decision_log.md`：决策记录。核心主题：事实、判断、决策、开放问题和审阅结论沉淀。
@@ -199,7 +199,9 @@
 - `docs/09_research/02_uwb_phase1_maturity_and_integration_value.md`：UWB一期技术成熟度与接入价值评估。核心主题：UWB 一期成熟度、样品验证门和接入价值评估。
 - `docs/09_research/04_spacemit_k3_chip_assessment_for_embodied_ai.md`：进迭时空 K3 芯片信息整合与具身智能适配评估。核心主题：K3 芯片事实整合、端侧大模型推理能力、具身智能机器人应用优劣势与 Kinbot 适配判断。
 - `docs/10_team_planning/01_development_team_proposal.md`：开发团队提案。核心主题：基于当前架构与总体方案，定义量产预备前所需的 AI-native Team、人与 AI 协作机制、团队结构、人数规模、阶段扩编建议，以及 Step 43 吸收后的组织押注顺序与招聘节奏原则。
-- `docs/10_team_planning/02_recruitment_requirements_optimized.csv`：招聘需求优化表。核心主题：按团队规划基线统一岗位 `JD`、招聘优先级、期望到岗月份、优化建议，以及“为什么这个岗位押这个方向”这一层的方向选择论证，覆盖产品竞争力、架构理念、技术路线与市场 / 财务成功。
+- `docs/10_team_planning/02_kinbot_team_recruitment_requirements.csv`：Kinbot 团队招聘需求基准。核心主题：当前有效岗位编号、岗位名称、岗位 `JD`、筛选口径、优先级与面试输入基线。
+- `docs/10_team_planning/90_cto_unified_interview_framework.md`：CTO 统一技术面试方案。核心主题：统一简历筛选逻辑、二轮面试框架、跨领域评分尺和领域专家一页纸标尺。
+- `docs/10_team_planning/91_candidate_screening_and_interview_advice.md`：候选人筛选与面试建议。核心主题：按当前招聘需求基准和候选人简历持续维护逐人筛选建议、一面反馈吸收与 CTO 二面建议。
 
 ## 仓库结构
 
@@ -252,7 +254,9 @@
 │   └── 10_team_planning
 │       ├── README.md
 │       ├── 01_development_team_proposal.md
-│       └── 02_recruitment_requirements_optimized.csv
+│       ├── 02_kinbot_team_recruitment_requirements.csv
+│       ├── 90_cto_unified_interview_framework.md
+│       └── 91_candidate_screening_and_interview_advice.md
 ├── input
 │   ├── README.md
 │   ├── 00_requirements
@@ -309,7 +313,9 @@
 36. `docs/08_reviews/11_robot_generation_classification_framework.md`
 37. `docs/08_reviews/02_architecture_principles_alignment_check.md`
 38. `docs/10_team_planning/01_development_team_proposal.md`
-39. `docs/10_team_planning/02_recruitment_requirements_optimized.csv`
+39. `docs/10_team_planning/02_kinbot_team_recruitment_requirements.csv`
+40. `docs/10_team_planning/90_cto_unified_interview_framework.md`
+41. `docs/10_team_planning/91_candidate_screening_and_interview_advice.md`
 
 ## 下一步建议
 

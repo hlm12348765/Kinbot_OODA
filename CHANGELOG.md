@@ -2,11 +2,14 @@
 
 ---
 
-文档版本：v1.69
+文档版本：v1.72
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.72 | 2026-04-08 | Codex-架构师 | 将 `docs/10_team_planning/91_candidate_screening_and_interview_advice.md` 从本地忽略文件切换为正常版本维护文档，并同步更新根索引、团队规划目录索引与忽略规则。
+- v1.71 | 2026-04-08 | Codex-架构师 | 将候选人招聘需求基准和 CTO 面试方案迁入 `docs/10_team_planning/`，把候选人筛选建议文档改为本地忽略文件，并回收 `input/01_candidate_resume/` 为仅保留简历输入与 `README` 的目录。
+- v1.70 | 2026-04-08 | Codex-架构师 | 将候选人招聘需求基准切换到 `input/01_candidate_resume/00_kinbot_team_recruitment_requirements.csv`，新增 CTO 统一技术面试方案和首批候选人筛选建议文档，并同步更新候选人目录索引与忽略规则。
 - v1.69 | 2026-04-08 | Codex-架构师 | 澄清 `Phase 5` 当前只完成架构侧验证规划与治理预留，不把未发生的实机 / 市场闭环写成已完成，并新增后续收口追踪 issue `KBT-55`。
 - v1.68 | 2026-04-08 | Codex-架构师 | 继续推进 `Phase 5`：补入 `01_mvp_validation_plan.md` 的双泳道执行机制，以及 `01_mass_production_readiness_criteria.md` 对第 `8` 类战略证据包的 `G5` 门控规则。
 - v1.67 | 2026-04-08 | Codex-架构师 | 吸收输入中对 `KBT-54` 的正式接受，确认 `Phase 4.5` 已完成收口，并同步将根入口、评审入口、`25` 号收口包与治理记录推进到 `Phase 5` 口径。
@@ -91,8 +94,17 @@
 
 - 新增 [docs/08_reviews/24_kbt52_strategic_ambition_gap_review.md](docs/08_reviews/24_kbt52_strategic_ambition_gap_review.md)，作为 `Phase 4` 收口后、`Phase 5` 启动前的独立战略野心差距评审，从董事长视角识别"单实例 vs 平台 / 观察 vs 生成 / 操作准确 vs 叙事错位"三条根因，并提出 `Phase 4.5` 文档级补强包与 `Phase 5` 战略验证三问，供 Codex-架构师在 `KBT-52` 审阅环节吸收。
 - 新增 [docs/08_reviews/25_phase45_strategic_ambition_reinforcement_package.md](docs/08_reviews/25_phase45_strategic_ambition_reinforcement_package.md)，作为 `Phase 4.5` 的统一审阅文档，用于补齐平台位、生成位与惊奇位。
+- 新增 [docs/10_team_planning/02_kinbot_team_recruitment_requirements.csv](docs/10_team_planning/02_kinbot_team_recruitment_requirements.csv)，作为当前有效的 Kinbot 团队招聘需求基准。
+- 新增 [docs/10_team_planning/90_cto_unified_interview_framework.md](docs/10_team_planning/90_cto_unified_interview_framework.md)，用于定义 CTO 视角统一的技术简历筛选逻辑、二轮面试框架、跨领域评分尺和领域专家一页纸标尺。
+- 新增 [docs/10_team_planning/91_candidate_screening_and_interview_advice.md](docs/10_team_planning/91_candidate_screening_and_interview_advice.md)，用于持续维护候选人与对应岗位的筛选建议、一面反馈吸收与 CTO 面试建议。
 
 ### 变更
+
+- 移除 `docs/10_team_planning/02_recruitment_requirements_optimized.csv`，并以 [docs/10_team_planning/02_kinbot_team_recruitment_requirements.csv](docs/10_team_planning/02_kinbot_team_recruitment_requirements.csv) 作为当前正式招聘需求基准。
+- 更新 [.gitignore](.gitignore)，移除 `docs/10_team_planning/91_candidate_screening_and_interview_advice.md` 的忽略规则，使其恢复为正常版本维护文档。
+- 更新 [input/01_candidate_resume/.gitignore](input/01_candidate_resume/.gitignore)，恢复本目录仅维护 `README.md` 的规则，继续忽略候选人简历 PDF 与其他本地输入文件。
+- 更新 [input/01_candidate_resume/README.md](input/01_candidate_resume/README.md)，明确本目录收敛为简历输入目录，并把招聘需求基准与 CTO 面试方案的正式路径切换到 `docs/10_team_planning/`。
+- 更新 [docs/10_team_planning/README.md](docs/10_team_planning/README.md) 与 [README.md](README.md)，将团队规划目录索引切换为当前招聘需求基准、CTO 面试方案和候选人筛选建议，并移除已废弃的旧招聘优化表引用。
 
 - 更新 [docs/08_reviews/README.md](docs/08_reviews/README.md) 与 [README.md](README.md)，补入《KBT-52 战略野心差距评审》的目录索引与主题说明。
 - 更新 [docs/02_p1_architecture/14_family_co_living_agent_paradigm.md](docs/02_p1_architecture/14_family_co_living_agent_paradigm.md)、[docs/08_reviews/21_seven_entity_world_state_target_model.md](docs/08_reviews/21_seven_entity_world_state_target_model.md)、[docs/08_reviews/22_phase3_state_model_closure_package.md](docs/08_reviews/22_phase3_state_model_closure_package.md) 与 [docs/00_governance/05_system_architecture_principles.md](docs/00_governance/05_system_architecture_principles.md)，以附录 / 候选小节方式补入 `Phase 4.5` 战略接口预留。
