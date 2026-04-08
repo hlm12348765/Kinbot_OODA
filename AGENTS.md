@@ -2,11 +2,12 @@
 
 ---
 
-文档版本：v1.15
+文档版本：v1.16
 创建日期：2026-03-21
 作者：Codex-架构师
 
 文档变更记录：
+- v1.16 | 2026-04-08 | Codex-架构师 | 补充主线文档分层、`08_reviews` 活跃入口 / 归档规则、`superpowers` active-only 约束，以及 `provisional` 单一承载规则。
 - v1.15 | 2026-04-08 | Codex-架构师 | 补充 `docs/superpowers/` 工作文档流转约束，并记录仓库当前可见的 `.claude` repo-local hook 守卫与只读检查命令。
 - v1.14 | 2026-04-06 | Codex-架构师 | 补充“在不需要用户确认时不得停在阶段性汇报；每次暂停必须带着重大待确认问题”的协作规则，避免在已批准路线中反复中断。
 - v1.13 | 2026-04-06 | Codex-架构师 | 补充“每一轮架构推进都必须显式追问一次‘现在的架构是不是太复杂了？’”的复杂度自检规则，防止主线在革新过程中持续膨胀。
@@ -150,6 +151,11 @@
 - 涉及 `VLN` 路线、导航推理和相关前瞻技术判断时，应通过独立 Linear issue 与 `VLN` 专项线程交叉校验，并在需要时回写 `docs/09_research/01_vln_role_analysis_and_technical_plan.md`
 - 若当前线程使用 `superpowers` 生成工作计划或规格草稿，应统一落到 `docs/superpowers/` 及其 `plans/` 子目录；该目录只承接工作文档，不替代主线架构、评审或量产基线文档
 - `docs/superpowers/` 新增或调整文档后，需同步回写 `docs/superpowers/README.md`；若其影响仓库总入口或阶段入口，再同步检查根目录 `README.md` 与 `CHANGELOG.md`
+- 根 `README.md` 只维护当前视图、当前有效入口、当前阶段门入口与历史资料指针，不再平铺全部历史评审或长阅读清单
+- 当前主线事实源默认收敛为 `05_system_architecture_principles.md -> 01_overall_architecture.md -> 03_execution_paradigms_runtime_baseline.md -> 合同/专题层 -> 03_p2_feasibility/01_overall_solution_and_module_design_baseline.md`
+- `docs/02_p1_architecture/14_family_co_living_agent_paradigm.md` 只保留背景 / 决策来路锚点角色；`docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md` 只保留阶段评审包角色，不再作为并列主入口
+- `docs/08_reviews/` 默认只保留 `21 / 25 / 24 / archive README` 作为活跃入口；其余历史评审稿、旧阶段收口稿与革新决策链文档进入 `archive/`
+- `docs/superpowers/plans/` 只保留尚未被主线吸收的工作文档；已被主线吸收的计划应迁入 `docs/superpowers/archive/`
 - 先更新系统级文档，再更新下游方案文档
 - 最后回写 `docs/00_governance/03_decision_log.md` 和 `CHANGELOG.md`
 - 允许为后置里程碑提前起草逆向约束型文档，但不得据此跳过当前阶段门或把后置结论伪装成当前已冻结事实
@@ -162,6 +168,7 @@
 - 允许先形成提案或工作假设
 - 必须明确标注为提案 / 假设 / 候选 / `provisional`
 - 应按“本地文档先记 `provisional` -> Linear 建立评审 issue / comment -> 用户确认后升级为 `confirmed`”的方式推进
+- 详细 `provisional` 内容只能在受控载体中展开：原则附录、活跃评审总包、受控附录、`docs/09_research/` 与 `docs/superpowers/` 工作文档；其他主线文档只允许保留摘要与指针
 - 不得把未审阅内容伪装成已冻结事实
 
 ## 8. 图示要求
@@ -248,11 +255,11 @@ Linear 是正式项目管理软件。
 - `docs/05_p4_beta_dvt/`：Beta / DVT 阶段验证与放行文档
 - `docs/06_p5_launch_readiness/`：量产预备、发布准备与交付闭环
 - `docs/07_p6_operations/`：上市后运营与回灌阶段文档入口
-- `docs/08_reviews/`：外部评审输入与替代提案
+- `docs/08_reviews/`：活跃评审输入与历史归档；当前默认活跃入口以该目录 `README.md` 为准
 - `docs/09_research/`：Deep Research、论文、芯片、前沿专项
 - `docs/09_research/` 下允许按专题建立子目录，例如 `vln_model_design/`；新增子目录或子文档后，需同步检查父级 `README.md`、根目录 `README.md` 与 `CHANGELOG.md`
 - `docs/10_team_planning/`：团队规划主基线
-- `docs/superpowers/`：当前线程使用 `superpowers` 技能生成的计划 / 规格工作文档；新增文档后需同步该目录 `README.md`
+- `docs/superpowers/`：当前线程使用 `superpowers` 技能生成的计划 / 规格工作文档；活跃工作文档只保留在 `plans/`，已吸收文档进入 `archive/`，新增文档后需同步该目录 `README.md`
 - `output/`：对外交付材料
 - `tmp/`：临时产物，不进入正式版本历史
 

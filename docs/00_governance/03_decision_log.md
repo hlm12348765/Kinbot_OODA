@@ -2,11 +2,12 @@
 
 ---
 
-文档版本：v1.36
+文档版本：v1.37
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.37 | 2026-04-08 | Codex-架构师 | 补记文档事实源与评审入口收敛：根入口切到 current view，`08_reviews` 收敛为少量活跃入口，`superpowers` 改为 active-only + archive，`03` 运行时基线完成正式改名。
 - v1.36 | 2026-04-08 | Codex-架构师 | 澄清 `Phase 5` 当前只完成架构侧验证规划与治理预留，不把未发生的实机 / 市场闭环写成已完成，并补记后续收口追踪 issue `KBT-55`。
 - v1.35 | 2026-04-08 | Codex-架构师 | 推进 `Phase 5` 到双泳道执行与门控层，补记战略证据包结构、责任分工和 `G5` 对第 `8` 类证据包的判定规则。
 - v1.34 | 2026-04-08 | Codex-架构师 | 吸收输入中对 `KBT-54` 的正式接受，补记 `Phase 4.5` 已完成收口并正式进入 `Phase 5`。
@@ -596,6 +597,7 @@
 | 2026-04-08 | D-230 | `KBT-54` 已获正式接受且 `Phase 5` 已启动 | 用户已接受将 `Phase 4.5` 判定为“实质完成，允许收口”，接受平台位、生成位、惊奇位三类补强对象和 `Phase 5` 战略验证泳道进入主线，并明确以上补强继续保持候选占位、不伪装成已冻结实体或原则；当前主线正式进入 `Phase 5` | confirmed |
 | 2026-04-08 | D-231 | `Phase 5` 已进入双泳道执行与门控层 | `01_mvp_validation_plan.md` 当前已新增战略证据包结构、责任分工与战略 `P / W / B` 规则；`01_mass_production_readiness_criteria.md` 当前已明确第 `8` 类战略证据包的最小结构与 `G5` 门控语义，要求在工程最小闭环成立后，再判断远程在场感、关系演化与惊奇时刻是否构成放行、观察或阻断信号 | confirmed |
 | 2026-04-08 | D-232 | `Phase 5` 当前只完成架构侧规划与治理预留 | 用户明确当前产品尚未开发完成，也未进入真实小批量试点与市场投放，因此 `Phase 5` 当前只应表述为“验证口径、证据结构与门控规则已规划完成”，不得误写为“已完成实机 / 市场闭环收口”；同时已新建 `KBT-55` 作为后续真实收口追踪入口 | confirmed |
+| 2026-04-08 | D-233 | 文档事实源与评审入口已完成收敛 | 根 `README` 当前已收缩为 current view；`P1` 主线事实源默认收敛为 `05_system_architecture_principles -> 01_overall_architecture -> 03_execution_paradigms_runtime_baseline -> 合同/专题层 -> 03_p2_feasibility/01_overall_solution_and_module_design_baseline`；`14` 退为背景锚点、`02` 退为阶段评审包；`08_reviews` 活跃入口收敛为 `21 / 25 / 24 / archive`；`docs/superpowers` 改为 active-only + archive；详细 `provisional` 只允许停留在受控载体中 | confirmed |
 
 ## 7. 后续记录规则
 

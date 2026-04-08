@@ -2,11 +2,12 @@
 
 ---
 
-文档版本：v1.73
+文档版本：v1.74
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.74 | 2026-04-08 | Codex-架构师 | 收缩主线入口与文档载体：`08_reviews` 改为活跃入口 + archive，`superpowers` 改为 active-only + archive，`03` 运行时基线正式改名，并同步回写治理规则。
 - v1.73 | 2026-04-08 | Codex-架构师 | 将 CTO 面试框架升级为“每位候选人默认准备 10 道候选题”的标准，并补充王世轩、陈明华等候选人的扩展题包。
 - v1.72 | 2026-04-08 | Codex-架构师 | 将 `docs/10_team_planning/91_candidate_screening_and_interview_advice.md` 从本地忽略文件切换为正常版本维护文档，并同步更新根索引、团队规划目录索引与忽略规则。
 - v1.71 | 2026-04-08 | Codex-架构师 | 将候选人招聘需求基准和 CTO 面试方案迁入 `docs/10_team_planning/`，把候选人筛选建议文档改为本地忽略文件，并回收 `input/01_candidate_resume/` 为仅保留简历输入与 `README` 的目录。
@@ -93,6 +94,10 @@
 
 ### 新增
 
+- 新增 [docs/08_reviews/archive/README.md](docs/08_reviews/archive/README.md)，作为历史评审、旧阶段收口稿与归档总结的总入口。
+- 新增 [docs/08_reviews/archive/16_18_family_co_living_architecture_innovation_decision_chain_summary.md](docs/08_reviews/archive/16_18_family_co_living_architecture_innovation_decision_chain_summary.md)，作为 `16 / 17 / 18` 的归档总结入口。
+- 新增 [docs/superpowers/archive/README.md](docs/superpowers/archive/README.md)，作为已吸收 `superpowers` 工作文档的归档入口。
+- 新增 [docs/08_reviews/25_phase3_to_phase45_closure_and_strategic_input_package.md](docs/08_reviews/25_phase3_to_phase45_closure_and_strategic_input_package.md)，作为当前唯一活跃的 `Phase 3 -> Phase 4.5` 收口与 `Phase 5` 战略输入总包。
 - 新增 [docs/08_reviews/24_kbt52_strategic_ambition_gap_review.md](docs/08_reviews/24_kbt52_strategic_ambition_gap_review.md)，作为 `Phase 4` 收口后、`Phase 5` 启动前的独立战略野心差距评审，从董事长视角识别"单实例 vs 平台 / 观察 vs 生成 / 操作准确 vs 叙事错位"三条根因，并提出 `Phase 4.5` 文档级补强包与 `Phase 5` 战略验证三问，供 Codex-架构师在 `KBT-52` 审阅环节吸收。
 - 新增 [docs/08_reviews/25_phase45_strategic_ambition_reinforcement_package.md](docs/08_reviews/25_phase45_strategic_ambition_reinforcement_package.md)，作为 `Phase 4.5` 的统一审阅文档，用于补齐平台位、生成位与惊奇位。
 - 新增 [docs/10_team_planning/02_kinbot_team_recruitment_requirements.csv](docs/10_team_planning/02_kinbot_team_recruitment_requirements.csv)，作为当前有效的 Kinbot 团队招聘需求基准。
@@ -101,6 +106,13 @@
 
 ### 变更
 
+- 更新 [README.md](README.md)，将根入口收缩为“当前状态 + 当前有效入口 + 当前阶段门入口 + 历史资料指针”，不再平铺全部历史评审与长阅读清单。
+- 更新 [docs/08_reviews/README.md](docs/08_reviews/README.md)，收敛活跃入口为 `21 / 新25 / 24 / archive`，并将历史评审稿整体转入 `archive/`。
+- 更新 [docs/08_reviews/21_seven_entity_world_state_target_model.md](docs/08_reviews/21_seven_entity_world_state_target_model.md)，吸收 `19 / 20` 的决策背景与弃选方案摘要到附录 A，并把正文收紧为七实体冻结基线。
+- 更新 [docs/02_p1_architecture/README.md](docs/02_p1_architecture/README.md)、[docs/02_p1_architecture/01_overall_architecture.md](docs/02_p1_architecture/01_overall_architecture.md)、[docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md](docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md)、[docs/02_p1_architecture/07_safety_compliance_authorization_api.md](docs/02_p1_architecture/07_safety_compliance_authorization_api.md) 与 [docs/02_p1_architecture/14_family_co_living_agent_paradigm.md](docs/02_p1_architecture/14_family_co_living_agent_paradigm.md)，明确 `01 / 02 / 03 / 14` 的角色边界。
+- 更新 [docs/02_p1_architecture/03_execution_paradigms_runtime_baseline.md](docs/02_p1_architecture/03_execution_paradigms_runtime_baseline.md)，将旧 `03_multi_scale_dynamic_ooda_architecture_baseline.md` 正式改名为当前运行时事实源。
+- 更新 [docs/00_governance/01_workflow.md](docs/00_governance/01_workflow.md)、[docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md) 与 [AGENTS.md](AGENTS.md)，补入文档分层、活跃评审入口、`superpowers` active-only 与 `provisional` 单一承载规则。
+- 更新 [docs/superpowers/README.md](docs/superpowers/README.md)，切换为 active-only 入口，并将 `Phase 1-4` 工作计划迁入 [docs/superpowers/archive/](docs/superpowers/archive/)。
 - 更新 [docs/10_team_planning/90_cto_unified_interview_framework.md](docs/10_team_planning/90_cto_unified_interview_framework.md)，新增“每位候选人默认准备 `10` 道 CTO 面试候选题”的标准，明确题包覆盖技术、系统工程、架构、行业、产品、协作与 owner 维度。
 - 更新 [docs/10_team_planning/91_candidate_screening_and_interview_advice.md](docs/10_team_planning/91_candidate_screening_and_interview_advice.md)，将王世轩、陈明华的面试题扩展到每人 `10` 道，并同步将冯正东题包扩展到 `10` 道以统一格式。
 - 移除 `docs/10_team_planning/02_recruitment_requirements_optimized.csv`，并以 [docs/10_team_planning/02_kinbot_team_recruitment_requirements.csv](docs/10_team_planning/02_kinbot_team_recruitment_requirements.csv) 作为当前正式招聘需求基准。
