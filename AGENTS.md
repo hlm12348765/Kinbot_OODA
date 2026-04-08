@@ -2,11 +2,12 @@
 
 ---
 
-文档版本：v1.14
+文档版本：v1.15
 创建日期：2026-03-21
 作者：Codex-架构师
 
 文档变更记录：
+- v1.15 | 2026-04-08 | Codex-架构师 | 补充 `docs/superpowers/` 工作文档流转约束，并记录仓库当前可见的 `.claude` repo-local hook 守卫与只读检查命令。
 - v1.14 | 2026-04-06 | Codex-架构师 | 补充“在不需要用户确认时不得停在阶段性汇报；每次暂停必须带着重大待确认问题”的协作规则，避免在已批准路线中反复中断。
 - v1.13 | 2026-04-06 | Codex-架构师 | 补充“每一轮架构推进都必须显式追问一次‘现在的架构是不是太复杂了？’”的复杂度自检规则，防止主线在革新过程中持续膨胀。
 - v1.12 | 2026-04-06 | Codex-架构师 | 补充“用户已明确批准后应持续推进直到下一个必须审批的阶段门，不得重复请求继续授权”的协作规则，并要求在 `AGENTS.md` 中显式固化。
@@ -147,6 +148,8 @@
 - `KBT-33` 继续作为 `KBT-31` 子 issue 保留，只承接双视角一致性与接口稳定性策略的治理细化，不回退重定义系统边界
 - 先判断本轮新增输入会影响哪些主线文档
 - 涉及 `VLN` 路线、导航推理和相关前瞻技术判断时，应通过独立 Linear issue 与 `VLN` 专项线程交叉校验，并在需要时回写 `docs/09_research/01_vln_role_analysis_and_technical_plan.md`
+- 若当前线程使用 `superpowers` 生成工作计划或规格草稿，应统一落到 `docs/superpowers/` 及其 `plans/` 子目录；该目录只承接工作文档，不替代主线架构、评审或量产基线文档
+- `docs/superpowers/` 新增或调整文档后，需同步回写 `docs/superpowers/README.md`；若其影响仓库总入口或阶段入口，再同步检查根目录 `README.md` 与 `CHANGELOG.md`
 - 先更新系统级文档，再更新下游方案文档
 - 最后回写 `docs/00_governance/03_decision_log.md` 和 `CHANGELOG.md`
 - 允许为后置里程碑提前起草逆向约束型文档，但不得据此跳过当前阶段门或把后置结论伪装成当前已冻结事实
@@ -208,8 +211,11 @@ Linear 是正式项目管理软件。
 - `git status`：检查当前工作区与待提交内容
 - `rg --files README.md docs input`：快速清点当前纳管文档与目录结构，检查是否有新增文档 / 子目录尚未同步索引
 - `find docs input -name README.md -o -name "*.md" | sed 's#^./##' | sort`：快速清点当前 Markdown / README 入口，检查新增文档是否已进入目录索引视图
+- `find docs/superpowers -name "*.md" | sed 's#^./##' | sort`：快速检查 `superpowers` 工作文档及其索引是否已纳入仓库视图
 - `rg -n "<pattern>" README.md docs input`：检查索引、旧路径、术语和主线残留
 - `sed -n '1,200p' <file>`：分段核对长文档头部、变更记录和关键段落
+- `sed -n '1,200p' .claude/settings.json`：核对当前仓库可见的 repo-local hook 配置
+- `find .claude -maxdepth 3 -type f | sed 's#^./##' | sort`：清点当前仓库内可见的 `.claude` 配置、hook 与日志文件
 
 提交前文档一致性检查至少覆盖：
 
@@ -246,10 +252,18 @@ Linear 是正式项目管理软件。
 - `docs/09_research/`：Deep Research、论文、芯片、前沿专项
 - `docs/09_research/` 下允许按专题建立子目录，例如 `vln_model_design/`；新增子目录或子文档后，需同步检查父级 `README.md`、根目录 `README.md` 与 `CHANGELOG.md`
 - `docs/10_team_planning/`：团队规划主基线
+- `docs/superpowers/`：当前线程使用 `superpowers` 技能生成的计划 / 规格工作文档；新增文档后需同步该目录 `README.md`
 - `output/`：对外交付材料
 - `tmp/`：临时产物，不进入正式版本历史
 
-## 12. 输出要求
+## 12. Repo-Local Hook 约束
+
+- 当前仓库可见的 repo-local hook 配置以 `.claude/settings.json` 为准
+- 现阶段已确认的 hook 守卫为：`PreToolUse -> Skill -> .claude/hooks/check-gstack.sh`
+- 该守卫会检查全局 `gstack` 安装目录 `~/.claude/skills/gstack/bin`；若缺失，相关技能调用会被阻断
+- 若后续 `.claude/settings.json` 或 `.claude/hooks/` 有新增内容，应先核对是否影响当前协作流，再决定是否回写本文件
+
+## 13. 输出要求
 
 与用户协作时应：
 
@@ -264,7 +278,7 @@ Linear 是正式项目管理软件。
 - 重点看哪几个点
 - 本轮需要确认什么
 
-## 13. 维护规则
+## 14. 维护规则
 
 - 若仓库协作方式发生显著变化，应更新本文件
 - 重大新增规则，最好同步回写到 `README.md` 或 `docs/00_governance/01_workflow.md`
