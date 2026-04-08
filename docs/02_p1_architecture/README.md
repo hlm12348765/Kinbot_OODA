@@ -2,13 +2,14 @@
 
 ---
 
-文档版本：v1.6
+文档版本：v1.7
 创建日期：2026-03-11
 作者：Codex-架构师
 
 ---
 
 文档变更记录：
+- v1.7 | 2026-04-08 | Codex-架构师 | 重命名 `03` 为多尺度执行范式运行时基线，收紧 `14` 为背景/决策来路锚点，并明确 `01`、`02`、`03` 的角色边界。
 - v1.6 | 2026-04-06 | Codex-架构师 | 补记 `Phase 4` 已完成下游同步：`PDCP` 评审包、模块边界与状态机已开始承接七实体目标模型。
 - v1.5 | 2026-04-06 | Codex-架构师 | 补记 `Phase 3` 已进入收口确认前状态：`05` 已升级为七实体目标模型主文档。
 - v1.4 | 2026-04-06 | Codex-架构师 | 补记 `PDCP` 评审包已对齐 `Phase 2`：总架构上抬为家庭共居智能体，运行时改为多执行范式，`OODA` 退到离散决策范式。
@@ -27,9 +28,9 @@
 
 ## 文档索引
 
-- `01_overall_architecture.md`：总体架构。核心主题：家庭共居智能体总图、`PDCP` 双视角基线、多执行范式运行时入口与产品系统边界。
-- `02_pdcp_system_architecture_review_package.md`：PDCP系统架构评审包。核心主题：面向 `PDCP` 节点的系统架构评审包，当前已对齐家庭共居智能体总图、多执行范式运行时与双视角实体承载口径。
-- `03_multi_scale_dynamic_ooda_architecture_baseline.md`：多尺度动态OODA架构基线。核心主题：当前文件名保留不变，但内容口径已正式改写为“多尺度执行范式基线”，用于承接离散决策、连续流式、事件驱动与长周期演化的运行时表达。
+- `01_overall_architecture.md`：总体架构事实源。核心主题：家庭共居智能体总图、`PDCP` 双视角基线、多执行范式运行时入口与产品系统边界。
+- `02_pdcp_system_architecture_review_package.md`：`PDCP` 系统架构评审包。核心主题：面向 `PDCP` 节点的系统架构评审包，只承接评审问题、冻结项和模块下发结论，不再重复解释总架构。
+- `03_execution_paradigms_runtime_baseline.md`：多尺度执行范式基线。核心主题：离散决策、连续流式、事件驱动与长周期演化的运行时表达，承接旧 `OODA` 运行时口径。
 - `04_module_layers_and_boundaries.md`：模块分层与模块边界。核心主题：一级模块分层、职责边界和端云划分。
 - `05_world_state_schema.md`：世界状态结构。核心主题：当前已升级为 `Phase 3` 的七实体目标模型主文档，定义 `World State` 的目标实体结构、`V1` 最小激活子集与 `CareEvent / Task` 边界。
 - `06_decision_state_machine.md`：决策状态机。核心主题：顶层模式、业务状态、异常与故障状态机。
@@ -40,7 +41,7 @@
 - `11_app_cloud_ops_minimal_loop.md`：家属应用、云服务与后台运营坐席一代最小闭环。核心主题：家属 App、云服务与后台运营坐席的最小闭环，以及分布式家庭中的远程在场与责任接力。
 - `12_human_service_and_telemedicine_boundaries.md`：后台人工服务与在线问诊协同边界。核心主题：人工服务、在线问诊与第三方履约边界，以及与共享状态平面、审批硬边界的对齐。
 - `13_medication_storage_and_indoor_delivery_requirements.md`：储药与室内递送要求。核心主题：储药与室内递送能力包、工程护栏与离散业务执行边界。
-- `14_family_co_living_agent_paradigm.md`：家庭共居智能体架构范式。核心主题：作为 `Phase 2` 顶层锚点文档，定义新总图、三轴框架、`OODA` 新定位、多执行范式与当前未冻结事项。
+- `14_family_co_living_agent_paradigm.md`：家庭共居智能体架构范式。核心主题：作为 `Phase 2` 背景/决策来路锚点，记录新总图、三轴框架与历史 `provisional` 来路，不再作为并列主入口。
 
 ## 维护规则
 

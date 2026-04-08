@@ -2,11 +2,12 @@
 
 ---
 
-文档版本：v2.3
+文档版本：v2.4
 创建日期：2026-03-10
 作者：Codex-架构师
 
 文档变更记录：
+- v2.4 | 2026-04-08 | Codex-架构师 | 收紧总体架构事实源边界，明确 `14` 退为背景锚点，并同步 `03` 的重命名。
 - v2.3 | 2026-04-06 | Codex-架构师 | 清理总图正文中的旧离散调度器与 `R1-R4` 直写残留，统一改写为当前多执行范式口径。
 - v2.2 | 2026-04-06 | Codex-架构师 | 继续吸收 `Step 47` 的最新输入，在头部 / 躯干 / 底盘空间承载子视图中进一步明确“主计算单元优先放头部、实时控制单元优先放底盘”的物理分配。
 - v2.1 | 2026-04-06 | Codex-架构师 | 吸收 `Step 47` 的 Phase 2 审阅输入，重写产品实体架构视图为“`6` 个本体实体域 + 头部 / 躯干 / 底盘空间承载子视图”，明确头部在总体架构中独立为一级空间实体。
@@ -26,7 +27,7 @@
 
 ## 1. 文档定位
 
-本文档是当前项目的总体架构总览文档。
+本文档是当前项目的总体架构事实源文档。
 
 它服务于两个目标：
 
@@ -859,8 +860,8 @@ flowchart LR
 
 本文件只负责给出总览基线，具体细节分别下沉到以下文档：
 
-1. `docs/02_p1_architecture/14_family_co_living_agent_paradigm.md`：家庭共居智能体总图与三轴框架
-2. `docs/02_p1_architecture/03_multi_scale_dynamic_ooda_architecture_baseline.md`：多执行范式运行时基线细化
+1. `docs/02_p1_architecture/14_family_co_living_agent_paradigm.md`：背景/决策来路锚点，保留家庭共居智能体总图与三轴框架的历史来路
+2. `docs/02_p1_architecture/03_execution_paradigms_runtime_baseline.md`：多执行范式运行时基线细化
 3. `docs/02_p1_architecture/04_module_layers_and_boundaries.md`：一级模块边界
 4. `docs/02_p1_architecture/05_world_state_schema.md`：世界状态结构
 5. `docs/02_p1_architecture/06_decision_state_machine.md`：分层状态机与行为树边界

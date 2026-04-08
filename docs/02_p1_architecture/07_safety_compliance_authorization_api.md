@@ -2,11 +2,12 @@
 
 ---
 
-文档版本：v1.1
+文档版本：v1.2
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.2 | 2026-04-08 | Codex-架构师 | 同步运行时基线文件重命名，更新与多执行范式基线的引用路径。
 - v1.1 | 2026-04-06 | Codex-架构师 | 按家庭共居智能体革新路线对齐本文，明确审批接口是跨执行范式的系统级硬边界；连续流式、事件驱动和人工接力均不得绕过该接口。
 - v1.0 | 2026-03-08 | Codex-架构师 | 文档创建。
 
@@ -614,7 +615,7 @@ flowchart TB
 1. [世界状态结构](/Users/archimboldi/Documents/myproject/AI%20project/Codex%20Project/Kinbot_OODA/docs/02_p1_architecture/05_world_state_schema.md)
 2. [决策状态机](/Users/archimboldi/Documents/myproject/AI%20project/Codex%20Project/Kinbot_OODA/docs/02_p1_architecture/06_decision_state_machine.md)
 3. [模块分层与模块边界](/Users/archimboldi/Documents/myproject/AI%20project/Codex%20Project/Kinbot_OODA/docs/02_p1_architecture/04_module_layers_and_boundaries.md)
-4. [多尺度执行范式基线](/Users/archimboldi/Documents/myproject/AI%20project/Codex%20Project/Kinbot_OODA/docs/02_p1_architecture/03_multi_scale_dynamic_ooda_architecture_baseline.md)
+4. [多尺度执行范式基线](/Users/archimboldi/Documents/myproject/AI%20project/Codex%20Project/Kinbot_OODA/docs/02_p1_architecture/03_execution_paradigms_runtime_baseline.md)
 
 ## 16. 下一步建议
 
