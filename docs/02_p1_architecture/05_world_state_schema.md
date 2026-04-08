@@ -132,7 +132,7 @@
 因此进一步明确：
 
 1. 本文已升级为 `World State` 的七实体目标模型主文档。
-2. 路线 A 的扩展层方案保留在 `docs/08_reviews/20_relationship_and_event_extension_layer_candidate.md`，仅作为对照路线与风险说明。
+2. 路线 A 的扩展层方案保留在 `docs/08_reviews/archive/20_relationship_and_event_extension_layer_candidate.md`，仅作为对照路线与风险说明。
 3. `docs/08_reviews/21_seven_entity_world_state_target_model.md` 继续作为本轮评审包，用于补充一级边界、`V1` 最小激活子集与迁移顺序。
 4. `CareEvent` 正式替代 `RiskEvent`；`recommended_action` 只允许保留动作类型枚举，不得写执行细节；执行细节必须落在 `Task` 中。
 
