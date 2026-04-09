@@ -2,13 +2,14 @@
 
 ---
 
-文档版本：v1.23
+文档版本：v1.24
 创建日期：2026-03-11
 作者：Codex-架构师
 
 ---
 
 文档变更记录：
+- v1.24 | 2026-04-09 | Codex-架构师 | 收紧 `21` 号文档角色为 `Phase 3` 评审补充，明确七实体正式定义与活跃未冻结项分别以 `05 / 25` 为准。
 - v1.23 | 2026-04-08 | Codex-架构师 | 收敛 `08_reviews` 活跃入口，保留 `21 / 新25 / 24 / archive` 四个主入口，其余历史评审整体迁入 `archive/`。
 - v1.22 | 2026-04-08 | Codex-架构师 | 吸收 `KBT-54` 的正式接受，确认 `Phase 4.5` 已完成收口并进入 `Phase 5`。
 - v1.21 | 2026-04-07 | Claude-架构师 | 同步 `Phase 4.5` 增量补强：14 号 §10.1 `FleetView` 候选字段子表、22 号 §5.2 家庭节律观测视图、23 号 §9 机群能力接入点清单已追加；25 号统一审阅文档同步刷新 §4.5。
@@ -44,7 +45,7 @@
 
 ## 文档索引
 
-- `21_seven_entity_world_state_target_model.md`：七实体 World State 目标模型。核心主题：当前正式目标方向与其决策背景附录。
+- `21_seven_entity_world_state_target_model.md`：七实体 World State 目标模型评审补充。核心主题：保留 `Phase 3` 收敛理由、迁移顺序与候选说明；正式定义与活跃未冻结项分别以 `05 / 25` 为准。
 - `25_phase3_to_phase45_closure_and_strategic_input_package.md`：Phase 3 到 Phase 4.5 收口与战略输入总包。核心主题：合并 `22 / 23 / 25` 后的唯一活跃阶段总包。
 - `24_kbt52_strategic_ambition_gap_review.md`：KBT-52 战略野心差距评审。核心主题：董事长视角的战略野心复核与 `Phase 4.5` 补强来源。
 - `archive/README.md`：历史评审归档总入口。核心主题：已吸收、已归档或仅保留追溯价值的历史文档。
