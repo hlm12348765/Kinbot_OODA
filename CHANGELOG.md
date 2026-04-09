@@ -2,11 +2,12 @@
 
 ---
 
-文档版本：v1.75
+文档版本：v1.76
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.76 | 2026-04-09 | Codex-架构师 | 收口 `V1` 真实复杂度下降计划：统一当前主闭环为“机器人本体 + 家属 App + 最小云”，将人工服务 / 在线问诊 / 第三方履约降为后续适配位，并同步清理 `P1 / P2` 与治理层残留口径。
 - v1.75 | 2026-04-09 | Codex-架构师 | 继续压缩主线复杂度：明确 `01 / 03 / 06` 的单一职责、`P2-01` 的唯一开发入口角色，刷新根入口与 `P1` 索引，并修正 `05_world_state_schema.md` 中一处旧评审归档路径。
 - v1.74 | 2026-04-08 | Codex-架构师 | 收缩主线入口与文档载体：`08_reviews` 改为活跃入口 + archive，`superpowers` 改为 active-only + archive，`03` 运行时基线正式改名，并同步回写治理规则。
 - v1.73 | 2026-04-08 | Codex-架构师 | 将 CTO 面试框架升级为“每位候选人默认准备 10 道候选题”的标准，并补充王世轩、陈明华等候选人的扩展题包。
@@ -107,6 +108,9 @@
 
 ### 变更
 
+- 更新 [docs/02_p1_architecture/01_overall_architecture.md](docs/02_p1_architecture/01_overall_architecture.md)、[docs/02_p1_architecture/10_health_event_pipeline_and_escalation.md](docs/02_p1_architecture/10_health_event_pipeline_and_escalation.md)、[docs/02_p1_architecture/11_app_cloud_ops_minimal_loop.md](docs/02_p1_architecture/11_app_cloud_ops_minimal_loop.md)、[docs/02_p1_architecture/12_human_service_and_telemedicine_boundaries.md](docs/02_p1_architecture/12_human_service_and_telemedicine_boundaries.md)、[docs/02_p1_architecture/13_medication_storage_and_indoor_delivery_requirements.md](docs/02_p1_architecture/13_medication_storage_and_indoor_delivery_requirements.md)、[docs/02_p1_architecture/README.md](docs/02_p1_architecture/README.md) 与 [docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md](docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md)，将当前 `V1` 主闭环统一收敛为“机器人本体 + 家属 App + 最小云”，明确可穿戴仅作为当前受控外部输入位，后台人工服务 / 在线问诊 / 第三方履约改为后续适配位。
+- 更新 [docs/02_p1_architecture/03_execution_paradigms_runtime_baseline.md](docs/02_p1_architecture/03_execution_paradigms_runtime_baseline.md)、[docs/02_p1_architecture/04_module_layers_and_boundaries.md](docs/02_p1_architecture/04_module_layers_and_boundaries.md)、[docs/02_p1_architecture/05_world_state_schema.md](docs/02_p1_architecture/05_world_state_schema.md)、[docs/02_p1_architecture/06_decision_state_machine.md](docs/02_p1_architecture/06_decision_state_machine.md)、[docs/02_p1_architecture/07_safety_compliance_authorization_api.md](docs/02_p1_architecture/07_safety_compliance_authorization_api.md)、[docs/02_p1_architecture/08_companion_interaction_strategy.md](docs/02_p1_architecture/08_companion_interaction_strategy.md) 与 [docs/02_p1_architecture/09_safety_risk_matrix.md](docs/02_p1_architecture/09_safety_risk_matrix.md)，统一当前交付只覆盖离散决策 + 事件驱动，完成业务状态 `8 -> 6` 向“执行服务”归并、价值排序归一，以及世界状态与审批接口中的人工接力残留收缩。
+- 更新 [docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md)，补记本轮 `V1` 真实复杂度下降计划的正式判断与跨文档同步完成状态。
 - 更新 [README.md](README.md)，将根入口收缩为“当前状态 + 当前有效入口 + 当前阶段门入口 + 历史资料指针”，不再平铺全部历史评审与长阅读清单。
 - 更新 [docs/08_reviews/README.md](docs/08_reviews/README.md)，收敛活跃入口为 `21 / 新25 / 24 / archive`，并将历史评审稿整体转入 `archive/`。
 - 更新 [docs/08_reviews/21_seven_entity_world_state_target_model.md](docs/08_reviews/21_seven_entity_world_state_target_model.md)，吸收 `19 / 20` 的决策背景与弃选方案摘要到附录 A，并把正文收紧为七实体冻结基线。

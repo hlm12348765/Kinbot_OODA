@@ -2,11 +2,12 @@
 
 ---
 
-文档版本：v1.38
+文档版本：v1.39
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.39 | 2026-04-09 | Codex-架构师 | 回写 `V1` 真实复杂度下降当前轮收口：新增“当前开发承接”判断，明确主闭环收缩为 `Robot + App + 最小云`、穿戴保留为当前受控输入位、人工 / 第三方降为后续适配位，并补记相关文档同步完成。
 - v1.38 | 2026-04-09 | Codex-架构师 | 继续回写复杂度控制：明确 `01 / 03 / 06` 的单一职责、`P2-01` 的唯一开发入口角色，并同步刷新根入口、`P1` 目录索引与一处旧归档引用。
 - v1.37 | 2026-04-08 | Codex-架构师 | 补记文档事实源与评审入口收敛：根入口切到 current view，`08_reviews` 收敛为少量活跃入口，`superpowers` 改为 active-only + archive，`03` 运行时基线完成正式改名。
 - v1.36 | 2026-04-08 | Codex-架构师 | 澄清 `Phase 5` 当前只完成架构侧验证规划与治理预留，不把未发生的实机 / 市场闭环写成已完成，并补记后续收口追踪 issue `KBT-55`。
@@ -260,6 +261,10 @@
 | A-096 | 机器人软件团队应按 `Agent-native` 方式重构系统与应用开发模式，而不是沿用传统 `App / 后台 / 端侧应用` 各自为战的扩编逻辑 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 41，Step 43 |
 | A-097 | `应用后端架构师` 应定位为 `S6` 应用后端与 AI 融合架构位，重点负责把大模型、多模态和语音能力编织进业务主链，并与已单列在招的云服务 / 运营平台架构负责人形成“平台底座 + 应用后端”双层分工 | confirmed | 用户本轮指令，`docs/10_team_planning/02_recruitment_requirements_optimized.csv` |
 | A-098 | `高级结构工程师` 不应被定义为单纯出图支持岗位，而应作为本体完整竞争力的关键承接位，负责把传动、空间、工艺、装配和试产收敛成可量产、可感知的整机结构质量 | confirmed | 用户本轮指令，`docs/10_team_planning/02_recruitment_requirements_optimized.csv` |
+| A-099 | 在当前开发承接层，`V1` 主闭环已收缩为“机器人本体 + 家属 App + 最小云”；人工服务、在线问诊、第三方履约与公共应急只保留后续适配位，不进入当前主链验收 | confirmed | `codex/v1-real-complexity-reduction` 本轮文档收口 |
+| A-100 | 穿戴与健康外设继续保留为当前 `V1` 的受控输入位，用于生命体征、补采与健康判断；它们不是当前伴生系统主链中的独立服务闭环 | confirmed | `codex/v1-real-complexity-reduction` 本轮文档收口 |
+| A-101 | 在当前开发承接层，只把离散决策与事件驱动作为必交付主链；连续流式与长周期演化继续保留研究线 / 接口位 | confirmed | `codex/v1-real-complexity-reduction` 本轮文档收口 |
+| A-102 | 离散决策业务面当前已将 `主动接近 / 用药服务 / 保姆协同` 合并为 `执行服务`，以减少状态面复杂度并稳定下游接口 | confirmed | `codex/v1-real-complexity-reduction` 本轮文档收口 |
 | A-031 | 第三方平台的责任边界必须在接口和审计模型里显式表达，否则后续合规和售后责任会失真 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 7 |
 | A-032 | 储物仓的一代能力优先级应先满足防夹手、开关控制和状态记录，再规划交接确认，最后再考虑防误取和防错拿 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 7 |
 | A-033 | “量产预备”在本项目里不应被理解为纯文档完成，而应理解为产品定型并具备小批量试点与发布准备状态 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 7 |
@@ -588,6 +593,7 @@
 | 2026-04-06 | D-220 | `05_world_state_schema.md` 已升级为主文档 | `05_world_state_schema.md` 当前已从 `9` 实体比较基线升级为 `7` 实体目标模型主文档，并补入 `V1` 最小激活子集与迁移顺序建议 | confirmed |
 | 2026-04-06 | D-221 | `Phase 3` 已形成阶段收口包 | 当前已新增 `docs/08_reviews/22_phase3_state_model_closure_package.md`，用于汇总 `Phase 3` 的正式判断、冻结项、未冻结项与用户收口确认要点；当前可进入阶段收口确认 | confirmed |
 | 2026-04-06 | D-222 | `KBT-50` 已完成并进入阶段收口确认 | `KBT-50` 当前已关闭；同时已新建 `KBT-51`《确认 Phase 3 状态模型与数据模型决策收口》，作为用户审阅 `Phase 3` 收口的正式入口 | confirmed |
+| 2026-04-09 | D-235 | `V1` 真实复杂度下降当前轮已完成主线与下游同步 | `01 / 03 / 04 / 05 / 06` 已进一步澄清当前主闭环、当前主承接范式与状态面收缩；`07 / 09 / 10 / 11 / 12 / 13 / P2-01 / P1 README` 已同步改写为“穿戴保留当前输入位、人工 / 第三方降为后续适配位、开发入口只承接离散决策 + 事件驱动”的一致口径 | confirmed |
 | 2026-04-06 | D-223 | `Phase 4` 已完成下游同步 | `PDCP` 评审包、模块边界、状态机、总体方案下发基线与原则符合度检查当前已开始承接七实体目标模型与 `CareEvent / Task` 边界 | confirmed |
 | 2026-04-06 | D-224 | `KBT-33` 应转向七实体模型接口治理 | `KBT-33` 后续治理细化当前应聚焦七实体状态接口、事件接口和审批接口的版本稳定性，而不再围绕旧状态模型边界表述 | confirmed |
 | 2026-04-06 | D-225 | `KBT-51` 已关闭且 `KBT-52` 已建立 | `KBT-51` 当前已完成；同时已新建 `KBT-52` 作为 `Phase 4` 收口确认入口，当前主线准备进入 `Phase 5` | confirmed |

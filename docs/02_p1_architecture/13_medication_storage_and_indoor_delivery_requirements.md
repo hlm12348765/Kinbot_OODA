@@ -112,10 +112,10 @@ sequenceDiagram
 
 主链说明：
 
-1. 计划与事件可以来自用药计划、异常事件、家属请求或保姆协同任务。
+1. 计划与事件可以来自用药计划、异常事件、家属请求或照护协同请求。
 2. 开仓与递送必须在 `safety_compliance_authorization` 批准后才能进入执行。
 3. 一代“递送”不是机械臂送到手，而是机器人移动到可交互位置后，通过开仓、提示和确认完成交付。
-4. 交付后必须形成结构化记录，并按需要通知家属或转人工服务。
+4. 交付后必须形成结构化记录，并按需要通知家属；人工服务只保留为后续适配位中的升级入口。
 5. 计划任务、事件触发和远程确认都可以成为递送链入口，但一旦进入本体动作执行，主执行面统一落在离散决策业务面。
 
 ## 6. 七个能力包的冻结要求
@@ -223,9 +223,9 @@ sequenceDiagram
 
 1. 与 [docs/02_p1_architecture/10_health_event_pipeline_and_escalation.md](10_health_event_pipeline_and_escalation.md) 的关系：本文把其中“计划检查 / 递送执行 / 服药确认 / 结果归档”展开成独立产品链。
 2. 与 [docs/02_p1_architecture/07_safety_compliance_authorization_api.md](07_safety_compliance_authorization_api.md) 的关系：开仓、递送、共享结果和通知都必须过统一审批门。
-3. 与 [docs/02_p1_architecture/06_decision_state_machine.md](06_decision_state_machine.md) 的关系：本文主要冻结离散决策业务面中 `主动接近`、`用药服务` 和 `保姆协同` 的执行边界，不把递送链本身提升为总运行时表达。
+3. 与 [docs/02_p1_architecture/06_decision_state_machine.md](06_decision_state_machine.md) 的关系：本文主要冻结离散决策业务面中 `执行服务` 的到人提醒、递送、确认与协同执行边界，不把递送链本身提升为总运行时表达。
 4. 与 [docs/02_p1_architecture/05_world_state_schema.md](05_world_state_schema.md) 的关系：`MedicationAsset`、`Task`、`compartment_policy` 等状态字段要承接本文的装载、交接与审计边界。
-5. 与 [docs/02_p1_architecture/12_human_service_and_telemedicine_boundaries.md](12_human_service_and_telemedicine_boundaries.md) 的关系：当递送链中断、身份不确定或需要外部协同时，必须按既定人工服务与第三方责任边界转接。
+5. 与 [docs/02_p1_architecture/12_human_service_and_telemedicine_boundaries.md](12_human_service_and_telemedicine_boundaries.md) 的关系：当递送链中断、身份不确定或需要外部协同时，只能进入其定义的后续适配位，不能反向改写当前 `V1` 主链。
 
 ## 10. 本轮收口结论与后续问题
 
