@@ -2,11 +2,14 @@
 
 ---
 
-文档版本：v2.0
+文档版本：v2.3
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v2.3 | 2026-04-09 | Codex-架构师 | 将当前未冻结项收紧为“摘要 + Linear 指针”治理：把字段表、关系质量维度、事件族全集和接口迁移策略分别指向 `KBT-32 / KBT-33 / KBT-56`，避免主线正文继续展开 orphan provisional。
+- v2.2 | 2026-04-09 | Codex-架构师 | 继续做最小一致性修正：澄清穿戴是当前受控输入位，人工 / 第三方只保留后续适配位，并修正 `Household.care_network` 与 `CareEvent` 的关系图表达。
+- v2.1 | 2026-04-09 | Codex-架构师 | 保留 `7` 实体主框架，但将 `V1` 最小激活子集改写为按实体展开的最小字段集，并把服务合同、复杂关系评分、共享记忆与跨家庭模式明确降为后续。
 - v2.0 | 2026-04-06 | Codex-架构师 | 按 `Step 47` 第 `7/8` 条将本文从 `9` 实体比较基线升级为 `7` 实体目标模型主文档，补入 `V1` 最小激活子集与 `CareEvent / Task` 边界规则。
 - v1.4 | 2026-04-06 | Codex-架构师 | 吸收 `Step 47` 第 `7/8` 条更新，明确当前 `9` 类骨架仅保留为比较基线，`Phase 3` 正式目标转向七实体模型，并补入 `CareEvent / Task` 边界约束。
 - v1.3 | 2026-04-06 | Codex-架构师 | 补入 `Phase 3` 决策承接说明，明确当前 `9` 类骨架继续作为稳定基线，`9 -> 7` 需通过独立评审框架再决定。
@@ -175,7 +178,7 @@ flowchart LR
 
     HH -->|members| PER
     HH -->|care_network| REL
-    HH -->|care_network| CE
+    CE -.may escalate via.-> HH
     PER -->|relations| REL
     PER -->|default or current place| PL
     OBJ -->|located_in| PL
@@ -246,7 +249,7 @@ flowchart LR
 | --- | --- | --- |
 | `household_id` | string | 家庭唯一 ID |
 | `members` | string[] | 人员 ID 列表 |
-| `care_network` | object[] | 家属、社区、物业、医生平台等联动对象列表，内含服务类型、触发策略、授权范围、责任边界和备用链路 |
+| `care_network` | object[] | 家属、社区、物业、医生平台等联动对象列表；当前 `V1` 默认只激活家属与 App 远程确认，其他对象保留后续适配位 |
 | `home_mode` | enum | 白天、夜间、离家、休息、异常中 |
 | `emergency_policy` | object | 高风险事件默认联动链路 |
 | `privacy_policy` | object | 数据共享和上报规则 |
@@ -372,10 +375,10 @@ flowchart LR
 | `network_state` | 在线、弱网、离线 |
 | `battery_state` | 电量与回充需求 |
 | `medication_urgency` | 是否存在紧急用药或即将到点服药 |
-| `vital_signal_sources` | 当前生命体征信号来源，如穿戴设备、血压计、人工输入 |
+| `vital_signal_sources` | 当前生命体征信号来源，如穿戴设备、血压计、人工输入；穿戴当前作为受控输入位存在 |
 | `wearable_freshness_state` | 穿戴数据的新鲜度及采集模式，如广播、SDK、问诊式补采 |
-| `escalation_targets` | 当前可联动对象 |
-| `manual_service_state` | 当前是否已发起后台人工服务、是否接通、是否超时 |
+| `escalation_targets` | 当前可联动对象；当前 `V1` 默认以家属 App / 远程确认为主，其他对象保留预留 |
+| `manual_service_state` | 后续适配位，当前 V1 不进入最小快照 |
 
 ## 8. 推荐的事件类型
 
@@ -398,12 +401,6 @@ flowchart LR
 - `task_state_changed`
 - `authorization_changed`
 - `caregiver_mode_enabled`
-- `service_link_available`
-- `service_link_failed`
-- `manual_service_requested`
-- `manual_service_connected`
-- `manual_service_transferred`
-- `manual_service_timeout`
 - `manual_review_requested`
 - `wearable_measurement_requested`
 - `companion_initiated`
@@ -462,17 +459,25 @@ flowchart LR
 1. 先按正确的七实体模型组织数据；
 2. 只激活一代当前闭环真正需要的子集。
 
-当前建议的一代最小激活子集如下：
+当前建议的一代最小字段集如下：
 
-| 实体 | `V1` 最小激活方式 |
-| --- | --- |
-| `Person` | 身份、位置、偏好、健康状态摘要 |
-| `CareRelationship` | 基础关系角色、授权边界、升级优先级、`phase=initial` |
-| `Household` | 家庭成员、`care_network`、应急联动策略 |
-| `Place` | 房间、床边、卫生间、门口、充电点、药物存放区 |
-| `Object` | 药物、穿戴、生命体征设备、关键危险物 |
-| `Task` | 陪伴、提醒、找人、送药、上报、转人工、回充 |
-| `CareEvent` | 至少覆盖 `event_class=risk`、`event_class=service_handoff`、`event_class=medication` |
+| 实体 | `V1` 当前必需字段 | 当前不进入 `V1` 的内容 |
+| --- | --- | --- |
+| `Person` | `person_id / identity_status / display_name / age_group / mobility_level / interaction_preferences / health_state / default_location / care_priority` | 更细的长期关系评分、复杂画像扩展 |
+| `CareRelationship` | `relationship_id / subject_person_id / counterparty_ref / relationship_role / auth_scope / requires_confirmation / priority_rank` | `relationship_phase` 的细分扩展、连续型关系质量分值 |
+| `Household` | `household_id / members / home_mode / emergency_policy / privacy_policy` | `service_contracts`、复杂 `care_network` 编排、跨家庭联动 |
+| `Place` | `place_id / category / topology_parent / pose / navigability / care_relevance / night_policy` | 更丰富的语义锚点扩展和平台共享空间结构 |
+| `Object` | `object_id / category / current_place_id / ownership / state / care_tags / subtype_payload`（仅药物、穿戴、生命体征设备、关键危险物激活） | 大范围目标物扩展和跨家庭共享物件模式 |
+| `Task` | `task_id / task_type / goal / owner_person_id / trigger_source / priority / status / approval_status / linked_care_event_id` | 更复杂的执行追踪编排、服务转接主链 |
+| `CareEvent` | `care_event_id / event_class / event_type / subject_person_id / severity / status / recommended_action / linked_task_id / evidence_refs` | 平台共享记忆、跨家庭模式、复杂服务编排事件 |
+
+当前 `V1` 默认不进入最小字段集的内容：
+
+1. `service_contracts`
+2. 连续型关系质量与复杂阶段评分
+3. 平台共享记忆
+4. 跨家庭模式
+5. 依赖后台人工服务或第三方服务的主链字段
 
 ## 12. 最小 JSON 结构示意
 
@@ -551,10 +556,14 @@ flowchart LR
 
 ## 13. 当前仍未冻结的内容
 
-1. 七实体各自的完整字段表
-2. `CareRelationship` 是否需要连续型关系质量维度，还是只保留分段等级
-3. `CareEvent` 的最终事件族全集
-4. proto 和下游接口的具体迁移顺序
+以下内容继续保留为 `provisional`，但主线正文只保留摘要，详细治理转到对应 Linear issue：
+
+1. 七实体各自的完整字段表：由 `KBT-32` 承接；冻结条件是 `S2 / S4 / S5` 下游对象、接口和验证清单稳定，不再反向扩张主线。
+2. `CareRelationship` 是否需要连续型关系质量维度：由 `KBT-32` 承接；冻结条件是关系演化的最小观测口径、消费方和验证方式明确，且不会把 `Phase 5` 的战略验证阈值提前写回当前主线。
+3. `CareEvent` 的最终事件族全集：由 `KBT-32` 承接；冻结条件是事件边界、审批依赖和 `S2 / S4 / S5` 的验证职责明确。
+4. proto 和下游接口的具体迁移顺序 / `breaking change` 策略：由 `KBT-33` 承接；冻结条件是接口 owner、版本号、变更门和迁移规则明确。
+
+统一治理母单为 `KBT-56`，用于追踪活跃 `provisional` 的 owner、冻结条件和阶段门。
 
 ## 14. 下一步建议
 

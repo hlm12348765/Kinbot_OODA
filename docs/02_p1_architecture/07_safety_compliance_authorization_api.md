@@ -2,11 +2,12 @@
 
 ---
 
-文档版本：v1.2
+文档版本：v1.3
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.3 | 2026-04-09 | Codex-架构师 | 按 `V1` 真实复杂度下降口径，将人工服务与第三方平台相关审批语义降为后续适配位的预留字段 / 结果，不再把它们写成当前最小审批契约的默认主路径。
 - v1.2 | 2026-04-08 | Codex-架构师 | 同步运行时基线文件重命名，更新与多执行范式基线的引用路径。
 - v1.1 | 2026-04-06 | Codex-架构师 | 按家庭共居智能体革新路线对齐本文，明确审批接口是跨执行范式的系统级硬边界；连续流式、事件驱动和人工接力均不得绕过该接口。
 - v1.0 | 2026-03-08 | Codex-架构师 | 文档创建。
@@ -38,7 +39,7 @@
 - 目标系统是机器人本体；穿戴、智能家居、手机 App、后台云服务属于伴生系统
 - 已授权行为需要做到完全自主
 - 高风险异常默认先联动家属，并保留社区 / 物业 / 120 路线接口
-- 一期需要后台人工服务，前线角色为客服运营坐席，其他角色由其转接
+- 需求侧曾明确提出后台人工服务与客服运营坐席首线角色，但当前 `V1` 只保留其后续适配位，不写入当前最小审批契约的主链成立前提
 - 一期紧急用药仍限定在“提醒 / 递送 / 确认 / 告知”边界
 - 机器人直接入网拨号只做架构预留
 - 第三方平台必须严格审核；机器人负责准确传递信息和保留审计链，交付由平台负责
@@ -135,8 +136,8 @@ flowchart TB
 2. 开关储物仓
 3. 送药、提醒服药、记录服药确认
 4. 家属提醒、社区 / 物业通知、120 路线预留动作
-5. 问诊转接、人工服务接入、第三方平台调用
-6. 外部下单，如买药、配送、外卖
+5. 后续适配位中的问诊转接、人工服务接入、第三方平台调用
+6. 后续适配位中的外部下单，如买药、配送、外卖
 7. 高风险主动打断与主动靠近
 8. 敏感数据外发
 
@@ -162,8 +163,8 @@ flowchart TB
 - `caregiver`：保姆或照护者
 - `visitor`：访客
 - `robot_system`：机器人自主触发
-- `ops_seat`：后台客服运营坐席
-- `third_party_platform`：互联网医院、药店、配送、内容平台等
+- `ops_seat`：后续适配位中的后台客服运营坐席
+- `third_party_platform`：后续适配位中的互联网医院、药店、配送、内容平台等
 
 ### 6.2 责任边界
 
@@ -197,9 +198,9 @@ flowchart TB
 | `deliver_medication` | 送药到人 |
 | `confirm_medication_taken` | 记录用户已服药 |
 | `notify_family` | 通知家属 |
-| `connect_manual_service` | 接入客服运营坐席 |
-| `transfer_manual_service` | 将人工服务转给第三方 |
-| `invoke_third_party_service` | 互联网医院、药店、配送平台 |
+| `connect_manual_service` | 后续适配位：接入客服运营坐席 |
+| `transfer_manual_service` | 后续适配位：将人工服务转给第三方 |
+| `invoke_third_party_service` | 后续适配位：互联网医院、药店、配送平台 |
 | `share_sensitive_data` | 外发健康、身份或病历信息 |
 | `interrupt_user` | 主动打断用户 |
 | `request_measurement` | 发起问诊式补采或测量请求 |
@@ -257,8 +258,8 @@ flowchart TB
 | `network_state` | object | 网络状态 |
 | `home_mode` | enum | 白天、夜间、异常中等 |
 | `medication_context` | object | 药品、仓门、禁忌和时效 |
-| `service_link_context` | object[] | 外部服务准入与责任边界 |
-| `manual_service_state` | object | 客服运营坐席接入状态 |
+| `service_link_context` | object[] | 后续适配位中的外部服务准入与责任边界 |
+| `manual_service_state` | object | 后续适配位中的客服运营坐席接入状态 |
 
 ### 9.3 `ApprovalDecision`
 
@@ -272,7 +273,7 @@ flowchart TB
 | --- | --- | --- |
 | `decision_id` | string | 唯一 ID |
 | `proposal_id` | string | 对应动作 |
-| `result` | enum | `approved` / `rejected` / `downgraded` / `confirmation_required` / `manual_service_required` / `fault_protection_required` |
+| `result` | enum | `approved` / `rejected` / `downgraded` / `confirmation_required` / `manual_service_required(reserved)` / `fault_protection_required` |
 | `reason_codes` | string[] | 原因码 |
 | `constraints` | object | 限速、限时、可共享字段等约束 |
 | `state_transition_hint` | object | 建议进入的顶层或业务状态 |
@@ -371,13 +372,17 @@ flowchart TB
 
 含义：
 
-- 动作应交给后台人工服务或转接链处理
+- 后续适配位被激活时，动作应交给后台人工服务或转接链处理
 
 典型场景：
 
-- 高风险异常需要人工复核
+- 后续适配位中的高风险异常需要人工复核
 - 第三方问诊或平台服务需要人工转接
-- 系统无法确认当前责任边界
+- 系统无法确认当前责任边界，且已启用人工服务接力
+
+补充说明：
+
+- 该结果当前只保留为后续适配位的预留返回值，不作为当前 `V1` 最小闭环的默认主路径。
 
 ### 11.6 `fault_protection_required`
 
@@ -410,7 +415,7 @@ flowchart TB
 当数据新鲜度不足时：
 
 - 不能把低新鲜度心率当作强自动决策依据
-- 应优先触发补采、复核或人工服务
+- 应优先触发补采、复核或家属远程确认；人工服务只保留后续适配位
 
 ### 12.2 储物仓策略
 
@@ -437,7 +442,7 @@ flowchart TB
 - 防误取
 - 防错拿
 
-### 12.3 第三方平台策略
+### 12.3 后续适配位中的第三方平台策略
 
 第三方服务调用前必须校验：
 
@@ -541,7 +546,7 @@ flowchart TB
 }
 ```
 
-### 14.3 自动外部下单
+### 14.3 后续适配位中的自动外部下单
 
 ```json
 {
@@ -576,7 +581,7 @@ flowchart TB
 }
 ```
 
-### 14.4 高风险异常转人工
+### 14.4 后续适配位中的高风险异常转人工
 
 ```json
 {
