@@ -2,11 +2,12 @@
 
 ---
 
-文档版本：v1.37
+文档版本：v1.38
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.38 | 2026-04-09 | Codex-架构师 | 修正根入口的表面复杂度与真实复杂度错位：将 `07_safety_compliance_authorization_api.md` 拉回当前有效入口与建议阅读顺序，明确其与 `01 / 03 / 05` 一起构成开发前置事实源。
 - v1.37 | 2026-04-09 | Codex-架构师 | 继续压缩主线复杂度：明确 `01 / 03 / 06` 的单一职责，补记 `P2-01` 为唯一开发入口，并同步刷新根入口阅读顺序与目录说明。
 - v1.36 | 2026-04-08 | Codex-架构师 | 收缩根入口为“当前视图 + 当前有效入口 + 阶段门入口 + 历史资料指针”，同步吸收 `08_reviews` 归档收敛、`superpowers` active-only 和 `03` 运行时基线重命名后的主线索引。
 - v1.35 | 2026-04-08 | Codex-架构师 | 澄清 `Phase 5` 当前只完成架构侧验证规划与治理预留，不把未发生的实机 / 市场闭环写成已完成，并补记后续收口追踪 issue `KBT-55`。
@@ -34,11 +35,12 @@
 3. [docs/02_p1_architecture/01_overall_architecture.md](docs/02_p1_architecture/01_overall_architecture.md)：总体架构事实源。
 4. [docs/02_p1_architecture/03_execution_paradigms_runtime_baseline.md](docs/02_p1_architecture/03_execution_paradigms_runtime_baseline.md)：运行时事实源。
 5. [docs/02_p1_architecture/05_world_state_schema.md](docs/02_p1_architecture/05_world_state_schema.md)：七实体 `World State` 主文档。
-6. [docs/02_p1_architecture/06_decision_state_machine.md](docs/02_p1_architecture/06_decision_state_machine.md)：离散决策业务面的状态机主文档。
-7. [docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md](docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md)：唯一开发入口，承接 `S1-S7` 工作包下发。
-8. [docs/08_reviews/README.md](docs/08_reviews/README.md)：活跃评审入口。
-9. [docs/05_p4_beta_dvt/01_mvp_validation_plan.md](docs/05_p4_beta_dvt/01_mvp_validation_plan.md)：`Phase 5` 工程 / 战略双泳道验证入口。
-10. [docs/06_p5_launch_readiness/01_mass_production_readiness_criteria.md](docs/06_p5_launch_readiness/01_mass_production_readiness_criteria.md)：`G5` 门控与第 `8` 类战略证据包标准。
+6. [docs/02_p1_architecture/07_safety_compliance_authorization_api.md](docs/02_p1_architecture/07_safety_compliance_authorization_api.md)：安全、合规、授权边界主文档。
+7. [docs/02_p1_architecture/06_decision_state_machine.md](docs/02_p1_architecture/06_decision_state_machine.md)：离散决策业务面的状态机主文档。
+8. [docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md](docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md)：唯一开发入口，承接 `S1-S7` 工作包下发。
+9. [docs/08_reviews/README.md](docs/08_reviews/README.md)：活跃评审入口。
+10. [docs/05_p4_beta_dvt/01_mvp_validation_plan.md](docs/05_p4_beta_dvt/01_mvp_validation_plan.md)：`Phase 5` 工程 / 战略双泳道验证入口。
+11. [docs/06_p5_launch_readiness/01_mass_production_readiness_criteria.md](docs/06_p5_launch_readiness/01_mass_production_readiness_criteria.md)：`G5` 门控与第 `8` 类战略证据包标准。
 
 ## 当前阶段门入口
 
@@ -57,13 +59,14 @@
 3. [docs/02_p1_architecture/01_overall_architecture.md](docs/02_p1_architecture/01_overall_architecture.md)
 4. [docs/02_p1_architecture/03_execution_paradigms_runtime_baseline.md](docs/02_p1_architecture/03_execution_paradigms_runtime_baseline.md)
 5. [docs/02_p1_architecture/05_world_state_schema.md](docs/02_p1_architecture/05_world_state_schema.md)
-6. [docs/02_p1_architecture/06_decision_state_machine.md](docs/02_p1_architecture/06_decision_state_machine.md)
-7. [docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md](docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md)
-8. [docs/08_reviews/README.md](docs/08_reviews/README.md) -> [docs/08_reviews/21_seven_entity_world_state_target_model.md](docs/08_reviews/21_seven_entity_world_state_target_model.md) -> [docs/08_reviews/25_phase3_to_phase45_closure_and_strategic_input_package.md](docs/08_reviews/25_phase3_to_phase45_closure_and_strategic_input_package.md) -> [docs/08_reviews/24_kbt52_strategic_ambition_gap_review.md](docs/08_reviews/24_kbt52_strategic_ambition_gap_review.md)
-9. [docs/05_p4_beta_dvt/01_mvp_validation_plan.md](docs/05_p4_beta_dvt/01_mvp_validation_plan.md)
-10. [docs/06_p5_launch_readiness/01_mass_production_readiness_criteria.md](docs/06_p5_launch_readiness/01_mass_production_readiness_criteria.md)
-11. [docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md)
-12. [docs/00_governance/01_workflow.md](docs/00_governance/01_workflow.md)
+6. [docs/02_p1_architecture/07_safety_compliance_authorization_api.md](docs/02_p1_architecture/07_safety_compliance_authorization_api.md)
+7. [docs/02_p1_architecture/06_decision_state_machine.md](docs/02_p1_architecture/06_decision_state_machine.md)
+8. [docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md](docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md)
+9. [docs/08_reviews/README.md](docs/08_reviews/README.md) -> [docs/08_reviews/21_seven_entity_world_state_target_model.md](docs/08_reviews/21_seven_entity_world_state_target_model.md) -> [docs/08_reviews/25_phase3_to_phase45_closure_and_strategic_input_package.md](docs/08_reviews/25_phase3_to_phase45_closure_and_strategic_input_package.md) -> [docs/08_reviews/24_kbt52_strategic_ambition_gap_review.md](docs/08_reviews/24_kbt52_strategic_ambition_gap_review.md)
+10. [docs/05_p4_beta_dvt/01_mvp_validation_plan.md](docs/05_p4_beta_dvt/01_mvp_validation_plan.md)
+11. [docs/06_p5_launch_readiness/01_mass_production_readiness_criteria.md](docs/06_p5_launch_readiness/01_mass_production_readiness_criteria.md)
+12. [docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md)
+13. [docs/00_governance/01_workflow.md](docs/00_governance/01_workflow.md)
 
 ## 历史资料与工作文档
 
