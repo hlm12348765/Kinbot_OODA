@@ -2,11 +2,14 @@
 
 ---
 
-文档版本：v1.16
+文档版本：v1.19
 创建日期：2026-03-21
 作者：Codex-架构师
 
 文档变更记录：
+- v1.19 | 2026-04-09 | Codex-架构师 | 吸收 `Step 48` 的架构精简输入：将当前默认量产资源线更新为 `12GB RAM + 32GB Flash`，并确认 `KBT-32` 继续作为当前唯一开发入口。
+- v1.18 | 2026-04-09 | Codex-架构师 | 补充复杂度治理 guardrails：复杂度复盘类文档默认归档、活跃主线文档超长需说明、活跃 `provisional` 必须绑定 Linear 承接，并明确历史留痕不直接计入活跃复杂度 KPI。
+- v1.17 | 2026-04-09 | Codex-架构师 | 补充 `docs/superpowers/` 工作计划的执行子技能约束，并将 `.superpowers/` 明确纳入本地辅助目录提交排除范围。
 - v1.16 | 2026-04-08 | Codex-架构师 | 补充主线文档分层、`08_reviews` 活跃入口 / 归档规则、`superpowers` active-only 约束，以及 `provisional` 单一承载规则。
 - v1.15 | 2026-04-08 | Codex-架构师 | 补充 `docs/superpowers/` 工作文档流转约束，并记录仓库当前可见的 `.claude` repo-local hook 守卫与只读检查命令。
 - v1.14 | 2026-04-06 | Codex-架构师 | 补充“在不需要用户确认时不得停在阶段性汇报；每次暂停必须带着重大待确认问题”的协作规则，避免在已批准路线中反复中断。
@@ -133,7 +136,7 @@
 - 深度相机 / 激光雷达：仅研发对比基线与真值参考链路，不作为产品 fallback
 - 若纯视觉不过线：优先延迟产品节奏，而不是回退主动传感主线
 - 默认数据边界：原始敏感数据端侧处理，仅预留受控回流能力
-- 当前默认量产资源线：`8GB RAM + 64GB Flash`
+- 当前默认量产资源线：`12GB RAM + 32GB Flash`
 - `12GB + 64GB`：边界验证线
 - `16GB + 64GB` 及以上：前瞻验证线或未来 `Pro SKU`
 - 每一轮涉及成本、功耗、结构、交互或伴生系统裁剪的评审，都必须同步复核是否损伤“聪明、温暖、精致”的高端产品感，以及是否仍能支撑 `20000 到 30000 元` 售价区间
@@ -150,12 +153,15 @@
 - 先判断本轮新增输入会影响哪些主线文档
 - 涉及 `VLN` 路线、导航推理和相关前瞻技术判断时，应通过独立 Linear issue 与 `VLN` 专项线程交叉校验，并在需要时回写 `docs/09_research/01_vln_role_analysis_and_technical_plan.md`
 - 若当前线程使用 `superpowers` 生成工作计划或规格草稿，应统一落到 `docs/superpowers/` 及其 `plans/` 子目录；该目录只承接工作文档，不替代主线架构、评审或量产基线文档
+- 若当前线程执行 `docs/superpowers/` 中的实现计划，应按计划头部约束优先使用 `superpowers:subagent-driven-development`；若不适合并行拆解，则使用 `superpowers:executing-plans` 按任务顺序推进
 - `docs/superpowers/` 新增或调整文档后，需同步回写 `docs/superpowers/README.md`；若其影响仓库总入口或阶段入口，再同步检查根目录 `README.md` 与 `CHANGELOG.md`
 - 根 `README.md` 只维护当前视图、当前有效入口、当前阶段门入口与历史资料指针，不再平铺全部历史评审或长阅读清单
 - 当前主线事实源默认收敛为 `05_system_architecture_principles.md -> 01_overall_architecture.md -> 03_execution_paradigms_runtime_baseline.md -> 合同/专题层 -> 03_p2_feasibility/01_overall_solution_and_module_design_baseline.md`
 - `docs/02_p1_architecture/14_family_co_living_agent_paradigm.md` 只保留背景 / 决策来路锚点角色；`docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md` 只保留阶段评审包角色，不再作为并列主入口
 - `docs/08_reviews/` 默认只保留 `21 / 25 / 24 / archive README` 作为活跃入口；其余历史评审稿、旧阶段收口稿与革新决策链文档进入 `archive/`
+- `docs/08_reviews/` 中新增的复杂度复盘、阶段后总结与类似“总结型评审”文档，默认也进入 `archive/`，不扩张活跃评审入口
 - `docs/superpowers/plans/` 只保留尚未被主线吸收的工作文档；已被主线吸收的计划应迁入 `docs/superpowers/archive/`
+- 活跃主线文档默认目标控制在 `500` 行左右；若超过 `600` 行，必须在文档定位、目录索引或相关治理文档中说明其继续保留为单文件的理由
 - 先更新系统级文档，再更新下游方案文档
 - 最后回写 `docs/00_governance/03_decision_log.md` 和 `CHANGELOG.md`
 - 允许为后置里程碑提前起草逆向约束型文档，但不得据此跳过当前阶段门或把后置结论伪装成当前已冻结事实
@@ -168,7 +174,9 @@
 - 允许先形成提案或工作假设
 - 必须明确标注为提案 / 假设 / 候选 / `provisional`
 - 应按“本地文档先记 `provisional` -> Linear 建立评审 issue / comment -> 用户确认后升级为 `confirmed`”的方式推进
+- 活跃 `provisional` 必须绑定明确的 Linear 承接项，至少写清内容、位置、冻结条件、目标阶段门与 owner；缺失这些信息的 orphan provisional 应优先清账
 - 详细 `provisional` 内容只能在受控载体中展开：原则附录、活跃评审总包、受控附录、`docs/09_research/` 与 `docs/superpowers/` 工作文档；其他主线文档只允许保留摘要与指针
+- `docs/00_governance/03_decision_log.md` 与 archive 文档中的历史 `provisional` 留痕默认不直接计入活跃复杂度 KPI
 - 不得把未审阅内容伪装成已冻结事实
 
 ## 8. 图示要求
@@ -210,7 +218,7 @@ Linear 是正式项目管理软件。
 
 - 默认在当前工作分支上工作
 - 提交前检查 `git status`
-- 不得把 `tmp/`、`.claude/`、`.obsidian/` 等本地辅助目录混入正式提交
+- 不得把 `tmp/`、`.claude/`、`.obsidian/`、`.superpowers/` 等本地辅助目录混入正式提交
 - 不得随意使用破坏性 Git 命令
 
 常用只读检查命令：

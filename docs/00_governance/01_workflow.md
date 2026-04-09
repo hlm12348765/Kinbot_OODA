@@ -2,11 +2,12 @@
 
 ---
 
-文档版本：v1.3
+文档版本：v1.4
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.4 | 2026-04-09 | Codex-架构师 | 补充复杂度治理持续维护规则：活跃主线文档行数预警、`08_reviews` 活跃入口约束、`provisional` 的 Linear 承接要求，以及历史留痕不纳入活跃复杂度 KPI 的口径。
 - v1.3 | 2026-04-09 | Codex-架构师 | 继续压缩主线复杂度，明确 `01 / 03 / 06` 的单一职责，补记 `P2-01` 为默认开发入口，并同步把接口相关表述改回更平实的规则语言。
 - v1.2 | 2026-04-08 | Codex-架构师 | 补充文档分层、活跃评审入口与 `provisional` 单一承载规则，明确根入口、`08_reviews` 与 `superpowers` 的收敛方式。
 - v1.1 | 2026-04-06 | Codex-架构师 | 清理工作流中的旧 `OODA` 总法口径，明确当前主线已切换为“家庭共居智能体 + 多执行范式”。
@@ -60,6 +61,10 @@
 21. `docs/08_reviews/` 当前只保留少量活跃入口，其余文档进入 `archive/`；`docs/superpowers/` 采用 active-only + archive 结构，已被主线吸收的工作文档不再停留在活跃入口。
 22. 详细 `provisional` 内容只允许保留在受控载体中：原则附录、活跃评审总包、受控附录、`docs/09_research/` 与 `docs/superpowers/` 工作文档；其他主线文档只允许保留摘要与指针，不再展开候选子表。
 23. 当前主线默认把 `01_overall_architecture.md` 作为唯一总图文档、`03_execution_paradigms_runtime_baseline.md` 作为唯一运行时语法文档、`06_decision_state_machine.md` 作为唯一离散决策状态机文档；进入开发承接时，默认从 `docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md` 开始。
+24. 活跃主线文档默认目标控制在 `500` 行以内；若超过 `600` 行，必须在文档定位、索引或治理文档中说明继续保留为单文件的理由。
+25. `docs/08_reviews/` 不再随手新增活跃入口；复杂度复盘、阶段后总结与类似“总结型评审”默认进入 `archive/`。
+26. 主线文档不得展开详细 `provisional` 子表，只允许保留摘要与指向 Linear issue 的指针；每个活跃 `provisional` 都必须绑定明确承接项，并至少写清假设内容、文档位置、为何未冻结、冻结条件、目标阶段门与 owner。
+27. `docs/00_governance/03_decision_log.md` 与 archive 文档中的历史 `provisional` 留痕默认只用于追溯，不直接计入活跃复杂度 KPI；当前治理不采用“全仓总数”这类僵硬 KPI。
 
 ## 2.1 跨线程 Codex 协作规范
 

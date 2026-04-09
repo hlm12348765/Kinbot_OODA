@@ -2,11 +2,12 @@
 
 ---
 
-文档版本：v1.0
+文档版本：v1.1
 创建日期：2026-04-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.1 | 2026-04-09 | Codex-架构师 | 补入《Kinbot 架构复杂度审阅》归档索引，并明确复杂度复盘类文档默认进入本目录保留追溯，不扩张活跃评审入口。
 - v1.0 | 2026-04-08 | Codex-架构师 | 建立 `docs/08_reviews/archive/` 归档总入口，用于承接已被主线吸收的历史评审稿、阶段收口包与决策链总结。
 
 ---
@@ -53,7 +54,12 @@
 2. `23_phase4_downstream_sync_closure_package.md`
 3. `25_phase45_strategic_ambition_reinforcement_package.md`
 
+### 5. 治理与复杂度复盘
+
+1. `26_architecture_complexity_marking.md`
+
 ## 说明
 
 1. 当前活跃入口不在本目录，请参考上级 [README.md](../README.md)。
 2. 本目录保留原始材料，方便追溯阶段演进与归档前后的文本对照。
+3. 复杂度复盘、阶段后总结与类似“总结型评审”默认进入本目录，除非用户明确要求它们成为活跃评审入口。
