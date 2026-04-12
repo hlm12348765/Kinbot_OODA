@@ -2,13 +2,14 @@
 
 ---
 
-文档版本：v1.24
+文档版本：v1.26
 创建日期：2026-03-11
 作者：Codex-架构师
 
 ---
 
 文档变更记录：
+- v1.26 | 2026-04-12 | Claude-架构师 | 同步 `26` 号文档 `v1.1` 修订：补入国内竞品、量化锚点、风险说明、人形正面论证与 `24` 号交叉引用。
 - v1.25 | 2026-04-12 | Codex-架构师 | 新增《Kinbot 技术定位、竞品格局与关键抉择修订结论稿（EMT 汇报用）》索引，作为面向集团 `EMT` 的当前技术位势、竞品分层与关键抉择汇报输入。
 - v1.24 | 2026-04-09 | Codex-架构师 | 收紧 `21` 号文档角色为 `Phase 3` 评审补充，明确七实体正式定义与活跃未冻结项分别以 `05 / 25` 为准。
 - v1.23 | 2026-04-08 | Codex-架构师 | 收敛 `08_reviews` 活跃入口，保留 `21 / 新25 / 24 / archive` 四个主入口，其余历史评审整体迁入 `archive/`。
@@ -49,7 +50,7 @@
 - `21_seven_entity_world_state_target_model.md`：七实体 World State 目标模型评审补充。核心主题：保留 `Phase 3` 收敛理由、迁移顺序与候选说明；正式定义与活跃未冻结项分别以 `05 / 25` 为准。
 - `25_phase3_to_phase45_closure_and_strategic_input_package.md`：Phase 3 到 Phase 4.5 收口与战略输入总包。核心主题：合并 `22 / 23 / 25` 后的唯一活跃阶段总包。
 - `24_kbt52_strategic_ambition_gap_review.md`：KBT-52 战略野心差距评审。核心主题：董事长视角的战略野心复核与 `Phase 4.5` 补强来源。
-- `26_kinbot_technical_positioning_competition_and_strategic_choices_for_emt.md`：Kinbot 技术定位、竞品格局与关键抉择修订结论稿（EMT 汇报用）。核心主题：修订 Claude 版分析，按当前主线收紧技术位势口径、补入家庭类人形竞品，并说明 Kinbot 为赢市场做出的关键抉择。
+- `26_kinbot_technical_positioning_competition_and_strategic_choices_for_emt.md`：Kinbot 技术定位、竞品格局与关键抉择修订结论稿（EMT 汇报用）。核心主题：按当前主线收紧技术位势口径，覆盖海外与中国国内竞品，补入量化锚点与风险面，并说明 Kinbot 为赢市场做出的关键抉择及其代价。与 `24` 号战略野心差距评审互为补充。
 - `archive/README.md`：历史评审归档总入口。核心主题：已吸收、已归档或仅保留追溯价值的历史文档。
 
 ## 维护规则
