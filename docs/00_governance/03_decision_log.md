@@ -2,11 +2,12 @@
 
 ---
 
-文档版本：v2.0
+文档版本：v2.1
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v2.1 | 2026-04-12 | Codex-架构师 | 补记 `docs/09_research/` 目录重构：将夜间闭环方案移入研究目录，并把 `VLN -> NFM` 专题子目录统一重命名编号为 `07_vln_model_design/`。
 - v2.0 | 2026-04-09 | Codex-架构师 | 将本文重构为当前总日志入口，保留当前有效事实、架构判断、开放问题与后续确认重点；历史决策日志拆分到 `docs/00_governance/decision_log/history/`，并新增派生索引。
 - v1.42 | 2026-04-09 | Codex-架构师 | 吸收对 `codex/v1-real-complexity-reduction` 的审阅结论：将 `07` 拉回根入口，明确 `21` 退居 `Phase 3` 评审补充，并收紧安全审批文档主干与后续适配位的边界。
 - v1.41 | 2026-04-09 | Codex-架构师 | 吸收 `Step 48` 的架构精简输入：确认 `KBT-32` 继续作为当前唯一开发入口，将默认量产资源线更新为 `12GB RAM + 32GB Flash`，并把 `KBT-32 / KBT-33 / KBT-55` 的承接边界正式化。
@@ -354,7 +355,8 @@
 | A-093 | 本次概念评审的资源审批不应采用一次性 `all-in` 方式，而应在确认 `10` 个月 / `9000` 万 / `55` 人总盘子的前提下，按阶段门分批释放 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 42, `docs/08_reviews/13_future_home_robot_vision_charter_for_emt.md` |
 | A-094 | 当前导航智能主线应从“`VLN` 能力增强”升级为“`VLN -> NFM` 演进”；`VLN` 在一代中被定义为 `NFM` 的指令驱动语义导航能力切片，而不是最终问题定义 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 46, `docs/09_research/01_vln_role_analysis_and_technical_plan.md` |
 | A-095 | 一代 `NFM` 主要落在 `Orient / Decide`，统一承接空间理解、粗粒度全局定位、搜索恢复与长时空间记忆；`SLAM / 路径规划` 继续保留在 `local_metric_frame`、局部执行与安全支撑层 | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 46, `docs/02_p1_architecture/01_overall_architecture.md` |
-| A-096 | 长期记忆需要正式分层：基础空间长期记忆（`semantic_global_frame / topometric memory / target belief / drift alert`）应前置进入 `P0/P1`，个性化 / 行为长期记忆后置到 `P2` | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 46, `docs/09_research/vln_model_design/kinbot_vln_model_detailed_design.md` |
+| A-096 | 长期记忆需要正式分层：基础空间长期记忆（`semantic_global_frame / topometric memory / target belief / drift alert`）应前置进入 `P0/P1`，个性化 / 行为长期记忆后置到 `P2` | confirmed | `input/00_requirements/00_user_requirements_input.md` Step 46, `docs/09_research/07_vln_model_design/01_kinbot_vln_model_detailed_design.md` |
+| A-103 | `docs/09_research/` 当前继续按“顶层研究输入 + 专题子目录”组织；夜间闭环方案属于研究输入而非 `P2` 正式冻结文档，`VLN -> NFM` 深化专题统一收敛到 `07_vln_model_design/` | confirmed | 本轮研究目录重构 |
 
 ## 4. 尚未关闭的关键问题
 

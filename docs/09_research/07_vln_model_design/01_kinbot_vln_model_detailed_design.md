@@ -933,7 +933,7 @@ memory_db = {
 **关键设计原则**：
 - Teacher可用更高频率探索能力上限，为蒸馏提供高质量数据
 - Student在端侧只负责低频语义决策，连续动态部分交给轻量跟踪器和局部规划器
-- 详细预算分析见`vln_4b_tps_and_bandwidth_budget.md`
+- 详细预算分析见 `02_vln_4b_tps_and_bandwidth_budget.md`
 
 ### 6.3 运行时结构建议
 

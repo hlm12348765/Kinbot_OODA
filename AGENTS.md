@@ -2,11 +2,14 @@
 
 ---
 
-文档版本：v1.19
+文档版本：v1.22
 创建日期：2026-03-21
 作者：Codex-架构师
 
 文档变更记录：
+- v1.22 | 2026-04-12 | Codex-架构师 | 补充 `VLN / NFM` 专题研究子目录与 CTO 面试题包的当前执行口径，并新增对应只读检查命令。
+- v1.21 | 2026-04-11 | Codex-架构师 | 补充团队规划中的候选人筛选与 CTO 统一面试工作流，明确 `90 / 91` 文档作为当前招聘评估链的正式依据。
+- v1.20 | 2026-04-10 | Codex-架构师 | 补充仓库内已实际使用的 `plan/` 执行计划工作目录及对应只读检查命令，避免计划型工作流无文档约束。
 - v1.19 | 2026-04-09 | Codex-架构师 | 吸收 `Step 48` 的架构精简输入：将当前默认量产资源线更新为 `12GB RAM + 32GB Flash`，并确认 `KBT-32` 继续作为当前唯一开发入口。
 - v1.18 | 2026-04-09 | Codex-架构师 | 补充复杂度治理 guardrails：复杂度复盘类文档默认归档、活跃主线文档超长需说明、活跃 `provisional` 必须绑定 Linear 承接，并明确历史留痕不直接计入活跃复杂度 KPI。
 - v1.17 | 2026-04-09 | Codex-架构师 | 补充 `docs/superpowers/` 工作计划的执行子技能约束，并将 `.superpowers/` 明确纳入本地辅助目录提交排除范围。
@@ -152,9 +155,12 @@
 - `KBT-33` 继续作为 `KBT-31` 子 issue 保留，只承接双视角一致性与接口稳定性策略的治理细化，不回退重定义系统边界
 - 先判断本轮新增输入会影响哪些主线文档
 - 涉及 `VLN` 路线、导航推理和相关前瞻技术判断时，应通过独立 Linear issue 与 `VLN` 专项线程交叉校验，并在需要时回写 `docs/09_research/01_vln_role_analysis_and_technical_plan.md`
+- 若当前线程处理 `VLN -> NFM`、长期记忆、导航基础问题或数据设计等专题深化，应优先在 `docs/09_research/07_vln_model_design/` 下推进；当专题结论影响主线时，再回写 `docs/09_research/01_vln_role_analysis_and_technical_plan.md`、相关主线文档与索引
 - 若当前线程使用 `superpowers` 生成工作计划或规格草稿，应统一落到 `docs/superpowers/` 及其 `plans/` 子目录；该目录只承接工作文档，不替代主线架构、评审或量产基线文档
 - 若当前线程执行 `docs/superpowers/` 中的实现计划，应按计划头部约束优先使用 `superpowers:subagent-driven-development`；若不适合并行拆解，则使用 `superpowers:executing-plans` 按任务顺序推进
 - `docs/superpowers/` 新增或调整文档后，需同步回写 `docs/superpowers/README.md`；若其影响仓库总入口或阶段入口，再同步检查根目录 `README.md` 与 `CHANGELOG.md`
+- 若当前线程处理候选人筛选、面试建议或招聘评估回写，应以 `docs/10_team_planning/90_cto_unified_interview_framework.md` 作为统一面试框架，以 `docs/10_team_planning/91_candidate_screening_and_interview_advice.md` 作为滚动候选人判断台账，并与 `02_kinbot_team_recruitment_requirements.csv` 保持口径一致
+- 若当前线程需要新增或回写 CTO 面试题包，默认按 `90_cto_unified_interview_framework.md` 的现行标准为每位候选人准备 `10` 道候选题，现场选 `6 到 8` 道，并将显式 `Kinbot` 代入题限制为默认最多 `1` 道
 - 根 `README.md` 只维护当前视图、当前有效入口、当前阶段门入口与历史资料指针，不再平铺全部历史评审或长阅读清单
 - 当前主线事实源默认收敛为 `05_system_architecture_principles.md -> 01_overall_architecture.md -> 03_execution_paradigms_runtime_baseline.md -> 合同/专题层 -> 03_p2_feasibility/01_overall_solution_and_module_design_baseline.md`
 - `docs/02_p1_architecture/14_family_co_living_agent_paradigm.md` 只保留背景 / 决策来路锚点角色；`docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md` 只保留阶段评审包角色，不再作为并列主入口
@@ -225,8 +231,11 @@ Linear 是正式项目管理软件。
 
 - `git status`：检查当前工作区与待提交内容
 - `rg --files README.md docs input`：快速清点当前纳管文档与目录结构，检查是否有新增文档 / 子目录尚未同步索引
+- `find plan -name "*.md" | sed 's#^./##' | sort`：快速检查 `plan/` 下的执行计划、阶段记录和工作笔记是否需要继续推进、归档或转入正式文档
 - `find docs input -name README.md -o -name "*.md" | sed 's#^./##' | sort`：快速清点当前 Markdown / README 入口，检查新增文档是否已进入目录索引视图
 - `find docs/superpowers -name "*.md" | sed 's#^./##' | sort`：快速检查 `superpowers` 工作文档及其索引是否已纳入仓库视图
+- `find docs/09_research/07_vln_model_design -maxdepth 1 -type f | sed 's#^./##' | sort`：快速检查 `VLN / NFM` 专题子目录是否有新增研究文档待纳入索引或吸收进主线
+- `find docs/10_team_planning -maxdepth 1 \\( -name "*.md" -o -name "*.csv" \\) | sed 's#^./##' | sort`：快速检查招聘基线、CTO 面试框架和候选人建议文档是否有新增输入或索引漂移
 - `rg -n "<pattern>" README.md docs input`：检查索引、旧路径、术语和主线残留
 - `sed -n '1,200p' <file>`：分段核对长文档头部、变更记录和关键段落
 - `sed -n '1,200p' .claude/settings.json`：核对当前仓库可见的 repo-local hook 配置
@@ -265,9 +274,11 @@ Linear 是正式项目管理软件。
 - `docs/07_p6_operations/`：上市后运营与回灌阶段文档入口
 - `docs/08_reviews/`：活跃评审输入与历史归档；当前默认活跃入口以该目录 `README.md` 为准
 - `docs/09_research/`：Deep Research、论文、芯片、前沿专项
-- `docs/09_research/` 下允许按专题建立子目录，例如 `vln_model_design/`；新增子目录或子文档后，需同步检查父级 `README.md`、根目录 `README.md` 与 `CHANGELOG.md`
-- `docs/10_team_planning/`：团队规划主基线
+- `docs/09_research/` 下允许按专题建立子目录，例如 `07_vln_model_design/`；新增子目录或子文档后，需同步检查父级 `README.md`、根目录 `README.md` 与 `CHANGELOG.md`
+- `docs/09_research/07_vln_model_design/`：`VLN -> NFM`、长期记忆、导航基础问题与数据设计等专题研究工作目录；新增文档后需同步父级 `README.md`、根目录 `README.md` 与 `CHANGELOG.md`
+- `docs/10_team_planning/`：团队规划主基线；其中 `01_development_team_proposal.md` 为组织能力基线，`90_cto_unified_interview_framework.md` 与 `91_candidate_screening_and_interview_advice.md` 为当前招聘筛选与 CTO 面试工作流入口
 - `docs/superpowers/`：当前线程使用 `superpowers` 技能生成的计划 / 规格工作文档；活跃工作文档只保留在 `plans/`，已吸收文档进入 `archive/`，新增文档后需同步该目录 `README.md`
+- `plan/`：仓库内临时但可持续推进的执行计划工作目录，用于当前线程的 task plan、阶段笔记与审计记录；不替代 `docs/` 正式文档，结论稳定后应回写正式文档或归档清理
 - `output/`：对外交付材料
 - `tmp/`：临时产物，不进入正式版本历史
 
