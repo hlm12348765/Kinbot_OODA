@@ -7,6 +7,7 @@
 作者：Codex-VLN技术专家
 
 文档变更记录：
+- v0.3 | 2026-04-12 | Codex-VLN技术专家 | 补强“云侧交互大模型 + 端侧 NFM”协同口径，明确 `dialogue_memory_plane / embodied_memory_plane / runtime_world_state` 三层关系，并新增云侧交互大模型、端侧交互反射层、端侧 `NFM` 与 `world_state_memory` 的消费/写回矩阵。
 - v0.2 | 2026-04-12 | Codex-VLN技术专家 | 对齐当前主线架构：将长期记忆设计映射到 `World State` 七实体与三层状态，明确 `world_state_memory` 是共享投影层而非唯一记忆源，并补充治理字段、消费方、写回方与 `provisional extension` 吸纳规则。
 
 ---
@@ -31,7 +32,10 @@
 说明：单次推理窗口内直接可用的内容，如当前指令、当前感知和本轮检索结果。
 
 2. `上下文外长期记忆`
-说明：跨会话持久存在的结构化记忆，可按需被检索或投影。
+说明：跨会话持久存在的结构化记忆，可按需被检索或投影；在系统协同上进一步分成：
+
+- `dialogue_memory_plane`
+- `embodied_memory_plane`
 
 3. `runtime_world_state`
 说明：当前任务和交互实际消费的共享状态投影，不等于全部长期记忆，也不等于唯一记忆源。
@@ -50,12 +54,29 @@ flowchart LR
     WS --> CTX[单次推理上下文]
 ```
 
-### 2.2 治理原则
+### 2.2 云侧交互大模型与端侧 `NFM` 的记忆协同
+
+双脑协同下，长期记忆的更准确表达如下：
+
+| 记忆平面 | 主要内容 | 主要消费者 | 主要写回方 |
+| --- | --- | --- | --- |
+| `dialogue_memory_plane` | 用户偏好、称呼、承诺、纠错、关系语义、澄清历史 | `cloud_interaction_model`、`multimodal_interaction` | `cloud_interaction_model`、`multimodal_interaction` |
+| `embodied_memory_plane` | 家庭空间、物品位置、目标 belief、地图不一致、搜索经验 | `edge_nfm`、`decision_orchestration` | `edge_nfm`、`human_health_sensing` |
+| `runtime_world_state` | 当前任务、当前人/物/风险状态、桥接状态投影 | `edge_nfm`、`edge_interaction_reflex`、`decision_orchestration` | `world_state_memory` |
+
+这里要特别强调：
+
+1. `cloud_interaction_model` 是长期记忆的正式协同对象。
+2. `edge_nfm` 只消费与端侧导航相关的长期记忆。
+3. `world_state_memory` 负责形成两侧共享投影，而不是变成某一侧的私有记忆库。
+
+### 2.3 治理原则
 
 - 原始敏感数据默认不出端；
 - 结构化摘要、授权同步和最小必要信息按主线治理边界处理；
 - 用户对长期记忆条目继续保有读、写、删权限；
 - `runtime_world_state` 只消费必要投影，不直接暴露所有长期记忆原文。
+- 云侧交互大模型可以在授权条件下消费结构化摘要和可治理的记忆结论，但不默认获得原始敏感数据。
 
 ## 3. 长期记忆优先级
 
@@ -167,8 +188,9 @@ flowchart LR
 
 | 消费方                      | 主要消费记忆              | 说明                         |
 | ------------------------ | ------------------- | -------------------------- |
-| `NFM`                    | 家庭空间、物品位置、行为规律、任务经验 | 只消费与端侧具身导航相关的长期记忆          |
-| 交互大模型                    | 成员档案、交互偏好、重要事件      | 用于个性化表达与对话一致性              |
+| `NFM`                    | 家庭空间、物品位置、行为规律、任务经验 | 只消费与端侧导航相关的长期记忆              |
+| `cloud_interaction_model`| 成员档案、交互偏好、重要事件      | 用于个性化表达、澄清与对话一致性           |
+| `edge_interaction_reflex`| `runtime_world_state` 的必要投影 | 用于低时延唤醒回应、短句安抚与边运动边表达 |
 | `world_state_memory`     | 全类型记忆的必要投影          | 负责形成 `runtime_world_state` |
 | `decision_orchestration` | 任务经验、重要事件、成员约束      | 用于任务分解和恢复                  |
 | `human_health_sensing`   | 成员档案（健康字段）、行为规律     | 用于异常检测与候选事件生成              |
@@ -178,7 +200,8 @@ flowchart LR
 | 写回方                      | 主要写回内容                       |
 | ------------------------ | ---------------------------- |
 | `NFM`                    | 搜索结果、位置观测、地图不一致、目标 belief 更新 |
-| 交互大模型                    | 用户纠错、偏好表达、承诺性结论              |
+| `cloud_interaction_model`| 用户纠错、偏好表达、承诺性结论              |
+| `edge_interaction_reflex`| 低时延交互状态、即时打断/回应结果            |
 | `decision_orchestration` | 任务结果、步骤状态、失败分类               |
 | `human_health_sensing`   | 健康候选事件、行为偏离观测                |
 

@@ -7,6 +7,7 @@
 作者：Codex-VLN技术专家
 
 文档变更记录：
+- v1.2 | 2026-04-12 | Codex-VLN技术专家 | 补强“云侧交互大模型 + 端侧 NFM”协同研究口径，明确 `cloud_interaction_model / edge_interaction_reflex / edge_nfm` 的职责分层、桥接状态与双向反馈路径，并保持 `NFM = 端侧导航模型` 边界不变。
 - v1.1 | 2026-04-03 | Codex-VLN技术专家 | 吸收 Step46，将技术主线从“VLN 能力增强”升级为“VLN -> NFM 演进”，明确 `semantic_global_frame / local_metric_frame` 双帧、基础空间长期记忆前置与 `SLAM` 退到局部执行支撑层。
 - v1.0 | 2026-03-08 | Codex-VLN技术专家 | 文档创建。
 
@@ -480,6 +481,61 @@ VLN 对 Act 的合理输出应是：
 
 该层继续由经典导航和安全链负责。
 
+### 4.6 云侧交互大模型与端侧 `NFM` 的协同边界
+
+当前研究主线里，`NFM` 的端侧导航脑定位已经比较清楚，但系统级协同对象仍需要进一步写实。
+
+对 Kinbot，更合理的研究表达不是“一个统一大模型同时承接交互和导航”，而是三层协同：
+
+| 层 | 建议命名 | 主要职责 | 不负责什么 |
+| --- | --- | --- | --- |
+| 云侧交互层 | `cloud_interaction_model` | 长对话、复杂意图提炼、记忆提炼、澄清问题生成、个性化表达 | 不直接控制底盘，不直接替代导航决策 |
+| 端侧交互反射层 | `edge_interaction_reflex` | 低时延唤醒回应、短句安抚、边运动边表达、基础交互降级 | 不承担复杂长对话和长期推理 |
+| 端侧导航层 | `edge_nfm` | 空间理解、导航决策、共存移动、搜索恢复与局部执行协同 | 不外延为云侧交互能力，不直接持有云侧长对话上下文 |
+
+这三层之间的正式连接关系应写成：
+
+- `edge_interaction_reflex -> interaction_motion_bridge_state -> social_mobility_policy / edge_nfm`
+- `cloud_interaction_model -> interaction_motion_bridge_state -> semantic_navigation_policy / edge_nfm`
+- `edge_nfm / runtime_world_state -> interaction_feedback -> cloud_interaction_model`
+- `edge_interaction_reflex` 在本地消费桥接状态和 `runtime_world_state`，承担低时延表达
+
+核心判断保持不变：
+
+1. `NFM` 仍然只指端侧导航模型。
+2. 云侧交互大模型是正式研究协同对象，但不进入 `NFM` 定义。
+3. 二者通过共享状态平面和桥接状态协同，而不是通过非结构化长上下文直接耦合。
+
+可把系统协同理解成：
+
+```mermaid
+flowchart LR
+    U[用户语言/任务意图]
+    C[cloud_interaction_model]
+    B[interaction_motion_bridge_state]
+    W[runtime_world_state]
+    N[edge_nfm]
+    R[edge_interaction_reflex]
+
+    U --> R
+    R --> B
+    R --> C
+    C --> B
+    B --> N
+    N --> W
+    W --> C
+    W --> R
+    N --> R
+```
+
+其中，桥接状态当前至少应承接：
+
+- `task_intent`
+- `clarification_context`
+- `narration_policy`
+- `speaker_lock`
+- `interaction_feedback`
+
 ## 5. 面向 Kinbot 的推荐接口
 
 为了让架构可实现，建议尽快把 `NFM` 中的导航智能从“模型能力描述”收敛为稳定接口。
@@ -543,6 +599,11 @@ VLN 对 Act 的合理输出应是：
 
 这个接口比“输出前进 0.5 米再左转 15 度”更适合产品级架构，也更符合 Step46 对“削弱 `SLAM` 在高层认知中的中心地位”的要求。
 
+补充边界说明：
+
+- `instruction` 可以来自用户直接输入，也可以来自 `cloud_interaction_model` 提炼后的结构化任务意图。
+- `semantic_navigation_policy` 不直接消费云侧长对话上下文，而只消费桥接层给出的结构化状态。
+
 ### 5.2 `social_mobility_policy`
 
 在没有用户明确导航指令，或正在执行共享空间移动时，建议由 `social_mobility_policy` 提供约束。
@@ -581,6 +642,11 @@ VLN 对 Act 的合理输出应是：
 | `reposition_goal`       | 为了不挡路、回充、观察或礼貌等待而移动到的候选位置                                  |
 | `standby_decision`      | 当前是否应暂停、靠边、原地等待或短距后退                                       |
 | `social_explanation`    | 面向交互层和日志的原因解释，例如“通道狭窄，先礼让用户通过”                             |
+
+补充边界说明：
+
+- `social_mobility_policy` 与 `edge_interaction_reflex` 协同，可在边运动边表达时向交互层提供低时延原因解释。
+- 这不意味着 `social_mobility_policy` 进入云侧，也不意味着云侧交互大模型替代共存移动决策。
 
 
 ## 6. 针对现有基础的研发重点

@@ -7,6 +7,7 @@
 作者：Codex-VLN技术专家
 
 文档变更记录：
+- v0.3 | 2026-04-12 | Codex-VLN技术专家 | 补强“云侧交互大模型 -> 桥接状态 -> 端侧 NFM”的长程任务链路，明确 `cloud_interaction_model / edge_interaction_reflex / NFM` 的分工，并区分交互触发与即时回应的来源。
 - v0.2 | 2026-04-12 | Codex-VLN技术专家 | 对齐当前主线架构：将研究执行器统一映射到当前 `9` 个一级模块，把长程任务重写为 `decision_orchestration + world_state_memory` 承接的任务上下文，并将异常升级改写为审批前的接口位。
 
 ---
@@ -30,7 +31,8 @@
 | 任务规划器 | `decision_orchestration` | 负责子任务拆解、顺序管理、恢复策略 |
 | 主动提醒调度器 | `companion_service_system + decision_orchestration` | 负责时间类触发与结构化计划任务下发 |
 | 健康监测 Agent | `human_health_sensing + decision_orchestration` | 负责健康候选事件生成与升级前编排 |
-| 对话模型 | `multimodal_interaction` | 负责提醒、确认、表达与交互恢复 |
+| 云侧交互大模型 | `cloud_interaction_model`（研究协同对象）+ `multimodal_interaction`（产品承接位） | 负责复杂提醒、确认、澄清与个性化表达 |
+| 端侧交互反射层 | `edge_interaction_reflex`（研究协同对象）+ `multimodal_interaction`（产品承接位） | 负责低时延唤醒回应和边运动边表达 |
 | `VLN` 导航模块 | `NFM` 或 `semantic_navigation_policy / social_mobility_policy` | 负责导航子步骤、搜索、跟随和共存移动 |
 
 ## 3. 长程任务类型
@@ -47,6 +49,42 @@
 | 健康监测与异常升级 | 1 小时内无移动则检查 | `human_health_sensing + decision_orchestration + NFM + multimodal_interaction` | 成员档案 + 行为规律 |
 | 长期护理计划 | 康复期每天两次陪同做康复运动 | `decision_orchestration + multimodal_interaction + NFM` | 成员档案 + 任务经验 + 重要事件 |
 | 环境维护任务 | 每日全屋扫描更新物品位置先验 | `decision_orchestration + NFM + world_state_memory` | 家庭空间记忆 + 任务状态记忆 |
+
+## 3.1 交互触发任务的协同路径
+
+对由语言触发的长程任务，当前研究计划应统一采用下面这条链：
+
+```mermaid
+flowchart LR
+    U[用户表达/唤醒]
+    C[cloud_interaction_model]
+    B[interaction_motion_bridge_state]
+    W[world_state_memory]
+    D[decision_orchestration]
+    N[NFM]
+    R[edge_interaction_reflex]
+
+    U --> R
+    R --> B
+    R --> C
+    C --> B
+    B --> W
+    W --> D
+    D --> N
+    N --> W
+    W --> C
+    W --> R
+```
+
+统一链路说明：
+
+1. 用户完成唤醒后，`edge_interaction_reflex` 先做出首字响应，保障首响应体验；
+2. 在云侧结果返回前，`edge_interaction_reflex` 可先通过 `interaction_motion_bridge_state` 驱动 `social_mobility_policy`，完成转向、正对、轻微接近或停等即时运动调整；
+3. `cloud_interaction_model` 再完成更完整的意图提炼与澄清生成；
+4. 输出结构化 `task_intent / clarification_context / narration_policy`；
+5. 经桥接状态写入 `world_state`；
+6. 由 `decision_orchestration` 与 `NFM` 承接导航子步骤；
+7. 导航进展、失败、澄清需求和礼让状态再回流给云侧交互大模型与端侧反射层。
 
 ## 4. 任务状态持久化
 
@@ -86,7 +124,8 @@
 | 健康事件触发 | `human_health_sensing + decision_orchestration` | 血压异常、无移动、服药未确认 |
 | 传感器事件触发 | `platform_runtime + world_state_memory + decision_orchestration` | 门磁、燃气、水渍等 |
 | 另一任务完成触发 | `decision_orchestration` | 上一步完成、条件满足 |
-| 对话交互触发 | `multimodal_interaction + world_state_memory` | 用户确认、用户取消、用户补充线索 |
+| 交互触发 | `cloud_interaction_model + multimodal_interaction + world_state_memory` | 用户确认、用户取消、用户补充线索 |
+| 即时回应触发 | `edge_interaction_reflex + world_state_memory` | 唤醒回应、短句安抚、边运动边播报 |
 
 评估策略：
 
@@ -125,6 +164,12 @@
 - 直接转人工
 - 绕过审批链的升级动作
 
+补充说明：
+
+- 云侧交互大模型只生成任务候选、澄清建议和表达内容；
+- 它不直接替代 `ActionProposal / ApprovalDecision`；
+- 端侧即时回应同样不能旁路产品审批链去触发高风险动作。
+
 ## 7. 记忆对长程任务的支持关系
 
 长程任务消费长期记忆，但当前主线下这些记忆必须通过 `world_state_memory` 或共享状态平面进入任务编排链：
@@ -141,7 +186,8 @@
 | --- | --- | --- |
 | `decision_orchestration` | 全类型记忆 | 拆解子任务、管理执行顺序、协调执行模块 |
 | `NFM / semantic_navigation_policy / social_mobility_policy` | 家庭空间、行为规律、任务经验 | 执行导航与共存移动子步骤 |
-| `multimodal_interaction` | 成员档案、交互偏好、重要事件 | 执行提醒、确认、播报和恢复 |
+| `cloud_interaction_model + multimodal_interaction` | 成员档案、交互偏好、重要事件 | 执行复杂提醒、确认、澄清和表达 |
+| `edge_interaction_reflex + multimodal_interaction` | `runtime_world_state` 的必要投影 | 执行低时延播报、边运动边表达和降级交互 |
 | `human_health_sensing` | 成员档案（健康字段）、行为规律 | 生成健康候选事件 |
 | `companion_service_system` | 计划任务、记忆治理结果、远程确认结果 | 提供时间触发和结构化外部输入 |
 
