@@ -47,6 +47,7 @@
 - `Phase 5` 的活跃战略输入，请先看：
   - [docs/08_reviews/25_phase3_to_phase45_closure_and_strategic_input_package.md](docs/08_reviews/25_phase3_to_phase45_closure_and_strategic_input_package.md)
   - [docs/08_reviews/24_kbt52_strategic_ambition_gap_review.md](docs/08_reviews/24_kbt52_strategic_ambition_gap_review.md)
+  - [docs/08_reviews/26_kinbot_technical_positioning_competition_and_strategic_choices_for_emt.md](docs/08_reviews/26_kinbot_technical_positioning_competition_and_strategic_choices_for_emt.md)
 - `Phase 5` 的执行与门控，请看：
   - [docs/05_p4_beta_dvt/01_mvp_validation_plan.md](docs/05_p4_beta_dvt/01_mvp_validation_plan.md)
   - [docs/06_p5_launch_readiness/01_mass_production_readiness_criteria.md](docs/06_p5_launch_readiness/01_mass_production_readiness_criteria.md)
@@ -62,7 +63,7 @@
 6. [docs/02_p1_architecture/07_safety_compliance_authorization_api.md](docs/02_p1_architecture/07_safety_compliance_authorization_api.md)
 7. [docs/02_p1_architecture/06_decision_state_machine.md](docs/02_p1_architecture/06_decision_state_machine.md)
 8. [docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md](docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md)
-9. [docs/08_reviews/README.md](docs/08_reviews/README.md) -> [docs/08_reviews/21_seven_entity_world_state_target_model.md](docs/08_reviews/21_seven_entity_world_state_target_model.md) -> [docs/08_reviews/25_phase3_to_phase45_closure_and_strategic_input_package.md](docs/08_reviews/25_phase3_to_phase45_closure_and_strategic_input_package.md) -> [docs/08_reviews/24_kbt52_strategic_ambition_gap_review.md](docs/08_reviews/24_kbt52_strategic_ambition_gap_review.md)
+9. [docs/08_reviews/README.md](docs/08_reviews/README.md) -> [docs/08_reviews/21_seven_entity_world_state_target_model.md](docs/08_reviews/21_seven_entity_world_state_target_model.md) -> [docs/08_reviews/25_phase3_to_phase45_closure_and_strategic_input_package.md](docs/08_reviews/25_phase3_to_phase45_closure_and_strategic_input_package.md) -> [docs/08_reviews/24_kbt52_strategic_ambition_gap_review.md](docs/08_reviews/24_kbt52_strategic_ambition_gap_review.md) -> [docs/08_reviews/26_kinbot_technical_positioning_competition_and_strategic_choices_for_emt.md](docs/08_reviews/26_kinbot_technical_positioning_competition_and_strategic_choices_for_emt.md)
 10. [docs/05_p4_beta_dvt/01_mvp_validation_plan.md](docs/05_p4_beta_dvt/01_mvp_validation_plan.md)
 11. [docs/06_p5_launch_readiness/01_mass_production_readiness_criteria.md](docs/06_p5_launch_readiness/01_mass_production_readiness_criteria.md)
 12. [docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md)
