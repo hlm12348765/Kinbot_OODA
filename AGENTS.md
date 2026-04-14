@@ -2,11 +2,12 @@
 
 ---
 
-文档版本：v1.22
+文档版本：v1.23
 创建日期：2026-03-21
 作者：Codex-架构师
 
 文档变更记录：
+- v1.23 | 2026-04-13 | Codex-架构师 | 同步 `08_reviews` 活跃入口纳入 `26` 号 `EMT` 汇报文档，并新增对应只读检查命令，避免评审输入口径落后于目录索引。
 - v1.22 | 2026-04-12 | Codex-架构师 | 补充 `VLN / NFM` 专题研究子目录与 CTO 面试题包的当前执行口径，并新增对应只读检查命令。
 - v1.21 | 2026-04-11 | Codex-架构师 | 补充团队规划中的候选人筛选与 CTO 统一面试工作流，明确 `90 / 91` 文档作为当前招聘评估链的正式依据。
 - v1.20 | 2026-04-10 | Codex-架构师 | 补充仓库内已实际使用的 `plan/` 执行计划工作目录及对应只读检查命令，避免计划型工作流无文档约束。
@@ -164,7 +165,7 @@
 - 根 `README.md` 只维护当前视图、当前有效入口、当前阶段门入口与历史资料指针，不再平铺全部历史评审或长阅读清单
 - 当前主线事实源默认收敛为 `05_system_architecture_principles.md -> 01_overall_architecture.md -> 03_execution_paradigms_runtime_baseline.md -> 合同/专题层 -> 03_p2_feasibility/01_overall_solution_and_module_design_baseline.md`
 - `docs/02_p1_architecture/14_family_co_living_agent_paradigm.md` 只保留背景 / 决策来路锚点角色；`docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md` 只保留阶段评审包角色，不再作为并列主入口
-- `docs/08_reviews/` 默认只保留 `21 / 25 / 24 / archive README` 作为活跃入口；其余历史评审稿、旧阶段收口稿与革新决策链文档进入 `archive/`
+- `docs/08_reviews/` 默认只保留 `21 / 25 / 24 / 26 / archive README` 作为活跃入口；其余历史评审稿、旧阶段收口稿与革新决策链文档进入 `archive/`
 - `docs/08_reviews/` 中新增的复杂度复盘、阶段后总结与类似“总结型评审”文档，默认也进入 `archive/`，不扩张活跃评审入口
 - `docs/superpowers/plans/` 只保留尚未被主线吸收的工作文档；已被主线吸收的计划应迁入 `docs/superpowers/archive/`
 - 活跃主线文档默认目标控制在 `500` 行左右；若超过 `600` 行，必须在文档定位、目录索引或相关治理文档中说明其继续保留为单文件的理由
@@ -234,6 +235,7 @@ Linear 是正式项目管理软件。
 - `find plan -name "*.md" | sed 's#^./##' | sort`：快速检查 `plan/` 下的执行计划、阶段记录和工作笔记是否需要继续推进、归档或转入正式文档
 - `find docs input -name README.md -o -name "*.md" | sed 's#^./##' | sort`：快速清点当前 Markdown / README 入口，检查新增文档是否已进入目录索引视图
 - `find docs/superpowers -name "*.md" | sed 's#^./##' | sort`：快速检查 `superpowers` 工作文档及其索引是否已纳入仓库视图
+- `find docs/08_reviews -maxdepth 1 -type f | sed 's#^./##' | sort`：快速检查活跃评审入口是否与 `docs/08_reviews/README.md` 一致，尤其关注 `21 / 24 / 25 / 26` 是否仍为当前有效输入
 - `find docs/09_research/07_vln_model_design -maxdepth 1 -type f | sed 's#^./##' | sort`：快速检查 `VLN / NFM` 专题子目录是否有新增研究文档待纳入索引或吸收进主线
 - `find docs/10_team_planning -maxdepth 1 \\( -name "*.md" -o -name "*.csv" \\) | sed 's#^./##' | sort`：快速检查招聘基线、CTO 面试框架和候选人建议文档是否有新增输入或索引漂移
 - `rg -n "<pattern>" README.md docs input`：检查索引、旧路径、术语和主线残留
