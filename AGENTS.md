@@ -2,11 +2,12 @@
 
 ---
 
-文档版本：v1.23
+文档版本：v1.24
 创建日期：2026-03-21
 作者：Codex-架构师
 
 文档变更记录：
+- v1.24 | 2026-04-14 | Codex-架构师 | 补充 `decision_log/` 派生索引的读取边界、`logs/` 运行日志目录约束，以及对应只读检查命令，避免辅助入口和正式事实源混淆。
 - v1.23 | 2026-04-13 | Codex-架构师 | 同步 `08_reviews` 活跃入口纳入 `26` 号 `EMT` 汇报文档，并新增对应只读检查命令，避免评审输入口径落后于目录索引。
 - v1.22 | 2026-04-12 | Codex-架构师 | 补充 `VLN / NFM` 专题研究子目录与 CTO 面试题包的当前执行口径，并新增对应只读检查命令。
 - v1.21 | 2026-04-11 | Codex-架构师 | 补充团队规划中的候选人筛选与 CTO 统一面试工作流，明确 `90 / 91` 文档作为当前招聘评估链的正式依据。
@@ -148,6 +149,7 @@
 ## 7. 架构推进方式
 
 - 先检查 `input/00_requirements/00_user_requirements_input.md` 顶部“对 Codex 的要求”是否有变化，再读取需求输入与当前主线文档
+- 若需要快速定位当前有效事实、架构判断或开放问题，可先读取 `docs/00_governance/decision_log/` 下的派生索引，但不得将其视为与 `03_decision_log.md` 并列的正式事实源
 - 若 `CLAUDE.md` 或 `docs/08_reviews/01_architect_review_and_plan.md` 有新增内容，也作为外部评审输入纳入本轮分析
 - 若 `docs/08_reviews/README.md` 有新增索引，需先判断新增评审文档是否影响当前主线；相关时应作为本轮外部评审输入纳入分析
 - 先检查前置评审项与 Linear 中仍处于 `In Review` 的 issue 是否已清账；未关闭时必须先强提醒
@@ -225,7 +227,7 @@ Linear 是正式项目管理软件。
 
 - 默认在当前工作分支上工作
 - 提交前检查 `git status`
-- 不得把 `tmp/`、`.claude/`、`.obsidian/`、`.superpowers/` 等本地辅助目录混入正式提交
+- 不得把 `tmp/`、`logs/`、`.claude/`、`.obsidian/`、`.superpowers/` 等本地辅助目录混入正式提交
 - 不得随意使用破坏性 Git 命令
 
 常用只读检查命令：
@@ -234,6 +236,7 @@ Linear 是正式项目管理软件。
 - `rg --files README.md docs input`：快速清点当前纳管文档与目录结构，检查是否有新增文档 / 子目录尚未同步索引
 - `find plan -name "*.md" | sed 's#^./##' | sort`：快速检查 `plan/` 下的执行计划、阶段记录和工作笔记是否需要继续推进、归档或转入正式文档
 - `find docs input -name README.md -o -name "*.md" | sed 's#^./##' | sort`：快速清点当前 Markdown / README 入口，检查新增文档是否已进入目录索引视图
+- `find docs/00_governance/decision_log -maxdepth 2 -type f | sed 's#^./##' | sort`：快速检查决策日志派生索引与历史分卷是否有新增入口待纳入治理索引或主线引用
 - `find docs/superpowers -name "*.md" | sed 's#^./##' | sort`：快速检查 `superpowers` 工作文档及其索引是否已纳入仓库视图
 - `find docs/08_reviews -maxdepth 1 -type f | sed 's#^./##' | sort`：快速检查活跃评审入口是否与 `docs/08_reviews/README.md` 一致，尤其关注 `21 / 24 / 25 / 26` 是否仍为当前有效输入
 - `find docs/09_research/07_vln_model_design -maxdepth 1 -type f | sed 's#^./##' | sort`：快速检查 `VLN / NFM` 专题子目录是否有新增研究文档待纳入索引或吸收进主线
@@ -242,6 +245,7 @@ Linear 是正式项目管理软件。
 - `sed -n '1,200p' <file>`：分段核对长文档头部、变更记录和关键段落
 - `sed -n '1,200p' .claude/settings.json`：核对当前仓库可见的 repo-local hook 配置
 - `find .claude -maxdepth 3 -type f | sed 's#^./##' | sort`：清点当前仓库内可见的 `.claude` 配置、hook 与日志文件
+- `find logs -type f | sed 's#^./##' | sort`：快速检查本地运行日志是否新增，需要时再决定是否提炼结论回写正式文档
 
 提交前文档一致性检查至少覆盖：
 
@@ -267,6 +271,7 @@ Linear 是正式项目管理软件。
 - 任一目录新增文档或输入资料后，需先同步回写该目录 `README.md` 的文档索引；若影响仓库总索引或阶段入口，再同步检查根目录 `README.md` 与 `CHANGELOG.md`
 - `input/01_candidate_resume/`：候选人简历与相关输入资料；独立评估线程应以 `docs/10_team_planning/01_development_team_proposal.md` 作为团队能力基线
 - `docs/00_governance/`：工作流、决策记录、治理原则
+- `docs/00_governance/decision_log/`：`03_decision_log.md` 的派生索引与历史分卷目录；只服务导航与检索，不构成新的并列事实源
 - `docs/01_p0_concept/`：概念期分析、输入评估、商业判断
 - `docs/02_p1_architecture/`：系统架构、PDCP、一级模块与接口
 - `docs/03_p2_feasibility/`：总体方案、选型、成本、功耗、专项可行性
@@ -282,6 +287,7 @@ Linear 是正式项目管理软件。
 - `docs/superpowers/`：当前线程使用 `superpowers` 技能生成的计划 / 规格工作文档；活跃工作文档只保留在 `plans/`，已吸收文档进入 `archive/`，新增文档后需同步该目录 `README.md`
 - `plan/`：仓库内临时但可持续推进的执行计划工作目录，用于当前线程的 task plan、阶段笔记与审计记录；不替代 `docs/` 正式文档，结论稳定后应回写正式文档或归档清理
 - `output/`：对外交付材料
+- `logs/`：本地运行日志与排障留痕目录；默认不进入正式版本历史，只有稳定结论才应回写到 `docs/` 或其他正式载体
 - `tmp/`：临时产物，不进入正式版本历史
 
 ## 12. Repo-Local Hook 约束
