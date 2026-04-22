@@ -2,11 +2,12 @@
 
 ---
 
-文档版本：v2.3
+文档版本：v2.4
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v2.4 | 2026-04-21 | Codex-架构师 | 吸收董事长汇报反馈：将 `manual_service_state` 和服务合同字段是否进入 `V1` 最小快照交由 `KBT-57` 承接，并明确非隐私结构化数据回流仍需受控治理。
 - v2.3 | 2026-04-09 | Codex-架构师 | 将当前未冻结项收紧为“摘要 + Linear 指针”治理：把字段表、关系质量维度、事件族全集和接口迁移策略分别指向 `KBT-32 / KBT-33 / KBT-56`，避免主线正文继续展开 orphan provisional。
 - v2.2 | 2026-04-09 | Codex-架构师 | 继续做最小一致性修正：澄清穿戴是当前受控输入位，人工 / 第三方只保留后续适配位，并修正 `Household.care_network` 与 `CareEvent` 的关系图表达。
 - v2.1 | 2026-04-09 | Codex-架构师 | 保留 `7` 实体主框架，但将 `V1` 最小激活子集改写为按实体展开的最小字段集，并把服务合同、复杂关系评分、共享记忆与跨家庭模式明确降为后续。
@@ -249,11 +250,11 @@ flowchart LR
 | --- | --- | --- |
 | `household_id` | string | 家庭唯一 ID |
 | `members` | string[] | 人员 ID 列表 |
-| `care_network` | object[] | 家属、社区、物业、医生平台等联动对象列表；当前 `V1` 默认只激活家属与 App 远程确认，其他对象保留后续适配位 |
+| `care_network` | object[] | 家属、社区、物业、医生平台等联动对象列表；当前 `V1` 默认只激活家属与 App 远程确认，后台服务 / 坐席是否前置进入主线由 `KBT-57` 决定，其他对象保留后续适配位 |
 | `home_mode` | enum | 白天、夜间、离家、休息、异常中 |
 | `emergency_policy` | object | 高风险事件默认联动链路 |
 | `privacy_policy` | object | 数据共享和上报规则 |
-| `service_contracts` | object[] | 与人工服务、平台履约和第三方协同相关的治理配置 |
+| `service_contracts` | object[] | 与人工服务、平台履约和第三方协同相关的治理配置；是否进入 `V1` 最小快照由 `KBT-57` 决定 |
 
 ### 5.4 `Place`
 
@@ -378,7 +379,7 @@ flowchart LR
 | `vital_signal_sources` | 当前生命体征信号来源，如穿戴设备、血压计、人工输入；穿戴当前作为受控输入位存在 |
 | `wearable_freshness_state` | 穿戴数据的新鲜度及采集模式，如广播、SDK、问诊式补采 |
 | `escalation_targets` | 当前可联动对象；当前 `V1` 默认以家属 App / 远程确认为主，其他对象保留预留 |
-| `manual_service_state` | 后续适配位，当前 V1 不进入最小快照 |
+| `manual_service_state` | `KBT-57` 候选位；当前未冻结进入 `V1` 最小快照，若后台服务 / 坐席联动立项成立再升级 |
 
 ## 8. 推荐的事件类型
 
@@ -562,6 +563,7 @@ flowchart LR
 2. `CareRelationship` 是否需要连续型关系质量维度：由 `KBT-32` 承接；冻结条件是关系演化的最小观测口径、消费方和验证方式明确，且不会把 `Phase 5` 的战略验证阈值提前写回当前主线。
 3. `CareEvent` 的最终事件族全集：由 `KBT-32` 承接；冻结条件是事件边界、审批依赖和 `S2 / S4 / S5` 的验证职责明确。
 4. proto 和下游接口的具体迁移顺序 / `breaking change` 策略：由 `KBT-33` 承接；冻结条件是接口 owner、版本号、变更门和迁移规则明确。
+5. `manual_service_state / service_contracts` 是否进入 `V1` 最小快照：由 `KBT-57` 承接；冻结条件是后台服务 / 坐席联动立项、服务时段、`SLA`、`OPEX`、非隐私结构化数据回流和审计边界明确。
 
 统一治理母单为 `KBT-56`，用于追踪活跃 `provisional` 的 owner、冻结条件和阶段门。
 

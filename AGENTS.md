@@ -2,11 +2,17 @@
 
 ---
 
-文档版本：v1.24
+文档版本：v1.30
 创建日期：2026-03-21
 作者：Codex-架构师
 
 文档变更记录：
+- v1.30 | 2026-04-22 | Codex-架构师 | 补充 `08_system_tradeoff_model_and_priority_matrix.md` 作为系统组成冲突、资源消耗与双成本情景评审的默认工作入口，并新增 `P2` 文档入口只读检查命令。
+- v1.29 | 2026-04-21 | Codex-架构师 | 吸收董事长汇报反馈：后台服务 / 人工坐席与 `10000 BOM / 29999 定价 / 10000 台首批 / 租售并行` 暂作为 `KBT-57` 承接的战略假设，不覆盖当前已冻结基线。
+- v1.28 | 2026-04-20 | Codex-架构师 | 补充 `Step 50` 头部 / 屏幕布局当前主线，并明确候选人新增初试反馈、面试总结或转写输入时应先刷新 `91` 候选人台账。
+- v1.27 | 2026-04-17 | Codex-架构师 | 补充 `.DS_Store` 本地辅助文件的提交排除约束，并将 `VLN / NFM` 专题目录的只读检查命令收紧为仅扫描 Markdown，避免 Finder 噪声干扰入口检查。
+- v1.26 | 2026-04-16 | Codex-架构师 | 补充 `Phase 5` 当前执行 / 门控入口与 `KBT-55` 的收口边界，并新增 `docs/05_p4_beta_dvt/` 与 `docs/06_p5_launch_readiness/` 的只读检查命令。
+- v1.25 | 2026-04-15 | Codex-架构师 | 补充 `plan/task_plan.md` 与 `plan/notes.md` 作为当前默认执行计划 / 工作笔记文件约定，并细化 `logs/` 按环境分层的本地运行日志检查命令。
 - v1.24 | 2026-04-14 | Codex-架构师 | 补充 `decision_log/` 派生索引的读取边界、`logs/` 运行日志目录约束，以及对应只读检查命令，避免辅助入口和正式事实源混淆。
 - v1.23 | 2026-04-13 | Codex-架构师 | 同步 `08_reviews` 活跃入口纳入 `26` 号 `EMT` 汇报文档，并新增对应只读检查命令，避免评审输入口径落后于目录索引。
 - v1.22 | 2026-04-12 | Codex-架构师 | 补充 `VLN / NFM` 专题研究子目录与 CTO 面试题包的当前执行口径，并新增对应只读检查命令。
@@ -138,12 +144,15 @@
 - 一代价值排序：`健康管理 > 陪伴交互 > 家庭安全巡护 > 老人看护`
 - 一代收敛策略：`核心闭环强、服务闭环轻、技术突破集中`
 - 一代传感主线：纯视觉
+- 头部 / 屏幕布局主线：`V1` 默认采用“紧凑轻量头部 + 躯干内容屏”，高集成度带屏头仅作为头颈高速链路、`EMI`、寿命或可维护性阶段门不过线时的 `Plan B`
 - 深度相机 / 激光雷达：仅研发对比基线与真值参考链路，不作为产品 fallback
 - 若纯视觉不过线：优先延迟产品节奏，而不是回退主动传感主线
 - 默认数据边界：原始敏感数据端侧处理，仅预留受控回流能力
+- 董事长汇报反馈已作为 `KBT-57` 战略假设承接：后台服务 / 人工坐席可能从“后续适配位”升级为与机器人本体产品联动立项的能力；非隐私性结构化数据可评估受控回流与持续进化闭环
 - 当前默认量产资源线：`12GB RAM + 32GB Flash`
 - `12GB + 64GB`：边界验证线
 - `16GB + 64GB` 及以上：前瞻验证线或未来 `Pro SKU`
+- 当前整机 `BOM` 冻结基线仍为 `5000 到 6000 元`；`10000 元 BOM / 29999 元定价 / 首批 10000 台 / 销售与租赁并行` 仅作为 `KBT-57` 待业务拆解的战略分支，不得直接改写当前量产基线
 - 每一轮涉及成本、功耗、结构、交互或伴生系统裁剪的评审，都必须同步复核是否损伤“聪明、温暖、精致”的高端产品感，以及是否仍能支撑 `20000 到 30000 元` 售价区间
 
 ## 7. 架构推进方式
@@ -163,9 +172,14 @@
 - 若当前线程执行 `docs/superpowers/` 中的实现计划，应按计划头部约束优先使用 `superpowers:subagent-driven-development`；若不适合并行拆解，则使用 `superpowers:executing-plans` 按任务顺序推进
 - `docs/superpowers/` 新增或调整文档后，需同步回写 `docs/superpowers/README.md`；若其影响仓库总入口或阶段入口，再同步检查根目录 `README.md` 与 `CHANGELOG.md`
 - 若当前线程处理候选人筛选、面试建议或招聘评估回写，应以 `docs/10_team_planning/90_cto_unified_interview_framework.md` 作为统一面试框架，以 `docs/10_team_planning/91_candidate_screening_and_interview_advice.md` 作为滚动候选人判断台账，并与 `02_kinbot_team_recruitment_requirements.csv` 保持口径一致
+- 若候选人新增初试反馈、技术面总结、`CTO` 面总结或录音转写，应先吸收到 `91_candidate_screening_and_interview_advice.md`，区分“简历筛选判断”与“面试后判断”，再刷新推进建议、风险点和下一轮问题
 - 若当前线程需要新增或回写 CTO 面试题包，默认按 `90_cto_unified_interview_framework.md` 的现行标准为每位候选人准备 `10` 道候选题，现场选 `6 到 8` 道，并将显式 `Kinbot` 代入题限制为默认最多 `1` 道
 - 根 `README.md` 只维护当前视图、当前有效入口、当前阶段门入口与历史资料指针，不再平铺全部历史评审或长阅读清单
 - 当前主线事实源默认收敛为 `05_system_architecture_principles.md -> 01_overall_architecture.md -> 03_execution_paradigms_runtime_baseline.md -> 合同/专题层 -> 03_p2_feasibility/01_overall_solution_and_module_design_baseline.md`
+- 涉及成本、重量、尺寸、功耗、药箱、屏幕、交互、运动性能、端侧资源、后台服务 / 坐席或数据治理之间的系统组成取舍时，应默认先使用 `docs/03_p2_feasibility/08_system_tradeoff_model_and_priority_matrix.md` 的“硬门槛 -> 价值评分 -> 资源消耗 -> 风险转移 -> 双成本情景”模型，再回写对应 `S1-S7` 工作包或主线文档。
+- 当前主线已进入 `Phase 5：验证口径与治理闭环`；涉及验证规划、量产预备门控、试点进入条件或战略证据包判断时，应默认以 `docs/05_p4_beta_dvt/01_mvp_validation_plan.md` 与 `docs/06_p5_launch_readiness/01_mass_production_readiness_criteria.md` 作为当前执行 / 门控入口
+- 当前 `Phase 5` 只冻结架构侧验证规划、双泳道门控和治理预留；不得把未发生的实机 / 市场闭环表述成已完成事实，后续真实收口默认由 `KBT-55` 承接
+- 涉及后台服务 / 人工坐席立项联动、非隐私数据回流、`10000` 元 BOM 战略分支、`29999` 元定价、首批 `10000` 台或租售并行时，默认引用 `KBT-57`，并标注为 `provisional`，不得写成已确认决策
 - `docs/02_p1_architecture/14_family_co_living_agent_paradigm.md` 只保留背景 / 决策来路锚点角色；`docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md` 只保留阶段评审包角色，不再作为并列主入口
 - `docs/08_reviews/` 默认只保留 `21 / 25 / 24 / 26 / archive README` 作为活跃入口；其余历史评审稿、旧阶段收口稿与革新决策链文档进入 `archive/`
 - `docs/08_reviews/` 中新增的复杂度复盘、阶段后总结与类似“总结型评审”文档，默认也进入 `archive/`，不扩张活跃评审入口
@@ -227,7 +241,7 @@ Linear 是正式项目管理软件。
 
 - 默认在当前工作分支上工作
 - 提交前检查 `git status`
-- 不得把 `tmp/`、`logs/`、`.claude/`、`.obsidian/`、`.superpowers/` 等本地辅助目录混入正式提交
+- 不得把 `tmp/`、`logs/`、`.claude/`、`.obsidian/`、`.superpowers/`、`.DS_Store` 等本地辅助目录或文件混入正式提交
 - 不得随意使用破坏性 Git 命令
 
 常用只读检查命令：
@@ -235,17 +249,21 @@ Linear 是正式项目管理软件。
 - `git status`：检查当前工作区与待提交内容
 - `rg --files README.md docs input`：快速清点当前纳管文档与目录结构，检查是否有新增文档 / 子目录尚未同步索引
 - `find plan -name "*.md" | sed 's#^./##' | sort`：快速检查 `plan/` 下的执行计划、阶段记录和工作笔记是否需要继续推进、归档或转入正式文档
+- `find plan -maxdepth 1 -type f | sed 's#^./##' | sort`：快速检查当前线程是否已使用默认的 `plan/task_plan.md` 与 `plan/notes.md` 文件约定
 - `find docs input -name README.md -o -name "*.md" | sed 's#^./##' | sort`：快速清点当前 Markdown / README 入口，检查新增文档是否已进入目录索引视图
 - `find docs/00_governance/decision_log -maxdepth 2 -type f | sed 's#^./##' | sort`：快速检查决策日志派生索引与历史分卷是否有新增入口待纳入治理索引或主线引用
 - `find docs/superpowers -name "*.md" | sed 's#^./##' | sort`：快速检查 `superpowers` 工作文档及其索引是否已纳入仓库视图
 - `find docs/08_reviews -maxdepth 1 -type f | sed 's#^./##' | sort`：快速检查活跃评审入口是否与 `docs/08_reviews/README.md` 一致，尤其关注 `21 / 24 / 25 / 26` 是否仍为当前有效输入
-- `find docs/09_research/07_vln_model_design -maxdepth 1 -type f | sed 's#^./##' | sort`：快速检查 `VLN / NFM` 专题子目录是否有新增研究文档待纳入索引或吸收进主线
+- `find docs/03_p2_feasibility -maxdepth 1 -name "*.md" | sed 's#^./##' | sort`：快速检查 `P2` 总体方案、选型、成本、功耗、权衡模型与工程化文档入口是否有新增或索引漂移
+- `find docs/09_research/07_vln_model_design -maxdepth 1 -name "*.md" | sed 's#^./##' | sort`：快速检查 `VLN / NFM` 专题子目录是否有新增研究文档待纳入索引或吸收进主线，并避免 `.DS_Store` 等本地噪声文件干扰
 - `find docs/10_team_planning -maxdepth 1 \\( -name "*.md" -o -name "*.csv" \\) | sed 's#^./##' | sort`：快速检查招聘基线、CTO 面试框架和候选人建议文档是否有新增输入或索引漂移
+- `find docs/05_p4_beta_dvt docs/06_p5_launch_readiness -maxdepth 1 -type f | sed 's#^./##' | sort`：快速检查 `Phase 5` 当前执行 / 门控入口与量产预备文档是否有新增入口或索引漂移
 - `rg -n "<pattern>" README.md docs input`：检查索引、旧路径、术语和主线残留
 - `sed -n '1,200p' <file>`：分段核对长文档头部、变更记录和关键段落
 - `sed -n '1,200p' .claude/settings.json`：核对当前仓库可见的 repo-local hook 配置
 - `find .claude -maxdepth 3 -type f | sed 's#^./##' | sort`：清点当前仓库内可见的 `.claude` 配置、hook 与日志文件
 - `find logs -type f | sed 's#^./##' | sort`：快速检查本地运行日志是否新增，需要时再决定是否提炼结论回写正式文档
+- `find logs -maxdepth 2 -type f | sed 's#^./##' | sort`：快速检查按环境分层的本地运行日志目录，例如 `logs/prod/`
 
 提交前文档一致性检查至少覆盖：
 
@@ -285,9 +303,9 @@ Linear 是正式项目管理软件。
 - `docs/09_research/07_vln_model_design/`：`VLN -> NFM`、长期记忆、导航基础问题与数据设计等专题研究工作目录；新增文档后需同步父级 `README.md`、根目录 `README.md` 与 `CHANGELOG.md`
 - `docs/10_team_planning/`：团队规划主基线；其中 `01_development_team_proposal.md` 为组织能力基线，`90_cto_unified_interview_framework.md` 与 `91_candidate_screening_and_interview_advice.md` 为当前招聘筛选与 CTO 面试工作流入口
 - `docs/superpowers/`：当前线程使用 `superpowers` 技能生成的计划 / 规格工作文档；活跃工作文档只保留在 `plans/`，已吸收文档进入 `archive/`，新增文档后需同步该目录 `README.md`
-- `plan/`：仓库内临时但可持续推进的执行计划工作目录，用于当前线程的 task plan、阶段笔记与审计记录；不替代 `docs/` 正式文档，结论稳定后应回写正式文档或归档清理
+- `plan/`：仓库内临时但可持续推进的执行计划工作目录，用于当前线程的 task plan、阶段笔记与审计记录；当前默认执行计划文件为 `plan/task_plan.md`，默认工作笔记文件为 `plan/notes.md`；不替代 `docs/` 正式文档，结论稳定后应回写正式文档或归档清理
 - `output/`：对外交付材料
-- `logs/`：本地运行日志与排障留痕目录；默认不进入正式版本历史，只有稳定结论才应回写到 `docs/` 或其他正式载体
+- `logs/`：本地运行日志与排障留痕目录；允许按环境或目标系统分层，例如 `logs/prod/`；默认不进入正式版本历史，只有稳定结论才应回写到 `docs/` 或其他正式载体
 - `tmp/`：临时产物，不进入正式版本历史
 
 ## 12. Repo-Local Hook 约束
