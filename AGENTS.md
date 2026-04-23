@@ -2,11 +2,12 @@
 
 ---
 
-文档版本：v1.30
+文档版本：v1.31
 创建日期：2026-03-21
 作者：Codex-架构师
 
 文档变更记录：
+- v1.31 | 2026-04-23 | Codex-架构师 | 补充候选人简历输入目录的只读清点命令，避免新增简历、面试总结或转写未同步到 `91` 候选人台账。
 - v1.30 | 2026-04-22 | Codex-架构师 | 补充 `08_system_tradeoff_model_and_priority_matrix.md` 作为系统组成冲突、资源消耗与双成本情景评审的默认工作入口，并新增 `P2` 文档入口只读检查命令。
 - v1.29 | 2026-04-21 | Codex-架构师 | 吸收董事长汇报反馈：后台服务 / 人工坐席与 `10000 BOM / 29999 定价 / 10000 台首批 / 租售并行` 暂作为 `KBT-57` 承接的战略假设，不覆盖当前已冻结基线。
 - v1.28 | 2026-04-20 | Codex-架构师 | 补充 `Step 50` 头部 / 屏幕布局当前主线，并明确候选人新增初试反馈、面试总结或转写输入时应先刷新 `91` 候选人台账。
@@ -257,6 +258,7 @@ Linear 是正式项目管理软件。
 - `find docs/03_p2_feasibility -maxdepth 1 -name "*.md" | sed 's#^./##' | sort`：快速检查 `P2` 总体方案、选型、成本、功耗、权衡模型与工程化文档入口是否有新增或索引漂移
 - `find docs/09_research/07_vln_model_design -maxdepth 1 -name "*.md" | sed 's#^./##' | sort`：快速检查 `VLN / NFM` 专题子目录是否有新增研究文档待纳入索引或吸收进主线，并避免 `.DS_Store` 等本地噪声文件干扰
 - `find docs/10_team_planning -maxdepth 1 \\( -name "*.md" -o -name "*.csv" \\) | sed 's#^./##' | sort`：快速检查招聘基线、CTO 面试框架和候选人建议文档是否有新增输入或索引漂移
+- `find input/01_candidate_resume -maxdepth 1 -type f | sed 's#^./##' | rg '\.(pdf|md|txt)$' | sort`：快速检查候选人简历、初试反馈、面试总结或录音转写是否有新增输入待吸收到 `91_candidate_screening_and_interview_advice.md`
 - `find docs/05_p4_beta_dvt docs/06_p5_launch_readiness -maxdepth 1 -type f | sed 's#^./##' | sort`：快速检查 `Phase 5` 当前执行 / 门控入口与量产预备文档是否有新增入口或索引漂移
 - `rg -n "<pattern>" README.md docs input`：检查索引、旧路径、术语和主线残留
 - `sed -n '1,200p' <file>`：分段核对长文档头部、变更记录和关键段落
