@@ -2,11 +2,22 @@
 
 ---
 
-文档版本：v1.31
+文档版本：v1.42
 创建日期：2026-03-21
 作者：Codex-架构师
 
 文档变更记录：
+- v1.42 | 2026-05-04 | Codex-架构师 | 补充 arXiv 无新批次时的日更补录口径、listing 日期说明与对应清点命令。
+- v1.41 | 2026-05-03 | Codex-架构师 | 补充 arXiv 每日论文纪要的稳定段落结构、主线回写判断说明与结构清点命令。
+- v1.40 | 2026-05-02 | Codex-架构师 | 补充 arXiv 每日论文纪要的既有条目去重、近期待补录与论文卡片字段校验规则，并新增日更标题 / arXiv 编号清点命令。
+- v1.39 | 2026-05-01 | Codex-架构师 | 补充候选人输入资料根层待处理、已处理资料本地归档与正式判断回写 `91` 台账的工作流，并新增归档清点命令。
+- v1.38 | 2026-04-30 | Codex-架构师 | 补充 `docs/09_research/00_papers/` 作为 arXiv 每日论文纪要目录的维护规则，并新增对应只读检查命令。
+- v1.37 | 2026-04-29 | Codex-架构师 | 补充 `02_kinbot_team_recruitment_requirements.csv` 作为招聘评估链的正式基线角色，并明确岗位编号 / 命名调整时的联动回写顺序。
+- v1.36 | 2026-04-28 | Codex-架构师 | 补充 `input/01_candidate_resume/` 通过目录级 `.gitignore` 保持候选人原始输入本地留存的工作流，并新增对应忽略规则核对命令。
+- v1.35 | 2026-04-27 | Codex-架构师 | 补充 `input/` 与 `output/` 目录级 `README.md` 的只读检查命令，避免新增输入目录说明或交付包入口遗漏索引。
+- v1.34 | 2026-04-26 | Codex-架构师 | 补充 `output/` 多文件图包以 `README.md` 作为交付入口的默认约束，并新增对应只读检查命令。
+- v1.33 | 2026-04-25 | Codex-架构师 | 补充 `Phase 5` 后段涉及量产导入、发布准备与交付闭环时的默认入口文档，并新增 `docs/06_p5_launch_readiness/` 的只读检查命令。
+- v1.32 | 2026-04-24 | Codex-架构师 | 补充 `output/` 交付图包的最小目录约定与只读清点命令，避免 `.DS_Store` 等本地噪声干扰交付入口检查。
 - v1.31 | 2026-04-23 | Codex-架构师 | 补充候选人简历输入目录的只读清点命令，避免新增简历、面试总结或转写未同步到 `91` 候选人台账。
 - v1.30 | 2026-04-22 | Codex-架构师 | 补充 `08_system_tradeoff_model_and_priority_matrix.md` 作为系统组成冲突、资源消耗与双成本情景评审的默认工作入口，并新增 `P2` 文档入口只读检查命令。
 - v1.29 | 2026-04-21 | Codex-架构师 | 吸收董事长汇报反馈：后台服务 / 人工坐席与 `10000 BOM / 29999 定价 / 10000 台首批 / 租售并行` 暂作为 `KBT-57` 承接的战略假设，不覆盖当前已冻结基线。
@@ -167,18 +178,25 @@
 - `KBT-32` 及后续模块方案评审，必须把“双视角一致性检查”作为固定审阅项，防止本体实体架构与运行时功能架构重新漂移
 - `KBT-33` 继续作为 `KBT-31` 子 issue 保留，只承接双视角一致性与接口稳定性策略的治理细化，不回退重定义系统边界
 - 先判断本轮新增输入会影响哪些主线文档
+- 若当前线程处理 arXiv / 论文检索或每日论文纪要，应优先写入 `docs/09_research/00_papers/`，按 `YYYY-MM-DD_kinbot_arxiv_daily.md` 命名，并同步该目录 `README.md` 与 `docs/09_research/README.md`；论文纪要默认只是研究输入，只有影响主线判断时才回写主线文档、`03_decision_log.md` 或 Linear。
+- 新增 arXiv 每日论文纪要前，应先核对同目录既有日更文档中的论文标题与 arXiv 编号；优先覆盖当日 `recent` 新出现且未进入前序纪要的论文，必要时可补入近几日漏收但需标注补录口径。每篇论文卡片至少保留摘要转述、Kinbot 问题映射、资源消耗、优劣势、推荐理由与来源链接，避免大段复制原摘要。
+- 若 arXiv 官方 `cs.RO/new` 或 `cs.RO/recent` 在本轮检索时尚未出现新的 Robotics 批次，仍可按当日日期形成每日纪要，但必须在文档变更记录与“检索口径”中写明本轮检索日期、官方最新 listing 日期、补录时间窗和补录原因；该类纪要默认按研究补录处理，不因补录本身回写主线。
+- arXiv 每日论文纪要应保留 `检索口径 -> 本轮总判断 -> 论文卡片 -> 对 Kinbot 的落地 / 文档建议 -> 来源` 的基本结构；若本轮不回写主线，应显式说明未进入主线的原因或复杂度自检判断。
 - 涉及 `VLN` 路线、导航推理和相关前瞻技术判断时，应通过独立 Linear issue 与 `VLN` 专项线程交叉校验，并在需要时回写 `docs/09_research/01_vln_role_analysis_and_technical_plan.md`
 - 若当前线程处理 `VLN -> NFM`、长期记忆、导航基础问题或数据设计等专题深化，应优先在 `docs/09_research/07_vln_model_design/` 下推进；当专题结论影响主线时，再回写 `docs/09_research/01_vln_role_analysis_and_technical_plan.md`、相关主线文档与索引
 - 若当前线程使用 `superpowers` 生成工作计划或规格草稿，应统一落到 `docs/superpowers/` 及其 `plans/` 子目录；该目录只承接工作文档，不替代主线架构、评审或量产基线文档
 - 若当前线程执行 `docs/superpowers/` 中的实现计划，应按计划头部约束优先使用 `superpowers:subagent-driven-development`；若不适合并行拆解，则使用 `superpowers:executing-plans` 按任务顺序推进
 - `docs/superpowers/` 新增或调整文档后，需同步回写 `docs/superpowers/README.md`；若其影响仓库总入口或阶段入口，再同步检查根目录 `README.md` 与 `CHANGELOG.md`
 - 若当前线程处理候选人筛选、面试建议或招聘评估回写，应以 `docs/10_team_planning/90_cto_unified_interview_framework.md` 作为统一面试框架，以 `docs/10_team_planning/91_candidate_screening_and_interview_advice.md` 作为滚动候选人判断台账，并与 `02_kinbot_team_recruitment_requirements.csv` 保持口径一致
+- 若当前线程新增岗位、调整岗位编号 / 名称，或修改候选人输入文件命名规则，应先更新 `docs/10_team_planning/02_kinbot_team_recruitment_requirements.csv`，再同步 `input/01_candidate_resume/README.md`、`91_candidate_screening_and_interview_advice.md` 与相关目录索引，避免招聘基线与输入命名脱节
 - 若候选人新增初试反馈、技术面总结、`CTO` 面总结或录音转写，应先吸收到 `91_candidate_screening_and_interview_advice.md`，区分“简历筛选判断”与“面试后判断”，再刷新推进建议、风险点和下一轮问题
+- 候选人输入资料根层只作为新增待处理入口；已被 `91_candidate_screening_and_interview_advice.md` 吸收的简历、面试总结和录音转写应移动到 `input/01_candidate_resume/archive/YYYY-MM-DD_processed/` 本地归档，归档内容不冻结正式结论，正式判断仍以 `91` 台账为准
 - 若当前线程需要新增或回写 CTO 面试题包，默认按 `90_cto_unified_interview_framework.md` 的现行标准为每位候选人准备 `10` 道候选题，现场选 `6 到 8` 道，并将显式 `Kinbot` 代入题限制为默认最多 `1` 道
 - 根 `README.md` 只维护当前视图、当前有效入口、当前阶段门入口与历史资料指针，不再平铺全部历史评审或长阅读清单
 - 当前主线事实源默认收敛为 `05_system_architecture_principles.md -> 01_overall_architecture.md -> 03_execution_paradigms_runtime_baseline.md -> 合同/专题层 -> 03_p2_feasibility/01_overall_solution_and_module_design_baseline.md`
 - 涉及成本、重量、尺寸、功耗、药箱、屏幕、交互、运动性能、端侧资源、后台服务 / 坐席或数据治理之间的系统组成取舍时，应默认先使用 `docs/03_p2_feasibility/08_system_tradeoff_model_and_priority_matrix.md` 的“硬门槛 -> 价值评分 -> 资源消耗 -> 风险转移 -> 双成本情景”模型，再回写对应 `S1-S7` 工作包或主线文档。
 - 当前主线已进入 `Phase 5：验证口径与治理闭环`；涉及验证规划、量产预备门控、试点进入条件或战略证据包判断时，应默认以 `docs/05_p4_beta_dvt/01_mvp_validation_plan.md` 与 `docs/06_p5_launch_readiness/01_mass_production_readiness_criteria.md` 作为当前执行 / 门控入口
+- 若当前线程进一步涉及量产导入、发布准备、对外交付组织或交付闭环责任划分，应同步读取 `docs/06_p5_launch_readiness/02_production_introduction_launch_and_delivery_closure.md`，避免 `Phase 5` 后段工作仅按门控标准理解、遗漏导入与交付链路设计
 - 当前 `Phase 5` 只冻结架构侧验证规划、双泳道门控和治理预留；不得把未发生的实机 / 市场闭环表述成已完成事实，后续真实收口默认由 `KBT-55` 承接
 - 涉及后台服务 / 人工坐席立项联动、非隐私数据回流、`10000` 元 BOM 战略分支、`29999` 元定价、首批 `10000` 台或租售并行时，默认引用 `KBT-57`，并标注为 `provisional`，不得写成已确认决策
 - `docs/02_p1_architecture/14_family_co_living_agent_paradigm.md` 只保留背景 / 决策来路锚点角色；`docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md` 只保留阶段评审包角色，不再作为并列主入口
@@ -252,14 +270,24 @@ Linear 是正式项目管理软件。
 - `find plan -name "*.md" | sed 's#^./##' | sort`：快速检查 `plan/` 下的执行计划、阶段记录和工作笔记是否需要继续推进、归档或转入正式文档
 - `find plan -maxdepth 1 -type f | sed 's#^./##' | sort`：快速检查当前线程是否已使用默认的 `plan/task_plan.md` 与 `plan/notes.md` 文件约定
 - `find docs input -name README.md -o -name "*.md" | sed 's#^./##' | sort`：快速清点当前 Markdown / README 入口，检查新增文档是否已进入目录索引视图
+- `find input output -maxdepth 2 -name README.md | sed 's#^./##' | sort`：快速检查输入目录说明与交付包入口 `README.md` 是否齐备，避免新增目录后只补文件不补入口说明
 - `find docs/00_governance/decision_log -maxdepth 2 -type f | sed 's#^./##' | sort`：快速检查决策日志派生索引与历史分卷是否有新增入口待纳入治理索引或主线引用
 - `find docs/superpowers -name "*.md" | sed 's#^./##' | sort`：快速检查 `superpowers` 工作文档及其索引是否已纳入仓库视图
 - `find docs/08_reviews -maxdepth 1 -type f | sed 's#^./##' | sort`：快速检查活跃评审入口是否与 `docs/08_reviews/README.md` 一致，尤其关注 `21 / 24 / 25 / 26` 是否仍为当前有效输入
 - `find docs/03_p2_feasibility -maxdepth 1 -name "*.md" | sed 's#^./##' | sort`：快速检查 `P2` 总体方案、选型、成本、功耗、权衡模型与工程化文档入口是否有新增或索引漂移
+- `find docs/09_research/00_papers -maxdepth 1 -name "*.md" | sed 's#^./##' | sort`：快速检查 arXiv 每日论文纪要和目录索引是否有新增入口待纳入研究目录视图
+- `rg -n "^### 3\\.|arXiv \\|" docs/09_research/00_papers/20*_kinbot_arxiv_daily.md`：快速清点每日论文纪要中已收录的论文标题与 arXiv 编号，新增或补录前用于避免重复收录
+- `rg -n "^## [0-9]+\\. (检索口径|本轮总判断|论文卡片|.*建议|复杂度自检|本轮未进入主线|来源)" docs/09_research/00_papers/20*_kinbot_arxiv_daily.md`：快速检查每日论文纪要是否保留检索、判断、卡片、建议、复杂度 / 主线回写说明与来源段落
+- `rg -n "本轮检索日期|new listing|recent|补查|近期待补录" docs/09_research/00_papers/20*_kinbot_arxiv_daily.md`：快速检查每日论文纪要是否记录真实检索日期、官方最新批次和补录口径，尤其用于官方无新批次但仍生成日更时
 - `find docs/09_research/07_vln_model_design -maxdepth 1 -name "*.md" | sed 's#^./##' | sort`：快速检查 `VLN / NFM` 专题子目录是否有新增研究文档待纳入索引或吸收进主线，并避免 `.DS_Store` 等本地噪声文件干扰
 - `find docs/10_team_planning -maxdepth 1 \\( -name "*.md" -o -name "*.csv" \\) | sed 's#^./##' | sort`：快速检查招聘基线、CTO 面试框架和候选人建议文档是否有新增输入或索引漂移
-- `find input/01_candidate_resume -maxdepth 1 -type f | sed 's#^./##' | rg '\.(pdf|md|txt)$' | sort`：快速检查候选人简历、初试反馈、面试总结或录音转写是否有新增输入待吸收到 `91_candidate_screening_and_interview_advice.md`
+- `find input/01_candidate_resume -maxdepth 1 -type f | sed 's#^./##' | rg '\.(pdf|md|txt)$' | rg -v '(^|/)README\.md$' | sort`：快速检查候选人简历、初试反馈、面试总结或录音转写是否有根层新增待处理输入需吸收到 `91_candidate_screening_and_interview_advice.md`
+- `find input/01_candidate_resume -path '*/archive/*' -type f | sed 's#^./##' | rg '\.(pdf|md|txt)$' | sort`：快速检查已处理候选人输入资料是否已进入本地归档目录，避免根层待处理入口长期堆积
+- `git check-ignore -v input/.DS_Store input/01_candidate_resume/.DS_Store input/01_candidate_resume/<candidate-file> input/01_candidate_resume/archive/<processed-file>`：快速核对 Finder 噪声、候选人原始输入与已处理归档是否仍按本地忽略规则处理，避免误把输入型原件纳入正式版本维护
 - `find docs/05_p4_beta_dvt docs/06_p5_launch_readiness -maxdepth 1 -type f | sed 's#^./##' | sort`：快速检查 `Phase 5` 当前执行 / 门控入口与量产预备文档是否有新增入口或索引漂移
+- `find docs/06_p5_launch_readiness -maxdepth 1 -name "*.md" | sed 's#^./##' | sort`：快速检查 `Phase 5` 后段的量产导入、发布准备与交付闭环文档入口是否有新增或索引漂移
+- `find output -maxdepth 2 -type f | sed 's#^./##' | rg -v '(^|/)\\.DS_Store$' | sort`：快速检查 `output/` 对外交付材料与图包 `README.md` 是否有新增入口，并避免 Finder 噪声干扰
+- `find output -maxdepth 2 -name README.md | sed 's#^./##' | sort`：快速检查 `output/` 下多文件交付包或图包是否已补齐 `README.md` 作为交付入口
 - `rg -n "<pattern>" README.md docs input`：检查索引、旧路径、术语和主线残留
 - `sed -n '1,200p' <file>`：分段核对长文档头部、变更记录和关键段落
 - `sed -n '1,200p' .claude/settings.json`：核对当前仓库可见的 repo-local hook 配置
@@ -289,7 +317,7 @@ Linear 是正式项目管理软件。
 
 - `input/`：用户人工输入
 - 任一目录新增文档或输入资料后，需先同步回写该目录 `README.md` 的文档索引；若影响仓库总索引或阶段入口，再同步检查根目录 `README.md` 与 `CHANGELOG.md`
-- `input/01_candidate_resume/`：候选人简历与相关输入资料；独立评估线程应以 `docs/10_team_planning/01_development_team_proposal.md` 作为团队能力基线
+- `input/01_candidate_resume/`：候选人简历与相关输入资料；根层作为新增待处理资料入口，已处理资料按 `archive/YYYY-MM-DD_processed/` 本地归档；目录内原始 PDF、扫描件、录音转写等输入默认通过目录级 `.gitignore` 本地留存，不纳入正式版本维护；独立评估线程应以 `docs/10_team_planning/01_development_team_proposal.md` 作为团队能力基线，正式候选人判断仍以 `docs/10_team_planning/91_candidate_screening_and_interview_advice.md` 为准
 - `docs/00_governance/`：工作流、决策记录、治理原则
 - `docs/00_governance/decision_log/`：`03_decision_log.md` 的派生索引与历史分卷目录；只服务导航与检索，不构成新的并列事实源
 - `docs/01_p0_concept/`：概念期分析、输入评估、商业判断
@@ -301,12 +329,13 @@ Linear 是正式项目管理软件。
 - `docs/07_p6_operations/`：上市后运营与回灌阶段文档入口
 - `docs/08_reviews/`：活跃评审输入与历史归档；当前默认活跃入口以该目录 `README.md` 为准
 - `docs/09_research/`：Deep Research、论文、芯片、前沿专项
+- `docs/09_research/00_papers/`：arXiv 每日论文纪要与结构化论文评估目录；新增纪要后需同步目录 `README.md` 与父级 `docs/09_research/README.md`，稳定结论影响主线时再回写正式事实源
 - `docs/09_research/` 下允许按专题建立子目录，例如 `07_vln_model_design/`；新增子目录或子文档后，需同步检查父级 `README.md`、根目录 `README.md` 与 `CHANGELOG.md`
 - `docs/09_research/07_vln_model_design/`：`VLN -> NFM`、长期记忆、导航基础问题与数据设计等专题研究工作目录；新增文档后需同步父级 `README.md`、根目录 `README.md` 与 `CHANGELOG.md`
-- `docs/10_team_planning/`：团队规划主基线；其中 `01_development_team_proposal.md` 为组织能力基线，`90_cto_unified_interview_framework.md` 与 `91_candidate_screening_and_interview_advice.md` 为当前招聘筛选与 CTO 面试工作流入口
+- `docs/10_team_planning/`：团队规划主基线；其中 `01_development_team_proposal.md` 为组织能力基线，`02_kinbot_team_recruitment_requirements.csv` 为当前岗位编号、命名与筛选口径基线，`90_cto_unified_interview_framework.md` 与 `91_candidate_screening_and_interview_advice.md` 为当前招聘筛选与 CTO 面试工作流入口
 - `docs/superpowers/`：当前线程使用 `superpowers` 技能生成的计划 / 规格工作文档；活跃工作文档只保留在 `plans/`，已吸收文档进入 `archive/`，新增文档后需同步该目录 `README.md`
 - `plan/`：仓库内临时但可持续推进的执行计划工作目录，用于当前线程的 task plan、阶段笔记与审计记录；当前默认执行计划文件为 `plan/task_plan.md`，默认工作笔记文件为 `plan/notes.md`；不替代 `docs/` 正式文档，结论稳定后应回写正式文档或归档清理
-- `output/`：对外交付材料
+- `output/`：对外交付材料；若形成多文件交付包，优先按日期 / 主题建子目录，并补 `README.md` 说明内容组成与使用建议；图包 / 信息图目录同样默认以 `README.md` 作为交付入口
 - `logs/`：本地运行日志与排障留痕目录；允许按环境或目标系统分层，例如 `logs/prod/`；默认不进入正式版本历史，只有稳定结论才应回写到 `docs/` 或其他正式载体
 - `tmp/`：临时产物，不进入正式版本历史
 

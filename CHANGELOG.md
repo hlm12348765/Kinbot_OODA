@@ -2,11 +2,27 @@
 
 ---
 
-文档版本：v1.112
+文档版本：v1.128
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.128 | 2026-05-05 | Codex-架构师 | 将 `input/02_award_nominations/` 作为本地输入目录排除在远端版本维护之外，并保留本轮 arXiv 日更与候选人台账同步变更。
+- v1.127 | 2026-05-05 | Codex-架构师 | 新增 2026-05-05 Kinbot arXiv 每日论文纪要，覆盖技能编排验证、语言条件导航数据集、VLA 可解释性、预测式时空场景图、端侧 GEMM、fleet-scale 持续学习、潜在 world-action model、机器人 world model 综述和高帧率人类动作理解研究输入。
+- v1.126 | 2026-05-04 | Codex-架构师 | 新增 2026-05-04 Kinbot arXiv 每日论文纪要，覆盖执行中途异常处理、可达安全、端侧概率安全评估、稀疏 3D 重建、策略学习、低成本触觉和多模态经验研究输入。
+- v1.125 | 2026-05-03 | Codex-架构师 | 新增 2026-05-03 Kinbot arXiv 每日论文纪要，覆盖端侧 VLA / VLM 部署、语义图定位、安全监控、LLM 机器人威胁建模和世界动作模型研究输入。
+- v1.124 | 2026-05-02 | Codex-架构师 | 新增 2026-05-02 Kinbot arXiv 每日论文纪要，覆盖家庭多方 HRI、开放词汇占用图、早期动作识别、异步 VLA 导航安全、动态避障和人类视频机器人学习研究输入。
+- v1.123 | 2026-05-01 | Codex-架构师 | 新增 2026-05-01 Kinbot arXiv 每日论文纪要，覆盖健康助手安全、零样本 VLN 分层规划、家用服务闭环执行、技能更新治理和 4D world-action model 研究输入。
+- v1.122 | 2026-04-30 | Codex-架构师 | 将已处理候选人简历、面试总结和录音转写移动到 `input/01_candidate_resume/archive/2026-04-30_processed/`，并同步更新候选人输入目录说明与评估台账输入口径。
+- v1.121 | 2026-04-30 | Codex-架构师 | 新增 2026-04-30 Kinbot arXiv 每日论文纪要，覆盖纯视觉导航、在线空间记忆、局部规划安全和跨界面协同研究输入。
+- v1.120 | 2026-04-29 | Codex-架构师 | 新增 Kinbot arXiv 每日论文纪要与 `00_papers` 研究目录索引。
+- v1.119 | 2026-04-29 | Codex-架构师 | 吸收杨锦生 CTO 面试总结和录音转写，将其更新为已完成 CTO 面后的岗位 `15` 综合判断。
+- v1.118 | 2026-04-28 | Codex-架构师 | 新增杨锦生作为岗位 `15` 运动控制候选人的 CTO 二面建议，吸收技术一面正向评价并补充控制架构 owner 验证题包。
+- v1.117 | 2026-04-25 | Codex-架构师 | 新增黄瑞锋作为岗位 `11` 候选人的 CTO 面试把关建议，重点验证逻辑表达、项目因果链、抽象能力和 owner 颗粒度。
+- v1.116 | 2026-04-24 | Codex-架构师 | 根据最新招聘流程决策，将当前继续推进名单收敛为陈明华、胡铭超、王灿烨、陈俊 4 人。
+- v1.115 | 2026-04-24 | Codex-架构师 | 吸收韦丹妮 CTO 面试总结和录音转写，将其更新为已完成 CTO 面后的岗位 `11` 综合判断。
+- v1.114 | 2026-04-24 | Codex-架构师 | 新增韦丹妮作为岗位 `11` 候选人的筛选建议，吸收一面反馈并补充 CTO 面建议。
+- v1.113 | 2026-04-24 | Codex-架构师 | 吸收王灿烨新增面试总结和录音转写，将其更新为已完成 CTO 面后的岗位 `11` 综合判断。
 - v1.112 | 2026-04-22 | Codex-架构师 | 新增王灿烨作为岗位 `11` 大模型应用 / Agent 开发候选人的筛选与 CTO 面试建议。
 - v1.111 | 2026-04-21 | Codex-架构师 | 新增杜凌宇简历筛选建议，评估其对岗位 `14` 与多模态交互研究方向的适配度。
 - v1.110 | 2026-04-21 | Codex-架构师 | 补齐《系统组成权衡模型与优先级矩阵》版本留痕并更新评审执行口径：新增资源分组权重、风险分级惩罚、`OptionBonus` 证据门槛、`P/W/B` 后续治理动作与模板证据字段。
@@ -132,6 +148,13 @@
 
 ### 新增
 
+- 新增 [docs/09_research/00_papers/2026-05-05_kinbot_arxiv_daily.md](docs/09_research/00_papers/2026-05-05_kinbot_arxiv_daily.md)，基于联网检索 arXiv，筛选技能编排验证、语言条件导航数据集、VLA 可解释性、预测式时空场景图、端侧 GEMM、fleet-scale 持续学习、潜在 world-action model、机器人 world model 综述和高帧率人类动作理解相关论文并形成工程适配评估。
+- 新增 [docs/09_research/00_papers/2026-05-04_kinbot_arxiv_daily.md](docs/09_research/00_papers/2026-05-04_kinbot_arxiv_daily.md)，基于联网检索 arXiv，筛选执行中途异常处理、可达安全、端侧概率安全评估、稀疏 3D 重建、策略学习、低成本触觉和多模态经验相关论文并形成工程适配评估。
+- 新增 [docs/09_research/00_papers/2026-05-03_kinbot_arxiv_daily.md](docs/09_research/00_papers/2026-05-03_kinbot_arxiv_daily.md)，基于联网检索 arXiv，筛选端侧 VLA / VLM 部署、语义图定位、LLM 机器人威胁建模、运行期安全监控、主动具身智能体、VLN 空间转移学习和世界动作模型相关论文并形成工程适配评估。
+- 新增 [docs/09_research/00_papers/2026-05-01_kinbot_arxiv_daily.md](docs/09_research/00_papers/2026-05-01_kinbot_arxiv_daily.md)，基于联网检索 arXiv，筛选健康助手安全、零样本视觉语言导航、家用服务闭环执行、社交导航、技能更新治理、神经符号任务规划、安全可达导航和 4D world-action model 相关论文并形成工程适配评估。
+- 新增 [docs/09_research/00_papers/2026-04-30_kinbot_arxiv_daily.md](docs/09_research/00_papers/2026-04-30_kinbot_arxiv_daily.md)，基于联网检索 arXiv，筛选纯视觉拓扑-度量导航、在线语义空间记忆、局部规划安全、端侧具身推理和跨界面协同相关论文并形成工程适配评估。
+- 新增 [docs/09_research/00_papers/README.md](docs/09_research/00_papers/README.md)，用于收纳与 Kinbot 架构、算法和产品闭环相关的结构化论文纪要。
+- 新增 [docs/09_research/00_papers/2026-04-29_kinbot_arxiv_daily.md](docs/09_research/00_papers/2026-04-29_kinbot_arxiv_daily.md)，基于联网检索 arXiv，筛选纯视觉深度、VLN/VLA 运行时、端侧资源、语义空间记忆和老人健康安全相关论文并形成工程适配评估。
 - 新增 [docs/08_reviews/archive/README.md](docs/08_reviews/archive/README.md)，作为历史评审、旧阶段收口稿与归档总结的总入口。
 - 新增 [docs/08_reviews/archive/16_18_family_co_living_architecture_innovation_decision_chain_summary.md](docs/08_reviews/archive/16_18_family_co_living_architecture_innovation_decision_chain_summary.md)，作为 `16 / 17 / 18` 的归档总结入口。
 - 新增 [docs/superpowers/archive/README.md](docs/superpowers/archive/README.md)，作为已吸收 `superpowers` 工作文档的归档入口。
@@ -144,6 +167,13 @@
 
 ### 变更
 
+- 更新 [.gitignore](.gitignore)，将 `input/02_award_nominations/` 作为本地输入目录排除在远端版本维护之外。
+- 更新 [docs/09_research/00_papers/README.md](docs/09_research/00_papers/README.md) 与 [docs/09_research/README.md](docs/09_research/README.md)，补充 2026-05-05 每日论文纪要索引。
+- 更新 [docs/09_research/00_papers/README.md](docs/09_research/00_papers/README.md) 与 [docs/09_research/README.md](docs/09_research/README.md)，补充 2026-05-04 每日论文纪要索引。
+- 更新 [docs/09_research/00_papers/README.md](docs/09_research/00_papers/README.md) 与 [docs/09_research/README.md](docs/09_research/README.md)，补充 2026-05-03 每日论文纪要索引。
+- 更新 [docs/09_research/00_papers/README.md](docs/09_research/00_papers/README.md) 与 [docs/09_research/README.md](docs/09_research/README.md)，补充 2026-05-01 每日论文纪要索引。
+- 更新 [docs/09_research/00_papers/README.md](docs/09_research/00_papers/README.md) 与 [docs/09_research/README.md](docs/09_research/README.md)，补充 2026-04-30 每日论文纪要索引。
+- 更新 [docs/09_research/README.md](docs/09_research/README.md)，补充 `00_papers` 论文研究目录与本轮每日论文纪要索引。
 - 更新 [docs/02_p1_architecture/01_overall_architecture.md](docs/02_p1_architecture/01_overall_architecture.md)、[docs/02_p1_architecture/10_health_event_pipeline_and_escalation.md](docs/02_p1_architecture/10_health_event_pipeline_and_escalation.md)、[docs/02_p1_architecture/11_app_cloud_ops_minimal_loop.md](docs/02_p1_architecture/11_app_cloud_ops_minimal_loop.md)、[docs/02_p1_architecture/12_human_service_and_telemedicine_boundaries.md](docs/02_p1_architecture/12_human_service_and_telemedicine_boundaries.md)、[docs/02_p1_architecture/13_medication_storage_and_indoor_delivery_requirements.md](docs/02_p1_architecture/13_medication_storage_and_indoor_delivery_requirements.md)、[docs/02_p1_architecture/README.md](docs/02_p1_architecture/README.md) 与 [docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md](docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md)，将当前 `V1` 主闭环统一收敛为“机器人本体 + 家属 App + 最小云”，明确可穿戴仅作为当前受控外部输入位，后台人工服务 / 在线问诊 / 第三方履约改为后续适配位。
 - 更新 [docs/02_p1_architecture/03_execution_paradigms_runtime_baseline.md](docs/02_p1_architecture/03_execution_paradigms_runtime_baseline.md)、[docs/02_p1_architecture/04_module_layers_and_boundaries.md](docs/02_p1_architecture/04_module_layers_and_boundaries.md)、[docs/02_p1_architecture/05_world_state_schema.md](docs/02_p1_architecture/05_world_state_schema.md)、[docs/02_p1_architecture/06_decision_state_machine.md](docs/02_p1_architecture/06_decision_state_machine.md)、[docs/02_p1_architecture/07_safety_compliance_authorization_api.md](docs/02_p1_architecture/07_safety_compliance_authorization_api.md)、[docs/02_p1_architecture/08_companion_interaction_strategy.md](docs/02_p1_architecture/08_companion_interaction_strategy.md) 与 [docs/02_p1_architecture/09_safety_risk_matrix.md](docs/02_p1_architecture/09_safety_risk_matrix.md)，统一当前交付只覆盖离散决策 + 事件驱动，完成业务状态 `8 -> 6` 向“执行服务”归并、价值排序归一，以及世界状态与审批接口中的人工接力残留收缩。
 - 更新 [docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md)，补记本轮 `V1` 真实复杂度下降计划的正式判断与跨文档同步完成状态。

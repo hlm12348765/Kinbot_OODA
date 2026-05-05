@@ -5,4 +5,5 @@
 **/.claude/
 logs/
 tmp/
+input/02_award_nominations/
 *.canvas
