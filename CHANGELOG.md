@@ -2,11 +2,16 @@
 
 ---
 
-文档版本：v1.128
+文档版本：v1.133
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.133 | 2026-05-08 | Codex-架构师 | 新增 2026-05-08 Kinbot arXiv 每日论文纪要，覆盖资源约束规划、巡护运行时监控、模糊指令导航澄清、目标导航语义补全、可见性保持、主动社会规范判断、VLN 漂移修正、感知不确定性校准、world action model 自适应执行和长期自主性研究输入。
+- v1.132 | 2026-05-07 | Codex-架构师 | 吸收六份岗位 `14` 具身智能算法候选人简历，补充周荪尧、肖时贤、赵健愚、王震、钟炜强、孙嘉潞的筛选建议与面试验证题包，并归档本轮已处理输入资料。
+- v1.131 | 2026-05-07 | Codex-架构师 | 吸收马诚、赵阳两位岗位 `10` 结构传动候选人的一面反馈和简历信息，补充 CTO 二面建议并归档本轮已处理候选人输入资料。
+- v1.130 | 2026-05-07 | Codex-架构师 | 新增 2026-05-07 Kinbot arXiv 每日论文纪要，在官方尚未出现 2026-05-07 Robotics 新批次时按补录口径覆盖长程规划、物理可行性、部分可观测安全控制、结构化评测、对抗场景生成、任务条件传感配置、LLM 工具执行和 world model 人工纠偏研究输入。
+- v1.129 | 2026-05-06 | Codex-架构师 | 新增 2026-05-06 Kinbot arXiv 每日论文纪要，覆盖端侧语言模型、混合关键性运行时、开放词汇语义地图、长期情景记忆、视觉 SLAM 退化评测、具身安全、设计期不确定性分析、单智能体运行时、协作行为评测和机器人视频 world model 对齐研究输入。
 - v1.128 | 2026-05-05 | Codex-架构师 | 将 `input/02_award_nominations/` 作为本地输入目录排除在远端版本维护之外，并保留本轮 arXiv 日更与候选人台账同步变更。
 - v1.127 | 2026-05-05 | Codex-架构师 | 新增 2026-05-05 Kinbot arXiv 每日论文纪要，覆盖技能编排验证、语言条件导航数据集、VLA 可解释性、预测式时空场景图、端侧 GEMM、fleet-scale 持续学习、潜在 world-action model、机器人 world model 综述和高帧率人类动作理解研究输入。
 - v1.126 | 2026-05-04 | Codex-架构师 | 新增 2026-05-04 Kinbot arXiv 每日论文纪要，覆盖执行中途异常处理、可达安全、端侧概率安全评估、稀疏 3D 重建、策略学习、低成本触觉和多模态经验研究输入。
@@ -148,6 +153,9 @@
 
 ### 新增
 
+- 新增 [docs/09_research/00_papers/2026-05-08_kinbot_arxiv_daily.md](docs/09_research/00_papers/2026-05-08_kinbot_arxiv_daily.md)，基于联网检索 arXiv 官方 2026-05-08 Robotics 新批次，筛选资源约束规划、巡护运行时监控、模糊指令导航澄清、目标导航语义补全、可见性保持、主动社会规范判断、VLN 漂移修正、感知不确定性校准、world action model 自适应执行和长期自主性相关论文并形成工程适配评估。
+- 新增 [docs/09_research/00_papers/2026-05-07_kinbot_arxiv_daily.md](docs/09_research/00_papers/2026-05-07_kinbot_arxiv_daily.md)，基于联网检索 arXiv，在官方尚未出现 2026-05-07 Robotics 新批次时按补录口径筛选长程规划、物理可行性、部分可观测安全控制、结构化评测、对抗场景生成、任务条件传感配置、LLM 工具执行和 world model 人工纠偏相关论文并形成工程适配评估。
+- 新增 [docs/09_research/00_papers/2026-05-06_kinbot_arxiv_daily.md](docs/09_research/00_papers/2026-05-06_kinbot_arxiv_daily.md)，基于联网检索 arXiv，筛选端侧语言模型、混合关键性运行时、开放词汇语义地图、长期情景记忆、视觉 SLAM 退化评测、具身安全、设计期不确定性分析、单智能体运行时、协作行为评测和机器人视频 world model 对齐相关论文并形成工程适配评估。
 - 新增 [docs/09_research/00_papers/2026-05-05_kinbot_arxiv_daily.md](docs/09_research/00_papers/2026-05-05_kinbot_arxiv_daily.md)，基于联网检索 arXiv，筛选技能编排验证、语言条件导航数据集、VLA 可解释性、预测式时空场景图、端侧 GEMM、fleet-scale 持续学习、潜在 world-action model、机器人 world model 综述和高帧率人类动作理解相关论文并形成工程适配评估。
 - 新增 [docs/09_research/00_papers/2026-05-04_kinbot_arxiv_daily.md](docs/09_research/00_papers/2026-05-04_kinbot_arxiv_daily.md)，基于联网检索 arXiv，筛选执行中途异常处理、可达安全、端侧概率安全评估、稀疏 3D 重建、策略学习、低成本触觉和多模态经验相关论文并形成工程适配评估。
 - 新增 [docs/09_research/00_papers/2026-05-03_kinbot_arxiv_daily.md](docs/09_research/00_papers/2026-05-03_kinbot_arxiv_daily.md)，基于联网检索 arXiv，筛选端侧 VLA / VLM 部署、语义图定位、LLM 机器人威胁建模、运行期安全监控、主动具身智能体、VLN 空间转移学习和世界动作模型相关论文并形成工程适配评估。
@@ -167,6 +175,11 @@
 
 ### 变更
 
+- 更新 [docs/09_research/00_papers/README.md](docs/09_research/00_papers/README.md) 与 [docs/09_research/README.md](docs/09_research/README.md)，补充 2026-05-08 每日论文纪要索引。
+- 更新 [docs/10_team_planning/91_candidate_screening_and_interview_advice.md](docs/10_team_planning/91_candidate_screening_and_interview_advice.md) 与 [input/01_candidate_resume/README.md](input/01_candidate_resume/README.md)，吸收六份岗位 `14` 具身智能算法候选人简历，补充逐人筛选建议、推进优先级和面试验证题包，并记录本轮归档口径。
+- 更新 [docs/10_team_planning/91_candidate_screening_and_interview_advice.md](docs/10_team_planning/91_candidate_screening_and_interview_advice.md) 与 [input/01_candidate_resume/README.md](input/01_candidate_resume/README.md)，吸收马诚、赵阳两位岗位 `10` 结构传动候选人的一面反馈和 CTO 二面建议，并记录本轮已处理资料归档口径。
+- 更新 [docs/09_research/00_papers/README.md](docs/09_research/00_papers/README.md) 与 [docs/09_research/README.md](docs/09_research/README.md)，补充 2026-05-07 每日论文纪要索引。
+- 更新 [docs/09_research/00_papers/README.md](docs/09_research/00_papers/README.md) 与 [docs/09_research/README.md](docs/09_research/README.md)，补充 2026-05-06 每日论文纪要索引。
 - 更新 [.gitignore](.gitignore)，将 `input/02_award_nominations/` 作为本地输入目录排除在远端版本维护之外。
 - 更新 [docs/09_research/00_papers/README.md](docs/09_research/00_papers/README.md) 与 [docs/09_research/README.md](docs/09_research/README.md)，补充 2026-05-05 每日论文纪要索引。
 - 更新 [docs/09_research/00_papers/README.md](docs/09_research/00_papers/README.md) 与 [docs/09_research/README.md](docs/09_research/README.md)，补充 2026-05-04 每日论文纪要索引。

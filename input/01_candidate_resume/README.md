@@ -2,13 +2,15 @@
 
 ---
 
-文档版本：v1.4
+文档版本：v1.6
 创建日期：2026-03-13
 作者：Codex-架构师
 
 ---
 
 文档变更记录：
+- v1.6 | 2026-05-07 | Codex-架构师 | 将本轮已吸收到 `91_candidate_screening_and_interview_advice.md` 的六份具身智能算法简历归档至 `archive/2026-05-07_embodied_processed/`。
+- v1.5 | 2026-05-07 | Codex-架构师 | 将本轮已吸收到 `91_candidate_screening_and_interview_advice.md` 的马诚、赵阳结构传动简历归档至 `archive/2026-05-07_processed/`。
 - v1.4 | 2026-04-30 | Codex-架构师 | 将已处理候选人简历、面试总结和录音转写统一归档至 `archive/2026-04-30_processed/`，本目录根层继续作为新增待处理资料入口。
 - v1.3 | 2026-04-08 | Codex-架构师 | 将招聘需求基准和正式面试方案文档迁移至 `docs/10_team_planning/`，本目录收敛为简历输入目录，仅维护 `README.md`。
 - v1.2 | 2026-04-08 | Codex-架构师 | 补充本目录新的招聘需求基准文件、CTO 统一面试方案文档和首批候选人筛选建议文档索引，并明确简历 PDF 默认不纳入版本维护。
@@ -22,6 +24,8 @@
 当前根目录只作为新增待处理候选人资料入口。已完成评估吸收的简历、面试总结和录音转写统一移动到本地归档目录：
 
 - `archive/2026-04-30_processed/`
+- `archive/2026-05-07_processed/`
+- `archive/2026-05-07_embodied_processed/`
 
 ## 目录角色
 

@@ -2,11 +2,13 @@
 
 ---
 
-文档版本：v1.42
+文档版本：v1.44
 创建日期：2026-03-21
 作者：Codex-架构师
 
 文档变更记录：
+- v1.44 | 2026-05-07 | Codex-架构师 | 补充 arXiv 每日论文纪要的推荐优先级表与未优先收录说明口径，并新增对应只读清点命令。
+- v1.43 | 2026-05-06 | Codex-架构师 | 补充奖项提名 / 项目申报输入资料的本地留存、输出交付与主线回写边界，并新增对应只读清点命令。
 - v1.42 | 2026-05-04 | Codex-架构师 | 补充 arXiv 无新批次时的日更补录口径、listing 日期说明与对应清点命令。
 - v1.41 | 2026-05-03 | Codex-架构师 | 补充 arXiv 每日论文纪要的稳定段落结构、主线回写判断说明与结构清点命令。
 - v1.40 | 2026-05-02 | Codex-架构师 | 补充 arXiv 每日论文纪要的既有条目去重、近期待补录与论文卡片字段校验规则，并新增日更标题 / arXiv 编号清点命令。
@@ -178,9 +180,11 @@
 - `KBT-32` 及后续模块方案评审，必须把“双视角一致性检查”作为固定审阅项，防止本体实体架构与运行时功能架构重新漂移
 - `KBT-33` 继续作为 `KBT-31` 子 issue 保留，只承接双视角一致性与接口稳定性策略的治理细化，不回退重定义系统边界
 - 先判断本轮新增输入会影响哪些主线文档
+- 若当前线程处理奖项提名、项目申报、荣誉申报或外部申报材料，原始模板与用户输入优先放在 `input/02_award_nominations/` 本地留存，交付稿优先写入 `output/`；申报叙事中的技术亮点、商业判断或量产口径默认不直接回写主线事实源，只有形成经用户确认的稳定产品 / 架构判断时，才同步 `README.md`、`CHANGELOG.md`、`03_decision_log.md` 或相关主线文档。
 - 若当前线程处理 arXiv / 论文检索或每日论文纪要，应优先写入 `docs/09_research/00_papers/`，按 `YYYY-MM-DD_kinbot_arxiv_daily.md` 命名，并同步该目录 `README.md` 与 `docs/09_research/README.md`；论文纪要默认只是研究输入，只有影响主线判断时才回写主线文档、`03_decision_log.md` 或 Linear。
 - 新增 arXiv 每日论文纪要前，应先核对同目录既有日更文档中的论文标题与 arXiv 编号；优先覆盖当日 `recent` 新出现且未进入前序纪要的论文，必要时可补入近几日漏收但需标注补录口径。每篇论文卡片至少保留摘要转述、Kinbot 问题映射、资源消耗、优劣势、推荐理由与来源链接，避免大段复制原摘要。
 - 若 arXiv 官方 `cs.RO/new` 或 `cs.RO/recent` 在本轮检索时尚未出现新的 Robotics 批次，仍可按当日日期形成每日纪要，但必须在文档变更记录与“检索口径”中写明本轮检索日期、官方最新 listing 日期、补录时间窗和补录原因；该类纪要默认按研究补录处理，不因补录本身回写主线。
+- arXiv 每日论文纪要的“本轮总判断”中应保留 `推荐优先级` 表，按论文价值给出建议动作；若本轮有技术价值高但不适合 Kinbot 一代主线的相邻候选，应在“检索口径”中补 `未优先收录说明`，明确排除原因，避免误写成传感主线、形态边界或 Phase 5 门控变化。
 - arXiv 每日论文纪要应保留 `检索口径 -> 本轮总判断 -> 论文卡片 -> 对 Kinbot 的落地 / 文档建议 -> 来源` 的基本结构；若本轮不回写主线，应显式说明未进入主线的原因或复杂度自检判断。
 - 涉及 `VLN` 路线、导航推理和相关前瞻技术判断时，应通过独立 Linear issue 与 `VLN` 专项线程交叉校验，并在需要时回写 `docs/09_research/01_vln_role_analysis_and_technical_plan.md`
 - 若当前线程处理 `VLN -> NFM`、长期记忆、导航基础问题或数据设计等专题深化，应优先在 `docs/09_research/07_vln_model_design/` 下推进；当专题结论影响主线时，再回写 `docs/09_research/01_vln_role_analysis_and_technical_plan.md`、相关主线文档与索引
@@ -260,7 +264,7 @@ Linear 是正式项目管理软件。
 
 - 默认在当前工作分支上工作
 - 提交前检查 `git status`
-- 不得把 `tmp/`、`logs/`、`.claude/`、`.obsidian/`、`.superpowers/`、`.DS_Store` 等本地辅助目录或文件混入正式提交
+- 不得把 `tmp/`、`logs/`、`.claude/`、`.obsidian/`、`.superpowers/`、`input/02_award_nominations/`、`.DS_Store` 等本地辅助目录或文件混入正式提交
 - 不得随意使用破坏性 Git 命令
 
 常用只读检查命令：
@@ -278,12 +282,15 @@ Linear 是正式项目管理软件。
 - `find docs/09_research/00_papers -maxdepth 1 -name "*.md" | sed 's#^./##' | sort`：快速检查 arXiv 每日论文纪要和目录索引是否有新增入口待纳入研究目录视图
 - `rg -n "^### 3\\.|arXiv \\|" docs/09_research/00_papers/20*_kinbot_arxiv_daily.md`：快速清点每日论文纪要中已收录的论文标题与 arXiv 编号，新增或补录前用于避免重复收录
 - `rg -n "^## [0-9]+\\. (检索口径|本轮总判断|论文卡片|.*建议|复杂度自检|本轮未进入主线|来源)" docs/09_research/00_papers/20*_kinbot_arxiv_daily.md`：快速检查每日论文纪要是否保留检索、判断、卡片、建议、复杂度 / 主线回写说明与来源段落
+- `rg -n "推荐优先级|复杂度自检|未优先收录说明|本轮未进入主线的原因" docs/09_research/00_papers/20*_kinbot_arxiv_daily.md`：快速检查每日论文纪要是否保留推荐排序、复杂度自检、候选排除说明与主线不回写理由
 - `rg -n "本轮检索日期|new listing|recent|补查|近期待补录" docs/09_research/00_papers/20*_kinbot_arxiv_daily.md`：快速检查每日论文纪要是否记录真实检索日期、官方最新批次和补录口径，尤其用于官方无新批次但仍生成日更时
 - `find docs/09_research/07_vln_model_design -maxdepth 1 -name "*.md" | sed 's#^./##' | sort`：快速检查 `VLN / NFM` 专题子目录是否有新增研究文档待纳入索引或吸收进主线，并避免 `.DS_Store` 等本地噪声文件干扰
 - `find docs/10_team_planning -maxdepth 1 \\( -name "*.md" -o -name "*.csv" \\) | sed 's#^./##' | sort`：快速检查招聘基线、CTO 面试框架和候选人建议文档是否有新增输入或索引漂移
 - `find input/01_candidate_resume -maxdepth 1 -type f | sed 's#^./##' | rg '\.(pdf|md|txt)$' | rg -v '(^|/)README\.md$' | sort`：快速检查候选人简历、初试反馈、面试总结或录音转写是否有根层新增待处理输入需吸收到 `91_candidate_screening_and_interview_advice.md`
 - `find input/01_candidate_resume -path '*/archive/*' -type f | sed 's#^./##' | rg '\.(pdf|md|txt)$' | sort`：快速检查已处理候选人输入资料是否已进入本地归档目录，避免根层待处理入口长期堆积
 - `git check-ignore -v input/.DS_Store input/01_candidate_resume/.DS_Store input/01_candidate_resume/<candidate-file> input/01_candidate_resume/archive/<processed-file>`：快速核对 Finder 噪声、候选人原始输入与已处理归档是否仍按本地忽略规则处理，避免误把输入型原件纳入正式版本维护
+- `find input/02_award_nominations -maxdepth 2 -type f | sed 's#^./##' | sort`：快速检查奖项提名、项目申报或荣誉申报输入资料是否仍作为本地输入留存，并判断是否已有对应 `output/` 交付稿
+- `git check-ignore -v input/02_award_nominations/ input/02_award_nominations/<award-file>`：快速核对奖项提名、项目申报或荣誉申报输入资料是否仍按本地忽略规则处理
 - `find docs/05_p4_beta_dvt docs/06_p5_launch_readiness -maxdepth 1 -type f | sed 's#^./##' | sort`：快速检查 `Phase 5` 当前执行 / 门控入口与量产预备文档是否有新增入口或索引漂移
 - `find docs/06_p5_launch_readiness -maxdepth 1 -name "*.md" | sed 's#^./##' | sort`：快速检查 `Phase 5` 后段的量产导入、发布准备与交付闭环文档入口是否有新增或索引漂移
 - `find output -maxdepth 2 -type f | sed 's#^./##' | rg -v '(^|/)\\.DS_Store$' | sort`：快速检查 `output/` 对外交付材料与图包 `README.md` 是否有新增入口，并避免 Finder 噪声干扰
@@ -318,6 +325,7 @@ Linear 是正式项目管理软件。
 - `input/`：用户人工输入
 - 任一目录新增文档或输入资料后，需先同步回写该目录 `README.md` 的文档索引；若影响仓库总索引或阶段入口，再同步检查根目录 `README.md` 与 `CHANGELOG.md`
 - `input/01_candidate_resume/`：候选人简历与相关输入资料；根层作为新增待处理资料入口，已处理资料按 `archive/YYYY-MM-DD_processed/` 本地归档；目录内原始 PDF、扫描件、录音转写等输入默认通过目录级 `.gitignore` 本地留存，不纳入正式版本维护；独立评估线程应以 `docs/10_team_planning/01_development_team_proposal.md` 作为团队能力基线，正式候选人判断仍以 `docs/10_team_planning/91_candidate_screening_and_interview_advice.md` 为准
+- `input/02_award_nominations/`：奖项提名、项目申报、荣誉申报等原始输入与模板的本地留存目录，默认通过根 `.gitignore` 排除在正式版本维护之外；可引用其内容生成 `output/` 交付稿，但不得把申报表述直接升级为主线已确认事实
 - `docs/00_governance/`：工作流、决策记录、治理原则
 - `docs/00_governance/decision_log/`：`03_decision_log.md` 的派生索引与历史分卷目录；只服务导航与检索，不构成新的并列事实源
 - `docs/01_p0_concept/`：概念期分析、输入评估、商业判断
