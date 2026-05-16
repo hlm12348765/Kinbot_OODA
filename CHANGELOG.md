@@ -2,11 +2,21 @@
 
 ---
 
-文档版本：v1.133
+文档版本：v1.143
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.143 | 2026-05-16 | Codex-架构师 | 新增外部设计候选输入目录说明，并纳入医疗交互 JQR Robot Claw 方案原始资料入口。
+- v1.142 | 2026-05-16 | Codex-架构师 | 新增 Step 51 成本情景分析对比报告，比较 `6000` 元 `BOM` 约束线与 `10000` 元 `BOM` 战略线，重估 `S100Pro + 12GB RAM + 64GB eMMC` 对 `C1` 的结构性压力，并同步更新 P2 索引与权衡模型入口。
+- v1.141 | 2026-05-16 | Codex-架构师 | 新增 2026-05-16 Kinbot arXiv 每日论文纪要，在官方尚未出现 2026-05-16 Robotics 新批次时，按最新官方 2026-05-15 listing + 日更补录口径覆盖语义地图安全、纯视觉探索、实例物体搜索、端侧空间表征和安全控制调参研究输入。
+- v1.140 | 2026-05-15 | Codex-架构师 | 新增 2026-05-15 Kinbot arXiv 每日论文纪要，基于官方 2026-05-15 Robotics listing，按 3-5 篇强相关论文 + 候选排除表口径覆盖导航安全验证、隐含意图澄清、视觉运行时监控、不可见功能物体定位和 VLN 感知瓶颈研究输入。
+- v1.139 | 2026-05-14 | Codex-架构师 | 新增 2026-05-14 Kinbot arXiv 每日论文纪要，基于官方 2026-05-13 Robotics listing，按 3-5 篇强相关论文 + 候选排除表口径覆盖家庭任务诊断评测、时间安全、物理 AI 服务编排、纯视觉观测鲁棒性和 VLA 行为幻觉治理研究输入。
+- v1.138 | 2026-05-13 | Codex-架构师 | 新增 2026-05-13 Kinbot arXiv 每日论文纪要，基于官方 2026-05-12 Robotics 新批次覆盖长期记忆、零样本目标导航、服务机器人治理、具身安全约束、端侧 / 边缘推理编排、开放场景图对齐、VLM 测试 oracle、自然语言时序逻辑、安全可审计规划和开放世界导航研究输入。
+- v1.137 | 2026-05-12 | Codex-架构师 | 新增 2026-05-12 Kinbot arXiv 每日论文纪要，在官方最新 Robotics listing 为 2026-05-11 且尚无 2026-05-12 新批次时，按日更口径覆盖长期记忆、超长上下文执行、world action model 可靠性、纯视觉导航、社会导航、稀疏拓扑探索、主动视觉、视觉退化鲁棒性、自然语言安全执行和 AI 能力版本治理研究输入。
+- v1.136 | 2026-05-11 | Codex-架构师 | 新增 2026-05-11 Kinbot arXiv 每日论文纪要，在官方未出现 2026-05-11 Robotics 新批次时按补录口径覆盖 object-addressable world action model、VLA 关系结构、视觉真实仿真评测、结构保持动力学、不确定性、信息瓶颈、sim-to-real、HOI 生成、低成本触觉和多机器人协同研究输入。
+- v1.135 | 2026-05-10 | Codex-架构师 | 新增 2026-05-10 Kinbot arXiv 每日论文纪要，在官方未出现 2026-05-10 Robotics 新批次时按补录口径覆盖因果工具使用、VLA 参数高效适配、world action model 知识迁移、事件感知 world model、安全强化学习、风险规避规划、可信不确定性估计和长程时序抽象研究输入。
+- v1.134 | 2026-05-09 | Codex-架构师 | 新增 2026-05-09 Kinbot arXiv 每日论文纪要，在官方未出现 2026-05-09 Robotics 新批次时按补录口径覆盖纯视觉低算力导航、开放目标推断、跨模态导航协作、覆盖 / 巡护信息抽取、安全控制、动作 chunk、低延迟动作生成、world model 表征和有限视野主动感知研究输入。
 - v1.133 | 2026-05-08 | Codex-架构师 | 新增 2026-05-08 Kinbot arXiv 每日论文纪要，覆盖资源约束规划、巡护运行时监控、模糊指令导航澄清、目标导航语义补全、可见性保持、主动社会规范判断、VLN 漂移修正、感知不确定性校准、world action model 自适应执行和长期自主性研究输入。
 - v1.132 | 2026-05-07 | Codex-架构师 | 吸收六份岗位 `14` 具身智能算法候选人简历，补充周荪尧、肖时贤、赵健愚、王震、钟炜强、孙嘉潞的筛选建议与面试验证题包，并归档本轮已处理输入资料。
 - v1.131 | 2026-05-07 | Codex-架构师 | 吸收马诚、赵阳两位岗位 `10` 结构传动候选人的一面反馈和简历信息，补充 CTO 二面建议并归档本轮已处理候选人输入资料。
@@ -153,6 +163,15 @@
 
 ### 新增
 
+- 新增 [input/03_design_candidates/README.md](input/03_design_candidates/README.md) 与 `input/03_design_candidates/医疗交互JQR-Robot Claw方案.pdf`，作为外部设计候选、结构 / 交互 / 造型方案等原始输入资料入口。
+- 新增 [docs/03_p2_feasibility/09_cost_scenario_comparison_report.md](docs/03_p2_feasibility/09_cost_scenario_comparison_report.md)，基于 `Step 51` 形成 `6000` 元 `BOM` 约束线与 `10000` 元 `BOM` 战略线的成本情景对比，明确 `S100Pro` 小系统与 `12GB RAM + 64GB eMMC` 独立计价后对 `C1` 的结构性挤压，并提出“一套架构基线 + 双 BOM 情景门控”的推荐口径。
+- 新增 [docs/09_research/00_papers/2026-05-16_kinbot_arxiv_daily.md](docs/09_research/00_papers/2026-05-16_kinbot_arxiv_daily.md)，基于联网检索 arXiv，在官方尚未出现 2026-05-16 Robotics 新批次时按最新官方 2026-05-15 listing + 日更补录口径筛选语义地图安全、纯视觉探索、实例物体搜索、端侧空间表征和安全控制调参相关论文并形成工程适配评估。
+- 新增 [docs/09_research/00_papers/2026-05-15_kinbot_arxiv_daily.md](docs/09_research/00_papers/2026-05-15_kinbot_arxiv_daily.md)，基于联网检索 arXiv 官方 2026-05-15 Robotics 新批次，按 3-5 篇强相关论文 + 候选排除表口径筛选导航安全验证、隐含意图澄清、视觉运行时监控、不可见功能物体定位和 VLN 感知瓶颈相关论文并形成工程适配评估。
+- 新增 [docs/09_research/00_papers/2026-05-13_kinbot_arxiv_daily.md](docs/09_research/00_papers/2026-05-13_kinbot_arxiv_daily.md)，基于联网检索 arXiv 官方 2026-05-12 Robotics 新批次，筛选长期记忆、零样本目标导航、服务机器人治理、具身安全约束、端侧 / 边缘推理编排、开放场景图对齐、VLM 测试 oracle、自然语言时序逻辑、安全可审计规划和开放世界导航相关论文并形成工程适配评估。
+- 新增 [docs/09_research/00_papers/2026-05-12_kinbot_arxiv_daily.md](docs/09_research/00_papers/2026-05-12_kinbot_arxiv_daily.md)，基于联网检索 arXiv，在官方最新 Robotics listing 为 2026-05-11 且尚未出现 2026-05-12 新批次时按日更口径筛选长期记忆、超长上下文执行、world action model 可靠性、纯视觉导航、社会导航、稀疏拓扑探索、主动视觉、视觉退化鲁棒性、自然语言安全执行和 AI 能力版本治理相关论文并形成工程适配评估。
+- 新增 [docs/09_research/00_papers/2026-05-11_kinbot_arxiv_daily.md](docs/09_research/00_papers/2026-05-11_kinbot_arxiv_daily.md)，基于联网检索 arXiv，在官方尚未出现 2026-05-11 Robotics 新批次时按补录口径筛选 object-addressable world action model、VLA 关系结构、视觉真实仿真评测、结构保持动力学、不确定性、信息瓶颈、sim-to-real、HOI 生成、低成本触觉和多机器人协同相关论文并形成工程适配评估。
+- 新增 [docs/09_research/00_papers/2026-05-10_kinbot_arxiv_daily.md](docs/09_research/00_papers/2026-05-10_kinbot_arxiv_daily.md)，基于联网检索 arXiv，在官方尚未出现 2026-05-10 Robotics 新批次时按补录口径筛选因果工具使用、VLA 参数高效适配、world action model 知识迁移、事件感知 world model、安全强化学习、风险规避规划、可信不确定性估计和长程时序抽象相关论文并形成工程适配评估。
+- 新增 [docs/09_research/00_papers/2026-05-09_kinbot_arxiv_daily.md](docs/09_research/00_papers/2026-05-09_kinbot_arxiv_daily.md)，基于联网检索 arXiv，在官方尚未出现 2026-05-09 Robotics 新批次时按补录口径筛选纯视觉低算力导航、开放目标推断、跨模态导航协作、覆盖 / 巡护信息抽取、安全控制、动作 chunk、低延迟动作生成、world model 表征和有限视野主动感知相关论文并形成工程适配评估。
 - 新增 [docs/09_research/00_papers/2026-05-08_kinbot_arxiv_daily.md](docs/09_research/00_papers/2026-05-08_kinbot_arxiv_daily.md)，基于联网检索 arXiv 官方 2026-05-08 Robotics 新批次，筛选资源约束规划、巡护运行时监控、模糊指令导航澄清、目标导航语义补全、可见性保持、主动社会规范判断、VLN 漂移修正、感知不确定性校准、world action model 自适应执行和长期自主性相关论文并形成工程适配评估。
 - 新增 [docs/09_research/00_papers/2026-05-07_kinbot_arxiv_daily.md](docs/09_research/00_papers/2026-05-07_kinbot_arxiv_daily.md)，基于联网检索 arXiv，在官方尚未出现 2026-05-07 Robotics 新批次时按补录口径筛选长程规划、物理可行性、部分可观测安全控制、结构化评测、对抗场景生成、任务条件传感配置、LLM 工具执行和 world model 人工纠偏相关论文并形成工程适配评估。
 - 新增 [docs/09_research/00_papers/2026-05-06_kinbot_arxiv_daily.md](docs/09_research/00_papers/2026-05-06_kinbot_arxiv_daily.md)，基于联网检索 arXiv，筛选端侧语言模型、混合关键性运行时、开放词汇语义地图、长期情景记忆、视觉 SLAM 退化评测、具身安全、设计期不确定性分析、单智能体运行时、协作行为评测和机器人视频 world model 对齐相关论文并形成工程适配评估。
@@ -175,6 +194,14 @@
 
 ### 变更
 
+- 更新 [input/README.md](input/README.md)，补充 `03_design_candidates/` 外部设计候选输入资料入口。
+- 更新 [docs/03_p2_feasibility/README.md](docs/03_p2_feasibility/README.md) 与 [docs/03_p2_feasibility/08_system_tradeoff_model_and_priority_matrix.md](docs/03_p2_feasibility/08_system_tradeoff_model_and_priority_matrix.md)，补充 Step 51 成本情景分析对比报告入口和版本记录。
+- 更新 [docs/09_research/00_papers/README.md](docs/09_research/00_papers/README.md) 与 [docs/09_research/README.md](docs/09_research/README.md)，补充 2026-05-16 每日论文纪要索引。
+- 更新 [docs/09_research/00_papers/README.md](docs/09_research/00_papers/README.md) 与 [docs/09_research/README.md](docs/09_research/README.md)，补充 2026-05-15 每日论文纪要索引。
+- 更新 [docs/09_research/00_papers/README.md](docs/09_research/00_papers/README.md) 与 [docs/09_research/README.md](docs/09_research/README.md)，补充 2026-05-13 每日论文纪要索引。
+- 更新 [docs/09_research/00_papers/README.md](docs/09_research/00_papers/README.md) 与 [docs/09_research/README.md](docs/09_research/README.md)，补充 2026-05-11 每日论文纪要索引。
+- 更新 [docs/09_research/00_papers/README.md](docs/09_research/00_papers/README.md) 与 [docs/09_research/README.md](docs/09_research/README.md)，补充 2026-05-10 每日论文纪要索引。
+- 更新 [docs/09_research/00_papers/README.md](docs/09_research/00_papers/README.md) 与 [docs/09_research/README.md](docs/09_research/README.md)，补充 2026-05-09 每日论文纪要索引。
 - 更新 [docs/09_research/00_papers/README.md](docs/09_research/00_papers/README.md) 与 [docs/09_research/README.md](docs/09_research/README.md)，补充 2026-05-08 每日论文纪要索引。
 - 更新 [docs/10_team_planning/91_candidate_screening_and_interview_advice.md](docs/10_team_planning/91_candidate_screening_and_interview_advice.md) 与 [input/01_candidate_resume/README.md](input/01_candidate_resume/README.md)，吸收六份岗位 `14` 具身智能算法候选人简历，补充逐人筛选建议、推进优先级和面试验证题包，并记录本轮归档口径。
 - 更新 [docs/10_team_planning/91_candidate_screening_and_interview_advice.md](docs/10_team_planning/91_candidate_screening_and_interview_advice.md) 与 [input/01_candidate_resume/README.md](input/01_candidate_resume/README.md)，吸收马诚、赵阳两位岗位 `10` 结构传动候选人的一面反馈和 CTO 二面建议，并记录本轮已处理资料归档口径。
