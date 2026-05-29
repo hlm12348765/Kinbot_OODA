@@ -2,11 +2,43 @@
 
 ---
 
-文档版本：v1.143
+文档版本：v1.175
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.175 | 2026-05-29 | Codex-架构师 | 吸收尚健、马高、陈子超三位技术一面已通过候选人简历，分别补充岗位 `10` 结构传动、岗位 `11` 大模型应用 / Agent 开发、岗位 `16` 系统集成测试负责人的 CTO 二面建议与验证题包，并归档本轮已处理输入资料。
+- v1.174 | 2026-05-29 | Codex-架构师 | 吸收林创伟岗位 `11` 大模型应用 / Agent 开发简历与初面评价，补充其作为企业级具身智能 Agent 平台 / `Harness Runtime` / `AgentOps` 架构型候选人的 CTO 二面建议与验证题包，并归档本轮已处理输入资料。
+- v1.173 | 2026-05-29 | Codex-架构师 | 新增 2026-05-29 Kinbot arXiv 每日论文纪要，基于官方最新 2026-05-28 Robotics listing，按精筛主卡片 + 候选排除表口径，覆盖零样本视觉语言导航闭环、视觉地点识别安全拒绝、家庭物品归属记忆与主动询问、动态不确定性安全控制和低延迟端侧路径规划研究输入，并记录周度综合判断。
+- v1.172 | 2026-05-28 | Codex-架构师 | 吸收王鹏生岗位 `16` 系统集成测试负责人简历与初面评价，补充其作为智能座舱 AI 软件 / `DMS-OMS` / Agent 系统测试 owner 向机器人端云本体 `E2E` 测试迁移型候选人的 CTO 二面建议与验证题包，并归档本轮已处理输入资料。
+- v1.171 | 2026-05-28 | Codex-架构师 | 新增 2026-05-28 Kinbot arXiv 每日论文纪要，基于官方最新 2026-05-27 Robotics listing，按精筛主卡片 + 候选排除表口径，覆盖动态瓶颈安全导航、具身工具调用能力、住宅社交导航、可解释任务规则学习和复合不确定性主动感知研究输入。
+- v1.170 | 2026-05-27 | Codex-架构师 | 新增 2026-05-27 Kinbot arXiv 每日论文纪要，基于官方最新 2026-05-26 Robotics listing，按精筛主卡片 + 候选排除表口径，覆盖端侧实时推理调度、纯视觉相对 3D 导航地图、跨日主动询问、老人认知辅助机器人和具身问答决策评测研究输入。
+- v1.169 | 2026-05-26 | Codex-架构师 | 新增 2026-05-26 Kinbot arXiv 每日论文纪要，基于官方最新 2026-05-25 Robotics listing，按精筛主卡片 + 候选排除表口径，覆盖端侧纯视觉深度不确定性、隐式意图导航评测、VLN 在线适应资产、多楼层可达图探索和欠指定奖励澄清研究输入。
+- v1.168 | 2026-05-25 | Codex-架构师 | 新增 2026-05-25 Kinbot arXiv 每日论文纪要，在官方最新 Robotics listing 仍为 2026-05-22 且同一 listing 已饱和后，按轻量补录 + 周度综合判断口径，覆盖运动 / 里程计置信、打滑拒绝和纯视觉动态目标检测研究输入。
+- v1.167 | 2026-05-24 | Codex-架构师 | 按用户反馈校正 `08_reviews/27` EMT 成本材料：组织授权不再作为 EMT 申请项，材料目标调整为统一成本逻辑、消除反复争议，并转入 CTO 既有权责下的日常跟进审视；同步更新 `08_reviews/README.md` 索引。
+- v1.166 | 2026-05-24 | Codex-架构师 | 按用户反馈精简 `08_reviews/27` EMT 成本材料篇幅，将长篇底稿压缩为现场速读稿，更多使用符号、表格和图示表达成本锚、上修边界、组织机制和证据节奏，并同步 `08_reviews/README.md` 索引。
+- v1.165 | 2026-05-24 | Codex-架构师 | 按 `plan-ceo-review` 审阅意见更新 `08_reviews/27` EMT 成本材料：新增现场决策页、经营口径、不批准后果和 `30/60/90` 天证据节奏，并同步 `08_reviews/README.md` 索引，使材料更适合 EMT 现场决策汇报。
+- v1.164 | 2026-05-24 | Codex-架构师 | 同步 `08_reviews/README.md` 中 `27` 号 EMT 成本材料索引口径：明确语音声学为 `6000` 元成本基线必达项，`10000` 元战略线优先投入传感器冗余、相机 / 视角、避障绕障、结构传动、低噪运动和量产一致性。
+- v1.163 | 2026-05-24 | Codex-架构师 | 按用户反馈进一步校正 `08_reviews/27` 成本上修优先级：将语音声学明确为 `6000` 元基线必达项；将多模态交互的硬件增量限定为增加相机 / 视角和成像质量；将避障绕障的上修收益明确为增加相机或必要传感器带来的覆盖与冗余提升。
+- v1.162 | 2026-05-24 | Codex-架构师 | 按用户补充拆解 `08_reviews/27` 中结构 / 传动 `3K` 量级 `4500` 元口径，按塑料件、五金件、电机三类均开模的行业常见降幅估算 `30K` 量产归一化约 `2800-3300` 元、规划值约 `3100` 元，并将 `30K` 量产归一化整机压力线更新为约 `7660` 元。
+- v1.161 | 2026-05-24 | Codex-架构师 | 按用户补充校正 `08_reviews/27` 的 `C1` 成本口径：`S100Pro + 12GB + 32GB` 加其他芯片器件在 `30K` 量级下乐观估计约 `270 USD`、折合约 `1860` 元，将当前压力线调整到约 `9060` 元，并明确 `C1` 降本主要依赖换芯片。
+- v1.160 | 2026-05-24 | Codex-架构师 | 吸收用户补充的典型人形机器人 BOM 拆解与未来 `2-3` 年降本趋势，补充 `08_reviews/27` 中 Kinbot 当前成本桶占比计算、当前压力线饼图和与行业趋势的同异判断，明确 Kinbot 已避开人形 `70%` 关节成本大头，当前主抓 `C4 / C6`、`C1`、纯视觉工程化和产测一致性。
+- v1.159 | 2026-05-24 | Codex-架构师 | 按用户反馈将 `08_reviews/27` 视角上提到 `CTO / CEO` 的战略经营层：把团队承接改写为关键人配置、机制建设和授权支持，突出总经理关于“适当核心位置、适当的人、适当机制、给予支持”的组织原则，避免材料落入执行层困难说明。
+- v1.158 | 2026-05-24 | Codex-架构师 | 按用户最新口径同步 `10_team_planning/91` 中马诚已签约 / 已接受 offer 状态，转入岗位 `10` 齿轮 / 减速箱 / 低噪声传动专项骨干入职承接，并与 `08_reviews/27` 的结构 / 传动降本关键岗位配置口径保持一致。
+- v1.157 | 2026-05-24 | Codex-架构师 | 补强 `08_reviews/27` EMT 成本材料的结构 / 传动成本压力表达：新增头部四自由度 `700-800` 元、双轮毂电机约 `800` 元、结构 / 传动总包接近 `4500` 元的 `3000` 台量级口径，补充成本缺口瀑布图，并纳入陈明华、马诚等关键岗位配置对降本闭环的作用。
+- v1.156 | 2026-05-24 | Codex-架构师 | 强化 `08_reviews/27` 阅读效率：新增汇报逻辑一屏图、行业成本阶梯图、技术降本资金流向图、双 BOM 情景决策图和成本上修优先级热力表，减少连续文字堆叠。
+- v1.155 | 2026-05-24 | Codex-架构师 | 按 CTO 面向总经理与 EMT 的真实汇报逻辑重排 `08_reviews/27`：先说明成本纪律、高端品牌和技术竞争力三方张力，再借成本分析带出 Kinbot 核心技术方案、低成本竞争力来源与成本上修投入优先级。
+- v1.154 | 2026-05-24 | Codex-架构师 | 新增 2026-05-24 Kinbot arXiv 每日论文纪要，在官方最新 Robotics listing 仍为 2026-05-22 且同一 listing 已连续覆盖后，按近期待补录 + 周度滚动判断口径，覆盖自调节模拟规划、底层执行物理可实现性和具身 MLLM 技能级诊断评测研究输入。
+- v1.153 | 2026-05-23 | Codex-架构师 | 按用户线下成本口径补充 `08_reviews/27` 行业对比：新增科沃斯“八界”管家机器人作为轮式机械臂家庭服务参照，标注 `3000` 台量级约 `2` 万元 BOM、机械臂约 `1-1.15` 万元的非公开估算，并说明其对 Kinbot 一代不做机械臂和 `10000` 元战略线优先级的含义。
+- v1.152 | 2026-05-23 | Codex-架构师 | 调整 `08_reviews/27` EMT 成本锚定汇报材料措辞，减少二元对照句式，改为更贴近管理层报告的成本策略、投入方向和风险边界表达。
+- v1.151 | 2026-05-23 | Codex-架构师 | 新增 `08_reviews/27` EMT 成本锚定汇报材料，基于项目内成本 / 架构主线和外部可比机器人公开价格、行业 BOM 结构，说明 `6000` 元 BOM 约束线、`10000` 元 BOM 战略线、技术降本路径与成本上修优先级，并同步评审目录索引。
+- v1.150 | 2026-05-23 | Codex-架构师 | 吸收郭吉晖岗位 `14` 具身智能算法简历，补充其作为具身视觉 / `SLAM` / 三维重建 / `VLM-VLA` 研究高潜的筛选建议、专业深面与 CTO 面验证题包，并归档本轮已处理输入资料。
+- v1.149 | 2026-05-23 | Codex-架构师 | 新增 2026-05-23 Kinbot arXiv 每日论文纪要，按最新官方 2026-05-22 Robotics listing + 当日未出现 2026-05-23 新批次说明口径，覆盖视觉语言导航自感知、动态空间记忆、VLA / world model 预执行验证和运行时治理研究输入，并补充周度综合判断。
+- v1.148 | 2026-05-22 | Codex-架构师 | 新增 2026-05-22 Kinbot arXiv 每日论文纪要，按最新官方 2026-05-21 Robotics listing + 当日未出现 2026-05-22 新批次说明口径，覆盖具身拒答 / 澄清、安全置信校准、局部风险场规划、主动感知安全约束和端侧视觉地点识别研究输入。
+- v1.147 | 2026-05-21 | Codex-架构师 | 新增 2026-05-21 Kinbot arXiv 每日论文纪要，按最新官方 2026-05-20 Robotics listing + 当日未出现 2026-05-21 新批次说明口径，覆盖纯 RGB 度量 SLAM、语义导航可执行目标、长期任务状态一致性、记忆型目标导航和具身 VLM 安全评测研究输入。
+- v1.146 | 2026-05-19 | Codex-架构师 | 新增 2026-05-19 Kinbot arXiv 每日论文纪要，按最新官方 2026-05-18 Robotics listing + 当日未出现 2026-05-19 新批次说明口径，覆盖导航 sim-to-real、功能 3D 场景图、LLM 规划安全传播、机器人运维承接和故障感知控制研究输入。
+- v1.145 | 2026-05-18 | Codex-架构师 | 新增 2026-05-18 Kinbot arXiv 每日论文纪要，在官方尚未出现 2026-05-18 Robotics 新批次且同一 2026-05-15 listing 已连续覆盖后，按饱和后的近期待补录口径覆盖任务逻辑安全评测和仿真泛化评测研究输入。
+- v1.144 | 2026-05-17 | Codex-架构师 | 新增 2026-05-17 Kinbot arXiv 每日论文纪要，在官方尚未出现 2026-05-17 Robotics 新批次时，按最新官方 2026-05-15 listing + 近期待补录口径覆盖纯视觉 3D 场景图、边缘端可认证规划和安全验证归责研究输入，并补充周度饱和判断。
 - v1.143 | 2026-05-16 | Codex-架构师 | 新增外部设计候选输入目录说明，并纳入医疗交互 JQR Robot Claw 方案原始资料入口。
 - v1.142 | 2026-05-16 | Codex-架构师 | 新增 Step 51 成本情景分析对比报告，比较 `6000` 元 `BOM` 约束线与 `10000` 元 `BOM` 战略线，重估 `S100Pro + 12GB RAM + 64GB eMMC` 对 `C1` 的结构性压力，并同步更新 P2 索引与权衡模型入口。
 - v1.141 | 2026-05-16 | Codex-架构师 | 新增 2026-05-16 Kinbot arXiv 每日论文纪要，在官方尚未出现 2026-05-16 Robotics 新批次时，按最新官方 2026-05-15 listing + 日更补录口径覆盖语义地图安全、纯视觉探索、实例物体搜索、端侧空间表征和安全控制调参研究输入。
@@ -163,6 +195,14 @@
 
 ### 新增
 
+- 新增 [docs/09_research/00_papers/2026-05-29_kinbot_arxiv_daily.md](docs/09_research/00_papers/2026-05-29_kinbot_arxiv_daily.md)，基于联网检索 arXiv 官方 2026-05-28 Robotics 新批次，按 3-5 篇强相关论文 + 候选排除表口径筛选零样本视觉语言导航闭环、视觉地点识别安全拒绝、家庭物品归属记忆与主动询问、动态不确定性安全控制和低延迟端侧路径规划相关论文，形成工程适配评估与周度综合判断。
+- 新增 [docs/09_research/00_papers/2026-05-28_kinbot_arxiv_daily.md](docs/09_research/00_papers/2026-05-28_kinbot_arxiv_daily.md)，基于联网检索 arXiv 官方 2026-05-27 Robotics 新批次，按 3-5 篇强相关论文 + 候选排除表口径筛选动态瓶颈安全导航、具身工具调用能力、住宅社交导航、可解释任务规则学习和复合不确定性主动感知相关论文，形成工程适配评估与周度滚动判断。
+- 新增 [docs/09_research/00_papers/2026-05-27_kinbot_arxiv_daily.md](docs/09_research/00_papers/2026-05-27_kinbot_arxiv_daily.md)，基于联网检索 arXiv 官方 2026-05-26 Robotics 新批次，按 3-5 篇强相关论文 + 候选排除表口径筛选端侧实时推理调度、纯视觉相对 3D 导航地图、跨日主动询问、老人认知辅助机器人和具身问答决策评测相关论文，形成工程适配评估与周度滚动判断。
+- 新增 [docs/09_research/00_papers/2026-05-22_kinbot_arxiv_daily.md](docs/09_research/00_papers/2026-05-22_kinbot_arxiv_daily.md)，基于联网检索 arXiv，在官方最新 Robotics listing 为 2026-05-21 且尚未出现 2026-05-22 新批次时，按最新官方 listing + 当日未出现新批次说明口径筛选具身拒答 / 澄清、安全置信校准、局部风险场规划、主动感知安全约束和端侧视觉地点识别相关论文，形成工程适配评估与周度滚动判断。
+- 新增 [docs/09_research/00_papers/2026-05-21_kinbot_arxiv_daily.md](docs/09_research/00_papers/2026-05-21_kinbot_arxiv_daily.md)，基于联网检索 arXiv，在官方最新 Robotics listing 为 2026-05-20 且尚未出现 2026-05-21 新批次时，按最新官方 listing + 当日未出现新批次说明口径筛选纯 RGB 度量 SLAM、语义导航可执行目标、长期任务状态一致性、记忆型目标导航和具身 VLM 安全评测相关论文，形成工程适配评估与周度滚动判断。
+- 新增 [docs/09_research/00_papers/2026-05-19_kinbot_arxiv_daily.md](docs/09_research/00_papers/2026-05-19_kinbot_arxiv_daily.md)，基于联网检索 arXiv，在官方最新 Robotics listing 为 2026-05-18 且尚未出现 2026-05-19 新批次时，按最新官方 listing + 当日未出现新批次说明口径筛选导航 sim-to-real、功能 3D 场景图、LLM 规划安全传播、机器人运维承接和故障感知控制相关论文，形成工程适配评估与周度滚动判断。
+- 新增 [docs/09_research/00_papers/2026-05-18_kinbot_arxiv_daily.md](docs/09_research/00_papers/2026-05-18_kinbot_arxiv_daily.md)，基于联网检索 arXiv，在官方尚未出现 2026-05-18 Robotics 新批次且同一 2026-05-15 listing 已连续覆盖后，按饱和后的近期待补录口径筛选任务逻辑安全评测和仿真泛化评测相关论文，形成工程适配评估与周度综合判断。
+- 新增 [docs/09_research/00_papers/2026-05-17_kinbot_arxiv_daily.md](docs/09_research/00_papers/2026-05-17_kinbot_arxiv_daily.md)，基于联网检索 arXiv，在官方尚未出现 2026-05-17 Robotics 新批次时按最新官方 2026-05-15 listing + 近期待补录口径筛选纯视觉 3D 场景图、边缘端可认证规划和安全验证归责相关论文，形成工程适配评估与周度饱和判断。
 - 新增 [input/03_design_candidates/README.md](input/03_design_candidates/README.md) 与 `input/03_design_candidates/医疗交互JQR-Robot Claw方案.pdf`，作为外部设计候选、结构 / 交互 / 造型方案等原始输入资料入口。
 - 新增 [docs/03_p2_feasibility/09_cost_scenario_comparison_report.md](docs/03_p2_feasibility/09_cost_scenario_comparison_report.md)，基于 `Step 51` 形成 `6000` 元 `BOM` 约束线与 `10000` 元 `BOM` 战略线的成本情景对比，明确 `S100Pro` 小系统与 `12GB RAM + 64GB eMMC` 独立计价后对 `C1` 的结构性挤压，并提出“一套架构基线 + 双 BOM 情景门控”的推荐口径。
 - 新增 [docs/09_research/00_papers/2026-05-16_kinbot_arxiv_daily.md](docs/09_research/00_papers/2026-05-16_kinbot_arxiv_daily.md)，基于联网检索 arXiv，在官方尚未出现 2026-05-16 Robotics 新批次时按最新官方 2026-05-15 listing + 日更补录口径筛选语义地图安全、纯视觉探索、实例物体搜索、端侧空间表征和安全控制调参相关论文并形成工程适配评估。
@@ -194,6 +234,14 @@
 
 ### 变更
 
+- 更新 [docs/09_research/00_papers/README.md](docs/09_research/00_papers/README.md) 与 [docs/09_research/README.md](docs/09_research/README.md)，补充 2026-05-29 每日论文纪要索引。
+- 更新 [docs/09_research/00_papers/README.md](docs/09_research/00_papers/README.md) 与 [docs/09_research/README.md](docs/09_research/README.md)，补充 2026-05-28 每日论文纪要索引。
+- 更新 [docs/09_research/00_papers/README.md](docs/09_research/00_papers/README.md) 与 [docs/09_research/README.md](docs/09_research/README.md)，补充 2026-05-27 每日论文纪要索引。
+- 更新 [docs/09_research/00_papers/README.md](docs/09_research/00_papers/README.md) 与 [docs/09_research/README.md](docs/09_research/README.md)，补充 2026-05-22 每日论文纪要索引。
+- 更新 [docs/09_research/00_papers/README.md](docs/09_research/00_papers/README.md) 与 [docs/09_research/README.md](docs/09_research/README.md)，补充 2026-05-21 每日论文纪要索引。
+- 更新 [docs/09_research/00_papers/README.md](docs/09_research/00_papers/README.md) 与 [docs/09_research/README.md](docs/09_research/README.md)，补充 2026-05-19 每日论文纪要索引。
+- 更新 [docs/09_research/00_papers/README.md](docs/09_research/00_papers/README.md) 与 [docs/09_research/README.md](docs/09_research/README.md)，补充 2026-05-18 每日论文纪要索引。
+- 更新 [docs/09_research/00_papers/README.md](docs/09_research/00_papers/README.md) 与 [docs/09_research/README.md](docs/09_research/README.md)，补充 2026-05-17 每日论文纪要索引。
 - 更新 [input/README.md](input/README.md)，补充 `03_design_candidates/` 外部设计候选输入资料入口。
 - 更新 [docs/03_p2_feasibility/README.md](docs/03_p2_feasibility/README.md) 与 [docs/03_p2_feasibility/08_system_tradeoff_model_and_priority_matrix.md](docs/03_p2_feasibility/08_system_tradeoff_model_and_priority_matrix.md)，补充 Step 51 成本情景分析对比报告入口和版本记录。
 - 更新 [docs/09_research/00_papers/README.md](docs/09_research/00_papers/README.md) 与 [docs/09_research/README.md](docs/09_research/README.md)，补充 2026-05-16 每日论文纪要索引。

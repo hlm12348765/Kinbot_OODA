@@ -2,11 +2,13 @@
 
 ---
 
-文档版本：v1.50
+文档版本：v1.52
 创建日期：2026-03-21
 作者：Codex-架构师
 
 文档变更记录：
+- v1.52 | 2026-05-24 | Codex-架构师 | 补充 `08_reviews/27` 双 BOM EMT 成本汇报入口、arXiv 饱和 listing 不硬凑 `3-5` 篇、VLN 年度总结指标口径 TODO，并新增对应只读检查命令。
+- v1.51 | 2026-05-17 | Codex-架构师 | 补充 arXiv 同一官方 listing 连续复用后的周度饱和判断、近期待补录元信息标注要求，并新增对应只读检查命令。
 - v1.50 | 2026-05-16 | Codex-架构师 | 补充候选人 offer 结果 / 入职承接口径与 arXiv 同一官方 listing 跨日补录的去重、饱和判断要求，并新增候选人流程状态只读检查命令。
 - v1.49 | 2026-05-14 | Codex-架构师 | 补充 arXiv 每日论文纪要可采用 `3-5` 篇强相关主卡片 + 候选排除表的精筛口径，并新增对应只读检查命令。
 - v1.48 | 2026-05-13 | Codex-架构师 | 补充 arXiv 每日论文纪要需区分最新官方 listing、当日无新批次说明、日更收录与日更补录口径，并更新对应只读检查命令。
@@ -193,11 +195,14 @@
 - 若 arXiv 官方 `cs.RO/new` 或 `cs.RO/recent` 在本轮检索时尚未出现以当日为 listing 日期的新 Robotics 批次，仍可按当日日期形成每日纪要，但必须在文档变更记录与“检索口径”中写明本轮检索日期、官方最新 listing 日期、entries 总数、`new / cross / replacement` 数量，以及采用“最新官方 listing + 当日未出现新批次说明”或“日更补录”的原因与时间窗；该类纪要默认按研究输入处理，不因 listing 口径本身回写主线。
 - 若 arXiv 每日论文纪要从同一官方 listing 中连续收录或补录 `new submission`、`cross submission` 或 `replacement` 条目，应在每篇论文卡片元信息中保留 `本轮 listing 口径`，写清官方 listing 日期、条目类型和属于日更收录还是日更补录，避免后续误判为当日新批次或主线事实变化。
 - 若连续多个每日论文纪要复用同一官方 Robotics listing，应先排除前序主卡片已收录的论文标题与 arXiv 编号，并在“本轮总判断”或“周度滚动判断”中说明已饱和 / 接近饱和主题；重复度高的泛 `VLA`、world model、manipulation 或自动驾驶条目优先进入候选排除表，不因跨日补录扩张产品级模型层。
+- 若同一官方 Robotics listing 已被连续多日覆盖，本轮又转为 `cs.RO/recent` 近期待补录，应在每篇补录论文卡片的 `本轮 listing 口径` 中写明 `cs.RO/recent` entry 日期、`近期待补录` 和 abs 页 `Submitted on` 日期；不得把该类条目误写成最新 `cs.RO/new` listing 的当日新批次。
+- 若同一官方 Robotics listing 已进入饱和阶段，每日论文纪要应从继续扩张论文数量切换为周度综合判断：用表格或清单区分已饱和、接近专题成熟、仍值得专题跟踪的主题，并把新增论文收敛为轻量验证动作或专题候选；若只有 `2-3` 篇论文仍有明确增量，不必硬凑 `3-5` 篇，不得因补录论文继续新增产品级在线组件或主线概念。
 - 若本轮 Robotics listing 中真正能改变 Kinbot 判断的论文有限，可不固定凑满 `10` 篇；优先保留 `3-5` 篇强相关主卡片，并增设“候选排除表”收纳有价值但未进入主卡片的条目。`replacement` / `cross submission` 仅在新增 Kinbot 评测项、治理项或端侧资源判断时才进入主卡片，避免把重复主题硬写成主线变化。
 - arXiv 每日论文纪要的“本轮总判断”中应保留 `推荐优先级` 表，按论文价值给出建议动作；若本轮有技术价值高但不适合 Kinbot 一代主线的相邻候选，应在“检索口径”中补 `未优先收录说明`，明确排除原因，避免误写成传感主线、形态边界或 Phase 5 门控变化。
 - arXiv 每日论文纪要应保留 `检索口径 -> 本轮总判断 -> 论文卡片 -> 候选排除表（若采用精筛口径） -> 对 Kinbot 的落地 / 文档建议 -> 来源` 的基本结构；若本轮不回写主线，应显式说明未进入主线的原因或复杂度自检判断。
 - 涉及 `VLN` 路线、导航推理和相关前瞻技术判断时，应通过独立 Linear issue 与 `VLN` 专项线程交叉校验，并在需要时回写 `docs/09_research/01_vln_role_analysis_and_technical_plan.md`
 - 若当前线程处理 `VLN -> NFM`、长期记忆、导航基础问题或数据设计等专题深化，应优先在 `docs/09_research/07_vln_model_design/` 下推进；当专题结论影响主线时，再回写 `docs/09_research/01_vln_role_analysis_and_technical_plan.md`、相关主线文档与索引
+- 若当前线程处理 VLN 项目年度总结、历史指标复盘或外部协作文档导入，应核对 `docs/09_research/07_annual_summary_of_vln_project.md` 是否已同步 `docs/09_research/README.md` 与 `CHANGELOG.md`；在索引未同步前仅作为待整理研究输入。引用其中 `SR / SPL / 成功率` 时必须保留任务类型、prompt、阈值、测评集和模型版本，避免把 `ObjectNav` 与 `InstanceImageNav`、自建集与 `HM3D` 结果直接比较。TODO：确认该年度总结最终应回写 `01_vln_role_analysis_and_technical_plan.md` 还是保留为归档型研究输入。
 - 若当前线程使用 `superpowers` 生成工作计划或规格草稿，应统一落到 `docs/superpowers/` 及其 `plans/` 子目录；该目录只承接工作文档，不替代主线架构、评审或量产基线文档
 - 若当前线程执行 `docs/superpowers/` 中的实现计划，应按计划头部约束优先使用 `superpowers:subagent-driven-development`；若不适合并行拆解，则使用 `superpowers:executing-plans` 按任务顺序推进
 - `docs/superpowers/` 新增或调整文档后，需同步回写 `docs/superpowers/README.md`；若其影响仓库总入口或阶段入口，再同步检查根目录 `README.md` 与 `CHANGELOG.md`
@@ -211,11 +216,13 @@
 - 当前主线事实源默认收敛为 `05_system_architecture_principles.md -> 01_overall_architecture.md -> 03_execution_paradigms_runtime_baseline.md -> 合同/专题层 -> 03_p2_feasibility/01_overall_solution_and_module_design_baseline.md`
 - 涉及成本、重量、尺寸、功耗、药箱、屏幕、交互、运动性能、端侧资源、后台服务 / 坐席或数据治理之间的系统组成取舍时，应默认先使用 `docs/03_p2_feasibility/08_system_tradeoff_model_and_priority_matrix.md` 的“硬门槛 -> 价值评分 -> 资源消耗 -> 风险转移 -> 双成本情景”模型，再回写对应 `S1-S7` 工作包或主线文档。
 - 当前主线已进入 `Phase 5：验证口径与治理闭环`；涉及验证规划、量产预备门控、试点进入条件或战略证据包判断时，应默认以 `docs/05_p4_beta_dvt/01_mvp_validation_plan.md` 与 `docs/06_p5_launch_readiness/01_mass_production_readiness_criteria.md` 作为当前执行 / 门控入口
+- TODO：`input/00_requirements/00_user_requirements_input.md` 已出现 `Step 52` 工作计划阶段性刷新；后续处理本体结构、双目视觉、`VLN` 数据集、机器人 `Agent` 系统、9 月家庭样机试点或 12 月设计定型 / 百台目标时，应先判断是否需要回写 `plan/task_plan.md`、`plan/notes.md`、`Phase 5` 文档与 Linear，不得把未同步计划误写为已完成事实。
 - 若当前线程进一步涉及量产导入、发布准备、对外交付组织或交付闭环责任划分，应同步读取 `docs/06_p5_launch_readiness/02_production_introduction_launch_and_delivery_closure.md`，避免 `Phase 5` 后段工作仅按门控标准理解、遗漏导入与交付链路设计
 - 当前 `Phase 5` 只冻结架构侧验证规划、双泳道门控和治理预留；不得把未发生的实机 / 市场闭环表述成已完成事实，后续真实收口默认由 `KBT-55` 承接
 - 涉及后台服务 / 人工坐席立项联动、非隐私数据回流、`10000` 元 BOM 战略分支、`29999` 元定价、首批 `10000` 台或租售并行时，默认引用 `KBT-57`，并标注为 `provisional`，不得写成已确认决策
 - `docs/02_p1_architecture/14_family_co_living_agent_paradigm.md` 只保留背景 / 决策来路锚点角色；`docs/02_p1_architecture/02_pdcp_system_architecture_review_package.md` 只保留阶段评审包角色，不再作为并列主入口
-- `docs/08_reviews/` 默认只保留 `21 / 25 / 24 / 26 / archive README` 作为活跃入口；其余历史评审稿、旧阶段收口稿与革新决策链文档进入 `archive/`
+- 涉及 `EMT` 成本锚定、`6000 / 10000` 元双 BOM 情景、技术降本路径、行业成本对标或成本上修优先级时，应同步读取 `docs/03_p2_feasibility/09_cost_scenario_comparison_report.md` 与 `docs/08_reviews/27_kinbot_cost_anchor_and_bom_scenarios_for_emt.md`；`27` 号文档是面向 `EMT` 的汇报稿，不替代 `09` 号工程分析底稿。引用用户线下口径或非公开估算时必须标注来源口径，不得写成公开可验证事实。
+- `docs/08_reviews/` 默认只保留 `21 / 25 / 24 / 26 / 27 / archive README` 作为活跃入口；其余历史评审稿、旧阶段收口稿与革新决策链文档进入 `archive/`
 - `docs/08_reviews/` 中新增的复杂度复盘、阶段后总结与类似“总结型评审”文档，默认也进入 `archive/`，不扩张活跃评审入口
 - `docs/superpowers/plans/` 只保留尚未被主线吸收的工作文档；已被主线吸收的计划应迁入 `docs/superpowers/archive/`
 - 活跃主线文档默认目标控制在 `500` 行左右；若超过 `600` 行，必须在文档定位、目录索引或相关治理文档中说明其继续保留为单文件的理由
@@ -246,7 +253,7 @@
 - 分层关系
 - 阶段门或闭环关系
 
-优先使用 Mermaid。
+优先使用 Mermaid，并要做美化。
 
 ## 9. Linear 协作规则
 
@@ -288,15 +295,19 @@ Linear 是正式项目管理软件。
 - `find input output -maxdepth 2 -name README.md | sed 's#^./##' | sort`：快速检查输入目录说明与交付包入口 `README.md` 是否齐备，避免新增目录后只补文件不补入口说明
 - `find docs/00_governance/decision_log -maxdepth 2 -type f | sed 's#^./##' | sort`：快速检查决策日志派生索引与历史分卷是否有新增入口待纳入治理索引或主线引用
 - `find docs/superpowers -name "*.md" | sed 's#^./##' | sort`：快速检查 `superpowers` 工作文档及其索引是否已纳入仓库视图
-- `find docs/08_reviews -maxdepth 1 -type f | sed 's#^./##' | sort`：快速检查活跃评审入口是否与 `docs/08_reviews/README.md` 一致，尤其关注 `21 / 24 / 25 / 26` 是否仍为当前有效输入
+- `find docs/08_reviews -maxdepth 1 -type f | sed 's#^./##' | sort`：快速检查活跃评审入口是否与 `docs/08_reviews/README.md` 一致，尤其关注 `21 / 24 / 25 / 26 / 27` 是否仍为当前有效输入
+- `rg -n "27_kinbot|成本锚|双 BOM|6000|10000|科沃斯|八界|成本上修|技术降本" README.md docs/08_reviews/README.md docs/08_reviews/27_kinbot_cost_anchor_and_bom_scenarios_for_emt.md docs/03_p2_feasibility/09_cost_scenario_comparison_report.md`：快速检查 `08_reviews/27` 是否已作为 EMT 成本汇报入口同步，并核对双 BOM、行业参照和成本上修口径是否一致
 - `find docs/03_p2_feasibility -maxdepth 1 -name "*.md" | sed 's#^./##' | sort`：快速检查 `P2` 总体方案、选型、成本、功耗、权衡模型与工程化文档入口是否有新增或索引漂移
 - `find docs/09_research/00_papers -maxdepth 1 -name "*.md" | sed 's#^./##' | sort`：快速检查 arXiv 每日论文纪要和目录索引是否有新增入口待纳入研究目录视图
 - `rg -n "^### 3\\.|arXiv \\|" docs/09_research/00_papers/20*_kinbot_arxiv_daily.md`：快速清点每日论文纪要中已收录的论文标题与 arXiv 编号，新增或补录前用于避免重复收录
 - `rg -n "^## [0-9]+\\. (检索口径|本轮总判断|论文卡片|.*建议|复杂度自检|本轮未进入主线|来源)" docs/09_research/00_papers/20*_kinbot_arxiv_daily.md`：快速检查每日论文纪要是否保留检索、判断、卡片、建议、复杂度 / 主线回写说明与来源段落
 - `rg -n "推荐优先级|复杂度自检|未优先收录说明|本轮未进入主线的原因" docs/09_research/00_papers/20*_kinbot_arxiv_daily.md`：快速检查每日论文纪要是否保留推荐排序、复杂度自检、候选排除说明与主线不回写理由
-- `rg -n "候选排除表|3-5 篇|不再固定凑满 `10` 篇|replacement 主卡片|cross submission" docs/09_research/00_papers/20*_kinbot_arxiv_daily.md`：快速检查每日论文纪要是否按精筛口径记录主卡片数量约束、候选排除表与 replacement / cross 收录边界
+- `rg -n "候选排除表|3-5 篇|不再固定凑满|不硬凑|只收录.*[23] 篇|replacement 主卡片|cross submission" docs/09_research/00_papers/20*_kinbot_arxiv_daily.md`：快速检查每日论文纪要是否按精筛口径记录主卡片数量约束、候选排除表、饱和后低篇数收录与 replacement / cross 收录边界
 - `rg -n "本轮 listing 口径|new submission|cross submission|replacement|日更收录|日更补录" docs/09_research/00_papers/20*_kinbot_arxiv_daily.md`：快速检查日更论文卡片是否标注官方 listing 日期、条目类型与收录 / 补录口径，避免把跨日补录误判为当日新批次
 - `rg -n "本轮检索日期|官方.*listing|entries|new submissions|cross submissions|replacement submissions|当日未出现新批次|日更收录|日更补录|补查|近期待补录" docs/09_research/00_papers/20*_kinbot_arxiv_daily.md`：快速检查每日论文纪要是否记录真实检索日期、官方最新批次、条目数量和收录 / 补录口径，尤其用于官方无同日新批次但仍生成日更时
+- `rg -n "周度综合判断|周度滚动判断|已饱和|接近饱和|接近专题成熟|近期待补录|recent entry|Submitted on" docs/09_research/00_papers/20*_kinbot_arxiv_daily.md`：快速检查同一官方 listing 连续复用后是否保留周度饱和判断、近期待补录说明和 `cs.RO/recent` 条目元信息
+- `find docs/09_research -maxdepth 1 -name "*.md" | sed 's#^./##' | sort`：快速检查 `docs/09_research/` 根层研究文档是否有新增入口待同步父级索引、根索引或 `CHANGELOG.md`
+- `rg -n "任务类型|ObjectNav|InstanceImageNav|SR|SPL|Qwen3-VL|ASM|零样本|HM3D|自建" docs/09_research/07_annual_summary_of_vln_project.md`：快速检查 VLN 年度总结中的指标口径，避免把不同任务、测评集、prompt 或模型版本的结果直接混用
 - `find docs/09_research/07_vln_model_design -maxdepth 1 -name "*.md" | sed 's#^./##' | sort`：快速检查 `VLN / NFM` 专题子目录是否有新增研究文档待纳入索引或吸收进主线，并避免 `.DS_Store` 等本地噪声文件干扰
 - `find docs/10_team_planning -maxdepth 1 \\( -name "*.md" -o -name "*.csv" \\) | sed 's#^./##' | sort`：快速检查招聘基线、CTO 面试框架和候选人建议文档是否有新增输入或索引漂移
 - `rg -n "当前流程状态口径|已接受 offer|已放弃 offer|未到谈 offer 阶段|入职承接|流程结果" docs/10_team_planning/91_candidate_screening_and_interview_advice.md`：快速检查候选人 offer / 流程结束状态是否已刷新，避免把历史推进建议误读为当前仍在流程中

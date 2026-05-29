@@ -2,13 +2,17 @@
 
 ---
 
-文档版本：v1.6
+文档版本：v1.10
 创建日期：2026-03-13
 作者：Codex-架构师
 
 ---
 
 文档变更记录：
+- v1.10 | 2026-05-29 | Codex-架构师 | 将尚健、马高、陈子超三份技术一面已通过候选人简历吸收到 `91_candidate_screening_and_interview_advice.md` 后，继续使用 `archive/2026-05-29_processed/` 作为本轮已处理候选人资料归档目录。
+- v1.9 | 2026-05-29 | Codex-架构师 | 将林创伟简历和初面评价吸收到 `91_candidate_screening_and_interview_advice.md` 后，补充 `archive/2026-05-29_processed/` 作为本轮已处理候选人资料归档目录。
+- v1.8 | 2026-05-28 | Codex-架构师 | 将王鹏生简历和初面评价吸收到 `91_candidate_screening_and_interview_advice.md` 后，补充 `archive/2026-05-28_processed/` 作为本轮已处理候选人资料归档目录。
+- v1.7 | 2026-05-23 | Codex-架构师 | 将郭吉晖简历吸收到 `91_candidate_screening_and_interview_advice.md` 后，补充 `archive/2026-05-23_processed/` 作为本轮已处理候选人资料归档目录。
 - v1.6 | 2026-05-07 | Codex-架构师 | 将本轮已吸收到 `91_candidate_screening_and_interview_advice.md` 的六份具身智能算法简历归档至 `archive/2026-05-07_embodied_processed/`。
 - v1.5 | 2026-05-07 | Codex-架构师 | 将本轮已吸收到 `91_candidate_screening_and_interview_advice.md` 的马诚、赵阳结构传动简历归档至 `archive/2026-05-07_processed/`。
 - v1.4 | 2026-04-30 | Codex-架构师 | 将已处理候选人简历、面试总结和录音转写统一归档至 `archive/2026-04-30_processed/`，本目录根层继续作为新增待处理资料入口。
@@ -26,6 +30,12 @@
 - `archive/2026-04-30_processed/`
 - `archive/2026-05-07_processed/`
 - `archive/2026-05-07_embodied_processed/`
+- `archive/2026-05-15_processed/`
+- `archive/2026-05-21_processed/`
+- `archive/2026-05-22_processed/`
+- `archive/2026-05-23_processed/`
+- `archive/2026-05-28_processed/`
+- `archive/2026-05-29_processed/`
 
 ## 目录角色
 

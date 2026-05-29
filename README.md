@@ -2,11 +2,12 @@
 
 ---
 
-文档版本：v1.39
+文档版本：v1.40
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.40 | 2026-05-23 | Codex-架构师 | 新增 `docs/08_reviews/27_kinbot_cost_anchor_and_bom_scenarios_for_emt.md` 作为 EMT 成本锚定、技术降本路径与双 BOM 情景汇报入口。
 - v1.39 | 2026-04-21 | Codex-架构师 | 吸收董事长汇报反馈入口：新增 `KBT-57` 作为后台服务 / 人工坐席联动立项与成本定价商业口径拆解承接项，并明确其不覆盖当前已冻结主线基线。
 - v1.38 | 2026-04-09 | Codex-架构师 | 修正根入口的表面复杂度与真实复杂度错位：将 `07_safety_compliance_authorization_api.md` 拉回当前有效入口与建议阅读顺序，明确其与 `01 / 03 / 05` 一起构成开发前置事实源。
 - v1.37 | 2026-04-09 | Codex-架构师 | 继续压缩主线复杂度：明确 `01 / 03 / 06` 的单一职责，补记 `P2-01` 为唯一开发入口，并同步刷新根入口阅读顺序与目录说明。
@@ -51,6 +52,7 @@
   - [docs/08_reviews/25_phase3_to_phase45_closure_and_strategic_input_package.md](docs/08_reviews/25_phase3_to_phase45_closure_and_strategic_input_package.md)
   - [docs/08_reviews/24_kbt52_strategic_ambition_gap_review.md](docs/08_reviews/24_kbt52_strategic_ambition_gap_review.md)
   - [docs/08_reviews/26_kinbot_technical_positioning_competition_and_strategic_choices_for_emt.md](docs/08_reviews/26_kinbot_technical_positioning_competition_and_strategic_choices_for_emt.md)
+  - [docs/08_reviews/27_kinbot_cost_anchor_and_bom_scenarios_for_emt.md](docs/08_reviews/27_kinbot_cost_anchor_and_bom_scenarios_for_emt.md)
 - `Phase 5` 的执行与门控，请看：
   - [docs/05_p4_beta_dvt/01_mvp_validation_plan.md](docs/05_p4_beta_dvt/01_mvp_validation_plan.md)
   - [docs/06_p5_launch_readiness/01_mass_production_readiness_criteria.md](docs/06_p5_launch_readiness/01_mass_production_readiness_criteria.md)
@@ -66,7 +68,7 @@
 6. [docs/02_p1_architecture/07_safety_compliance_authorization_api.md](docs/02_p1_architecture/07_safety_compliance_authorization_api.md)
 7. [docs/02_p1_architecture/06_decision_state_machine.md](docs/02_p1_architecture/06_decision_state_machine.md)
 8. [docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md](docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md)
-9. [docs/08_reviews/README.md](docs/08_reviews/README.md) -> [docs/08_reviews/21_seven_entity_world_state_target_model.md](docs/08_reviews/21_seven_entity_world_state_target_model.md) -> [docs/08_reviews/25_phase3_to_phase45_closure_and_strategic_input_package.md](docs/08_reviews/25_phase3_to_phase45_closure_and_strategic_input_package.md) -> [docs/08_reviews/24_kbt52_strategic_ambition_gap_review.md](docs/08_reviews/24_kbt52_strategic_ambition_gap_review.md) -> [docs/08_reviews/26_kinbot_technical_positioning_competition_and_strategic_choices_for_emt.md](docs/08_reviews/26_kinbot_technical_positioning_competition_and_strategic_choices_for_emt.md)
+9. [docs/08_reviews/README.md](docs/08_reviews/README.md) -> [docs/08_reviews/21_seven_entity_world_state_target_model.md](docs/08_reviews/21_seven_entity_world_state_target_model.md) -> [docs/08_reviews/25_phase3_to_phase45_closure_and_strategic_input_package.md](docs/08_reviews/25_phase3_to_phase45_closure_and_strategic_input_package.md) -> [docs/08_reviews/24_kbt52_strategic_ambition_gap_review.md](docs/08_reviews/24_kbt52_strategic_ambition_gap_review.md) -> [docs/08_reviews/26_kinbot_technical_positioning_competition_and_strategic_choices_for_emt.md](docs/08_reviews/26_kinbot_technical_positioning_competition_and_strategic_choices_for_emt.md) -> [docs/08_reviews/27_kinbot_cost_anchor_and_bom_scenarios_for_emt.md](docs/08_reviews/27_kinbot_cost_anchor_and_bom_scenarios_for_emt.md)
 10. [docs/05_p4_beta_dvt/01_mvp_validation_plan.md](docs/05_p4_beta_dvt/01_mvp_validation_plan.md)
 11. [docs/06_p5_launch_readiness/01_mass_production_readiness_criteria.md](docs/06_p5_launch_readiness/01_mass_production_readiness_criteria.md)
 12. [docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md)
