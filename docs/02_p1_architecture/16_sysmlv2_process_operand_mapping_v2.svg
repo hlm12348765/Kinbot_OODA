@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="3840" height="3040" viewBox="0 0 3840 3040" role="img" aria-labelledby="title desc">
+  <title id="title">Kinbot SysML v2 过程与操作数匹配</title>
+  <desc id="desc">使用 SysML v2 item definition、action definition 和 parameters compartment 表示八个信息空间过程、五个物理空间过程及其输入输出操作数。</desc>
+  <style>
+    .frame { fill: #ffffff; stroke: #111111; stroke-width: 3; }
+    .member { fill: #ffffff; stroke: #111111; stroke-width: 2.5; }
+    .divider { stroke: #111111; stroke-width: 2; }
+    .tab-text { font-family: "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", Arial, sans-serif; font-size: 30px; font-weight: 500; fill: #111111; }
+    .kind { font-family: "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", Arial, sans-serif; font-size: 27px; font-weight: 400; fill: #111111; text-anchor: middle; }
+    .name { font-family: "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", Arial, sans-serif; font-size: 29px; font-weight: 500; fill: #111111; text-anchor: middle; }
+    .compartment { font-family: "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", Arial, sans-serif; font-size: 25px; font-style: italic; font-weight: 400; fill: #111111; text-anchor: middle; }
+    .parameter { font-family: "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", Arial, sans-serif; font-size: 25px; font-weight: 400; fill: #111111; }
+  </style>
+
+  <rect x="0" y="0" width="3840" height="3040" fill="#ffffff"/>
+
+  <!-- Root package -->
+  <rect class="frame" x="40" y="100" width="3760" height="2880"/>
+  <rect class="frame" x="40" y="40" width="980" height="60"/>
+  <text class="tab-text" x="62" y="80">KinbotProcessOperandMapping</text>
+
+  <!-- Operand definitions package -->
+  <rect class="frame" x="100" y="210" width="3640" height="480"/>
+  <rect class="frame" x="100" y="155" width="310" height="55"/>
+  <text class="tab-text" x="122" y="193">Operands</text>
+
+  <g aria-label="Information item definitions">
+    <rect class="member" x="140" y="260" width="470" height="145"/>
+    <text class="kind" x="375" y="310">«item def»</text>
+    <text class="name" x="375" y="365">&lt;I1&gt; 输入与约束</text>
+
+    <rect class="member" x="655" y="260" width="470" height="145"/>
+    <text class="kind" x="890" y="310">«item def»</text>
+    <text class="name" x="890" y="365">&lt;I2&gt; 观察与事件</text>
+
+    <rect class="member" x="1170" y="260" width="470" height="145"/>
+    <text class="kind" x="1405" y="310">«item def»</text>
+    <text class="name" x="1405" y="365">&lt;I3&gt; 状态与上下文</text>
+
+    <rect class="member" x="1685" y="260" width="470" height="145"/>
+    <text class="kind" x="1920" y="310">«item def»</text>
+    <text class="name" x="1920" y="365">&lt;I4&gt; 目标与行动方案</text>
+
+    <rect class="member" x="2200" y="260" width="470" height="145"/>
+    <text class="kind" x="2435" y="310">«item def»</text>
+    <text class="name" x="2435" y="365">&lt;I5&gt; 安全与授权决定</text>
+
+    <rect class="member" x="2715" y="260" width="470" height="145"/>
+    <text class="kind" x="2950" y="310">«item def»</text>
+    <text class="name" x="2950" y="365">&lt;I6&gt; 能力调用与执行状态</text>
+
+    <rect class="member" x="3230" y="260" width="470" height="145"/>
+    <text class="kind" x="3465" y="310">«item def»</text>
+    <text class="name" x="3465" y="365">&lt;I7&gt; 结果与信息输出</text>
+
+    <rect class="member" x="397" y="455" width="470" height="145"/>
+    <text class="kind" x="632" y="505">«item def»</text>
+    <text class="name" x="632" y="560">&lt;I8&gt; 运行资源与版本状态</text>
+  </g>
+
+  <g aria-label="Physical item definitions">
+    <rect class="member" x="912" y="455" width="470" height="145"/>
+    <text class="kind" x="1147" y="505">«item def»</text>
+    <text class="name" x="1147" y="560">&lt;P1&gt; 可感知物理现象</text>
+
+    <rect class="member" x="1427" y="455" width="470" height="145"/>
+    <text class="kind" x="1662" y="505">«item def»</text>
+    <text class="name" x="1662" y="560">&lt;P2&gt; 能量与热状态</text>
+
+    <rect class="member" x="1942" y="455" width="470" height="145"/>
+    <text class="kind" x="2177" y="505">«item def»</text>
+    <text class="name" x="2177" y="560">&lt;P3&gt; 机器人行为与作用</text>
+
+    <rect class="member" x="2457" y="455" width="470" height="145"/>
+    <text class="kind" x="2692" y="505">«item def»</text>
+    <text class="name" x="2692" y="560">&lt;P4&gt; 物质与载荷</text>
+
+    <rect class="member" x="2972" y="455" width="470" height="145"/>
+    <text class="kind" x="3207" y="505">«item def»</text>
+    <text class="name" x="3207" y="560">&lt;P5&gt; 物理状态变化与反馈</text>
+  </g>
+
+  <!-- Information-space action definitions package -->
+  <rect class="frame" x="100" y="800" width="1820" height="2090"/>
+  <rect class="frame" x="100" y="745" width="420" height="55"/>
+  <text class="tab-text" x="122" y="783">信息空间过程</text>
+
+  <g aria-label="I-P1">
+    <rect class="member" x="150" y="860" width="820" height="410"/>
+    <text class="kind" x="560" y="905">«action def»</text>
+    <text class="name" x="560" y="950">&lt;I-P1&gt; 形成并校验观察</text>
+    <line class="divider" x1="150" y1="980" x2="970" y2="980"/>
+    <text class="compartment" x="560" y="1020">parameters</text>
+    <text class="parameter" x="178" y="1068">in  传感 / 消息 / 事件输入 : I1</text>
+    <text class="parameter" x="178" y="1110">out 观察与事件 : I2</text>
+  </g>
+
+  <g aria-label="I-P2">
+    <rect class="member" x="1035" y="860" width="820" height="410"/>
+    <text class="kind" x="1445" y="905">«action def»</text>
+    <text class="name" x="1445" y="950">&lt;I-P2&gt; Orient：理解、融合并维护状态</text>
+    <line class="divider" x1="1035" y1="980" x2="1855" y2="980"/>
+    <text class="compartment" x="1445" y="1020">parameters</text>
+    <text class="parameter" x="1063" y="1068">in  输入与约束 : I1</text>
+    <text class="parameter" x="1063" y="1110">in  观察与事件 : I2</text>
+    <text class="parameter" x="1063" y="1152">in  结果与信息输出 : I7</text>
+    <text class="parameter" x="1063" y="1194">in  先前状态与上下文 : I3</text>
+    <text class="parameter" x="1063" y="1236">out 更新后的状态与上下文 : I3</text>
+  </g>
+
+  <g aria-label="I-P3">
+    <rect class="member" x="150" y="1340" width="820" height="410"/>
+    <text class="kind" x="560" y="1385">«action def»</text>
+    <text class="name" x="560" y="1430">&lt;I-P3&gt; 形成目标与行动方案</text>
+    <line class="divider" x1="150" y1="1460" x2="970" y2="1460"/>
+    <text class="compartment" x="560" y="1500">parameters</text>
+    <text class="parameter" x="178" y="1548">in  输入与约束 : I1</text>
+    <text class="parameter" x="178" y="1590">in  状态与上下文 : I3</text>
+    <text class="parameter" x="178" y="1632">out 目标与行动方案 : I4</text>
+  </g>
+
+  <g aria-label="I-P4">
+    <rect class="member" x="1035" y="1340" width="820" height="410"/>
+    <text class="kind" x="1445" y="1385">«action def»</text>
+    <text class="name" x="1445" y="1430">&lt;I-P4&gt; 评估风险并授权行动</text>
+    <line class="divider" x1="1035" y1="1460" x2="1855" y2="1460"/>
+    <text class="compartment" x="1445" y="1500">parameters</text>
+    <text class="parameter" x="1063" y="1548">in  输入与约束 : I1</text>
+    <text class="parameter" x="1063" y="1590">in  状态与上下文 : I3</text>
+    <text class="parameter" x="1063" y="1632">in  目标与行动方案 : I4</text>
+    <text class="parameter" x="1063" y="1674">out 安全与授权决定 : I5</text>
+  </g>
+
+  <g aria-label="I-P5">
+    <rect class="member" x="150" y="1820" width="820" height="410"/>
+    <text class="kind" x="560" y="1865">«action def»</text>
+    <text class="name" x="560" y="1910">&lt;I-P5&gt; 分派目标并组织能力调用</text>
+    <line class="divider" x1="150" y1="1940" x2="970" y2="1940"/>
+    <text class="compartment" x="560" y="1980">parameters</text>
+    <text class="parameter" x="178" y="2028">in  目标与行动方案 : I4</text>
+    <text class="parameter" x="178" y="2070">in  安全与授权决定 : I5</text>
+    <text class="parameter" x="178" y="2112">in  运行资源与版本状态 : I8</text>
+    <text class="parameter" x="178" y="2154">out 能力调用与执行状态 : I6</text>
+  </g>
+
+  <g aria-label="I-P6">
+    <rect class="member" x="1035" y="1820" width="820" height="410"/>
+    <text class="kind" x="1445" y="1865">«action def»</text>
+    <text class="name" x="1445" y="1910">&lt;I-P6&gt; 执行信息能力</text>
+    <line class="divider" x1="1035" y1="1940" x2="1855" y2="1940"/>
+    <text class="compartment" x="1445" y="1980">parameters</text>
+    <text class="parameter" x="1063" y="2028">in  状态与上下文 : I3</text>
+    <text class="parameter" x="1063" y="2070">in  安全与授权决定 : I5</text>
+    <text class="parameter" x="1063" y="2112">in  能力调用与执行状态 : I6</text>
+    <text class="parameter" x="1063" y="2154">out 结果与信息输出 : I7</text>
+  </g>
+
+  <g aria-label="I-P7">
+    <rect class="member" x="150" y="2300" width="820" height="410"/>
+    <text class="kind" x="560" y="2345">«action def»</text>
+    <text class="name" x="560" y="2390">&lt;I-P7&gt; 验证结果并维持连续性</text>
+    <line class="divider" x1="150" y1="2420" x2="970" y2="2420"/>
+    <text class="compartment" x="560" y="2460">parameters</text>
+    <text class="parameter" x="178" y="2508">in  观察与事件 : I2</text>
+    <text class="parameter" x="178" y="2550">in  能力调用与执行状态 : I6</text>
+    <text class="parameter" x="178" y="2592">in  当前结果 : I7</text>
+    <text class="parameter" x="178" y="2634">out 结果与状态变化 : I7</text>
+  </g>
+
+  <g aria-label="I-P8">
+    <rect class="member" x="1035" y="2300" width="820" height="410"/>
+    <text class="kind" x="1445" y="2345">«action def»</text>
+    <text class="name" x="1445" y="2390">&lt;I-P8&gt; 管理运行资源与更新</text>
+    <line class="divider" x1="1035" y1="2420" x2="1855" y2="2420"/>
+    <text class="compartment" x="1445" y="2460">parameters</text>
+    <text class="parameter" x="1063" y="2508">in  资源政策 : I1</text>
+    <text class="parameter" x="1063" y="2550">in  资源需求 : I6</text>
+    <text class="parameter" x="1063" y="2592">in  当前运行资源与版本状态 : I8</text>
+    <text class="parameter" x="1063" y="2634">out 更新后的运行资源与版本状态 : I8</text>
+  </g>
+
+  <!-- Physical-space action definitions package -->
+  <rect class="frame" x="1960" y="800" width="1780" height="2090"/>
+  <rect class="frame" x="1960" y="745" width="420" height="55"/>
+  <text class="tab-text" x="1982" y="783">物理空间过程</text>
+
+  <g aria-label="P-P1">
+    <rect class="member" x="2010" y="860" width="820" height="570"/>
+    <text class="kind" x="2420" y="905">«action def»</text>
+    <text class="name" x="2420" y="950">&lt;P-P1&gt; 感受并转换物理现象</text>
+    <line class="divider" x1="2010" y1="980" x2="2830" y2="980"/>
+    <text class="compartment" x="2420" y="1020">parameters</text>
+    <text class="parameter" x="2038" y="1068">in  可感知物理现象 : P1</text>
+    <text class="parameter" x="2038" y="1110">in  物理状态变化与反馈 : P5</text>
+    <text class="parameter" x="2038" y="1152">out 传感数据包 : I1</text>
+  </g>
+
+  <g aria-label="P-P2">
+    <rect class="member" x="2880" y="860" width="820" height="570"/>
+    <text class="kind" x="3290" y="905">«action def»</text>
+    <text class="name" x="3290" y="950">&lt;P-P2&gt; 接收、转换并分配能量</text>
+    <line class="divider" x1="2880" y1="980" x2="3700" y2="980"/>
+    <text class="compartment" x="3290" y="1020">parameters</text>
+    <text class="parameter" x="2908" y="1068">in  能量与热状态 : P2</text>
+    <text class="parameter" x="2908" y="1110">in  运行资源与版本状态 : I8</text>
+    <text class="parameter" x="2908" y="1152">out 受控能量与热状态 : P2</text>
+  </g>
+
+  <g aria-label="P-P3">
+    <rect class="member" x="2010" y="1480" width="820" height="570"/>
+    <text class="kind" x="2420" y="1525">«action def»</text>
+    <text class="name" x="2420" y="1570">&lt;P-P3&gt; 执行机器人行为</text>
+    <line class="divider" x1="2010" y1="1600" x2="2830" y2="1600"/>
+    <text class="compartment" x="2420" y="1640">parameters</text>
+    <text class="parameter" x="2038" y="1688">in  安全与授权决定 : I5</text>
+    <text class="parameter" x="2038" y="1730">in  能力调用与执行状态 : I6</text>
+    <text class="parameter" x="2038" y="1772">in  能量与热状态 : P2</text>
+    <text class="parameter" x="2038" y="1814">out 机器人行为与作用 : P3</text>
+    <text class="parameter" x="2038" y="1856">out 物理状态变化与反馈 : P5</text>
+  </g>
+
+  <g aria-label="P-P4">
+    <rect class="member" x="2880" y="1480" width="820" height="570"/>
+    <text class="kind" x="3290" y="1525">«action def»</text>
+    <text class="name" x="3290" y="1570">&lt;P-P4&gt; 容纳、运输并交接载荷</text>
+    <line class="divider" x1="2880" y1="1600" x2="3700" y2="1600"/>
+    <text class="compartment" x="3290" y="1640">parameters</text>
+    <text class="parameter" x="2908" y="1688">in  安全与授权决定 : I5</text>
+    <text class="parameter" x="2908" y="1730">in  能力调用与执行状态 : I6</text>
+    <text class="parameter" x="2908" y="1772">in  机器人行为与作用 : P3</text>
+    <text class="parameter" x="2908" y="1814">in  物质与载荷 : P4</text>
+    <text class="parameter" x="2908" y="1856">out 更新后的物质与载荷 : P4</text>
+    <text class="parameter" x="2908" y="1898">out 物理状态变化与反馈 : P5</text>
+  </g>
+
+  <g aria-label="P-P5">
+    <rect class="member" x="2445" y="2100" width="820" height="570"/>
+    <text class="kind" x="2855" y="2145">«action def»</text>
+    <text class="name" x="2855" y="2190">&lt;P-P5&gt; 限制、中止并锁定危险行为</text>
+    <line class="divider" x1="2445" y1="2220" x2="3265" y2="2220"/>
+    <text class="compartment" x="2855" y="2260">parameters</text>
+    <text class="parameter" x="2473" y="2308">in  安全传感信号 : P1</text>
+    <text class="parameter" x="2473" y="2350">in  能量与热状态 : P2</text>
+    <text class="parameter" x="2473" y="2392">in  当前机器人行为 : P3</text>
+    <text class="parameter" x="2473" y="2434">in  当前物理状态 : P5</text>
+    <text class="parameter" x="2473" y="2476">out 受限机器人行为 : P3</text>
+    <text class="parameter" x="2473" y="2518">out 安全物理状态 : P5</text>
+    <text class="parameter" x="2473" y="2560">out 安全证据 : I7</text>
+  </g>
+</svg>

@@ -2,11 +2,38 @@
 
 ---
 
-文档版本：v1.30
+文档版本：v1.57
 创建日期：2026-04-29
 作者：Codex-架构师
 
 文档变更记录：
+- v1.57 | 2026-07-19 | Codex-架构师 | 新增 2026-07-19 Kinbot arXiv 每周论文纪要索引，在周日未出现当日新批次、官方最新 `cs.RO/new` 为 2026-07-17 Robotics listing 且 `cs.RO/recent` 覆盖 2026-07-13 至 2026-07-17 的口径下，按 5 篇精筛主卡片 + 候选排除表收录实机 VLN 失效、可编辑长期记忆、机器人侧能力合同，以及 world-action model 的因果动作偏置与想象—动作漂移，并记录周度饱和 / 专题跟踪判断。
+- v1.56 | 2026-07-12 | Codex-架构师 | 同日复核 2026-07-12 纪要，补查 2026-07-07 至 2026-07-09 的 world model 与长期记忆条目；将本周主卡片收敛为纯视觉动态避障、流式 VLN、对象持久性、world-model admissibility 与长时 action-faithful policy evaluation，并更新候选排除与周度饱和判断。
+- v1.55 | 2026-07-12 | Codex-架构师 | 新增 2026-07-12 Kinbot arXiv 每日论文纪要索引，在周日未出现当日新批次、官方最新 `cs.RO/new` 为 2026-07-10 Robotics listing 且 `cs.RO/recent` 覆盖 2026-07-03 至 2026-07-10 的差异口径下，按精筛主卡片 + 周度综合判断方式收录纯视觉动态避障、流式 VLN、开放词汇 ObjectNav、输入约束安全导航和居家认知刺激交互相关论文。
+- v1.54 | 2026-07-05 | Codex-架构师 | 新增 2026-07-05 Kinbot arXiv 每日论文纪要索引，在周日未出现当日新批次、官方最新 `cs.RO/new` 为 2026-07-03 Robotics listing 且 `cs.RO/recent` 覆盖 2026-06-29 至 2026-07-03 的差异口径下，按精筛主卡片 + 近期待补录 + 周度综合判断方式收录低层语言导航接口、端侧闭环推理 runtime、视觉语言延迟攻击、家庭找物个性化边界和纯 RGB 参考轨迹导航相关论文。
+- v1.53 | 2026-06-28 | Codex-架构师 | 新增 2026-06-28 Kinbot arXiv 每日论文纪要索引，在周日未出现当日新批次、官方最新 `cs.RO/new` 为 2026-06-25 Robotics listing 且 `cs.RO/recent` 已到 2026-06-26 的差异口径下，按精筛主卡片 + 近期待补录 + 周度综合判断方式收录长期导航时空记忆、长程控制记忆检索、VLA 安全诊断、低延迟证据对齐 VLM 和 VLA 测试 oracle 相关论文。
+- v1.52 | 2026-06-22 | Codex-架构师 | 新增 2026-06-22 Kinbot arXiv 每日论文纪要索引，在周一尚未出现新批次、官方最新 `cs.RO/new` 仍为 2026-06-19 Robotics listing 且同一 listing 已连续覆盖后，按日更补录 + 周度综合判断口径收录长期物品位置记忆、VLA / 策略失败可解释预测和自适应视觉伺服资源调度相关论文。
+- v1.51 | 2026-06-21 | Codex-架构师 | 新增 2026-06-21 Kinbot arXiv 每日论文纪要索引，在周日未出现新批次、官方最新 `cs.RO/new` 仍为 2026-06-19 Robotics listing 且前一日已精筛覆盖后，按日更补录 + 周度综合判断口径收录数据标准 / provenance、RGB last-meter 精定位和局部安全导航相关论文。
+- v1.50 | 2026-06-20 | Codex-架构师 | 新增 2026-06-20 Kinbot arXiv 每日论文纪要索引，在周六未出现新批次、官方最新 `cs.RO/new` 为 2026-06-19 Robotics listing 的口径下，按精筛主卡片 + 候选排除表方式收录导航失败预警、实时故障诊断、概率时序安全约束、慢 VLM / 快规划融合和机器人失败识别相关论文。
+- v1.49 | 2026-06-18 | Codex-架构师 | 新增 2026-06-18 Kinbot arXiv 每日论文纪要索引，在官方 `cs.RO/new` 仍为 2026-06-17 listing、`cs.RO/recent` 已出现 2026-06-18 条目的差异口径下，按近期待补录 + 精筛主卡片 + 候选排除表方式收录人身伤害预防安全集、几何监督导航 VLA、AI sandbox 验证边界、LLM 任务规划形式化验证和空间一致语义检索相关论文。
+- v1.48 | 2026-06-17 | Codex-架构师 | 新增 2026-06-17 Kinbot arXiv 每日论文纪要索引，基于官方最新 2026-06-17 Robotics listing，按 3-5 篇强相关论文 + 候选排除表口径收录长期导航证据记忆、视觉导航尺度安全、机器人端侧呼吸监测、Agentic Navigation 参数化接口和连续边缘推理资源评测相关论文，并记录 `cs.RO/new` / `cs.RO/recent` 顶部日期差异。
+- v1.47 | 2026-06-16 | Codex-架构师 | 新增 2026-06-16 Kinbot arXiv 每日论文纪要索引，在官方最新 Robotics listing 仍为 2026-06-15 且前一日已精筛覆盖主卡片后，按日更补录 + 周度综合判断口径收录选择性 Agent 恢复、缺失模态鲁棒预测、breadcrumb 返回导航和 VLA 查询预算调度相关论文，并保留候选排除表。
+- v1.46 | 2026-06-15 | Codex-架构师 | 新增 2026-06-15 Kinbot arXiv 每日论文纪要索引，基于官方最新 2026-06-15 Robotics listing，按 3-5 篇强相关论文 + 候选排除表口径收录训练-free 终身导航、端侧 ObjectNav 资源调度、延迟证据记忆、latent dynamics OOD 安全检测和楼层图先验导航相关论文，并记录 replacement 主卡片收录边界。
+- v1.45 | 2026-06-14 | Codex-架构师 | 新增 2026-06-14 Kinbot arXiv 每日论文纪要索引，在官方最新 Robotics listing 仍为 2026-06-12 且同一 listing 已连续覆盖后，按周日无新批次说明 + 饱和后的轻量补录 + 周度综合判断口径收录 world model 可信预测 horizon、约束内生生成策略和紧凑动作-效果记忆相关论文，并保留候选排除表。
+- v1.44 | 2026-06-13 | Codex-架构师 | 新增 2026-06-13 Kinbot arXiv 每日论文纪要索引，在官方最新 Robotics listing 仍为 2026-06-12 且前一日已覆盖主卡片后，按日更补录 + 周度综合判断口径收录隐式协作辅助时机、手势 grounding 和约束冲突最小违背规划相关论文，并保留候选排除表。
+- v1.43 | 2026-06-12 | Codex-架构师 | 新增 2026-06-12 Kinbot arXiv 每日论文纪要索引，基于官方最新 2026-06-12 Robotics listing，按 3-5 篇强相关论文 + 候选排除表口径收录开放导航线索推理、安全标准控制约束、实时自回归策略执行、端云对象级语义地图和稀疏人工反馈安全预警相关论文，并记录周度综合判断。
+- v1.42 | 2026-06-11 | Codex-架构师 | 新增 2026-06-11 Kinbot arXiv 每日论文纪要索引，基于官方最新 2026-06-11 Robotics listing，按 3-5 篇强相关论文 + 候选排除表口径收录视觉导航安全、社交导航实机可行性、测试时算力路由、多模态异步控制和具身 benchmark 证据链相关论文，并记录周度综合判断。
+- v1.41 | 2026-06-10 | Codex-架构师 | 新增 2026-06-10 Kinbot arXiv 每日论文纪要索引，基于官方最新 2026-06-10 Robotics listing，按 3-5 篇强相关论文 + 候选排除表口径收录单目跨本体局部规划、关系归纳 ObjectNav、社交导航安全、非侵入式 ROS 2 观测和老人照护基础模型评测口径相关论文，并记录周度综合判断。
+- v1.40 | 2026-06-09 | Codex-架构师 | 新增 2026-06-09 Kinbot arXiv 每日论文纪要索引，基于官方最新 2026-06-08 Robotics listing，按 3-5 篇强相关论文 + 候选排除表口径收录语义场景覆盖、透明共享自主、任务级运行时保证、选择性强策略接管和规划对齐上下文压缩相关论文，并记录周度综合判断。
+- v1.39 | 2026-06-07 | Codex-架构师 | 新增 2026-06-07 Kinbot arXiv 每日论文纪要索引，在官方最新 Robotics listing 仍为 2026-06-05 且前一日已覆盖主卡片后，按日更补录 + 周度综合判断口径收录安全证据强度分层、运行时动作 OOD 干预门和导航训练碰撞 reset 策略相关论文，并记录候选排除表。
+- v1.38 | 2026-06-06 | Codex-架构师 | 新增 2026-06-06 Kinbot arXiv 每日论文纪要索引，基于官方最新 2026-06-05 Robotics listing + 周六未出现新批次说明口径，按 3-5 篇强相关论文 + 候选排除表收录形式化技能验证、示教数据质量审计、policy-in-loop 世界模型评估、本地 LLM/VLM 交互确认链路和功能性 affordance latent 相关论文，并记录周度综合判断。
+- v1.37 | 2026-06-04 | Codex-架构师 | 新增 Kinbot A 档论文整合调研评审与全景信息图，汇总 2026-04-29 至 2026-06-04 每日论文任务中 `A / A-` 论文，形成六类主题簇、主线影响判断和 Phase 5 字段包建议。
+- v1.36 | 2026-06-04 | Codex-架构师 | 新增 2026-06-04 Kinbot arXiv 每日论文纪要索引，基于官方最新 2026-06-04 Robotics listing + 近期待补录口径，按 3-5 篇强相关论文 + 候选排除表收录家庭价值冲突评测、选择性机器人情景记忆、端侧自然语言摄像头 Agent、语义场景重建验证和成本感知交互式目标导航相关论文，并记录周度滚动判断。
+- v1.35 | 2026-06-03 | Codex-架构师 | 新增 2026-06-03 Kinbot arXiv 每日论文纪要索引，基于官方最新 2026-06-02 Robotics listing，按 3-5 篇强相关论文 + 候选排除表口径，收录纯视觉主动重建、开放词汇导航不确定性、动态室内语义记忆、低调用 VLN 接口和 VLA 成功 / 安全缺口评测相关论文，并记录周度滚动判断。
+- v1.34 | 2026-06-02 | Codex-架构师 | 新增 2026-06-02 Kinbot arXiv 每日论文纪要索引，基于官方最新 2026-06-01 Robotics listing，按 3-5 篇强相关论文 + 候选排除表口径，收录室内语义全局定位、VLA 运行时失败检测、视觉语言模型碰撞 grounding、端侧推理冗余消除和 batch-1 物理 AI 推理资源相关论文，并记录周度滚动判断。
+- v1.33 | 2026-06-01 | Codex-架构师 | 新增 2026-06-01 Kinbot arXiv 每日论文纪要索引，在官方最新 Robotics listing 仍为 2026-05-29 且同一 listing 已连续覆盖后，按日更补录 + 周度滚动判断口径，收录人与机器人近身安全、穿戴动作数据校准和低成本外场验证组织相关论文。
+- v1.32 | 2026-05-31 | Codex-架构师 | 新增 2026-05-31 Kinbot arXiv 每日论文纪要索引，在官方最新 Robotics listing 仍为 2026-05-29 且同一 listing 已于 2026-05-30 覆盖后，按日更补录 + 周度综合判断口径，收录端侧视觉分辨率门控、扩散式视觉导航安全约束和仿真验证 provenance 相关论文。
+- v1.31 | 2026-05-30 | Codex-架构师 | 新增 2026-05-30 Kinbot arXiv 每日论文纪要索引，基于官方最新 2026-05-29 Robotics listing，按 3-5 篇强相关论文 + 候选排除表口径，收录端侧 VLA 动态算力调度、VLA 成功置信校准、任意外形本体安全导航、实机 VLA 分布式评测方法和动态 3D 高斯场景图长期记忆相关论文，并记录周度综合判断。
 - v1.30 | 2026-05-29 | Codex-架构师 | 新增 2026-05-29 Kinbot arXiv 每日论文纪要索引，基于官方最新 2026-05-28 Robotics listing，按 3-5 篇强相关论文 + 候选排除表口径，收录零样本视觉语言导航闭环、视觉地点识别安全拒绝、家庭物品归属记忆与主动询问、动态不确定性安全控制和低延迟端侧路径规划相关论文，并记录周度综合判断。
 - v1.29 | 2026-05-28 | Codex-架构师 | 新增 2026-05-28 Kinbot arXiv 每日论文纪要索引，基于官方最新 2026-05-27 Robotics listing，按 3-5 篇强相关论文 + 候选排除表口径，收录动态瓶颈安全导航、具身工具调用能力、住宅社交导航、可解释任务规则学习和复合不确定性主动感知相关论文。
 - v1.28 | 2026-05-27 | Codex-架构师 | 新增 2026-05-27 Kinbot arXiv 每日论文纪要索引，基于官方最新 2026-05-26 Robotics listing，按 3-5 篇强相关论文 + 候选排除表口径，收录端侧实时推理调度、纯视觉相对 3D 导航地图、跨日主动询问、老人认知辅助机器人和具身问答决策评测相关论文。
@@ -51,6 +78,32 @@
 
 | 日期 | 文档 | 主题 |
 | --- | --- | --- |
+| 2026-07-19 | [2026-07-19_kinbot_arxiv_daily.md](2026-07-19_kinbot_arxiv_daily.md) | arXiv 上与 Kinbot 实机 VLN 失效、可编辑长期记忆、Agent 能力合同、world-model 因果动作可控性和想象—动作完整性相关的论文筛选；本轮采用官方最新 2026-07-17 Robotics listing + 周日未出现新批次说明 + `cs.RO/recent` 2026-07-13 至 2026-07-17 周度复核 + 饱和 / 专题跟踪判断口径，并记录候选排除表。 |
+| 2026-07-12 | [2026-07-12_kinbot_arxiv_daily.md](2026-07-12_kinbot_arxiv_daily.md) | arXiv 上与 Kinbot 纯视觉动态避障、流式 VLN、对象持久性、world-model admissibility 和长时 action-faithful policy evaluation 相关的论文筛选；本轮采用官方最新 2026-07-10 Robotics listing + 周日未出现新批次说明 + `cs.RO/recent` 2026-07-03 至 2026-07-10 复核 + 周度综合判断口径，并记录候选排除表。 |
+| 2026-07-05 | [2026-07-05_kinbot_arxiv_daily.md](2026-07-05_kinbot_arxiv_daily.md) | arXiv 上与 Kinbot 低层语言导航接口、端侧闭环推理 runtime、视觉语言延迟攻击、家庭找物个性化边界和纯 RGB 参考轨迹导航相关的论文筛选；本轮采用官方最新 2026-07-03 Robotics listing + 周日未出现新批次说明 + `cs.RO/recent` 2026-06-29 至 2026-07-03 近期待补录 + 周度综合判断口径，并记录候选排除表。 |
+| 2026-06-28 | [2026-06-28_kinbot_arxiv_daily.md](2026-06-28_kinbot_arxiv_daily.md) | arXiv 上与 Kinbot 长期导航时空记忆、长程控制记忆检索、VLA 安全诊断、低延迟证据对齐 VLM 和 VLA 测试 oracle 相关的论文筛选；本轮采用官方最新 2026-06-25 Robotics listing + 周日未出现新批次说明 + `cs.RO/recent` 2026-06-26 近期待补录 + 周度综合判断口径，并记录候选排除表。 |
+| 2026-06-22 | [2026-06-22_kinbot_arxiv_daily.md](2026-06-22_kinbot_arxiv_daily.md) | arXiv 上与 Kinbot 长期物品位置记忆、VLA / 策略失败可解释预测和自适应视觉伺服资源调度相关的论文补录；本轮采用官方最新 2026-06-19 Robotics listing + 周一尚未出现新批次说明 + 同一 listing 连续多日覆盖后的日更补录 + 周度综合判断口径，并记录候选排除表。 |
+| 2026-06-21 | [2026-06-21_kinbot_arxiv_daily.md](2026-06-21_kinbot_arxiv_daily.md) | arXiv 上与 Kinbot 数据标准 / provenance、RGB last-meter 精定位和局部安全导航相关的论文补录；本轮采用官方最新 2026-06-19 Robotics listing + 周日未出现新批次说明 + 前一日已精筛覆盖后的日更补录 + 周度综合判断口径，并记录候选排除表。 |
+| 2026-06-20 | [2026-06-20_kinbot_arxiv_daily.md](2026-06-20_kinbot_arxiv_daily.md) | arXiv 上与 Kinbot 导航失败预警、实时故障诊断、概率时序安全约束、慢 VLM / 快规划融合和机器人失败识别相关的论文筛选；本轮采用官方最新 2026-06-19 Robotics listing + 周六未出现新批次说明 + 精筛主卡片 + 候选排除表口径，并记录周度综合判断。 |
+| 2026-06-18 | [2026-06-18_kinbot_arxiv_daily.md](2026-06-18_kinbot_arxiv_daily.md) | arXiv 上与 Kinbot 人身伤害预防安全集、几何监督导航 VLA、AI sandbox 验证边界、LLM 任务规划形式化验证和空间一致语义检索相关的论文筛选；本轮采用官方最新 2026-06-17 Robotics listing + `cs.RO/recent` 2026-06-18 近期待补录 + 精筛主卡片 + 候选排除表口径，并记录周度综合判断。 |
+| 2026-06-17 | [2026-06-17_kinbot_arxiv_daily.md](2026-06-17_kinbot_arxiv_daily.md) | arXiv 上与 Kinbot 长期导航证据记忆、视觉导航尺度安全、机器人端侧呼吸监测、Agentic Navigation 参数化接口和连续边缘推理资源评测相关的论文筛选；本轮采用官方最新 2026-06-17 Robotics listing + `cs.RO/new` / `cs.RO/recent` 日期差异说明 + 精筛主卡片 + 候选排除表口径，并记录周度综合判断。 |
+| 2026-06-16 | [2026-06-16_kinbot_arxiv_daily.md](2026-06-16_kinbot_arxiv_daily.md) | arXiv 上与 Kinbot 选择性 Agent 恢复、缺失模态鲁棒预测、breadcrumb 返回导航和 VLA 查询预算调度相关的论文补录；本轮采用官方最新 2026-06-15 Robotics listing + 本地 2026-06-16 未出现新批次说明 + 前一日已精筛覆盖后的日更补录 + 周度综合判断口径，并记录候选排除表。 |
+| 2026-06-15 | [2026-06-15_kinbot_arxiv_daily.md](2026-06-15_kinbot_arxiv_daily.md) | arXiv 上与 Kinbot 训练-free 终身导航、端侧 ObjectNav 资源调度、延迟证据记忆、latent dynamics OOD 安全检测和楼层图先验导航相关的论文筛选；本轮采用官方最新 2026-06-15 Robotics listing + 精筛主卡片 + 候选排除表口径，并记录 replacement 主卡片收录边界。 |
+| 2026-06-14 | [2026-06-14_kinbot_arxiv_daily.md](2026-06-14_kinbot_arxiv_daily.md) | arXiv 上与 Kinbot world model 可信预测 horizon、约束内生生成策略和紧凑动作-效果记忆相关的论文补录；本轮采用官方最新 2026-06-12 Robotics listing + 周日未出现新批次说明 + 同一 listing 连续覆盖后的轻量补录 + 周度综合判断口径，并记录候选排除表。 |
+| 2026-06-13 | [2026-06-13_kinbot_arxiv_daily.md](2026-06-13_kinbot_arxiv_daily.md) | arXiv 上与 Kinbot 隐式协作辅助时机、手势 grounding 和约束冲突最小违背规划相关的论文补录；本轮采用官方最新 2026-06-12 Robotics listing + 周六未出现新批次说明 + 前一日已覆盖后的日更补录 + 周度综合判断口径，并记录候选排除表。 |
+| 2026-06-12 | [2026-06-12_kinbot_arxiv_daily.md](2026-06-12_kinbot_arxiv_daily.md) | arXiv 上与 Kinbot 开放导航线索推理、安全标准控制约束、实时自回归策略执行、端云对象级语义地图和稀疏人工反馈安全预警相关的论文筛选；本轮采用官方最新 2026-06-12 Robotics listing + 精筛主卡片 + 候选排除表口径，并记录周度综合判断。 |
+| 2026-06-11 | [2026-06-11_kinbot_arxiv_daily.md](2026-06-11_kinbot_arxiv_daily.md) | arXiv 上与 Kinbot 视觉导航安全、社交导航实机可行性、测试时算力路由、多模态异步控制和具身 benchmark 证据链相关的论文筛选；本轮采用官方最新 2026-06-11 Robotics listing + 精筛主卡片 + 候选排除表口径，并记录周度综合判断。 |
+| 2026-06-10 | [2026-06-10_kinbot_arxiv_daily.md](2026-06-10_kinbot_arxiv_daily.md) | arXiv 上与 Kinbot 单目跨本体局部规划、关系归纳 ObjectNav、社交导航安全、非侵入式 `ROS 2` 观测和老人照护基础模型评测口径相关的论文筛选；本轮采用官方最新 2026-06-10 Robotics listing + 精筛主卡片 + 候选排除表口径，并记录周度综合判断。 |
+| 2026-06-09 | [2026-06-09_kinbot_arxiv_daily.md](2026-06-09_kinbot_arxiv_daily.md) | arXiv 上与 Kinbot 语义场景覆盖、透明共享自主、任务级运行时保证、选择性强策略接管和规划对齐上下文压缩相关的论文筛选；本轮采用官方最新 2026-06-08 Robotics listing + 精筛主卡片 + 候选排除表口径，并记录周度综合判断。 |
+| 2026-06-07 | [2026-06-07_kinbot_arxiv_daily.md](2026-06-07_kinbot_arxiv_daily.md) | arXiv 上与 Kinbot 安全证据强度分层、运行时动作 `OOD` 干预门和导航训练碰撞 reset 策略相关的论文补录；本轮采用官方最新 2026-06-05 Robotics listing + 周日未出现新批次说明 + 前一日已覆盖后的日更补录 + 周度综合判断口径，并记录候选排除表。 |
+| 2026-06-06 | [2026-06-06_kinbot_arxiv_daily.md](2026-06-06_kinbot_arxiv_daily.md) | arXiv 上与 Kinbot 形式化技能验证、示教数据质量审计、policy-in-loop 世界模型评估、本地 LLM/VLM 交互确认链路和功能性 affordance latent 相关的论文筛选；本轮采用官方最新 2026-06-05 Robotics listing + 周六未出现新批次说明 + 精筛主卡片 + 候选排除表口径，并记录周度综合判断。 |
+| 2026-06-04 | [2026-06-04_kinbot_a_grade_paper_integrated_review.md](2026-06-04_kinbot_a_grade_paper_integrated_review.md) | Kinbot A 档论文整合调研评审，汇总 2026-04-29 至 2026-06-04 每日论文任务中 111 篇 `A / A-` 论文，并配套 [全景信息图](2026-06-04_kinbot_a_grade_paper_panorama.svg)。 |
+| 2026-06-04 | [2026-06-04_kinbot_arxiv_daily.md](2026-06-04_kinbot_arxiv_daily.md) | arXiv 上与 Kinbot 家庭价值冲突评测、选择性机器人情景记忆、端侧自然语言摄像头 Agent、语义场景重建验证和成本感知交互式目标导航相关的论文筛选；本轮采用官方最新 2026-06-04 Robotics listing + 近期待补录 + 精筛主卡片 + 候选排除表口径，并记录周度滚动判断。 |
+| 2026-06-03 | [2026-06-03_kinbot_arxiv_daily.md](2026-06-03_kinbot_arxiv_daily.md) | arXiv 上与 Kinbot 纯视觉主动重建、开放词汇导航不确定性、动态室内语义记忆、低调用 VLN 接口和 VLA 成功 / 安全缺口评测相关的论文筛选；本轮采用官方最新 2026-06-02 Robotics listing + 精筛主卡片 + 候选排除表口径，并记录周度滚动判断。 |
+| 2026-06-02 | [2026-06-02_kinbot_arxiv_daily.md](2026-06-02_kinbot_arxiv_daily.md) | arXiv 上与 Kinbot 室内语义全局定位、VLA 运行时失败检测、视觉语言模型碰撞 grounding、端侧推理冗余消除和 batch-1 物理 AI 推理资源相关的论文筛选；本轮采用官方最新 2026-06-01 Robotics listing + 精筛主卡片 + 候选排除表口径，并记录周度滚动判断。 |
+| 2026-06-01 | [2026-06-01_kinbot_arxiv_daily.md](2026-06-01_kinbot_arxiv_daily.md) | arXiv 上与 Kinbot 人与机器人近身安全、穿戴动作数据校准和低成本外场验证组织相关的论文筛选；本轮采用官方最新 2026-05-29 Robotics listing + 本地 2026-06-01 未出现当日新批次说明 + 同一 listing 日更补录 + 候选排除表口径，并记录周度滚动判断。 |
+| 2026-05-31 | [2026-05-31_kinbot_arxiv_daily.md](2026-05-31_kinbot_arxiv_daily.md) | arXiv 上与 Kinbot 端侧视觉分辨率门控、扩散式视觉导航安全约束和仿真验证 provenance 相关的论文筛选；本轮采用官方最新 2026-05-29 Robotics listing + 本地 2026-05-31 未出现当日新批次说明 + 同一 listing 日更补录 + 候选排除表口径，并记录周度综合判断。 |
+| 2026-05-30 | [2026-05-30_kinbot_arxiv_daily.md](2026-05-30_kinbot_arxiv_daily.md) | arXiv 上与 Kinbot 端侧 VLA 动态算力调度、VLA 成功置信校准、任意外形本体安全导航、实机 VLA 分布式评测方法和动态 3D 高斯场景图长期记忆相关的论文筛选；本轮采用官方最新 2026-05-29 Robotics listing + 本地 2026-05-30 未出现当日新批次说明 + 精筛主卡片 + 候选排除表口径，并记录周度综合判断。 |
 | 2026-05-29 | [2026-05-29_kinbot_arxiv_daily.md](2026-05-29_kinbot_arxiv_daily.md) | arXiv 上与 Kinbot 零样本视觉语言导航闭环、视觉地点识别安全拒绝、家庭物品归属记忆与主动询问、动态不确定性安全控制和低延迟端侧路径规划相关的论文筛选；本轮采用官方最新 2026-05-28 Robotics listing + 本地 2026-05-29 未出现当日新批次说明 + 精筛主卡片 + 候选排除表口径，并记录周度综合判断。 |
 | 2026-05-28 | [2026-05-28_kinbot_arxiv_daily.md](2026-05-28_kinbot_arxiv_daily.md) | arXiv 上与 Kinbot 动态瓶颈安全导航、具身工具调用能力、住宅社交导航、可解释任务规则学习和复合不确定性主动感知相关的论文筛选；本轮采用官方最新 2026-05-27 Robotics listing + 本地 2026-05-28 未出现当日新批次说明 + 精筛主卡片 + 候选排除表口径。 |
 | 2026-05-27 | [2026-05-27_kinbot_arxiv_daily.md](2026-05-27_kinbot_arxiv_daily.md) | arXiv 上与 Kinbot 端侧实时推理调度、纯视觉相对 3D 导航地图、跨日主动询问、老人认知辅助机器人和具身问答决策评测相关的论文筛选；本轮采用官方最新 2026-05-26 Robotics listing + 精筛主卡片 + 候选排除表口径。 |

@@ -2,11 +2,22 @@
 
 ---
 
-文档版本：v1.52
+文档版本：v1.63
 创建日期：2026-03-21
 作者：Codex-架构师
 
 文档变更记录：
+- v1.63 | 2026-07-20 | Codex-架构师 | 固化架构图双表示规则：后续新建或实质修改 Mermaid 图时，必须紧随一张语义等价、标明标准视图类型的 SysML v2 风格 SVG 配图，并在新增视图语义时维护可解析的 `view def`。
+- v1.62 | 2026-07-19 | Codex-架构师 | 补充岗位 `15 / 22` 招聘基线、岗位 `09` `A+` 特殊关键岗线下真机交流 / 保密边界工作流，并新增对应只读检查命令。
+- v1.61 | 2026-07-17 | Codex-架构师 | 校正递归 Agentic 架构的 `confirmed / provisional` 边界：递归责任域方向已确认，`F1 + A1-A8` 与四个收敛机制仍在评审；补充独立硬安全数据面、语义许可租约与新事实源阅读顺序。
+- v1.60 | 2026-07-17 | Codex-架构师 | 将 `16_recursive_agentic_robot_system_architecture.md` 设为当前 L1 系统级概念架构首要入口，补充递归式 Agentic 运行时纪律：每个软件运行时子系统采用 Agent Cell，确定性组件作为工具和硬安全内核，禁止自由多 Agent 全连接与权限扩张。
+- v1.59 | 2026-07-12 | Codex-架构师 | 补充 `2026-07-12` 论文纪要形成的 Phase 5 动态避障 / 流式 `VLN` / 长期对象记忆 / `world-model` 证据字段候选，候选人战略沟通与反向验证基线，以及岗位 `09 / 10 / 11 / 16` 新增候选工作流，并新增对应只读检查命令。
+- v1.58 | 2026-07-05 | Codex-架构师 | 补充 `2026-07-05` 论文纪要形成的 Phase 5 字段包候选、岗位 `01` 第一轮综合面 / 物理 Agent 架构候选口径，以及岗位 `09` 本体 SE 专家深面规则，并新增对应只读检查命令。
+- v1.57 | 2026-06-28 | Codex-架构师 | 补充 `V1` 机载药箱 P2 决策稿入口、无手臂最小用药闭环与 Phase 5 证据字段边界，并新增 `2026-06-21` 至 `2026-06-28` 论文纪要形成的 Phase 5 字段包候选及对应只读检查命令。
+- v1.56 | 2026-06-21 | Codex-架构师 | 补充 `2026-06-15` 至 `2026-06-20` 论文纪要形成的 Phase 5 字段包候选边界、岗位 `01` AI 工程化 / 应用后端候选筛选和跨岗位相邻适配记录规则，并新增对应只读检查命令。
+- v1.55 | 2026-06-14 | Codex-架构师 | 补充 arXiv `cs.RO/new` / `cs.RO/recent` listing 差异口径、候选排除项转补录主卡片边界、近期 Phase 5 字段包 TODO 与岗位 `11` 物理设备 Agent 候选验证规则，并新增对应只读检查命令。
+- v1.54 | 2026-06-07 | Codex-架构师 | 补充 A 档论文整合调研评审与全景图的研究输入口径、候选人新增简历筛选的 `91` 台账同步规则，并新增对应只读检查命令；以 TODO 标注 A 档论文字段包回写 Phase 5 模板仍待确认。
+- v1.53 | 2026-05-31 | Codex-架构师 | 补充同一 arXiv listing 已被前一日覆盖后的日更补录 / 周度综合判断收敛口径、候选人技术深面后条件推进总经理终面的记录规则，并新增对应只读检查命令；以 TODO 标注 Phase 5 验证证据链 provenance 待确认口径。
 - v1.52 | 2026-05-24 | Codex-架构师 | 补充 `08_reviews/27` 双 BOM EMT 成本汇报入口、arXiv 饱和 listing 不硬凑 `3-5` 篇、VLN 年度总结指标口径 TODO，并新增对应只读检查命令。
 - v1.51 | 2026-05-17 | Codex-架构师 | 补充 arXiv 同一官方 listing 连续复用后的周度饱和判断、近期待补录元信息标注要求，并新增对应只读检查命令。
 - v1.50 | 2026-05-16 | Codex-架构师 | 补充候选人 offer 结果 / 入职承接口径与 arXiv 同一官方 listing 跨日补录的去重、饱和判断要求，并新增候选人流程状态只读检查命令。
@@ -163,6 +174,11 @@
 
 当前工作必须默认继承这些主线：
 
+- 当前 L1 系统级概念架构首要评审入口为 `docs/02_p1_architecture/16_recursive_agentic_robot_system_architecture.md`；`01 / 03 / 04 / 14` 保留为迁移参考。递归方向与旧架构冲突时以 `16` 为准，但 `16` 中标为 `provisional / in review` 的精确拓扑不得提前写成冻结事实
+- 已确认的软件主线是：Kinbot 是跨信息空间与物理空间的超级 Agent，具有独立使命和责任边界的 L1/L2 软件运行时责任域采用 Agent Cell；七构件元模型、五项递归判据、`F1 + A1-A8` 九实体、四个收敛机制、确定性叶子分类和三层在线护栏当前仍是 `KBT-59` 待评审候选
+- 已确认的判定原则是：无独立使命、目标、状态和恢复责任的普通技术组件不得为了“全部 Agentic”而伪装成 Agent；驱动、协议栈、模型服务、底层控制器和硬实时安全联锁等具体叶子分类仍需在 `KBT-59` 中评审
+- 候选递归架构默认采用结构父子目标委派；A3、A4、A7、A8 分别承接共享语义冲突、跨域根任务、语义许可与资源策略的最终解释权，并通过缓存、租约、分区和确定性执行层避免成为同步单点；禁止自由多 Agent 全连接、外部系统直控本体、子 Agent 扩大权限或模型输出直达执行器
+- `KBT-59` 候选架构必须证明：F1 具备不依赖 A1/A5/A7、模型、消息总线和网络的确定性安全数据面；A7 只审批语义能力包络与高风险副作用，不审批每个电机周期，也不能替代安全 MCU、看门狗、限速、碰撞 / 失稳和防夹保护。评审通过前不得把该拓扑写成已实现事实
 - 一代价值排序：`健康管理 > 陪伴交互 > 家庭安全巡护 > 老人看护`
 - 一代收敛策略：`核心闭环强、服务闭环轻、技术突破集中`
 - 一代传感主线：纯视觉
@@ -191,12 +207,16 @@
 - 若当前线程处理奖项提名、项目申报、荣誉申报或外部申报材料，原始模板与用户输入优先放在 `input/02_award_nominations/` 本地留存，交付稿优先写入 `output/`；申报叙事中的技术亮点、商业判断或量产口径默认不直接回写主线事实源，只有形成经用户确认的稳定产品 / 架构判断时，才同步 `README.md`、`CHANGELOG.md`、`03_decision_log.md` 或相关主线文档。
 - 若当前线程处理外部设计候选、结构 / 交互 / 造型方案或类似 PDF 输入，应优先放在 `input/03_design_candidates/` 作为原始资料入口；候选方案默认只是评审输入，不直接升级为产品或架构事实，只有形成经评审确认的稳定取舍时才回写主线文档、`03_decision_log.md`、`CHANGELOG.md` 或 Linear。TODO：确认该目录内大文件是否需要目录级 `.gitignore` 或交付归档规则。
 - 若当前线程处理 arXiv / 论文检索或每日论文纪要，应优先写入 `docs/09_research/00_papers/`，按 `YYYY-MM-DD_kinbot_arxiv_daily.md` 命名，并同步该目录 `README.md` 与 `docs/09_research/README.md`；论文纪要默认只是研究输入，只有影响主线判断时才回写主线文档、`03_decision_log.md` 或 Linear。
+- 若当前线程从每日论文纪要中汇总 `A / A-` 论文形成整合调研评审，应优先写入 `docs/09_research/00_papers/YYYY-MM-DD_kinbot_a_grade_paper_integrated_review.md`，可配套 `YYYY-MM-DD_kinbot_a_grade_paper_panorama.svg` 作为全景信息图，并同步 `docs/09_research/00_papers/README.md`、`docs/09_research/README.md` 与 `CHANGELOG.md`；该类文档默认仍是研究输入，应把主题簇、主线影响判断和 Phase 5 验证字段包收敛成候选建议，不得直接把论文结论升级为主线事实或在线产品模块。
 - 新增 arXiv 每日论文纪要前，应先核对同目录既有日更文档中的论文标题与 arXiv 编号；优先覆盖当日 `recent` 新出现且未进入前序纪要的论文，必要时可补入近几日漏收但需标注补录口径。每篇论文卡片至少保留摘要转述、Kinbot 问题映射、资源消耗、优劣势、推荐理由与来源链接，避免大段复制原摘要。
 - 若 arXiv 官方 `cs.RO/new` 或 `cs.RO/recent` 在本轮检索时尚未出现以当日为 listing 日期的新 Robotics 批次，仍可按当日日期形成每日纪要，但必须在文档变更记录与“检索口径”中写明本轮检索日期、官方最新 listing 日期、entries 总数、`new / cross / replacement` 数量，以及采用“最新官方 listing + 当日未出现新批次说明”或“日更补录”的原因与时间窗；该类纪要默认按研究输入处理，不因 listing 口径本身回写主线。
+- 若 arXiv 官方 `cs.RO/new` 与 `cs.RO/recent` 显示的条目数或顶部日期不一致，应以 `cs.RO/new` 作为正式 Robotics listing、entries 总数与 `new / cross / replacement` 计数口径；`cs.RO/recent` 只作为顶部日期、近期待补录和重复主题复核辅助，并在“检索口径”中写清差异，例如 `recent` 只显示 `new + cross` 前若干条、不含 `replacement`。
 - 若 arXiv 每日论文纪要从同一官方 listing 中连续收录或补录 `new submission`、`cross submission` 或 `replacement` 条目，应在每篇论文卡片元信息中保留 `本轮 listing 口径`，写清官方 listing 日期、条目类型和属于日更收录还是日更补录，避免后续误判为当日新批次或主线事实变化。
 - 若连续多个每日论文纪要复用同一官方 Robotics listing，应先排除前序主卡片已收录的论文标题与 arXiv 编号，并在“本轮总判断”或“周度滚动判断”中说明已饱和 / 接近饱和主题；重复度高的泛 `VLA`、world model、manipulation 或自动驾驶条目优先进入候选排除表，不因跨日补录扩张产品级模型层。
 - 若同一官方 Robotics listing 已被连续多日覆盖，本轮又转为 `cs.RO/recent` 近期待补录，应在每篇补录论文卡片的 `本轮 listing 口径` 中写明 `cs.RO/recent` entry 日期、`近期待补录` 和 abs 页 `Submitted on` 日期；不得把该类条目误写成最新 `cs.RO/new` listing 的当日新批次。
 - 若同一官方 Robotics listing 已进入饱和阶段，每日论文纪要应从继续扩张论文数量切换为周度综合判断：用表格或清单区分已饱和、接近专题成熟、仍值得专题跟踪的主题，并把新增论文收敛为轻量验证动作或专题候选；若只有 `2-3` 篇论文仍有明确增量，不必硬凑 `3-5` 篇，不得因补录论文继续新增产品级在线组件或主线概念。
+- 若同一官方 Robotics listing 已在前一日按精筛主卡片覆盖，本轮继续复用该 listing 时，应在“检索口径”中显式列出前一轮已收录主卡片或其直接重复主题，再按“日更补录 + 周度综合判断”处理剩余增量；主卡片只保留未被前一轮覆盖且能新增 Kinbot 字段、验证项或治理判断的论文，重复或低增量候选进入候选排除表。
+- 前序纪要候选排除表中的论文，后续可因重新审视发现明确 Kinbot 验证字段、失败模式或治理项而升级为同一 listing 的补录主卡片；升级时必须说明“从排除转收录”的新增理由，并继续标注不新增在线子系统、不改写主线事实的边界。
 - 若本轮 Robotics listing 中真正能改变 Kinbot 判断的论文有限，可不固定凑满 `10` 篇；优先保留 `3-5` 篇强相关主卡片，并增设“候选排除表”收纳有价值但未进入主卡片的条目。`replacement` / `cross submission` 仅在新增 Kinbot 评测项、治理项或端侧资源判断时才进入主卡片，避免把重复主题硬写成主线变化。
 - arXiv 每日论文纪要的“本轮总判断”中应保留 `推荐优先级` 表，按论文价值给出建议动作；若本轮有技术价值高但不适合 Kinbot 一代主线的相邻候选，应在“检索口径”中补 `未优先收录说明`，明确排除原因，避免误写成传感主线、形态边界或 Phase 5 门控变化。
 - arXiv 每日论文纪要应保留 `检索口径 -> 本轮总判断 -> 论文卡片 -> 候选排除表（若采用精筛口径） -> 对 Kinbot 的落地 / 文档建议 -> 来源` 的基本结构；若本轮不回写主线，应显式说明未进入主线的原因或复杂度自检判断。
@@ -208,14 +228,38 @@
 - `docs/superpowers/` 新增或调整文档后，需同步回写 `docs/superpowers/README.md`；若其影响仓库总入口或阶段入口，再同步检查根目录 `README.md` 与 `CHANGELOG.md`
 - 若当前线程处理候选人筛选、面试建议或招聘评估回写，应以 `docs/10_team_planning/90_cto_unified_interview_framework.md` 作为统一面试框架，以 `docs/10_team_planning/91_candidate_screening_and_interview_advice.md` 作为滚动候选人判断台账，并与 `02_kinbot_team_recruitment_requirements.csv` 保持口径一致
 - 若当前线程新增岗位、调整岗位编号 / 名称，或修改候选人输入文件命名规则，应先更新 `docs/10_team_planning/02_kinbot_team_recruitment_requirements.csv`，再同步 `input/01_candidate_resume/README.md`、`91_candidate_screening_and_interview_advice.md` 与相关目录索引，避免招聘基线与输入命名脱节
+- 若当前线程新增或刷新候选人面试题包、项目介绍话术或战略判断题，应先读取 `91_candidate_screening_and_interview_advice.md` 的 `1.1 家庭机器人战略沟通与反向验证基线`；面试中应先问候选人原生判断，再按背景差异化介绍项目，最后回到岗位责任。第一代轮式无臂量产主线与人形 / 双臂前瞻线可并行，但不得把候选人复述项目口径当成战略理解，也不得把内部战略口径扩写为对外可核实事实。
+- 若候选人新增输入仅为简历筛选，也应在 `91_candidate_screening_and_interview_advice.md` 同步顶部输入清单、当前流程状态口径、总表、候选人逐一判断小节和末尾建议动作；需按岗位与成熟度区分 `建议专业面 / 技术深面 / 技术一面 / 专家面 / 暂不直接 CTO 面`，并保留面试题包或下一轮验证题，避免把简历初筛误写成已完成面试结论。
+- 若岗位 `01` 架构师 / 高级开发候选人的新增资料主轴是大数据、车联网 `IoT`、计量计费、支付账务、`AI` 工程化、`AI-Native` 研发提效或 `DataAgent`，应先按应用后端 / 平台架构专业面验证服务边界、可观测、高可用、灰度、端云设备状态、`AI` 能力接入、评测闭环和真实 owner 边界；不得因简历出现 `RAG / Agent / LangGraph / MCP` 等关键词就直接跳过专业面、升级为 `CTO` 面或改写为岗位 `11` 主推。
+- 若岗位 `01` 架构师 / 高级开发候选人的新增资料主轴是车联网设备云、`OTA`、远程诊断、自动化测试或端云联调，可采用第一轮综合面合并验证技术深度、架构 owner、设备云迁移和阶段适配度；线上面试可控制在 `50` 分钟内，不强制画图 / 白板，改用口头分层说明、关键链路追问和现场选题，但仍需压实 `AI` 工程化、多模态 / `Agent`、团队管理、base 与完整架构 owner 证据。
+- 若岗位 `01` 候选人的新增资料主轴是生产级无人机 `Agent`、`Agent Runtime`、`HITL`、工具调用、可观测评测或高并发应用后端，应先按应用后端与 `AI` 融合架构准 owner 验证真实 owner 边界、上线规模、安全恢复、评测闭环和后端底座；可同步作为岗位 `11` 强相关候选人观察，但最终必须拆清主定位是岗位 `01` 架构准 owner 还是岗位 `11` 机器人 Agent 应用 owner。
 - 若候选人新增初试反馈、技术面总结、`CTO` 面总结或录音转写，应先吸收到 `91_candidate_screening_and_interview_advice.md`，区分“简历筛选判断”与“面试后判断”，再刷新推进建议、风险点和下一轮问题
+- 若候选人在技术深面后从 `CTO` 二面建议转为总经理终面，应在 `91_candidate_screening_and_interview_advice.md` 中同步更新顶部流程状态、总表、候选人小节和末尾建议；需区分 `B+ 条件推进总经理终面` 与 `A 档无保留强推`，并把终面验证重点从技术名词深挖切换到 Maker 动机、亲自落地意愿、必要汇报协同、薪资 / base、岗位定位和 offer 评审条件。
+- 若岗位 `11` 大模型应用 / Agent 开发候选人新增资料涉及无人机、物理设备 Tool 调用、`Plan-Execute-Verify`、安全校验、`AgentOps / APO` 或 `AI-Native` 编码，应在 `91_candidate_screening_and_interview_advice.md` 中拆清真实 owner 边界、工具参数 / 权限 / 幂等 / 回滚 / 审计、人机确认、评估闭环和家庭机器人迁移风险，避免只按 `LangGraph / MCP / ADK` 等框架名给出推进判断。
+- 若同一候选人需要同时补充主岗位与相邻岗位适配判断，应在 `91_candidate_screening_and_interview_advice.md` 中拆清“主岗位推进建议”和“相邻能力观察”两层；`部分适配`、`可作为支撑候选人观察` 或 `AI 工具链相邻能力` 不等于岗位 `11` 机器人 Agent 主链路主推，也不应冲掉原主岗位的专业面建议。
+- 若岗位 `09` 本体 SE 候选人的新增资料主轴是人形 / 轮足 / 消费机器人硬件负责人、车载域控、无人机硬件平台、电源电池、主控 / 域控或供应商资源整合，应优先按“本体 SE 综合面”组织，由用户本人同轮完成系统工程专家验证、`CTO` 阶段适配和组织授权判断；题包重心应放在系统约束、跨结构 / 控制 / 热 / 量产冲突裁决、阶段门、验证闭环、组织授权、角色边界、base / 出差和前三个月落地机制，而不是只深挖板卡或硬件细节。
+- 若岗位 `09` 本体 SE 候选人达到 `A+` 特殊关键岗或应以“机器人本体与硬件体系负责人 / 本体研发负责人”定位，应优先按 `90-120` 分钟线下双向契合交流组织，以办公环境、实验室和真机作为共同讨论对象，不走常规连续问答面；需提前准备路线、屏幕、账号、拍摄和资料分级，交流中拆清角色契约、授权、团队、工作地点、长期激励和竞业 / 保密边界，尚未冻结的 `F1 + A1-A8` 拓扑不得包装为已定架构。
+- 若岗位 `10` 结构传动候选人的新增资料主轴是人形 / 机械臂结构、`URDF`、仿真、模型训练接口或双臂前瞻，应先按结构专业面验证能否承担独立双臂前瞻线、可信数字本体与 `sim-to-real` 协同；必须拆清其 `URDF` 工作是文件导出、仿真可运行，还是已形成质量 / 惯量 / 关节 / 碰撞体参数校验和真机回归闭环，不得因人形机器人或 `URDF` 关键词直接升级为 `CTO` 面，也不得改变第一代轮式无臂量产主线。
+- 若岗位 `11` 大模型应用 / Agent 开发候选人的新增资料主轴是浏览器 `UI Agent`、自动化测试 Agent、`LangGraph`、工具调用、云端批量执行、`CI` 质量门禁或全栈平台工程，可作为年轻高潜 Agent 应用工程师进入技术一面；需验证真实 owner、状态建模、工具参数 / 权限 / 幂等 / 回滚 / 审计、失败恢复、评测闭环和从浏览器工具迁移到物理工具的安全边界，不应因此改写为岗位 `01` 架构师或岗位 `16` 系统集成测试负责人主推。
+- 若岗位 `15` 新增候选人资料或 JD 口径发生变化，应以 `docs/10_team_planning/02_kinbot_team_recruitment_requirements.csv` 与 `docs/10_team_planning/93_motion_control_algorithm_engineer_jd.md` 为基线，并同步 `input/01_candidate_resume/README.md` 命名规则；当前岗位 `15` 是高级运动控制算法工程师（SoC），重点验证 SoC 侧状态估计、经典控制产品化、渐进深度强化学习、`SIL / HIL / 真机` 评测闭环，以及 SoC 算法层与 MCU 硬实时执行层边界；历史 `15_运动控制_杨锦生` 资料不追溯改名。
+- 若岗位 `16` 系统集成测试负责人候选人的新增资料主轴是智能硬件软件测试、整机功能测试、清洁机器人 / 洗烘联动测试、测试 `PO` 或小团队缺陷推动，应拆清“系统集成测试负责人”与“软件测试 / 整机功能测试骨干”两层；只有具备本体、端侧、云侧、`App`、服务链路、`SIL / HIL / E2E`、故障注入、试点质量闭环和系统质量红线证据时，才按岗位 `16` 负责人主推。
+- 若岗位 `22` 高级 Agent 架构师（具身智能 Agentic System）新增候选人、offer 沟通或流程收口，应以 `docs/10_team_planning/92_senior_agent_architect_jd.md` 与 `91_candidate_screening_and_interview_advice.md` 为基线，验证 `Agentic System` 总体架构、`Agent Runtime`、`Tool / Action` 安全、`AgentOps / 评测` 和 Agent 团队技术牵引；必须写清与岗位 `01` 应用后端架构、岗位 `11` Agent 应用开发的边界，不能因 `RAG / UI Agent / VLA / MCP` 或平台工程关键词直接升级为岗位 `22`，不匹配时也不得默认转入岗位 `11 / 14`。
 - 若候选人进入 offer 接受、放弃、未到 offer 即结束或已录用校招生入职定位阶段，应在 `91_candidate_screening_and_interview_advice.md` 顶部流程状态口径、总表与对应候选人小节同步记录；历史“可推进 / 强推进”评价只作为能力判断留痕，不得误读为当前仍在流程中。已接受 offer 的候选人应转入入职承接、mentor / owner 安排和阶段目标对齐；放弃 offer 或流程结束者只保留历史评价，重新打开前需重新确认候选人意愿、岗位口径和招聘优先级。
+- 若候选人已接受 offer 后发生入职前放弃、转向其他公司 / 岗位或入职承接定位变化，应同步刷新 `91_candidate_screening_and_interview_advice.md` 的当前已接受 offer 名单、放弃 / 流程结束清单、候选人小节和末尾建议动作；未确认的公司、岗位或去向信息应标注为用户口径 / 待确认，不得写成公开可核实事实。
 - 候选人输入资料根层只作为新增待处理入口；已被 `91_candidate_screening_and_interview_advice.md` 吸收的简历、面试总结和录音转写应移动到 `input/01_candidate_resume/archive/` 下对应批次目录本地归档，默认使用 `YYYY-MM-DD_processed/`；若同日需按岗位族群、专题或批次拆分，可使用 `YYYY-MM-DD_<topic>_processed/`。归档内容不冻结正式结论，正式判断仍以 `91` 台账为准
 - 若当前线程需要新增或回写 CTO 面试题包，默认按 `90_cto_unified_interview_framework.md` 的现行标准为每位候选人准备 `10` 道候选题，现场选 `6 到 8` 道，并将显式 `Kinbot` 代入题限制为默认最多 `1` 道
 - 根 `README.md` 只维护当前视图、当前有效入口、当前阶段门入口与历史资料指针，不再平铺全部历史评审或长阅读清单
-- 当前主线事实源默认收敛为 `05_system_architecture_principles.md -> 01_overall_architecture.md -> 03_execution_paradigms_runtime_baseline.md -> 合同/专题层 -> 03_p2_feasibility/01_overall_solution_and_module_design_baseline.md`
+- 当前主线事实源默认收敛为 `05_system_architecture_principles.md -> 16_recursive_agentic_robot_system_architecture.md -> 05_world_state_schema.md / 06_decision_state_machine.md / 07_safety_compliance_authorization_api.md 与专题层 -> 待迁移的 03_p2_feasibility/01_overall_solution_and_module_design_baseline.md`；`01 / 03 / 04 / 14` 仅作为迁移参考
 - 涉及成本、重量、尺寸、功耗、药箱、屏幕、交互、运动性能、端侧资源、后台服务 / 坐席或数据治理之间的系统组成取舍时，应默认先使用 `docs/03_p2_feasibility/08_system_tradeoff_model_and_priority_matrix.md` 的“硬门槛 -> 价值评分 -> 资源消耗 -> 风险转移 -> 双成本情景”模型，再回写对应 `S1-S7` 工作包或主线文档。
+- 若当前线程处理 `V1` 机载药箱 / 储物仓工程化、用药闭环、开仓检测或防夹评审，应默认读取 `docs/02_p1_architecture/13_medication_storage_and_indoor_delivery_requirements.md` 与 `docs/03_p2_feasibility/10_v1_onboard_medicine_box_decision_draft.md`；当前 P2 工作口径为前向轻量电动浅抽屉 / 托盘 + 最小取放检测，无机械臂，用户自取 / 放回，机器人负责到人、驻停、开仓、提示、检测、记录和升级；`已取出` 与 `已服用` 必须拆分，防夹、锁止、开仓不移动和物品取放状态是工程硬门槛，药箱 `ToF`、云侧视觉裁决、多格自动盘点和机械臂递药不得作为默认主线。
 - 当前主线已进入 `Phase 5：验证口径与治理闭环`；涉及验证规划、量产预备门控、试点进入条件或战略证据包判断时，应默认以 `docs/05_p4_beta_dvt/01_mvp_validation_plan.md` 与 `docs/06_p5_launch_readiness/01_mass_production_readiness_criteria.md` 作为当前执行 / 门控入口
+- TODO：近期论文纪要已多次提示 `Phase 5` 仿真 / 回放 / 实机试验证据链需要 provenance 与最小元数据字段；后续处理验证报告、试验目录或回放数据模板时，应先判断是否需要记录 `validation_artifact_id`、`scenario_config_hash`、`sim_runtime_version`、`postprocess_version`、`evidence_lineage_complete` 与 `fair_metadata_complete`，但在主线文档确认前不得把完整 provenance 平台写成既定交付范围。
+- TODO：`2026-06-04` A 档论文整合评审已把 `A / A-` 论文收敛为纯视觉导航、记忆、安全治理、端侧资源、交互澄清和验证证据链六类 Phase 5 字段包；后续处理 Phase 5 验证模板时，应先判断是否吸收为最小字段集合，但在用户确认或阶段门评审前不得把整合评审建议写成已冻结验证模板。
+- TODO：`2026-06-09` 至 `2026-06-13` 论文纪要继续把导航线索、近人安全、端侧实时执行、对象级端云语义地图、稀疏人工反馈安全、纯视觉导航安全、测试时算力路由、手势 grounding、协作辅助时机和约束冲突最小违背收敛为 Phase 5 最小字段包；后续处理 Phase 5 验证模板、家庭样机试点或回放报告时，应按字段级候选评审，不得直接升级为在线 `VLA / world model`、完整 benchmark / 观测平台、触觉硬件基线或传感主线变化。
+- TODO：`2026-06-15` 至 `2026-06-20` 论文纪要继续把目标相关证据地图、户型图弱先验冲突、延迟证据记忆、`latent OOD`、阶段级端侧资源画像、选择性远端 `Agent` 恢复、缺失模态降级、`breadcrumb` 返回、状态难度查询预算、长期导航证据、视觉尺度安全、健康感知可靠性、`AI sandbox` 证据边界、任务规划形式化验证、导航失败预警、故障诊断、概率时序安全、慢 `VLM` / 快规划和失败证据库收敛为 Phase 5 最小字段包；后续处理 Phase 5 验证模板、家庭样机试点、导航回放、健康感知验证、端侧资源 profiling 或故障复盘时，应按字段级候选评审，不得直接升级为在线导航大模型、完整主动诊断控制器、`AI sandbox` / 形式化验证平台、实时 `VLM` 控制链路、`RAG` 自动故障仲裁或传感 / `VLA` 主线变化。
+- TODO：`2026-06-21`、`2026-06-22` 与 `2026-06-28` 论文纪要继续把数据 provenance / traceability、纯视觉 last-meter 对齐、局部安全 fallback、家庭对象长期位置记忆、策略失败可解释预测、自适应视觉伺服资源调度、长程导航时空记忆、长程任务记忆检索、`VLA` 安全诊断、低延迟 `VLM` 证据一致性和测试 oracle 收敛为 Phase 5 字段包候选；后续处理 Phase 5 验证模板、家庭样机试点、导航 / 找物回放、端侧视觉语言资源评估或安全诊断报告时，应按字段级候选评审，不得直接升级为完整数据标准平台、在线 `world model`、`VLA` failure detector / 安全裁决器、视觉伺服策略替换、端侧大记忆库、云端实时视觉问答链路或在线多 agent 测试生成平台。
+- TODO：`2026-07-05` 论文纪要继续把低层语言导航接口、端侧闭环推理 runtime、视觉语言延迟攻击、家庭找物个性化边界和纯 RGB 参考轨迹导航收敛为 Phase 5 字段包候选；后续处理 `VLN / NFM` 低层接口、端侧 runtime profiling、安全负例回放、找物 / 长期记忆或参考轨迹导航验证时，应按字段级候选评审，不得直接升级为在线 `VLA / WAM / world model` 主链路、指定 C++ runtime 产品选型、人格画像 / 长期原始轨迹采集、纯图像示教替代定位规划基线或云端实时视觉语言控制链路。
+- TODO：`2026-07-12` 论文纪要继续把纯视觉动态避障 `TTC`、流式 `VLN` 上下文预算、长期对象记忆 freshness、`world-model` verdict admissibility 和长时 action-faithful policy evaluation 收敛为 Phase 5 字段包候选；后续处理近人安全回放、`VLN / NFM` 低延迟专题、找物 / 长期记忆、`world model` 离线评测或仿真证据链时，应按字段级候选评审，不得直接升级为在线 `world model`、`31B` 记忆推理服务、`Video-LLM` 导航主链路、`WMBench` 平台或世界模型安全裁决器。未声明 envelope / horizon、未能 `OOD` 拒绝或未验证 `sim-real` transfer 的 world-model verdict 不得计入 Phase 5 安全通过证据。
 - TODO：`input/00_requirements/00_user_requirements_input.md` 已出现 `Step 52` 工作计划阶段性刷新；后续处理本体结构、双目视觉、`VLN` 数据集、机器人 `Agent` 系统、9 月家庭样机试点或 12 月设计定型 / 百台目标时，应先判断是否需要回写 `plan/task_plan.md`、`plan/notes.md`、`Phase 5` 文档与 Linear，不得把未同步计划误写为已完成事实。
 - 若当前线程进一步涉及量产导入、发布准备、对外交付组织或交付闭环责任划分，应同步读取 `docs/06_p5_launch_readiness/02_production_introduction_launch_and_delivery_closure.md`，避免 `Phase 5` 后段工作仅按门控标准理解、遗漏导入与交付链路设计
 - 当前 `Phase 5` 只冻结架构侧验证规划、双泳道门控和治理预留；不得把未发生的实机 / 市场闭环表述成已完成事实，后续真实收口默认由 `KBT-55` 承接
@@ -231,7 +275,7 @@
 - 允许为后置里程碑提前起草逆向约束型文档，但不得据此跳过当前阶段门或把后置结论伪装成当前已冻结事实
 - 用户一旦明确批准某个提案、阶段方案或文档方向，代理应继续按已批准路线推进，直到遇到下一个必须由用户审查 / 批准的阶段门；不得在同一路线上反复以“若你要”“如果你要”之类措辞请求继续授权
 - 若当前工作不需要用户作出新的重大判断、阶段门批准或风险取舍，代理不得仅因“阶段性汇报”而停下等待；每次暂停都必须明确携带一个需要用户确认的重大问题
-- 每一轮架构推进都必须显式追问一次：`现在的架构是不是太复杂了？` 若答案倾向于“是”，应优先考虑减少层级、收缩实体数、压缩接口面或延后冻结，而不是继续叠加概念与结构
+- 每一轮架构推进都必须显式追问一次：`现在的架构是不是太复杂了？` 若答案倾向于“是”，应优先考虑减少层级、收缩实体数、压缩接口面或延后冻结，而不是继续叠加概念与结构。但是要避免每进行一次任务就问一次，仅在对架构做出修改时才问。
 
 当信息不足但推进不能停时：
 
@@ -253,7 +297,13 @@
 - 分层关系
 - 阶段门或闭环关系
 
-优先使用 Mermaid，并要做美化。
+Mermaid 可作为快速编辑源，并要做美化。后续每次新建或实质修改 Mermaid 图时，必须同时满足：
+
+- 在 Mermaid 后紧随一张语义等价的 SysML v2 风格 SVG 配图；需要汇报时同时提供 PNG。
+- 按语义选择 `GeneralView`、`InterconnectionView`、`ActionFlowView`、`StateTransitionView`、`SequenceView`、`GridView` 等合适的标准视图类型，并在图头或图注中明确标出；不得只做外观模仿。
+- 两种表示中的实体、过程、操作数、关系方向、分支条件和边界必须一致；SysML 配图可为可读性合并重复 usage，但不得改变架构语义。
+- 新增视图类型或新的正式模型语义时，应新增或更新可解析的 `.sysml` `view def`，并完成语法校验。
+- Mermaid 负责快速维护，SysML v2 配图负责正式评审；发现不一致时，先核对模型语义，再同步修正两种表示。
 
 ## 9. Linear 协作规则
 
@@ -298,19 +348,44 @@ Linear 是正式项目管理软件。
 - `find docs/08_reviews -maxdepth 1 -type f | sed 's#^./##' | sort`：快速检查活跃评审入口是否与 `docs/08_reviews/README.md` 一致，尤其关注 `21 / 24 / 25 / 26 / 27` 是否仍为当前有效输入
 - `rg -n "27_kinbot|成本锚|双 BOM|6000|10000|科沃斯|八界|成本上修|技术降本" README.md docs/08_reviews/README.md docs/08_reviews/27_kinbot_cost_anchor_and_bom_scenarios_for_emt.md docs/03_p2_feasibility/09_cost_scenario_comparison_report.md`：快速检查 `08_reviews/27` 是否已作为 EMT 成本汇报入口同步，并核对双 BOM、行业参照和成本上修口径是否一致
 - `find docs/03_p2_feasibility -maxdepth 1 -name "*.md" | sed 's#^./##' | sort`：快速检查 `P2` 总体方案、选型、成本、功耗、权衡模型与工程化文档入口是否有新增或索引漂移
+- `rg -n "10_v1_onboard|机载药箱|前向.*浅抽屉|取出.*服用|retrieved|taken_confirmed|防夹|开仓不移动|药箱 .*ToF|A-111|Q-017" README.md docs/00_governance/03_decision_log.md docs/03_p2_feasibility/README.md docs/03_p2_feasibility/10_v1_onboard_medicine_box_decision_draft.md docs/02_p1_architecture/13_medication_storage_and_indoor_delivery_requirements.md`：快速检查 `V1` 机载药箱决策稿入口、P2 工作口径、取出 / 服用拆分、防夹硬门槛和主线回写边界是否一致
 - `find docs/09_research/00_papers -maxdepth 1 -name "*.md" | sed 's#^./##' | sort`：快速检查 arXiv 每日论文纪要和目录索引是否有新增入口待纳入研究目录视图
+- `find docs/09_research/00_papers -maxdepth 1 \\( -name "*a_grade_paper_integrated_review.md" -o -name "*a_grade_paper_panorama.svg" \\) | sed 's#^./##' | sort`：快速检查 A 档论文整合调研评审与全景信息图是否已有交付入口，避免只新增图或综述而未同步索引
+- `rg -n "A 档论文|A / A-|主题簇|全景信息图|Phase 5 验证字段|论文不等于主线事实|字段包" docs/09_research/00_papers/*a_grade_paper_integrated_review.md docs/09_research/00_papers/README.md docs/09_research/README.md`：快速检查 A 档论文整合评审是否保留研究输入边界、主题收敛和父级索引
 - `rg -n "^### 3\\.|arXiv \\|" docs/09_research/00_papers/20*_kinbot_arxiv_daily.md`：快速清点每日论文纪要中已收录的论文标题与 arXiv 编号，新增或补录前用于避免重复收录
 - `rg -n "^## [0-9]+\\. (检索口径|本轮总判断|论文卡片|.*建议|复杂度自检|本轮未进入主线|来源)" docs/09_research/00_papers/20*_kinbot_arxiv_daily.md`：快速检查每日论文纪要是否保留检索、判断、卡片、建议、复杂度 / 主线回写说明与来源段落
 - `rg -n "推荐优先级|复杂度自检|未优先收录说明|本轮未进入主线的原因" docs/09_research/00_papers/20*_kinbot_arxiv_daily.md`：快速检查每日论文纪要是否保留推荐排序、复杂度自检、候选排除说明与主线不回写理由
 - `rg -n "候选排除表|3-5 篇|不再固定凑满|不硬凑|只收录.*[23] 篇|replacement 主卡片|cross submission" docs/09_research/00_papers/20*_kinbot_arxiv_daily.md`：快速检查每日论文纪要是否按精筛口径记录主卡片数量约束、候选排除表、饱和后低篇数收录与 replacement / cross 收录边界
 - `rg -n "本轮 listing 口径|new submission|cross submission|replacement|日更收录|日更补录" docs/09_research/00_papers/20*_kinbot_arxiv_daily.md`：快速检查日更论文卡片是否标注官方 listing 日期、条目类型与收录 / 补录口径，避免把跨日补录误判为当日新批次
 - `rg -n "本轮检索日期|官方.*listing|entries|new submissions|cross submissions|replacement submissions|当日未出现新批次|日更收录|日更补录|补查|近期待补录" docs/09_research/00_papers/20*_kinbot_arxiv_daily.md`：快速检查每日论文纪要是否记录真实检索日期、官方最新批次、条目数量和收录 / 补录口径，尤其用于官方无同日新批次但仍生成日更时
+- `rg -n "cs.RO/new.*正式|cs.RO/recent.*辅助|showing first|new \\+ cross|不含 replacement|前一轮.*候选排除|重新审视|补录主卡片" docs/09_research/00_papers/20*_kinbot_arxiv_daily.md`：快速检查 `cs.RO/new` / `cs.RO/recent` 差异口径，以及前序候选排除项是否有明确理由升级为补录主卡片
 - `rg -n "周度综合判断|周度滚动判断|已饱和|接近饱和|接近专题成熟|近期待补录|recent entry|Submitted on" docs/09_research/00_papers/20*_kinbot_arxiv_daily.md`：快速检查同一官方 listing 连续复用后是否保留周度饱和判断、近期待补录说明和 `cs.RO/recent` 条目元信息
+- `rg -n "前一轮已收录|前一日按精筛|已从同一官方 listing|直接重复主题|validation_artifact_id|scenario_config_hash|evidence_lineage_complete|fair_metadata_complete" docs/09_research/00_papers/20*_kinbot_arxiv_daily.md docs/05_p4_beta_dvt docs/06_p5_launch_readiness`：快速检查同一官方 listing 被前序纪要覆盖后的补录说明，以及 Phase 5 验证证据链 provenance 字段是否仍停留在研究输入或 TODO 口径
+- `rg -n "navigation_clue_set|near_person_control_barrier|strict_latency_bound|object_level_sparse_map|unsafe_region_warning|segmentation_safety_finetune|test_time_compute_route|gesture_grounding_trace|human_readiness_gate|constraint_priority_order" docs/09_research/00_papers/20*_kinbot_arxiv_daily.md docs/05_p4_beta_dvt docs/06_p5_launch_readiness`：快速检查近期论文纪要收敛出的 Phase 5 字段包是否仍为候选输入，避免被误写成已冻结验证模板或在线子系统
+- `rg -n "goal_relevance_mean|floor_plan_alignment_confidence|latent_ood_score|agentic_recovery_invocation_gate|missing_modality_mask|breadcrumb_node_sequence|state_difficulty_score|spatiotemporal_relation_edge|action_scale_factor|respiratory_signal_quality_index|sandbox_fidelity_level|mission_ltl_verification_result|navigation_failure_early_warning|fault_mode_candidate_set|probabilistic_stl_satisfaction_interval|vlm_planner_query_latency_ms|failure_case_embedding_id" docs/09_research/00_papers/20*_kinbot_arxiv_daily.md docs/05_p4_beta_dvt docs/06_p5_launch_readiness`：快速检查 `2026-06-15` 至 `2026-06-20` 论文纪要收敛出的 Phase 5 字段包是否仍为候选输入，避免被误写成在线导航大模型、完整主动诊断控制器、`AI sandbox` / 形式化验证平台、实时 `VLM` 控制链路或 `RAG` 自动故障仲裁系统
+- `rg -n "robot_body_config_id|task_scene_action_outcome_trace|edge_alignment_success|object_alignment_success|open_space_heading_candidate|object_location_multimodal_distribution|failure_prediction_cross_model_transfer|coarse_to_fine_visual_servo_phase|spatiotemporal_memory_event_id|memory_retrieval_hit_rate|task_context_retrieval_hit|safety_scenario_category|diagnostic_coverage_rate|doubly_correct_rate|test_oracle_generation_method|oracle_disagreement_rate" docs/09_research/00_papers/20*_kinbot_arxiv_daily.md docs/05_p4_beta_dvt docs/06_p5_launch_readiness`：快速检查 `2026-06-21` 至 `2026-06-28` 论文纪要收敛出的 Phase 5 字段包是否仍为候选输入，避免被误写成完整数据标准平台、在线 `world model`、`VLA` 安全裁决器、端侧大记忆库或在线测试生成平台
+- `rg -n "visible_sector_flow_success|planner_frequency_hz|reference_trajectory_alignment|runtime_contract_version|batch1_latency_ms|control_loop_jitter_ms|peak_memory_mib|fallback_runtime_mode|lvml_latency_attack_case_id|visual_text_trigger_detected|critical_path_deadline_violation|object_location_rigidity_score|personalization_enabled_reason|privacy_review_required|image_space_trajectory_alignment|cross_embodiment_success|local_planner_handoff_success" docs/09_research/00_papers/20*_kinbot_arxiv_daily.md docs/05_p4_beta_dvt docs/06_p5_launch_readiness`：快速检查 `2026-07-05` 论文纪要收敛出的低层导航接口、端侧 runtime、延迟攻击、找物个性化和参考轨迹导航字段是否仍为候选输入，避免被误写成在线 `VLA / WAM / world model` 主链路、指定 runtime 选型或人格画像 / 长期原始轨迹采集
+- `rg -n "min_ttc_margin_ms|ttc_under_1s_detected|evasive_direction_correct|vln_fast_window_tokens|vln_slow_memory_tokens|object_persistence_probability|last_seen_pose_expiry|wm_admissibility_level|wm_verdict_accepted_as_evidence|wm_policy_ranking_alignment|long_horizon_action_fidelity|real_sim_success_gap" docs/09_research/00_papers/20*_kinbot_arxiv_daily.md docs/05_p4_beta_dvt docs/06_p5_launch_readiness`：快速检查 `2026-07-12` 论文纪要收敛出的动态避障、流式 `VLN`、对象记忆 freshness、`world-model` 可采信等级和长时 action fidelity 字段是否仍为候选输入，避免被误写成在线 `world model`、`31B` 记忆服务、`Video-LLM` 导航主链路或安全裁决器
 - `find docs/09_research -maxdepth 1 -name "*.md" | sed 's#^./##' | sort`：快速检查 `docs/09_research/` 根层研究文档是否有新增入口待同步父级索引、根索引或 `CHANGELOG.md`
 - `rg -n "任务类型|ObjectNav|InstanceImageNav|SR|SPL|Qwen3-VL|ASM|零样本|HM3D|自建" docs/09_research/07_annual_summary_of_vln_project.md`：快速检查 VLN 年度总结中的指标口径，避免把不同任务、测评集、prompt 或模型版本的结果直接混用
 - `find docs/09_research/07_vln_model_design -maxdepth 1 -name "*.md" | sed 's#^./##' | sort`：快速检查 `VLN / NFM` 专题子目录是否有新增研究文档待纳入索引或吸收进主线，并避免 `.DS_Store` 等本地噪声文件干扰
 - `find docs/10_team_planning -maxdepth 1 \\( -name "*.md" -o -name "*.csv" \\) | sed 's#^./##' | sort`：快速检查招聘基线、CTO 面试框架和候选人建议文档是否有新增输入或索引漂移
-- `rg -n "当前流程状态口径|已接受 offer|已放弃 offer|未到谈 offer 阶段|入职承接|流程结果" docs/10_team_planning/91_candidate_screening_and_interview_advice.md`：快速检查候选人 offer / 流程结束状态是否已刷新，避免把历史推进建议误读为当前仍在流程中
+- `rg -n "当前流程状态口径|已接受 offer|已放弃 offer|入职前放弃 offer|未到谈 offer 阶段|入职承接|流程结果|具体公司待确认" docs/10_team_planning/91_candidate_screening_and_interview_advice.md`：快速检查候选人 offer / 流程结束 / 入职前状态反转是否已刷新，避免把历史推进建议误读为当前仍在流程中
+- `rg -n "新增简历筛选|待专业面|待技术深面|待技术一面|待专家面|建议进入.*(专业面|技术深面|技术一面|专家面)|暂不建议直接.*CTO" docs/10_team_planning/91_candidate_screening_and_interview_advice.md`：快速检查新增简历筛选是否已按岗位和成熟度给出下一轮验证入口，避免把简历初筛误写成面试后判断
+- `rg -n "岗位 .01.|应用后端专业面|架构技术一面|AI 工程化|AI-Native|DataAgent|计量计费|车联网|支付 / 账户|不建议按岗位 .01.|暂不建议直接.*CTO" docs/10_team_planning/91_candidate_screening_and_interview_advice.md`：快速检查岗位 `01` 新增候选人是否按应用后端 / 平台架构专业面验证，避免被 `AI / Agent / RAG` 关键词误升级为 `CTO` 面或岗位 `11` 主推
+- `rg -n "陈智|第一轮综合面|50.*分钟|不用画图|车联网云平台|设备接入|OTA|远程诊断|自动化测试|端云联调|架构 owner|base 匹配" docs/10_team_planning/91_candidate_screening_and_interview_advice.md`：快速检查车联网 / 设备云型岗位 `01` 候选人的第一轮综合面口径是否已同步，避免遗漏口头分层、关键链路追问和阶段适配验证
+- `rg -n "郑春斌|无人机.*Agent|Agent Runtime|HITL|Checkpoint / Resume|工具调用|可观测评测|岗位 .11.*强|真实 owner 边界|上线规模|主定位" docs/10_team_planning/91_candidate_screening_and_interview_advice.md`：快速检查生产级物理 Agent 型岗位 `01` 候选人是否已拆清应用后端 / `AI` 融合架构主定位与岗位 `11` 相邻观察边界
+- `rg -n "技术深面|条件推进总经理终面|无保留.*强推|Maker|亲自落地|汇报协同|薪资 / base|岗位定位" docs/10_team_planning/91_candidate_screening_and_interview_advice.md`：快速检查候选人技术深面后的总经理终面建议、条件推进口径和组织匹配验证点是否已同步
+- `rg -n "物理设备工具调用|Plan-Execute-Verify|AgentOps|APO|owner 边界|AI-Native|工具参数|权限|幂等|回滚|审计" docs/10_team_planning/91_candidate_screening_and_interview_advice.md`：快速检查岗位 `11` 物理世界 Agent 候选人是否已拆清执行链路、安全校验、评估闭环和真实主责边界
+- `rg -n "相邻候选|部分适配|不建议作为岗位 11 主推|不建议作为机器人 Agent 主链路|Agent 后端支撑|AI 工具链相邻|DataAgent / RAG / NL2SQL" docs/10_team_planning/91_candidate_screening_and_interview_advice.md`：快速检查跨岗位相邻适配判断是否已拆清主岗位推进建议与岗位 `11` 支撑观察边界
+- `rg -n "家庭机器人战略沟通|反向验证|统一事实|差异化入口|先问|第一代.*无机械臂|双臂前瞻|角色化战略|复述项目口径" docs/10_team_planning/91_candidate_screening_and_interview_advice.md`：快速检查候选人面试题包是否已吸收项目战略沟通与反向验证基线，避免把项目介绍话术、内部战略口径或候选人复述误写成独立判断
+- `rg -n "李炜|刘振华|瞿孝杰|本体 .*SE.*综合面|用户本人同轮|系统工程专家验证|硬件负责人升级|系统工程一号位|组织授权判断" docs/10_team_planning/91_candidate_screening_and_interview_advice.md`：快速检查岗位 `09` 本体 SE 候选人是否已按综合面口径从硬件负责人履历转入系统工程一号位验证，避免只按板卡或硬件平台细节评估
+- `rg -n "范文华|A\\+ 档|特殊关键岗|机器人本体与硬件体系负责人|本体研发负责人|线下双向契合交流|实验室与真机|线下展示与保密边界|参观前按.*保密清单" docs/10_team_planning/91_candidate_screening_and_interview_advice.md input/01_candidate_resume/README.md CHANGELOG.md`：快速检查岗位 `09` `A+` 特殊关键岗是否已按线下真机交流、角色契约和保密边界刷新，而不是被压回常规本体 `SE` 问答面
+- `rg -n "蔡勇|双臂前瞻|URDF / 仿真 / 模型训练接口|可信数字本体|参数可信|sim-to-real|不改变第一代轮式无臂|URDF.*直接升级" docs/10_team_planning/91_candidate_screening_and_interview_advice.md`：快速检查岗位 `10` 结构候选人是否已拆清双臂前瞻线、可信 `URDF` / 仿真和模型训练接口验证，不因人形或 `URDF` 关键词直接升级
+- `rg -n "李胜男|年轻高潜 Agent|AI 自动化测试平台|浏览器工具调用|云端批量执行|CI 质量门禁|不建议按岗位 .01.|不建议按岗位 .16.|物理工具调用" docs/10_team_planning/91_candidate_screening_and_interview_advice.md`：快速检查岗位 `11` 年轻高潜 Agent 候选人是否已拆清真实 owner、工具安全和物理迁移边界，避免误写成岗位 `01` 架构师或岗位 `16` 系统集成测试负责人
+- `rg -n "岗位 .15.|高级运动控制算法工程师|SoC|状态估计|经典控制|深度强化学习|SIL / HIL / 真机|MCU|15_运动控制算法" docs/10_team_planning/02_kinbot_team_recruitment_requirements.csv docs/10_team_planning/93_motion_control_algorithm_engineer_jd.md docs/10_team_planning/README.md input/01_candidate_resume/README.md`：快速检查岗位 `15` 是否仍按 SoC 侧运动控制算法基线、真机评测闭环和输入命名规则维护
+- `rg -n "李才|软件测试 / 整机功能测试骨干|测试小组长候选人|系统集成测试负责人.*不建议|SIL / HIL / E2E|故障注入|试点质量闭环|系统质量红线|执行骨干" docs/10_team_planning/91_candidate_screening_and_interview_advice.md`：快速检查岗位 `16` 相邻测试候选人是否已区分系统集成测试负责人与软件 / 整机功能测试骨干，避免把执行骨干误升级为负责人
+- `rg -n "岗位 .22.|高级 Agent 架构师|具身智能 Agentic System|Agentic System 总体架构|Agent Runtime|Tool / Action 安全|AgentOps / 评测|郑春斌|韩兵兵|不按岗位 22|不默认转入岗位 11" docs/10_team_planning/02_kinbot_team_recruitment_requirements.csv docs/10_team_planning/91_candidate_screening_and_interview_advice.md docs/10_team_planning/92_senior_agent_architect_jd.md docs/10_team_planning/README.md input/01_candidate_resume/README.md`：快速检查岗位 `22` 架构 owner 基线、与岗位 `01 / 11` 边界、offer 沟通或不匹配收口是否已同步
 - `find input/01_candidate_resume -maxdepth 1 -type f | sed 's#^./##' | rg '\.(pdf|md|txt)$' | rg -v '(^|/)README\.md$' | sort`：快速检查候选人简历、初试反馈、面试总结或录音转写是否有根层新增待处理输入需吸收到 `91_candidate_screening_and_interview_advice.md`
 - `find input/01_candidate_resume/archive -maxdepth 1 -mindepth 1 -type d | sed 's#^./##' | sort`：快速检查候选人已处理资料归档批次目录是否按日期或 `日期 + 专题后缀` 组织，避免同日多批资料混放
 - `find input/01_candidate_resume -path '*/archive/*' -type f | sed 's#^./##' | rg '\.(pdf|md|txt)$' | sort`：快速检查已处理候选人输入资料是否已进入本地归档目录，避免根层待处理入口长期堆积
@@ -368,7 +443,7 @@ Linear 是正式项目管理软件。
 - `docs/09_research/00_papers/`：arXiv 每日论文纪要与结构化论文评估目录；新增纪要后需同步目录 `README.md` 与父级 `docs/09_research/README.md`，稳定结论影响主线时再回写正式事实源
 - `docs/09_research/` 下允许按专题建立子目录，例如 `07_vln_model_design/`；新增子目录或子文档后，需同步检查父级 `README.md`、根目录 `README.md` 与 `CHANGELOG.md`
 - `docs/09_research/07_vln_model_design/`：`VLN -> NFM`、长期记忆、导航基础问题与数据设计等专题研究工作目录；新增文档后需同步父级 `README.md`、根目录 `README.md` 与 `CHANGELOG.md`
-- `docs/10_team_planning/`：团队规划主基线；其中 `01_development_team_proposal.md` 为组织能力基线，`02_kinbot_team_recruitment_requirements.csv` 为当前岗位编号、命名与筛选口径基线，`90_cto_unified_interview_framework.md` 与 `91_candidate_screening_and_interview_advice.md` 为当前招聘筛选与 CTO 面试工作流入口
+- `docs/10_team_planning/`：团队规划主基线；其中 `01_development_team_proposal.md` 为组织能力基线，`02_kinbot_team_recruitment_requirements.csv` 为当前岗位编号、命名与筛选口径基线，`90_cto_unified_interview_framework.md` 与 `91_candidate_screening_and_interview_advice.md` 为当前招聘筛选与 CTO 面试工作流入口，`92_senior_agent_architect_jd.md` 和 `93_motion_control_algorithm_engineer_jd.md` 分别承接岗位 `22` 与岗位 `15` 的独立 JD
 - `docs/superpowers/`：当前线程使用 `superpowers` 技能生成的计划 / 规格工作文档；活跃工作文档只保留在 `plans/`，已吸收文档进入 `archive/`，新增文档后需同步该目录 `README.md`
 - `plan/`：仓库内临时但可持续推进的执行计划工作目录，用于当前线程的 task plan、阶段笔记与审计记录；当前默认执行计划文件为 `plan/task_plan.md`，默认工作笔记文件为 `plan/notes.md`；不替代 `docs/` 正式文档，结论稳定后应回写正式文档或归档清理
 - `output/`：对外交付材料；若形成多文件交付包，优先按日期 / 主题建子目录，并补 `README.md` 说明内容组成与使用建议；图包 / 信息图目录同样默认以 `README.md` 作为交付入口

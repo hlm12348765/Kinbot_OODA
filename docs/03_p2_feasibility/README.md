@@ -2,11 +2,14 @@
 
 ---
 
-文档版本：v1.5
+文档版本：v1.8
 创建日期：2026-03-11
 作者：Codex-架构师
 
 文档变更记录：
+- v1.8 | 2026-07-17 | Codex-架构师 | 校正递归 Agentic 迁移状态：方向已确认，`F1 + A1-A8` 仍是 `KBT-59` 候选评审基线；新建被其阻塞的 `KBT-60` 承接 P2 重映射，不提前冻结新软件责任边界。
+- v1.7 | 2026-07-17 | Codex-架构师 | 同步递归式 Agentic L1 架构迁移：现有 `S1-S7` 下发基线继续作为当前开发入口，但需从旧九模块口径迁移到 `F1 + A1-A8`，迁移完成前不得将旧模块边界视为新主线冻结结果。
+- v1.6 | 2026-06-27 | Codex-架构师 | 新增 `10_v1_onboard_medicine_box_decision_draft.md`，收敛 `V1` 机载药箱的无手臂最小闭环、开合方式、取放检测、视觉 / 传感器分工、防夹异常策略与 Phase 5 证据字段候选。
 - v1.5 | 2026-05-16 | Codex-架构师 | 新增 `09_cost_scenario_comparison_report.md`，承接 `Step 51` 的 `6000` 元 `BOM` 约束线与 `10000` 元 `BOM` 战略线成本分析对比。
 - v1.4 | 2026-04-21 | Codex-架构师 | 新增 `08_system_tradeoff_model_and_priority_matrix.md`，作为系统组成权衡模型与优先级矩阵入口，对齐双视角、`9` 模块、`7` 实体与四条一级业务闭环。
 - v1.3 | 2026-04-12 | Codex-架构师 | 将夜间闭环方案移入 `docs/09_research/`，收紧本目录为 `P2` 总体方案、选型、成本、功耗与工程化输入，不再混入研究专题文档。
@@ -22,9 +25,11 @@
 
 用于把系统架构转成可执行的技术路线、成本约束和工程验证输入。
 
+当前迁移边界：`docs/02_p1_architecture/16_recursive_agentic_robot_system_architecture.md` 已成为 L1 首要评审入口；递归 Agentic 方向已经确认，但 `F1 + A1-A8` 精确拓扑仍在 `KBT-59` 评审。本目录的既有总体方案、`S1-S7` 和权衡表继续有效；`KBT-60` 已建立并被 `KBT-59` 阻塞，评审完成前只准备候选映射，硬件、成本、功耗和量产约束继续保留，不把旧边界或新候选边界提前写成冻结结果。
+
 ## 文档索引
 
-- `01_overall_solution_and_module_design_baseline.md`：总体方案与模块方案下发基线。核心主题：承接 `PDCP` 双视角总图、家庭共居智能体总架构和多执行范式运行时口径，形成 `S1-S7` 工作包下发基线。
+- `01_overall_solution_and_module_design_baseline.md`：当前总体方案与模块方案下发入口。核心主题：现有 `S1-S7` 工作包继续用于开发承接，但需按递归式 Agentic L1 架构完成责任、接口和验证映射后才能重新冻结。
 - `02_demo_to_mass_production_gaps.md`：样机到量产预备能力缺口。核心主题：样机到量产预备的能力缺口与阻断项。
 - `03_engineering_npi_baseline.md`：工程化与NPI准备基线。核心主题：工程化、NPI 和 Alpha/EVT 前置冻结项。
 - `04_hardware_software_selection_matrix.md`：软硬件选型矩阵。核心主题：软硬件选型矩阵、算力需求与主备观察线。
@@ -33,6 +38,7 @@
 - `07_phase1_wearable_compatibility_and_data_fields.md`：一期穿戴设备兼容范围与数据字段。核心主题：一期穿戴兼容范围、接入模式和字段定义。
 - `08_system_tradeoff_model_and_priority_matrix.md`：系统组成权衡模型与优先级矩阵。核心主题：统一成本、重量、尺寸、药箱、屏幕、交互、运动性能、算力、服务 / 坐席、数据治理与量产可行性的取舍方法，并对齐双视角、`9` 模块、`7` 实体与四条一级业务闭环。
 - `09_cost_scenario_comparison_report.md`：Step 51 成本情景分析对比报告。核心主题：对比 `6000` 元 `BOM` 约束线与 `10000` 元 `BOM` 战略线，重估 `C1` 端侧算力与存储压力，并给出“一套架构基线 + 双 BOM 情景门控”的推荐口径。
+- `10_v1_onboard_medicine_box_decision_draft.md`：V1 机载药箱决策稿。核心主题：基于既有用药闭环、储物仓、防夹和 Phase 5 约束，收敛无手臂前提下的最小可交付闭环、前向轻量电动浅抽屉 / 托盘方案、取药 / 放回检测、视觉与传感器分工、异常防夹策略和主线回写清单。
 
 ## 维护规则
 

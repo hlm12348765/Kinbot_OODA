@@ -2,11 +2,16 @@
 
 ---
 
-文档版本：v1.40
+文档版本：v1.45
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v1.45 | 2026-07-17 | Codex-架构师 | 根据递归 Agentic 架构读者测试与架构审查，校正迁移状态：递归方向已经确认，`F1 + A1-A8`、四个收敛机制、确定性叶子分类和三层在线护栏仍是首要评审入口中的候选基线，尚未冻结。
+- v1.44 | 2026-07-17 | Codex-架构师 | 新增 `docs/02_p1_architecture/16_recursive_agentic_robot_system_architecture.md` 并切换为当前 L1 系统级概念架构首要入口，完成从“九模块 + Agent 增强平面”到“超级 Agent + 八个递归运行时 Agent + 确定性具身平台”的主线迁移。
+- v1.43 | 2026-07-13 | Codex-架构师 | 强化找物架构入口，明确找物是交互事件环与运动执行环围绕单一任务状态持续耦合的过程，并补充交互 / 编排 / 运动团队边界。
+- v1.42 | 2026-07-13 | Codex-架构师 | 新增 `docs/02_p1_architecture/15_agentic_object_finding_system_architecture.md` 作为找物功能级 Agentic System Architecture 评审入口，承接渐进自治、对象 belief、任务编排、接口和 Phase 5 验证边界。
+- v1.41 | 2026-06-27 | Codex-架构师 | 新增 `docs/03_p2_feasibility/10_v1_onboard_medicine_box_decision_draft.md` 作为 `V1` 机载药箱决策稿入口，收敛无手臂最小闭环、开合方式、取放检测、视觉 / 传感器分工、防夹异常策略与 Phase 5 回写边界。
 - v1.40 | 2026-05-23 | Codex-架构师 | 新增 `docs/08_reviews/27_kinbot_cost_anchor_and_bom_scenarios_for_emt.md` 作为 EMT 成本锚定、技术降本路径与双 BOM 情景汇报入口。
 - v1.39 | 2026-04-21 | Codex-架构师 | 吸收董事长汇报反馈入口：新增 `KBT-57` 作为后台服务 / 人工坐席联动立项与成本定价商业口径拆解承接项，并明确其不覆盖当前已冻结主线基线。
 - v1.38 | 2026-04-09 | Codex-架构师 | 修正根入口的表面复杂度与真实复杂度错位：将 `07_safety_compliance_authorization_api.md` 拉回当前有效入口与建议阅读顺序，明确其与 `01 / 03 / 05` 一起构成开发前置事实源。
@@ -19,7 +24,7 @@
 
 ---
 
-面向家庭室内场景的智能移动交互机器人系统设计项目。当前主线位于 `codex/kinbot_co_living_agent`，已完成从旧 `OODA` 总法向“家庭共居智能体 + 多执行范式”的主线重组；`OODA` 继续保留为运行时层的离散决策范式，而不是顶层唯一架构入口。
+面向家庭室内场景的智能移动交互机器人系统设计项目。当前已经确认 L1 向递归式 Agentic Robot System 迁移：Kinbot 是跨信息空间与物理空间的超级 Agent，具有独立使命和责任边界的软件运行时责任域采用 Agent Cell 设计；普通技术组件不为命名而 Agent 化。`F1 + A1-A8` 精确拓扑、四个收敛机制、确定性叶子分类和三层在线护栏仍在架构评审中。
 
 ## 当前状态
 
@@ -27,7 +32,8 @@
 - 主线已完成 `Phase 1-4.5` 的架构整理，并正式进入 `Phase 5：验证口径与治理闭环`。
 - `Phase 5` 当前只完成架构侧验证规划、双泳道门控和证据结构预留，尚未进入真实实机 / 市场闭环。
 - 董事长反馈已作为 `KBT-57` 战略假设承接：后台服务 / 人工坐席可能与机器人本体联动立项，非隐私结构化数据可评估受控回流，`10000` 元 BOM、`29999` 元定价、首批 `10000` 台和租售并行需要业务拆解；当前不覆盖既有冻结基线。
-- `P1` 主线事实源已收敛为：原则层 -> 总体架构 -> 运行时基线 -> 状态 / 接口 / 专题层 -> `P2` 下发基线。
+- `P1` 当前事实源顺序为：原则层 -> 递归 Agentic 方向与 L1 候选评审入口 -> 状态 / 安全接口 / 专题层 -> 待迁移的 `P2` 下发基线。
+- L1 精确拓扑由 `KBT-59` 承接 `In Review`；它显式阻塞 `KBT-58` 的顶层映射与 `KBT-60` 的 P2 `S1-S7` 重映射，避免旧模块与新候选被并行冻结。
 - `docs/08_reviews/` 当前只保留少量活跃评审入口；历史评审稿与旧阶段整理稿已迁入 `archive/`。
 - `docs/superpowers/` 当前采用 active-only 策略；已被主线吸收的工作文档已迁入 `docs/superpowers/archive/`。
 
@@ -35,16 +41,19 @@
 
 1. [input/00_requirements/00_user_requirements_input.md](input/00_requirements/00_user_requirements_input.md)：用户需求与审阅事实源。
 2. [docs/00_governance/05_system_architecture_principles.md](docs/00_governance/05_system_architecture_principles.md)：原则层事实源。
-3. [docs/02_p1_architecture/01_overall_architecture.md](docs/02_p1_architecture/01_overall_architecture.md)：总体架构事实源。
-4. [docs/02_p1_architecture/03_execution_paradigms_runtime_baseline.md](docs/02_p1_architecture/03_execution_paradigms_runtime_baseline.md)：运行时事实源。
-5. [docs/02_p1_architecture/05_world_state_schema.md](docs/02_p1_architecture/05_world_state_schema.md)：七实体 `World State` 主文档。
-6. [docs/02_p1_architecture/07_safety_compliance_authorization_api.md](docs/02_p1_architecture/07_safety_compliance_authorization_api.md)：安全、合规、授权边界主文档。
-7. [docs/02_p1_architecture/06_decision_state_machine.md](docs/02_p1_architecture/06_decision_state_machine.md)：离散决策业务面的状态机主文档。
-8. [docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md](docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md)：唯一开发入口，承接 `S1-S7` 工作包下发。
-9. [docs/08_reviews/README.md](docs/08_reviews/README.md)：活跃评审入口。
-10. [docs/05_p4_beta_dvt/01_mvp_validation_plan.md](docs/05_p4_beta_dvt/01_mvp_validation_plan.md)：`Phase 5` 工程 / 战略双泳道验证入口。
-11. [docs/06_p5_launch_readiness/01_mass_production_readiness_criteria.md](docs/06_p5_launch_readiness/01_mass_production_readiness_criteria.md)：`G5` 门控与第 `8` 类战略证据包标准。
-12. `KBT-57`：董事长反馈后的服务 / 坐席联动立项、非隐私数据回流、成本定价和首批商业模式拆解承接项。
+3. [docs/02_p1_architecture/16_recursive_agentic_robot_system_architecture.md](docs/02_p1_architecture/16_recursive_agentic_robot_system_architecture.md)：当前 L1 系统级概念架构首要评审入口；递归方向已确认，`F1 + A1-A8`、关系、涌现与迁移护栏为候选基线。
+4. [docs/02_p1_architecture/05_world_state_schema.md](docs/02_p1_architecture/05_world_state_schema.md)：七实体 `World State` 主文档。
+5. [docs/02_p1_architecture/07_safety_compliance_authorization_api.md](docs/02_p1_architecture/07_safety_compliance_authorization_api.md)：安全、合规、授权边界主文档。
+6. [docs/02_p1_architecture/06_decision_state_machine.md](docs/02_p1_architecture/06_decision_state_machine.md)：离散决策业务面的状态机主文档。
+7. [docs/02_p1_architecture/01_overall_architecture.md](docs/02_p1_architecture/01_overall_architecture.md)：上一轮双视角总图、部署和硬约束参考；冲突时以 `16` 为准。
+8. [docs/02_p1_architecture/03_execution_paradigms_runtime_baseline.md](docs/02_p1_architecture/03_execution_paradigms_runtime_baseline.md)：多时间尺度执行范式参考。
+9. [docs/02_p1_architecture/15_agentic_object_finding_system_architecture.md](docs/02_p1_architecture/15_agentic_object_finding_system_architecture.md)：找物功能级评审稿，待按新架构重新映射。
+10. [docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md](docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md)：当前开发入口，承接 `S1-S7` 工作包下发，待按 `A1-A8` 迁移。
+11. [docs/03_p2_feasibility/10_v1_onboard_medicine_box_decision_draft.md](docs/03_p2_feasibility/10_v1_onboard_medicine_box_decision_draft.md)：`V1` 机载药箱决策稿。
+12. [docs/08_reviews/README.md](docs/08_reviews/README.md)：活跃评审入口。
+13. [docs/05_p4_beta_dvt/01_mvp_validation_plan.md](docs/05_p4_beta_dvt/01_mvp_validation_plan.md)：`Phase 5` 工程 / 战略双泳道验证入口。
+14. [docs/06_p5_launch_readiness/01_mass_production_readiness_criteria.md](docs/06_p5_launch_readiness/01_mass_production_readiness_criteria.md)：`G5` 门控与第 `8` 类战略证据包标准。
+15. `KBT-57`：董事长反馈后的服务 / 坐席联动立项、非隐私数据回流、成本定价和首批商业模式拆解承接项。
 
 ## 当前阶段门入口
 
@@ -62,17 +71,19 @@
 
 1. [input/00_requirements/00_user_requirements_input.md](input/00_requirements/00_user_requirements_input.md)
 2. [docs/00_governance/05_system_architecture_principles.md](docs/00_governance/05_system_architecture_principles.md)
-3. [docs/02_p1_architecture/01_overall_architecture.md](docs/02_p1_architecture/01_overall_architecture.md)
-4. [docs/02_p1_architecture/03_execution_paradigms_runtime_baseline.md](docs/02_p1_architecture/03_execution_paradigms_runtime_baseline.md)
-5. [docs/02_p1_architecture/05_world_state_schema.md](docs/02_p1_architecture/05_world_state_schema.md)
-6. [docs/02_p1_architecture/07_safety_compliance_authorization_api.md](docs/02_p1_architecture/07_safety_compliance_authorization_api.md)
-7. [docs/02_p1_architecture/06_decision_state_machine.md](docs/02_p1_architecture/06_decision_state_machine.md)
-8. [docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md](docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md)
-9. [docs/08_reviews/README.md](docs/08_reviews/README.md) -> [docs/08_reviews/21_seven_entity_world_state_target_model.md](docs/08_reviews/21_seven_entity_world_state_target_model.md) -> [docs/08_reviews/25_phase3_to_phase45_closure_and_strategic_input_package.md](docs/08_reviews/25_phase3_to_phase45_closure_and_strategic_input_package.md) -> [docs/08_reviews/24_kbt52_strategic_ambition_gap_review.md](docs/08_reviews/24_kbt52_strategic_ambition_gap_review.md) -> [docs/08_reviews/26_kinbot_technical_positioning_competition_and_strategic_choices_for_emt.md](docs/08_reviews/26_kinbot_technical_positioning_competition_and_strategic_choices_for_emt.md) -> [docs/08_reviews/27_kinbot_cost_anchor_and_bom_scenarios_for_emt.md](docs/08_reviews/27_kinbot_cost_anchor_and_bom_scenarios_for_emt.md)
-10. [docs/05_p4_beta_dvt/01_mvp_validation_plan.md](docs/05_p4_beta_dvt/01_mvp_validation_plan.md)
-11. [docs/06_p5_launch_readiness/01_mass_production_readiness_criteria.md](docs/06_p5_launch_readiness/01_mass_production_readiness_criteria.md)
-12. [docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md)
-13. [docs/00_governance/01_workflow.md](docs/00_governance/01_workflow.md)
+3. [docs/02_p1_architecture/16_recursive_agentic_robot_system_architecture.md](docs/02_p1_architecture/16_recursive_agentic_robot_system_architecture.md)
+4. [docs/02_p1_architecture/05_world_state_schema.md](docs/02_p1_architecture/05_world_state_schema.md)
+5. [docs/02_p1_architecture/07_safety_compliance_authorization_api.md](docs/02_p1_architecture/07_safety_compliance_authorization_api.md)
+6. [docs/02_p1_architecture/06_decision_state_machine.md](docs/02_p1_architecture/06_decision_state_machine.md)
+7. [docs/02_p1_architecture/01_overall_architecture.md](docs/02_p1_architecture/01_overall_architecture.md) -> [docs/02_p1_architecture/03_execution_paradigms_runtime_baseline.md](docs/02_p1_architecture/03_execution_paradigms_runtime_baseline.md)（迁移参考）
+8. [docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md](docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md)（待迁移）
+9. [docs/02_p1_architecture/15_agentic_object_finding_system_architecture.md](docs/02_p1_architecture/15_agentic_object_finding_system_architecture.md)（评审中）
+10. [docs/03_p2_feasibility/10_v1_onboard_medicine_box_decision_draft.md](docs/03_p2_feasibility/10_v1_onboard_medicine_box_decision_draft.md)
+11. [docs/08_reviews/README.md](docs/08_reviews/README.md)
+12. [docs/05_p4_beta_dvt/01_mvp_validation_plan.md](docs/05_p4_beta_dvt/01_mvp_validation_plan.md)
+13. [docs/06_p5_launch_readiness/01_mass_production_readiness_criteria.md](docs/06_p5_launch_readiness/01_mass_production_readiness_criteria.md)
+14. [docs/00_governance/03_decision_log.md](docs/00_governance/03_decision_log.md)
+15. [docs/00_governance/01_workflow.md](docs/00_governance/01_workflow.md)
 
 ## 历史资料与工作文档
 

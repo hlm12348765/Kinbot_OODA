@@ -2,11 +2,13 @@
 
 ---
 
-文档版本：v1.6
+文档版本：v1.8
 创建日期：2026-03-13
 作者：Codex-架构师
 
 文档变更记录：
+- v1.8 | 2026-07-16 | Codex-架构师 | 将岗位 `15` 从高级嵌入式工程师-运动控制调整为高级运动控制算法工程师（SoC），新增独立 JD，明确经典控制产品化、深度强化学习演进及 SoC / MCU 边界。
+- v1.7 | 2026-07-14 | Codex-架构师 | 同步招聘需求基准新增岗位 `22` 高级 Agent 架构师（具身智能 Agentic System）及独立 JD，明确其作为 Agent Runtime、物理工具安全、AgentOps / 评测与 Agent 团队技术牵引的架构 owner。
 - v1.6 | 2026-04-08 | Codex-架构师 | 将 `91_candidate_screening_and_interview_advice.md` 从本地忽略文件切换为正常版本维护文档，并补入本目录正式索引。
 - v1.5 | 2026-04-08 | Codex-架构师 | 将招聘需求基准与 CTO 面试方案正式迁入本目录，移除已废弃的招聘优化表索引，并明确候选人筛选建议文档默认只做本地维护。
 - v1.4 | 2026-04-01 | Codex-架构师 | 将招聘优化表的新增分析列升级为“方向选择论证”，明确按产品竞争力、架构理念、技术路线和市场财务成功四个角度解释岗位方向选择。
@@ -30,9 +32,11 @@
 当前文档索引：
 
 - `01_development_team_proposal.md`：开发团队提案。核心主题：基于当前架构与总体方案，定义 Kinbot 在量产预备前所需的 AI-native Team、人与 AI 协作机制、团队结构、人数规模、阶段扩编建议，以及 Step 43 吸收后的组织押注顺序与招聘节奏原则。
-- `02_kinbot_team_recruitment_requirements.csv`：Kinbot 团队招聘需求基准。核心主题：当前有效岗位编号、岗位名称、岗位 `JD`、筛选口径、优先级与面试输入基线。
+- `02_kinbot_team_recruitment_requirements.csv`：Kinbot 团队招聘需求基准。核心主题：当前有效岗位编号、岗位名称、岗位 `JD`、筛选口径、优先级与面试输入基线；岗位 `15` 已调整为高级运动控制算法工程师（SoC），岗位 `22` 承接具身智能 Agentic System 架构 owner 缺口。
 - `90_cto_unified_interview_framework.md`：CTO 统一技术面试方案。核心主题：统一简历筛选逻辑、二轮面试框架、跨领域评分尺和领域专家一页纸标尺。
 - `91_candidate_screening_and_interview_advice.md`：候选人筛选与面试建议。核心主题：按当前招聘需求基准和候选人简历，持续维护逐人筛选建议、一面反馈吸收与 CTO 二面建议。
+- `92_senior_agent_architect_jd.md`：高级 Agent 架构师 JD。核心主题：岗位 `22` 的使命、职责、任职要求、首阶段成果、岗位吸引点，以及与岗位 `01 / 11` 的内部定岗边界。
+- `93_motion_control_algorithm_engineer_jd.md`：高级运动控制算法工程师 JD。核心主题：岗位 `15` 的 SoC 侧运动控制、经典控制产品化、深度强化学习演进、真机评测闭环，以及与 MCU / 电机控制岗位的内部边界。
 
 配套输入目录：
 
