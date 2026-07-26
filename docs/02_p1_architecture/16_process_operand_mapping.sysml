@@ -9,78 +9,81 @@ package KinbotProcessOperandMapping {
          * in 参数从 item definition 指向 action definition；
          * out 参数从 action definition 指向 item definition。
          * 这些连线不是 flow connection，也不定义过程顺序。
+         * I1/I2 表示持续产生的信息流，I3 表示持续更新的带版本状态。
+         * P-P2～P-P7 直接读取经过登记的 I1 实时传感数据，用于确定性控制、
+         * 限制、中止和保护；需要解释和长期维护的内容仍经 I-P1/I-P2 形成 I2/I3。
          */
     }
 
     package Operands {
-        item def <I1> '输入与约束';
+        item def <I1> '输入数据与消息';
         item def <I2> '观察与事件';
         item def <I3> '状态与上下文';
         item def <I4> '目标与行动方案';
         item def <I5> '安全与授权决定';
-        item def <I6> '能力调用与执行状态';
-        item def <I7> '结果与信息输出';
+        item def <I6> '技能与工具调用状态';
+        item def <I7> '结果与证据';
         item def <I8> '运行资源与版本状态';
 
-        item def <P1> '可感知物理现象';
+        item def <P1> '传感器可检测的物理信号';
         item def <P2> '能量与热状态';
-        item def <P3> '机器人行为与作用';
-        item def <P4> '物质与载荷';
-        item def <P5> '物理状态变化与反馈';
+        item def <P3> '机器人自身物理状态与输出';
+        item def <P4> '机器人携带物品的状态';
+        item def <P5> '外部世界物理状态';
+        item def <P6> '可安全操控的外部物体状态' :> P5;
     }
 
     package '信息空间过程' {
         private import KinbotProcessOperandMapping::Operands::*;
 
-        action def <'I-P1'> '形成并校验观察' {
-            in sensorMessageEventInput : I1;
-            out observationAndEvent : I2;
+        action def <'I-P1'> '处理输入并形成观察与事件' {
+            in inputDataAndMessageStream : I1;
+            out observationAndEventStream : I2;
         }
 
         action def <'I-P2'> 'Orient：理解、融合并维护状态' {
-            in inputAndConstraints : I1;
-            in observationAndEvent : I2;
-            in resultAndInformationOutput : I7;
+            in newObservationAndEvent : I2;
+            in resultAndEvidence : I7;
             in previousStateAndContext : I3;
             out updatedStateAndContext : I3;
         }
 
         action def <'I-P3'> '形成目标与行动方案' {
-            in inputAndConstraints : I1;
+            in observationAndEvent : I2;
             in stateAndContext : I3;
             out goalAndActionPlan : I4;
         }
 
         action def <'I-P4'> '评估风险并授权行动' {
-            in inputAndConstraints : I1;
             in stateAndContext : I3;
             in goalAndActionPlan : I4;
             out safetyAndAuthorizationDecision : I5;
         }
 
-        action def <'I-P5'> '分派目标并组织能力调用' {
+        action def <'I-P5'> '分派任务并调用技能或工具' {
             in goalAndActionPlan : I4;
             in safetyAndAuthorizationDecision : I5;
             in runtimeResourceAndVersionState : I8;
-            out capabilityCallAndExecutionState : I6;
+            out skillAndToolInvocationState : I6;
         }
 
-        action def <'I-P6'> '执行信息能力' {
+        action def <'I-P6'> '执行信息操作' {
             in stateAndContext : I3;
             in safetyAndAuthorizationDecision : I5;
-            in capabilityCallAndExecutionState : I6;
-            out resultAndInformationOutput : I7;
+            in skillAndToolInvocationState : I6;
+            out resultAndEvidence : I7;
         }
 
-        action def <'I-P7'> '验证结果并维持连续性' {
+        action def <'I-P7'> '验证结果并决定后续处理' {
             in observationAndEvent : I2;
-            in capabilityCallAndExecutionState : I6;
+            in goalAndActionPlan : I4;
+            in skillAndToolInvocationState : I6;
             in currentResult : I7;
-            out resultAndStateDelta : I7;
+            out verifiedResultAndEvidence : I7;
         }
 
         action def <'I-P8'> '管理运行资源与更新' {
-            in resourcePolicy : I1;
+            in resourceAndUpdateEvent : I2;
             in resourceDemand : I6;
             in currentRuntimeResourceAndVersionState : I8;
             out updatedRuntimeResourceAndVersionState : I8;
@@ -90,43 +93,71 @@ package KinbotProcessOperandMapping {
     package '物理空间过程' {
         private import KinbotProcessOperandMapping::Operands::*;
 
-        action def <'P-P1'> '感受并转换物理现象' {
-            in perceivablePhysicalPhenomena : P1;
-            in physicalStateAndFeedback : P5;
-            out physicalSensorEnvelope : I1;
+        action def <'P-P1'> '采集物理信号并生成传感数据' {
+            in sensorDetectablePhysicalSignalStream : P1;
+            out physicalSensorDataStream : I1;
         }
 
-        action def <'P-P2'> '接收、转换并分配能量' {
+        action def <'P-P2'> '管理能量与热状态' {
+            in realtimeSensorData : I1;
             in energyAndThermalState : P2;
             in runtimeResourceAndVersionState : I8;
             out controlledEnergyAndThermalState : P2;
         }
 
-        action def <'P-P3'> '执行机器人行为' {
+        action def <'P-P3'> '改变机器人自身状态与输出' {
+            in realtimeSensorData : I1;
             in safetyAndAuthorizationDecision : I5;
-            in capabilityCallAndExecutionState : I6;
+            in skillAndToolInvocationState : I6;
             in energyAndThermalState : P2;
-            out robotBehaviorAndEffect : P3;
-            out physicalStateAndFeedback : P5;
+            in currentRobotPhysicalStateAndOutput : P3;
+            out updatedRobotPhysicalStateAndOutput : P3;
+            out updatedPhysicalFeedback : P1;
         }
 
-        action def <'P-P4'> '容纳、运输并交接载荷' {
+        action def <'P-P4'> '运送用户放入的物品' {
+            in realtimeSensorData : I1;
             in safetyAndAuthorizationDecision : I5;
-            in capabilityCallAndExecutionState : I6;
-            in robotBehaviorAndEffect : P3;
-            in matterAndPayload : P4;
-            out updatedMatterAndPayload : P4;
-            out physicalStateAndFeedback : P5;
+            in skillAndToolInvocationState : I6;
+            in energyAndThermalState : P2;
+            in robotPhysicalStateAndOutput : P3;
+            in carriedItemState : P4;
+            out updatedRobotPhysicalStateAndOutput : P3;
+            out updatedCarriedItemState : P4;
+            out updatedPhysicalFeedback : P1;
         }
 
-        action def <'P-P5'> '限制、中止并锁定危险行为' {
-            in safetySensorSignal : P1;
+        action def <'P-P5'> '限制或停止机器人的危险动作' {
+            in realtimeSensorData : I1;
             in energyAndThermalState : P2;
-            in currentRobotBehavior : P3;
-            in currentPhysicalState : P5;
-            out limitedRobotBehavior : P3;
-            out safePhysicalState : P5;
-            out safetyEvidence : I7;
+            in currentRobotPhysicalStateAndOutput : P3;
+            out limitedEnergyAndThermalState : P2;
+            out limitedRobotPhysicalStateAndOutput : P3;
+            out updatedPhysicalFeedback : P1;
+        }
+
+        action def <'P-P6'> '安全操控外部物体（机械臂预留）' {
+            in realtimeSensorData : I1;
+            in safetyAndAuthorizationDecision : I5;
+            in skillAndToolInvocationState : I6;
+            in energyAndThermalState : P2;
+            in robotPhysicalStateAndOutput : P3;
+            in manipulableExternalObjectState : P6;
+            out updatedRobotPhysicalStateAndOutput : P3;
+            out updatedManipulableExternalObjectState : P6;
+            out updatedPhysicalFeedback : P1;
+        }
+
+        action def <'P-P7'> '紧急情况下强制改变外部状态' {
+            in realtimeSensorData : I1;
+            in emergencyAuthorizationDecision : I5;
+            in emergencySkillInvocationState : I6;
+            in energyAndThermalState : P2;
+            in robotPhysicalStateAndOutput : P3;
+            in externalWorldPhysicalState : P5;
+            out updatedRobotPhysicalStateAndOutput : P3;
+            out updatedExternalWorldPhysicalState : P5;
+            out updatedPhysicalFeedback : P1;
         }
     }
 }

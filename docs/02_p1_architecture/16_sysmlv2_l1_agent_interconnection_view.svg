@@ -1,98 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="4400" height="2900" viewBox="0 0 4400 2900" role="img" aria-labelledby="title desc">
-<title id="title">Kinbot L1 递归 Agent 系统互连视图</title>
-<desc id="desc">左侧信息空间、中央 Agentic Robot System、右侧物理空间及其主干连接</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="4400" height="2800" viewBox="0 0 4400 2800" role="img" aria-labelledby="title desc">
+<title id="title">Kinbot L1 主 Agent 与专业 Agent 互连视图</title>
+<desc id="desc">展示信息空间、A0 主 Agent、A1 到 A3 专业 Agent、A4 独立安全与授权 Agent、AP1 Agent 运行平台、F1 机器人机电与硬安全平台以及物理空间之间的主干连接，并明确 P-P1 生成的实时 I1 直接进入 F1。</desc>
 <defs>
-<marker id="arrow-blue" markerWidth="12" markerHeight="12" refX="10" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,10 L11,5 z" fill="#2F6FDD"/></marker>
-<marker id="arrow-purple" markerWidth="12" markerHeight="12" refX="10" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,10 L11,5 z" fill="#6B57A5"/></marker>
-<marker id="arrow-green" markerWidth="12" markerHeight="12" refX="10" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,10 L11,5 z" fill="#38815B"/></marker>
-<marker id="arrow-orange" markerWidth="12" markerHeight="12" refX="10" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,10 L11,5 z" fill="#D97706"/></marker>
-<marker id="arrow-red" markerWidth="12" markerHeight="12" refX="10" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,10 L11,5 z" fill="#C2413B"/></marker>
-<marker id="arrow-teal" markerWidth="12" markerHeight="12" refX="10" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,10 L11,5 z" fill="#0F766E"/></marker>
-<marker id="arrow-gray" markerWidth="12" markerHeight="12" refX="10" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,10 L11,5 z" fill="#5A6573"/></marker>
+  <marker id="arrow-purple" markerWidth="12" markerHeight="12" refX="10" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,10 L11,5 z" fill="#6B57A5"/></marker>
+  <marker id="arrow-blue" markerWidth="12" markerHeight="12" refX="10" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,10 L11,5 z" fill="#2F6FDD"/></marker>
+  <marker id="arrow-green" markerWidth="12" markerHeight="12" refX="10" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,10 L11,5 z" fill="#38815B"/></marker>
+  <marker id="arrow-orange" markerWidth="12" markerHeight="12" refX="10" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,10 L11,5 z" fill="#D97706"/></marker>
+  <marker id="arrow-red" markerWidth="12" markerHeight="12" refX="10" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,10 L11,5 z" fill="#C2413B"/></marker>
+  <marker id="arrow-teal" markerWidth="12" markerHeight="12" refX="10" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,10 L11,5 z" fill="#0F766E"/></marker>
 </defs>
 <style>
 text{font-family:"Noto Sans CJK SC","PingFang SC","Microsoft YaHei",Arial,sans-serif;fill:#182230}
-.title{font-size:42px;font-weight:500}.subtitle{font-size:24px;fill:#5A6573}
-.view{font-size:22px;fill:#45515F}.zone{font-size:28px;font-weight:500}
-.kind{font-size:20px;fill:#5A6573}.name{font-size:27px;font-weight:500}
-.body{font-size:22px}.small{font-size:19px;fill:#5A6573}.edge{font-size:20px;font-weight:500}
-.node{stroke-width:2.4}.lane{stroke-width:2}.flow{fill:none;stroke-width:3.4}
-.thin{fill:none;stroke-width:2.2}.dash{stroke-dasharray:12 9}
-.lifeline{stroke:#98A3AF;stroke-width:2.2;stroke-dasharray:9 9}
-.activation{fill:#E9E1FF;stroke:#6B57A5;stroke-width:2}
+.title{font-size:42px;font-weight:600}.subtitle{font-size:24px;fill:#5A6573}.view{font-size:22px;fill:#45515F}
+.zone{font-size:28px;font-weight:600}.kind{font-size:20px;fill:#5A6573}.name{font-size:28px;font-weight:600}
+.body{font-size:22px}.small{font-size:19px;fill:#5A6573}.edge{font-size:19px;font-weight:500}
+.node{stroke-width:2.5}.lane{stroke-width:2}.flow{fill:none;stroke-width:3.2}.thin{fill:none;stroke-width:2.4}.dash{stroke-dasharray:12 9}
 </style>
-<rect width="4400" height="2900" fill="#F8FAFC"/>
-<text class="title" x="2200.0" y="62" text-anchor="middle">Kinbot L1 递归 Agent 系统互连视图</text>
-<text class="subtitle" x="2200.0" y="105" text-anchor="middle">左侧信息空间、中央 Agentic Robot System、右侧物理空间及其主干连接</text>
+<rect width="4400" height="2800" fill="#F8FAFC"/>
+<text id="titleText" class="title" x="2200" y="62" text-anchor="middle">Kinbot L1 主 Agent 与专业 Agent 互连视图</text>
+<text class="subtitle" x="2200" y="105" text-anchor="middle">一个主业务规划中心 · 三个专业 Agent · 一个独立安全 Agent · 两个非 Agent 平台</text>
 <rect x="70" y="132" width="4260" height="52" rx="12" fill="#EEF2F7" stroke="#CBD4DE"/>
-<text class="view" x="95" y="166">view &lt;l1iv&gt; &#x27;L1递归Agent互连视图&#x27; : InterconnectionView</text>
-<rect class="lane" x="60" y="230" width="720" height="2540" rx="24" fill="#F2F7FD" stroke="#7AA7D9"/>
-<rect class="lane" x="820" y="230" width="2760" height="2540" rx="24" fill="#F7F4FC" stroke="#8070A5"/>
-<rect class="lane" x="3620" y="230" width="720" height="2540" rx="24" fill="#F2FBF5" stroke="#73B391"/>
+<text class="view" x="95" y="166">view &lt;l1iv&gt; 'L1主Agent与专业Agent互连视图' : InterconnectionView</text>
+
+<rect class="lane" x="60" y="230" width="720" height="2400" rx="24" fill="#F2F7FD" stroke="#7AA7D9"/>
+<rect class="lane" x="820" y="230" width="2760" height="2400" rx="24" fill="#F7F4FC" stroke="#8070A5"/>
+<rect class="lane" x="3620" y="230" width="720" height="2400" rx="24" fill="#F2FBF5" stroke="#73B391"/>
 <text class="zone" x="420" y="280" text-anchor="middle" fill="#315F93">信息空间</text>
 <text class="zone" x="2200" y="280" text-anchor="middle" fill="#6B57A5">Kinbot Agentic Robot System</text>
 <text class="zone" x="3980" y="280" text-anchor="middle" fill="#38815B">物理空间</text>
-<g class="item-node"><rect class="node" x="130" y="500" width="580" height="220" rx="5" fill="#DDEEFF" stroke="#3B6EA8"/><text class="kind" x="420.0" y="534" text-anchor="middle">«item»</text><text class="name" x="420.0" y="578" text-anchor="middle">&lt;I1&gt; 数字主体与关系</text><line x1="130" y1="598" x2="710" y2="598" stroke="#3B6EA8" stroke-width="1.5"/><text class="body" x="420.0" y="632" text-anchor="middle"><tspan x="420.0" dy="0">«item usage»</tspan></text></g>
-<g class="item-node"><rect class="node" x="130" y="900" width="580" height="220" rx="5" fill="#DDEEFF" stroke="#3B6EA8"/><text class="kind" x="420.0" y="934" text-anchor="middle">«item»</text><text class="name" x="420.0" y="978" text-anchor="middle">&lt;I2&gt; 目标·任务·知识·授权</text><line x1="130" y1="998" x2="710" y2="998" stroke="#3B6EA8" stroke-width="1.5"/><text class="body" x="420.0" y="1032" text-anchor="middle"><tspan x="420.0" dy="0">«item usage»</tspan></text></g>
-<g class="item-node"><rect class="node" x="130" y="1300" width="580" height="220" rx="5" fill="#DDEEFF" stroke="#3B6EA8"/><text class="kind" x="420.0" y="1334" text-anchor="middle">«item»</text><text class="name" x="420.0" y="1378" text-anchor="middle">&lt;I3&gt; App·云·设备·外部服务</text><line x1="130" y1="1398" x2="710" y2="1398" stroke="#3B6EA8" stroke-width="1.5"/><text class="body" x="420.0" y="1432" text-anchor="middle"><tspan x="420.0" dy="0">«item usage»</tspan></text></g>
-<g class="item-node"><rect class="node" x="130" y="1900" width="580" height="220" rx="5" fill="#DDEEFF" stroke="#3B6EA8"/><text class="kind" x="420.0" y="1934" text-anchor="middle">«item»</text><text class="name" x="420.0" y="1978" text-anchor="middle">&lt;I4&gt; 信息结果·消息·证据·交接</text><line x1="130" y1="1998" x2="710" y2="1998" stroke="#3B6EA8" stroke-width="1.5"/><text class="body" x="420.0" y="2032" text-anchor="middle"><tspan x="420.0" dy="0">«item usage»</tspan></text></g>
-<g class="part-node"><rect class="node" x="1420" y="340" width="1560" height="200" rx="12" fill="#D9F3F0" stroke="#0F766E"/><text class="kind" x="2200.0" y="374" text-anchor="middle">«part»</text><text class="name" x="2200.0" y="418" text-anchor="middle">A8 系统运行与资源管理 Agent</text><line x1="1420" y1="438" x2="2980" y2="438" stroke="#0F766E" stroke-width="1.5"/><text class="body" x="2200.0" y="472" text-anchor="middle"><tspan x="2200.0" dy="0">资源策略、模型与技能版本、运行监测</tspan></text></g>
-<rect x="1050" y="585" width="2300" height="1370" rx="22" fill="none" stroke="#0F766E" stroke-width="2" stroke-dasharray="12 10"/>
-<text class="small" x="1080" y="620" fill="#0F766E">A1-A7 运行域（受 A8 资源策略覆盖，不进入硬实时安全闭环）</text>
-<g class="part-node"><rect class="node" x="1100" y="680" width="620" height="220" rx="12" fill="#E9E1FF" stroke="#6B57A5"/><text class="kind" x="1410.0" y="714" text-anchor="middle">«part»</text><text class="name" x="1410.0" y="758" text-anchor="middle">A6 健康照护与服务协同 Agent</text><line x1="1100" y1="778" x2="1720" y2="778" stroke="#6B57A5" stroke-width="1.5"/><text class="body" x="1410.0" y="812" text-anchor="middle"><tspan x="1410.0" dy="0">Agent Cell</tspan></text></g>
-<g class="part-node"><rect class="node" x="1840" y="680" width="620" height="220" rx="12" fill="#E9E1FF" stroke="#6B57A5"/><text class="kind" x="2150.0" y="714" text-anchor="middle">«part»</text><text class="name" x="2150.0" y="758" text-anchor="middle">A3 世界状态与记忆 Agent</text><line x1="1840" y1="778" x2="2460" y2="778" stroke="#6B57A5" stroke-width="1.5"/><text class="body" x="2150.0" y="812" text-anchor="middle"><tspan x="2150.0" dy="0">Agent Cell</tspan></text></g>
-<g class="part-node"><rect class="node" x="2580" y="680" width="620" height="220" rx="12" fill="#E9E1FF" stroke="#6B57A5"/><text class="kind" x="2890.0" y="714" text-anchor="middle">«part»</text><text class="name" x="2890.0" y="758" text-anchor="middle">A1 环境与自身感知 Agent</text><line x1="2580" y1="778" x2="3200" y2="778" stroke="#6B57A5" stroke-width="1.5"/><text class="body" x="2890.0" y="812" text-anchor="middle"><tspan x="2890.0" dy="0">Agent Cell</tspan></text></g>
-<g class="part-node"><rect class="node" x="1100" y="1110" width="620" height="220" rx="12" fill="#E9E1FF" stroke="#6B57A5"/><text class="kind" x="1410.0" y="1144" text-anchor="middle">«part»</text><text class="name" x="1410.0" y="1188" text-anchor="middle">A2 人机交互 Agent</text><line x1="1100" y1="1208" x2="1720" y2="1208" stroke="#6B57A5" stroke-width="1.5"/><text class="body" x="1410.0" y="1242" text-anchor="middle"><tspan x="1410.0" dy="0">Agent Cell</tspan></text></g>
-<g class="part-node"><rect class="node" x="1840" y="1110" width="620" height="220" rx="12" fill="#E9E1FF" stroke="#6B57A5"/><text class="kind" x="2150.0" y="1144" text-anchor="middle">«part»</text><text class="name" x="2150.0" y="1188" text-anchor="middle">A4 目标与任务执行 Agent</text><line x1="1840" y1="1208" x2="2460" y2="1208" stroke="#6B57A5" stroke-width="1.5"/><text class="body" x="2150.0" y="1242" text-anchor="middle"><tspan x="2150.0" dy="0">Agent Cell</tspan></text></g>
-<g class="part-node"><rect class="node" x="2580" y="1110" width="620" height="220" rx="12" fill="#E9E1FF" stroke="#6B57A5"/><text class="kind" x="2890.0" y="1144" text-anchor="middle">«part»</text><text class="name" x="2890.0" y="1188" text-anchor="middle">A7 安全、授权与合规 Agent</text><line x1="2580" y1="1208" x2="3200" y2="1208" stroke="#6B57A5" stroke-width="1.5"/><text class="body" x="2890.0" y="1242" text-anchor="middle"><tspan x="2890.0" dy="0">Agent Cell</tspan></text></g>
-<g class="part-node"><rect class="node" x="1840" y="1540" width="620" height="220" rx="12" fill="#E9E1FF" stroke="#6B57A5"/><text class="kind" x="2150.0" y="1574" text-anchor="middle">«part»</text><text class="name" x="2150.0" y="1618" text-anchor="middle">A5 机器人行动 Agent</text><line x1="1840" y1="1638" x2="2460" y2="1638" stroke="#6B57A5" stroke-width="1.5"/><text class="body" x="2150.0" y="1672" text-anchor="middle"><tspan x="2150.0" dy="0">Agent Cell</tspan></text></g>
-<g class="part-node"><rect class="node" x="1250" y="2150" width="1900" height="300" rx="12" fill="#FFE7CF" stroke="#B8661E"/><text class="kind" x="2200.0" y="2184" text-anchor="middle">«part»</text><text class="name" x="2200.0" y="2228" text-anchor="middle">F1 机器人计算与机电平台</text><line x1="1250" y1="2248" x2="3150" y2="2248" stroke="#B8661E" stroke-width="1.5"/><text class="body" x="2200.0" y="2282" text-anchor="middle"><tspan x="2200.0" dy="0">确定性工具与资源执行层</tspan><tspan x="2200.0" dy="31">独立硬安全内核；不是 Agent</tspan></text></g>
-<path class="thin" d="M1720 790 H1840" stroke="#6B57A5" marker-end="url(#arrow-purple)"/>
-<path class="thin" d="M2580 790 H2460" stroke="#6B57A5" marker-end="url(#arrow-purple)"/>
-<path class="thin" d="M2150 900 V1110" stroke="#6B57A5" marker-end="url(#arrow-purple)"/>
-<path class="thin" d="M1840 1220 H1720" stroke="#6B57A5" marker-end="url(#arrow-purple)"/>
-<path class="thin" d="M2460 1220 H2580" stroke="#6B57A5" marker-end="url(#arrow-purple)"/>
-<path class="thin" d="M2150 1330 V1540" stroke="#6B57A5" marker-end="url(#arrow-purple)"/>
-<path class="thin" d="M1840 1190 H1770 V850 H1720" stroke="#6B57A5" marker-end="url(#arrow-purple)"/>
-<path class="thin" d="M1840 820 H1720" stroke="#6B57A5" marker-end="url(#arrow-purple)"/>
-<path class="thin" d="M2460 820 H2580" stroke="#6B57A5" marker-end="url(#arrow-purple)"/>
-<path class="thin" d="M2120 1110 V900" stroke="#6B57A5" marker-end="url(#arrow-purple)"/>
-<path class="thin" d="M1720 1250 H1840" stroke="#6B57A5" marker-end="url(#arrow-purple)"/>
-<path class="thin" d="M2580 1250 H2460" stroke="#6B57A5" marker-end="url(#arrow-purple)"/>
-<path class="thin" d="M2120 1540 V1330" stroke="#6B57A5" marker-end="url(#arrow-purple)"/>
-<path class="thin" d="M1720 880 H1740 V1160 H1840" stroke="#6B57A5" marker-end="url(#arrow-purple)"/>
-<path class="thin" d="M2120 1760 V2150" stroke="#B8661E" marker-end="url(#arrow-orange)"/>
-<path class="thin" d="M2180 2150 V1760" stroke="#B8661E" marker-end="url(#arrow-orange)"/>
-<path class="thin" d="M1100 1220 H970 V2300 H1250" stroke="#B8661E" marker-end="url(#arrow-orange)"/>
-<path class="thin" d="M1250 2340 H1000 V1280 H1100" stroke="#B8661E" marker-end="url(#arrow-orange)"/>
-<path class="thin dash" d="M2890 1330 V1480 H2460 V1650" stroke="#C2413B" marker-end="url(#arrow-red)"/>
-<rect x="2676.0" y="1445" width="168" height="34" rx="8" fill="#F8FAFC" opacity="0.94"/><text class="edge" x="2760" y="1470" text-anchor="middle" fill="#C2413B">限制·撤销·中止</text>
-<path class="thin dash" d="M2960 1330 V2040 H3000 V2150" stroke="#C2413B" marker-end="url(#arrow-red)"/>
-<rect x="3045.0" y="2005" width="130" height="34" rx="8" fill="#F8FAFC" opacity="0.94"/><text class="edge" x="3110" y="2030" text-anchor="middle" fill="#C2413B">硬停·安全态</text>
-<path class="thin dash" d="M2200 540 V585" stroke="#0F766E" marker-end="url(#arrow-teal)"/>
-<path class="thin" d="M710 610 H900 V1220 H1100" stroke="#2F6FDD" marker-end="url(#arrow-blue)"/>
-<path class="thin" d="M710 1010 H920 V790 H1100" stroke="#2F6FDD" marker-end="url(#arrow-blue)"/>
-<path class="thin" d="M710 1410 H940 V850 H1100" stroke="#2F6FDD" marker-end="url(#arrow-blue)"/>
-<path class="thin" d="M1100 900 H960 V1440 H710" stroke="#2F6FDD" marker-end="url(#arrow-blue)"/>
-<path class="thin" d="M1100 1280 H990 V2010 H710" stroke="#2F6FDD" marker-end="url(#arrow-blue)"/>
-<path class="thin" d="M1100 930 H1040 V2070 H710" stroke="#2F6FDD" marker-end="url(#arrow-blue)"/>
-<g class="part-node"><rect class="node" x="3690" y="420" width="580" height="520" rx="12" fill="#DDF4E5" stroke="#38815B"/><text class="kind" x="3980.0" y="454" text-anchor="middle">«part»</text><text class="name" x="3980.0" y="498" text-anchor="middle">家庭物理环境</text><line x1="3690" y1="518" x2="4270" y2="518" stroke="#38815B" stroke-width="1.5"/><text class="body" x="3980.0" y="552" text-anchor="middle"><tspan x="3980.0" dy="0">P1 人</tspan><tspan x="3980.0" dy="31">P2 家庭空间与地点</tspan><tspan x="3980.0" dy="31">P3 物体·设备·宠物</tspan></text></g>
-<g class="item-node"><rect class="node" x="3690" y="1170" width="580" height="240" rx="5" fill="#DDF4E5" stroke="#38815B"/><text class="kind" x="3980.0" y="1204" text-anchor="middle">«item»</text><text class="name" x="3980.0" y="1248" text-anchor="middle">&lt;P4&gt; 可感知物理现象</text><line x1="3690" y1="1268" x2="4270" y2="1268" stroke="#38815B" stroke-width="1.5"/><text class="body" x="3980.0" y="1302" text-anchor="middle"><tspan x="3980.0" dy="0">光、声、力与运动变化</tspan></text></g>
-<g class="item-node"><rect class="node" x="3690" y="1850" width="580" height="260" rx="5" fill="#DDF4E5" stroke="#38815B"/><text class="kind" x="3980.0" y="1884" text-anchor="middle">«item»</text><text class="name" x="3980.0" y="1928" text-anchor="middle">&lt;P5&gt; 机器人行为与作用</text><line x1="3690" y1="1948" x2="4270" y2="1948" stroke="#38815B" stroke-width="1.5"/><text class="body" x="3980.0" y="1982" text-anchor="middle"><tspan x="3980.0" dy="0">移动、语音、显示、灯光</tspan><tspan x="3980.0" dy="31">物品运输与状态变化</tspan></text></g>
-<path class="thin" d="M3980 940 V1170" stroke="#38815B" marker-end="url(#arrow-green)"/>
-<path class="thin" d="M3690 1290 H3300 V2250 H3150" stroke="#38815B" marker-end="url(#arrow-green)"/>
-<path class="thin" d="M3150 2330 H3420 V1980 H3690" stroke="#38815B" marker-end="url(#arrow-green)"/>
-<path class="thin" d="M3980 1850 V1550 H4300 V680 H4270" stroke="#38815B" marker-end="url(#arrow-green)"/>
-<path class="thin" d="M2850 2150 V2050 H2500 V860 H2580" stroke="#B8661E" marker-end="url(#arrow-orange)"/>
-<line x1="1050" y1="2600" x2="1190" y2="2600" stroke="#6B57A5" stroke-width="3" marker-end="url(#arrow-purple)"/>
-<text class="small" x="1210" y="2608">Agent 协作连接</text>
-<line x1="1830" y1="2600" x2="1970" y2="2600" stroke="#2F6FDD" stroke-width="3" marker-end="url(#arrow-blue)"/>
-<text class="small" x="1990" y="2608">信息流</text>
-<line x1="2440" y1="2600" x2="2580" y2="2600" stroke="#38815B" stroke-width="3" marker-end="url(#arrow-green)"/>
-<text class="small" x="2600" y="2608">物理流</text>
-<line x1="3020" y1="2600" x2="3160" y2="2600" stroke="#C2413B" stroke-width="3" stroke-dasharray="12 9" marker-end="url(#arrow-red)"/>
-<text class="small" x="3180" y="2608">安全限制</text>
-<line x1="70" y1="2808" x2="4330" y2="2808" stroke="#D7DEE6"/>
-<text class="small" x="2200.0" y="2850" text-anchor="middle">part 节点表示责任实体；连接只保留 L1 主干。A8 的资源策略与 F1 的硬安全数据面在运行时保持分离。</text>
+
+<g><rect class="node" x="130" y="500" width="580" height="220" rx="6" fill="#DDEEFF" stroke="#3B6EA8"/><text class="kind" x="420" y="536" text-anchor="middle">«item usage»</text><text class="name" x="420" y="580" text-anchor="middle">目标·消息·知识·授权</text><line x1="130" y1="603" x2="710" y2="603" stroke="#3B6EA8"/><text class="body" x="420" y="642" text-anchor="middle">信息空间输入</text></g>
+<g><rect class="node" x="130" y="950" width="580" height="240" rx="6" fill="#DDEEFF" stroke="#3B6EA8"/><text class="kind" x="420" y="986" text-anchor="middle">«item usage»</text><text class="name" x="420" y="1030" text-anchor="middle">App·云·设备·外部服务</text><line x1="130" y1="1053" x2="710" y2="1053" stroke="#3B6EA8"/><text class="body" x="420" y="1092" text-anchor="middle"><tspan x="420">受控输入、调用和返回</tspan></text></g>
+<g><rect class="node" x="130" y="1640" width="580" height="240" rx="6" fill="#DDEEFF" stroke="#3B6EA8"/><text class="kind" x="420" y="1676" text-anchor="middle">«item usage»</text><text class="name" x="420" y="1720" text-anchor="middle">信息结果·证据·责任交接</text><line x1="130" y1="1743" x2="710" y2="1743" stroke="#3B6EA8"/><text class="body" x="420" y="1782" text-anchor="middle">信息空间输出</text></g>
+
+<g><rect class="node" x="1420" y="340" width="1560" height="230" rx="14" fill="#D9F3F0" stroke="#0F766E"/><text class="kind" x="2200" y="376" text-anchor="middle">«part usage : AgentCell»</text><text class="name" x="2200" y="423" text-anchor="middle">A0 Kinbot 主 Agent</text><line x1="1420" y1="447" x2="2980" y2="447" stroke="#0F766E"/><text class="body" x="2200" y="485" text-anchor="middle"><tspan x="2200">主业务规划 · 根任务 · 对话与表达技能 · 最终结果</tspan></text></g>
+
+<g><rect class="node" x="970" y="760" width="720" height="250" rx="14" fill="#E9E1FF" stroke="#6B57A5"/><text class="kind" x="1330" y="796" text-anchor="middle">«part usage : AgentCell»</text><text class="name" x="1330" y="843" text-anchor="middle">A1 感知与状态理解 Agent</text><line x1="970" y1="867" x2="1690" y2="867" stroke="#6B57A5"/><text class="body" x="1330" y="905" text-anchor="middle"><tspan x="1330">Observe + Orient</tspan><tspan x="1330" dy="31">状态语义与证据质量</tspan></text></g>
+<g><rect class="node" x="1840" y="760" width="720" height="250" rx="14" fill="#E9E1FF" stroke="#6B57A5"/><text class="kind" x="2200" y="796" text-anchor="middle">«part usage : AgentCell»</text><text class="name" x="2200" y="843" text-anchor="middle">A2 照护服务 Agent</text><line x1="1840" y1="867" x2="2560" y2="867" stroke="#6B57A5"/><text class="body" x="2200" y="905" text-anchor="middle"><tspan x="2200">健康 · 用药 · 家庭安全</tspan><tspan x="2200" dy="31">外部服务与责任交接</tspan></text></g>
+<g><rect class="node" x="2710" y="760" width="720" height="250" rx="14" fill="#E9E1FF" stroke="#6B57A5"/><text class="kind" x="3070" y="796" text-anchor="middle">«part usage : AgentCell»</text><text class="name" x="3070" y="843" text-anchor="middle">A3 机器人行动 Agent</text><line x1="2710" y1="867" x2="3430" y2="867" stroke="#6B57A5"/><text class="body" x="3070" y="905" text-anchor="middle"><tspan x="3070">导航 · 运动 · 递送 · 回充</tspan><tspan x="3070" dy="31">局部规划与物理恢复</tspan></text></g>
+
+<g><rect class="node" x="1650" y="1180" width="1100" height="230" rx="14" fill="#FFF0E4" stroke="#C2413B"/><text class="kind" x="2200" y="1216" text-anchor="middle">«part usage : AgentCell»</text><text class="name" x="2200" y="1263" text-anchor="middle">A4 安全与授权 Agent</text><line x1="1650" y1="1287" x2="2750" y2="1287" stroke="#C2413B"/><text class="body" x="2200" y="1325" text-anchor="middle">风险 · 许可 · 撤销 · 隐私 · 紧急例外</text></g>
+
+<g><rect class="node" x="1120" y="1600" width="2160" height="260" rx="14" fill="#E4F1FA" stroke="#3B6EA8"/><text class="kind" x="2200" y="1636" text-anchor="middle">«part usage : NonAgentPlatform»</text><text class="name" x="2200" y="1683" text-anchor="middle">AP1 Agent 运行平台</text><line x1="1120" y1="1707" x2="3280" y2="1707" stroke="#3B6EA8"/><text class="body" x="2200" y="1745" text-anchor="middle"><tspan x="2200">状态与任务存储 · 事件 · 模型 · 技能 · 连接器</tspan><tspan x="2200" dy="31">资源调度 · 可观测 · 更新；不是 Agent</tspan></text></g>
+<g><rect class="node" x="1120" y="2100" width="2160" height="300" rx="14" fill="#FFE7CF" stroke="#B8661E"/><text class="kind" x="2200" y="2136" text-anchor="middle">«part usage : NonAgentPlatform»</text><text class="name" x="2200" y="2183" text-anchor="middle">F1 机器人机电与硬安全平台</text><line x1="1120" y1="2207" x2="3280" y2="2207" stroke="#B8661E"/><text class="body" x="2200" y="2245" text-anchor="middle"><tspan x="2200">传感器 · 执行器 · 驱动 · 控制器 · 电源</tspan><tspan x="2200" dy="31">独立硬安全内核；不是 Agent</tspan></text></g>
+
+<path class="flow" d="M1950 570 V660 H1330 V760" stroke="#6B57A5" marker-end="url(#arrow-purple)"/><path class="flow" d="M2450 570 V660 H2200 V760" stroke="#6B57A5" marker-end="url(#arrow-purple)"/><path class="flow" d="M2750 570 V660 H3070 V760" stroke="#6B57A5" marker-end="url(#arrow-purple)"/>
+<path class="thin" d="M1330 760 V690 H1880 V570" stroke="#6B57A5" marker-end="url(#arrow-purple)"/><path class="thin" d="M2200 760 V570" stroke="#6B57A5" marker-end="url(#arrow-purple)"/><path class="thin" d="M3070 760 V690 H2520 V570" stroke="#6B57A5" marker-end="url(#arrow-purple)"/>
+<text class="edge" x="1740" y="645" text-anchor="middle" fill="#6B57A5">任务 / 状态 / 结果</text>
+
+<path class="thin dash" d="M2050 570 V1180" stroke="#C2413B" marker-end="url(#arrow-red)"/><path class="thin dash" d="M2200 1010 V1180" stroke="#C2413B" marker-end="url(#arrow-red)"/><path class="thin dash" d="M3070 1010 V1100 H2500 V1180" stroke="#C2413B" marker-end="url(#arrow-red)"/>
+<path class="thin dash" d="M2350 1180 V570" stroke="#C2413B" marker-end="url(#arrow-red)"/><path class="thin dash" d="M2050 1410 V1010" stroke="#C2413B" marker-end="url(#arrow-red)"/><path class="thin dash" d="M2550 1410 H3200 V1010" stroke="#C2413B" marker-end="url(#arrow-red)"/>
+<text class="edge" x="2820" y="1080" text-anchor="middle" fill="#C2413B">行动申请 / 许可 / 撤销</text>
+
+<path class="thin dash" d="M1400 1600 V1010" stroke="#2F6FDD" marker-end="url(#arrow-blue)"/><path class="thin dash" d="M1900 1600 V1410" stroke="#2F6FDD" marker-end="url(#arrow-blue)"/><path class="thin dash" d="M2400 1600 V1410" stroke="#2F6FDD" marker-end="url(#arrow-blue)"/><path class="thin dash" d="M3000 1600 V1010" stroke="#2F6FDD" marker-end="url(#arrow-blue)"/><path class="thin dash" d="M2200 1600 V570" stroke="#2F6FDD" marker-end="url(#arrow-blue)"/>
+<text class="edge" x="1240" y="1510" fill="#2F6FDD">运行支撑</text>
+<path class="flow" d="M3070 1010 V2020 H2850 V2100" stroke="#D97706" marker-end="url(#arrow-orange)"/><path class="thin" d="M2780 2100 V2010 H3000 V1010" stroke="#D97706" marker-end="url(#arrow-orange)"/>
+<path class="flow" d="M2200 1860 V2100" stroke="#5A6573" marker-end="url(#arrow-orange)"/><path class="thin" d="M2260 2100 V1860" stroke="#5A6573" marker-end="url(#arrow-orange)"/>
+
+<path class="flow" d="M710 610 H1000 V455 H1420" stroke="#2F6FDD" marker-end="url(#arrow-blue)"/><path class="flow" d="M710 1070 H900 V885 H970" stroke="#2F6FDD" marker-end="url(#arrow-blue)"/><path class="flow" d="M710 1110 H1780 V930 H1840" stroke="#2F6FDD" marker-end="url(#arrow-blue)"/>
+<path class="flow" d="M1420 500 H900 V1760 H710" stroke="#2F6FDD" marker-end="url(#arrow-blue)"/><path class="flow" d="M1840 960 H950 V1820 H710" stroke="#2F6FDD" marker-end="url(#arrow-blue)"/>
+
+<g><rect class="node" x="3690" y="420" width="580" height="520" rx="14" fill="#DDF4E5" stroke="#38815B"/><text class="kind" x="3980" y="456" text-anchor="middle">«part usage»</text><text class="name" x="3980" y="503" text-anchor="middle">家庭物理环境</text><line x1="3690" y1="527" x2="4270" y2="527" stroke="#38815B"/><text class="body" x="3980" y="568" text-anchor="middle"><tspan x="3980">人 · 家庭空间 · 地点</tspan><tspan x="3980" dy="34">物体 · 设备 · 宠物</tspan></text></g>
+<g><rect class="node" x="3690" y="1160" width="580" height="260" rx="8" fill="#DDF4E5" stroke="#38815B"/><text class="kind" x="3980" y="1196" text-anchor="middle">«item usage»</text><text class="name" x="3980" y="1243" text-anchor="middle">物理信号与状态</text><line x1="3690" y1="1267" x2="4270" y2="1267" stroke="#38815B"/><text class="body" x="3980" y="1305" text-anchor="middle">光、声、接触、运动与设备状态</text></g>
+<g><rect class="node" x="3690" y="1720" width="580" height="390" rx="8" fill="#E9F7EC" stroke="#38815B"/><text class="kind" x="3980" y="1756" text-anchor="middle">«item usage»</text><text class="name" x="3980" y="1803" text-anchor="middle">机器人物理输出</text><line x1="3690" y1="1827" x2="4270" y2="1827" stroke="#38815B"/><text class="body" x="3980" y="1865" text-anchor="middle"><tspan x="3980">移动 · 语音 · 显示 · 灯光</tspan><tspan x="3980" dy="34">携带物品运输</tspan><tspan x="3980" dy="34">机械臂预留 / 紧急例外</tspan></text></g>
+<path class="flow" d="M3980 940 V1160" stroke="#38815B" marker-end="url(#arrow-green)"/><path class="flow" d="M3690 1290 H3440 V2240 H3280" stroke="#38815B" marker-end="url(#arrow-green)"/><rect x="3310" y="1510" width="355" height="34" rx="8" fill="#F8FAFC" opacity="0.96"/><text class="edge" x="3487" y="1535" text-anchor="middle" fill="#315F93">P-P1 后的实时 I1</text><path class="flow" d="M3280 2300 H3490 V1915 H3690" stroke="#38815B" marker-end="url(#arrow-green)"/><path class="thin dash" d="M3980 1720 V1480 H4300 V700 H4270" stroke="#D97706" marker-end="url(#arrow-orange)"/>
+
+<line x1="250" y1="2520" x2="390" y2="2520" stroke="#6B57A5" stroke-width="3" marker-end="url(#arrow-purple)"/><text class="small" x="410" y="2528">主业务任务与结果</text>
+<line x1="1080" y1="2520" x2="1220" y2="2520" stroke="#C2413B" stroke-width="3" stroke-dasharray="12 9" marker-end="url(#arrow-red)"/><text class="small" x="1240" y="2528">许可与撤销</text>
+<line x1="1770" y1="2520" x2="1910" y2="2520" stroke="#2F6FDD" stroke-width="3" stroke-dasharray="12 9" marker-end="url(#arrow-blue)"/><text class="small" x="1930" y="2528">运行支撑</text>
+<line x1="2460" y1="2520" x2="2600" y2="2520" stroke="#38815B" stroke-width="3" marker-end="url(#arrow-green)"/><text class="small" x="2620" y="2528">物理信号、实时 I1 与输出</text>
+<line x1="3300" y1="2520" x2="3440" y2="2520" stroke="#D97706" stroke-width="3" stroke-dasharray="12 9" marker-end="url(#arrow-orange)"/><text class="small" x="3460" y="2528">预留 / 紧急例外</text>
+<line x1="70" y1="2658" x2="4330" y2="2658" stroke="#D7DEE6"/>
+<text class="small" x="2200" y="2700" text-anchor="middle">A0 负责主业务流；A4 独立裁决许可；AP1/F1 是非 Agent 平台。连接只保留 L1 主干。</text>
 </svg>

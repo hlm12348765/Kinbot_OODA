@@ -2,11 +2,13 @@
 
 ---
 
-文档版本：v1.8
+文档版本：v1.10
 创建日期：2026-03-11
 作者：Codex-架构师
 
 文档变更记录：
+- v1.10 | 2026-07-26 | Codex-架构师 | L1 已通过评审并冻结，`KBT-59` 的前置阻断解除；后续由 `KBT-60` 将既有 P2 `S1-S7` 映射到 A0、四个基础业务 Agent、动态 TaskWorker、RobotSkillSystem、O3、AP3、G3 和 F1。
+- v1.9 | 2026-07-20 | Codex-架构师 | 同步 L1 Agent 精简候选：P2 后续将既有工作包映射到 A0 主 Agent、A1-A3 专业 Agent、A4 安全与授权 Agent，以及 AP1/F1 非 Agent 平台；映射仍由 KBT-60 在 KBT-59 评审后承接。
 - v1.8 | 2026-07-17 | Codex-架构师 | 校正递归 Agentic 迁移状态：方向已确认，`F1 + A1-A8` 仍是 `KBT-59` 候选评审基线；新建被其阻塞的 `KBT-60` 承接 P2 重映射，不提前冻结新软件责任边界。
 - v1.7 | 2026-07-17 | Codex-架构师 | 同步递归式 Agentic L1 架构迁移：现有 `S1-S7` 下发基线继续作为当前开发入口，但需从旧九模块口径迁移到 `F1 + A1-A8`，迁移完成前不得将旧模块边界视为新主线冻结结果。
 - v1.6 | 2026-06-27 | Codex-架构师 | 新增 `10_v1_onboard_medicine_box_decision_draft.md`，收敛 `V1` 机载药箱的无手臂最小闭环、开合方式、取放检测、视觉 / 传感器分工、防夹异常策略与 Phase 5 证据字段候选。
@@ -25,7 +27,7 @@
 
 用于把系统架构转成可执行的技术路线、成本约束和工程验证输入。
 
-当前迁移边界：`docs/02_p1_architecture/16_recursive_agentic_robot_system_architecture.md` 已成为 L1 首要评审入口；递归 Agentic 方向已经确认，但 `F1 + A1-A8` 精确拓扑仍在 `KBT-59` 评审。本目录的既有总体方案、`S1-S7` 和权衡表继续有效；`KBT-60` 已建立并被 `KBT-59` 阻塞，评审完成前只准备候选映射，硬件、成本、功耗和量产约束继续保留，不把旧边界或新候选边界提前写成冻结结果。
+当前迁移边界：`docs/02_p1_architecture/16_recursive_agentic_robot_system_architecture.md` 已冻结 L1 实体、责任、主要关系、七类闭环和系统不变量。`KBT-59` 已完成，`KBT-60` 不再受其前置阻断；本目录的既有总体方案、`S1-S7`、硬件、成本、功耗和量产约束继续有效，后续须映射到 A0、四个基础业务 Agent、动态 TaskWorker、RobotSkillSystem、O3、AP3、G3 和 F1，不能继续把旧九模块当作当前软件责任边界。
 
 ## 文档索引
 

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="4400" height="3000" viewBox="0 0 4400 3000" role="img" aria-labelledby="title desc">
+<title id="title">Kinbot L1 单一常驻主 Agent 互连视图</title>
+<desc id="desc">方案二的 SysML v2 InterconnectionView：一个常驻 A0 主 Agent，零到多个临时任务子 Agent，以及感知与实时状态、技能与工具、运行、安全授权、机电与硬安全五个非 Agent 系统；P-P1 生成的实时 I1 直接进入 F1。</desc>
+<defs>
+  <marker id="arrow-teal" markerWidth="12" markerHeight="12" refX="10" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,10 L11,5 z" fill="#0F766E"/></marker>
+  <marker id="arrow-purple" markerWidth="12" markerHeight="12" refX="10" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,10 L11,5 z" fill="#7458A6"/></marker>
+  <marker id="arrow-blue" markerWidth="12" markerHeight="12" refX="10" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,10 L11,5 z" fill="#2F6FDD"/></marker>
+  <marker id="arrow-gold" markerWidth="12" markerHeight="12" refX="10" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,10 L11,5 z" fill="#B98618"/></marker>
+  <marker id="arrow-red" markerWidth="12" markerHeight="12" refX="10" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,10 L11,5 z" fill="#C2413B"/></marker>
+  <marker id="arrow-orange" markerWidth="12" markerHeight="12" refX="10" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,10 L11,5 z" fill="#B8661E"/></marker>
+  <marker id="arrow-green" markerWidth="12" markerHeight="12" refX="10" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,10 L11,5 z" fill="#38815B"/></marker>
+  <marker id="arrow-gray" markerWidth="12" markerHeight="12" refX="10" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,10 L11,5 z" fill="#637083"/></marker>
+</defs>
+<style>
+text{font-family:"Noto Sans CJK SC","PingFang SC","Microsoft YaHei",Arial,sans-serif;fill:#182230}
+.title{font-size:42px;font-weight:600}.subtitle{font-size:24px;fill:#5A6573}.view{font-size:22px;fill:#45515F}
+.zone{font-size:28px;font-weight:600}.kind{font-size:20px;fill:#5A6573}.name{font-size:28px;font-weight:600}
+.body{font-size:22px}.small{font-size:19px;fill:#5A6573}.edge{font-size:19px;font-weight:500}
+.node{stroke-width:2.5}.lane{stroke-width:2}.flow{fill:none;stroke-width:3.2}.thin{fill:none;stroke-width:2.4}.dash{stroke-dasharray:12 9}.worker{stroke-dasharray:10 7}
+</style>
+
+<rect width="4400" height="3000" fill="#F8FAFC"/>
+<text class="title" x="2200" y="62" text-anchor="middle">Kinbot L1 单一常驻主 Agent 互连视图</text>
+<text class="subtitle" x="2200" y="105" text-anchor="middle">方案二 · 一个常驻业务 Agent · 五个非 Agent 系统 · 临时任务子 Agent [0..*]</text>
+<rect x="70" y="132" width="4260" height="52" rx="12" fill="#EEF2F7" stroke="#CBD4DE"/>
+<text class="view" x="95" y="166">view &lt;l1siv&gt; 'L1单一常驻主Agent互连视图' : InterconnectionView</text>
+
+<rect class="lane" x="60" y="230" width="720" height="2510" rx="24" fill="#F2F7FD" stroke="#7AA7D9"/>
+<rect class="lane" x="820" y="230" width="2760" height="2510" rx="24" fill="#F7F4FC" stroke="#8070A5"/>
+<rect class="lane" x="3620" y="230" width="720" height="2510" rx="24" fill="#F2FBF5" stroke="#73B391"/>
+<text class="zone" x="420" y="280" text-anchor="middle" fill="#315F93">信息空间</text>
+<text class="zone" x="2200" y="280" text-anchor="middle" fill="#6B57A5">Kinbot Agentic Robot System：方案二</text>
+<text class="zone" x="3980" y="280" text-anchor="middle" fill="#38815B">物理空间</text>
+
+<g><rect class="node" x="130" y="470" width="580" height="220" rx="6" fill="#EAF3FF" stroke="#5C86B5"/><text class="kind" x="420" y="506" text-anchor="middle">«item usage»</text><text class="name" x="420" y="550" text-anchor="middle">目标·消息·知识·授权</text><line x1="130" y1="573" x2="710" y2="573" stroke="#5C86B5"/><text class="body" x="420" y="612" text-anchor="middle">信息空间输入</text></g>
+<g><rect class="node" x="130" y="930" width="580" height="240" rx="6" fill="#EAF3FF" stroke="#5C86B5"/><text class="kind" x="420" y="966" text-anchor="middle">«item usage»</text><text class="name" x="420" y="1010" text-anchor="middle">App·云·设备·外部服务</text><line x1="130" y1="1033" x2="710" y2="1033" stroke="#5C86B5"/><text class="body" x="420" y="1072" text-anchor="middle">受控输入、调用和返回</text></g>
+<g><rect class="node" x="130" y="1700" width="580" height="240" rx="6" fill="#EAF3FF" stroke="#5C86B5"/><text class="kind" x="420" y="1736" text-anchor="middle">«item usage»</text><text class="name" x="420" y="1780" text-anchor="middle">信息结果·证据·责任交接</text><line x1="130" y1="1803" x2="710" y2="1803" stroke="#5C86B5"/><text class="body" x="420" y="1842" text-anchor="middle">由 A0 统一输出</text></g>
+
+<g><rect class="node" x="980" y="350" width="1690" height="250" rx="14" fill="#D9F3F0" stroke="#0F766E"/><text class="kind" x="1825" y="386" text-anchor="middle">«part usage : AgentCell»</text><text class="name" x="1825" y="433" text-anchor="middle">A0 Kinbot 主 Agent</text><line x1="980" y1="457" x2="2670" y2="457" stroke="#0F766E"/><text class="body" x="1825" y="495" text-anchor="middle"><tspan x="1825">唯一常驻业务 Agent</tspan><tspan x="1825" dy="32">根目标 · 主业务流 · 统一交互 · 最终结果</tspan></text></g>
+
+<g><rect class="node worker" x="2820" y="350" width="620" height="250" rx="14" fill="#F1ECFF" stroke="#7458A6"/><text class="kind" x="3130" y="386" text-anchor="middle">«part usage»</text><text class="name" x="3130" y="430" text-anchor="middle">taskWorker : AgentCell [0..*]</text><line x1="2820" y1="454" x2="3440" y2="454" stroke="#7458A6"/><text class="body" x="3130" y="492" text-anchor="middle"><tspan x="3130">临时任务子 Agent</tspan><tspan x="3130" dy="31">返回候选结果后结束</tspan></text></g>
+
+<g><rect class="node" x="970" y="790" width="1130" height="280" rx="14" fill="#DDEEFF" stroke="#3B6EA8"/><text class="kind" x="1535" y="826" text-anchor="middle">«part usage : RealtimeStatePlatform»</text><text class="name" x="1535" y="873" text-anchor="middle">O1 感知、Orient 与实时状态平台</text><line x1="970" y1="897" x2="2100" y2="897" stroke="#3B6EA8"/><text class="body" x="1535" y="935" text-anchor="middle"><tspan x="1535">观察与事件 · 世界/自身/任务状态</tspan><tspan x="1535" dy="32">持续更新状态；不自行创造业务目标</tspan></text></g>
+
+<g><rect class="node" x="2310" y="790" width="1130" height="280" rx="14" fill="#FFF1C9" stroke="#B98618"/><text class="kind" x="2875" y="826" text-anchor="middle">«part usage : SkillToolSystem»</text><text class="name" x="2875" y="873" text-anchor="middle">ST1 技能与工具系统</text><line x1="2310" y1="897" x2="3440" y2="897" stroke="#B98618"/><text class="body" x="2875" y="935" text-anchor="middle"><tspan x="2875">交互 · 照护 · 导航 · 递送 · 回充</tspan><tspan x="2875" dy="32">外部服务工作流；不拥有独立使命</tspan></text></g>
+
+<g><rect class="node" x="1300" y="1210" width="1800" height="250" rx="14" fill="#FFE1DF" stroke="#C2413B"/><text class="kind" x="2200" y="1246" text-anchor="middle">«part usage : GovernanceSystem»</text><text class="name" x="2200" y="1293" text-anchor="middle">G1 安全、授权与合规系统</text><line x1="1300" y1="1317" x2="3100" y2="1317" stroke="#C2413B"/><text class="body" x="2200" y="1355" text-anchor="middle"><tspan x="2200">身份 · 规则 · 风险 · 许可 · 撤销 · 审计 · 人工接管</tspan><tspan x="2200" dy="32">可以否决或收紧行动；不是第二个业务规划者</tspan></text></g>
+
+<g><rect class="node" x="1080" y="1650" width="2240" height="270" rx="14" fill="#E4F1FA" stroke="#3B6EA8"/><text class="kind" x="2200" y="1686" text-anchor="middle">«part usage : NonAgentPlatform»</text><text class="name" x="2200" y="1733" text-anchor="middle">AP1 Agent 运行平台</text><line x1="1080" y1="1757" x2="3320" y2="1757" stroke="#3B6EA8"/><text class="body" x="2200" y="1795" text-anchor="middle"><tspan x="2200">会话 · 任务 · 模型 · 记忆 · 事件 · 连接器</tspan><tspan x="2200" dy="32">资源 · 监测 · 更新；提供受限运行环境</tspan></text></g>
+
+<g><rect class="node" x="1080" y="2160" width="2240" height="300" rx="14" fill="#FFE7CF" stroke="#B8661E"/><text class="kind" x="2200" y="2196" text-anchor="middle">«part usage : NonAgentPlatform»</text><text class="name" x="2200" y="2243" text-anchor="middle">F1 机器人机电与硬安全平台</text><line x1="1080" y1="2267" x2="3320" y2="2267" stroke="#B8661E"/><text class="body" x="2200" y="2305" text-anchor="middle"><tspan x="2200">传感器 · 执行器 · 驱动 · 控制器 · 电源</tspan><tspan x="2200" dy="32">独立硬安全；拒绝模型和临时子 Agent 直接控制</tspan></text></g>
+
+<path class="thin dash" d="M2670 430 H2820" stroke="#7458A6" marker-end="url(#arrow-purple)"/><path class="thin dash" d="M2820 525 H2670" stroke="#7458A6" marker-end="url(#arrow-purple)"/>
+<text class="edge" x="2745" y="408" text-anchor="middle" fill="#7458A6">按需委派</text><text class="edge" x="2745" y="558" text-anchor="middle" fill="#7458A6">候选结果</text>
+
+<path class="flow" d="M1535 790 V690 H1450 V600" stroke="#2F6FDD" marker-end="url(#arrow-blue)"/><text class="edge" x="1260" y="710" fill="#2F6FDD">状态与证据</text>
+<path class="flow" d="M2100 500 H2875 V790" stroke="#B98618" marker-end="url(#arrow-gold)"/><path class="thin" d="M2740 790 V650 H2000 V600" stroke="#B98618" marker-end="url(#arrow-gold)"/>
+<text class="edge" x="2720" y="625" fill="#8A6410">技能调用 / 结果</text>
+
+<path class="thin dash" d="M1825 600 V1210" stroke="#C2413B" marker-end="url(#arrow-red)"/><path class="thin dash" d="M2380 1210 V620 H2050 V600" stroke="#C2413B" marker-end="url(#arrow-red)"/>
+<text class="edge" x="1885" y="1135" fill="#C2413B">行动申请</text><text class="edge" x="2440" y="700" fill="#C2413B">许可 / 拒绝 / 撤销</text>
+
+<path class="thin dash" d="M1500 1650 V1510 H1100 V600" stroke="#2F6FDD" marker-end="url(#arrow-blue)"/><path class="thin dash" d="M1750 1650 V1120 H1535 V1070" stroke="#2F6FDD" marker-end="url(#arrow-blue)"/><path class="thin dash" d="M2700 1650 V1120 H2875 V1070" stroke="#2F6FDD" marker-end="url(#arrow-blue)"/><path class="thin dash" d="M3020 1650 V630 H3130 V600" stroke="#2F6FDD" marker-end="url(#arrow-blue)"/>
+<text class="edge" x="1140" y="1560" fill="#2F6FDD">运行、存储与资源支撑</text>
+
+<path class="thin dash" d="M2680 1460 V1540 H3050 V1070" stroke="#C2413B" marker-end="url(#arrow-red)"/><text class="edge" x="2730" y="1518" fill="#C2413B">策略强制执行</text>
+<path class="thin dash" d="M2200 1460 V2160" stroke="#C2413B" marker-end="url(#arrow-red)"/><text class="edge" x="2230" y="2080" fill="#C2413B">只可收紧硬限制</text>
+
+<path class="flow" d="M1535 1070 V2080 H1600 V2160" stroke="#38815B" marker-end="url(#arrow-green)"/><path class="thin" d="M1700 2160 V2030 H1650 V1070" stroke="#38815B" marker-end="url(#arrow-green)"/>
+<path class="flow" d="M2875 1070 V2080 H2800 V2160" stroke="#B98618" marker-end="url(#arrow-orange)"/><path class="thin" d="M2700 2160 V2030 H2760 V1070" stroke="#B98618" marker-end="url(#arrow-orange)"/>
+<path class="flow" d="M2050 1920 V2160" stroke="#637083" marker-end="url(#arrow-gray)"/><path class="thin" d="M2350 2160 V1920" stroke="#637083" marker-end="url(#arrow-gray)"/>
+
+<path class="flow" d="M710 580 H900 V475 H980" stroke="#2F6FDD" marker-end="url(#arrow-blue)"/>
+<path class="flow" d="M710 1020 H850 V930 H970" stroke="#2F6FDD" marker-end="url(#arrow-blue)"/>
+<path class="flow" d="M710 1080 H880 V990 H2310" stroke="#B98618" marker-end="url(#arrow-gold)"/><path class="thin" d="M2310 1030 H900 V1140 H710" stroke="#B98618" marker-end="url(#arrow-gold)"/>
+<path class="flow" d="M980 540 H880 V1820 H710" stroke="#0F766E" marker-end="url(#arrow-teal)"/>
+
+<g><rect class="node" x="3690" y="430" width="580" height="480" rx="14" fill="#DDF4E5" stroke="#38815B"/><text class="kind" x="3980" y="466" text-anchor="middle">«part usage»</text><text class="name" x="3980" y="513" text-anchor="middle">家庭物理环境</text><line x1="3690" y1="537" x2="4270" y2="537" stroke="#38815B"/><text class="body" x="3980" y="578" text-anchor="middle"><tspan x="3980">人 · 家庭空间 · 地点</tspan><tspan x="3980" dy="34">物体 · 设备 · 宠物</tspan></text></g>
+<g><rect class="node" x="3690" y="1120" width="580" height="250" rx="8" fill="#DDF4E5" stroke="#38815B"/><text class="kind" x="3980" y="1156" text-anchor="middle">«item usage»</text><text class="name" x="3980" y="1203" text-anchor="middle">物理信号与状态</text><line x1="3690" y1="1227" x2="4270" y2="1227" stroke="#38815B"/><text class="body" x="3980" y="1265" text-anchor="middle">光、声、接触、运动与设备状态</text></g>
+<g><rect class="node" x="3690" y="1740" width="580" height="360" rx="8" fill="#E9F7EC" stroke="#38815B"/><text class="kind" x="3980" y="1776" text-anchor="middle">«item usage»</text><text class="name" x="3980" y="1823" text-anchor="middle">机器人物理输出</text><line x1="3690" y1="1847" x2="4270" y2="1847" stroke="#38815B"/><text class="body" x="3980" y="1885" text-anchor="middle"><tspan x="3980">移动 · 语音 · 显示 · 灯光</tspan><tspan x="3980" dy="34">携带物品运输</tspan><tspan x="3980" dy="34">机械臂预留 / 紧急例外</tspan></text></g>
+<path class="flow" d="M3980 910 V1120" stroke="#38815B" marker-end="url(#arrow-green)"/><path class="flow" d="M3690 1245 H3460 V2260 H3320" stroke="#38815B" marker-end="url(#arrow-green)"/><rect x="3325" y="1510" width="355" height="34" rx="8" fill="#F8FAFC" opacity="0.96"/><text class="edge" x="3502" y="1535" text-anchor="middle" fill="#315F93">P-P1 后的实时 I1</text><path class="flow" d="M3320 2340 H3490 V1920 H3690" stroke="#38815B" marker-end="url(#arrow-green)"/><path class="thin dash" d="M3980 1740 V1480 H4300 V690 H4270" stroke="#B8661E" marker-end="url(#arrow-orange)"/>
+
+<line x1="250" y1="2630" x2="390" y2="2630" stroke="#0F766E" stroke-width="3" marker-end="url(#arrow-teal)"/><text class="small" x="410" y="2638">主业务与统一结果</text>
+<line x1="980" y1="2630" x2="1120" y2="2630" stroke="#7458A6" stroke-width="3" stroke-dasharray="12 9" marker-end="url(#arrow-purple)"/><text class="small" x="1140" y="2638">临时任务委派</text>
+<line x1="1710" y1="2630" x2="1850" y2="2630" stroke="#2F6FDD" stroke-width="3" marker-end="url(#arrow-blue)"/><text class="small" x="1870" y="2638">状态与运行支撑</text>
+<line x1="2520" y1="2630" x2="2660" y2="2630" stroke="#C2413B" stroke-width="3" stroke-dasharray="12 9" marker-end="url(#arrow-red)"/><text class="small" x="2680" y="2638">许可与策略执行</text>
+<line x1="3370" y1="2630" x2="3510" y2="2630" stroke="#38815B" stroke-width="3" marker-end="url(#arrow-green)"/><text class="small" x="3530" y="2638">物理信号、实时 I1 与输出</text>
+
+<line x1="70" y1="2765" x2="4330" y2="2765" stroke="#D7DEE6"/>
+<text class="small" x="2200" y="2810" text-anchor="middle">固定 L1 只有 A0 一个 Agent。O1、ST1、AP1、G1、F1 均为非 Agent 系统；taskWorker 是运行时任务实例。</text>
+<text class="small" x="2200" y="2844" text-anchor="middle">A0 复核临时子 Agent 的候选结果；任何外部或物理副作用仍须经过 G1、ST1/AP1 与 F1 的确定性边界。</text>
+</svg>

@@ -2,11 +2,12 @@
 
 ---
 
-文档版本：v1.60
+文档版本：v1.61
 创建日期：2026-03-11
 作者：Codex-架构师
 
 文档变更记录：
+- v1.61 | 2026-07-26 | Codex-架构师 | 新增 2026-07-26 Kinbot arXiv 每周论文纪要索引，在官方最新 2026-07-24 Robotics listing + 周日未出现当日新批次 + `cs.RO/recent` 2026-07-20 至 2026-07-24 周度复核口径下，补充顺序记忆、记忆执行合同、world-model 评测归因、嵌入式纯视觉定位和物理技能运行时治理研究输入，并记录饱和 / 专题跟踪判断。
 - v1.60 | 2026-07-19 | Codex-架构师 | 新增 2026-07-19 Kinbot arXiv 每周论文纪要索引，在官方最新 2026-07-17 Robotics listing + 周日未出现当日新批次 + `cs.RO/recent` 2026-07-13 至 2026-07-17 周度复核口径下，补充实机 VLN 失败、可编辑长期记忆、Agent 能力合同、world-model 因果动作可控性与想象—动作完整性研究输入，并记录饱和 / 专题跟踪判断。
 - v1.59 | 2026-07-12 | Codex-架构师 | 同日复核 2026-07-12 Kinbot arXiv 纪要，补充对象持久性、world-model verdict 可采信等级与长时 action-faithful policy evaluation 研究输入，收紧 replacement、cross-list、证据 lineage 和目标 SoC 资源边界。
 - v1.58 | 2026-07-12 | Codex-架构师 | 新增 2026-07-12 Kinbot arXiv 每日论文纪要索引，在官方最新 2026-07-10 Robotics listing + 周日未出现当日新批次 + `cs.RO/recent` 2026-07-03 至 2026-07-10 复核口径下，补充纯视觉动态避障、流式 VLN、开放词汇 ObjectNav、输入约束安全导航和居家认知刺激交互研究输入，并记录周度综合判断。
@@ -80,6 +81,7 @@
 ## 文档索引
 
 - `00_papers/README.md`：论文研究目录。核心主题：arXiv 论文检索、摘要转述、工程适配判断和推荐结论。
+- `00_papers/2026-07-26_kinbot_arxiv_daily.md`：2026-07-26 Kinbot arXiv 每周论文纪要。核心主题：顺序记忆、记忆执行合同、world-model 评测归因、嵌入式纯视觉定位和物理技能运行时治理；本轮采用官方最新 2026-07-24 Robotics listing + 周日未出现新批次说明 + `cs.RO/recent` 2026-07-20 至 2026-07-24 周度复核 + 饱和 / 专题跟踪判断口径，并记录候选排除表。
 - `00_papers/2026-07-19_kinbot_arxiv_daily.md`：2026-07-19 Kinbot arXiv 每周论文纪要。核心主题：实机 VLN 失效、可编辑长期记忆、Agent 能力合同、world-model 因果动作可控性与想象—动作完整性；本轮采用官方最新 2026-07-17 Robotics listing + 周日未出现新批次说明 + `cs.RO/recent` 2026-07-13 至 2026-07-17 周度复核 + 饱和 / 专题跟踪判断口径，并记录候选排除表。
 - `00_papers/2026-07-12_kinbot_arxiv_daily.md`：2026-07-12 Kinbot arXiv 每日论文纪要。核心主题：纯视觉动态避障、流式 VLN、对象持久性、world-model admissibility 与长时 action-faithful policy evaluation；本轮采用官方最新 2026-07-10 Robotics listing + 周日未出现新批次说明 + `cs.RO/recent` 2026-07-03 至 2026-07-10 复核 + 周度综合判断口径，并记录候选排除表。
 - `00_papers/2026-07-05_kinbot_arxiv_daily.md`：2026-07-05 Kinbot arXiv 每日论文纪要。核心主题：低层语言导航接口、端侧闭环推理 runtime、视觉语言延迟攻击、家庭找物个性化边界和纯 RGB 参考轨迹导航；本轮采用官方最新 2026-07-03 Robotics listing + 周日未出现新批次说明 + `cs.RO/recent` 2026-06-29 至 2026-07-03 近期待补录 + 周度综合判断口径，并记录候选排除表。

@@ -1,0 +1,815 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<mxfile host="Electron" modified="2026-07-22T02:05:50+00:00" agent="Codex SVG-to-native-draw.io converter" version="26.0.16" type="device" compressed="false">
+  <diagram id="kinbot-process-operand-v3" name="Page-1">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="4500" pageHeight="3450" math="0" shadow="0" background="#F8FAFC">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="region-1" value="" style="rounded=1;arcSize=5.3061224489795915;whiteSpace=wrap;html=1;fillColor=#F7F4FC;strokeColor=#8070A5;strokeWidth=2.5;shadow=0;glass=0;connectable=0;" vertex="1" parent="1" data-role="region">
+          <mxGeometry x="1760" y="480" width="980" height="2820" as="geometry" />
+        </mxCell>
+        <mxCell id="region-2" value="" style="rounded=1;arcSize=4.25531914893617;whiteSpace=wrap;html=1;fillColor=#F2EEFF;strokeColor=#A89AD1;strokeWidth=2;shadow=0;glass=0;connectable=0;" vertex="1" parent="1" data-role="region">
+          <mxGeometry x="1780" y="545" width="940" height="1415" as="geometry" />
+        </mxCell>
+        <mxCell id="region-3" value="" style="rounded=1;arcSize=4.25531914893617;whiteSpace=wrap;html=1;fillColor=#FFF4E8;strokeColor=#D99B5E;strokeWidth=2;shadow=0;glass=0;connectable=0;" vertex="1" parent="1" data-role="region">
+          <mxGeometry x="1780" y="1975" width="940" height="1290" as="geometry" />
+        </mxCell>
+        <mxCell id="region-4" value="" style="rounded=1;arcSize=2.588235294117647;whiteSpace=wrap;html=1;fillColor=#F2F7FD;strokeColor=#7AA7D9;strokeWidth=2;shadow=0;glass=0;connectable=0;" vertex="1" parent="1" data-role="region">
+          <mxGeometry x="40" y="195" width="1700" height="3090" as="geometry" />
+        </mxCell>
+        <mxCell id="region-5" value="" style="rounded=1;arcSize=2.588235294117647;whiteSpace=wrap;html=1;fillColor=#F2FBF5;strokeColor=#73B391;strokeWidth=2;shadow=0;glass=0;connectable=0;" vertex="1" parent="1" data-role="region">
+          <mxGeometry x="2760" y="195" width="1700" height="3090" as="geometry" />
+        </mxCell>
+        <mxCell id="line-1" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#2F6FDD;strokeWidth=3.1;dashed=0;dashPattern=;endArrow=block;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-svg-class="input-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1320" y="145" as="sourcePoint" />
+            <mxPoint x="1435" y="145" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-2" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#D97706;strokeWidth=3.1;dashed=1;dashPattern=11 8;endArrow=block;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-svg-class="output-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2440" y="145" as="sourcePoint" />
+            <mxPoint x="2555" y="145" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-3" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#A8C7E8;strokeWidth=1.7;dashed=0;dashPattern=;endArrow=none;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-svg-class="trunk-info">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="160" y="450" as="sourcePoint" />
+            <mxPoint x="160" y="3260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-4" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#A8C7E8;strokeWidth=1.7;dashed=0;dashPattern=;endArrow=none;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-svg-class="trunk-info">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="365" y="450" as="sourcePoint" />
+            <mxPoint x="365" y="3260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-5" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#A8C7E8;strokeWidth=1.7;dashed=0;dashPattern=;endArrow=none;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-svg-class="trunk-info">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="570" y="450" as="sourcePoint" />
+            <mxPoint x="570" y="3260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-6" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#A8C7E8;strokeWidth=1.7;dashed=0;dashPattern=;endArrow=none;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-svg-class="trunk-info">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="775" y="450" as="sourcePoint" />
+            <mxPoint x="775" y="3260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-7" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#A8C7E8;strokeWidth=1.7;dashed=0;dashPattern=;endArrow=none;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-svg-class="trunk-info">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="980" y="450" as="sourcePoint" />
+            <mxPoint x="980" y="3260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-8" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#A8C7E8;strokeWidth=1.7;dashed=0;dashPattern=;endArrow=none;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-svg-class="trunk-info">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1185" y="450" as="sourcePoint" />
+            <mxPoint x="1185" y="3260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-9" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#A8C7E8;strokeWidth=1.7;dashed=0;dashPattern=;endArrow=none;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-svg-class="trunk-info">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1390" y="450" as="sourcePoint" />
+            <mxPoint x="1390" y="3260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-10" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#A8C7E8;strokeWidth=1.7;dashed=0;dashPattern=;endArrow=none;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-svg-class="trunk-info">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1595" y="450" as="sourcePoint" />
+            <mxPoint x="1595" y="3260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-11" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#ABD8BC;strokeWidth=1.7;dashed=0;dashPattern=;endArrow=none;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-svg-class="trunk-physical">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2885" y="450" as="sourcePoint" />
+            <mxPoint x="2885" y="3260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-12" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#ABD8BC;strokeWidth=1.7;dashed=0;dashPattern=;endArrow=none;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-svg-class="trunk-physical">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3175" y="450" as="sourcePoint" />
+            <mxPoint x="3175" y="3260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-13" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#ABD8BC;strokeWidth=1.7;dashed=0;dashPattern=;endArrow=none;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-svg-class="trunk-physical">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3465" y="450" as="sourcePoint" />
+            <mxPoint x="3465" y="3260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-14" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#ABD8BC;strokeWidth=1.7;dashed=0;dashPattern=;endArrow=none;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-svg-class="trunk-physical">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3755" y="450" as="sourcePoint" />
+            <mxPoint x="3755" y="3260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-15" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#ABD8BC;strokeWidth=1.7;dashed=0;dashPattern=;endArrow=none;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-svg-class="trunk-physical">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="4045" y="450" as="sourcePoint" />
+            <mxPoint x="4045" y="3260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-16" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#ABD8BC;strokeWidth=1.7;dashed=0;dashPattern=;endArrow=none;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-svg-class="trunk-physical">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="4335" y="450" as="sourcePoint" />
+            <mxPoint x="4335" y="3260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-17" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#2F6FDD;strokeWidth=3.1;dashed=0;dashPattern=;endArrow=block;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-process="I-P1" data-svg-class="input-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="160" y="626" as="sourcePoint" />
+            <mxPoint x="1800" y="626" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-18" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#D97706;strokeWidth=3.1;dashed=1;dashPattern=11 8;endArrow=none;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-process="I-P1" data-svg-class="output-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1800" y="674" as="sourcePoint" />
+            <mxPoint x="365" y="674" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-19" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#D97706;strokeWidth=3.1;dashed=1;dashPattern=11 8;endArrow=block;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-svg-class="output-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="365" y="692" as="sourcePoint" />
+            <mxPoint x="365" y="670" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-20" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#2F6FDD;strokeWidth=3.1;dashed=0;dashPattern=;endArrow=block;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-process="I-P2" data-svg-class="input-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="365" y="801" as="sourcePoint" />
+            <mxPoint x="1800" y="801" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-21" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#D97706;strokeWidth=3.1;dashed=1;dashPattern=11 8;endArrow=none;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-process="I-P2" data-svg-class="output-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1800" y="849" as="sourcePoint" />
+            <mxPoint x="570" y="849" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-22" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#D97706;strokeWidth=3.1;dashed=1;dashPattern=11 8;endArrow=block;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-svg-class="output-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="570" y="867" as="sourcePoint" />
+            <mxPoint x="570" y="845" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-23" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#2F6FDD;strokeWidth=3.1;dashed=0;dashPattern=;endArrow=block;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-process="I-P3" data-svg-class="input-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="365" y="976" as="sourcePoint" />
+            <mxPoint x="1800" y="976" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-24" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#D97706;strokeWidth=3.1;dashed=1;dashPattern=11 8;endArrow=none;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-process="I-P3" data-svg-class="output-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1800" y="1024" as="sourcePoint" />
+            <mxPoint x="775" y="1024" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-25" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#D97706;strokeWidth=3.1;dashed=1;dashPattern=11 8;endArrow=block;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-svg-class="output-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="775" y="1042" as="sourcePoint" />
+            <mxPoint x="775" y="1020" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-26" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#2F6FDD;strokeWidth=3.1;dashed=0;dashPattern=;endArrow=block;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-process="I-P4" data-svg-class="input-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="570" y="1151" as="sourcePoint" />
+            <mxPoint x="1800" y="1151" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-27" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#D97706;strokeWidth=3.1;dashed=1;dashPattern=11 8;endArrow=none;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-process="I-P4" data-svg-class="output-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1800" y="1199" as="sourcePoint" />
+            <mxPoint x="980" y="1199" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-28" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#D97706;strokeWidth=3.1;dashed=1;dashPattern=11 8;endArrow=block;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-svg-class="output-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="980" y="1217" as="sourcePoint" />
+            <mxPoint x="980" y="1195" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-29" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#2F6FDD;strokeWidth=3.1;dashed=0;dashPattern=;endArrow=block;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-process="I-P5" data-svg-class="input-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="775" y="1326" as="sourcePoint" />
+            <mxPoint x="1800" y="1326" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-30" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#D97706;strokeWidth=3.1;dashed=1;dashPattern=11 8;endArrow=none;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-process="I-P5" data-svg-class="output-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1800" y="1374" as="sourcePoint" />
+            <mxPoint x="1185" y="1374" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-31" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#D97706;strokeWidth=3.1;dashed=1;dashPattern=11 8;endArrow=block;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-svg-class="output-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1185" y="1392" as="sourcePoint" />
+            <mxPoint x="1185" y="1370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-32" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#2F6FDD;strokeWidth=3.1;dashed=0;dashPattern=;endArrow=block;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-process="I-P6" data-svg-class="input-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="570" y="1501" as="sourcePoint" />
+            <mxPoint x="1800" y="1501" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-33" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#D97706;strokeWidth=3.1;dashed=1;dashPattern=11 8;endArrow=none;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-process="I-P6" data-svg-class="output-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1800" y="1549" as="sourcePoint" />
+            <mxPoint x="1390" y="1549" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-34" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#D97706;strokeWidth=3.1;dashed=1;dashPattern=11 8;endArrow=block;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-svg-class="output-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1390" y="1567" as="sourcePoint" />
+            <mxPoint x="1390" y="1545" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-35" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#2F6FDD;strokeWidth=3.1;dashed=0;dashPattern=;endArrow=block;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-process="I-P7" data-svg-class="input-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="365" y="1676" as="sourcePoint" />
+            <mxPoint x="1800" y="1676" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-36" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#D97706;strokeWidth=3.1;dashed=1;dashPattern=11 8;endArrow=none;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-process="I-P7" data-svg-class="output-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1800" y="1724" as="sourcePoint" />
+            <mxPoint x="1390" y="1724" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-37" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#D97706;strokeWidth=3.1;dashed=1;dashPattern=11 8;endArrow=block;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-svg-class="output-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1390" y="1742" as="sourcePoint" />
+            <mxPoint x="1390" y="1720" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-38" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#2F6FDD;strokeWidth=3.1;dashed=0;dashPattern=;endArrow=block;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-process="I-P8" data-svg-class="input-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="365" y="1851" as="sourcePoint" />
+            <mxPoint x="1800" y="1851" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-39" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#D97706;strokeWidth=3.1;dashed=1;dashPattern=11 8;endArrow=none;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-process="I-P8" data-svg-class="output-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1800" y="1899" as="sourcePoint" />
+            <mxPoint x="1595" y="1899" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-40" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#D97706;strokeWidth=3.1;dashed=1;dashPattern=11 8;endArrow=block;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-svg-class="output-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1595" y="1917" as="sourcePoint" />
+            <mxPoint x="1595" y="1895" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-41" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#2F6FDD;strokeWidth=3.1;dashed=0;dashPattern=;endArrow=block;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-process="P-P1" data-svg-class="input-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2885" y="2061" as="sourcePoint" />
+            <mxPoint x="2700" y="2061" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-42" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#D97706;strokeWidth=3.1;dashed=1;dashPattern=11 8;endArrow=none;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-process="P-P1" data-svg-class="output-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1800" y="2109" as="sourcePoint" />
+            <mxPoint x="160" y="2109" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-43" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#D97706;strokeWidth=3.1;dashed=1;dashPattern=11 8;endArrow=block;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-svg-class="output-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="160" y="2127" as="sourcePoint" />
+            <mxPoint x="160" y="2105" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-44" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#2F6FDD;strokeWidth=3.1;dashed=0;dashPattern=;endArrow=block;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-process="P-P2" data-svg-class="input-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1595" y="2236" as="sourcePoint" />
+            <mxPoint x="1800" y="2236" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-45" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#2F6FDD;strokeWidth=3.1;dashed=0;dashPattern=;endArrow=block;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-process="P-P2" data-svg-class="input-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3175" y="2236" as="sourcePoint" />
+            <mxPoint x="2700" y="2236" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-46" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#D97706;strokeWidth=3.1;dashed=1;dashPattern=11 8;endArrow=none;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-process="P-P2" data-svg-class="output-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2700" y="2284" as="sourcePoint" />
+            <mxPoint x="3175" y="2284" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-47" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#D97706;strokeWidth=3.1;dashed=1;dashPattern=11 8;endArrow=block;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-svg-class="output-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3175" y="2302" as="sourcePoint" />
+            <mxPoint x="3175" y="2280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-48" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#2F6FDD;strokeWidth=3.1;dashed=0;dashPattern=;endArrow=block;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-process="P-P3" data-svg-class="input-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="980" y="2411" as="sourcePoint" />
+            <mxPoint x="1800" y="2411" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-49" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#2F6FDD;strokeWidth=3.1;dashed=0;dashPattern=;endArrow=block;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-process="P-P3" data-svg-class="input-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3465" y="2411" as="sourcePoint" />
+            <mxPoint x="2700" y="2411" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-50" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#D97706;strokeWidth=3.1;dashed=1;dashPattern=11 8;endArrow=none;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-process="P-P3" data-svg-class="output-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2700" y="2459" as="sourcePoint" />
+            <mxPoint x="3465" y="2459" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-51" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#D97706;strokeWidth=3.1;dashed=1;dashPattern=11 8;endArrow=block;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-svg-class="output-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3465" y="2477" as="sourcePoint" />
+            <mxPoint x="3465" y="2455" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-52" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#D97706;strokeWidth=3.1;dashed=1;dashPattern=11 8;endArrow=block;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-svg-class="output-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2885" y="2477" as="sourcePoint" />
+            <mxPoint x="2885" y="2455" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-53" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#2F6FDD;strokeWidth=3.1;dashed=0;dashPattern=;endArrow=block;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-process="P-P4" data-svg-class="input-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="980" y="2586" as="sourcePoint" />
+            <mxPoint x="1800" y="2586" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-54" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#2F6FDD;strokeWidth=3.1;dashed=0;dashPattern=;endArrow=block;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-process="P-P4" data-svg-class="input-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3755" y="2586" as="sourcePoint" />
+            <mxPoint x="2700" y="2586" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-55" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#D97706;strokeWidth=3.1;dashed=1;dashPattern=11 8;endArrow=none;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-process="P-P4" data-svg-class="output-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2700" y="2634" as="sourcePoint" />
+            <mxPoint x="3755" y="2634" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-56" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#D97706;strokeWidth=3.1;dashed=1;dashPattern=11 8;endArrow=block;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-svg-class="output-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3465" y="2652" as="sourcePoint" />
+            <mxPoint x="3465" y="2630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-57" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#D97706;strokeWidth=3.1;dashed=1;dashPattern=11 8;endArrow=block;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-svg-class="output-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3755" y="2652" as="sourcePoint" />
+            <mxPoint x="3755" y="2630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-58" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#D97706;strokeWidth=3.1;dashed=1;dashPattern=11 8;endArrow=block;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-svg-class="output-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2885" y="2652" as="sourcePoint" />
+            <mxPoint x="2885" y="2630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-59" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#2F6FDD;strokeWidth=3.1;dashed=0;dashPattern=;endArrow=block;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-process="P-P5" data-svg-class="input-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3465" y="2761" as="sourcePoint" />
+            <mxPoint x="2700" y="2761" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-60" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#D97706;strokeWidth=3.1;dashed=1;dashPattern=11 8;endArrow=none;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-process="P-P5" data-svg-class="output-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2700" y="2809" as="sourcePoint" />
+            <mxPoint x="3465" y="2809" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-61" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#D97706;strokeWidth=3.1;dashed=1;dashPattern=11 8;endArrow=block;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-svg-class="output-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3175" y="2827" as="sourcePoint" />
+            <mxPoint x="3175" y="2805" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-62" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#D97706;strokeWidth=3.1;dashed=1;dashPattern=11 8;endArrow=block;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-svg-class="output-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3465" y="2827" as="sourcePoint" />
+            <mxPoint x="3465" y="2805" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-63" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#D97706;strokeWidth=3.1;dashed=1;dashPattern=11 8;endArrow=block;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-svg-class="output-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2885" y="2827" as="sourcePoint" />
+            <mxPoint x="2885" y="2805" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-64" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#2F6FDD;strokeWidth=3.1;dashed=0;dashPattern=;endArrow=block;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-process="P-P6" data-svg-class="input-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="980" y="2936" as="sourcePoint" />
+            <mxPoint x="1800" y="2936" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-65" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#2F6FDD;strokeWidth=3.1;dashed=0;dashPattern=;endArrow=block;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-process="P-P6" data-svg-class="input-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="4335" y="2936" as="sourcePoint" />
+            <mxPoint x="2700" y="2936" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-66" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#D97706;strokeWidth=3.1;dashed=1;dashPattern=11 8;endArrow=none;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-process="P-P6" data-svg-class="output-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2700" y="2984" as="sourcePoint" />
+            <mxPoint x="4335" y="2984" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-67" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#D97706;strokeWidth=3.1;dashed=1;dashPattern=11 8;endArrow=block;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-svg-class="output-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3465" y="3002" as="sourcePoint" />
+            <mxPoint x="3465" y="2980" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-68" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#D97706;strokeWidth=3.1;dashed=1;dashPattern=11 8;endArrow=block;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-svg-class="output-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="4335" y="3002" as="sourcePoint" />
+            <mxPoint x="4335" y="2980" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-69" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#D97706;strokeWidth=3.1;dashed=1;dashPattern=11 8;endArrow=block;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-svg-class="output-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2885" y="3002" as="sourcePoint" />
+            <mxPoint x="2885" y="2980" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-70" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#2F6FDD;strokeWidth=3.1;dashed=0;dashPattern=;endArrow=block;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-process="P-P7" data-svg-class="input-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="980" y="3111" as="sourcePoint" />
+            <mxPoint x="1800" y="3111" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-71" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#2F6FDD;strokeWidth=3.1;dashed=0;dashPattern=;endArrow=block;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-process="P-P7" data-svg-class="input-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="4045" y="3111" as="sourcePoint" />
+            <mxPoint x="2700" y="3111" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-72" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#D97706;strokeWidth=3.1;dashed=1;dashPattern=11 8;endArrow=none;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-process="P-P7" data-svg-class="output-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2700" y="3159" as="sourcePoint" />
+            <mxPoint x="4045" y="3159" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-73" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#D97706;strokeWidth=3.1;dashed=1;dashPattern=11 8;endArrow=block;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-svg-class="output-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3465" y="3177" as="sourcePoint" />
+            <mxPoint x="3465" y="3155" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-74" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#D97706;strokeWidth=3.1;dashed=1;dashPattern=11 8;endArrow=block;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-svg-class="output-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="4045" y="3177" as="sourcePoint" />
+            <mxPoint x="4045" y="3155" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line-75" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;strokeColor=#D97706;strokeWidth=3.1;dashed=1;dashPattern=11 8;endArrow=block;endFill=1;endSize=12;startArrow=none;" edge="1" parent="1" data-svg-class="output-bus">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2885" y="3177" as="sourcePoint" />
+            <mxPoint x="2885" y="3155" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="operand-I1" value="&lt;div style=&quot;font-size:19px;color:#5A6573;margin-bottom:8px&quot;&gt;«item def»&lt;/div&gt;&lt;div style=&quot;font-size:28px;font-weight:500;color:#182230;margin-bottom:8px&quot;&gt;&amp;lt;I1&amp;gt;&lt;/div&gt;&lt;div style=&quot;font-size:22px;color:#182230&quot;&gt;输入数据与消息&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;spacing=0;fillColor=#DDEEFF;strokeColor=#3B6EA8;strokeWidth=2.4;shadow=0;glass=0;connectable=1;" vertex="1" parent="1" data-operand="I1" data-svg-class="operand-node">
+          <mxGeometry x="65" y="235" width="190" height="215" as="geometry" />
+        </mxCell>
+        <mxCell id="operand-I2" value="&lt;div style=&quot;font-size:19px;color:#5A6573;margin-bottom:8px&quot;&gt;«item def»&lt;/div&gt;&lt;div style=&quot;font-size:28px;font-weight:500;color:#182230;margin-bottom:8px&quot;&gt;&amp;lt;I2&amp;gt;&lt;/div&gt;&lt;div style=&quot;font-size:22px;color:#182230&quot;&gt;观察与事件&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;spacing=0;fillColor=#DDEEFF;strokeColor=#3B6EA8;strokeWidth=2.4;shadow=0;glass=0;connectable=1;" vertex="1" parent="1" data-operand="I2" data-svg-class="operand-node">
+          <mxGeometry x="270" y="235" width="190" height="215" as="geometry" />
+        </mxCell>
+        <mxCell id="operand-I3" value="&lt;div style=&quot;font-size:19px;color:#5A6573;margin-bottom:8px&quot;&gt;«item def»&lt;/div&gt;&lt;div style=&quot;font-size:28px;font-weight:500;color:#182230;margin-bottom:8px&quot;&gt;&amp;lt;I3&amp;gt;&lt;/div&gt;&lt;div style=&quot;font-size:22px;color:#182230&quot;&gt;状态与上下文&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;spacing=0;fillColor=#DDEEFF;strokeColor=#3B6EA8;strokeWidth=2.4;shadow=0;glass=0;connectable=1;" vertex="1" parent="1" data-operand="I3" data-svg-class="operand-node">
+          <mxGeometry x="475" y="235" width="190" height="215" as="geometry" />
+        </mxCell>
+        <mxCell id="operand-I4" value="&lt;div style=&quot;font-size:19px;color:#5A6573;margin-bottom:8px&quot;&gt;«item def»&lt;/div&gt;&lt;div style=&quot;font-size:28px;font-weight:500;color:#182230;margin-bottom:8px&quot;&gt;&amp;lt;I4&amp;gt;&lt;/div&gt;&lt;div style=&quot;font-size:22px;color:#182230&quot;&gt;目标与&lt;br&gt;行动方案&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;spacing=0;fillColor=#DDEEFF;strokeColor=#3B6EA8;strokeWidth=2.4;shadow=0;glass=0;connectable=1;" vertex="1" parent="1" data-operand="I4" data-svg-class="operand-node">
+          <mxGeometry x="680" y="235" width="190" height="215" as="geometry" />
+        </mxCell>
+        <mxCell id="operand-I5" value="&lt;div style=&quot;font-size:19px;color:#5A6573;margin-bottom:8px&quot;&gt;«item def»&lt;/div&gt;&lt;div style=&quot;font-size:28px;font-weight:500;color:#182230;margin-bottom:8px&quot;&gt;&amp;lt;I5&amp;gt;&lt;/div&gt;&lt;div style=&quot;font-size:22px;color:#182230&quot;&gt;安全与&lt;br&gt;授权决定&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;spacing=0;fillColor=#DDEEFF;strokeColor=#3B6EA8;strokeWidth=2.4;shadow=0;glass=0;connectable=1;" vertex="1" parent="1" data-operand="I5" data-svg-class="operand-node">
+          <mxGeometry x="885" y="235" width="190" height="215" as="geometry" />
+        </mxCell>
+        <mxCell id="operand-I6" value="&lt;div style=&quot;font-size:19px;color:#5A6573;margin-bottom:8px&quot;&gt;«item def»&lt;/div&gt;&lt;div style=&quot;font-size:28px;font-weight:500;color:#182230;margin-bottom:8px&quot;&gt;&amp;lt;I6&amp;gt;&lt;/div&gt;&lt;div style=&quot;font-size:22px;color:#182230&quot;&gt;技能与工具&lt;br&gt;调用状态&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;spacing=0;fillColor=#DDEEFF;strokeColor=#3B6EA8;strokeWidth=2.4;shadow=0;glass=0;connectable=1;" vertex="1" parent="1" data-operand="I6" data-svg-class="operand-node">
+          <mxGeometry x="1090" y="235" width="190" height="215" as="geometry" />
+        </mxCell>
+        <mxCell id="operand-I7" value="&lt;div style=&quot;font-size:19px;color:#5A6573;margin-bottom:8px&quot;&gt;«item def»&lt;/div&gt;&lt;div style=&quot;font-size:28px;font-weight:500;color:#182230;margin-bottom:8px&quot;&gt;&amp;lt;I7&amp;gt;&lt;/div&gt;&lt;div style=&quot;font-size:22px;color:#182230&quot;&gt;结果与证据&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;spacing=0;fillColor=#DDEEFF;strokeColor=#3B6EA8;strokeWidth=2.4;shadow=0;glass=0;connectable=1;" vertex="1" parent="1" data-operand="I7" data-svg-class="operand-node">
+          <mxGeometry x="1295" y="235" width="190" height="215" as="geometry" />
+        </mxCell>
+        <mxCell id="operand-I8" value="&lt;div style=&quot;font-size:19px;color:#5A6573;margin-bottom:8px&quot;&gt;«item def»&lt;/div&gt;&lt;div style=&quot;font-size:28px;font-weight:500;color:#182230;margin-bottom:8px&quot;&gt;&amp;lt;I8&amp;gt;&lt;/div&gt;&lt;div style=&quot;font-size:22px;color:#182230&quot;&gt;运行资源与&lt;br&gt;版本状态&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;spacing=0;fillColor=#DDEEFF;strokeColor=#3B6EA8;strokeWidth=2.4;shadow=0;glass=0;connectable=1;" vertex="1" parent="1" data-operand="I8" data-svg-class="operand-node">
+          <mxGeometry x="1500" y="235" width="190" height="215" as="geometry" />
+        </mxCell>
+        <mxCell id="operand-P1" value="&lt;div style=&quot;font-size:19px;color:#5A6573;margin-bottom:8px&quot;&gt;«item def»&lt;/div&gt;&lt;div style=&quot;font-size:28px;font-weight:500;color:#182230;margin-bottom:8px&quot;&gt;&amp;lt;P1&amp;gt;&lt;/div&gt;&lt;div style=&quot;font-size:22px;color:#182230&quot;&gt;传感器可检测的&lt;br&gt;物理信号&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;spacing=0;fillColor=#DDF4E5;strokeColor=#38815B;strokeWidth=2.4;shadow=0;glass=0;connectable=1;" vertex="1" parent="1" data-operand="P1" data-svg-class="operand-node">
+          <mxGeometry x="2757.5" y="235" width="255" height="215" as="geometry" />
+        </mxCell>
+        <mxCell id="operand-P2" value="&lt;div style=&quot;font-size:19px;color:#5A6573;margin-bottom:8px&quot;&gt;«item def»&lt;/div&gt;&lt;div style=&quot;font-size:28px;font-weight:500;color:#182230;margin-bottom:8px&quot;&gt;&amp;lt;P2&amp;gt;&lt;/div&gt;&lt;div style=&quot;font-size:22px;color:#182230&quot;&gt;能量与热状态&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;spacing=0;fillColor=#DDF4E5;strokeColor=#38815B;strokeWidth=2.4;shadow=0;glass=0;connectable=1;" vertex="1" parent="1" data-operand="P2" data-svg-class="operand-node">
+          <mxGeometry x="3047.5" y="235" width="255" height="215" as="geometry" />
+        </mxCell>
+        <mxCell id="operand-P3" value="&lt;div style=&quot;font-size:19px;color:#5A6573;margin-bottom:8px&quot;&gt;«item def»&lt;/div&gt;&lt;div style=&quot;font-size:28px;font-weight:500;color:#182230;margin-bottom:8px&quot;&gt;&amp;lt;P3&amp;gt;&lt;/div&gt;&lt;div style=&quot;font-size:22px;color:#182230&quot;&gt;机器人自身&lt;br&gt;物理状态与输出&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;spacing=0;fillColor=#DDF4E5;strokeColor=#38815B;strokeWidth=2.4;shadow=0;glass=0;connectable=1;" vertex="1" parent="1" data-operand="P3" data-svg-class="operand-node">
+          <mxGeometry x="3337.5" y="235" width="255" height="215" as="geometry" />
+        </mxCell>
+        <mxCell id="operand-P4" value="&lt;div style=&quot;font-size:19px;color:#5A6573;margin-bottom:8px&quot;&gt;«item def»&lt;/div&gt;&lt;div style=&quot;font-size:28px;font-weight:500;color:#182230;margin-bottom:8px&quot;&gt;&amp;lt;P4&amp;gt;&lt;/div&gt;&lt;div style=&quot;font-size:22px;color:#182230&quot;&gt;机器人携带&lt;br&gt;物品的状态&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;spacing=0;fillColor=#DDF4E5;strokeColor=#38815B;strokeWidth=2.4;shadow=0;glass=0;connectable=1;" vertex="1" parent="1" data-operand="P4" data-svg-class="operand-node">
+          <mxGeometry x="3627.5" y="235" width="255" height="215" as="geometry" />
+        </mxCell>
+        <mxCell id="operand-P5" value="&lt;div style=&quot;font-size:19px;color:#5A6573;margin-bottom:8px&quot;&gt;«item def»&lt;/div&gt;&lt;div style=&quot;font-size:28px;font-weight:500;color:#182230;margin-bottom:8px&quot;&gt;&amp;lt;P5&amp;gt;&lt;/div&gt;&lt;div style=&quot;font-size:22px;color:#182230&quot;&gt;外部世界&lt;br&gt;物理状态&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;spacing=0;fillColor=#DDF4E5;strokeColor=#38815B;strokeWidth=2.4;shadow=0;glass=0;connectable=1;" vertex="1" parent="1" data-operand="P5" data-svg-class="operand-node">
+          <mxGeometry x="3917.5" y="235" width="255" height="215" as="geometry" />
+        </mxCell>
+        <mxCell id="operand-P6" value="&lt;div style=&quot;font-size:19px;color:#5A6573;margin-bottom:8px&quot;&gt;«item def»&lt;/div&gt;&lt;div style=&quot;font-size:28px;font-weight:500;color:#182230;margin-bottom:8px&quot;&gt;&amp;lt;P6&amp;gt;&lt;/div&gt;&lt;div style=&quot;font-size:22px;color:#182230&quot;&gt;可安全操控的&lt;br&gt;外部物体状态&lt;br&gt;机械臂预留；:&amp;gt; P5&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;spacing=0;fillColor=#DDF4E5;strokeColor=#38815B;strokeWidth=2.4;shadow=0;glass=0;connectable=1;" vertex="1" parent="1" data-operand="P6" data-svg-class="operand-node">
+          <mxGeometry x="4207.5" y="235" width="255" height="215" as="geometry" />
+        </mxCell>
+        <mxCell id="process-I-P1" value="&lt;div style=&quot;font-size:19px;color:#5A6573;margin-bottom:5px&quot;&gt;«action def»&lt;/div&gt;&lt;div style=&quot;font-size:27px;font-weight:500;color:#182230&quot;&gt;&amp;lt;I-P1&amp;gt; 处理输入并形成观察与事件&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;spacing=0;fillColor=#E9E1FF;strokeColor=#6B57A5;strokeWidth=2.4;shadow=0;glass=0;connectable=1;" vertex="1" parent="1" data-process="I-P1" data-svg-class="process-node">
+          <mxGeometry x="1800" y="595" width="900" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="process-I-P2" value="&lt;div style=&quot;font-size:19px;color:#5A6573;margin-bottom:5px&quot;&gt;«action def»&lt;/div&gt;&lt;div style=&quot;font-size:27px;font-weight:500;color:#182230&quot;&gt;&amp;lt;I-P2&amp;gt; Orient：理解、融合并维护状态&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;spacing=0;fillColor=#E9E1FF;strokeColor=#6B57A5;strokeWidth=2.4;shadow=0;glass=0;connectable=1;" vertex="1" parent="1" data-process="I-P2" data-svg-class="process-node">
+          <mxGeometry x="1800" y="770" width="900" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="process-I-P3" value="&lt;div style=&quot;font-size:19px;color:#5A6573;margin-bottom:5px&quot;&gt;«action def»&lt;/div&gt;&lt;div style=&quot;font-size:27px;font-weight:500;color:#182230&quot;&gt;&amp;lt;I-P3&amp;gt; 形成目标与行动方案&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;spacing=0;fillColor=#E9E1FF;strokeColor=#6B57A5;strokeWidth=2.4;shadow=0;glass=0;connectable=1;" vertex="1" parent="1" data-process="I-P3" data-svg-class="process-node">
+          <mxGeometry x="1800" y="945" width="900" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="process-I-P4" value="&lt;div style=&quot;font-size:19px;color:#5A6573;margin-bottom:5px&quot;&gt;«action def»&lt;/div&gt;&lt;div style=&quot;font-size:27px;font-weight:500;color:#182230&quot;&gt;&amp;lt;I-P4&amp;gt; 评估风险并授权行动&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;spacing=0;fillColor=#E9E1FF;strokeColor=#6B57A5;strokeWidth=2.4;shadow=0;glass=0;connectable=1;" vertex="1" parent="1" data-process="I-P4" data-svg-class="process-node">
+          <mxGeometry x="1800" y="1120" width="900" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="process-I-P5" value="&lt;div style=&quot;font-size:19px;color:#5A6573;margin-bottom:5px&quot;&gt;«action def»&lt;/div&gt;&lt;div style=&quot;font-size:27px;font-weight:500;color:#182230&quot;&gt;&amp;lt;I-P5&amp;gt; 分派任务并调用技能或工具&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;spacing=0;fillColor=#E9E1FF;strokeColor=#6B57A5;strokeWidth=2.4;shadow=0;glass=0;connectable=1;" vertex="1" parent="1" data-process="I-P5" data-svg-class="process-node">
+          <mxGeometry x="1800" y="1295" width="900" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="process-I-P6" value="&lt;div style=&quot;font-size:19px;color:#5A6573;margin-bottom:5px&quot;&gt;«action def»&lt;/div&gt;&lt;div style=&quot;font-size:27px;font-weight:500;color:#182230&quot;&gt;&amp;lt;I-P6&amp;gt; 执行信息操作&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;spacing=0;fillColor=#E9E1FF;strokeColor=#6B57A5;strokeWidth=2.4;shadow=0;glass=0;connectable=1;" vertex="1" parent="1" data-process="I-P6" data-svg-class="process-node">
+          <mxGeometry x="1800" y="1470" width="900" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="process-I-P7" value="&lt;div style=&quot;font-size:19px;color:#5A6573;margin-bottom:5px&quot;&gt;«action def»&lt;/div&gt;&lt;div style=&quot;font-size:27px;font-weight:500;color:#182230&quot;&gt;&amp;lt;I-P7&amp;gt; 验证结果并决定后续处理&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;spacing=0;fillColor=#E9E1FF;strokeColor=#6B57A5;strokeWidth=2.4;shadow=0;glass=0;connectable=1;" vertex="1" parent="1" data-process="I-P7" data-svg-class="process-node">
+          <mxGeometry x="1800" y="1645" width="900" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="process-I-P8" value="&lt;div style=&quot;font-size:19px;color:#5A6573;margin-bottom:5px&quot;&gt;«action def»&lt;/div&gt;&lt;div style=&quot;font-size:27px;font-weight:500;color:#182230&quot;&gt;&amp;lt;I-P8&amp;gt; 管理运行资源与更新&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;spacing=0;fillColor=#E9E1FF;strokeColor=#6B57A5;strokeWidth=2.4;shadow=0;glass=0;connectable=1;" vertex="1" parent="1" data-process="I-P8" data-svg-class="process-node">
+          <mxGeometry x="1800" y="1820" width="900" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="process-P-P1" value="&lt;div style=&quot;font-size:19px;color:#5A6573;margin-bottom:5px&quot;&gt;«action def»&lt;/div&gt;&lt;div style=&quot;font-size:27px;font-weight:500;color:#182230&quot;&gt;&amp;lt;P-P1&amp;gt; 采集物理信号并生成传感数据&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;spacing=0;fillColor=#FFE7CF;strokeColor=#B8661E;strokeWidth=2.4;shadow=0;glass=0;connectable=1;" vertex="1" parent="1" data-process="P-P1" data-svg-class="process-node">
+          <mxGeometry x="1800" y="2030" width="900" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="process-P-P2" value="&lt;div style=&quot;font-size:19px;color:#5A6573;margin-bottom:5px&quot;&gt;«action def»&lt;/div&gt;&lt;div style=&quot;font-size:27px;font-weight:500;color:#182230&quot;&gt;&amp;lt;P-P2&amp;gt; 管理能量与热状态&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;spacing=0;fillColor=#FFE7CF;strokeColor=#B8661E;strokeWidth=2.4;shadow=0;glass=0;connectable=1;" vertex="1" parent="1" data-process="P-P2" data-svg-class="process-node">
+          <mxGeometry x="1800" y="2205" width="900" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="process-P-P3" value="&lt;div style=&quot;font-size:19px;color:#5A6573;margin-bottom:5px&quot;&gt;«action def»&lt;/div&gt;&lt;div style=&quot;font-size:27px;font-weight:500;color:#182230&quot;&gt;&amp;lt;P-P3&amp;gt; 改变机器人自身状态与输出&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;spacing=0;fillColor=#FFE7CF;strokeColor=#B8661E;strokeWidth=2.4;shadow=0;glass=0;connectable=1;" vertex="1" parent="1" data-process="P-P3" data-svg-class="process-node">
+          <mxGeometry x="1800" y="2380" width="900" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="process-P-P4" value="&lt;div style=&quot;font-size:19px;color:#5A6573;margin-bottom:5px&quot;&gt;«action def»&lt;/div&gt;&lt;div style=&quot;font-size:27px;font-weight:500;color:#182230&quot;&gt;&amp;lt;P-P4&amp;gt; 运送用户放入的物品&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;spacing=0;fillColor=#FFE7CF;strokeColor=#B8661E;strokeWidth=2.4;shadow=0;glass=0;connectable=1;" vertex="1" parent="1" data-process="P-P4" data-svg-class="process-node">
+          <mxGeometry x="1800" y="2555" width="900" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="process-P-P5" value="&lt;div style=&quot;font-size:19px;color:#5A6573;margin-bottom:5px&quot;&gt;«action def»&lt;/div&gt;&lt;div style=&quot;font-size:27px;font-weight:500;color:#182230&quot;&gt;&amp;lt;P-P5&amp;gt; 限制或停止机器人的危险动作&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;spacing=0;fillColor=#FFE7CF;strokeColor=#B8661E;strokeWidth=2.4;shadow=0;glass=0;connectable=1;" vertex="1" parent="1" data-process="P-P5" data-svg-class="process-node">
+          <mxGeometry x="1800" y="2730" width="900" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="process-P-P6" value="&lt;div style=&quot;font-size:19px;color:#5A6573;margin-bottom:5px&quot;&gt;«action def»&lt;/div&gt;&lt;div style=&quot;font-size:27px;font-weight:500;color:#182230&quot;&gt;&amp;lt;P-P6&amp;gt; 安全操控外部物体（机械臂预留）&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;spacing=0;fillColor=#FFE7CF;strokeColor=#B8661E;strokeWidth=2.4;shadow=0;glass=0;connectable=1;" vertex="1" parent="1" data-process="P-P6" data-svg-class="process-node">
+          <mxGeometry x="1800" y="2905" width="900" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="process-P-P7" value="&lt;div style=&quot;font-size:19px;color:#5A6573;margin-bottom:5px&quot;&gt;«action def»&lt;/div&gt;&lt;div style=&quot;font-size:27px;font-weight:500;color:#182230&quot;&gt;&amp;lt;P-P7&amp;gt; 紧急情况下强制改变外部状态&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;spacing=0;fillColor=#FFE7CF;strokeColor=#B8661E;strokeWidth=2.4;shadow=0;glass=0;connectable=1;" vertex="1" parent="1" data-process="P-P7" data-svg-class="process-node">
+          <mxGeometry x="1800" y="3080" width="900" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-1" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2F6FDD;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="I-P1" data-operand="I1" data-svg-class="input-junction">
+          <mxGeometry x="153.5" y="619.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-2" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#D97706;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="I-P1" data-operand="I2" data-svg-class="output-junction">
+          <mxGeometry x="358.5" y="667.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-3" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2F6FDD;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="I-P2" data-operand="I2" data-svg-class="input-junction">
+          <mxGeometry x="358.5" y="794.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-4" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2F6FDD;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="I-P2" data-operand="I7" data-svg-class="input-junction">
+          <mxGeometry x="1383.5" y="794.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-5" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2F6FDD;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="I-P2" data-operand="I3" data-svg-class="input-junction">
+          <mxGeometry x="563.5" y="794.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-6" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#D97706;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="I-P2" data-operand="I3" data-svg-class="output-junction">
+          <mxGeometry x="563.5" y="842.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-7" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2F6FDD;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="I-P3" data-operand="I2" data-svg-class="input-junction">
+          <mxGeometry x="358.5" y="969.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-8" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2F6FDD;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="I-P3" data-operand="I3" data-svg-class="input-junction">
+          <mxGeometry x="563.5" y="969.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-9" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#D97706;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="I-P3" data-operand="I4" data-svg-class="output-junction">
+          <mxGeometry x="768.5" y="1017.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-10" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2F6FDD;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="I-P4" data-operand="I3" data-svg-class="input-junction">
+          <mxGeometry x="563.5" y="1144.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-11" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2F6FDD;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="I-P4" data-operand="I4" data-svg-class="input-junction">
+          <mxGeometry x="768.5" y="1144.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-12" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#D97706;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="I-P4" data-operand="I5" data-svg-class="output-junction">
+          <mxGeometry x="973.5" y="1192.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-13" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2F6FDD;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="I-P5" data-operand="I4" data-svg-class="input-junction">
+          <mxGeometry x="768.5" y="1319.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-14" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2F6FDD;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="I-P5" data-operand="I5" data-svg-class="input-junction">
+          <mxGeometry x="973.5" y="1319.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-15" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2F6FDD;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="I-P5" data-operand="I8" data-svg-class="input-junction">
+          <mxGeometry x="1588.5" y="1319.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-16" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#D97706;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="I-P5" data-operand="I6" data-svg-class="output-junction">
+          <mxGeometry x="1178.5" y="1367.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-17" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2F6FDD;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="I-P6" data-operand="I3" data-svg-class="input-junction">
+          <mxGeometry x="563.5" y="1494.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-18" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2F6FDD;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="I-P6" data-operand="I5" data-svg-class="input-junction">
+          <mxGeometry x="973.5" y="1494.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-19" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2F6FDD;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="I-P6" data-operand="I6" data-svg-class="input-junction">
+          <mxGeometry x="1178.5" y="1494.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-20" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#D97706;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="I-P6" data-operand="I7" data-svg-class="output-junction">
+          <mxGeometry x="1383.5" y="1542.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-21" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2F6FDD;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="I-P7" data-operand="I2" data-svg-class="input-junction">
+          <mxGeometry x="358.5" y="1669.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-22" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2F6FDD;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="I-P7" data-operand="I4" data-svg-class="input-junction">
+          <mxGeometry x="768.5" y="1669.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-23" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2F6FDD;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="I-P7" data-operand="I6" data-svg-class="input-junction">
+          <mxGeometry x="1178.5" y="1669.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-24" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2F6FDD;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="I-P7" data-operand="I7" data-svg-class="input-junction">
+          <mxGeometry x="1383.5" y="1669.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-25" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#D97706;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="I-P7" data-operand="I7" data-svg-class="output-junction">
+          <mxGeometry x="1383.5" y="1717.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-26" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2F6FDD;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="I-P8" data-operand="I2" data-svg-class="input-junction">
+          <mxGeometry x="358.5" y="1844.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-27" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2F6FDD;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="I-P8" data-operand="I6" data-svg-class="input-junction">
+          <mxGeometry x="1178.5" y="1844.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-28" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2F6FDD;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="I-P8" data-operand="I8" data-svg-class="input-junction">
+          <mxGeometry x="1588.5" y="1844.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-29" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#D97706;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="I-P8" data-operand="I8" data-svg-class="output-junction">
+          <mxGeometry x="1588.5" y="1892.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-30" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2F6FDD;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="P-P1" data-operand="P1" data-svg-class="input-junction">
+          <mxGeometry x="2878.5" y="2054.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-31" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#D97706;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="P-P1" data-operand="I1" data-svg-class="output-junction">
+          <mxGeometry x="153.5" y="2102.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-32" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2F6FDD;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="P-P2" data-operand="I8" data-svg-class="input-junction">
+          <mxGeometry x="1588.5" y="2229.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-33" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2F6FDD;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="P-P2" data-operand="P2" data-svg-class="input-junction">
+          <mxGeometry x="3168.5" y="2229.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-34" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#D97706;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="P-P2" data-operand="P2" data-svg-class="output-junction">
+          <mxGeometry x="3168.5" y="2277.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-35" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2F6FDD;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="P-P3" data-operand="I5" data-svg-class="input-junction">
+          <mxGeometry x="973.5" y="2404.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-36" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2F6FDD;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="P-P3" data-operand="I6" data-svg-class="input-junction">
+          <mxGeometry x="1178.5" y="2404.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-37" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2F6FDD;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="P-P3" data-operand="P1" data-svg-class="input-junction">
+          <mxGeometry x="2878.5" y="2404.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-38" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2F6FDD;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="P-P3" data-operand="P2" data-svg-class="input-junction">
+          <mxGeometry x="3168.5" y="2404.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-39" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2F6FDD;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="P-P3" data-operand="P3" data-svg-class="input-junction">
+          <mxGeometry x="3458.5" y="2404.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-40" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#D97706;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="P-P3" data-operand="P3" data-svg-class="output-junction">
+          <mxGeometry x="3458.5" y="2452.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-41" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#D97706;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="P-P3" data-operand="P1" data-svg-class="output-junction">
+          <mxGeometry x="2878.5" y="2452.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-42" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2F6FDD;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="P-P4" data-operand="I5" data-svg-class="input-junction">
+          <mxGeometry x="973.5" y="2579.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-43" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2F6FDD;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="P-P4" data-operand="I6" data-svg-class="input-junction">
+          <mxGeometry x="1178.5" y="2579.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-44" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2F6FDD;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="P-P4" data-operand="P1" data-svg-class="input-junction">
+          <mxGeometry x="2878.5" y="2579.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-45" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2F6FDD;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="P-P4" data-operand="P2" data-svg-class="input-junction">
+          <mxGeometry x="3168.5" y="2579.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-46" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2F6FDD;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="P-P4" data-operand="P3" data-svg-class="input-junction">
+          <mxGeometry x="3458.5" y="2579.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-47" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2F6FDD;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="P-P4" data-operand="P4" data-svg-class="input-junction">
+          <mxGeometry x="3748.5" y="2579.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-48" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#D97706;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="P-P4" data-operand="P3" data-svg-class="output-junction">
+          <mxGeometry x="3458.5" y="2627.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-49" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#D97706;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="P-P4" data-operand="P4" data-svg-class="output-junction">
+          <mxGeometry x="3748.5" y="2627.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-50" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#D97706;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="P-P4" data-operand="P1" data-svg-class="output-junction">
+          <mxGeometry x="2878.5" y="2627.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-51" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2F6FDD;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="P-P5" data-operand="P1" data-svg-class="input-junction">
+          <mxGeometry x="2878.5" y="2754.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-52" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2F6FDD;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="P-P5" data-operand="P2" data-svg-class="input-junction">
+          <mxGeometry x="3168.5" y="2754.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-53" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2F6FDD;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="P-P5" data-operand="P3" data-svg-class="input-junction">
+          <mxGeometry x="3458.5" y="2754.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-54" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#D97706;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="P-P5" data-operand="P2" data-svg-class="output-junction">
+          <mxGeometry x="3168.5" y="2802.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-55" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#D97706;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="P-P5" data-operand="P3" data-svg-class="output-junction">
+          <mxGeometry x="3458.5" y="2802.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-56" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#D97706;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="P-P5" data-operand="P1" data-svg-class="output-junction">
+          <mxGeometry x="2878.5" y="2802.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-57" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2F6FDD;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="P-P6" data-operand="I5" data-svg-class="input-junction">
+          <mxGeometry x="973.5" y="2929.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-58" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2F6FDD;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="P-P6" data-operand="I6" data-svg-class="input-junction">
+          <mxGeometry x="1178.5" y="2929.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-59" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2F6FDD;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="P-P6" data-operand="P1" data-svg-class="input-junction">
+          <mxGeometry x="2878.5" y="2929.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-60" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2F6FDD;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="P-P6" data-operand="P2" data-svg-class="input-junction">
+          <mxGeometry x="3168.5" y="2929.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-61" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2F6FDD;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="P-P6" data-operand="P3" data-svg-class="input-junction">
+          <mxGeometry x="3458.5" y="2929.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-62" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2F6FDD;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="P-P6" data-operand="P6" data-svg-class="input-junction">
+          <mxGeometry x="4328.5" y="2929.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-63" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#D97706;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="P-P6" data-operand="P3" data-svg-class="output-junction">
+          <mxGeometry x="3458.5" y="2977.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-64" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#D97706;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="P-P6" data-operand="P6" data-svg-class="output-junction">
+          <mxGeometry x="4328.5" y="2977.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-65" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#D97706;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="P-P6" data-operand="P1" data-svg-class="output-junction">
+          <mxGeometry x="2878.5" y="2977.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-66" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2F6FDD;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="P-P7" data-operand="I5" data-svg-class="input-junction">
+          <mxGeometry x="973.5" y="3104.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-67" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2F6FDD;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="P-P7" data-operand="I6" data-svg-class="input-junction">
+          <mxGeometry x="1178.5" y="3104.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-68" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2F6FDD;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="P-P7" data-operand="P1" data-svg-class="input-junction">
+          <mxGeometry x="2878.5" y="3104.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-69" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2F6FDD;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="P-P7" data-operand="P2" data-svg-class="input-junction">
+          <mxGeometry x="3168.5" y="3104.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-70" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2F6FDD;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="P-P7" data-operand="P3" data-svg-class="input-junction">
+          <mxGeometry x="3458.5" y="3104.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-71" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2F6FDD;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="P-P7" data-operand="P5" data-svg-class="input-junction">
+          <mxGeometry x="4038.5" y="3104.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-72" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#D97706;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="P-P7" data-operand="P3" data-svg-class="output-junction">
+          <mxGeometry x="3458.5" y="3152.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-73" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#D97706;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="P-P7" data-operand="P5" data-svg-class="output-junction">
+          <mxGeometry x="4038.5" y="3152.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="junction-74" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#D97706;strokeColor=#FFFFFF;strokeWidth=1.5;connectable=1;" vertex="1" parent="1" data-process="P-P7" data-operand="P1" data-svg-class="output-junction">
+          <mxGeometry x="2878.5" y="3152.5" width="13" height="13" as="geometry" />
+        </mxCell>
+        <mxCell id="label-1" value="Kinbot 过程—操作数关系视图" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=36;fontColor=#182230;fontStyle=1;spacing=0;" vertex="1" parent="1" data-svg-class="title">
+          <mxGeometry x="1350" y="14" width="1800" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="label-2" value="从 SysML v2 GeneralView 特化而来；I1/I2 持续产生，I3 持续更新，P1 提供连续物理反馈" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=22;fontColor=#5A6573;fontStyle=0;spacing=0;" vertex="1" parent="1" data-svg-class="subtitle">
+          <mxGeometry x="700" y="68" width="3100" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="label-3" value="in 参数：操作数 → 过程" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=22;fontColor=#26313D;fontStyle=0;spacing=0;" vertex="1" parent="1" data-svg-class="legend">
+          <mxGeometry x="1455" y="123" width="760" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="label-4" value="out 参数：过程 → 操作数" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=22;fontColor=#26313D;fontStyle=0;spacing=0;" vertex="1" parent="1" data-svg-class="legend">
+          <mxGeometry x="2575" y="123" width="760" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="label-5" value="Kinbot Agentic Robot System" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=26;fontColor=#182230;fontStyle=1;spacing=0;" vertex="1" parent="1" data-svg-class="group">
+          <mxGeometry x="1700" y="484" width="1100" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="label-6" value="信息过程" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=26;fontColor=#182230;fontStyle=1;spacing=0;" vertex="1" parent="1" data-svg-class="group">
+          <mxGeometry x="1810" y="548" width="500" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="label-7" value="物理过程" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=26;fontColor=#182230;fontStyle=1;spacing=0;" vertex="1" parent="1" data-svg-class="group">
+          <mxGeometry x="1810" y="1978" width="500" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="label-8" value="信息空间操作数" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=26;fontColor=#182230;fontStyle=1;spacing=0;" vertex="1" parent="1" data-svg-class="group">
+          <mxGeometry x="340" y="191" width="1100" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="label-9" value="物理空间操作数" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=26;fontColor=#182230;fontStyle=1;spacing=0;" vertex="1" parent="1" data-svg-class="group">
+          <mxGeometry x="3060" y="191" width="1100" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="label-10" value="有圆点表示实际连接；无圆点的交叉不表示连接。连线仅表达 in / out 参数关系；持续流动和反馈顺序见 OODA ActionFlowView。" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=20;fontColor=#5A6573;fontStyle=0;spacing=0;" vertex="1" parent="1" data-svg-class="note">
+          <mxGeometry x="150" y="3367" width="4200" height="38" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

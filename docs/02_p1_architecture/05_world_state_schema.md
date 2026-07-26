@@ -2,11 +2,14 @@
 
 ---
 
-文档版本：v2.4
+文档版本：v2.7
 创建日期：2026-03-08
 作者：Codex-架构师
 
 文档变更记录：
+- v2.7 | 2026-07-26 | Codex-架构师 | 明确 O3 的输入边界从 `I2/Evidence` 开始：视觉、语音、手势、姿态、身份、物体和数字消息由 RobotSkillSystem 执行 `I-P1`，O3 执行 `I-P2` 维护 `I3`；禁止把 `P1/I1` 直接提升为共享事实。
+- v2.6 | 2026-07-25 | Codex-架构师 | 补齐候选与现实状态边界：ActionProposal 和局部计划只属于 Agent 工作状态；TaskWorker 只能依据 PermitDecision 中的实际操作、SkillOutcome、ExecutionDeviation 和 Evidence 更新局部状态，并在验证后提升为 SharedState。
+- v2.5 | 2026-07-25 | Codex-架构师 | 对齐 16 号新版方案三：在不改变七类业务对象的前提下，明确 O3 统一服务面中的 SharedState、SharedMemory、Evidence 与 Agent 局部工作状态边界，以及 Validate、Retain、Orient 三类受控转换。
 - v2.4 | 2026-04-21 | Codex-架构师 | 吸收董事长汇报反馈：将 `manual_service_state` 和服务合同字段是否进入 `V1` 最小快照交由 `KBT-57` 承接，并明确非隐私结构化数据回流仍需受控治理。
 - v2.3 | 2026-04-09 | Codex-架构师 | 将当前未冻结项收紧为“摘要 + Linear 指针”治理：把字段表、关系质量维度、事件族全集和接口迁移策略分别指向 `KBT-32 / KBT-33 / KBT-56`，避免主线正文继续展开 orphan provisional。
 - v2.2 | 2026-04-09 | Codex-架构师 | 继续做最小一致性修正：澄清穿戴是当前受控输入位，人工 / 第三方只保留后续适配位，并修正 `Household.care_network` 与 `CareEvent` 的关系图表达。
@@ -139,6 +142,46 @@
 2. 路线 A 的扩展层方案保留在 `docs/08_reviews/archive/20_relationship_and_event_extension_layer_candidate.md`，仅作为对照路线与风险说明。
 3. `docs/08_reviews/21_seven_entity_world_state_target_model.md` 继续作为本轮评审包，用于补充一级边界、`V1` 最小激活子集与迁移顺序。
 4. `CareEvent` 正式替代 `RiskEvent`；`recommended_action` 只允许保留动作类型枚举，不得写执行细节；执行细节必须落在 `Task` 中。
+
+### 3.7 O3 共享上下文边界
+
+七类一级实体回答“系统在描述哪些业务对象”；O3 的共享上下文分层回答“这些内容以什么运行形态被 Agent 使用”。两者不能混为一层：
+
+| 运行形态 | 含义 | 与现有三层状态的关系 | 约束 |
+| --- | --- | --- | --- |
+| `SharedState` | 当前有效的世界、自身、业务和任务状态 | 承接 `snapshot_state` 与仍有效的 `session_state` | 具有统一版本、来源、新鲜度和访问控制；不是向所有 Agent 广播 |
+| `SharedMemory` | 跨任务保留的历史、偏好、知识和经验 | 承接经过保留审查的 `persistent_state` | 不能未经当前证据重新解释就直接触发高风险动作 |
+| `Evidence` | 支撑 State 与 Memory 的原始或高维证据及来源 | 不属于状态层级 | 通过 `EvidenceRef` 受控访问；保留期限、隐私和用途独立治理 |
+| `localWorkingState` | Agent Cell 为履行当前契约维护的中间状态 \(z_i\) | 不属于共享事实 | 默认只在 Agent 内有效；按 TTL 保留，或由 AP3 临时检查点 |
+
+Agent 通过 `StateRef`、`MemoryRef` 和 `EvidenceRef` 读取同一事实源，不复制一份文字摘要作为新的事实。受控转换为：
+
+\[
+z_i\xrightarrow{\operatorname{Validate}}\mathrm{SharedState}
+\]
+
+\[
+(\mathrm{SharedState},\mathrm{Evidence})
+\xrightarrow{\operatorname{Retain}}
+\mathrm{SharedMemory}
+\]
+
+\[
+(\mathrm{SharedMemory},\mathrm{Evidence})
+\xrightarrow{\operatorname{Orient}}
+\mathrm{SharedState}
+\]
+
+`Validate` 负责把工作中间量提升为可共享状态；`Retain` 决定哪些当前状态值得跨任务保留；`Orient` 使用当前证据重新解释记忆。AP3 可以保存检查点、版本和引用，但不能替 O3 判断事实，也不能替 Agent 决定业务含义。
+
+O3 不运行 ASR、手势、姿态、身份、物体识别或 App 消息解释模型。物理输入先经过 `P1 → P-P1 → I1`，数字输入直接形成 `I1`；两者都由 RobotSkillSystem 中的感知、交互或连接器能力执行 `I-P1`，产生 `I2/Evidence` 后进入 O3。O3 再执行 `I-P2`，结合 `I7` 和当前 `I3` 形成新的 `I3`。显式用户意图形成 `I2` 后可以同时供 O3 更新上下文、供 A0 建立根契约，但原始 `P1/I1` 不能直接成为 SharedState。
+
+候选操作和现实状态必须分开：
+
+- `ActionProposal`、计划路径和期望结果属于 `localWorkingState`，不能直接写入 SharedState。
+- TaskWorker 只依据 `PermitDecision.effectiveOperation`、`SkillOutcome.actualOutcome`、`ExecutionDeviation` 和 Evidence 更新局部状态。
+- 只有经过完成判据或再次观察验证的结果，才能通过 `Validate` 提升为 SharedState。
+- `proposalId → decisionId → executionId → EvidenceRef` 必须可追溯，使系统能够区分“计划了什么”“实际做了什么”和“现实发生了什么”。
 
 ## 4. 一级实体
 

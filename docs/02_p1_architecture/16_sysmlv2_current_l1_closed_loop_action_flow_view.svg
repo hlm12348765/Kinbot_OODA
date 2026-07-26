@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2200" height="1760" viewBox="0 0 2200 1760" role="img" aria-labelledby="title desc">
+  <title id="title">当前 L1 架构七类闭环及实体关系视图</title>
+  <desc id="desc">SysML v2 ActionFlowView。以七条泳道展示 Agent Cell 局部闭环、任务与契约履约闭环、信息操作闭环、物理任务闭环、F1 硬安全闭环、运行与治理闭环，以及持续感知与共享状态更新闭环。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3.5" orient="auto"><path d="M0,0 L10,3.5 L0,7 Z" fill="#64748B"/></marker>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="9" refY="3.5" orient="auto"><path d="M0,0 L10,3.5 L0,7 Z" fill="#4F79A8"/></marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="9" refY="3.5" orient="auto"><path d="M0,0 L10,3.5 L0,7 Z" fill="#B94E56"/></marker>
+    <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="9" refY="3.5" orient="auto"><path d="M0,0 L10,3.5 L0,7 Z" fill="#3F8A61"/></marker>
+    <style>
+      text { font-family:"Noto Sans CJK SC","PingFang SC","Microsoft YaHei",sans-serif; fill:#172033; }
+      .title { font-size:30px; font-weight:700; }
+      .subtitle { font-size:15px; fill:#596579; }
+      .laneTitle { font-size:18px; font-weight:700; }
+      .nodeTitle { font-size:15px; font-weight:700; }
+      .small { font-size:12px; }
+      .gray { stroke:#64748B; stroke-width:2; fill:none; marker-end:url(#arrow); }
+      .blue { stroke:#4F79A8; stroke-width:2; fill:none; marker-end:url(#arrow-blue); }
+      .red { stroke:#B94E56; stroke-width:2; fill:none; marker-end:url(#arrow-red); }
+      .green { stroke:#3F8A61; stroke-width:2; fill:none; marker-end:url(#arrow-green); }
+      .return { stroke-dasharray:7 5; }
+    </style>
+  </defs>
+  <rect width="2200" height="1760" fill="#F8FAFC"/>
+  <text x="1100" y="46" text-anchor="middle" class="title">当前 L1 架构七类闭环及实体关系视图</text>
+  <text x="1100" y="76" text-anchor="middle" class="subtitle">七类表示稳定关系拓扑；运行中的每个 Agent Cell 都拥有自己的局部闭环</text>
+  <rect x="45" y="96" width="2110" height="42" rx="8" fill="#F1F5F9" stroke="#CBD5E1"/>
+  <text x="65" y="123" class="small">view &lt;clclafv&gt; '当前L1架构七类闭环行动流视图' : ActionFlowView</text>
+
+  <!-- CL-1 -->
+  <g>
+    <rect x="45" y="165" width="2110" height="190" rx="14" fill="#F7F4FC" stroke="#B8A8D7"/>
+    <rect x="60" y="182" width="245" height="156" rx="11" fill="#EDE7F8" stroke="#735FA5" stroke-width="2"/>
+    <text x="182" y="220" text-anchor="middle" class="laneTitle">CL-1</text>
+    <text x="182" y="248" text-anchor="middle" class="laneTitle">Agent Cell 局部闭环</text>
+    <text x="182" y="282" text-anchor="middle" class="small">每个运行实例各自存在</text>
+    <rect x="390" y="215" width="295" height="86" rx="10" fill="#EAF3FF" stroke="#5C86B5" stroke-width="2"/>
+    <text x="538" y="248" text-anchor="middle" class="nodeTitle">Observation／Refs</text>
+    <text x="538" y="273" text-anchor="middle" class="small">State · Memory · Evidence</text>
+    <rect x="825" y="215" width="300" height="86" rx="10" fill="#F1EDFA" stroke="#735FA5" stroke-width="2"/>
+    <text x="975" y="248" text-anchor="middle" class="nodeTitle">AgentCell</text>
+    <text x="975" y="273" text-anchor="middle" class="small">Orient · Plan · Decide · Verify</text>
+    <rect x="1265" y="215" width="360" height="86" rx="10" fill="#FFF4D8" stroke="#C28A1B" stroke-width="2"/>
+    <text x="1445" y="248" text-anchor="middle" class="nodeTitle">Result／SkillRequest／ActionProposal</text>
+    <text x="1445" y="273" text-anchor="middle" class="small">候选，不等于实际结果</text>
+    <rect x="1765" y="215" width="315" height="86" rx="10" fill="#E6F6F4" stroke="#32877F" stroke-width="2"/>
+    <text x="1923" y="248" text-anchor="middle" class="nodeTitle">Feedback／Intervention</text>
+    <text x="1923" y="273" text-anchor="middle" class="small">实际操作、结果和偏差</text>
+    <line x1="685" y1="258" x2="825" y2="258" class="blue"/>
+    <line x1="1125" y1="258" x2="1265" y2="258" class="gray"/>
+    <line x1="1625" y1="258" x2="1765" y2="258" class="blue"/>
+    <path d="M1923,301 L1923,325 L975,325 L975,301" class="blue return"/>
+  </g>
+
+  <!-- CL-2 -->
+  <g>
+    <rect x="45" y="375" width="2110" height="190" rx="14" fill="#F9F7FC" stroke="#B8A8D7"/>
+    <rect x="60" y="392" width="245" height="156" rx="11" fill="#EDE7F8" stroke="#735FA5" stroke-width="2"/>
+    <text x="182" y="430" text-anchor="middle" class="laneTitle">CL-2</text>
+    <text x="182" y="452" text-anchor="middle" class="laneTitle">任务与契约</text>
+    <text x="182" y="478" text-anchor="middle" class="laneTitle">履约闭环</text>
+    <text x="182" y="510" text-anchor="middle" class="small">展开TaskWorker子环</text>
+    <rect x="355" y="425" width="230" height="86" rx="10" fill="#F1EDFA" stroke="#735FA5" stroke-width="2"/><text x="470" y="462" text-anchor="middle" class="nodeTitle">TaskContract</text>
+    <rect x="690" y="425" width="250" height="86" rx="10" fill="#F1EDFA" stroke="#735FA5" stroke-width="2"/><text x="815" y="462" text-anchor="middle" class="nodeTitle">TaskWorker</text>
+    <rect x="1045" y="425" width="250" height="86" rx="10" fill="#FFF4D8" stroke="#C28A1B" stroke-width="2"/><text x="1170" y="462" text-anchor="middle" class="nodeTitle">RobotSkill</text>
+    <rect x="1400" y="425" width="315" height="86" rx="10" fill="#EAF3FF" stroke="#5C86B5" stroke-width="2"/><text x="1558" y="454" text-anchor="middle" class="nodeTitle">SkillOutcome／Deviation</text><text x="1558" y="480" text-anchor="middle" class="small">actualOutcome</text>
+    <rect x="1820" y="425" width="250" height="86" rx="10" fill="#E6F6F4" stroke="#32877F" stroke-width="2"/><text x="1945" y="454" text-anchor="middle" class="nodeTitle">O3</text><text x="1945" y="480" text-anchor="middle" class="small">State／Evidence</text>
+    <line x1="585" y1="468" x2="690" y2="468" class="gray"/>
+    <line x1="940" y1="468" x2="1045" y2="468" class="gray"/>
+    <line x1="1295" y1="468" x2="1400" y2="468" class="blue"/>
+    <path d="M1400,495 L1340,495 L1340,535 L815,535 L815,511" class="blue return"/>
+    <line x1="940" y1="500" x2="1820" y2="500" class="blue"/>
+    <path d="M1945,511 L1945,540 L860,540 L860,511" class="blue return"/>
+  </g>
+
+  <!-- CL-3 -->
+  <g>
+    <rect x="45" y="585" width="2110" height="190" rx="14" fill="#F2F7FD" stroke="#89A9CC"/>
+    <rect x="60" y="602" width="245" height="156" rx="11" fill="#DDEBFA" stroke="#5C86B5" stroke-width="2"/>
+    <text x="182" y="640" text-anchor="middle" class="laneTitle">CL-3</text>
+    <text x="182" y="668" text-anchor="middle" class="laneTitle">信息操作闭环</text>
+    <text x="182" y="702" text-anchor="middle" class="small">对外信息也必须受许可</text>
+    <rect x="350" y="635" width="225" height="86" rx="10" fill="#F1EDFA" stroke="#735FA5" stroke-width="2"/><text x="463" y="673" text-anchor="middle" class="nodeTitle">TaskWorker</text>
+    <rect x="655" y="635" width="225" height="86" rx="10" fill="#FFF4D8" stroke="#C28A1B" stroke-width="2"/><text x="768" y="673" text-anchor="middle" class="nodeTitle">RobotSkill</text>
+    <rect x="960" y="635" width="225" height="86" rx="10" fill="#FDECEC" stroke="#B94E56" stroke-width="2"/><text x="1073" y="673" text-anchor="middle" class="nodeTitle">G3</text>
+    <rect x="1265" y="635" width="275" height="86" rx="10" fill="#FFF4D8" stroke="#C28A1B" stroke-width="2"/><text x="1403" y="664" text-anchor="middle" class="nodeTitle">信息连接器</text><text x="1403" y="690" text-anchor="middle" class="small">EffectiveInformationOperation</text>
+    <rect x="1620" y="635" width="285" height="86" rx="10" fill="#EAF3FF" stroke="#5C86B5" stroke-width="2"/><text x="1763" y="664" text-anchor="middle" class="nodeTitle">外部信息环境</text><text x="1763" y="690" text-anchor="middle" class="small">用户、App、云、第三方</text>
+    <rect x="1985" y="635" width="125" height="86" rx="10" fill="#E6F6F4" stroke="#32877F" stroke-width="2"/><text x="2048" y="673" text-anchor="middle" class="nodeTitle">O3</text>
+    <line x1="575" y1="678" x2="655" y2="678" class="gray"/>
+    <line x1="880" y1="678" x2="960" y2="678" class="red"/>
+    <line x1="1185" y1="678" x2="1265" y2="678" class="red"/>
+    <line x1="1540" y1="678" x2="1620" y2="678" class="blue"/>
+    <line x1="1905" y1="678" x2="1985" y2="678" class="blue"/>
+    <path d="M2048,721 L2048,748 L463,748 L463,721" class="blue return"/>
+  </g>
+
+  <!-- CL-4 -->
+  <g>
+    <rect x="45" y="795" width="2110" height="190" rx="14" fill="#F2FBF5" stroke="#7FB394"/>
+    <rect x="60" y="812" width="245" height="156" rx="11" fill="#DFF2E6" stroke="#4A9468" stroke-width="2"/>
+    <text x="182" y="850" text-anchor="middle" class="laneTitle">CL-4</text>
+    <text x="182" y="878" text-anchor="middle" class="laneTitle">物理任务闭环</text>
+    <text x="182" y="912" text-anchor="middle" class="small">任务验证经过真实物理反馈</text>
+    <rect x="345" y="845" width="220" height="86" rx="10" fill="#F1EDFA" stroke="#735FA5" stroke-width="2"/><text x="455" y="883" text-anchor="middle" class="nodeTitle">TaskWorker</text>
+    <rect x="640" y="845" width="220" height="86" rx="10" fill="#FFF4D8" stroke="#C28A1B" stroke-width="2"/><text x="750" y="883" text-anchor="middle" class="nodeTitle">RobotSkill</text>
+    <rect x="935" y="845" width="210" height="86" rx="10" fill="#FDECEC" stroke="#B94E56" stroke-width="2"/><text x="1040" y="883" text-anchor="middle" class="nodeTitle">G3</text>
+    <rect x="1220" y="845" width="210" height="86" rx="10" fill="#EAF7EE" stroke="#4A9468" stroke-width="2"/><text x="1325" y="883" text-anchor="middle" class="nodeTitle">F1</text>
+    <rect x="1505" y="845" width="260" height="86" rx="10" fill="#EAF7EE" stroke="#4A9468" stroke-width="2"/><text x="1635" y="883" text-anchor="middle" class="nodeTitle">物理环境</text>
+    <rect x="1840" y="845" width="260" height="86" rx="10" fill="#EAF7EE" stroke="#4A9468" stroke-width="2"/><text x="1970" y="874" text-anchor="middle" class="nodeTitle">实时 I1</text><text x="1970" y="900" text-anchor="middle" class="small">观察与硬安全信号</text>
+    <line x1="565" y1="888" x2="640" y2="888" class="gray"/>
+    <line x1="860" y1="888" x2="935" y2="888" class="red"/>
+    <line x1="1145" y1="888" x2="1220" y2="888" class="red"/>
+    <line x1="1430" y1="888" x2="1505" y2="888" class="green"/>
+    <line x1="1765" y1="888" x2="1840" y2="888" class="green"/>
+    <path d="M1970,931 L1970,958 L750,958 L750,931" class="green return"/>
+    <path d="M750,931 L750,970 L455,970 L455,931" class="blue return"/>
+  </g>
+
+  <!-- CL-5 -->
+  <g>
+    <rect x="45" y="1005" width="2110" height="190" rx="14" fill="#EFFAF3" stroke="#6EAA86"/>
+    <rect x="60" y="1022" width="245" height="156" rx="11" fill="#D8F0E1" stroke="#4A9468" stroke-width="2"/>
+    <text x="182" y="1060" text-anchor="middle" class="laneTitle">CL-5</text>
+    <text x="182" y="1088" text-anchor="middle" class="laneTitle">F1 硬安全闭环</text>
+    <text x="182" y="1122" text-anchor="middle" class="small">独立于 Agent、G3 和网络</text>
+    <rect x="430" y="1055" width="280" height="86" rx="10" fill="#EAF7EE" stroke="#4A9468" stroke-width="2"/><text x="570" y="1093" text-anchor="middle" class="nodeTitle">实时 I1</text>
+    <rect x="850" y="1055" width="280" height="86" rx="10" fill="#EAF7EE" stroke="#4A9468" stroke-width="2"/><text x="990" y="1093" text-anchor="middle" class="nodeTitle">F1 硬安全控制</text>
+    <rect x="1270" y="1055" width="280" height="86" rx="10" fill="#EAF7EE" stroke="#4A9468" stroke-width="2"/><text x="1410" y="1093" text-anchor="middle" class="nodeTitle">执行器</text>
+    <rect x="1690" y="1055" width="280" height="86" rx="10" fill="#EAF7EE" stroke="#4A9468" stroke-width="2"/><text x="1830" y="1093" text-anchor="middle" class="nodeTitle">物理环境</text>
+    <line x1="710" y1="1098" x2="850" y2="1098" class="green"/>
+    <line x1="1130" y1="1098" x2="1270" y2="1098" class="green"/>
+    <line x1="1550" y1="1098" x2="1690" y2="1098" class="green"/>
+    <path d="M1830,1141 L1830,1168 L570,1168 L570,1141" class="green return"/>
+  </g>
+
+  <!-- CL-6 -->
+  <g>
+    <rect x="45" y="1215" width="2110" height="245" rx="14" fill="#F4F8F8" stroke="#78A9A3"/>
+    <rect x="60" y="1232" width="245" height="211" rx="11" fill="#DEF0EE" stroke="#32877F" stroke-width="2"/>
+    <text x="182" y="1270" text-anchor="middle" class="laneTitle">CL-6</text>
+    <text x="182" y="1298" text-anchor="middle" class="laneTitle">运行与治理闭环</text>
+    <text x="182" y="1332" text-anchor="middle" class="small">许可子环 + Worker 子环</text>
+
+    <text x="350" y="1260" class="nodeTitle">许可与撤销子环</text>
+    <rect x="350" y="1280" width="230" height="72" rx="9" fill="#FFF4D8" stroke="#C28A1B" stroke-width="2"/><text x="465" y="1323" text-anchor="middle" class="nodeTitle">ActionProposal</text>
+    <rect x="690" y="1280" width="230" height="72" rx="9" fill="#FDECEC" stroke="#B94E56" stroke-width="2"/><text x="805" y="1323" text-anchor="middle" class="nodeTitle">G3</text>
+    <rect x="1030" y="1280" width="310" height="72" rx="9" fill="#FDECEC" stroke="#B94E56" stroke-width="2"/><text x="1185" y="1309" text-anchor="middle" class="nodeTitle">PermitDecision／Revocation</text><text x="1185" y="1335" text-anchor="middle" class="small">actual operation + reason</text>
+    <rect x="1450" y="1280" width="230" height="72" rx="9" fill="#FFF4D8" stroke="#C28A1B" stroke-width="2"/><text x="1565" y="1323" text-anchor="middle" class="nodeTitle">执行者</text>
+    <rect x="1790" y="1280" width="250" height="72" rx="9" fill="#E6F6F4" stroke="#32877F" stroke-width="2"/><text x="1915" y="1309" text-anchor="middle" class="nodeTitle">Outcome／Owner</text><text x="1915" y="1335" text-anchor="middle" class="small">状态与许可回收</text>
+    <line x1="580" y1="1316" x2="690" y2="1316" class="red"/>
+    <line x1="920" y1="1316" x2="1030" y2="1316" class="red"/>
+    <line x1="1340" y1="1316" x2="1450" y2="1316" class="red"/>
+    <line x1="1680" y1="1316" x2="1790" y2="1316" class="blue"/>
+
+    <text x="350" y="1390" class="nodeTitle">Worker 生命周期子环</text>
+    <rect x="560" y="1370" width="260" height="62" rx="9" fill="#F1EDFA" stroke="#735FA5" stroke-width="2"/><text x="690" y="1408" text-anchor="middle" class="nodeTitle">WorkerIntent</text>
+    <rect x="940" y="1370" width="260" height="62" rx="9" fill="#E6F6F4" stroke="#32877F" stroke-width="2"/><text x="1070" y="1408" text-anchor="middle" class="nodeTitle">AP3</text>
+    <rect x="1320" y="1370" width="300" height="62" rx="9" fill="#E6F6F4" stroke="#32877F" stroke-width="2"/><text x="1470" y="1408" text-anchor="middle" class="nodeTitle">WorkerLease／Handle</text>
+    <rect x="1740" y="1370" width="300" height="62" rx="9" fill="#F1EDFA" stroke="#735FA5" stroke-width="2"/><text x="1890" y="1397" text-anchor="middle" class="nodeTitle">TaskWorker</text><text x="1890" y="1418" text-anchor="middle" class="small">heartbeat／checkpoint</text>
+    <line x1="820" y1="1401" x2="940" y2="1401" class="gray"/>
+    <line x1="1200" y1="1401" x2="1320" y2="1401" class="gray"/>
+    <line x1="1620" y1="1401" x2="1740" y2="1401" class="gray"/>
+    <path d="M1890,1432 L1890,1450 L1070,1450 L1070,1432" class="gray return"/>
+  </g>
+
+  <!-- CL-7 -->
+  <g>
+    <rect x="45" y="1480" width="2110" height="190" rx="14" fill="#EDF8FA" stroke="#6BA8AF"/>
+    <rect x="60" y="1497" width="245" height="156" rx="11" fill="#DDF1F3" stroke="#3D8C96" stroke-width="2"/>
+    <text x="182" y="1535" text-anchor="middle" class="laneTitle">CL-7</text>
+    <text x="182" y="1563" text-anchor="middle" class="laneTitle">持续感知与</text>
+    <text x="182" y="1589" text-anchor="middle" class="laneTitle">共享状态更新闭环</text>
+    <text x="182" y="1621" text-anchor="middle" class="small">承接 P-P1／I-P1／I-P2</text>
+
+    <rect x="340" y="1505" width="250" height="62" rx="10" fill="#F1EDFA" stroke="#735FA5" stroke-width="2"/>
+    <text x="465" y="1532" text-anchor="middle" class="nodeTitle">观察策略／请求</text>
+    <text x="465" y="1553" text-anchor="middle" class="small">baseline／task-driven</text>
+
+    <rect x="340" y="1585" width="250" height="62" rx="10" fill="#EAF7EE" stroke="#4A9468" stroke-width="2"/>
+    <text x="465" y="1612" text-anchor="middle" class="nodeTitle">P1 → P-P1 → I1</text>
+    <text x="465" y="1633" text-anchor="middle" class="small">物理与数字输入</text>
+
+    <rect x="720" y="1530" width="330" height="86" rx="10" fill="#FFF4D8" stroke="#C28A1B" stroke-width="2"/>
+    <text x="885" y="1562" text-anchor="middle" class="nodeTitle">RobotSkillSystem</text>
+    <text x="885" y="1588" text-anchor="middle" class="small">I-P1 → I2／Evidence · AP3保障运行</text>
+
+    <rect x="1130" y="1530" width="260" height="86" rx="10" fill="#E6F6F4" stroke="#32877F" stroke-width="2"/>
+    <text x="1260" y="1562" text-anchor="middle" class="nodeTitle">O3</text>
+    <text x="1260" y="1588" text-anchor="middle" class="small">I-P2 → I3</text>
+
+    <rect x="1470" y="1530" width="540" height="86" rx="10" fill="#F1EDFA" stroke="#735FA5" stroke-width="2"/>
+    <text x="1740" y="1562" text-anchor="middle" class="nodeTitle">Agent／RobotSkill</text>
+    <text x="1740" y="1588" text-anchor="middle" class="small">消费状态并按需提出新的观察请求</text>
+
+    <line x1="590" y1="1536" x2="720" y2="1552" class="blue"/>
+    <line x1="590" y1="1616" x2="720" y2="1594" class="blue"/>
+    <line x1="1050" y1="1573" x2="1130" y2="1573" class="blue"/>
+    <line x1="1390" y1="1573" x2="1470" y2="1573" class="blue"/>
+    <path d="M1740,1616 L1740,1655 L620,1655 L620,1536 L590,1536" class="blue return"/>
+  </g>
+
+  <text x="1100" y="1720" text-anchor="middle" class="subtitle">蓝线：信息与结果　红线：候选、许可与撤销　绿线：物理实时与硬安全　灰线：契约与运行机制　虚线：反馈返回</text>
+</svg>

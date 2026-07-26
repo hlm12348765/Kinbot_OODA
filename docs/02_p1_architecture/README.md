@@ -2,11 +2,29 @@
 
 ---
 
-文档版本：v1.14
+文档版本：v1.32
 创建日期：2026-03-11
 作者：Codex-架构师
 
 文档变更记录：
+- v1.32 | 2026-07-26 | Codex-架构师 | L1 最终评审通过并冻结当前基线；修正 16 号文档涌现编号，将未定义且易与 Module 混淆的 `M1～M7` 改为 `E1～E7`。端到端紧急场景补齐找物导航经 G3、F1 进入实际移动、跨房间感知退化、App／穿戴求救输入，以及抢占时撤销旧移动许可并由 F1 安全停车。
+- v1.31 | 2026-07-26 | Codex-架构师 | 为 16 号 L1 最终评审增加端到端压力场景附录和 SysML v2 时序视图，覆盖聊天、日程、找物、突发健康事件、紧急抢占、到人递药、家属／急救联络、持续观察和责任交接；明确 A0 可直接创建无稳定业务归属的根级有界 TaskWorker，以及无机械臂和外部服务可用性边界。
+- v1.30 | 2026-07-26 | Codex-架构师 | 补齐 16 号文档的持续感知责任：RobotSkillSystem 执行语义感知的 `P-P1/I-P1`，O3 从 `I2/Evidence` 开始执行 `I-P2`；新增 L0 过程／操作数到 L1 实体、闭环和时间尺度的逐项映射，并将闭环视图扩展为七类。
+- v1.29 | 2026-07-26 | Codex-架构师 | 修正 L1 两处视图语义：AgentCell GeneralView 补齐五种角色用法和 Skill／Control 内部实现关系；根任务升级 SequenceView 改为 TaskWorker 直接到 A0，AP3 仅作投递与审计支撑。第 8 章时间尺度问题保留待后续讨论。
+- v1.28 | 2026-07-25 | Codex-架构师 | 16 号文档进入 L1 最终评审：固定重大事件经 TaskWorker 升级 A0 的正常因果链，补齐 AP3 冷启动原则、四个基础业务 Agent 协调互连图、根任务影响升级时序图和四个收口反例；状态机、协议、阈值与算法明确转入 L2。
+- v1.27 | 2026-07-25 | Codex-架构师 | 确认“基础业务 Agent + TaskWorker + RobotSkill”为当前 L1 架构路线；16 号主文档不再使用“方案三”名称，原方案一、方案二及比较依据迁入历史记录，精确拓扑继续保持 provisional。
+- v1.26 | 2026-07-25 | Codex-架构师 | 补齐方案三的候选—许可—实际操作—执行结果闭环：限制 G3 替换权，增加修正范围、实际操作、偏差与主动推送规则，并新增实际操作反馈 SequenceView 和六类闭环 ActionFlowView。
+- v1.25 | 2026-07-25 | Codex-架构师 | 将 16 号文档方案三重构为“基础业务 Agent + TaskWorker + RobotSkill”：统一 AgentCell 七元组、O3 共享上下文、主动授权、受控直接协调、AP3 运行机制、G3／F1 双层安全和单点失效验证，并同步找物架构与 SysML v2 视图。
+- v1.24 | 2026-07-23 | Codex-架构师 | 补记方案三执行语义：A0 低频签发领域合同，N3/OP3 经 AP3 提交动作候选，G3 按许可事件裁决并反馈理由，F1 独立实时输出明确安全动作；引入多速率时钟，并将 OP3 建模为可选未激活的 PhysicalAgentCell。
+- v1.23 | 2026-07-23 | Codex-架构师 | 将 16 号文档方案三收敛为 L1 优先候选：以任务契约唯一 Owner 区分 Agent Cell 与技能，补齐 A0/C3/N3/OP3 分层最终决定权、共享状态与证据引用、N3/OP3 局部实时 I1、Owner 租约、故障续行和组织映射；方案一、方案二转为对照。
+- v1.22 | 2026-07-23 | Codex-架构师 | 将 16 号文档的方案三补齐到与方案一、方案二相同的系统范围：明确三案核心立场和方案三三个自治决策轴，补齐照护、状态语义、语义授权、运行平台、紧急降级、完整公式及 SysML v2 互连图。
+- v1.21 | 2026-07-22 | Codex-架构师 | 精简 16 号架构正文，新增置顶待决策清单，将详细版本记录迁入独立历史文件，把正文维护规范下沉到目录规则，删除已有正式 SVG 对应的 Mermaid，并合并重复说明。
+- v1.20 | 2026-07-22 | Codex-架构师 | 修正 16 号文档的 L0 实时数据依赖：`I-P1` 仍负责把 `I1` 解释为 `I2`，但 `P-P2～P-P7` 可以直接读取经过登记的实时 `I1`，用于能量管理、运动控制、防夹、碰撞保护、力控和紧急动作限制；同步 SysML 模型、配图和三案安全裁决公式。
+- v1.19 | 2026-07-22 | Codex-架构师 | 为 16 号文档第 5 章四组多行公式增加确定性渲染的 SVG 图片，保留原 TeX 作为可编辑源。
+- v1.18 | 2026-07-22 | Codex-架构师 | 为 16 号文档的物理智能体和三套 L1 方案建立统一七元组模型，补齐方案一、方案二的闭环分解，并把方案三的组合式校正为类型一致的整体映射。
+- v1.17 | 2026-07-22 | Codex-架构师 | 拉齐广义 Agent 与独立 Agent Cell 定义，并将 16 号文档第 5 章扩展为显式领域子 Agent、集中式主业务 Agent、混合分层自治三案并列评审。
+- v1.16 | 2026-07-21 | Codex-架构师 | 将 16 号文档的 L1 评审改为两案并列：方案一保留 A0 与四个常驻专业 / 许可 Agent，方案二采用单一常驻 A0、五个非 Agent 系统和按需临时子 Agent；两案继续由 `KBT-59` 承接，等待用户决策。
+- v1.15 | 2026-07-20 | Codex-架构师 | 同步 L1 Agent 精简候选：16 号文档明确 A0 主 Agent、A1-A3 专业 Agent、A4 独立安全与授权 Agent，以及 AP1/F1 非 Agent 平台；人机交互下沉为 A0 技能组。
 - v1.14 | 2026-07-17 | Codex-架构师 | 根据读者测试校正 `16` 的状态为 L1 首要评审入口：递归方向已确认，九实体拓扑及收敛 / 层级护栏仍为候选，并补充单文件暂留理由。
 - v1.13 | 2026-07-17 | Codex-架构师 | 新增《Kinbot递归式 Agentic Robot System 架构》并切换为当前 L1 系统级概念架构首要入口；旧总体架构、运行时与九模块文档转为迁移参考。
 - v1.12 | 2026-07-13 | Codex-架构师 | 强化《找物 Agentic System Architecture》入口说明，明确交互事件环与运动执行环持续耦合，以及交互 / 编排 / 运动团队分工和事件契约。
@@ -33,20 +51,20 @@
 
 当前默认阅读方式是：
 
-1. 先读 `16` 理解已经确认的递归式 Agentic 方向，以及进入评审的 L1 总图、Agent Cell 元模型、实体关系和涌现；
+1. 先读 `16` 理解已经冻结的递归式 Agentic L1 总图、Agent Cell 元模型、实体关系、四个收口反例、端到端压力场景和 L2 交接边界；
 2. 再读 `05 / 06 / 07` 理解状态对象、离散业务状态机和安全审批语义；
-3. `01 / 03 / 04 / 14` 作为迁移来路与详细约束参考；仅对 `16` 已确认的递归原则，以 `16` 为准，精确拓扑冲突继续由 `KBT-59` 保持开放，禁止提前下发实现；
+3. `01 / 03 / 04 / 14` 作为迁移来路与详细约束参考；`16` 已形成冻结的 L1 基线，后续 L2 只能展开内部实现，发现未阻断的全局单点时才重新打开相应 L1 边界；
 4. 如需进入开发承接，继续读取 `docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md`，但其工作包仍待按 `16` 迁移。
 
 ## 文档索引
 
-- `01_overall_architecture.md`：上一轮总体架构与双视角参考。核心主题：产品系统边界、部署边界、一级接口与硬约束；旧软件组织方式已被递归方向覆盖，新的精确拓扑仍由 `KBT-59` 评审。
+- `01_overall_architecture.md`：上一轮总体架构与双视角参考。核心主题：产品系统边界、部署边界、一级接口与硬约束；旧软件组织方式已经被 16 号文档冻结的递归式 L1 架构覆盖。
 - `02_pdcp_system_architecture_review_package.md`：`PDCP` 系统架构评审包。核心主题：面向 `PDCP` 节点的系统架构评审包，只承接评审问题、冻结项和模块下发结论，不再重复解释总架构。
 - `03_execution_paradigms_runtime_baseline.md`：多尺度执行范式参考。核心主题：说明 `4` 类执行范式、`R1-R4`、协调输入和范式边界；新主线中这些范式由各递归 Agent 按时间尺度组合使用。
 - `04_module_layers_and_boundaries.md`：旧九模块责任与迁移参考。核心主题：旧一级模块职责、端云划分及其向 `A1-A8` 的映射来源。
 - `05_world_state_schema.md`：世界状态结构。核心主题：七实体 `World State` 主文档，定义目标实体结构、`V1` 最小激活子集与 `CareEvent / Task` 边界。
 - `06_decision_state_machine.md`：决策状态机。核心主题：唯一离散决策状态机文档，说明顶层状态、业务主状态、约束子状态、转移规则与中断源。
-- `07_safety_compliance_authorization_api.md`：安全合规授权接口。核心主题：安全、合规、授权和审批接口说明。
+- `07_safety_compliance_authorization_api.md`：安全合规授权接口。核心主题：`ActionProposal` 的状态不确定性与允许修正范围、G3 的 `PermitDecision / PermitRevocation`、许可后的实际操作与偏差反馈、主动推送边界，以及 F1 `SafetyIntervention` 的独立实时语义。
 - `08_companion_interaction_strategy.md`：陪伴交互策略。核心主题：陪伴交互策略、人设边界、长期记忆治理，以及与多执行范式的协同关系。
 - `09_safety_risk_matrix.md`：安全风险矩阵。核心主题：安全风险域、空间规则、降级与停机矩阵，以及风险到多执行范式与安全硬边界的映射。
 - `10_health_event_pipeline_and_escalation.md`：健康事件管线与升级链路。核心主题：健康事件、补采、分级、升级链路与跨执行范式业务管线边界。
@@ -55,17 +73,22 @@
 - `13_medication_storage_and_indoor_delivery_requirements.md`：储药与室内递送要求。核心主题：储药与室内递送能力包、工程护栏与离散业务执行边界。
 - `14_family_co_living_agent_paradigm.md`：家庭共居智能体架构范式。核心主题：作为 `Phase 2` 背景/决策来路锚点，记录新总图、三轴框架与历史 `provisional` 来路，不再作为并列主入口。
 - `15_agentic_object_finding_system_architecture.md`：找物功能级 Agentic System Architecture。核心主题：方案无关地定义需求到目标推导、交互—运动双环耦合、团队责任边界、记忆先行的渐进自治、对象位置 belief、任务内 `Plan-Approve-Execute-Observe-Verify-Commit`、跨团队事件契约、失败治理与验证指标候选；当前由 `KBT-58` 承接评审。
-- `16_recursive_agentic_robot_system_architecture.md`：当前 L1 递归式 Agentic Robot System 首要评审入口，由 `KBT-59` 承接。核心主题：左侧信息空间、中央超级 Agent、右侧物理空间；递归责任域原则已确认，`F1 + A1-A8`、收敛与层级护栏仍为候选。为保证“系统—实体—关系—涌现—阶段门”在本轮整体评审，暂保留为超过 600 行的单文件；评审后拆分接口和验证附录。
+- `16_recursive_agentic_robot_system_architecture.md`：当前已确认并冻结的 L1 架构基线。架构由 A0、四个基础业务 Agent、O3、RobotSkillSystem、AP3、G3 和 F1 组成，具体任务由动态 TaskWorker 承担。正文已经展开 L0 过程／操作数到 L1 的逐项映射、持续感知与共享状态更新闭环、基础业务 Agent 受控直连、重大事件逐级升级、AP3 冷启动、四个收口反例和端到端压力场景；L1 冻结实体、责任、关系与不变量，状态机、协议、阈值和算法转入 L2。
+- `16_end_to_end_emergency_scenario_appendix.md`：16 号 L1 最终评审的端到端压力场景附录。把聊天、日程、找物和突发健康事件放入同一运行时序，逐阶段说明任务 Owner、抢占、递药、外部联系、持续观察、L0 过程／操作数和七类闭环，并明确当前产品能力边界。
+- `16_recursive_agentic_robot_system_architecture_history.md`：16 号文档的完整版本记录，以及已经归档的两套 L1 历史候选、公式、图示和否决依据；仅在追溯变更来路时读取。
+
+16 号主文档已经移出历史候选和比较公式，只保留当前有效架构与冻结门槛，避免当前事实与历史方案并列出现。
 
 ## 建议阅读顺序
 
 1. `16_recursive_agentic_robot_system_architecture.md`
-2. `05_world_state_schema.md`
-3. `07_safety_compliance_authorization_api.md`
-4. `06_decision_state_machine.md`
-5. `01_overall_architecture.md`、`03_execution_paradigms_runtime_baseline.md`、`04_module_layers_and_boundaries.md`（需要迁移背景和详细约束时）
-6. `docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md`（当前开发承接，待迁移）
-7. `15_agentic_object_finding_system_architecture.md`（进入找物功能级评审时）
+2. `16_end_to_end_emergency_scenario_appendix.md`（评审复杂并发和紧急抢占时）
+3. `05_world_state_schema.md`
+4. `07_safety_compliance_authorization_api.md`
+5. `06_decision_state_machine.md`
+6. `01_overall_architecture.md`、`03_execution_paradigms_runtime_baseline.md`、`04_module_layers_and_boundaries.md`（需要迁移背景和详细约束时）
+7. `docs/03_p2_feasibility/01_overall_solution_and_module_design_baseline.md`（当前开发承接，待迁移）
+8. `15_agentic_object_finding_system_architecture.md`（进入找物功能级评审时）
 
 ## 维护规则
 

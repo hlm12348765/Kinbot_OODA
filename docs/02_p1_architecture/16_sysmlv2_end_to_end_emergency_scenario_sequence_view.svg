@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2500" height="2200" viewBox="0 0 2500 2200" role="img" aria-labelledby="title desc">
+  <title id="title">出门准备中突发健康事件端到端时序视图</title>
+  <desc id="desc">SysML v2 SequenceView。展示聊天、日程和找物并发运行后，找物导航如何通过 G3 和 F1 进入实际移动；机器人可能离开用户所在房间，此后近场观察、低置信远场声音和 App／穿戴求救输入以不同证据进入持续感知链。健康与照护 Agent 激活预定义紧急契约，旧找物移动被撤销并安全停止，Emergency Care TaskWorker 再完成到人、递药、联络、持续观察和责任交接。</desc>
+  <defs>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="9" refY="3.5" orient="auto"><path d="M0,0 L10,3.5 L0,7 Z" fill="#4F79A8"/></marker>
+    <marker id="arrow-purple" markerWidth="10" markerHeight="10" refX="9" refY="3.5" orient="auto"><path d="M0,0 L10,3.5 L0,7 Z" fill="#735FA5"/></marker>
+    <marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="9" refY="3.5" orient="auto"><path d="M0,0 L10,3.5 L0,7 Z" fill="#32877F"/></marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="9" refY="3.5" orient="auto"><path d="M0,0 L10,3.5 L0,7 Z" fill="#B94E56"/></marker>
+    <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="9" refY="3.5" orient="auto"><path d="M0,0 L10,3.5 L0,7 Z" fill="#3F8A61"/></marker>
+    <marker id="arrow-orange" markerWidth="10" markerHeight="10" refX="9" refY="3.5" orient="auto"><path d="M0,0 L10,3.5 L0,7 Z" fill="#C28A1B"/></marker>
+    <style>
+      text { font-family:"Noto Sans CJK SC","PingFang SC","Microsoft YaHei",sans-serif; fill:#172033; }
+      .title { font-size:32px; font-weight:700; }
+      .subtitle { font-size:16px; fill:#596579; }
+      .view { font-size:14px; fill:#45515F; }
+      .name { font-size:16px; font-weight:700; }
+      .role { font-size:12px; fill:#596579; }
+      .phase { font-size:15px; font-weight:700; }
+      .label { font-size:13px; }
+      .tiny { font-size:12px; fill:#45515F; }
+      .life { stroke:#94A3B8; stroke-width:1.3; stroke-dasharray:7 6; }
+      .blue { stroke:#4F79A8; stroke-width:2; fill:none; marker-end:url(#arrow-blue); }
+      .blueDash { stroke:#4F79A8; stroke-width:1.8; stroke-dasharray:7 5; fill:none; marker-end:url(#arrow-blue); }
+      .purple { stroke:#735FA5; stroke-width:2.1; fill:none; marker-end:url(#arrow-purple); }
+      .purpleDash { stroke:#735FA5; stroke-width:2; stroke-dasharray:7 5; fill:none; marker-end:url(#arrow-purple); }
+      .teal { stroke:#32877F; stroke-width:2; fill:none; marker-end:url(#arrow-teal); }
+      .tealDash { stroke:#32877F; stroke-width:1.8; stroke-dasharray:7 5; fill:none; marker-end:url(#arrow-teal); }
+      .red { stroke:#B94E56; stroke-width:2.2; fill:none; marker-end:url(#arrow-red); }
+      .redDash { stroke:#B94E56; stroke-width:2; stroke-dasharray:7 5; fill:none; marker-end:url(#arrow-red); }
+      .green { stroke:#3F8A61; stroke-width:2.2; fill:none; marker-end:url(#arrow-green); }
+      .orange { stroke:#C28A1B; stroke-width:2; fill:none; marker-end:url(#arrow-orange); }
+    </style>
+  </defs>
+
+  <rect width="2500" height="2200" fill="#F8FAFC"/>
+  <text x="1250" y="42" text-anchor="middle" class="title">出门准备中突发健康事件端到端时序视图</text>
+  <text x="1250" y="72" text-anchor="middle" class="subtitle">正常并发与找物移动 → 分房间紧急输入 → 撤销旧移动与任务抢占 → 到人、递药、联络 → 责任交接</text>
+  <rect x="40" y="92" width="2420" height="42" rx="8" fill="#F1F5F9" stroke="#CBD5E1"/>
+  <text x="60" y="119" class="view">view &lt;e2eesv&gt; '端到端紧急场景时序视图' : SequenceView</text>
+
+  <!-- Lifeline headers -->
+  <g>
+    <rect x="35" y="160" width="200" height="72" rx="11" fill="#FFF7E8" stroke="#B7791F" stroke-width="2"/>
+    <text x="135" y="190" text-anchor="middle" class="name">用户／环境</text>
+    <text x="135" y="214" text-anchor="middle" class="role">系统外部</text>
+    <line x1="135" y1="232" x2="135" y2="2100" class="life"/>
+
+    <rect x="280" y="160" width="200" height="72" rx="11" fill="#FFF4D8" stroke="#C28A1B" stroke-width="2"/>
+    <text x="380" y="190" text-anchor="middle" class="name">RobotSkillSystem</text>
+    <text x="380" y="214" text-anchor="middle" class="role">感知与基础技能</text>
+    <line x1="380" y1="232" x2="380" y2="2100" class="life"/>
+
+    <rect x="525" y="160" width="190" height="72" rx="11" fill="#E6F6F4" stroke="#32877F" stroke-width="2"/>
+    <text x="620" y="190" text-anchor="middle" class="name">O3</text>
+    <text x="620" y="214" text-anchor="middle" class="role">共享上下文</text>
+    <line x1="620" y1="232" x2="620" y2="2100" class="life"/>
+
+    <rect x="760" y="160" width="190" height="72" rx="11" fill="#F1EDFA" stroke="#735FA5" stroke-width="2"/>
+    <text x="855" y="190" text-anchor="middle" class="name">A0</text>
+    <text x="855" y="214" text-anchor="middle" class="role">根任务 Owner</text>
+    <line x1="855" y1="232" x2="855" y2="2100" class="life"/>
+
+    <rect x="995" y="160" width="210" height="72" rx="11" fill="#F1EDFA" stroke="#735FA5" stroke-width="2"/>
+    <text x="1100" y="190" text-anchor="middle" class="name">基础业务 Agent</text>
+    <text x="1100" y="214" text-anchor="middle" class="role">长期业务 Owner</text>
+    <line x1="1100" y1="232" x2="1100" y2="2100" class="life"/>
+
+    <rect x="1250" y="160" width="210" height="72" rx="11" fill="#F1EDFA" stroke="#735FA5" stroke-width="2"/>
+    <text x="1355" y="190" text-anchor="middle" class="name">TaskWorker</text>
+    <text x="1355" y="214" text-anchor="middle" class="role">有界任务 Owner</text>
+    <line x1="1355" y1="232" x2="1355" y2="2100" class="life"/>
+
+    <rect x="1505" y="160" width="190" height="72" rx="11" fill="#E6F6F4" stroke="#32877F" stroke-width="2"/>
+    <text x="1600" y="190" text-anchor="middle" class="name">AP3</text>
+    <text x="1600" y="214" text-anchor="middle" class="role">运行与资源机制</text>
+    <line x1="1600" y1="232" x2="1600" y2="2100" class="life"/>
+
+    <rect x="1740" y="160" width="180" height="72" rx="11" fill="#FDECEC" stroke="#B94E56" stroke-width="2"/>
+    <text x="1830" y="190" text-anchor="middle" class="name">G3</text>
+    <text x="1830" y="214" text-anchor="middle" class="role">外部操作治理</text>
+    <line x1="1830" y1="232" x2="1830" y2="2100" class="life"/>
+
+    <rect x="1965" y="160" width="180" height="72" rx="11" fill="#EAF7EE" stroke="#3F8A61" stroke-width="2"/>
+    <text x="2055" y="190" text-anchor="middle" class="name">F1</text>
+    <text x="2055" y="214" text-anchor="middle" class="role">机电执行与硬安全</text>
+    <line x1="2055" y1="232" x2="2055" y2="2100" class="life"/>
+
+    <rect x="2190" y="160" width="275" height="72" rx="11" fill="#EAF3FF" stroke="#4F79A8" stroke-width="2"/>
+    <text x="2327" y="190" text-anchor="middle" class="name">外部信息环境</text>
+    <text x="2327" y="214" text-anchor="middle" class="role">App／穿戴／日程／急救与医疗服务</text>
+    <line x1="2327" y1="232" x2="2327" y2="2100" class="life"/>
+  </g>
+
+  <!-- Phase 1 -->
+  <rect x="45" y="258" width="2410" height="550" rx="12" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <rect x="45" y="258" width="320" height="34" rx="8" fill="#EEF6FF" stroke="#6B91BA"/>
+  <text x="65" y="281" class="phase">阶段 1　聊天、日程与找物并发</text>
+
+  <line x1="135" y1="325" x2="380" y2="325" class="orange"/>
+  <text x="257" y="310" text-anchor="middle" class="label">聊天／创建日程／找钥匙和帽子</text>
+
+  <line x1="380" y1="365" x2="620" y2="365" class="blue"/>
+  <text x="500" y="350" text-anchor="middle" class="label">I2／Evidence → O3 更新 I3</text>
+
+  <line x1="380" y1="405" x2="855" y2="405" class="purple"/>
+  <text x="617" y="390" text-anchor="middle" class="label">显式意图 I2 → 根契约</text>
+
+  <line x1="855" y1="445" x2="1100" y2="445" class="purple"/>
+  <text x="977" y="430" text-anchor="middle" class="label">会话／找物子契约</text>
+
+  <line x1="855" y1="480" x2="1355" y2="480" class="purple"/>
+  <text x="1105" y="465" text-anchor="middle" class="label">Calendar TaskWorker（A0 直接子 Agent）</text>
+
+  <line x1="1100" y1="515" x2="1600" y2="515" class="teal"/>
+  <text x="1350" y="500" text-anchor="middle" class="label">Conversation／Find Items WorkerIntent</text>
+
+  <line x1="1600" y1="550" x2="1355" y2="550" class="teal"/>
+  <text x="1477" y="535" text-anchor="middle" class="label">创建、租约与资源</text>
+
+  <line x1="1355" y1="580" x2="380" y2="580" class="orange"/>
+  <text x="867" y="565" text-anchor="middle" class="label">交互／记忆访问／识别／导航／信息服务 SkillRequest</text>
+
+  <line x1="380" y1="620" x2="1830" y2="620" class="red"/>
+  <text x="1105" y="605" text-anchor="middle" class="label">Find Items PhysicalActionProposal：前往候选位置并搜索</text>
+
+  <line x1="1830" y1="650" x2="380" y2="650" class="redDash"/>
+  <text x="1105" y="635" text-anchor="middle" class="label">PermitDecision／EffectivePhysicalOperation 返回 Navigation Skill</text>
+
+  <line x1="1830" y1="680" x2="2055" y2="680" class="red"/>
+  <text x="1942" y="665" text-anchor="middle" class="label">受约束的动作候选／PermitDecision</text>
+
+  <line x1="2055" y1="720" x2="135" y2="720" class="green"/>
+  <text x="1095" y="705" text-anchor="middle" class="label">机器人实际移动搜索；可能已经离开用户所在房间</text>
+
+  <line x1="135" y1="755" x2="380" y2="755" class="blue"/>
+  <text x="257" y="740" text-anchor="middle" class="label">实际位置／环境／物体信号</text>
+
+  <line x1="380" y1="785" x2="620" y2="785" class="blue"/>
+  <text x="500" y="770" text-anchor="middle" class="label">新 I2／Evidence → O3</text>
+
+  <!-- Phase 2 -->
+  <rect x="45" y="830" width="2410" height="500" rx="12" fill="#FFFDFD" stroke="#D88B91"/>
+  <rect x="45" y="830" width="450" height="34" rx="8" fill="#FDECEC" stroke="#B94E56"/>
+  <text x="65" y="853" class="phase">阶段 2　近场／跨房间紧急输入触发任务抢占</text>
+
+  <line x1="135" y1="905" x2="380" y2="905" class="red"/>
+  <text x="257" y="882" text-anchor="middle" class="label">本体输入：近场语音／姿态</text>
+  <text x="257" y="899" text-anchor="middle" class="tiny">跨房间通常只剩低置信声音</text>
+
+  <line x1="2327" y1="945" x2="380" y2="945" class="blueDash"/>
+  <text x="1353" y="930" text-anchor="middle" class="label">App／已接入穿戴设备的求救事件（远程明确输入）</text>
+
+  <line x1="380" y1="985" x2="620" y2="985" class="blue"/>
+  <text x="500" y="970" text-anchor="middle" class="label">风险 I2／Evidence：来源、置信度、新鲜度</text>
+
+  <line x1="380" y1="1025" x2="855" y2="1025" class="purpleDash"/>
+  <text x="617" y="1010" text-anchor="middle" class="label">明确呼救 I2（清晰语音／App／穿戴；不是业务升级）</text>
+
+  <line x1="620" y1="1065" x2="1100" y2="1065" class="blue"/>
+  <text x="860" y="1050" text-anchor="middle" class="label">用户／机器人位置 + StateRef／MemoryRef／EvidenceRef</text>
+
+  <line x1="1100" y1="1105" x2="1600" y2="1105" class="redDash"/>
+  <text x="1350" y="1090" text-anchor="middle" class="label">预定义紧急契约 → Emergency Care WorkerIntent</text>
+
+  <line x1="1600" y1="1145" x2="1355" y2="1145" class="teal"/>
+  <text x="1477" y="1130" text-anchor="middle" class="label">启动紧急 Worker；挂起旧 Worker；转移互斥资源</text>
+
+  <line x1="1355" y1="1180" x2="380" y2="1180" class="orange"/>
+  <text x="867" y="1165" text-anchor="middle" class="label">旧 Find Items Worker：终止导航子契约并提交检查点</text>
+
+  <line x1="380" y1="1210" x2="1830" y2="1210" class="redDash"/>
+  <text x="1105" y="1195" text-anchor="middle" class="label">撤销尚未结束的找物移动许可</text>
+
+  <line x1="1830" y1="1240" x2="2055" y2="1240" class="red"/>
+  <text x="1942" y="1225" text-anchor="middle" class="label">PermitRevocation／安全停止要求</text>
+
+  <line x1="2055" y1="1270" x2="135" y2="1270" class="green"/>
+  <text x="1095" y="1255" text-anchor="middle" class="label">F1 先安全停车，再允许紧急返回动作接管</text>
+
+  <line x1="855" y1="1305" x2="1355" y2="1305" class="purple"/>
+  <text x="1105" y="1290" text-anchor="middle" class="label">RootDecision：紧急优先；聊天／日程／找物按状态挂起</text>
+
+  <!-- Phase 3 -->
+  <rect x="45" y="1350" width="2410" height="460" rx="12" fill="#FBFFFC" stroke="#74A987"/>
+  <rect x="45" y="1350" width="390" height="34" rx="8" fill="#EAF7EE" stroke="#3F8A61"/>
+  <text x="65" y="1373" class="phase">阶段 3　到人、递药、联络与家庭协同</text>
+
+  <line x1="1355" y1="1420" x2="380" y2="1420" class="orange"/>
+  <text x="867" y="1405" text-anchor="middle" class="label">Navigation／Interaction／Recognition／Storage／Information SkillRequest</text>
+
+  <line x1="380" y1="1460" x2="1830" y2="1460" class="red"/>
+  <text x="1105" y="1445" text-anchor="middle" class="label">PhysicalActionProposal：返回用户最后已知位置、核实、停车、开仓</text>
+
+  <line x1="1830" y1="1490" x2="380" y2="1490" class="redDash"/>
+  <text x="1105" y="1475" text-anchor="middle" class="label">PermitDecision／EffectivePhysicalOperation 返回直接提案者</text>
+
+  <line x1="1830" y1="1520" x2="2055" y2="1520" class="red"/>
+  <text x="1942" y="1505" text-anchor="middle" class="label">受约束的动作候选／PermitDecision</text>
+
+  <line x1="2055" y1="1560" x2="135" y2="1560" class="green"/>
+  <text x="1095" y="1545" text-anchor="middle" class="label">移动到人、保持安全距离、开仓；F1 持续防碰撞／防夹</text>
+
+  <line x1="135" y1="1600" x2="380" y2="1600" class="blue"/>
+  <text x="257" y="1585" text-anchor="middle" class="label">回答、姿态、取药／服药行为、生命体征</text>
+
+  <line x1="380" y1="1630" x2="620" y2="1630" class="blue"/>
+  <text x="500" y="1615" text-anchor="middle" class="label">新 I2／Evidence</text>
+
+  <line x1="620" y1="1660" x2="1355" y2="1660" class="blue"/>
+  <text x="987" y="1645" text-anchor="middle" class="label">实际到人、健康、药品和任务状态</text>
+
+  <line x1="1100" y1="1690" x2="1600" y2="1690" class="tealDash"/>
+  <text x="1350" y="1675" text-anchor="middle" class="label">受控协调：入口观察、到场识别与交接子契约</text>
+
+  <line x1="380" y1="1720" x2="1830" y2="1720" class="red"/>
+  <text x="1105" y="1705" text-anchor="middle" class="label">InformationActionProposal：联系家属／急救或医疗服务</text>
+
+  <line x1="1830" y1="1750" x2="380" y2="1750" class="redDash"/>
+  <text x="1105" y="1735" text-anchor="middle" class="label">PermitDecision／EffectiveInformationOperation 返回直接提案者</text>
+
+  <line x1="380" y1="1780" x2="2327" y2="1780" class="red"/>
+  <text x="1353" y="1765" text-anchor="middle" class="label">Information Service Skill 执行最小披露后的实际联络</text>
+
+  <!-- Phase 4 -->
+  <rect x="45" y="1830" width="2410" height="285" rx="12" fill="#F7FBFF" stroke="#6B91BA"/>
+  <rect x="45" y="1830" width="330" height="34" rx="8" fill="#EEF6FF" stroke="#6B91BA"/>
+  <text x="65" y="1853" class="phase">阶段 4　持续观察、外部接手与收尾</text>
+
+  <rect x="85" y="1875" width="1490" height="70" rx="10" fill="#FFFFFF" stroke="#94A3B8" stroke-dasharray="7 5"/>
+  <text x="105" y="1900" class="label">«loop» 直到家属／急救人员接手，或经审核的停止条件满足</text>
+  <text x="830" y="1925" text-anchor="middle" class="label">用户／环境 → RobotSkillSystem → O3 → Emergency Care TaskWorker → 询问／观察／联络／调整位置</text>
+  <text x="830" y="1942" text-anchor="middle" class="tiny">每轮都依据新的实际观察；机器人不自行作医学诊断或宣布“已经稳定”</text>
+
+  <line x1="2327" y1="1970" x2="380" y2="1970" class="blueDash"/>
+  <text x="1353" y="1955" text-anchor="middle" class="label">OperationOutcome：送达／接通／接手／失败</text>
+
+  <line x1="380" y1="2010" x2="1355" y2="2010" class="blue"/>
+  <text x="867" y="1995" text-anchor="middle" class="label">SkillOutcome／Evidence → 当前任务 Owner</text>
+
+  <line x1="1355" y1="2045" x2="855" y2="2045" class="purple"/>
+  <text x="1105" y="2030" text-anchor="middle" class="label">紧急任务结果与责任交接</text>
+
+  <line x1="855" y1="2080" x2="1100" y2="2080" class="purple"/>
+  <text x="977" y="2065" text-anchor="middle" class="label">决定原任务继续挂起、恢复或取消</text>
+
+  <!-- Invariants -->
+  <rect x="120" y="2130" width="2260" height="54" rx="10" fill="#F1EDFA" stroke="#735FA5" stroke-width="1.8"/>
+  <text x="1250" y="2153" text-anchor="middle" class="label">不变量：每项契约只有一个 Owner；所有外部信息操作经过 G3；所有物理动作再经过 F1；旧 Worker 失去租约后不能继续行动</text>
+  <text x="1250" y="2176" text-anchor="middle" class="tiny">跨房间输入必须保留来源与置信度；预定义紧急契约不能绕过 AP3、G3 和 F1；A0 随后统一根任务优先级和用户承诺</text>
+</svg>

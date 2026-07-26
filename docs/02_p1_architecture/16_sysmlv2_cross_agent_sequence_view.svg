@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="4200" height="2450" viewBox="0 0 4200 2450" role="img" aria-labelledby="title desc">
-<title id="title">跨 Agent 行动许可时序视图</title>
-<desc id="desc">从目标或事件进入任务协调，到许可、确定性执行、状态更新与结果回报</desc>
+<title id="title">主 Agent 与专业 Agent 行动许可时序视图</title>
+<desc id="desc">从用户目标或重要事件进入 A0 主业务规划，再到专业 Agent、A4 许可、F1 或外部执行边界、AP1 状态证据与结果回报</desc>
 <defs>
 <marker id="arrow-blue" markerWidth="12" markerHeight="12" refX="10" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,10 L11,5 z" fill="#2F6FDD"/></marker>
 <marker id="arrow-purple" markerWidth="12" markerHeight="12" refX="10" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,10 L11,5 z" fill="#6B57A5"/></marker>
@@ -23,38 +23,39 @@ text{font-family:"Noto Sans CJK SC","PingFang SC","Microsoft YaHei",Arial,sans-s
 .activation{fill:#E9E1FF;stroke:#6B57A5;stroke-width:2}
 </style>
 <rect width="4200" height="2450" fill="#F8FAFC"/>
-<text class="title" x="2100.0" y="62" text-anchor="middle">跨 Agent 行动许可时序视图</text>
-<text class="subtitle" x="2100.0" y="105" text-anchor="middle">从目标或事件进入任务协调，到许可、确定性执行、状态更新与结果回报</text>
+<text class="title" x="2100.0" y="62" text-anchor="middle">主 Agent 与专业 Agent 行动许可时序视图</text>
+<text class="subtitle" x="2100.0" y="105" text-anchor="middle">A0 负责总任务，专业 Agent 负责本域执行，A4 独立许可，AP1 保存状态与证据</text>
 <rect x="70" y="132" width="4060" height="52" rx="12" fill="#EEF2F7" stroke="#CBD4DE"/>
-<text class="view" x="95" y="166">view &lt;capsv&gt; &#x27;跨Agent行动许可时序视图&#x27; : SequenceView</text>
-<g class="participant"><rect class="node" x="70" y="260" width="560" height="150" rx="10" fill="#DDEEFF" stroke="#3B6EA8"/><text class="kind" x="350.0" y="296" text-anchor="middle">«part»</text><text class="name" x="350.0" y="338" text-anchor="middle">E</text><text class="small" x="350.0" y="375" text-anchor="middle">信息目标或物理事件</text></g>
+<text class="view" x="95" y="166">view &lt;capsv&gt; &#x27;主Agent与专业Agent行动许可时序视图&#x27; : SequenceView</text>
+<g class="participant"><rect class="node" x="70" y="260" width="560" height="150" rx="10" fill="#DDEEFF" stroke="#3B6EA8"/><text class="kind" x="350.0" y="296" text-anchor="middle">«part»</text><text class="name" x="350.0" y="338" text-anchor="middle">E</text><text class="small" x="350.0" y="375" text-anchor="middle">用户目标或重要事件</text></g>
 <line class="lifeline" x1="350" y1="410" x2="350" y2="2290"/>
-<g class="participant"><rect class="node" x="770" y="260" width="560" height="150" rx="10" fill="#E9E1FF" stroke="#6B57A5"/><text class="kind" x="1050.0" y="296" text-anchor="middle">«part»</text><text class="name" x="1050.0" y="338" text-anchor="middle">A4</text><text class="small" x="1050.0" y="375" text-anchor="middle">跨领域任务协调</text></g>
+<g class="participant"><rect class="node" x="770" y="260" width="560" height="150" rx="10" fill="#D9F3F0" stroke="#0F766E"/><text class="kind" x="1050.0" y="296" text-anchor="middle">«part : AgentCell»</text><text class="name" x="1050.0" y="338" text-anchor="middle">A0</text><text class="small" x="1050.0" y="375" text-anchor="middle">Kinbot 主 Agent</text></g>
 <line class="lifeline" x1="1050" y1="410" x2="1050" y2="2290"/>
-<g class="participant"><rect class="node" x="1470" y="260" width="560" height="150" rx="10" fill="#E9E1FF" stroke="#6B57A5"/><text class="kind" x="1750.0" y="296" text-anchor="middle">«part»</text><text class="name" x="1750.0" y="338" text-anchor="middle">X</text><text class="small" x="1750.0" y="375" text-anchor="middle">A2/A5/A6 执行 Agent</text></g>
+<g class="participant"><rect class="node" x="1470" y="260" width="560" height="150" rx="10" fill="#E9E1FF" stroke="#6B57A5"/><text class="kind" x="1750.0" y="296" text-anchor="middle">«part : AgentCell»</text><text class="name" x="1750.0" y="338" text-anchor="middle">X</text><text class="small" x="1750.0" y="375" text-anchor="middle">A1/A2/A3 专业 Agent</text></g>
 <line class="lifeline" x1="1750" y1="410" x2="1750" y2="2290"/>
-<g class="participant"><rect class="node" x="2170" y="260" width="560" height="150" rx="10" fill="#FFF0E4" stroke="#C26A2E"/><text class="kind" x="2450.0" y="296" text-anchor="middle">«part»</text><text class="name" x="2450.0" y="338" text-anchor="middle">A7</text><text class="small" x="2450.0" y="375" text-anchor="middle">安全与授权</text></g>
+<g class="participant"><rect class="node" x="2170" y="260" width="560" height="150" rx="10" fill="#FFF0E4" stroke="#C2413B"/><text class="kind" x="2450.0" y="296" text-anchor="middle">«part : AgentCell»</text><text class="name" x="2450.0" y="338" text-anchor="middle">A4</text><text class="small" x="2450.0" y="375" text-anchor="middle">安全与授权 Agent</text></g>
 <line class="lifeline" x1="2450" y1="410" x2="2450" y2="2290"/>
-<g class="participant"><rect class="node" x="2870" y="260" width="560" height="150" rx="10" fill="#FFE7CF" stroke="#B8661E"/><text class="kind" x="3150.0" y="296" text-anchor="middle">«part»</text><text class="name" x="3150.0" y="338" text-anchor="middle">F1</text><text class="small" x="3150.0" y="375" text-anchor="middle">确定性执行层</text></g>
+<g class="participant"><rect class="node" x="2870" y="260" width="560" height="150" rx="10" fill="#FFE7CF" stroke="#B8661E"/><text class="kind" x="3150.0" y="296" text-anchor="middle">«part : ExecutionBoundary»</text><text class="name" x="3150.0" y="338" text-anchor="middle">F1 / EXT</text><text class="small" x="3150.0" y="375" text-anchor="middle">物理或外部执行边界</text></g>
 <line class="lifeline" x1="3150" y1="410" x2="3150" y2="2290"/>
-<g class="participant"><rect class="node" x="3570" y="260" width="560" height="150" rx="10" fill="#D9F3F0" stroke="#0F766E"/><text class="kind" x="3850.0" y="296" text-anchor="middle">«part»</text><text class="name" x="3850.0" y="338" text-anchor="middle">A3</text><text class="small" x="3850.0" y="375" text-anchor="middle">状态与证据</text></g>
+<g class="participant"><rect class="node" x="3570" y="260" width="560" height="150" rx="10" fill="#E4F1FA" stroke="#3B6EA8"/><text class="kind" x="3850.0" y="296" text-anchor="middle">«part : NonAgentPlatform»</text><text class="name" x="3850.0" y="338" text-anchor="middle">AP1</text><text class="small" x="3850.0" y="375" text-anchor="middle">状态、任务与证据平台</text></g>
 <line class="lifeline" x1="3850" y1="410" x2="3850" y2="2290"/>
-<rect class="activation" x="1038" y="580" width="34" height="1570"/>
+<rect class="activation" x="1038" y="580" width="34" height="1680"/>
 <rect class="activation" x="1738" y="760" width="34" height="1450"/>
 <rect class="activation" x="2438" y="950" width="34" height="430"/>
 <rect class="activation" x="3138" y="1510" width="34" height="360"/>
-<rect class="activation" x="3838" y="1890" width="34" height="250"/>
+<rect class="activation" x="3838" y="1890" width="34" height="370"/>
 <line class="flow" x1="350" y1="600" x2="1050" y2="600" stroke="#6B57A5" marker-end="url(#arrow-purple)"/><rect x="635.0" y="559" width="130" height="34" rx="8" fill="#F8FAFC" opacity="0.94"/><text class="edge" x="700.0" y="584" text-anchor="middle" fill="#6B57A5">目标或事件</text>
-<line class="flow" x1="1050" y1="790" x2="1750" y2="790" stroke="#6B57A5" marker-end="url(#arrow-purple)"/><rect x="1232.0" y="749" width="336" height="34" rx="8" fill="#F8FAFC" opacity="0.94"/><text class="edge" x="1400.0" y="774" text-anchor="middle" fill="#6B57A5">目标委托 + 权限限制 + 预算</text>
+<line class="flow" x1="1050" y1="790" x2="1750" y2="790" stroke="#6B57A5" marker-end="url(#arrow-purple)"/><rect x="1190.0" y="749" width="420" height="34" rx="8" fill="#F8FAFC" opacity="0.94"/><text class="edge" x="1400.0" y="774" text-anchor="middle" fill="#6B57A5">任务要求 + 权限限制 + 资源预算</text>
 <line class="flow" x1="1750" y1="980" x2="2450" y2="980" stroke="#6B57A5" marker-end="url(#arrow-purple)"/><rect x="1932.0" y="939" width="336" height="34" rx="8" fill="#F8FAFC" opacity="0.94"/><text class="edge" x="2100.0" y="964" text-anchor="middle" fill="#6B57A5">行动申请 + 状态版本 + 风险</text>
-<line class="flow dash" x1="2450" y1="1170" x2="1750" y2="1170" stroke="#2F6FDD" marker-end="url(#arrow-blue)"/><rect x="1932.0" y="1129" width="336" height="34" rx="8" fill="#F8FAFC" opacity="0.94"/><text class="edge" x="2100.0" y="1154" text-anchor="middle" fill="#2F6FDD">限时许可 / 拒绝 / 需要确认</text>
-<line class="flow dash" x1="2450" y1="1360" x2="1050" y2="1360" stroke="#2F6FDD" marker-end="url(#arrow-blue)"/><rect x="1685.0" y="1319" width="130" height="34" rx="8" fill="#F8FAFC" opacity="0.94"/><text class="edge" x="1750.0" y="1344" text-anchor="middle" fill="#2F6FDD">决定副本</text>
-<line class="flow" x1="1750" y1="1550" x2="3150" y2="1550" stroke="#6B57A5" marker-end="url(#arrow-purple)"/><rect x="2334.5" y="1509" width="231" height="34" rx="8" fill="#F8FAFC" opacity="0.94"/><text class="edge" x="2450.0" y="1534" text-anchor="middle" fill="#6B57A5">技能调用 + 有效许可</text>
-<line class="flow dash" x1="3150" y1="1740" x2="1750" y2="1740" stroke="#2F6FDD" marker-end="url(#arrow-blue)"/><rect x="2292.5" y="1699" width="315" height="34" rx="8" fill="#F8FAFC" opacity="0.94"/><text class="edge" x="2450.0" y="1724" text-anchor="middle" fill="#2F6FDD">机器人反馈 / 故障 / 结果</text>
-<line class="flow" x1="1750" y1="1930" x2="3850" y2="1930" stroke="#6B57A5" marker-end="url(#arrow-purple)"/><rect x="2705.5" y="1889" width="189" height="34" rx="8" fill="#F8FAFC" opacity="0.94"/><text class="edge" x="2800.0" y="1914" text-anchor="middle" fill="#6B57A5">状态变化 + 证据</text>
-<line class="flow dash" x1="1750" y1="2120" x2="1050" y2="2120" stroke="#2F6FDD" marker-end="url(#arrow-blue)"/><rect x="1253.0" y="2079" width="294" height="34" rx="8" fill="#F8FAFC" opacity="0.94"/><text class="edge" x="1400.0" y="2104" text-anchor="middle" fill="#2F6FDD">进度 / 结果 / 上报处理</text>
+<line class="flow dash" x1="2450" y1="1170" x2="1750" y2="1170" stroke="#2F6FDD" marker-end="url(#arrow-blue)"/><rect x="1869.0" y="1129" width="462" height="34" rx="8" fill="#F8FAFC" opacity="0.94"/><text class="edge" x="2100.0" y="1154" text-anchor="middle" fill="#2F6FDD">正常许可 / 紧急例外许可 / 拒绝 / 需要确认</text>
+<line class="flow dash" x1="2450" y1="1360" x2="1050" y2="1360" stroke="#2F6FDD" marker-end="url(#arrow-blue)"/><rect x="1645.0" y="1319" width="210" height="34" rx="8" fill="#F8FAFC" opacity="0.94"/><text class="edge" x="1750.0" y="1344" text-anchor="middle" fill="#2F6FDD">同步许可结果</text>
+<line class="flow" x1="1750" y1="1550" x2="3150" y2="1550" stroke="#6B57A5" marker-end="url(#arrow-purple)"/><rect x="2320.0" y="1509" width="260" height="34" rx="8" fill="#F8FAFC" opacity="0.94"/><text class="edge" x="2450.0" y="1534" text-anchor="middle" fill="#6B57A5">技能调用 + 有效许可</text>
+<line class="flow dash" x1="3150" y1="1740" x2="1750" y2="1740" stroke="#2F6FDD" marker-end="url(#arrow-blue)"/><rect x="2250.5" y="1699" width="399" height="34" rx="8" fill="#F8FAFC" opacity="0.94"/><text class="edge" x="2450.0" y="1724" text-anchor="middle" fill="#2F6FDD">物理或外部结果 / 故障</text>
+<line class="flow" x1="1750" y1="1930" x2="3850" y2="1930" stroke="#6B57A5" marker-end="url(#arrow-purple)"/><rect x="2705.5" y="1889" width="189" height="34" rx="8" fill="#F8FAFC" opacity="0.94"/><text class="edge" x="2800.0" y="1914" text-anchor="middle" fill="#6B57A5">StateDelta + Evidence</text>
+<line class="flow dash" x1="1750" y1="2120" x2="1050" y2="2120" stroke="#2F6FDD" marker-end="url(#arrow-blue)"/><rect x="1211.0" y="2079" width="378" height="34" rx="8" fill="#F8FAFC" opacity="0.94"/><text class="edge" x="1400.0" y="2104" text-anchor="middle" fill="#2F6FDD">进度 / 结果 / 请求上级处理</text>
+<line class="flow" x1="1050" y1="2240" x2="3850" y2="2240" stroke="#0F766E" marker-end="url(#arrow-teal)"/><rect x="2290" y="2199" width="320" height="34" rx="8" fill="#F8FAFC" opacity="0.94"/><text class="edge" x="2450" y="2224" text-anchor="middle" fill="#0F766E">根任务状态 + 最终结果</text>
 <text class="small" x="4050" y="2260" text-anchor="end">时间向下</text>
 <path d="M4070 2180 V2280" stroke="#5A6573" stroke-width="2.4" marker-end="url(#arrow-gray)"/>
 <line x1="70" y1="2358" x2="4130" y2="2358" stroke="#D7DEE6"/>
-<text class="small" x="2100.0" y="2400" text-anchor="middle">实线为请求或调用，蓝色虚线为返回或决定副本；激活条表示责任持续区间，不等同于具体线程实现。</text>
+<text class="small" x="2100.0" y="2400" text-anchor="middle">A0 保持根任务责任；专业 Agent 返回本域结果；A4 许可独立；AP1 只保存和分发状态，不作业务判断。</text>
 </svg>

@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1900" height="980" viewBox="0 0 1900 980" role="img" aria-labelledby="title desc">
+<title id="title">TaskWorker 生命周期及 Agent 策略与 AP3 机制分工视图</title>
+<desc id="desc">展示TaskWorker从proposed到admitted、running、suspended、completing和终态再到reclaimed的状态转换，并区分基础业务Agent负责策略、AP3负责机制。</desc>
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3.5" orient="auto"><path d="M0,0 L10,3.5 L0,7 Z" fill="#7B8794"/></marker>
+  <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="9" refY="3.5" orient="auto"><path d="M0,0 L10,3.5 L0,7 Z" fill="#5C86B5"/></marker>
+  <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="9" refY="3.5" orient="auto"><path d="M0,0 L10,3.5 L0,7 Z" fill="#B94E56"/></marker>
+  <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="9" refY="3.5" orient="auto"><path d="M0,0 L10,3.5 L0,7 Z" fill="#4A9468"/></marker>
+  <style>
+    text { font-family: "Noto Sans CJK SC","PingFang SC","Microsoft YaHei",sans-serif; fill: #182230; }
+    .title { font-size: 30px; font-weight: 700; }
+    .subtitle { font-size: 15px; fill: #5A6573; }
+    .view { font-size: 14px; fill: #45515F; }
+    .st { font-size: 12px; fill: #5A6573; }
+    .name { font-size: 18px; font-weight: 700; }
+    .body { font-size: 13px; }
+    .small { font-size: 12px; }
+    .tiny { font-size: 11px; }
+    .edge { fill: none; stroke: #7B8794; stroke-width: 1.7; marker-end: url(#arrow); }
+    .edge-blue { fill: none; stroke: #5C86B5; stroke-width: 1.8; marker-end: url(#arrow-blue); }
+    .edge-red { fill: none; stroke: #B94E56; stroke-width: 1.9; marker-end: url(#arrow-red); }
+    .edge-green { fill: none; stroke: #4A9468; stroke-width: 1.9; marker-end: url(#arrow-green); }
+    .edge-dash { fill: none; stroke: #32877F; stroke-width: 1.7; stroke-dasharray: 7 5; marker-end: url(#arrow); }
+    .divider { stroke: #CBD5E1; stroke-width: 1; }
+  </style>
+</defs>
+<rect width="1900" height="980" fill="#F8FAFC"/><text x="950" y="42" text-anchor="middle" class="title"><tspan x="950" dy="0">TaskWorker 生命周期及 Agent 策略与 AP3 机制分工视图</tspan></text>
+<text x="950" y="68" text-anchor="middle" class="subtitle"><tspan x="950" dy="0">基础业务承担长期责任 · TaskWorker承担具体任务 · RobotSkill复用基础能力</tspan></text>
+<rect x="40" y="84" width="1820" height="38" rx="8" fill="#F3F5F7" stroke="#CBD5E1"/>
+<text x="58" y="109" text-anchor="start" class="view"><tspan x="58" dy="0">view &lt;twstv&gt; 'TaskWorker生命周期视图' : StateTransitionView</tspan></text><rect x="40" y="155" width="1820" height="145" rx="14" fill="#F1EDFA" stroke="#735FA5" stroke-width="1.7"/>
+  <text x="80" y="188" text-anchor="start" class="name"><tspan x="80" dy="0">Agent 策略</tspan></text>
+  <text x="950" y="228" text-anchor="middle" class="body"><tspan x="950" dy="0">创建／复用／合并 · 域内优先级 · 分解／重试／恢复／终止 · 跨业务冲突返回A0</tspan><tspan x="950" dy="24">策略决定“为什么、要不要、先做什么”，不直接操纵运行状态</tspan></text>
+  <rect x="40" y="760" width="1820" height="160" rx="14" fill="#E6F6F4" stroke="#32877F" stroke-width="1.7"/>
+  <text x="80" y="794" text-anchor="start" class="name"><tspan x="80" dy="0">AP3 机制</tspan></text>
+  <text x="950" y="835" text-anchor="middle" class="body"><tspan x="950" dy="0">创建／启动／暂停／恢复／终止／回收 · 并发／超时／心跳／孤儿清理</tspan><tspan x="950" dy="24">检查点／资源配额／版本固定 · WorkerLease／fencingToken · 迟到和旧实例拒绝</tspan></text><g>
+  <rect x="70" y="405" width="200" height="105" rx="12" fill="#F1EDFA" stroke="#735FA5" stroke-width="2"/>
+
+  <text x="170" y="432" text-anchor="middle" class="st"><tspan x="170" dy="0">«state»</tspan></text>
+  <text x="170" y="461" text-anchor="middle" class="name"><tspan x="170" dy="0">proposed</tspan></text>
+  <line x1="70" y1="475" x2="270" y2="475" class="divider"/>
+  <text x="170" y="497" text-anchor="middle" class="body"><tspan x="170" dy="0">WorkerIntent</tspan><tspan x="170" dy="18">尚未获运行权</tspan></text>
+</g><g>
+  <rect x="330" y="405" width="200" height="105" rx="12" fill="#F1EDFA" stroke="#735FA5" stroke-width="2"/>
+
+  <text x="430" y="432" text-anchor="middle" class="st"><tspan x="430" dy="0">«state»</tspan></text>
+  <text x="430" y="461" text-anchor="middle" class="name"><tspan x="430" dy="0">admitted</tspan></text>
+  <line x1="330" y1="475" x2="530" y2="475" class="divider"/>
+  <text x="430" y="497" text-anchor="middle" class="body"><tspan x="430" dy="0">资源与版本已固定</tspan><tspan x="430" dy="18">已签发WorkerLease</tspan></text>
+</g><g>
+  <rect x="590" y="405" width="220" height="105" rx="12" fill="#F1EDFA" stroke="#735FA5" stroke-width="2"/>
+
+  <text x="700" y="432" text-anchor="middle" class="st"><tspan x="700" dy="0">«state»</tspan></text>
+  <text x="700" y="461" text-anchor="middle" class="name"><tspan x="700" dy="0">running</tspan></text>
+  <line x1="590" y1="475" x2="810" y2="475" class="divider"/>
+  <text x="700" y="497" text-anchor="middle" class="body"><tspan x="700" dy="0">局部规划与Skill调用</tspan><tspan x="700" dy="18">持续验证与反馈</tspan></text>
+</g><g>
+  <rect x="590" y="600" width="220" height="105" rx="12" fill="#F1EDFA" stroke="#735FA5" stroke-width="2"/>
+
+  <text x="700" y="627" text-anchor="middle" class="st"><tspan x="700" dy="0">«state»</tspan></text>
+  <text x="700" y="656" text-anchor="middle" class="name"><tspan x="700" dy="0">suspended</tspan></text>
+  <line x1="590" y1="670" x2="810" y2="670" class="divider"/>
+  <text x="700" y="686" text-anchor="middle" class="body"><tspan x="700" dy="0">停止新的外部影响</tspan><tspan x="700" dy="18">安全保持／观察</tspan><tspan x="700" dy="18">等待RootDecision</tspan></text>
+</g><g>
+  <rect x="880" y="405" width="220" height="105" rx="12" fill="#F1EDFA" stroke="#735FA5" stroke-width="2"/>
+
+  <text x="990" y="432" text-anchor="middle" class="st"><tspan x="990" dy="0">«state»</tspan></text>
+  <text x="990" y="461" text-anchor="middle" class="name"><tspan x="990" dy="0">completing</tspan></text>
+  <line x1="880" y1="475" x2="1100" y2="475" class="divider"/>
+  <text x="990" y="497" text-anchor="middle" class="body"><tspan x="990" dy="0">提交结果、状态和证据</tspan><tspan x="990" dy="18">释放外部影响</tspan></text>
+</g><g>
+  <rect x="1190" y="350" width="190" height="90" rx="12" fill="#EAF7EE" stroke="#4A9468" stroke-width="2"/>
+
+  <text x="1285" y="377" text-anchor="middle" class="st"><tspan x="1285" dy="0">«state»</tspan></text>
+  <text x="1285" y="406" text-anchor="middle" class="name"><tspan x="1285" dy="0">completed</tspan></text>
+  <line x1="1190" y1="420" x2="1380" y2="420" class="divider"/>
+  <text x="1285" y="442" text-anchor="middle" class="body"><tspan x="1285" dy="0">完成条件满足</tspan></text>
+</g><g>
+  <rect x="1190" y="455" width="190" height="90" rx="12" fill="#FDECEC" stroke="#B94E56" stroke-width="2"/>
+
+  <text x="1285" y="482" text-anchor="middle" class="st"><tspan x="1285" dy="0">«state»</tspan></text>
+  <text x="1285" y="511" text-anchor="middle" class="name"><tspan x="1285" dy="0">failed</tspan></text>
+  <line x1="1190" y1="525" x2="1380" y2="525" class="divider"/>
+  <text x="1285" y="547" text-anchor="middle" class="body"><tspan x="1285" dy="0">恢复耗尽或不可行</tspan></text>
+</g><g>
+  <rect x="1410" y="350" width="190" height="90" rx="12" fill="#FDECEC" stroke="#B94E56" stroke-width="2"/>
+
+  <text x="1505" y="377" text-anchor="middle" class="st"><tspan x="1505" dy="0">«state»</tspan></text>
+  <text x="1505" y="406" text-anchor="middle" class="name"><tspan x="1505" dy="0">canceled</tspan></text>
+  <line x1="1410" y1="420" x2="1600" y2="420" class="divider"/>
+  <text x="1505" y="442" text-anchor="middle" class="body"><tspan x="1505" dy="0">取消安全点</tspan></text>
+</g><g>
+  <rect x="1410" y="455" width="190" height="90" rx="12" fill="#FDECEC" stroke="#B94E56" stroke-width="2"/>
+
+  <text x="1505" y="482" text-anchor="middle" class="st"><tspan x="1505" dy="0">«state»</tspan></text>
+  <text x="1505" y="511" text-anchor="middle" class="name"><tspan x="1505" dy="0">timedOut</tspan></text>
+  <line x1="1410" y1="525" x2="1600" y2="525" class="divider"/>
+  <text x="1505" y="547" text-anchor="middle" class="body"><tspan x="1505" dy="0">租约或任务超时</tspan></text>
+</g><g>
+  <rect x="1660" y="405" width="180" height="105" rx="12" fill="#F1EDFA" stroke="#735FA5" stroke-width="2"/>
+
+  <text x="1750" y="432" text-anchor="middle" class="st"><tspan x="1750" dy="0">«state»</tspan></text>
+  <text x="1750" y="461" text-anchor="middle" class="name"><tspan x="1750" dy="0">reclaimed</tspan></text>
+  <line x1="1660" y1="475" x2="1840" y2="475" class="divider"/>
+  <text x="1750" y="497" text-anchor="middle" class="body"><tspan x="1750" dy="0">实例与资源回收</tspan><tspan x="1750" dy="18">旧令牌失效</tspan></text>
+</g><path d="M270,458 L330,458" class="edge"/><rect x="280" y="437" width="100" height="20" rx="4" fill="#F8FAFC" opacity="0.94"/><text x="330" y="451" text-anchor="middle" class="small"><tspan x="330" dy="0">AP3: admit</tspan></text><path d="M530,458 L590,458" class="edge"/><rect x="540" y="437" width="100" height="20" rx="4" fill="#F8FAFC" opacity="0.94"/><text x="590" y="451" text-anchor="middle" class="small"><tspan x="590" dy="0">AP3: start</tspan></text><path d="M700,510 L700,600" class="edge"/><rect x="636.5" y="579" width="127" height="20" rx="4" fill="#F8FAFC" opacity="0.94"/><text x="700" y="593" text-anchor="middle" class="small"><tspan x="700" dy="0">pause／preempt</tspan></text><path d="M810,650 L845,650 L845,535 L760,535 L760,510" class="edge"/><rect x="813" y="514" width="64" height="20" rx="4" fill="#F8FAFC" opacity="0.94"/><text x="845" y="528" text-anchor="middle" class="small"><tspan x="845" dy="0">resume</tspan></text><path d="M810,458 L880,458" class="edge"/><rect x="789.5" y="437" width="181" height="20" rx="4" fill="#F8FAFC" opacity="0.94"/><text x="880" y="451" text-anchor="middle" class="small"><tspan x="880" dy="0">goal／stop condition</tspan></text><path d="M1100,435 L1150,435 L1150,395 L1190,395" class="edge"/><rect x="1109" y="374" width="82" height="20" rx="4" fill="#F8FAFC" opacity="0.94"/><text x="1150" y="388" text-anchor="middle" class="small"><tspan x="1150" dy="0">verified</tspan></text><path d="M1100,480 L1190,500" class="edge"/><rect x="1158" y="479" width="64" height="20" rx="4" fill="#F8FAFC" opacity="0.94"/><text x="1190" y="493" text-anchor="middle" class="small"><tspan x="1190" dy="0">failed</tspan></text><path d="M760,405 L760,330 L1505,330 L1505,350" class="edge-red"/><rect x="1446" y="309" width="118" height="20" rx="4" fill="#F8FAFC" opacity="0.94"/><text x="1505" y="323" text-anchor="middle" class="small"><tspan x="1505" dy="0">cancel token</tspan></text><path d="M810,490 L1120,565 L1410,500" class="edge-red"/><rect x="1020.5" y="544" width="199" height="20" rx="4" fill="#F8FAFC" opacity="0.94"/><text x="1120" y="558" text-anchor="middle" class="small"><tspan x="1120" dy="0">timeout／lease expired</tspan></text><path d="M1380,395 L1625,395 L1625,458 L1660,458" class="edge"/><rect x="1588.5" y="437" width="73" height="20" rx="4" fill="#F8FAFC" opacity="0.94"/><text x="1625" y="451" text-anchor="middle" class="small"><tspan x="1625" dy="0">reclaim</tspan></text><path d="M1380,500 L1660,500" class="edge"/><rect x="1623.5" y="479" width="73" height="20" rx="4" fill="#F8FAFC" opacity="0.94"/><text x="1660" y="493" text-anchor="middle" class="small"><tspan x="1660" dy="0">reclaim</tspan></text><path d="M1600,395 L1660,430" class="edge"/><rect x="1623.5" y="409" width="73" height="20" rx="4" fill="#F8FAFC" opacity="0.94"/><text x="1660" y="423" text-anchor="middle" class="small"><tspan x="1660" dy="0">reclaim</tspan></text><path d="M1600,500 L1660,485" class="edge"/><rect x="1623.5" y="464" width="73" height="20" rx="4" fill="#F8FAFC" opacity="0.94"/><text x="1660" y="478" text-anchor="middle" class="small"><tspan x="1660" dy="0">reclaim</tspan></text></svg>

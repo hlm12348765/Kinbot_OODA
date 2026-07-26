@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="3800" height="2000" viewBox="0 0 3800 2000" role="img" aria-labelledby="title desc">
 <title id="title">Kinbot OODA 跨空间行动流视图</title>
-<desc id="desc">信息空间、Agentic Robot System 与物理空间之间的观察—定向—决策—行动—反馈闭环</desc>
+<desc id="desc">展示 I1 实时传感数据到执行与硬安全的快速路径、I2 观察与事件的持续分发、I3 状态的持续更新，以及信息空间、Agentic Robot System 与物理空间之间的 OODA 闭环</desc>
 <defs>
 <marker id="arrow-blue" markerWidth="12" markerHeight="12" refX="10" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,10 L11,5 z" fill="#2F6FDD"/></marker>
 <marker id="arrow-purple" markerWidth="12" markerHeight="12" refX="10" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,10 L11,5 z" fill="#6B57A5"/></marker>
@@ -24,7 +24,7 @@ text{font-family:"Noto Sans CJK SC","PingFang SC","Microsoft YaHei",Arial,sans-s
 </style>
 <rect width="3800" height="2000" fill="#F8FAFC"/>
 <text class="title" x="1900.0" y="62" text-anchor="middle">Kinbot OODA 跨空间行动流视图</text>
-<text class="subtitle" x="1900.0" y="105" text-anchor="middle">信息空间、Agentic Robot System 与物理空间之间的观察—定向—决策—行动—反馈闭环</text>
+<text class="subtitle" x="1900.0" y="105" text-anchor="middle">I1 实时控制、I2 事件分发与 I3 状态更新并行形成跨空间闭环</text>
 <rect x="70" y="132" width="3660" height="52" rx="12" fill="#EEF2F7" stroke="#CBD4DE"/>
 <text class="view" x="95" y="166">view &lt;oaf&gt; &#x27;OODA跨空间行动流视图&#x27; : ActionFlowView</text>
 <rect class="lane" x="80" y="230" width="620" height="1620" rx="22" fill="#F2F7FD" stroke="#7AA7D9"/>
@@ -33,34 +33,50 @@ text{font-family:"Noto Sans CJK SC","PingFang SC","Microsoft YaHei",Arial,sans-s
 <text class="zone" x="390" y="280" text-anchor="middle" fill="#315F93">信息空间</text>
 <text class="zone" x="1915" y="280" text-anchor="middle" fill="#6B57A5">Kinbot Agentic Robot System</text>
 <text class="zone" x="3425" y="280" text-anchor="middle" fill="#38815B">物理空间</text>
-<g class="item-node"><rect class="node" x="150" y="520" width="480" height="210" rx="5" fill="#DDEEFF" stroke="#3B6EA8"/><text class="kind" x="390.0" y="554" text-anchor="middle">«item»</text><text class="name" x="390.0" y="598" text-anchor="middle">&lt;I1&gt; 输入与约束</text><line x1="150" y1="618" x2="630" y2="618" stroke="#3B6EA8" stroke-width="1.5"/><text class="body" x="390.0" y="652" text-anchor="middle"><tspan x="390.0" dy="0">目标、知识、规则、授权</tspan></text></g>
-<g class="item-node"><rect class="node" x="150" y="1030" width="480" height="210" rx="5" fill="#DDEEFF" stroke="#3B6EA8"/><text class="kind" x="390.0" y="1064" text-anchor="middle">«item»</text><text class="name" x="390.0" y="1108" text-anchor="middle">&lt;I7&gt; 信息结果</text><line x1="150" y1="1128" x2="630" y2="1128" stroke="#3B6EA8" stroke-width="1.5"/><text class="body" x="390.0" y="1162" text-anchor="middle"><tspan x="390.0" dy="0">消息、证据、责任交接</tspan></text></g>
-<g class="item-node"><rect class="node" x="3190" y="430" width="470" height="230" rx="5" fill="#DDF4E5" stroke="#38815B"/><text class="kind" x="3425.0" y="464" text-anchor="middle">«item»</text><text class="name" x="3425.0" y="508" text-anchor="middle">&lt;P1/P5&gt; 现象与状态</text><line x1="3190" y1="528" x2="3660" y2="528" stroke="#38815B" stroke-width="1.5"/><text class="body" x="3425.0" y="562" text-anchor="middle"><tspan x="3425.0" dy="0">人、环境、自身与反馈</tspan></text></g>
-<g class="item-node"><rect class="node" x="3190" y="910" width="470" height="230" rx="5" fill="#DDF4E5" stroke="#38815B"/><text class="kind" x="3425.0" y="944" text-anchor="middle">«item»</text><text class="name" x="3425.0" y="988" text-anchor="middle">&lt;P3/P4/P5&gt; 行为与结果</text><line x1="3190" y1="1008" x2="3660" y2="1008" stroke="#38815B" stroke-width="1.5"/><text class="body" x="3425.0" y="1042" text-anchor="middle"><tspan x="3425.0" dy="0">运动、声光、载荷与变化</tspan></text></g>
-<g class="action-node"><rect class="node" x="840" y="600" width="340" height="190" rx="28" fill="#E9E1FF" stroke="#6B57A5"/><text class="kind" x="1010.0" y="634" text-anchor="middle">«action»</text><text class="name" x="1010.0" y="676" text-anchor="middle">Observe</text><text class="small" x="1010.0" y="712" text-anchor="middle"><tspan x="1010.0" dy="0">P-P1 + I-P1 → I2</tspan></text></g>
-<g class="action-node"><rect class="node" x="1260" y="600" width="340" height="190" rx="28" fill="#E9E1FF" stroke="#6B57A5"/><text class="kind" x="1430.0" y="634" text-anchor="middle">«action»</text><text class="name" x="1430.0" y="676" text-anchor="middle">Orient</text><text class="small" x="1430.0" y="712" text-anchor="middle"><tspan x="1430.0" dy="0">I-P2 → I3</tspan></text></g>
+<g class="item-node"><rect class="node" x="150" y="520" width="480" height="210" rx="5" fill="#DDEEFF" stroke="#3B6EA8"/><text class="kind" x="390.0" y="554" text-anchor="middle">«item»</text><text class="name" x="390.0" y="598" text-anchor="middle">&lt;I1&gt; 输入数据与消息</text><line x1="150" y1="618" x2="630" y2="618" stroke="#3B6EA8" stroke-width="1.5"/><text class="body" x="390.0" y="652" text-anchor="middle"><tspan x="390.0" dy="0">传感数据、消息与外部返回数据</tspan></text></g>
+<g class="item-node"><rect class="node" x="150" y="1030" width="480" height="210" rx="5" fill="#DDEEFF" stroke="#3B6EA8"/><text class="kind" x="390.0" y="1064" text-anchor="middle">«item»</text><text class="name" x="390.0" y="1108" text-anchor="middle">&lt;I7&gt; 结果与证据</text><line x1="150" y1="1128" x2="630" y2="1128" stroke="#3B6EA8" stroke-width="1.5"/><text class="body" x="390.0" y="1162" text-anchor="middle"><tspan x="390.0" dy="0">结果、消息、证据与责任交接</tspan></text></g>
+<g class="item-node"><rect class="node" x="1050" y="900" width="520" height="200" rx="5" fill="#DDEEFF" stroke="#3B6EA8"/><text class="kind" x="1310" y="934" text-anchor="middle">«item»</text><text class="name" x="1310" y="978" text-anchor="middle">&lt;I2&gt; 持续产生的观察与事件</text><line x1="1050" y1="998" x2="1570" y2="998" stroke="#3B6EA8" stroke-width="1.5"/><text class="body" x="1310" y="1032" text-anchor="middle"><tspan x="1310" dy="0">新记录不覆盖旧记录</tspan><tspan x="1310" dy="31">按类型、对象、任务和权限分发</tspan></text></g>
+<g class="item-node"><rect class="node" x="1680" y="900" width="520" height="200" rx="5" fill="#DDEEFF" stroke="#3B6EA8"/><text class="kind" x="1940" y="934" text-anchor="middle">«item»</text><text class="name" x="1940" y="978" text-anchor="middle">&lt;I3&gt; 持续更新的状态与上下文</text><line x1="1680" y1="998" x2="2200" y2="998" stroke="#3B6EA8" stroke-width="1.5"/><text class="body" x="1940" y="1032" text-anchor="middle"><tspan x="1940" dy="0">带版本、来源和不确定性</tspan><tspan x="1940" dy="31">由 Orient 维护</tspan></text></g>
+<g class="item-node"><rect class="node" x="3190" y="320" width="470" height="200" rx="5" fill="#DDF4E5" stroke="#38815B"/><text class="kind" x="3425.0" y="354" text-anchor="middle">«item»</text><text class="name" x="3425.0" y="398" text-anchor="middle">&lt;P1&gt; 传感器可检测的物理信号</text><line x1="3190" y1="418" x2="3660" y2="418" stroke="#38815B" stroke-width="1.5"/><text class="body" x="3425.0" y="452" text-anchor="middle"><tspan x="3425.0" dy="0">光、声、接触与运动变化</tspan></text></g>
+<g class="item-node"><rect class="node" x="3190" y="650" width="470" height="210" rx="5" fill="#DDF4E5" stroke="#38815B"/><text class="kind" x="3425.0" y="684" text-anchor="middle">«item»</text><text class="name" x="3425.0" y="728" text-anchor="middle">&lt;P3/P4&gt; 自身与携带物品状态</text><line x1="3190" y1="748" x2="3660" y2="748" stroke="#38815B" stroke-width="1.5"/><text class="body" x="3425.0" y="782" text-anchor="middle"><tspan x="3425.0" dy="0">运动、声光、舱门与物品运输</tspan></text></g>
+<g class="item-node"><rect class="node" x="3190" y="990" width="470" height="230" rx="5" fill="#E9F7EC" stroke="#38815B" stroke-dasharray="10 7"/><text class="kind" x="3425.0" y="1024" text-anchor="middle">«item»</text><text class="name" x="3425.0" y="1068" text-anchor="middle">&lt;P6&gt; 可安全操控的外部物体状态</text><line x1="3190" y1="1088" x2="3660" y2="1088" stroke="#38815B" stroke-width="1.5"/><text class="body" x="3425.0" y="1122" text-anchor="middle"><tspan x="3425.0" dy="0">机械臂能力预留；P6 :&gt; P5</tspan></text></g>
+<g class="item-node"><rect class="node" x="3190" y="1350" width="470" height="230" rx="5" fill="#FFF0E4" stroke="#D97706"/><text class="kind" x="3425.0" y="1384" text-anchor="middle">«item»</text><text class="name" x="3425.0" y="1428" text-anchor="middle">&lt;P5&gt; 外部世界物理状态</text><line x1="3190" y1="1448" x2="3660" y2="1448" stroke="#D97706" stroke-width="1.5"/><text class="body" x="3425.0" y="1482" text-anchor="middle"><tspan x="3425.0" dy="0">人、宠物、家具、其他物体与空间</tspan></text></g>
+<g class="action-node"><rect class="node" x="840" y="600" width="340" height="190" rx="28" fill="#E9E1FF" stroke="#6B57A5"/><text class="kind" x="1010.0" y="634" text-anchor="middle">«action»</text><text class="name" x="1010.0" y="676" text-anchor="middle">Observe</text><text class="small" x="1010.0" y="712" text-anchor="middle"><tspan x="1010.0" dy="0">P-P1 + I-P1</tspan></text></g>
+<g class="action-node"><rect class="node" x="1260" y="600" width="340" height="190" rx="28" fill="#E9E1FF" stroke="#6B57A5"/><text class="kind" x="1430.0" y="634" text-anchor="middle">«action»</text><text class="name" x="1430.0" y="676" text-anchor="middle">Orient</text><text class="small" x="1430.0" y="712" text-anchor="middle"><tspan x="1430.0" dy="0">I-P2</tspan></text></g>
 <g class="action-node"><rect class="node" x="1680" y="600" width="380" height="190" rx="28" fill="#E9E1FF" stroke="#6B57A5"/><text class="kind" x="1870.0" y="634" text-anchor="middle">«action»</text><text class="name" x="1870.0" y="676" text-anchor="middle">Decide</text><text class="small" x="1870.0" y="712" text-anchor="middle"><tspan x="1870.0" dy="0">I-P3～I-P5 → I4/I5/I6</tspan></text></g>
-<g class="action-node"><rect class="node" x="2140" y="600" width="340" height="190" rx="28" fill="#E9E1FF" stroke="#6B57A5"/><text class="kind" x="2310.0" y="634" text-anchor="middle">«action»</text><text class="name" x="2310.0" y="676" text-anchor="middle">Act</text><text class="small" x="2310.0" y="712" text-anchor="middle"><tspan x="2310.0" dy="0">I-P6 / P-P3 / P-P4</tspan></text></g>
-<g class="action-node"><rect class="node" x="2560" y="600" width="400" height="190" rx="28" fill="#E9E1FF" stroke="#6B57A5"/><text class="kind" x="2760.0" y="634" text-anchor="middle">«action»</text><text class="name" x="2760.0" y="676" text-anchor="middle">Feedback</text><text class="small" x="2760.0" y="712" text-anchor="middle"><tspan x="2760.0" dy="0">I-P7：验证与更新</tspan></text></g>
-<path class="flow" d="M1180 695 H1260" stroke="#6B57A5" marker-end="url(#arrow-purple)"/>
-<path class="flow" d="M1600 695 H1680" stroke="#6B57A5" marker-end="url(#arrow-purple)"/>
+<g class="action-node"><rect class="node" x="2140" y="600" width="340" height="190" rx="28" fill="#E9E1FF" stroke="#6B57A5"/><text class="kind" x="2310.0" y="634" text-anchor="middle">«action»</text><text class="name" x="2310.0" y="676" text-anchor="middle">Act</text><text class="small" x="2310.0" y="712" text-anchor="middle"><tspan x="2310.0" dy="0">I-P6 / P-P3～P-P4 / P-P6～P-P7</tspan></text></g>
+<g class="action-node"><rect class="node" x="2560" y="600" width="400" height="190" rx="28" fill="#E9E1FF" stroke="#6B57A5"/><text class="kind" x="2760.0" y="634" text-anchor="middle">«action»</text><text class="name" x="2760.0" y="676" text-anchor="middle">Feedback</text><text class="small" x="2760.0" y="712" text-anchor="middle"><tspan x="2760.0" dy="0">I-P7：验证与后续处理</tspan></text></g>
 <path class="flow" d="M2060 695 H2140" stroke="#6B57A5" marker-end="url(#arrow-purple)"/>
 <path class="flow" d="M2480 695 H2560" stroke="#6B57A5" marker-end="url(#arrow-purple)"/>
-<path class="flow" d="M2960 695 H3020 V1000 H1430 V790" stroke="#6B57A5" marker-end="url(#arrow-purple)"/>
-<rect x="2065.0" y="1005" width="210" height="34" rx="8" fill="#F8FAFC" opacity="0.94"/><text class="edge" x="2170" y="1030" text-anchor="middle" fill="#26313D">状态更新 / 重定向</text>
-<g class="action-node"><rect class="node" x="1420" y="1360" width="980" height="190" rx="28" fill="#FFF0E4" stroke="#C26A2E"/><text class="kind" x="1910.0" y="1394" text-anchor="middle">«action»</text><text class="name" x="1910.0" y="1436" text-anchor="middle">支撑与硬约束</text><text class="small" x="1910.0" y="1472" text-anchor="middle"><tspan x="1910.0" dy="0">I-P8 运行资源 / P-P2 能量 / P-P5 硬安全</tspan></text></g>
+<path class="flow" d="M1010 790 V850 H1310 V900" stroke="#2F6FDD" marker-end="url(#arrow-blue)"/>
+<path class="flow" d="M1310 900 V840 H1430 V790" stroke="#2F6FDD" marker-end="url(#arrow-blue)"/>
+<path class="flow" d="M1430 790 V850 H1940 V900" stroke="#2F6FDD" marker-end="url(#arrow-blue)"/>
+<path class="flow" d="M2050 900 V840 H1970 V790" stroke="#2F6FDD" marker-end="url(#arrow-blue)"/>
+<path class="flow" d="M1570 960 H1640 V830 H1780 V790" stroke="#2F6FDD" marker-end="url(#arrow-blue)"/>
+<path class="flow" d="M1310 1100 V1215 H2760 V790" stroke="#2F6FDD" marker-end="url(#arrow-blue)"/>
+<path class="flow" d="M2960 620 V540 H1430 V600" stroke="#6B57A5" marker-end="url(#arrow-purple)"/>
+<rect x="2025" y="490" width="290" height="34" rx="8" fill="#F8FAFC" opacity="0.94"/><text class="edge" x="2170" y="515" text-anchor="middle" fill="#26313D">结果与证据返回 Orient</text>
+<g class="action-node"><rect class="node" x="1420" y="1360" width="980" height="190" rx="28" fill="#FFF0E4" stroke="#C26A2E"/><text class="kind" x="1910.0" y="1394" text-anchor="middle">«action»</text><text class="name" x="1910.0" y="1436" text-anchor="middle">运行支撑与硬安全限制</text><text class="small" x="1910.0" y="1472" text-anchor="middle"><tspan x="1910.0" dy="0">I-P8 运行资源 / P-P2 能量 / P-P5 硬安全</tspan></text></g>
+<path class="flow" d="M630 680 H700 V1280 H1510 V1360" stroke="#2F6FDD" marker-end="url(#arrow-blue)"/>
+<path class="flow" d="M700 1280 H2520 V850 H2310 V790" stroke="#2F6FDD" marker-end="url(#arrow-blue)"/>
 <path class="thin dash" d="M1650 1360 V1210 H1010 V790" stroke="#C2413B" marker-end="url(#arrow-red)"/>
-<path class="thin dash" d="M1910 1360 V1180 H1870 V790" stroke="#C2413B" marker-end="url(#arrow-red)"/>
+<path class="thin dash" d="M1910 1360 V1260 H2250 V830 H1870 V790" stroke="#C2413B" marker-end="url(#arrow-red)"/>
 <path class="thin dash" d="M2170 1360 V1210 H2310 V790" stroke="#C2413B" marker-end="url(#arrow-red)"/>
 <rect x="1752.5" y="1295" width="315" height="34" rx="8" fill="#F8FAFC" opacity="0.94"/><text class="edge" x="1910" y="1320" text-anchor="middle" fill="#C2413B">资源、许可与不可绕过的安全限制</text>
 <path class="flow" d="M630 625 H840" stroke="#2F6FDD" marker-end="url(#arrow-blue)"/>
-<path class="flow" d="M3190 545 H3060 V420 H1010 V600" stroke="#38815B" marker-end="url(#arrow-green)"/>
-<path class="flow" d="M2310 790 V930 H630 V1135" stroke="#2F6FDD" marker-end="url(#arrow-blue)"/>
-<path class="flow" d="M2310 790 V860 H3050 V1025 H3190" stroke="#38815B" marker-end="url(#arrow-green)"/>
-<path class="thin" d="M3425 910 V760 H3700 V545 H3660" stroke="#38815B" marker-end="url(#arrow-green)"/>
+<path class="flow" d="M3190 420 H3060 V360 H1010 V600" stroke="#38815B" marker-end="url(#arrow-green)"/>
+<path class="flow" d="M2140 650 H2080 V300 H700 V1135 H630" stroke="#2F6FDD" marker-end="url(#arrow-blue)"/>
+<path class="flow" d="M2440 790 V880 H3050 V755 H3190" stroke="#38815B" marker-end="url(#arrow-green)"/>
+<path class="flow dash" d="M2380 790 V1105 H3190" stroke="#38815B" marker-end="url(#arrow-green)"/>
+<path class="flow dash" d="M2300 790 V1465 H3190" stroke="#D97706" marker-end="url(#arrow-orange)"/>
+<path class="thin" d="M3660 755 H3680 M3660 1105 H3680 M3660 1465 H3680 V420 H3660" stroke="#38815B" marker-end="url(#arrow-green)"/>
 <rect x="670.0" y="575" width="130" height="34" rx="8" fill="#F8FAFC" opacity="0.94"/><text class="edge" x="735" y="600" text-anchor="middle" fill="#26313D">in</text>
-<rect x="1955.0" y="930" width="130" height="34" rx="8" fill="#F8FAFC" opacity="0.94"/><text class="edge" x="2020" y="955" text-anchor="middle" fill="#26313D">信息作用</text>
-<rect x="2675.0" y="815" width="130" height="34" rx="8" fill="#F8FAFC" opacity="0.94"/><text class="edge" x="2740" y="840" text-anchor="middle" fill="#26313D">物理作用</text>
+<rect x="760" y="305" width="130" height="34" rx="8" fill="#F8FAFC" opacity="0.94"/><text class="edge" x="825" y="330" text-anchor="middle" fill="#26313D">信息输出</text>
+<rect x="1390" y="1235" width="650" height="34" rx="8" fill="#F8FAFC" opacity="0.94"/><text class="edge" x="1715" y="1260" text-anchor="middle" fill="#2F6FDD">I1 实时传感数据：直接进入执行与硬安全</text>
+<rect x="2670" y="839" width="190" height="34" rx="8" fill="#F8FAFC" opacity="0.94"/><text class="edge" x="2765" y="864" text-anchor="middle" fill="#38815B">P-P3 / P-P4</text>
+<rect x="2610" y="1064" width="250" height="34" rx="8" fill="#F8FAFC" opacity="0.94"/><text class="edge" x="2735" y="1089" text-anchor="middle" fill="#38815B">P-P6 机械臂预留</text>
+<rect x="2600" y="1424" width="250" height="34" rx="8" fill="#F8FAFC" opacity="0.94"/><text class="edge" x="2725" y="1449" text-anchor="middle" fill="#D97706">P-P7 紧急例外</text>
+<rect x="3510" y="560" width="150" height="34" rx="8" fill="#F8FAFC" opacity="0.94"/><text class="edge" x="3585" y="585" text-anchor="middle" fill="#38815B">物理反馈</text>
 <line x1="70" y1="1908" x2="3730" y2="1908" stroke="#D7DEE6"/>
 <text class="small" x="1900.0" y="1950" text-anchor="middle">圆角节点为 action usage；方框为 item usage；实线箭头表示 flow connection，红色虚线表示约束作用。</text>
 </svg>

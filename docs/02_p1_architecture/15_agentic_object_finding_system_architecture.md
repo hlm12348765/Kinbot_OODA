@@ -2,11 +2,15 @@
 
 ---
 
-文档版本：v0.2
+文档版本：v0.6
 创建日期：2026-07-13
 作者：Codex-架构师
 
 文档变更记录：
+- v0.6 | 2026-07-25 | Codex-架构师 | 对齐已经选定的当前 L1 架构名称，将找物映射从“方案三”改为当前责任实体；设计语义不变。
+- v0.5 | 2026-07-25 | Codex-架构师 | 对齐方案三的实际操作反馈：Find TaskWorker 的 SkillRequest 给出允许修正范围，G3 返回许可后的实际操作；TaskWorker 只根据 SkillOutcome、ExecutionDeviation、SharedState 和 Evidence 更新搜索位置与进度。
+- v0.4 | 2026-07-25 | Codex-架构师 | 修正信息空间旁路：Find TaskWorker 的内部结果只提交 O3 或父 Agent；面向用户、App 或外部服务的消息、查询和责任交接必须由 RobotSkill 形成 ActionProposal，经 G3 许可后执行。
+- v0.3 | 2026-07-25 | Codex-架构师 | 按 16 号文档新版方案三回写：由“环境与物品”基础业务 Agent 创建找物 TaskWorker，统一调用交互、记忆访问、识别和导航 RobotSkill；TaskWorker 是临时 AgentCell，不新增常驻 L1 实体。
 - v0.2 | 2026-07-13 | Codex-架构师 | 按用户评审意见，将找物明确为交互与运动持续耦合的复杂任务，补充双环运行不变量、交互 / 编排 / 运动团队责任边界、跨团队事件契约、并行核心流程与中途改向示例。
 - v0.1 | 2026-07-13 | Codex-架构师 | 基于用户给出的四段找物流程、当前 P1/PDCP 主线、现有 VLN 原型差距和长期对象记忆研究输入，形成方案无关的 Agentic 找物功能架构评审稿。
 
@@ -16,11 +20,11 @@
 
 本文是 `KBT-58` 的功能级架构评审稿，承接“用户提出找物请求 -> 记忆帮助回忆 -> 共同寻找 -> 即时搜索 -> 结果反馈”的完整闭环。
 
-本文不新增一级模块，不改变 `9` 个一级模块、`7` 实体 `World State`、`S1-S7` 工作包和纯视觉主线，也不冻结模型、数据库、检索引擎或导航算法选型。
+本文不新增固定 L1 实体，不改变 `7` 实体 `World State`、`S1-S7` 工作包和纯视觉主线，也不冻结模型、数据库、检索引擎或导航算法选型。原 `9` 个一级模块只作为实现迁移参考，正式责任边界以 16 号文档的 L1 候选为准。
 
 推荐架构可以用一句话概括为：
 
-> 在 `decision_orchestration` 内运行一个有界的“找物任务智能体”，以带来源、置信度和新鲜度的对象位置 belief 为核心，按“记忆线索 -> 协同回忆 -> 主动重观察 -> 全屋搜索”逐级增加自主性；找物从触发到结束始终是“交互事件环 + 运动执行环”围绕同一任务状态并行推进的耦合过程，而不是先由交互团队完成对话、再把任务一次性交给运动团队；每一步都执行 `Plan -> Approve -> Execute -> Observe -> Verify -> Commit`，运动不越过端侧安全链，记忆不越过治理链。
+> “环境与物品”基础业务 Agent 为一次找物请求创建有界的 Find TaskWorker。该 TaskWorker 以带来源、置信度和新鲜度的对象位置 belief 为核心，调用交互、记忆访问、识别和导航 RobotSkill，按“记忆线索 -> 协同回忆 -> 主动重观察 -> 全屋搜索”逐级增加自主性；从触发到结束，“交互事件环 + 运动执行环”始终围绕同一 `FindTaskState` 并行推进。每一步都执行 `Plan -> Approve -> Execute -> Observe -> Verify -> Commit`：SkillRequest 给出允许修正范围，G3 返回许可后的实际操作，内部结果进入 O3 或父 Agent，对外信息操作经过 G3，物理动作继续经过 G3 与 F1；TaskWorker 只依据实际结果和证据更新搜索状态。
 
 当前建议冻结的架构判断有 `8` 项：
 
@@ -29,7 +33,7 @@
 3. 记忆返回必须是带强度等级的证据，不得把“上次看见”表达为“现在一定在那里”。
 4. 找物目标使用多假设位置 belief，而不是单一 `current_place_id` 真值。
 5. 用户既是任务发起者，也是可被询问、可提供线索、可确认结果的协同感知者。
-6. 找物任务智能体是现有模块内的编排角色，不是新的常驻大模型服务或第 `10` 个一级模块。
+6. Find TaskWorker 是具有有界任务契约的临时 AgentCell，不是新的常驻 L1 Agent；任务结束后向 O3 提交已验证状态并由 AP3 回收。
 7. 高层只输出“去哪里看、看什么、为什么”，底盘动作继续由局部规划与安全执行链承接。
 8. `V1` 只承诺已知家庭空间、常见目标物、无机械臂的“发现与引导”闭环，不承诺翻找、抓取、开柜门或移动遮挡物。
 
@@ -258,21 +262,21 @@ flowchart LR
 
 ## 6. 映射到当前 Kinbot 主线
 
-### 6.1 映射到 `9` 个一级模块
+### 6.1 映射到当前 L1 架构
 
-| 找物能力角色 | 当前一级模块承接 | 说明 |
+| 找物能力角色 | 当前责任实体 | 说明 |
 | --- | --- | --- |
 | 体验与意图入口 | `multimodal_interaction` | 语音、指代、澄清、进度与结果表达 |
-| 找物任务编排 | `decision_orchestration` | 作为任务内 runtime role，不新增一级 Agent 模块 |
-| belief 与记忆平面 | `world_state_memory` | 承接 `Object / Place / Task` 的任务态与长期态投影 |
-| 语义观察与证据 | `mobility_navigation + platform_runtime` | 复用视觉采集、语义感知、位置与时间基准 |
-| 主动搜索与运动 | `mobility_navigation + platform_runtime` | 高层语义子目标到局部安全执行 |
-| 安全合规授权门 | `safety_compliance_authorization` | 运动、隐私、角色和空间策略统一门控 |
-| 治理观测验证 | `observability_data_governance` | 指标、审计、回放、缓存与模型版本 |
-| App 侧记忆管理 | `companion_service_system` | 可查看 / 纠正 / 删除记忆；不是找物核心执行依赖 |
-| 高优先级抢占输入 | `human_health_sensing` | 只提供健康 / 安全中断，不进入普通找物主链 |
+| 找物业务责任 | 环境与物品 Agent | 持有长期业务责任，决定是否创建、复用或终止 Find TaskWorker |
+| 找物任务编排 | Find TaskWorker | 作为临时 AgentCell 持有一次找物契约，不新增固定 L1 实体 |
+| belief、状态与记忆 | O3 共享上下文 | 承接 `Object / Place / Task` 的 SharedState、SharedMemory 和 Evidence |
+| 交互、记忆访问与识别 | RobotSkillSystem | 提供 InteractionSkill、MemoryAccessSkill 和 RecognitionSkill |
+| 主动搜索与运动 | NavigationSkill + F1 | Skill 内部完成局部闭环，F1 独立承担实时控制和硬安全 |
+| 运行与资源 | AP3 | 创建、租约、检查点、超时、并发、回收和故障隔离 |
+| 语义授权与风险 | G3 | 运动、隐私、角色和空间策略统一门控 |
+| 高优先级抢占输入 | 健康与照护 Agent／家庭安全 Agent | 只提供经过契约化的中断，不进入普通找物主链 |
 
-结论：找物是跨模块能力包，不形成第 `10` 个一级模块，也不形成独立“总记忆库”。
+结论：找物由长期基础业务 Agent、临时 TaskWorker 和可复用 RobotSkill 共同实现，不形成新的固定 L1 实体，也不形成独立“总记忆库”。
 
 ### 6.2 映射到 `7` 实体 `World State`
 
@@ -594,7 +598,7 @@ stateDiagram-v2
 1. 是否接受找物从触发到结束始终采用交互事件环与运动执行环耦合、由单一 `FindTaskState` 协调，而不是按业务阶段在两个团队之间串行交接。
 2. 是否接受“记忆先行、协同回忆、即时搜索”的渐进自治主链。
 3. 是否接受 `Object` 位置从单点真值升级为带 freshness / provenance 的多假设 belief。
-4. 是否接受找物任务智能体只作为 `decision_orchestration` 内的任务编排角色。
+4. 是否接受 Find TaskWorker 作为“环境与物品”Agent 创建的临时 AgentCell，并由 AP3 管理其运行生命周期。
 5. 是否接受 `V1` 边界为“常见目标物 + 已知家庭空间 + 发现与引导”，不包含物理翻找。
 
 接受后建议按以下顺序下推：

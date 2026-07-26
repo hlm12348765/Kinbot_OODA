@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="4500" height="3010" viewBox="0 0 4500 3010" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="4500" height="3450" viewBox="0 0 4500 3450" role="img" aria-labelledby="title desc">
 <title id="title">Kinbot SysML v2 过程—操作数关系视图</title>
-<desc id="desc">每个操作数和过程只出现一次。蓝色实线表示输入参数从操作数指向过程，橙色虚线表示输出参数从过程指向操作数。连线不表示过程顺序。</desc>
+<desc id="desc">每个操作数和过程只出现一次。蓝色实线表示输入参数从操作数指向过程，橙色虚线表示输出参数从过程指向操作数。I1 同时进入观察形成和经过登记的实时控制与硬安全过程。</desc>
 <defs>
 <marker id="input-arrow" markerWidth="12" markerHeight="12" refX="10" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,10 L11,5 z" fill="#2F6FDD"/></marker>
 <marker id="output-arrow" markerWidth="12" markerHeight="12" refX="10" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,10 L11,5 z" fill="#D97706"/></marker>
@@ -24,40 +24,41 @@
 .input-junction{fill:#2F6FDD;stroke:#FFFFFF;stroke-width:1.5}
 .output-junction{fill:#D97706;stroke:#FFFFFF;stroke-width:1.5}
 </style>
-<rect width="4500" height="3010" fill="#F8FAFC"/>
+<rect width="4500" height="3450" fill="#F8FAFC"/>
 <text class="title" x="2250" y="58" text-anchor="middle">Kinbot 过程—操作数关系视图</text>
-<text class="subtitle" x="2250" y="98" text-anchor="middle">SysML v2 GeneralView 专题化表示：节点是定义，连线由参数方向和类型派生</text>
+<text class="subtitle" x="2250" y="98" text-anchor="middle">从 SysML v2 GeneralView 特化而来；I1 同时支持认知路径与实时控制路径，I2 持续产生，I3 持续更新</text>
 <line x1="1320" y1="145" x2="1435" y2="145" class="input-bus" marker-end="url(#input-arrow)"/>
 <text class="legend" x="1455" y="153" text-anchor="start">in 参数：操作数 → 过程</text>
 <line x1="2440" y1="145" x2="2555" y2="145" class="output-bus" marker-end="url(#output-arrow)"/>
 <text class="legend" x="2575" y="153" text-anchor="start">out 参数：过程 → 操作数</text>
-<rect x="1760" y="480" width="980" height="2450" rx="26" fill="#F7F4FC" stroke="#8070A5" stroke-width="2.5"/>
+<rect x="1760" y="480" width="980" height="2820" rx="26" fill="#F7F4FC" stroke="#8070A5" stroke-width="2.5"/>
 <text class="group" x="2250" y="518" text-anchor="middle">Kinbot Agentic Robot System</text>
 <rect x="1780" y="545" width="940" height="1415" rx="20" fill="#F2EEFF" stroke="#A89AD1" stroke-width="2"/>
-<rect x="1780" y="1975" width="940" height="920" rx="20" fill="#FFF4E8" stroke="#D99B5E" stroke-width="2"/>
+<rect x="1780" y="1975" width="940" height="1290" rx="20" fill="#FFF4E8" stroke="#D99B5E" stroke-width="2"/>
 <text class="group" x="1810" y="582" text-anchor="start">信息过程</text>
 <text class="group" x="1810" y="2012" text-anchor="start">物理过程</text>
-<rect x="40" y="195" width="1700" height="2720" rx="22" fill="#F2F7FD" stroke="#7AA7D9" stroke-width="2"/>
-<rect x="2760" y="195" width="1700" height="2720" rx="22" fill="#F2FBF5" stroke="#73B391" stroke-width="2"/>
+<rect x="40" y="195" width="1700" height="3090" rx="22" fill="#F2F7FD" stroke="#7AA7D9" stroke-width="2"/>
+<rect x="2760" y="195" width="1700" height="3090" rx="22" fill="#F2FBF5" stroke="#73B391" stroke-width="2"/>
 <text class="group" x="890" y="225" text-anchor="middle">信息空间操作数</text>
 <text class="group" x="3610" y="225" text-anchor="middle">物理空间操作数</text>
-<line x1="160" y1="450" x2="160" y2="2895" class="trunk-info"/>
-<line x1="365" y1="450" x2="365" y2="2895" class="trunk-info"/>
-<line x1="570" y1="450" x2="570" y2="2895" class="trunk-info"/>
-<line x1="775" y1="450" x2="775" y2="2895" class="trunk-info"/>
-<line x1="980" y1="450" x2="980" y2="2895" class="trunk-info"/>
-<line x1="1185" y1="450" x2="1185" y2="2895" class="trunk-info"/>
-<line x1="1390" y1="450" x2="1390" y2="2895" class="trunk-info"/>
-<line x1="1595" y1="450" x2="1595" y2="2895" class="trunk-info"/>
-<line x1="2950" y1="450" x2="2950" y2="2895" class="trunk-physical"/>
-<line x1="3260" y1="450" x2="3260" y2="2895" class="trunk-physical"/>
-<line x1="3570" y1="450" x2="3570" y2="2895" class="trunk-physical"/>
-<line x1="3880" y1="450" x2="3880" y2="2895" class="trunk-physical"/>
-<line x1="4190" y1="450" x2="4190" y2="2895" class="trunk-physical"/>
+<line x1="160" y1="450" x2="160" y2="3260" class="trunk-info"/>
+<line x1="365" y1="450" x2="365" y2="3260" class="trunk-info"/>
+<line x1="570" y1="450" x2="570" y2="3260" class="trunk-info"/>
+<line x1="775" y1="450" x2="775" y2="3260" class="trunk-info"/>
+<line x1="980" y1="450" x2="980" y2="3260" class="trunk-info"/>
+<line x1="1185" y1="450" x2="1185" y2="3260" class="trunk-info"/>
+<line x1="1390" y1="450" x2="1390" y2="3260" class="trunk-info"/>
+<line x1="1595" y1="450" x2="1595" y2="3260" class="trunk-info"/>
+<line x1="2885" y1="450" x2="2885" y2="3260" class="trunk-physical"/>
+<line x1="3175" y1="450" x2="3175" y2="3260" class="trunk-physical"/>
+<line x1="3465" y1="450" x2="3465" y2="3260" class="trunk-physical"/>
+<line x1="3755" y1="450" x2="3755" y2="3260" class="trunk-physical"/>
+<line x1="4045" y1="450" x2="4045" y2="3260" class="trunk-physical"/>
+<line x1="4335" y1="450" x2="4335" y2="3260" class="trunk-physical"/>
 <g class="operand-node" data-operand="I1"><rect x="65.0" y="235" width="190" height="215" fill="#DDEEFF" stroke="#3B6EA8" stroke-width="2.4"/>
 <text class="kind" x="160" y="270" text-anchor="middle">«item def»</text>
 <text class="operand-id" x="160" y="314" text-anchor="middle">&lt;I1&gt;</text>
-<text class="operand-name" x="160" y="360" text-anchor="middle">输入与约束</text>
+<text class="operand-name" x="160" y="360" text-anchor="middle">输入数据与消息</text>
 </g>
 <g class="operand-node" data-operand="I2"><rect x="270.0" y="235" width="190" height="215" fill="#DDEEFF" stroke="#3B6EA8" stroke-width="2.4"/>
 <text class="kind" x="365" y="270" text-anchor="middle">«item def»</text>
@@ -84,14 +85,13 @@
 <g class="operand-node" data-operand="I6"><rect x="1090.0" y="235" width="190" height="215" fill="#DDEEFF" stroke="#3B6EA8" stroke-width="2.4"/>
 <text class="kind" x="1185" y="270" text-anchor="middle">«item def»</text>
 <text class="operand-id" x="1185" y="314" text-anchor="middle">&lt;I6&gt;</text>
-<text class="operand-name" x="1185" y="351" text-anchor="middle">能力调用与</text>
-<text class="operand-name" x="1185" y="382" text-anchor="middle">执行状态</text>
+<text class="operand-name" x="1185" y="351" text-anchor="middle">技能与工具</text>
+<text class="operand-name" x="1185" y="382" text-anchor="middle">调用状态</text>
 </g>
 <g class="operand-node" data-operand="I7"><rect x="1295.0" y="235" width="190" height="215" fill="#DDEEFF" stroke="#3B6EA8" stroke-width="2.4"/>
 <text class="kind" x="1390" y="270" text-anchor="middle">«item def»</text>
 <text class="operand-id" x="1390" y="314" text-anchor="middle">&lt;I7&gt;</text>
-<text class="operand-name" x="1390" y="351" text-anchor="middle">结果与</text>
-<text class="operand-name" x="1390" y="382" text-anchor="middle">信息输出</text>
+<text class="operand-name" x="1390" y="360" text-anchor="middle">结果与证据</text>
 </g>
 <g class="operand-node" data-operand="I8"><rect x="1500.0" y="235" width="190" height="215" fill="#DDEEFF" stroke="#3B6EA8" stroke-width="2.4"/>
 <text class="kind" x="1595" y="270" text-anchor="middle">«item def»</text>
@@ -99,37 +99,45 @@
 <text class="operand-name" x="1595" y="351" text-anchor="middle">运行资源与</text>
 <text class="operand-name" x="1595" y="382" text-anchor="middle">版本状态</text>
 </g>
-<g class="operand-node" data-operand="P1"><rect x="2835.0" y="235" width="230" height="215" fill="#DDF4E5" stroke="#38815B" stroke-width="2.4"/>
-<text class="kind" x="2950" y="270" text-anchor="middle">«item def»</text>
-<text class="operand-id" x="2950" y="314" text-anchor="middle">&lt;P1&gt;</text>
-<text class="operand-name" x="2950" y="351" text-anchor="middle">可感知</text>
-<text class="operand-name" x="2950" y="382" text-anchor="middle">物理现象</text>
+<g class="operand-node" data-operand="P1"><rect x="2757.5" y="235" width="255" height="215" fill="#DDF4E5" stroke="#38815B" stroke-width="2.4"/>
+<text class="kind" x="2885" y="270" text-anchor="middle">«item def»</text>
+<text class="operand-id" x="2885" y="314" text-anchor="middle">&lt;P1&gt;</text>
+<text class="operand-name" x="2885" y="351" text-anchor="middle">传感器可检测的</text>
+<text class="operand-name" x="2885" y="382" text-anchor="middle">物理信号</text>
 </g>
-<g class="operand-node" data-operand="P2"><rect x="3145.0" y="235" width="230" height="215" fill="#DDF4E5" stroke="#38815B" stroke-width="2.4"/>
-<text class="kind" x="3260" y="270" text-anchor="middle">«item def»</text>
-<text class="operand-id" x="3260" y="314" text-anchor="middle">&lt;P2&gt;</text>
-<text class="operand-name" x="3260" y="360" text-anchor="middle">能量与热状态</text>
+<g class="operand-node" data-operand="P2"><rect x="3047.5" y="235" width="255" height="215" fill="#DDF4E5" stroke="#38815B" stroke-width="2.4"/>
+<text class="kind" x="3175" y="270" text-anchor="middle">«item def»</text>
+<text class="operand-id" x="3175" y="314" text-anchor="middle">&lt;P2&gt;</text>
+<text class="operand-name" x="3175" y="360" text-anchor="middle">能量与热状态</text>
 </g>
-<g class="operand-node" data-operand="P3"><rect x="3455.0" y="235" width="230" height="215" fill="#DDF4E5" stroke="#38815B" stroke-width="2.4"/>
-<text class="kind" x="3570" y="270" text-anchor="middle">«item def»</text>
-<text class="operand-id" x="3570" y="314" text-anchor="middle">&lt;P3&gt;</text>
-<text class="operand-name" x="3570" y="351" text-anchor="middle">机器人行为</text>
-<text class="operand-name" x="3570" y="382" text-anchor="middle">与作用</text>
+<g class="operand-node" data-operand="P3"><rect x="3337.5" y="235" width="255" height="215" fill="#DDF4E5" stroke="#38815B" stroke-width="2.4"/>
+<text class="kind" x="3465" y="270" text-anchor="middle">«item def»</text>
+<text class="operand-id" x="3465" y="314" text-anchor="middle">&lt;P3&gt;</text>
+<text class="operand-name" x="3465" y="351" text-anchor="middle">机器人自身</text>
+<text class="operand-name" x="3465" y="382" text-anchor="middle">物理状态与输出</text>
 </g>
-<g class="operand-node" data-operand="P4"><rect x="3765.0" y="235" width="230" height="215" fill="#DDF4E5" stroke="#38815B" stroke-width="2.4"/>
-<text class="kind" x="3880" y="270" text-anchor="middle">«item def»</text>
-<text class="operand-id" x="3880" y="314" text-anchor="middle">&lt;P4&gt;</text>
-<text class="operand-name" x="3880" y="360" text-anchor="middle">物质与载荷</text>
+<g class="operand-node" data-operand="P4"><rect x="3627.5" y="235" width="255" height="215" fill="#DDF4E5" stroke="#38815B" stroke-width="2.4"/>
+<text class="kind" x="3755" y="270" text-anchor="middle">«item def»</text>
+<text class="operand-id" x="3755" y="314" text-anchor="middle">&lt;P4&gt;</text>
+<text class="operand-name" x="3755" y="351" text-anchor="middle">机器人携带</text>
+<text class="operand-name" x="3755" y="382" text-anchor="middle">物品的状态</text>
 </g>
-<g class="operand-node" data-operand="P5"><rect x="4075.0" y="235" width="230" height="215" fill="#DDF4E5" stroke="#38815B" stroke-width="2.4"/>
-<text class="kind" x="4190" y="270" text-anchor="middle">«item def»</text>
-<text class="operand-id" x="4190" y="314" text-anchor="middle">&lt;P5&gt;</text>
-<text class="operand-name" x="4190" y="351" text-anchor="middle">物理状态变化</text>
-<text class="operand-name" x="4190" y="382" text-anchor="middle">与反馈</text>
+<g class="operand-node" data-operand="P5"><rect x="3917.5" y="235" width="255" height="215" fill="#DDF4E5" stroke="#38815B" stroke-width="2.4"/>
+<text class="kind" x="4045" y="270" text-anchor="middle">«item def»</text>
+<text class="operand-id" x="4045" y="314" text-anchor="middle">&lt;P5&gt;</text>
+<text class="operand-name" x="4045" y="351" text-anchor="middle">外部世界</text>
+<text class="operand-name" x="4045" y="382" text-anchor="middle">物理状态</text>
+</g>
+<g class="operand-node" data-operand="P6"><rect x="4207.5" y="235" width="255" height="215" fill="#DDF4E5" stroke="#38815B" stroke-width="2.4"/>
+<text class="kind" x="4335" y="270" text-anchor="middle">«item def»</text>
+<text class="operand-id" x="4335" y="314" text-anchor="middle">&lt;P6&gt;</text>
+<text class="operand-name" x="4335" y="343" text-anchor="middle">可安全操控的</text>
+<text class="operand-name" x="4335" y="374" text-anchor="middle">外部物体状态</text>
+<text class="operand-name" x="4335" y="405" text-anchor="middle">机械臂预留；:&gt; P5</text>
 </g>
 <g class="process-node" data-process="I-P1"><rect x="1800" y="595.0" width="900" height="110" fill="#E9E1FF" stroke="#6B57A5" stroke-width="2.4"/>
 <text class="process-kind" x="2250.0" y="629.0" text-anchor="middle">«action def»</text>
-<text class="process-name" x="2250.0" y="673.0" text-anchor="middle">&lt;I-P1&gt; 形成并校验观察</text>
+<text class="process-name" x="2250.0" y="673.0" text-anchor="middle">&lt;I-P1&gt; 处理输入并形成观察与事件</text>
 </g>
 <line class="input-bus" data-process="I-P1" x1="160" y1="626" x2="1800" y2="626" marker-end="url(#input-arrow)"/>
 <circle class="input-junction" data-process="I-P1" data-operand="I1" cx="160" cy="626" r="6.5"/>
@@ -140,8 +148,7 @@
 <text class="process-kind" x="2250.0" y="804.0" text-anchor="middle">«action def»</text>
 <text class="process-name" x="2250.0" y="848.0" text-anchor="middle">&lt;I-P2&gt; Orient：理解、融合并维护状态</text>
 </g>
-<line class="input-bus" data-process="I-P2" x1="160" y1="801" x2="1800" y2="801" marker-end="url(#input-arrow)"/>
-<circle class="input-junction" data-process="I-P2" data-operand="I1" cx="160" cy="801" r="6.5"/>
+<line class="input-bus" data-process="I-P2" x1="365" y1="801" x2="1800" y2="801" marker-end="url(#input-arrow)"/>
 <circle class="input-junction" data-process="I-P2" data-operand="I2" cx="365" cy="801" r="6.5"/>
 <circle class="input-junction" data-process="I-P2" data-operand="I7" cx="1390" cy="801" r="6.5"/>
 <circle class="input-junction" data-process="I-P2" data-operand="I3" cx="570" cy="801" r="6.5"/>
@@ -152,8 +159,8 @@
 <text class="process-kind" x="2250.0" y="979.0" text-anchor="middle">«action def»</text>
 <text class="process-name" x="2250.0" y="1023.0" text-anchor="middle">&lt;I-P3&gt; 形成目标与行动方案</text>
 </g>
-<line class="input-bus" data-process="I-P3" x1="160" y1="976" x2="1800" y2="976" marker-end="url(#input-arrow)"/>
-<circle class="input-junction" data-process="I-P3" data-operand="I1" cx="160" cy="976" r="6.5"/>
+<line class="input-bus" data-process="I-P3" x1="365" y1="976" x2="1800" y2="976" marker-end="url(#input-arrow)"/>
+<circle class="input-junction" data-process="I-P3" data-operand="I2" cx="365" cy="976" r="6.5"/>
 <circle class="input-junction" data-process="I-P3" data-operand="I3" cx="570" cy="976" r="6.5"/>
 <line class="output-bus" data-process="I-P3" x1="1800" y1="1024" x2="775" y2="1024"/>
 <circle class="output-junction" data-process="I-P3" data-operand="I4" cx="775" cy="1024" r="6.5"/>
@@ -162,8 +169,7 @@
 <text class="process-kind" x="2250.0" y="1154.0" text-anchor="middle">«action def»</text>
 <text class="process-name" x="2250.0" y="1198.0" text-anchor="middle">&lt;I-P4&gt; 评估风险并授权行动</text>
 </g>
-<line class="input-bus" data-process="I-P4" x1="160" y1="1151" x2="1800" y2="1151" marker-end="url(#input-arrow)"/>
-<circle class="input-junction" data-process="I-P4" data-operand="I1" cx="160" cy="1151" r="6.5"/>
+<line class="input-bus" data-process="I-P4" x1="570" y1="1151" x2="1800" y2="1151" marker-end="url(#input-arrow)"/>
 <circle class="input-junction" data-process="I-P4" data-operand="I3" cx="570" cy="1151" r="6.5"/>
 <circle class="input-junction" data-process="I-P4" data-operand="I4" cx="775" cy="1151" r="6.5"/>
 <line class="output-bus" data-process="I-P4" x1="1800" y1="1199" x2="980" y2="1199"/>
@@ -171,7 +177,7 @@
 <line class="output-bus" x1="980" y1="1217" x2="980" y2="1195" marker-end="url(#output-arrow)"/>
 <g class="process-node" data-process="I-P5"><rect x="1800" y="1295.0" width="900" height="110" fill="#E9E1FF" stroke="#6B57A5" stroke-width="2.4"/>
 <text class="process-kind" x="2250.0" y="1329.0" text-anchor="middle">«action def»</text>
-<text class="process-name" x="2250.0" y="1373.0" text-anchor="middle">&lt;I-P5&gt; 分派目标并组织能力调用</text>
+<text class="process-name" x="2250.0" y="1373.0" text-anchor="middle">&lt;I-P5&gt; 分派任务并调用技能或工具</text>
 </g>
 <line class="input-bus" data-process="I-P5" x1="775" y1="1326" x2="1800" y2="1326" marker-end="url(#input-arrow)"/>
 <circle class="input-junction" data-process="I-P5" data-operand="I4" cx="775" cy="1326" r="6.5"/>
@@ -182,7 +188,7 @@
 <line class="output-bus" x1="1185" y1="1392" x2="1185" y2="1370" marker-end="url(#output-arrow)"/>
 <g class="process-node" data-process="I-P6"><rect x="1800" y="1470.0" width="900" height="110" fill="#E9E1FF" stroke="#6B57A5" stroke-width="2.4"/>
 <text class="process-kind" x="2250.0" y="1504.0" text-anchor="middle">«action def»</text>
-<text class="process-name" x="2250.0" y="1548.0" text-anchor="middle">&lt;I-P6&gt; 执行信息能力</text>
+<text class="process-name" x="2250.0" y="1548.0" text-anchor="middle">&lt;I-P6&gt; 执行信息操作</text>
 </g>
 <line class="input-bus" data-process="I-P6" x1="570" y1="1501" x2="1800" y2="1501" marker-end="url(#input-arrow)"/>
 <circle class="input-junction" data-process="I-P6" data-operand="I3" cx="570" cy="1501" r="6.5"/>
@@ -193,10 +199,11 @@
 <line class="output-bus" x1="1390" y1="1567" x2="1390" y2="1545" marker-end="url(#output-arrow)"/>
 <g class="process-node" data-process="I-P7"><rect x="1800" y="1645.0" width="900" height="110" fill="#E9E1FF" stroke="#6B57A5" stroke-width="2.4"/>
 <text class="process-kind" x="2250.0" y="1679.0" text-anchor="middle">«action def»</text>
-<text class="process-name" x="2250.0" y="1723.0" text-anchor="middle">&lt;I-P7&gt; 验证结果并维持连续性</text>
+<text class="process-name" x="2250.0" y="1723.0" text-anchor="middle">&lt;I-P7&gt; 验证结果并决定后续处理</text>
 </g>
 <line class="input-bus" data-process="I-P7" x1="365" y1="1676" x2="1800" y2="1676" marker-end="url(#input-arrow)"/>
 <circle class="input-junction" data-process="I-P7" data-operand="I2" cx="365" cy="1676" r="6.5"/>
+<circle class="input-junction" data-process="I-P7" data-operand="I4" cx="775" cy="1676" r="6.5"/>
 <circle class="input-junction" data-process="I-P7" data-operand="I6" cx="1185" cy="1676" r="6.5"/>
 <circle class="input-junction" data-process="I-P7" data-operand="I7" cx="1390" cy="1676" r="6.5"/>
 <line class="output-bus" data-process="I-P7" x1="1800" y1="1724" x2="1390" y2="1724"/>
@@ -206,8 +213,8 @@
 <text class="process-kind" x="2250.0" y="1854.0" text-anchor="middle">«action def»</text>
 <text class="process-name" x="2250.0" y="1898.0" text-anchor="middle">&lt;I-P8&gt; 管理运行资源与更新</text>
 </g>
-<line class="input-bus" data-process="I-P8" x1="160" y1="1851" x2="1800" y2="1851" marker-end="url(#input-arrow)"/>
-<circle class="input-junction" data-process="I-P8" data-operand="I1" cx="160" cy="1851" r="6.5"/>
+<line class="input-bus" data-process="I-P8" x1="365" y1="1851" x2="1800" y2="1851" marker-end="url(#input-arrow)"/>
+<circle class="input-junction" data-process="I-P8" data-operand="I2" cx="365" cy="1851" r="6.5"/>
 <circle class="input-junction" data-process="I-P8" data-operand="I6" cx="1185" cy="1851" r="6.5"/>
 <circle class="input-junction" data-process="I-P8" data-operand="I8" cx="1595" cy="1851" r="6.5"/>
 <line class="output-bus" data-process="I-P8" x1="1800" y1="1899" x2="1595" y2="1899"/>
@@ -215,70 +222,113 @@
 <line class="output-bus" x1="1595" y1="1917" x2="1595" y2="1895" marker-end="url(#output-arrow)"/>
 <g class="process-node" data-process="P-P1"><rect x="1800" y="2030.0" width="900" height="110" fill="#FFE7CF" stroke="#B8661E" stroke-width="2.4"/>
 <text class="process-kind" x="2250.0" y="2064.0" text-anchor="middle">«action def»</text>
-<text class="process-name" x="2250.0" y="2108.0" text-anchor="middle">&lt;P-P1&gt; 感受并转换物理现象</text>
+<text class="process-name" x="2250.0" y="2108.0" text-anchor="middle">&lt;P-P1&gt; 采集物理信号并生成传感数据</text>
 </g>
-<line class="input-bus" data-process="P-P1" x1="4190" y1="2061" x2="2700" y2="2061" marker-end="url(#input-arrow)"/>
-<circle class="input-junction" data-process="P-P1" data-operand="P1" cx="2950" cy="2061" r="6.5"/>
-<circle class="input-junction" data-process="P-P1" data-operand="P5" cx="4190" cy="2061" r="6.5"/>
+<line class="input-bus" data-process="P-P1" x1="2885" y1="2061" x2="2700" y2="2061" marker-end="url(#input-arrow)"/>
+<circle class="input-junction" data-process="P-P1" data-operand="P1" cx="2885" cy="2061" r="6.5"/>
 <line class="output-bus" data-process="P-P1" x1="1800" y1="2109" x2="160" y2="2109"/>
 <circle class="output-junction" data-process="P-P1" data-operand="I1" cx="160" cy="2109" r="6.5"/>
 <line class="output-bus" x1="160" y1="2127" x2="160" y2="2105" marker-end="url(#output-arrow)"/>
 <g class="process-node" data-process="P-P2"><rect x="1800" y="2205.0" width="900" height="110" fill="#FFE7CF" stroke="#B8661E" stroke-width="2.4"/>
 <text class="process-kind" x="2250.0" y="2239.0" text-anchor="middle">«action def»</text>
-<text class="process-name" x="2250.0" y="2283.0" text-anchor="middle">&lt;P-P2&gt; 接收、转换并分配能量</text>
+<text class="process-name" x="2250.0" y="2283.0" text-anchor="middle">&lt;P-P2&gt; 管理能量与热状态</text>
 </g>
-<line class="input-bus" data-process="P-P2" x1="1595" y1="2236" x2="1800" y2="2236" marker-end="url(#input-arrow)"/>
+<line class="input-bus" data-process="P-P2" x1="160" y1="2236" x2="1800" y2="2236" marker-end="url(#input-arrow)"/>
+<circle class="input-junction" data-process="P-P2" data-operand="I1" cx="160" cy="2236" r="6.5"/>
 <circle class="input-junction" data-process="P-P2" data-operand="I8" cx="1595" cy="2236" r="6.5"/>
-<line class="input-bus" data-process="P-P2" x1="3260" y1="2236" x2="2700" y2="2236" marker-end="url(#input-arrow)"/>
-<circle class="input-junction" data-process="P-P2" data-operand="P2" cx="3260" cy="2236" r="6.5"/>
-<line class="output-bus" data-process="P-P2" x1="2700" y1="2284" x2="3260" y2="2284"/>
-<circle class="output-junction" data-process="P-P2" data-operand="P2" cx="3260" cy="2284" r="6.5"/>
-<line class="output-bus" x1="3260" y1="2302" x2="3260" y2="2280" marker-end="url(#output-arrow)"/>
+<line class="input-bus" data-process="P-P2" x1="3175" y1="2236" x2="2700" y2="2236" marker-end="url(#input-arrow)"/>
+<circle class="input-junction" data-process="P-P2" data-operand="P2" cx="3175" cy="2236" r="6.5"/>
+<line class="output-bus" data-process="P-P2" x1="2700" y1="2284" x2="3175" y2="2284"/>
+<circle class="output-junction" data-process="P-P2" data-operand="P2" cx="3175" cy="2284" r="6.5"/>
+<line class="output-bus" x1="3175" y1="2302" x2="3175" y2="2280" marker-end="url(#output-arrow)"/>
 <g class="process-node" data-process="P-P3"><rect x="1800" y="2380.0" width="900" height="110" fill="#FFE7CF" stroke="#B8661E" stroke-width="2.4"/>
 <text class="process-kind" x="2250.0" y="2414.0" text-anchor="middle">«action def»</text>
-<text class="process-name" x="2250.0" y="2458.0" text-anchor="middle">&lt;P-P3&gt; 执行机器人行为</text>
+<text class="process-name" x="2250.0" y="2458.0" text-anchor="middle">&lt;P-P3&gt; 改变机器人自身状态与输出</text>
 </g>
-<line class="input-bus" data-process="P-P3" x1="980" y1="2411" x2="1800" y2="2411" marker-end="url(#input-arrow)"/>
+<line class="input-bus" data-process="P-P3" x1="160" y1="2411" x2="1800" y2="2411" marker-end="url(#input-arrow)"/>
+<circle class="input-junction" data-process="P-P3" data-operand="I1" cx="160" cy="2411" r="6.5"/>
 <circle class="input-junction" data-process="P-P3" data-operand="I5" cx="980" cy="2411" r="6.5"/>
 <circle class="input-junction" data-process="P-P3" data-operand="I6" cx="1185" cy="2411" r="6.5"/>
-<line class="input-bus" data-process="P-P3" x1="3260" y1="2411" x2="2700" y2="2411" marker-end="url(#input-arrow)"/>
-<circle class="input-junction" data-process="P-P3" data-operand="P2" cx="3260" cy="2411" r="6.5"/>
-<line class="output-bus" data-process="P-P3" x1="2700" y1="2459" x2="4190" y2="2459"/>
-<circle class="output-junction" data-process="P-P3" data-operand="P3" cx="3570" cy="2459" r="6.5"/>
-<line class="output-bus" x1="3570" y1="2477" x2="3570" y2="2455" marker-end="url(#output-arrow)"/>
-<circle class="output-junction" data-process="P-P3" data-operand="P5" cx="4190" cy="2459" r="6.5"/>
-<line class="output-bus" x1="4190" y1="2477" x2="4190" y2="2455" marker-end="url(#output-arrow)"/>
+<line class="input-bus" data-process="P-P3" x1="3465" y1="2411" x2="2700" y2="2411" marker-end="url(#input-arrow)"/>
+<circle class="input-junction" data-process="P-P3" data-operand="P2" cx="3175" cy="2411" r="6.5"/>
+<circle class="input-junction" data-process="P-P3" data-operand="P3" cx="3465" cy="2411" r="6.5"/>
+<line class="output-bus" data-process="P-P3" x1="2700" y1="2459" x2="3465" y2="2459"/>
+<circle class="output-junction" data-process="P-P3" data-operand="P3" cx="3465" cy="2459" r="6.5"/>
+<line class="output-bus" x1="3465" y1="2477" x2="3465" y2="2455" marker-end="url(#output-arrow)"/>
+<circle class="output-junction" data-process="P-P3" data-operand="P1" cx="2885" cy="2459" r="6.5"/>
+<line class="output-bus" x1="2885" y1="2477" x2="2885" y2="2455" marker-end="url(#output-arrow)"/>
 <g class="process-node" data-process="P-P4"><rect x="1800" y="2555.0" width="900" height="110" fill="#FFE7CF" stroke="#B8661E" stroke-width="2.4"/>
 <text class="process-kind" x="2250.0" y="2589.0" text-anchor="middle">«action def»</text>
-<text class="process-name" x="2250.0" y="2633.0" text-anchor="middle">&lt;P-P4&gt; 容纳、运输并交接载荷</text>
+<text class="process-name" x="2250.0" y="2633.0" text-anchor="middle">&lt;P-P4&gt; 运送用户放入的物品</text>
 </g>
-<line class="input-bus" data-process="P-P4" x1="980" y1="2586" x2="1800" y2="2586" marker-end="url(#input-arrow)"/>
+<line class="input-bus" data-process="P-P4" x1="160" y1="2586" x2="1800" y2="2586" marker-end="url(#input-arrow)"/>
+<circle class="input-junction" data-process="P-P4" data-operand="I1" cx="160" cy="2586" r="6.5"/>
 <circle class="input-junction" data-process="P-P4" data-operand="I5" cx="980" cy="2586" r="6.5"/>
 <circle class="input-junction" data-process="P-P4" data-operand="I6" cx="1185" cy="2586" r="6.5"/>
-<line class="input-bus" data-process="P-P4" x1="3880" y1="2586" x2="2700" y2="2586" marker-end="url(#input-arrow)"/>
-<circle class="input-junction" data-process="P-P4" data-operand="P3" cx="3570" cy="2586" r="6.5"/>
-<circle class="input-junction" data-process="P-P4" data-operand="P4" cx="3880" cy="2586" r="6.5"/>
-<line class="output-bus" data-process="P-P4" x1="2700" y1="2634" x2="4190" y2="2634"/>
-<circle class="output-junction" data-process="P-P4" data-operand="P4" cx="3880" cy="2634" r="6.5"/>
-<line class="output-bus" x1="3880" y1="2652" x2="3880" y2="2630" marker-end="url(#output-arrow)"/>
-<circle class="output-junction" data-process="P-P4" data-operand="P5" cx="4190" cy="2634" r="6.5"/>
-<line class="output-bus" x1="4190" y1="2652" x2="4190" y2="2630" marker-end="url(#output-arrow)"/>
+<line class="input-bus" data-process="P-P4" x1="3755" y1="2586" x2="2700" y2="2586" marker-end="url(#input-arrow)"/>
+<circle class="input-junction" data-process="P-P4" data-operand="P2" cx="3175" cy="2586" r="6.5"/>
+<circle class="input-junction" data-process="P-P4" data-operand="P3" cx="3465" cy="2586" r="6.5"/>
+<circle class="input-junction" data-process="P-P4" data-operand="P4" cx="3755" cy="2586" r="6.5"/>
+<line class="output-bus" data-process="P-P4" x1="2700" y1="2634" x2="3755" y2="2634"/>
+<circle class="output-junction" data-process="P-P4" data-operand="P3" cx="3465" cy="2634" r="6.5"/>
+<line class="output-bus" x1="3465" y1="2652" x2="3465" y2="2630" marker-end="url(#output-arrow)"/>
+<circle class="output-junction" data-process="P-P4" data-operand="P4" cx="3755" cy="2634" r="6.5"/>
+<line class="output-bus" x1="3755" y1="2652" x2="3755" y2="2630" marker-end="url(#output-arrow)"/>
+<circle class="output-junction" data-process="P-P4" data-operand="P1" cx="2885" cy="2634" r="6.5"/>
+<line class="output-bus" x1="2885" y1="2652" x2="2885" y2="2630" marker-end="url(#output-arrow)"/>
 <g class="process-node" data-process="P-P5"><rect x="1800" y="2730.0" width="900" height="110" fill="#FFE7CF" stroke="#B8661E" stroke-width="2.4"/>
 <text class="process-kind" x="2250.0" y="2764.0" text-anchor="middle">«action def»</text>
-<text class="process-name" x="2250.0" y="2808.0" text-anchor="middle">&lt;P-P5&gt; 限制、中止并锁定危险行为</text>
+<text class="process-name" x="2250.0" y="2808.0" text-anchor="middle">&lt;P-P5&gt; 限制或停止机器人的危险动作</text>
 </g>
-<line class="input-bus" data-process="P-P5" x1="4190" y1="2761" x2="2700" y2="2761" marker-end="url(#input-arrow)"/>
-<circle class="input-junction" data-process="P-P5" data-operand="P1" cx="2950" cy="2761" r="6.5"/>
-<circle class="input-junction" data-process="P-P5" data-operand="P2" cx="3260" cy="2761" r="6.5"/>
-<circle class="input-junction" data-process="P-P5" data-operand="P3" cx="3570" cy="2761" r="6.5"/>
-<circle class="input-junction" data-process="P-P5" data-operand="P5" cx="4190" cy="2761" r="6.5"/>
-<line class="output-bus" data-process="P-P5" x1="1800" y1="2809" x2="1390" y2="2809"/>
-<circle class="output-junction" data-process="P-P5" data-operand="I7" cx="1390" cy="2809" r="6.5"/>
-<line class="output-bus" x1="1390" y1="2827" x2="1390" y2="2805" marker-end="url(#output-arrow)"/>
-<line class="output-bus" data-process="P-P5" x1="2700" y1="2809" x2="4190" y2="2809"/>
-<circle class="output-junction" data-process="P-P5" data-operand="P3" cx="3570" cy="2809" r="6.5"/>
-<line class="output-bus" x1="3570" y1="2827" x2="3570" y2="2805" marker-end="url(#output-arrow)"/>
-<circle class="output-junction" data-process="P-P5" data-operand="P5" cx="4190" cy="2809" r="6.5"/>
-<line class="output-bus" x1="4190" y1="2827" x2="4190" y2="2805" marker-end="url(#output-arrow)"/>
-<text class="note" x="2250" y="2970" text-anchor="middle">有圆点表示实际连接；无圆点的交叉不表示连接。连线仅表达 in / out 参数关系，不表示过程顺序或 flow connection。</text>
+<line class="input-bus" data-process="P-P5" x1="160" y1="2761" x2="1800" y2="2761" marker-end="url(#input-arrow)"/>
+<circle class="input-junction" data-process="P-P5" data-operand="I1" cx="160" cy="2761" r="6.5"/>
+<line class="input-bus" data-process="P-P5" x1="3465" y1="2761" x2="2700" y2="2761" marker-end="url(#input-arrow)"/>
+<circle class="input-junction" data-process="P-P5" data-operand="P2" cx="3175" cy="2761" r="6.5"/>
+<circle class="input-junction" data-process="P-P5" data-operand="P3" cx="3465" cy="2761" r="6.5"/>
+<line class="output-bus" data-process="P-P5" x1="2700" y1="2809" x2="3465" y2="2809"/>
+<circle class="output-junction" data-process="P-P5" data-operand="P2" cx="3175" cy="2809" r="6.5"/>
+<line class="output-bus" x1="3175" y1="2827" x2="3175" y2="2805" marker-end="url(#output-arrow)"/>
+<circle class="output-junction" data-process="P-P5" data-operand="P3" cx="3465" cy="2809" r="6.5"/>
+<line class="output-bus" x1="3465" y1="2827" x2="3465" y2="2805" marker-end="url(#output-arrow)"/>
+<circle class="output-junction" data-process="P-P5" data-operand="P1" cx="2885" cy="2809" r="6.5"/>
+<line class="output-bus" x1="2885" y1="2827" x2="2885" y2="2805" marker-end="url(#output-arrow)"/>
+<g class="process-node" data-process="P-P6"><rect x="1800" y="2905.0" width="900" height="110" fill="#FFE7CF" stroke="#B8661E" stroke-width="2.4"/>
+<text class="process-kind" x="2250.0" y="2939.0" text-anchor="middle">«action def»</text>
+<text class="process-name" x="2250.0" y="2983.0" text-anchor="middle">&lt;P-P6&gt; 安全操控外部物体（机械臂预留）</text>
+</g>
+<line class="input-bus" data-process="P-P6" x1="160" y1="2936" x2="1800" y2="2936" marker-end="url(#input-arrow)"/>
+<circle class="input-junction" data-process="P-P6" data-operand="I1" cx="160" cy="2936" r="6.5"/>
+<circle class="input-junction" data-process="P-P6" data-operand="I5" cx="980" cy="2936" r="6.5"/>
+<circle class="input-junction" data-process="P-P6" data-operand="I6" cx="1185" cy="2936" r="6.5"/>
+<line class="input-bus" data-process="P-P6" x1="4335" y1="2936" x2="2700" y2="2936" marker-end="url(#input-arrow)"/>
+<circle class="input-junction" data-process="P-P6" data-operand="P2" cx="3175" cy="2936" r="6.5"/>
+<circle class="input-junction" data-process="P-P6" data-operand="P3" cx="3465" cy="2936" r="6.5"/>
+<circle class="input-junction" data-process="P-P6" data-operand="P6" cx="4335" cy="2936" r="6.5"/>
+<line class="output-bus" data-process="P-P6" x1="2700" y1="2984" x2="4335" y2="2984"/>
+<circle class="output-junction" data-process="P-P6" data-operand="P3" cx="3465" cy="2984" r="6.5"/>
+<line class="output-bus" x1="3465" y1="3002" x2="3465" y2="2980" marker-end="url(#output-arrow)"/>
+<circle class="output-junction" data-process="P-P6" data-operand="P6" cx="4335" cy="2984" r="6.5"/>
+<line class="output-bus" x1="4335" y1="3002" x2="4335" y2="2980" marker-end="url(#output-arrow)"/>
+<circle class="output-junction" data-process="P-P6" data-operand="P1" cx="2885" cy="2984" r="6.5"/>
+<line class="output-bus" x1="2885" y1="3002" x2="2885" y2="2980" marker-end="url(#output-arrow)"/>
+<g class="process-node" data-process="P-P7"><rect x="1800" y="3080.0" width="900" height="110" fill="#FFE7CF" stroke="#B8661E" stroke-width="2.4"/>
+<text class="process-kind" x="2250.0" y="3114.0" text-anchor="middle">«action def»</text>
+<text class="process-name" x="2250.0" y="3158.0" text-anchor="middle">&lt;P-P7&gt; 紧急情况下强制改变外部状态</text>
+</g>
+<line class="input-bus" data-process="P-P7" x1="160" y1="3111" x2="1800" y2="3111" marker-end="url(#input-arrow)"/>
+<circle class="input-junction" data-process="P-P7" data-operand="I1" cx="160" cy="3111" r="6.5"/>
+<circle class="input-junction" data-process="P-P7" data-operand="I5" cx="980" cy="3111" r="6.5"/>
+<circle class="input-junction" data-process="P-P7" data-operand="I6" cx="1185" cy="3111" r="6.5"/>
+<line class="input-bus" data-process="P-P7" x1="4045" y1="3111" x2="2700" y2="3111" marker-end="url(#input-arrow)"/>
+<circle class="input-junction" data-process="P-P7" data-operand="P2" cx="3175" cy="3111" r="6.5"/>
+<circle class="input-junction" data-process="P-P7" data-operand="P3" cx="3465" cy="3111" r="6.5"/>
+<circle class="input-junction" data-process="P-P7" data-operand="P5" cx="4045" cy="3111" r="6.5"/>
+<line class="output-bus" data-process="P-P7" x1="2700" y1="3159" x2="4045" y2="3159"/>
+<circle class="output-junction" data-process="P-P7" data-operand="P3" cx="3465" cy="3159" r="6.5"/>
+<line class="output-bus" x1="3465" y1="3177" x2="3465" y2="3155" marker-end="url(#output-arrow)"/>
+<circle class="output-junction" data-process="P-P7" data-operand="P5" cx="4045" cy="3159" r="6.5"/>
+<line class="output-bus" x1="4045" y1="3177" x2="4045" y2="3155" marker-end="url(#output-arrow)"/>
+<circle class="output-junction" data-process="P-P7" data-operand="P1" cx="2885" cy="3159" r="6.5"/>
+<line class="output-bus" x1="2885" y1="3177" x2="2885" y2="3155" marker-end="url(#output-arrow)"/>
+<text class="note" x="2250" y="3395" text-anchor="middle">有圆点表示实际连接；无圆点的交叉不表示连接。连线仅表达 in / out 参数关系；持续流动和反馈顺序见 OODA ActionFlowView。</text>
 </svg>

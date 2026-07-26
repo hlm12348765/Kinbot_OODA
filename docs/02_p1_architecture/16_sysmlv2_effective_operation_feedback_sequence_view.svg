@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2100" height="1280" viewBox="0 0 2100 1280" role="img" aria-labelledby="title desc">
+  <title id="title">候选操作、许可、实际执行与状态更新时序视图</title>
+  <desc id="desc">SysML v2 SequenceView。展示 TaskWorker、RobotSkill、G3、AP3、信息连接器或 F1、外部环境和 O3 之间的候选操作、实际操作、重大变化通知、执行结果和状态更新。</desc>
+  <defs>
+    <marker id="arrow-gray" markerWidth="10" markerHeight="10" refX="9" refY="3.5" orient="auto"><path d="M0,0 L10,3.5 L0,7 Z" fill="#64748B"/></marker>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="9" refY="3.5" orient="auto"><path d="M0,0 L10,3.5 L0,7 Z" fill="#4F79A8"/></marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="9" refY="3.5" orient="auto"><path d="M0,0 L10,3.5 L0,7 Z" fill="#B94E56"/></marker>
+    <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="9" refY="3.5" orient="auto"><path d="M0,0 L10,3.5 L0,7 Z" fill="#3F8A61"/></marker>
+    <style>
+      text { font-family: "Noto Sans CJK SC","PingFang SC","Microsoft YaHei",sans-serif; fill:#172033; }
+      .title { font-size:30px; font-weight:700; }
+      .subtitle { font-size:15px; fill:#596579; }
+      .name { font-size:17px; font-weight:700; }
+      .small { font-size:13px; }
+      .tiny { font-size:12px; }
+      .life { stroke:#94A3B8; stroke-width:1.5; stroke-dasharray:7 6; }
+      .gray { stroke:#64748B; stroke-width:2; fill:none; marker-end:url(#arrow-gray); }
+      .blue { stroke:#4F79A8; stroke-width:2; fill:none; marker-end:url(#arrow-blue); }
+      .red { stroke:#B94E56; stroke-width:2.2; fill:none; marker-end:url(#arrow-red); }
+      .redDash { stroke:#B94E56; stroke-width:2; stroke-dasharray:7 5; fill:none; marker-end:url(#arrow-red); }
+      .green { stroke:#3F8A61; stroke-width:2.2; fill:none; marker-end:url(#arrow-green); }
+    </style>
+  </defs>
+  <rect width="2100" height="1280" fill="#F8FAFC"/>
+  <text x="1050" y="46" text-anchor="middle" class="title">候选操作、许可、实际执行与状态更新时序视图</text>
+  <text x="1050" y="76" text-anchor="middle" class="subtitle">PermitDecision 返回实际操作 · 重大变化主动推送 · TaskWorker 只依据实际结果更新状态</text>
+  <rect x="45" y="96" width="2010" height="42" rx="8" fill="#F1F5F9" stroke="#CBD5E1"/>
+  <text x="65" y="123" class="small">view &lt;eofsv&gt; '实际操作反馈时序视图' : SequenceView</text>
+
+  <g>
+    <rect x="55" y="165" width="225" height="64" rx="12" fill="#F1EDFA" stroke="#735FA5" stroke-width="2"/>
+    <text x="168" y="204" text-anchor="middle" class="name">TaskWorker</text>
+    <line x1="168" y1="229" x2="168" y2="1195" class="life"/>
+
+    <rect x="355" y="165" width="225" height="64" rx="12" fill="#FFF4D8" stroke="#C28A1B" stroke-width="2"/>
+    <text x="468" y="204" text-anchor="middle" class="name">RobotSkill</text>
+    <line x1="468" y1="229" x2="468" y2="1195" class="life"/>
+
+    <rect x="655" y="165" width="225" height="64" rx="12" fill="#FDECEC" stroke="#B94E56" stroke-width="2"/>
+    <text x="768" y="204" text-anchor="middle" class="name">G3</text>
+    <line x1="768" y1="229" x2="768" y2="1195" class="life"/>
+
+    <rect x="955" y="165" width="225" height="64" rx="12" fill="#E6F6F4" stroke="#32877F" stroke-width="2"/>
+    <text x="1068" y="204" text-anchor="middle" class="name">AP3</text>
+    <line x1="1068" y1="229" x2="1068" y2="1195" class="life"/>
+
+    <rect x="1255" y="165" width="225" height="64" rx="12" fill="#EAF7EE" stroke="#4A9468" stroke-width="2"/>
+    <text x="1368" y="195" text-anchor="middle" class="name">信息连接器／F1</text>
+    <text x="1368" y="216" text-anchor="middle" class="tiny">按作用空间选择</text>
+    <line x1="1368" y1="229" x2="1368" y2="1195" class="life"/>
+
+    <rect x="1555" y="165" width="225" height="64" rx="12" fill="#EAF3FF" stroke="#5C86B5" stroke-width="2"/>
+    <text x="1668" y="195" text-anchor="middle" class="name">信息／物理环境</text>
+    <text x="1668" y="216" text-anchor="middle" class="tiny">用户、App、家庭环境</text>
+    <line x1="1668" y1="229" x2="1668" y2="1195" class="life"/>
+
+    <rect x="1855" y="165" width="190" height="64" rx="12" fill="#E6F6F4" stroke="#32877F" stroke-width="2"/>
+    <text x="1950" y="204" text-anchor="middle" class="name">O3</text>
+    <line x1="1950" y1="229" x2="1950" y2="1195" class="life"/>
+  </g>
+
+  <line x1="168" y1="285" x2="468" y2="285" class="gray"/>
+  <text x="318" y="272" text-anchor="middle" class="small">SkillRequest + task adjustmentEnvelope</text>
+
+  <line x1="468" y1="355" x2="768" y2="355" class="red"/>
+  <text x="618" y="342" text-anchor="middle" class="small">ActionProposal + uncertainty + allowed equivalents</text>
+
+  <line x1="768" y1="425" x2="468" y2="425" class="red"/>
+  <text x="618" y="412" text-anchor="middle" class="small">PermitDecision + effectiveOperation + delta + reason</text>
+
+  <rect x="690" y="462" width="455" height="94" rx="10" fill="#FFF7F7" stroke="#D88B91" stroke-dasharray="6 4"/>
+  <text x="708" y="488" class="tiny">opt [material]</text>
+  <line x1="768" y1="514" x2="1068" y2="514" class="redDash"/>
+  <text x="918" y="501" text-anchor="middle" class="small">MaterialDecisionEvent</text>
+  <line x1="1068" y1="540" x2="168" y2="540" class="redDash"/>
+  <text x="618" y="527" text-anchor="middle" class="small">可靠推送：实际操作、差异、原因、下一步要求</text>
+
+  <rect x="320" y="585" width="1400" height="305" rx="12" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/>
+  <text x="342" y="612" class="small">alt [information operation]</text>
+  <line x1="468" y1="645" x2="1368" y2="645" class="blue"/>
+  <text x="918" y="632" text-anchor="middle" class="small">execute EffectiveInformationOperation</text>
+  <line x1="1368" y1="690" x2="1668" y2="690" class="blue"/>
+  <text x="1518" y="677" text-anchor="middle" class="small">信息操作</text>
+  <line x1="1668" y1="735" x2="1368" y2="735" class="blue"/>
+  <text x="1518" y="722" text-anchor="middle" class="small">Response／Event</text>
+
+  <line x1="320" y1="760" x2="1720" y2="760" stroke="#94A3B8" stroke-width="1.2"/>
+  <text x="342" y="786" class="small">else [physical operation]</text>
+  <line x1="768" y1="820" x2="1368" y2="820" class="red"/>
+  <text x="1068" y="807" text-anchor="middle" class="small">PermitDecision + EffectivePhysicalOperation</text>
+  <line x1="1368" y1="860" x2="1668" y2="860" class="green"/>
+  <text x="1518" y="847" text-anchor="middle" class="small">actual action a*</text>
+
+  <line x1="1668" y1="930" x2="1368" y2="930" class="green"/>
+  <text x="1518" y="917" text-anchor="middle" class="small">Response／I1</text>
+  <line x1="1368" y1="985" x2="468" y2="985" class="green"/>
+  <text x="918" y="972" text-anchor="middle" class="small">OperationOutcome／SafetyIntervention／ExecutionDeviation</text>
+
+  <line x1="468" y1="1045" x2="168" y2="1045" class="blue"/>
+  <text x="318" y="1032" text-anchor="middle" class="small">SkillOutcome + actualOutcome + evidenceRefs</text>
+
+  <line x1="168" y1="1105" x2="1950" y2="1105" class="blue"/>
+  <text x="1059" y="1092" text-anchor="middle" class="small">经验证的 Result／Evidence</text>
+  <line x1="1950" y1="1160" x2="168" y2="1160" class="blue"/>
+  <text x="1059" y="1147" text-anchor="middle" class="small">SharedState／EvidenceRef</text>
+
+  <rect x="510" y="1202" width="1080" height="46" rx="9" fill="#EEF6FF" stroke="#6B91BA"/>
+  <text x="1050" y="1231" text-anchor="middle" class="small">状态更新规则：候选不等于事实；仅以 effectiveOperation、actualOutcome、ExecutionDeviation、SharedState 和 Evidence 更新任务状态</text>
+</svg>

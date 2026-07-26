@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="Electron" modified="2026-07-25T00:00:00+08:00" agent="Codex" version="26.0.16" type="device" compressed="false">
+  <diagram id="l1-business-domain-agent-skill" name="Page-1">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1900" pageHeight="1160" math="0" shadow="0" background="#F8FAFC">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="title" value="Kinbot L1 基础业务 Agent 与 Skill 跨空间互连视图" style="text;html=1;align=center;verticalAlign=middle;fontFamily=Noto Sans CJK SC;fontSize=28;fontStyle=1;fontColor=#182230;" vertex="1" parent="1">
+          <mxGeometry x="530" y="20" width="840" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="infoInput" value="«item usage» 数字输入 I1 App／文本／云消息 外部服务与设备返回" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EAF3FF;strokeColor=#5C86B5;strokeWidth=2;fontFamily=Noto Sans CJK SC;fontSize=15;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="65" y="225" width="225" height="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="infoOutput" value="«item usage» 经许可的信息输出 解释、提醒、确认 服务调用与责任交接" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EAF3FF;strokeColor=#5C86B5;strokeWidth=2;fontFamily=Noto Sans CJK SC;fontSize=15;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="65" y="520" width="225" height="145" as="geometry"/>
+        </mxCell>
+        <mxCell id="external" value="«external part» 外部信息系统 App、云、穿戴 智能家居、第三方 不得直控本体" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EAF3FF;strokeColor=#5C86B5;strokeWidth=2;fontFamily=Noto Sans CJK SC;fontSize=15;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="65" y="800" width="225" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="a0" value="根任务与用户承诺 跨业务协调 · 主动授权 A0 : AgentCell" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#F1EDFA;strokeColor=#735FA5;strokeWidth=2;fontFamily=Noto Sans CJK SC;fontSize=15;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="745" y="215" width="385" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="business" value="四个基础业务 Agent 健康与照护｜陪伴与关系 家庭安全｜环境与物品 businessAgents : AgentCell [4]" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#F1EDFA;strokeColor=#735FA5;strokeWidth=2;fontFamily=Noto Sans CJK SC;fontSize=15;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="410" y="395" width="650" height="210" as="geometry"/>
+        </mxCell>
+        <mxCell id="o3" value="共享上下文服务 接收 I2／Evidence I-P2 → I3 · SharedMemory O3 : SharedContextService" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#E6F6F4;strokeColor=#32877F;strokeWidth=2;fontFamily=Noto Sans CJK SC;fontSize=15;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1110" y="395" width="370" height="210" as="geometry"/>
+        </mxCell>
+        <mxCell id="worker" value="«part usage» 动态 TaskWorker [0..*] 有界任务契约 Owner AgentCell，结束后回收" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#F1EDFA;strokeColor=#735FA5;strokeWidth=2;fontFamily=Noto Sans CJK SC;fontSize=15;align=center;verticalAlign=middle;dashed=1;dashPattern=8 5;" vertex="1" parent="1">
+          <mxGeometry x="600" y="660" width="390" height="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="skills" value="基础技能系统 持续感知｜交互｜导航｜识别 记忆访问｜信息服务｜未来操作 robotSkills : RobotSkillSystem" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFF4D8;strokeColor=#C28A1B;strokeWidth=2;fontFamily=Noto Sans CJK SC;fontSize=15;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="390" y="865" width="495" height="165" as="geometry"/>
+        </mxCell>
+        <mxCell id="ap3" value="Agent 运行平台 契约 · Worker · 租约 · 隔离 资源 · 版本 · 检查点 AP3 : AgentRuntimePlatform" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#E6F6F4;strokeColor=#32877F;strokeWidth=2;fontFamily=Noto Sans CJK SC;fontSize=15;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="655" width="430" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="g3" value="语义治理 授权 · 风险 · 隐私 撤销 · 紧急例外 G3" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FDECEC;strokeColor=#B94E56;strokeWidth=2;fontFamily=Noto Sans CJK SC;fontSize=15;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1015" y="865" width="240" height="165" as="geometry"/>
+        </mxCell>
+        <mxCell id="f1" value="机电与硬安全 实时控制 · 制动 防夹 · 断扭矩 F1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EAF7EE;strokeColor=#4A9468;strokeWidth=2;fontFamily=Noto Sans CJK SC;fontSize=15;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1290" y="865" width="225" height="165" as="geometry"/>
+        </mxCell>
+        <mxCell id="signals" value="«item usage» 实时物理信号 视觉、声音、IMU 编码器、电流、触觉" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EAF7EE;strokeColor=#4A9468;strokeWidth=2;fontFamily=Noto Sans CJK SC;fontSize=15;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1605" y="230" width="230" height="145" as="geometry"/>
+        </mxCell>
+        <mxCell id="robotState" value="«item usage» 机器人状态与输出 位置、速度、姿态 语音、屏幕、灯光、舱门" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EAF7EE;strokeColor=#4A9468;strokeWidth=2;fontFamily=Noto Sans CJK SC;fontSize=15;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1605" y="500" width="230" height="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="world" value="«external part» 人与家庭环境 人、宠物、家具、空间 携带物品与外部物体 机械臂能力仅预留" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EAF7EE;strokeColor=#4A9468;strokeWidth=2;fontFamily=Noto Sans CJK SC;fontSize=15;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1605" y="790" width="230" height="170" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1" value="数字 I1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#5C86B5;strokeWidth=2;" edge="1" parent="1" source="infoInput" target="skills">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e2" value="I2／Evidence" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#5C86B5;strokeWidth=2;" edge="1" parent="1" source="skills" target="o3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e3" value="StateRef／MemoryRef／EvidenceRef" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#32877F;strokeWidth=2;dashed=1;dashPattern=7 5;" edge="1" parent="1" source="o3" target="a0">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e4" value="基础业务契约／BusinessAuthorization" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#7B8794;strokeWidth=2;" edge="1" parent="1" source="a0" target="business">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e5" value="TaskContract" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#7B8794;strokeWidth=2;" edge="1" parent="1" source="business" target="worker">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e6" value="WorkerIntent" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#7B8794;strokeWidth=2;" edge="1" parent="1" source="business" target="ap3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e7" value="WorkerHandle／WorkerLease" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#32877F;strokeWidth=2;dashed=1;dashPattern=7 5;" edge="1" parent="1" source="ap3" target="worker">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e8" value="SkillRequest + adjustmentEnvelope" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#7B8794;strokeWidth=2;" edge="1" parent="1" source="worker" target="skills">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e9i" value="InformationActionProposal" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#B94E56;strokeWidth=2;exitX=1;exitY=0.35;entryX=0;entryY=0.35;" edge="1" parent="1" source="skills" target="g3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e9p" value="PhysicalActionProposal" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#B94E56;strokeWidth=2;exitX=1;exitY=0.7;entryX=0;entryY=0.7;" edge="1" parent="1" source="skills" target="g3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e10" value="EffectivePhysicalOperation + PermitLease" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#B94E56;strokeWidth=2;" edge="1" parent="1" source="g3" target="f1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e11" value="实际动作 a*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#4A9468;strokeWidth=2;" edge="1" parent="1" source="f1" target="robotState">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e12" value="作用／反馈" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#4A9468;strokeWidth=2;" edge="1" parent="1" source="robotState" target="world">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e13" value="环境变化" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#4A9468;strokeWidth=2;" edge="1" parent="1" source="world" target="signals">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e14" value="实时 I1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#4A9468;strokeWidth=2;" edge="1" parent="1" source="signals" target="f1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e15" value="登记的局部实时 I1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#4A9468;strokeWidth=2;" edge="1" parent="1" source="signals" target="skills">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e17" value="内部 Result／Evidence" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#5C86B5;strokeWidth=2;" edge="1" parent="1" source="worker" target="o3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e18" value="输出／调用／交接" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#5C86B5;strokeWidth=2;" edge="1" parent="1" source="infoOutput" target="external">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e19" value="MaterialDecisionEvent" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#B94E56;strokeWidth=2;dashed=1;dashPattern=7 5;" edge="1" parent="1" source="g3" target="worker">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e20" value="PermitDecision + EffectiveOperation（直接提案者必收）" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#B94E56;strokeWidth=2;" edge="1" parent="1" source="g3" target="skills">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e21" value="已许可信息操作" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#5C86B5;strokeWidth=2;" edge="1" parent="1" source="skills" target="infoOutput">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e22" value="SkillOutcome／ExecutionDeviation" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#5C86B5;strokeWidth=2;" edge="1" parent="1" source="skills" target="worker">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e23" value="RootImpactEvent（TaskWorker→A0）" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#B94E56;strokeWidth=2;dashed=1;dashPattern=7 5;" edge="1" parent="1" source="worker" target="a0">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e24" value="响应／事件" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#5C86B5;strokeWidth=2;" edge="1" parent="1" source="external" target="infoInput">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e25" value="SafetyIntervention" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#4A9468;strokeWidth=2;" edge="1" parent="1" source="f1" target="skills">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e26" value="显式意图 I2（触发根契约）" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#5C86B5;strokeWidth=2;" edge="1" parent="1" source="skills" target="a0">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

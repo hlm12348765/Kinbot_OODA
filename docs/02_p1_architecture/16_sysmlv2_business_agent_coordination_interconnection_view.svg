@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1900" height="1080" viewBox="0 0 1900 1080" role="img" aria-labelledby="title desc">
+  <title id="title">四个基础业务 Agent 受控直接协调互连视图</title>
+  <desc id="desc">SysML v2 InterconnectionView。展开健康与照护、陪伴与关系、家庭安全、环境与物品四个基础业务 Agent 的 CoordinationPort，以及 A0、O3、AP3 和 CoordinationGraph 的关系。业务语义直接到达对方，AP3 只负责通道机制。</desc>
+  <defs>
+    <marker id="arrow-purple" markerWidth="10" markerHeight="10" refX="9" refY="3.5" orient="auto"><path d="M0,0 L10,3.5 L0,7 Z" fill="#735FA5"/></marker>
+    <marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="9" refY="3.5" orient="auto"><path d="M0,0 L10,3.5 L0,7 Z" fill="#32877F"/></marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="9" refY="3.5" orient="auto"><path d="M0,0 L10,3.5 L0,7 Z" fill="#B94E56"/></marker>
+    <style>
+      text { font-family:"Noto Sans CJK SC","PingFang SC","Microsoft YaHei",sans-serif; fill:#182230; }
+      .title { font-size:30px; font-weight:700; }
+      .subtitle { font-size:15px; fill:#5A6573; }
+      .view { font-size:14px; fill:#45515F; }
+      .st { font-size:12px; fill:#5A6573; }
+      .name { font-size:18px; font-weight:700; }
+      .body { font-size:13px; }
+      .small { font-size:12px; }
+      .coord { fill:none; stroke:#735FA5; stroke-width:2; marker-start:url(#arrow-purple); marker-end:url(#arrow-purple); }
+      .support { fill:none; stroke:#32877F; stroke-width:1.8; stroke-dasharray:7 5; marker-end:url(#arrow-teal); }
+      .escalate { fill:none; stroke:#B94E56; stroke-width:2; stroke-dasharray:7 5; marker-end:url(#arrow-red); }
+      .decision { fill:none; stroke:#735FA5; stroke-width:2; marker-end:url(#arrow-purple); }
+      .divider { stroke:#CBD5E1; stroke-width:1; }
+    </style>
+  </defs>
+
+  <rect width="1900" height="1080" fill="#F8FAFC"/>
+  <text x="950" y="46" text-anchor="middle" class="title">四个基础业务 Agent 受控直接协调互连视图</text>
+  <text x="950" y="76" text-anchor="middle" class="subtitle">业务语义直接到达对方 · AP3只管通道机制 · 无法解决的根任务冲突返回A0</text>
+  <rect x="40" y="96" width="1820" height="42" rx="8" fill="#F1F5F9" stroke="#CBD5E1"/>
+  <text x="60" y="123" class="view">view &lt;baciiv&gt; '基础业务Agent协调互连视图' : InterconnectionView</text>
+
+  <g>
+    <rect x="680" y="165" width="540" height="120" rx="14" fill="#F1EDFA" stroke="#735FA5" stroke-width="2"/>
+    <text x="950" y="190" text-anchor="middle" class="st">«part usage»</text>
+    <text x="950" y="224" text-anchor="middle" class="name">A0：根任务与用户承诺</text>
+    <line x1="680" y1="242" x2="1220" y2="242" class="divider"/>
+    <text x="950" y="266" text-anchor="middle" class="body">接收冲突 Owner 的升级 · 向受影响实体返回 RootDecision</text>
+  </g>
+
+  <g>
+    <rect x="80" y="785" width="360" height="170" rx="14" fill="#E6F6F4" stroke="#32877F" stroke-width="2"/>
+    <text x="260" y="812" text-anchor="middle" class="st">«part usage»</text>
+    <text x="260" y="846" text-anchor="middle" class="name">O3：共享上下文服务</text>
+    <line x1="80" y1="865" x2="440" y2="865" class="divider"/>
+    <text x="260" y="892" text-anchor="middle" class="body">SharedState · SharedMemory · Evidence</text>
+    <text x="260" y="916" text-anchor="middle" class="body">提供受控引用，不替代协调语义</text>
+  </g>
+
+  <g>
+    <rect x="1460" y="785" width="360" height="170" rx="14" fill="#E6F6F4" stroke="#32877F" stroke-width="2"/>
+    <text x="1640" y="812" text-anchor="middle" class="st">«part usage»</text>
+    <text x="1640" y="846" text-anchor="middle" class="name">AP3：Agent运行平台</text>
+    <line x1="1460" y1="865" x2="1820" y2="865" class="divider"/>
+    <text x="1640" y="892" text-anchor="middle" class="body">登记 · 投递 · 审计 · 取消传播</text>
+    <text x="1640" y="916" text-anchor="middle" class="body">不判断业务优先级，不解释业务语义</text>
+  </g>
+
+  <g>
+    <rect x="95" y="355" width="360" height="145" rx="14" fill="#F1EDFA" stroke="#735FA5" stroke-width="2"/>
+    <rect x="405" y="405" width="38" height="38" rx="8" fill="#735FA5"/>
+    <text x="275" y="383" text-anchor="middle" class="st">«part usage»</text>
+    <text x="275" y="418" text-anchor="middle" class="name">健康与照护 Agent</text>
+    <text x="275" y="454" text-anchor="middle" class="body">长期健康与照护责任</text>
+  </g>
+
+  <g>
+    <rect x="95" y="565" width="360" height="145" rx="14" fill="#F1EDFA" stroke="#735FA5" stroke-width="2"/>
+    <rect x="405" y="615" width="38" height="38" rx="8" fill="#735FA5"/>
+    <text x="275" y="593" text-anchor="middle" class="st">«part usage»</text>
+    <text x="275" y="628" text-anchor="middle" class="name">家庭安全 Agent</text>
+    <text x="275" y="664" text-anchor="middle" class="body">长期家庭安全责任</text>
+  </g>
+
+  <g>
+    <rect x="1445" y="355" width="360" height="145" rx="14" fill="#F1EDFA" stroke="#735FA5" stroke-width="2"/>
+    <rect x="1457" y="405" width="38" height="38" rx="8" fill="#735FA5"/>
+    <text x="1625" y="383" text-anchor="middle" class="st">«part usage»</text>
+    <text x="1625" y="418" text-anchor="middle" class="name">陪伴与关系 Agent</text>
+    <text x="1625" y="454" text-anchor="middle" class="body">长期陪伴与关系责任</text>
+  </g>
+
+  <g>
+    <rect x="1445" y="565" width="360" height="145" rx="14" fill="#F1EDFA" stroke="#735FA5" stroke-width="2"/>
+    <rect x="1457" y="615" width="38" height="38" rx="8" fill="#735FA5"/>
+    <text x="1625" y="593" text-anchor="middle" class="st">«part usage»</text>
+    <text x="1625" y="628" text-anchor="middle" class="name">环境与物品 Agent</text>
+    <text x="1625" y="664" text-anchor="middle" class="body">长期环境与物品责任</text>
+  </g>
+
+  <g>
+    <rect x="690" y="385" width="520" height="290" rx="18" fill="#FFFFFF" stroke="#735FA5" stroke-width="2.2"/>
+    <text x="950" y="414" text-anchor="middle" class="st">«part usage»</text>
+    <text x="950" y="450" text-anchor="middle" class="name">CoordinationGraph</text>
+    <line x1="690" y1="470" x2="1210" y2="470" class="divider"/>
+    <text x="950" y="504" text-anchor="middle" class="body">记录当前根契约下允许存在的动态协调关系</text>
+    <text x="950" y="542" text-anchor="middle" class="body">子契约请求／接受或拒绝</text>
+    <text x="950" y="570" text-anchor="middle" class="body">进度、结果与证据引用</text>
+    <text x="950" y="598" text-anchor="middle" class="body">取消、责任转移与不可撤销影响</text>
+    <rect x="720" y="625" width="460" height="28" rx="8" fill="#FDECEC" stroke="#D88B91"/>
+    <text x="950" y="644" text-anchor="middle" class="small">不允许扩权、循环委派、双Owner或TaskWorker自由组网</text>
+  </g>
+
+  <path d="M443,424 L690,470" class="coord"/>
+  <path d="M443,634 L690,590" class="coord"/>
+  <path d="M1457,424 L1210,470" class="coord"/>
+  <path d="M1457,634 L1210,590" class="coord"/>
+
+  <path d="M880,385 L880,310 L835,310 L835,285" class="escalate"/>
+  <text x="790" y="333" text-anchor="middle" class="small">冲突 Owner → A0（AP3投递）</text>
+  <path d="M1065,285 L1065,385" class="decision"/>
+  <text x="1120" y="333" text-anchor="middle" class="small">RootDecision → 受影响实体</text>
+
+  <path d="M440,870 L520,870 L520,735 L730,675" class="support"/>
+  <text x="590" y="814" text-anchor="middle" class="small">StateRef／MemoryRef／EvidenceRef</text>
+  <path d="M1460,870 L1380,870 L1380,735 L1170,675" class="support"/>
+  <text x="1310" y="814" text-anchor="middle" class="small">通道、登记、投递与审计</text>
+
+  <rect x="300" y="990" width="1300" height="54" rx="10" fill="#EEF6FF" stroke="#6B91BA"/>
+  <text x="950" y="1013" text-anchor="middle" class="small">不变量：同一子契约只有一个Owner；协调不得扩大根契约、授权、预算和外部影响；无法解决的冲突返回A0</text>
+  <text x="950" y="1034" text-anchor="middle" class="small">逻辑直连不等于物理旁路：AP3负责机制，O3提供引用，业务Agent负责协调语义</text>
+</svg>

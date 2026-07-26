@@ -1,0 +1,177 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2050" height="1200" viewBox="0 0 2050 1200" role="img" aria-labelledby="title desc">
+  <title id="title">&#x4E3B;&#x52A8;&#x4EFB;&#x52A1;&#x6388;&#x6743;&#x3001;TaskWorker &#x521B;&#x5EFA;&#x4E0E;&#x5B9E;&#x65F6;&#x6267;&#x884C;&#x65F6;&#x5E8F;&#x89C6;&#x56FE;</title>
+  <desc id="desc">&#x5C55;&#x793A;&#x57FA;&#x7840;&#x4E1A;&#x52A1;Agent&#x9759;&#x9ED8;&#x89C4;&#x5212;&#x540E;&#x5411;A0&#x7533;&#x8BF7;BusinessAuthorization&#xFF0C;&#x6279;&#x51C6;&#x65F6;&#x7531;AP3&#x521B;&#x5EFA;TaskWorker&#xFF0C;&#x5E76;&#x7ECF;RobotSkill&#x3001;G3&#x3001;F1&#x8FD4;&#x56DE;&#x5B9E;&#x9645;&#x64CD;&#x4F5C;&#x4E0E;&#x7ED3;&#x679C;&#xFF1B;&#x540C;&#x65F6;&#x5C55;&#x793A;&#x6682;&#x7F13;&#x3001;&#x62D2;&#x7EDD;&#x548C;&#x7D27;&#x6025;&#x4F8B;&#x5916;&#x8FB9;&#x754C;&#x3002;</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L10,3.5 L0,7 Z" fill="#7B8794"/>
+    </marker>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L10,3.5 L0,7 Z" fill="#5C86B5"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L10,3.5 L0,7 Z" fill="#B94E56"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L10,3.5 L0,7 Z" fill="#4A9468"/>
+    </marker>
+    <style>
+    text { font-family: "Noto Sans CJK SC","PingFang SC","Microsoft YaHei",sans-serif; fill: #182230; }
+    .title { font-size: 30px; font-weight: 700; }
+    .subtitle { font-size: 15px; fill: #5A6573; }
+    .view { font-size: 14px; fill: #45515F; }
+    .st { font-size: 12px; fill: #5A6573; }
+    .name { font-size: 18px; font-weight: 700; }
+    .body { font-size: 13px; }
+    .small { font-size: 12px; }
+    .tiny { font-size: 11px; }
+    .edge { fill: none; stroke: #7B8794; stroke-width: 1.7; marker-end: url(#arrow); }
+    .edge-blue { fill: none; stroke: #5C86B5; stroke-width: 1.8; marker-end: url(#arrow-blue); }
+    .edge-red { fill: none; stroke: #B94E56; stroke-width: 1.9; marker-end: url(#arrow-red); }
+    .edge-green { fill: none; stroke: #4A9468; stroke-width: 1.9; marker-end: url(#arrow-green); }
+    .edge-dash { fill: none; stroke: #32877F; stroke-width: 1.7; stroke-dasharray: 7 5; marker-end: url(#arrow); }
+    .divider { stroke: #CBD5E1; stroke-width: 1; }
+  </style>
+  </defs>
+  <rect width="2050" height="1200" fill="#F8FAFC"/>
+  <text x="1025" y="42" text-anchor="middle" class="title">
+    <tspan x="1025" dy="0">&#x4E3B;&#x52A8;&#x4EFB;&#x52A1;&#x6388;&#x6743;&#x3001;TaskWorker &#x521B;&#x5EFA;&#x4E0E;&#x5B9E;&#x65F6;&#x6267;&#x884C;&#x65F6;&#x5E8F;&#x89C6;&#x56FE;</tspan>
+  </text>
+  <text x="1025" y="68" text-anchor="middle" class="subtitle">
+    <tspan x="1025" dy="0">&#x57FA;&#x7840;&#x4E1A;&#x52A1;&#x627F;&#x62C5;&#x957F;&#x671F;&#x8D23;&#x4EFB; &#xB7; TaskWorker&#x627F;&#x62C5;&#x5177;&#x4F53;&#x4EFB;&#x52A1; &#xB7; RobotSkill&#x590D;&#x7528;&#x57FA;&#x7840;&#x80FD;&#x529B;</tspan>
+  </text>
+  <rect x="40" y="84" width="1970" height="38" rx="8" fill="#F3F5F7" stroke="#CBD5E1"/>
+  <text x="58" y="109" text-anchor="start" class="view">
+    <tspan x="58" dy="0">view &lt;patsv&gt; '&#x4E3B;&#x52A8;&#x4EFB;&#x52A1;&#x6388;&#x6743;&#x65F6;&#x5E8F;&#x89C6;&#x56FE;' : SequenceView</tspan>
+  </text>
+  <rect x="35" y="150" width="220" height="65" rx="10" fill="#F1EDFA" stroke="#735FA5" stroke-width="2"/>
+  <text x="145" y="190" text-anchor="middle" class="name">
+    <tspan x="145" dy="0">&#x57FA;&#x7840;&#x4E1A;&#x52A1; Agent</tspan>
+  </text>
+  <line x1="145" y1="215" x2="145" y2="1140" stroke="#7B8794" stroke-width="1.2" stroke-dasharray="7 6"/>
+  <rect x="320" y="150" width="220" height="65" rx="10" fill="#F1EDFA" stroke="#735FA5" stroke-width="2"/>
+  <text x="430" y="190" text-anchor="middle" class="name">
+    <tspan x="430" dy="0">A0</tspan>
+  </text>
+  <line x1="430" y1="215" x2="430" y2="1140" stroke="#7B8794" stroke-width="1.2" stroke-dasharray="7 6"/>
+  <rect x="600" y="150" width="220" height="65" rx="10" fill="#E6F6F4" stroke="#32877F" stroke-width="2"/>
+  <text x="710" y="190" text-anchor="middle" class="name">
+    <tspan x="710" dy="0">AP3</tspan>
+  </text>
+  <line x1="710" y1="215" x2="710" y2="1140" stroke="#7B8794" stroke-width="1.2" stroke-dasharray="7 6"/>
+  <rect x="885" y="150" width="220" height="65" rx="10" fill="#F1EDFA" stroke="#735FA5" stroke-width="2"/>
+  <text x="995" y="190" text-anchor="middle" class="name">
+    <tspan x="995" dy="0">TaskWorker</tspan>
+  </text>
+  <line x1="995" y1="215" x2="995" y2="1140" stroke="#7B8794" stroke-width="1.2" stroke-dasharray="7 6"/>
+  <rect x="1170" y="150" width="220" height="65" rx="10" fill="#FFF4D8" stroke="#C28A1B" stroke-width="2"/>
+  <text x="1280" y="190" text-anchor="middle" class="name">
+    <tspan x="1280" dy="0">RobotSkill</tspan>
+  </text>
+  <line x1="1280" y1="215" x2="1280" y2="1140" stroke="#7B8794" stroke-width="1.2" stroke-dasharray="7 6"/>
+  <rect x="1455" y="150" width="220" height="65" rx="10" fill="#FDECEC" stroke="#B94E56" stroke-width="2"/>
+  <text x="1565" y="190" text-anchor="middle" class="name">
+    <tspan x="1565" dy="0">G3</tspan>
+  </text>
+  <line x1="1565" y1="215" x2="1565" y2="1140" stroke="#7B8794" stroke-width="1.2" stroke-dasharray="7 6"/>
+  <rect x="1740" y="150" width="220" height="65" rx="10" fill="#EAF7EE" stroke="#4A9468" stroke-width="2"/>
+  <text x="1850" y="190" text-anchor="middle" class="name">
+    <tspan x="1850" dy="0">F1</tspan>
+  </text>
+  <line x1="1850" y1="215" x2="1850" y2="1140" stroke="#7B8794" stroke-width="1.2" stroke-dasharray="7 6"/>
+  <rect x="45" y="245" width="1960" height="95" rx="10" fill="#F3F5F7" stroke="#CBD5E1"/>
+  <text x="145" y="275" text-anchor="middle" class="st">
+    <tspan x="145" dy="0">&#x9759;&#x9ED8;&#x89C4;&#x5212;</tspan>
+  </text>
+  <text x="145" y="306" text-anchor="middle" class="body">
+    <tspan x="145" dy="0">&#x8BFB;&#x53D6;State&#xFF0F;Memory&#xFF0F;Evidence</tspan>
+    <tspan x="145" dy="20">&#x5F62;&#x6210;&#x8BA1;&#x5212;&#x4F46;&#x4E0D;&#x4EA7;&#x751F;&#x5916;&#x90E8;&#x8F93;&#x51FA;</tspan>
+  </text>
+  <path d="M145,365 L430,365" class="edge"/>
+  <rect x="201.5" y="343" width="172" height="20" rx="4" fill="#F8FAFC" opacity="0.94"/>
+  <text x="287.5" y="357" text-anchor="middle" class="small">
+    <tspan x="287.5" dy="0">InitiativeProposal</tspan>
+  </text>
+  <rect x="55" y="395" width="1940" height="535" rx="12" fill="none" stroke="#735FA5" stroke-width="1.7"/>
+  <rect x="55" y="395" width="205" height="34" fill="#F1EDFA" stroke="#735FA5"/>
+  <text x="158" y="418" text-anchor="middle" class="st">
+    <tspan x="158" dy="0">&#xAB;alt&#xBB; &#x6279;&#x51C6;&#x6216;&#x6536;&#x7D27;</tspan>
+  </text>
+  <path d="M430,455 L145,455" class="edge"/>
+  <rect x="152" y="433" width="271" height="20" rx="4" fill="#F8FAFC" opacity="0.94"/>
+  <text x="287.5" y="447" text-anchor="middle" class="small">
+    <tspan x="287.5" dy="0">BusinessAuthorization&#xFF08;Auth_b&#xFF09;</tspan>
+  </text>
+  <path d="M145,520 L710,520" class="edge"/>
+  <rect x="292" y="498" width="271" height="20" rx="4" fill="#F8FAFC" opacity="0.94"/>
+  <text x="427.5" y="512" text-anchor="middle" class="small">
+    <tspan x="427.5" dy="0">WorkerIntent&#xFF08;&#x5F15;&#x7528; TaskContract&#xFF09;</tspan>
+  </text>
+  <path d="M710,585 L145,585" class="edge-dash"/>
+  <rect x="305.5" y="563" width="244" height="20" rx="4" fill="#F8FAFC" opacity="0.94"/>
+  <text x="427.5" y="577" text-anchor="middle" class="small">
+    <tspan x="427.5" dy="0">WorkerHandle + WorkerLease</tspan>
+  </text>
+  <path d="M710,650 L995,650" class="edge"/>
+  <rect x="757.5" y="628" width="190" height="20" rx="4" fill="#F8FAFC" opacity="0.94"/>
+  <text x="852.5" y="642" text-anchor="middle" class="small">
+    <tspan x="852.5" dy="0">create&#xFF0F;reuse + start</tspan>
+  </text>
+  <path d="M995,715 L1280,715" class="edge"/>
+  <rect x="1022" y="693" width="231" height="20" rx="4" fill="#F8FAFC" opacity="0.94"/>
+  <text x="1137.5" y="707" text-anchor="middle" class="small">
+    <tspan x="1137.5" dy="0">SkillRequest + adjustmentEnvelope</tspan>
+  </text>
+  <path d="M1280,780 L1565,780" class="edge-red"/>
+  <rect x="1354.5" y="758" width="136" height="20" rx="4" fill="#F8FAFC" opacity="0.94"/>
+  <text x="1422.5" y="772" text-anchor="middle" class="small">
+    <tspan x="1422.5" dy="0">ActionProposal</tspan>
+  </text>
+  <path d="M1565,820 L1280,820" class="edge-red"/>
+  <rect x="1305" y="798" width="235" height="20" rx="4" fill="#F8FAFC" opacity="0.94"/>
+  <text x="1422.5" y="812" text-anchor="middle" class="small">
+    <tspan x="1422.5" dy="0">PermitDecision + EffectiveOperation</tspan>
+  </text>
+  <path d="M1565,850 L1850,850" class="edge-red"/>
+  <rect x="1579" y="828" width="257" height="20" rx="4" fill="#F8FAFC" opacity="0.94"/>
+  <text x="1565" y="842" text-anchor="middle" class="small">
+    <tspan x="1707.5" dy="0">EffectivePhysicalOperation + PermitLease</tspan>
+  </text>
+  <path d="M1850,880 L1280,880" class="edge-green"/>
+  <rect x="1433" y="858" width="264" height="20" rx="4" fill="#F8FAFC" opacity="0.94"/>
+  <text x="1422.5" y="872" text-anchor="middle" class="small">
+    <tspan x="1565" dy="0">SafetyIntervention&#xFF0F;ExecutionDeviation</tspan>
+  </text>
+  <path d="M1280,905 L995,905" class="edge-blue"/>
+  <rect x="1035" y="883" width="205" height="20" rx="4" fill="#F8FAFC" opacity="0.94"/>
+  <text x="1137.5" y="897" text-anchor="middle" class="small">
+    <tspan x="1137.5" dy="0">SkillOutcome + actualOutcome</tspan>
+  </text>
+  <path d="M995,925 L430,925" class="edge-red-dash"/>
+  <rect x="610" y="903" width="205" height="20" rx="4" fill="#F8FAFC" opacity="0.94"/>
+  <text x="712.5" y="917" text-anchor="middle" class="small">
+    <tspan x="712.5" dy="0">RootImpactEvent&#xFF08;TaskWorker&#x2192;A0&#xFF09;</tspan>
+  </text>
+  <rect x="55" y="950" width="930" height="105" rx="10" fill="#EAF3FF" stroke="#5C86B5"/>
+  <text x="150" y="978" text-anchor="start" class="st">
+    <tspan x="150" dy="0">&#xAB;alt&#xBB; &#x6682;&#x7F13;&#xFF0F;&#x62D2;&#x7EDD;</tspan>
+  </text>
+  <text x="520" y="1009" text-anchor="middle" class="body">
+    <tspan x="520" dy="0">&#x6682;&#x7F13;&#xFF1A;&#x4FDD;&#x7559;&#x8BA1;&#x5212;&#x548C;&#x91CD;&#x65B0;&#x8BC4;&#x4F30;&#x6761;&#x4EF6;</tspan>
+    <tspan x="520" dy="22">&#x62D2;&#x7EDD;&#xFF1A;&#x4E0D;&#x521B;&#x5EFA;TaskWorker&#xFF1B;&#x4E24;&#x8005;&#x90FD;&#x4E0D;&#x4EA7;&#x751F;&#x5916;&#x90E8;&#x8F93;&#x51FA;</tspan>
+  </text>
+  <rect x="1015" y="950" width="980" height="105" rx="10" fill="#FDECEC" stroke="#B94E56"/>
+  <text x="1110" y="978" text-anchor="start" class="st">
+    <tspan x="1110" dy="0">&#xAB;exception&#xBB; &#x9884;&#x5B9A;&#x4E49;&#x7D27;&#x6025;&#x5951;&#x7EA6;</tspan>
+  </text>
+  <text x="1505" y="1009" text-anchor="middle" class="body">
+    <tspan x="1505" dy="0">&#x53EF;&#x7ED5;&#x8FC7;A0&#x5373;&#x65F6;&#x6279;&#x51C6;&#xFF0C;&#x4F46;&#x5FC5;&#x987B;&#x56FA;&#x5B9A;&#x89E6;&#x53D1;&#x6761;&#x4EF6;&#x3001;&#x6743;&#x9650;&#x4E0A;&#x9650;&#x3001;&#x6709;&#x6548;&#x671F;&#x548C;&#x505C;&#x6B62;&#x6761;&#x4EF6;</tspan>
+    <tspan x="1505" dy="22">&#x4E0D;&#x5F97;&#x7ED5;&#x8FC7;AP3&#x3001;G3&#x548C;F1</tspan>
+  </text>
+  <text x="1025" y="1115" text-anchor="middle" class="subtitle">
+    <tspan x="1025" dy="0">&#x4FE1;&#x606F;&#x64CD;&#x4F5C;&#xFF1A;RobotSkill &#x6267;&#x884C; G3 &#x8FD4;&#x56DE;&#x7684;&#x5B9E;&#x9645;&#x64CD;&#x4F5C;&#xFF1B;&#x7269;&#x7406;&#x52A8;&#x4F5C;&#xFF1A;G3 &#x5C06;&#x5B9E;&#x9645;&#x7269;&#x7406;&#x64CD;&#x4F5C;&#x4EA4;&#x7ED9; F1&#x3002;</tspan>
+  </text>
+  <text x="1025" y="1145" text-anchor="middle" class="subtitle">
+    <tspan x="1025" dy="0">&#x7528;&#x6237;&#x660E;&#x786E;&#x8BF7;&#x6C42;&#x5DF2;&#x7531;&#x6839;&#x4EFB;&#x52A1;&#x5951;&#x7EA6;&#x6388;&#x6743;&#xFF0C;&#x4E0D;&#x91CD;&#x590D;&#x7533;&#x8BF7; BusinessAuthorization&#x3002;</tspan>
+  </text>
+</svg>

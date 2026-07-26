@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="Electron" modified="2026-07-25T00:00:00+08:00" agent="Codex" version="26.0.16" type="device" compressed="false">
+  <diagram id="current-l1-seven-closed-loops" name="Page-1">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2200" pageHeight="1760" math="0" shadow="0" background="#F8FAFC">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="title" value="当前 L1 架构七类闭环及实体关系视图" style="text;html=1;align=center;fontFamily=Noto Sans CJK SC;fontSize=28;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="650" y="20" width="900" height="44" as="geometry"/></mxCell>
+        <mxCell id="cl1" value="CL-1 Agent Cell 局部闭环&#xa;Observation／Refs → AgentCell → Result／Request／Proposal → Feedback／Intervention → AgentCell" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F7F4FC;strokeColor=#735FA5;strokeWidth=2;fontSize=16;" vertex="1" parent="1"><mxGeometry x="55" y="165" width="2090" height="165" as="geometry"/></mxCell>
+        <mxCell id="cl2" value="CL-2 任务与契约履约闭环（图中展开TaskWorker子环）&#xa;TaskContract → TaskWorker → RobotSkill → SkillOutcome／ExecutionDeviation → TaskWorker → O3 → TaskWorker&#xa;基础业务协调与根任务影响升级由配套InterconnectionView／SequenceView展开" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F9F7FC;strokeColor=#735FA5;strokeWidth=2;fontSize=16;" vertex="1" parent="1"><mxGeometry x="55" y="355" width="2090" height="165" as="geometry"/></mxCell>
+        <mxCell id="cl3" value="CL-3 信息操作闭环&#xa;TaskWorker → RobotSkill → InformationActionProposal → G3 → EffectiveInformationOperation → 外部信息环境 → Outcome／O3 → TaskWorker" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F2F7FD;strokeColor=#5C86B5;strokeWidth=2;fontSize=16;" vertex="1" parent="1"><mxGeometry x="55" y="545" width="2090" height="165" as="geometry"/></mxCell>
+        <mxCell id="cl4" value="CL-4 物理任务闭环&#xa;TaskWorker → RobotSkill → PhysicalActionProposal → G3 → EffectivePhysicalOperation → F1 → 物理环境 → I1 → RobotSkill → TaskWorker" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F2FBF5;strokeColor=#4A9468;strokeWidth=2;fontSize=16;" vertex="1" parent="1"><mxGeometry x="55" y="735" width="2090" height="165" as="geometry"/></mxCell>
+        <mxCell id="cl5" value="CL-5 F1 硬安全闭环&#xa;实时 I1 → F1 → 执行器 → 物理环境 → 实时 I1；独立于 Agent、G3、消息总线和网络" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFFAF3;strokeColor=#4A9468;strokeWidth=2;fontSize=16;" vertex="1" parent="1"><mxGeometry x="55" y="925" width="2090" height="165" as="geometry"/></mxCell>
+        <mxCell id="cl6" value="CL-6 运行与治理闭环&#xa;许可子环：ActionProposal → G3 → PermitDecision／Revocation → 执行者 → Outcome／Owner&#xa;Worker 子环：WorkerIntent → AP3 → WorkerLease／Handle → TaskWorker → heartbeat／checkpoint → AP3；AP3异步执行确定性资源调度" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4F8F8;strokeColor=#32877F;strokeWidth=2;fontSize=16;" vertex="1" parent="1"><mxGeometry x="55" y="1115" width="2090" height="245" as="geometry"/></mxCell>
+        <mxCell id="cl7" value="CL-7 持续感知与共享状态更新闭环&#xa;观察策略／ObservationRequest → RobotSkillSystem；P1 → P-P1 → I1 → RobotSkillSystem执行I-P1 → I2／Evidence → O3执行I-P2 → I3 → Agent／RobotSkill → 新观察请求&#xa;AP3在主因果链外保障运行和资源" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDF8FA;strokeColor=#3D8C96;strokeWidth=2;fontSize=16;" vertex="1" parent="1"><mxGeometry x="55" y="1385" width="2090" height="165" as="geometry"/></mxCell>
+        <mxCell id="note" value="七类表示稳定关系拓扑；每个运行中的 Agent Cell 都拥有自己的 CL-1，闭环实例数随 TaskWorker、Skill 内部 Agent 和控制 Agent 动态变化。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEF6FF;strokeColor=#6B91BA;fontSize=15;" vertex="1" parent="1"><mxGeometry x="420" y="1585" width="1360" height="70" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

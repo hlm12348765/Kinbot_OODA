@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="4400" height="3100" viewBox="0 0 4400 3100" role="img" aria-labelledby="title desc">
+  <title id="title">Kinbot L1 混合分层自治互连视图</title>
+  <desc id="desc">当前架构的早期 L1 纵向分层表示：A0 集中跨领域语义与承诺，O3、C3、N3 和未来 OP3 按时间尺度形成领域闭环，ST3 提供交互与信息技能，AP3 提供运行支撑，G3 与 F1 分别实施语义授权和硬安全。该图仅用于追溯视图演进，不作为当前正式拓扑。</desc>
+  <defs>
+    <marker id="arrow-blue" markerWidth="12" markerHeight="12" refX="10" refY="5" orient="auto"><path d="M0,0 L0,10 L11,5 z" fill="#4285F4"/></marker>
+    <marker id="arrow-gold" markerWidth="12" markerHeight="12" refX="10" refY="5" orient="auto"><path d="M0,0 L0,10 L11,5 z" fill="#B98618"/></marker>
+    <marker id="arrow-green" markerWidth="12" markerHeight="12" refX="10" refY="5" orient="auto"><path d="M0,0 L0,10 L11,5 z" fill="#38815B"/></marker>
+    <marker id="arrow-red" markerWidth="12" markerHeight="12" refX="10" refY="5" orient="auto"><path d="M0,0 L0,10 L11,5 z" fill="#C2413B"/></marker>
+    <marker id="arrow-gray" markerWidth="12" markerHeight="12" refX="10" refY="5" orient="auto"><path d="M0,0 L0,10 L11,5 z" fill="#637083"/></marker>
+  </defs>
+  <style>
+    text{font-family:"Noto Sans CJK SC","PingFang SC","Microsoft YaHei",Arial,sans-serif;fill:#182230}
+    .title{font-size:42px;font-weight:600}.subtitle{font-size:24px;fill:#5A6573}.view{font-size:22px;fill:#45515F}
+    .layer{font-size:27px;font-weight:600}.kind{font-size:19px;fill:#5A6573}.name{font-size:25px;font-weight:600}.id{font-size:24px;font-weight:700;fill:#FFFFFF}
+    .body{font-size:20px}.small{font-size:18px;fill:#5A6573}.edge{font-size:17px;font-weight:500}
+    .node{stroke-width:2.5}.lane{stroke-width:2}.flow{fill:none;stroke-width:3}.thin{fill:none;stroke-width:2.3}.dash{stroke-dasharray:12 9}
+  </style>
+
+  <rect width="4400" height="3100" fill="#F8FAFC"/>
+  <text class="title" x="2200" y="60" text-anchor="middle">Kinbot L1 混合分层自治互连视图</text>
+  <text class="subtitle" x="2200" y="103" text-anchor="middle">跨领域语义集中 · 必要领域局部闭环 · 语义授权与硬安全独立</text>
+  <rect x="70" y="128" width="4260" height="52" rx="12" fill="#EEF2F7" stroke="#CBD4DE"/>
+  <text class="view" x="95" y="162">view &lt;l1hiv&gt; 'L1混合分层互连视图' : InterconnectionView</text>
+
+  <!-- 外部环境 -->
+  <rect class="lane" x="80" y="210" width="4240" height="260" rx="22" fill="#F2F7FD" stroke="#7AA7D9"/>
+  <text class="layer" x="140" y="255" fill="#315F93">外部环境</text>
+  <rect class="node" x="1510" y="275" width="1380" height="145" rx="72" fill="#E8F0FE" stroke="#4285F4"/>
+  <text class="kind" x="2200" y="307" text-anchor="middle">«part usage»</text>
+  <text class="name" x="2200" y="348" text-anchor="middle">用户、信息系统与物理环境</text>
+  <text class="body" x="2200" y="386" text-anchor="middle">语音、视觉、消息、服务、空间、物体与环境变化</text>
+
+  <!-- 中枢编排 -->
+  <rect class="lane" x="80" y="520" width="4240" height="340" rx="22" fill="#FFFBEB" stroke="#D5A526"/>
+  <text class="layer" x="140" y="565" fill="#8A6410">跨领域编排层</text>
+  <rect class="node" x="950" y="605" width="2500" height="190" rx="14" fill="#FFF1C9" stroke="#B98618"/>
+  <rect x="980" y="625" width="96" height="54" rx="12" fill="#9A6B08"/>
+  <text class="id" x="1028" y="662" text-anchor="middle">A0</text>
+  <text class="kind" x="2200" y="638" text-anchor="middle">«part usage : AgentCell»</text>
+  <text class="name" x="2200" y="680" text-anchor="middle">中枢编排 Agent</text>
+  <line x1="950" y1="702" x2="3450" y2="702" stroke="#B98618"/>
+  <text class="body" x="2200" y="738" text-anchor="middle"><tspan x="2200">根目标 · 跨领域计划 · 统一对话 · 优先级与中断恢复</tspan><tspan x="2200" dy="30">唯一主业务规划中心，统一语言承诺与实际行为</tspan></text>
+
+  <!-- 领域闭环与技能 -->
+  <rect class="lane" x="80" y="910" width="4240" height="760" rx="22" fill="#F2FBF5" stroke="#73B391"/>
+  <text class="layer" x="140" y="955" fill="#38815B">领域闭环与技能层</text>
+  <text class="small" x="4260" y="955" text-anchor="end">领域闭环对上提供受限能力接口，对内持续感知、判断、执行与恢复</text>
+
+  <g>
+    <rect class="node" x="140" y="1010" width="760" height="245" rx="14" fill="#DDF4E5" stroke="#38815B"/>
+    <rect x="162" y="1028" width="84" height="52" rx="11" fill="#28704B"/>
+    <text class="id" x="204" y="1064" text-anchor="middle">O3</text>
+    <text class="kind" x="520" y="1043" text-anchor="middle">«part usage : StateLoop»</text>
+    <text class="name" x="520" y="1084" text-anchor="middle">态势与状态闭环</text>
+    <line x1="140" y1="1106" x2="900" y2="1106" stroke="#38815B"/>
+    <text class="body" x="520" y="1142" text-anchor="middle"><tspan x="520">I1 → I2 → I3</tspan><tspan x="520" dy="30">共享状态语义 · 不确定性 · 证据</tspan><tspan x="520" dy="30">不创造业务目标</tspan></text>
+  </g>
+
+  <g>
+    <rect class="node" x="980" y="1010" width="760" height="245" rx="14" fill="#DDF4E5" stroke="#38815B"/>
+    <rect x="1002" y="1028" width="84" height="52" rx="11" fill="#28704B"/>
+    <text class="id" x="1044" y="1064" text-anchor="middle">C3</text>
+    <text class="kind" x="1360" y="1043" text-anchor="middle">«part usage : AgentCell»</text>
+    <text class="name" x="1360" y="1084" text-anchor="middle">照护连续性 Agent</text>
+    <line x1="980" y1="1106" x2="1740" y2="1106" stroke="#38815B"/>
+    <text class="body" x="1360" y="1142" text-anchor="middle"><tspan x="1360">CareEvent · 用药与健康子目标</tspan><tspan x="1360" dy="30">提醒升级 · 服务跟踪 · 责任交接</tspan><tspan x="1360" dy="30">不取得根任务所有权</tspan></text>
+  </g>
+
+  <g>
+    <rect class="node" x="1820" y="1010" width="760" height="245" rx="14" fill="#DDF4E5" stroke="#38815B"/>
+    <rect x="1842" y="1028" width="84" height="52" rx="11" fill="#28704B"/>
+    <text class="id" x="1884" y="1064" text-anchor="middle">N3</text>
+    <text class="kind" x="2200" y="1043" text-anchor="middle">«part usage : PhysicalAgentCell»</text>
+    <text class="name" x="2200" y="1084" text-anchor="middle">导航领域 Agent</text>
+    <line x1="1820" y1="1106" x2="2580" y2="1106" stroke="#38815B"/>
+    <text class="body" x="2200" y="1142" text-anchor="middle"><tspan x="2200">任务级导航目标 · 局部定位</tspan><tspan x="2200" dy="30">动态避障 · 重规划 · 到达验证</tspan><tspan x="2200" dy="30">不改变目的地和许可</tspan></text>
+  </g>
+
+  <g>
+    <rect class="node" x="2660" y="1010" width="760" height="245" rx="14" fill="#EAF7ED" stroke="#38815B" stroke-dasharray="12 8"/>
+    <rect x="2682" y="1028" width="100" height="52" rx="11" fill="#4D8766"/>
+    <text class="id" x="2732" y="1064" text-anchor="middle">OP3</text>
+    <text class="kind" x="3040" y="1043" text-anchor="middle">«part usage : FuturePhysicalAgentCell»</text>
+    <text class="name" x="3040" y="1084" text-anchor="middle">操作领域 Agent（预留）</text>
+    <line x1="2660" y1="1106" x2="3420" y2="1106" stroke="#38815B" stroke-dasharray="12 8"/>
+    <text class="body" x="3040" y="1142" text-anchor="middle"><tspan x="3040">未来机械臂任务级目标</tspan><tspan x="3040" dy="30">力反馈修正 · 操作验证与恢复</tspan><tspan x="3040" dy="30">V1 不激活</tspan></text>
+  </g>
+
+  <g>
+    <rect class="node" x="3500" y="1010" width="760" height="245" rx="14" fill="#E8F0FE" stroke="#4285F4"/>
+    <rect x="3522" y="1028" width="100" height="52" rx="11" fill="#2F6FD0"/>
+    <text class="id" x="3572" y="1064" text-anchor="middle">ST3</text>
+    <text class="kind" x="3880" y="1043" text-anchor="middle">«part usage : SkillSystem»</text>
+    <text class="name" x="3880" y="1084" text-anchor="middle">交互与信息技能系统</text>
+    <line x1="3500" y1="1106" x2="4260" y2="1106" stroke="#4285F4"/>
+    <text class="body" x="3880" y="1142" text-anchor="middle"><tspan x="3880">ASR/TTS · 屏幕与灯光</tspan><tspan x="3880" dy="30">消息 · 查询 · 受控连接器</tspan><tspan x="3880" dy="30">不决定内容、对象和目标</tspan></text>
+  </g>
+
+  <rect x="510" y="1370" width="3380" height="145" rx="12" fill="#EAF5EE" stroke="#9AC4AA"/>
+  <text class="kind" x="2200" y="1402" text-anchor="middle">«interface contract»</text>
+  <text class="body" x="2200" y="1440" text-anchor="middle">A0 下发目标、上下文、许可边界、预算和完成条件；领域返回状态变化、结果、置信度和失败证据</text>
+  <text class="small" x="2200" y="1477" text-anchor="middle">默认不建立领域全连接；仅 N3—OP3 在同一复合任务合同内使用受限协调</text>
+
+  <!-- 运行与治理 -->
+  <rect class="lane" x="80" y="1720" width="4240" height="410" rx="22" fill="#F7F3FC" stroke="#9A7BB8"/>
+  <text class="layer" x="140" y="1765" fill="#70518E">运行与语义治理层</text>
+  <g>
+    <rect class="node" x="310" y="1815" width="1760" height="225" rx="14" fill="#F0E8F8" stroke="#8A69A8"/>
+    <rect x="336" y="1833" width="104" height="52" rx="11" fill="#755295"/>
+    <text class="id" x="388" y="1869" text-anchor="middle">AP3</text>
+    <text class="kind" x="1190" y="1848" text-anchor="middle">«part usage : RuntimePlatform»</text>
+    <text class="name" x="1190" y="1889" text-anchor="middle">Agent 运行平台</text>
+    <line x1="310" y1="1911" x2="2070" y2="1911" stroke="#8A69A8"/>
+    <text class="body" x="1190" y="1947" text-anchor="middle"><tspan x="1190">任务 · 状态 · 记忆 · 事件 · 模型 · 技能 · 连接器</tspan><tspan x="1190" dy="30">资源 · 监测 · 版本 · 审计；不判断事实或生成目标</tspan></text>
+  </g>
+  <g>
+    <rect class="node" x="2330" y="1815" width="1760" height="225" rx="14" fill="#FCE8E6" stroke="#C2413B"/>
+    <rect x="2356" y="1833" width="84" height="52" rx="11" fill="#A4342F"/>
+    <text class="id" x="2398" y="1869" text-anchor="middle">G3</text>
+    <text class="kind" x="3210" y="1848" text-anchor="middle">«part usage : GovernanceSystem»</text>
+    <text class="name" x="3210" y="1889" text-anchor="middle">语义治理与授权系统</text>
+    <line x1="2330" y1="1911" x2="4090" y2="1911" stroke="#C2413B"/>
+    <text class="body" x="3210" y="1947" text-anchor="middle"><tspan x="3210">身份 · 关系 · 权限 · 隐私 · 风险 · 紧急例外</tspan><tspan x="3210" dy="30">许可、拒绝、收紧、撤销与人工接管；不生成业务目标</tspan></text>
+  </g>
+
+  <!-- 硬安全 -->
+  <rect class="lane" x="80" y="2180" width="4240" height="340" rx="22" fill="#FFF5F4" stroke="#D7807B"/>
+  <text class="layer" x="140" y="2225" fill="#9D2F2A">机电与确定性硬实时安全层</text>
+  <rect class="node" x="920" y="2270" width="2560" height="180" rx="14" fill="#FCE8E6" stroke="#C2413B"/>
+  <rect x="948" y="2288" width="84" height="52" rx="11" fill="#A4342F"/>
+  <text class="id" x="990" y="2324" text-anchor="middle">F1</text>
+  <text class="kind" x="2200" y="2303" text-anchor="middle">«part usage : MechatronicSafetyPlatform»</text>
+  <text class="name" x="2200" y="2344" text-anchor="middle">机电与硬安全平台 · Π_F1</text>
+  <line x1="920" y1="2366" x2="3480" y2="2366" stroke="#C2413B"/>
+  <text class="body" x="2200" y="2403" text-anchor="middle">执行器控制 · 能量 · 碰撞／失稳／防夹 · 速度与力限制 · 急停；对所有物理动作拥有最终否决权</text>
+
+  <!-- 输出 -->
+  <rect class="lane" x="80" y="2570" width="4240" height="280" rx="22" fill="#F2F7FD" stroke="#7AA7D9"/>
+  <text class="layer" x="140" y="2615" fill="#315F93">对外输出</text>
+  <rect class="node" x="520" y="2650" width="1380" height="145" rx="72" fill="#E8F0FE" stroke="#4285F4"/>
+  <text class="kind" x="1210" y="2682" text-anchor="middle">«information effect»</text>
+  <text class="name" x="1210" y="2723" text-anchor="middle">信息结果与受控服务调用</text>
+  <text class="body" x="1210" y="2761" text-anchor="middle">对话、提醒、消息、查询、服务结果与责任交接</text>
+  <rect class="node" x="2500" y="2650" width="1380" height="145" rx="72" fill="#E8F0FE" stroke="#4285F4"/>
+  <text class="kind" x="3190" y="2682" text-anchor="middle">«physical effect»</text>
+  <text class="name" x="3190" y="2723" text-anchor="middle">执行器与物理环境</text>
+  <text class="body" x="3190" y="2761" text-anchor="middle">移动、储物舱、语音表达及未来机械臂动作</text>
+
+  <!-- 环境输入 -->
+  <path class="flow" d="M1750 420 V930 H520 V1010" stroke="#4285F4" marker-end="url(#arrow-blue)"/>
+  <text class="edge" x="760" y="920" fill="#315F93">传感数据与事件</text>
+  <path class="flow" d="M2650 420 V900 H3880 V1010" stroke="#4285F4" marker-end="url(#arrow-blue)"/>
+  <text class="edge" x="3440" y="890" fill="#315F93">语音、消息与服务数据</text>
+  <path class="flow" d="M2860 360 H4260 V2150 H3260 V2270" stroke="#4285F4" marker-end="url(#arrow-blue)"/>
+  <text class="edge" x="3630" y="2140" fill="#315F93">P-P1 生成的实时安全传感数据 I1</text>
+
+  <!-- A0 与领域闭环 -->
+  <path class="flow" d="M520 1010 V840 H1640 V795" stroke="#38815B" marker-end="url(#arrow-green)"/>
+  <text class="edge" x="860" y="830" fill="#38815B">共享状态 x 与不确定性</text>
+  <path class="thin dash" d="M1530 795 V870 H650 V1010" stroke="#B98618" marker-end="url(#arrow-gold)"/>
+  <text class="edge" x="810" y="865" fill="#8A6410">定向补证请求</text>
+  <path class="flow" d="M1850 795 V890 H1360 V1010" stroke="#B98618" marker-end="url(#arrow-gold)"/>
+  <text class="edge" x="1430" y="882" fill="#8A6410">照护目标合同</text>
+  <path class="flow" d="M2200 795 V1010" stroke="#B98618" marker-end="url(#arrow-gold)"/>
+  <text class="edge" x="2220" y="905" fill="#8A6410">导航目标合同</text>
+  <path class="flow" d="M2550 795 V880 H3040 V1010" stroke="#B98618" marker-end="url(#arrow-gold)"/>
+  <text class="edge" x="2890" y="872" fill="#8A6410">未来操作目标合同</text>
+  <path class="flow" d="M2860 795 V850 H3880 V1010" stroke="#B98618" marker-end="url(#arrow-gold)"/>
+  <text class="edge" x="3530" y="842" fill="#8A6410">交互与信息调用</text>
+  <path class="thin dash" d="M1360 1010 V820 H1900 V795" stroke="#38815B" marker-end="url(#arrow-green)"/>
+  <path class="thin dash" d="M2200 1010 V830 H2250 V795" stroke="#38815B" marker-end="url(#arrow-green)"/>
+  <path class="thin dash" d="M3040 1010 V815 H2600 V795" stroke="#38815B" marker-end="url(#arrow-green)"/>
+  <path class="thin dash" d="M3880 1010 V800 H2950 V795" stroke="#38815B" marker-end="url(#arrow-green)"/>
+  <text class="edge" x="3240" y="790" fill="#38815B">结果、进度与失败证据</text>
+
+  <!-- 状态分发与受限领域协调 -->
+  <path class="thin" d="M520 1255 V1320 H1360 V1255" stroke="#637083" marker-end="url(#arrow-gray)"/>
+  <path class="thin" d="M520 1275 V1340 H2200 V1255" stroke="#637083" marker-end="url(#arrow-gray)"/>
+  <path class="thin" d="M520 1295 V1360 H3040 V1255" stroke="#637083" marker-end="url(#arrow-gray)"/>
+  <text class="edge" x="760" y="1310" fill="#637083">带版本共享状态</text>
+  <path class="thin dash" d="M2580 1190 H2660" stroke="#38815B" marker-start="url(#arrow-green)" marker-end="url(#arrow-green)"/>
+  <text class="edge" x="2620" y="1168" text-anchor="middle" fill="#38815B">复合任务内受限协调</text>
+
+  <!-- 运行平台支撑 -->
+  <path class="thin dash" d="M1190 1815 V1585 H2200" stroke="#8A69A8"/>
+  <path class="thin dash" d="M520 1585 V1515 M1360 1585 V1515 M2200 1585 V1515 M3040 1585 V1515 M3880 1585 V1515" stroke="#8A69A8"/>
+  <path class="thin dash" d="M2200 1585 V795" stroke="#8A69A8" marker-end="url(#arrow-gray)"/>
+  <text class="edge" x="1230" y="1575" fill="#70518E">任务、状态、资源、版本与审计支撑</text>
+
+  <!-- 语义治理 -->
+  <path class="flow" d="M3000 795 V1730 H3210 V1815" stroke="#C2413B" marker-end="url(#arrow-red)"/>
+  <text class="edge" x="3040" y="1715" fill="#9D2F2A">跨领域行动申请</text>
+  <path class="flow" d="M2200 1255 V1650 H2850 V1815" stroke="#C2413B" marker-end="url(#arrow-red)"/>
+  <path class="flow" d="M3040 1255 V1610 H3210 V1815" stroke="#C2413B" marker-end="url(#arrow-red)"/>
+  <path class="flow" d="M3880 1255 V1650 H3570 V1815" stroke="#C2413B" marker-end="url(#arrow-red)"/>
+  <text class="edge" x="3370" y="1640" fill="#9D2F2A">动作候选与信息影响申请</text>
+  <path class="thin dash" d="M1360 1255 V1690 H2500 V1815" stroke="#C2413B" marker-end="url(#arrow-red)"/>
+  <text class="edge" x="1790" y="1680" fill="#9D2F2A">紧急例外申请</text>
+  <path class="thin dash" d="M2700 1815 V1560 H2310 V1255" stroke="#C2413B" marker-end="url(#arrow-red)"/>
+  <path class="thin dash" d="M2760 1815 V1600 H4010 V1255" stroke="#C2413B" marker-end="url(#arrow-red)"/>
+  <text class="edge" x="3000" y="1548" fill="#9D2F2A">A0 故障时的预验证应急合同：仅 N3／ST3</text>
+  <path class="flow" d="M3210 2040 V2140 H2200 V2270" stroke="#C2413B" marker-end="url(#arrow-red)"/>
+  <text class="edge" x="2450" y="2130" fill="#9D2F2A">物理动作候选 + PermitLease γ</text>
+  <path class="flow" d="M3650 2040 V2090 H4220 V1280 H4100 V1255" stroke="#4285F4" marker-end="url(#arrow-blue)"/>
+  <text class="edge" x="4040" y="2078" fill="#315F93">信息行动许可</text>
+
+  <!-- 物理与信息输出 -->
+  <path class="flow" d="M2200 2450 V2535 H3190 V2650" stroke="#C2413B" marker-end="url(#arrow-red)"/>
+  <text class="edge" x="2650" y="2525" fill="#9D2F2A">裁决后物理动作 a*</text>
+  <path class="flow" d="M3880 1255 V2450 H1210 V2650" stroke="#4285F4" marker-end="url(#arrow-blue)"/>
+  <text class="edge" x="1240" y="2438" fill="#315F93">ST3 执行受权信息动作</text>
+
+  <!-- 图例 -->
+  <line x1="180" y1="2940" x2="320" y2="2940" stroke="#B98618" stroke-width="3" marker-end="url(#arrow-gold)"/><text class="small" x="340" y="2948">目标、调用和补证请求</text>
+  <line x1="1120" y1="2940" x2="1260" y2="2940" stroke="#38815B" stroke-width="3" marker-end="url(#arrow-green)"/><text class="small" x="1280" y="2948">状态、结果和领域反馈</text>
+  <line x1="2200" y1="2940" x2="2340" y2="2940" stroke="#C2413B" stroke-width="3" marker-end="url(#arrow-red)"/><text class="small" x="2360" y="2948">行动申请、许可与硬安全裁决</text>
+  <line x1="3400" y1="2940" x2="3540" y2="2940" stroke="#4285F4" stroke-width="3" marker-end="url(#arrow-blue)"/><text class="small" x="3560" y="2948">输入、信息效果与物理效果</text>
+  <text class="small" x="2200" y="3010" text-anchor="middle">V1 激活 A0、O3、C3、N3、ST3、G3、AP3、F1；OP3 仅为机械臂安全操作预留。</text>
+</svg>

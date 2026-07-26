@@ -2,13 +2,18 @@
 
 ---
 
-文档版本：v1.28
+文档版本：v1.33
 创建日期：2026-03-13
 作者：Codex-架构师
 
 ---
 
 文档变更记录：
+- v1.33 | 2026-07-24 | Codex-架构师 | 将李继琳系统软件与 Agent 双背景新增简历吸收到 `91_candidate_screening_and_interview_advice.md` 后，补充 `archive/2026-07-24_processed/` 作为本轮已处理候选人资料归档目录。
+- v1.32 | 2026-07-22 | Codex-架构师 | 将陆俊儒高级 AI 算法工程师新增简历吸收到 `91_candidate_screening_and_interview_advice.md` 后，补充 `archive/2026-07-22_processed/` 作为本轮已处理候选人资料归档目录。
+- v1.31 | 2026-07-21 | Codex-架构师 | 将李小丰岗位 `09` 本体 SE 新增简历吸收到 `91_candidate_screening_and_interview_advice.md` 后，继续使用 `archive/2026-07-21_processed/` 作为本轮已处理候选人资料归档目录。
+- v1.30 | 2026-07-21 | Codex-架构师 | 将成炽荣系统软件新增简历及一面已通过状态吸收到 `91_candidate_screening_and_interview_advice.md` 后，补充 `archive/2026-07-21_processed/` 作为本轮已处理候选人资料归档目录。
+- v1.29 | 2026-07-20 | Codex-架构师 | 将陈涛岗位 `01` 架构师新增简历吸收到 `91_candidate_screening_and_interview_advice.md` 后，补充 `archive/2026-07-20_processed/` 作为本轮已处理候选人资料归档目录。
 - v1.28 | 2026-07-18 | Codex-架构师 | 将范文华岗位 `09` 本体 SE 新增简历吸收到 `91_candidate_screening_and_interview_advice.md` 后，补充 `archive/2026-07-18_processed/` 作为本轮已处理候选人资料归档目录。
 - v1.27 | 2026-07-16 | Codex-架构师 | 同步岗位 `15` 调整为高级运动控制算法工程师（SoC）；后续候选人输入使用 `15_运动控制算法_姓名` 命名，历史嵌入式运动控制资料不追溯改名。
 - v1.26 | 2026-07-15 | Codex-架构师 | 将汪熙、周涛两份新增简历吸收到 `91_candidate_screening_and_interview_advice.md` 后，补充 `archive/2026-07-15_processed/` 作为本轮已处理候选人资料归档目录。
@@ -69,6 +74,10 @@
 - `archive/2026-07-14_processed/`
 - `archive/2026-07-15_processed/`
 - `archive/2026-07-18_processed/`
+- `archive/2026-07-20_processed/`
+- `archive/2026-07-21_processed/`
+- `archive/2026-07-22_processed/`
+- `archive/2026-07-24_processed/`
 
 ## 目录角色
 

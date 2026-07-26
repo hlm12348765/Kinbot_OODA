@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="3600" height="2200" viewBox="0 0 3600 2200" role="img" aria-labelledby="title desc">
 <title id="title">Agent Cell 递归执行闭环</title>
-<desc id="desc">目标契约进入局部闭环，经检查与许可后执行，并按结果完成、重试、降级或升级</desc>
+<desc id="desc">任务要求进入局部闭环，经检查与许可后执行，并根据结果完成、重试、降级或请求上级处理</desc>
 <defs>
 <marker id="arrow-blue" markerWidth="12" markerHeight="12" refX="10" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,10 L11,5 z" fill="#2F6FDD"/></marker>
 <marker id="arrow-purple" markerWidth="12" markerHeight="12" refX="10" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,10 L11,5 z" fill="#6B57A5"/></marker>
@@ -24,12 +24,12 @@ text{font-family:"Noto Sans CJK SC","PingFang SC","Microsoft YaHei",Arial,sans-s
 </style>
 <rect width="3600" height="2200" fill="#F8FAFC"/>
 <text class="title" x="1800.0" y="62" text-anchor="middle">Agent Cell 递归执行闭环</text>
-<text class="subtitle" x="1800.0" y="105" text-anchor="middle">目标契约进入局部闭环，经检查与许可后执行，并按结果完成、重试、降级或升级</text>
+<text class="subtitle" x="1800.0" y="105" text-anchor="middle">任务要求进入局部闭环，经检查与许可后执行，并根据结果完成、重试、降级或请求上级处理</text>
 <rect x="70" y="132" width="3460" height="52" rx="12" fill="#EEF2F7" stroke="#CBD4DE"/>
 <text class="view" x="95" y="166">view &lt;acaf&gt; &#x27;AgentCell递归执行行动流视图&#x27; : ActionFlowView</text>
-<g class="action-node"><rect class="node" x="90" y="420" width="420" height="190" rx="28" fill="#DDEEFF" stroke="#3B6EA8"/><text class="kind" x="300.0" y="454" text-anchor="middle">«action»</text><text class="name" x="300.0" y="496" text-anchor="middle">目标契约与约束</text></g>
+<g class="action-node"><rect class="node" x="90" y="420" width="420" height="190" rx="28" fill="#DDEEFF" stroke="#3B6EA8"/><text class="kind" x="300.0" y="454" text-anchor="middle">«action»</text><text class="name" x="300.0" y="496" text-anchor="middle">任务要求与限制</text></g>
 <g class="action-node"><rect class="node" x="600" y="420" width="420" height="190" rx="28" fill="#E9E1FF" stroke="#6B57A5"/><text class="kind" x="810.0" y="454" text-anchor="middle">«action»</text><text class="name" x="810.0" y="496" text-anchor="middle">观察局部环境与自身状态</text></g>
-<g class="action-node"><rect class="node" x="1110" y="420" width="420" height="190" rx="28" fill="#E9E1FF" stroke="#6B57A5"/><text class="kind" x="1320.0" y="454" text-anchor="middle">«action»</text><text class="name" x="1320.0" y="496" text-anchor="middle">更新局部状态判断</text></g>
+<g class="action-node"><rect class="node" x="1110" y="420" width="420" height="190" rx="28" fill="#E9E1FF" stroke="#6B57A5"/><text class="kind" x="1320.0" y="454" text-anchor="middle">«action»</text><text class="name" x="1320.0" y="496" text-anchor="middle">更新局部状态</text></g>
 <g class="action-node"><rect class="node" x="1620" y="420" width="420" height="190" rx="28" fill="#E9E1FF" stroke="#6B57A5"/><text class="kind" x="1830.0" y="454" text-anchor="middle">«action»</text><text class="name" x="1830.0" y="496" text-anchor="middle">选择模型、策略和技能</text></g>
 <g class="action-node"><rect class="node" x="2130" y="420" width="420" height="190" rx="28" fill="#E9E1FF" stroke="#6B57A5"/><text class="kind" x="2340.0" y="454" text-anchor="middle">«action»</text><text class="name" x="2340.0" y="496" text-anchor="middle">形成行动申请</text></g>
 <path class="flow" d="M510 515 H600" stroke="#6B57A5" marker-end="url(#arrow-purple)"/>
@@ -40,8 +40,8 @@ text{font-family:"Noto Sans CJK SC","PingFang SC","Microsoft YaHei",Arial,sans-s
 <path class="flow" d="M2550 515 H2720" stroke="#6B57A5" marker-end="url(#arrow-purple)"/>
 <g class="action-node"><rect class="node" x="2710" y="880" width="620" height="190" rx="28" fill="#DDF4E5" stroke="#38815B"/><text class="kind" x="3020.0" y="914" text-anchor="middle">«action»</text><text class="name" x="3020.0" y="956" text-anchor="middle">调用技能与工具</text><text class="small" x="3020.0" y="992" text-anchor="middle"><tspan x="3020.0" dy="0">确定性执行与外部作用</tspan></text></g>
 <g class="action-node"><rect class="node" x="2070" y="1260" width="620" height="210" rx="28" fill="#E9E1FF" stroke="#6B57A5"/><text class="kind" x="2380.0" y="1294" text-anchor="middle">«action»</text><text class="name" x="2380.0" y="1336" text-anchor="middle">验证结果与记录证据</text><text class="small" x="2380.0" y="1372" text-anchor="middle"><tspan x="2380.0" dy="0">完成判据、反馈、状态版本</tspan></text></g>
-<g class="action-node"><rect class="node" x="2920" y="1480" width="560" height="210" rx="28" fill="#FFF0E4" stroke="#C26A2E"/><text class="kind" x="3200.0" y="1514" text-anchor="middle">«action»</text><text class="name" x="3200.0" y="1556" text-anchor="middle">降级、澄清或升级</text><text class="small" x="3200.0" y="1592" text-anchor="middle"><tspan x="3200.0" dy="0">拒绝、确认或局部无法恢复</tspan></text></g>
-<g class="action-node"><rect class="node" x="1110" y="1640" width="620" height="210" rx="28" fill="#DDF4E5" stroke="#38815B"/><text class="kind" x="1420.0" y="1674" text-anchor="middle">«action»</text><text class="name" x="1420.0" y="1716" text-anchor="middle">提交状态与结果</text><text class="small" x="1420.0" y="1752" text-anchor="middle"><tspan x="1420.0" dy="0">返回父目标责任方</tspan></text></g>
+<g class="action-node"><rect class="node" x="2920" y="1480" width="560" height="210" rx="28" fill="#FFF0E4" stroke="#C26A2E"/><text class="kind" x="3200.0" y="1514" text-anchor="middle">«action»</text><text class="name" x="3200.0" y="1556" text-anchor="middle">降级、澄清或请求上级处理</text><text class="small" x="3200.0" y="1592" text-anchor="middle"><tspan x="3200.0" dy="0">拒绝、确认或局部无法恢复</tspan></text></g>
+<g class="action-node"><rect class="node" x="1110" y="1640" width="620" height="210" rx="28" fill="#DDF4E5" stroke="#38815B"/><text class="kind" x="1420.0" y="1674" text-anchor="middle">«action»</text><text class="name" x="1420.0" y="1716" text-anchor="middle">提交状态和结果</text><text class="small" x="1420.0" y="1752" text-anchor="middle"><tspan x="1420.0" dy="0">返回任务负责人</tspan></text></g>
 <path class="flow" d="M3020 695 V880" stroke="#38815B" marker-end="url(#arrow-green)"/>
 <rect x="3080" y="775" width="130" height="34" rx="8" fill="#F8FAFC" opacity="0.94"/><text class="edge" x="3090" y="800" text-anchor="start" fill="#38815B">[允许]</text>
 <path class="flow" d="M3020 1070 V1160 H2380 V1260" stroke="#6B57A5" marker-end="url(#arrow-purple)"/>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1900" height="1140" viewBox="0 0 1900 1140" role="img" aria-labelledby="title desc">
+  <title id="title">重大事件逐级升级与根任务决策返回视图</title>
+  <desc id="desc">SysML v2 SequenceView。展示 G3、F1 和 RobotSkill 的反馈先到 TaskWorker；TaskWorker 判断当前契约影响，局部可恢复时不通知 A0，影响根任务时挂起新的外部影响并直接向 A0 发出 RootImpactEvent；A0 的 RootDecision 再直接返回受影响实体。AP3 仅提供投递、重试和审计支撑，不是业务消息的接收者或因果中介。</desc>
+  <defs>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="9" refY="3.5" orient="auto"><path d="M0,0 L10,3.5 L0,7 Z" fill="#4F79A8"/></marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="9" refY="3.5" orient="auto"><path d="M0,0 L10,3.5 L0,7 Z" fill="#B94E56"/></marker>
+    <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="9" refY="3.5" orient="auto"><path d="M0,0 L10,3.5 L0,7 Z" fill="#3F8A61"/></marker>
+    <style>
+      text { font-family:"Noto Sans CJK SC","PingFang SC","Microsoft YaHei",sans-serif; fill:#172033; }
+      .title { font-size:30px; font-weight:700; }
+      .subtitle { font-size:15px; fill:#596579; }
+      .view { font-size:14px; fill:#45515F; }
+      .name { font-size:17px; font-weight:700; }
+      .small { font-size:13px; }
+      .tiny { font-size:12px; }
+      .life { stroke:#94A3B8; stroke-width:1.5; stroke-dasharray:7 6; }
+      .blue { stroke:#4F79A8; stroke-width:2; fill:none; marker-end:url(#arrow-blue); }
+      .red { stroke:#B94E56; stroke-width:2.2; fill:none; marker-end:url(#arrow-red); }
+      .redDash { stroke:#B94E56; stroke-width:2; stroke-dasharray:7 5; fill:none; marker-end:url(#arrow-red); }
+      .green { stroke:#3F8A61; stroke-width:2.2; fill:none; marker-end:url(#arrow-green); }
+      .support { stroke:#32877F; stroke-width:1.8; stroke-dasharray:7 5; fill:none; }
+    </style>
+  </defs>
+
+  <rect width="1900" height="1140" fill="#F8FAFC"/>
+  <text x="950" y="46" text-anchor="middle" class="title">重大事件逐级升级与根任务决策返回视图</text>
+  <text x="950" y="76" text-anchor="middle" class="subtitle">执行与治理反馈先到TaskWorker · RootImpactEvent直接发往A0 · AP3仅提供投递支撑</text>
+  <rect x="40" y="96" width="1820" height="42" rx="8" fill="#F1F5F9" stroke="#CBD5E1"/>
+  <text x="60" y="123" class="view">view &lt;riesv&gt; '根任务影响升级时序视图' : SequenceView</text>
+
+  <g>
+    <rect x="50" y="165" width="270" height="68" rx="12" fill="#FFF4D8" stroke="#C28A1B" stroke-width="2"/>
+    <text x="185" y="193" text-anchor="middle" class="name">G3／F1／RobotSkill</text>
+    <text x="185" y="217" text-anchor="middle" class="tiny">执行与治理反馈来源</text>
+    <line x1="185" y1="233" x2="185" y2="975" class="life"/>
+
+    <rect x="400" y="165" width="260" height="68" rx="12" fill="#F1EDFA" stroke="#735FA5" stroke-width="2"/>
+    <text x="530" y="204" text-anchor="middle" class="name">TaskWorker</text>
+    <line x1="530" y1="233" x2="530" y2="975" class="life"/>
+
+    <rect x="880" y="165" width="260" height="68" rx="12" fill="#F1EDFA" stroke="#735FA5" stroke-width="2"/>
+    <text x="1010" y="204" text-anchor="middle" class="name">A0</text>
+    <line x1="1010" y1="233" x2="1010" y2="975" class="life"/>
+
+    <rect x="1290" y="165" width="330" height="68" rx="12" fill="#F1EDFA" stroke="#735FA5" stroke-width="2"/>
+    <text x="1455" y="193" text-anchor="middle" class="name">受影响实体</text>
+    <text x="1455" y="217" text-anchor="middle" class="tiny">基础业务Agent／TaskWorker／AP3／G3／Skill</text>
+    <line x1="1455" y1="233" x2="1455" y2="975" class="life"/>
+
+    <rect x="1710" y="165" width="150" height="68" rx="12" fill="#E6F6F4" stroke="#32877F" stroke-width="2"/>
+    <text x="1785" y="204" text-anchor="middle" class="name">O3</text>
+    <line x1="1785" y1="233" x2="1785" y2="975" class="life"/>
+  </g>
+
+  <line x1="185" y1="285" x2="530" y2="285" class="blue"/>
+  <text x="357" y="270" text-anchor="middle" class="small">许可结果／重大变化／安全干预／实际结果</text>
+
+  <rect x="415" y="325" width="230" height="92" rx="10" fill="#F8F5FE" stroke="#9B8BC0"/>
+  <text x="530" y="352" text-anchor="middle" class="tiny">TaskWorker判断</text>
+  <text x="530" y="378" text-anchor="middle" class="small">当前任务能否继续在</text>
+  <text x="530" y="400" text-anchor="middle" class="small">原契约内履行</text>
+
+  <rect x="80" y="455" width="700" height="170" rx="12" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/>
+  <text x="100" y="482" class="small">alt [当前任务仍可履行]</text>
+  <line x1="530" y1="525" x2="185" y2="525" class="green"/>
+  <text x="357" y="510" text-anchor="middle" class="small">局部恢复／重新规划／继续执行</text>
+  <line x1="185" y1="575" x2="530" y2="575" class="blue"/>
+  <text x="357" y="560" text-anchor="middle" class="small">SkillOutcome／新观察</text>
+  <text x="430" y="608" text-anchor="middle" class="tiny">A0不参与常规微调和局部恢复</text>
+
+  <rect x="80" y="655" width="1740" height="330" rx="12" fill="#FFFDFD" stroke="#D88B91" stroke-width="1.5"/>
+  <text x="100" y="682" class="small">else [无法在原契约内履行，或在允许判断窗口内仍无法确认]</text>
+  <line x1="530" y1="725" x2="185" y2="725" class="green"/>
+  <text x="357" y="710" text-anchor="middle" class="small">安全停止／保持稳定／重新观察</text>
+
+  <line x1="530" y1="780" x2="1010" y2="780" class="redDash"/>
+  <text x="770" y="765" text-anchor="middle" class="small">RootImpactEvent＋挂起新的外部影响</text>
+
+  <rect x="900" y="815" width="220" height="74" rx="10" fill="#F8F5FE" stroke="#9B8BC0"/>
+  <text x="1010" y="843" text-anchor="middle" class="tiny">A0根任务决策</text>
+  <text x="1010" y="870" text-anchor="middle" class="small">继续／改约／取消／转移</text>
+
+  <line x1="1010" y1="920" x2="530" y2="920" class="red"/>
+  <text x="770" y="905" text-anchor="middle" class="small">RootDecision</text>
+  <line x1="1010" y1="945" x2="1455" y2="945" class="red"/>
+  <text x="1232" y="930" text-anchor="middle" class="small">按受影响范围返回，不向无关Agent广播</text>
+
+  <line x1="530" y1="970" x2="1785" y2="970" class="blue"/>
+  <text x="1157" y="955" text-anchor="middle" class="small">提交生效后的任务状态与证据</text>
+
+  <rect x="480" y="1010" width="940" height="56" rx="10" fill="#E6F6F4" stroke="#32877F" stroke-width="1.8" stroke-dasharray="7 5"/>
+  <text x="950" y="1033" text-anchor="middle" class="small">«supporting mechanism» AP3：提供投递、重试、审计和运行保障</text>
+  <text x="950" y="1055" text-anchor="middle" class="tiny">AP3不是RootImpactEvent或RootDecision的业务接收者，不解释、改写或重新生成业务事件</text>
+
+  <rect x="230" y="1085" width="1440" height="40" rx="9" fill="#EEF6FF" stroke="#6B91BA"/>
+  <text x="950" y="1111" text-anchor="middle" class="small">不变量：正常业务因果链为TaskWorker→A0→受影响实体；运行投递机制不改变事件来源、接收者与决定权</text>
+</svg>
